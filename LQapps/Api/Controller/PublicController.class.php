@@ -24,12 +24,8 @@ class PublicController extends Controller
     {
         parent::__construct();
         //AJAX返回数据格式
-        if ($_SERVER['HTTP_HOST'] == 'test.lxjjz.cn') {
-            header("Access-Control-Allow-Origin:*");
-            $this->JSONP = 'jsonp';
-        } else {
-            $this->JSONP = '';
-        }
+        header("Access-Control-Allow-Origin:*");
+        $this->JSON = 'json';
         $this->model_member = new MemberApi;//实例化会员
         $this->lqgetid = isset($_GET["tnid"]) ? intval($_GET["tnid"]) : 0;
         $this->lqpostid = isset($_POST["fromid"]) ? intval($_POST["fromid"]) : 0;
