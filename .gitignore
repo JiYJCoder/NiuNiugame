@@ -3,5 +3,5 @@
 .htaccess
 404.php
 Api.html
-demo_jyly.sql
+/demo_jyly.sql
 /LQapps/Common/Conf/dbconn.php
