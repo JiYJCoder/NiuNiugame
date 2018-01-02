@@ -1,0 +1,286 @@
+<include file="Public:header" />
+<style>.table-responsive.panel-body,.table>tbody>tr>td{overflow:visible;}</style>
+
+<div class="col-xs-12 col-sm-9 col-lg-10"> 
+  <include file="Public:common-current" />
+  <form name="{$lq_form_list}" id="{$lq_form_list}" class="form-horizontal" onsubmit="return false">
+  <input type="hidden" id="thinkphpurl" name="thinkphpurl" value="{$page_config.thinkphpurl}" />
+  <input type="hidden" id="keymode" value="{$search_content.keymode}" />
+  <input type="hidden" id="pagesize" value="{$search_content.pagesize}" />
+  <div class="clearfix welcome-container">
+
+      <div class="clearfix">
+        <div class="panel panel-info">
+          <div class="panel-body" style="position:relative;">
+            <div class="lq-panel-body-title"><span class="btn"><i class="fa fa-paw"></i> 筛选</span></div>
+            
+			<div class="form-group">
+                          <label class="col-xs-12 col-sm-3 col-md-2 col-lg-1 control-label">注册日期范围</label>
+                          <div class="col-sm-6 col-lg-8 col-xs-6"> 
+                            <script type="text/javascript">
+                                require(["daterangepicker"], function($){
+                                    $(function(){
+                                        $(".daterange.daterange-date").each(function(){
+                                            var elm = this;
+                                            $(this).daterangepicker({
+                                                startDate: $(elm).prev().prev().val(),
+                                                endDate: $(elm).prev().val(),
+                                                format: "YYYY-MM-DD"
+                                            }, function(start, end){
+                                                $(elm).find(".date-title").html(start.toDateStr() + " 至 " + end.toDateStr());
+                                                $(elm).prev().prev().val(start.toDateStr());
+                                                $(elm).prev().val(end.toDateStr());
+                                            });
+                                        });
+                                    });
+                                });
+                            </script>
+                            <input id="open_time" type="hidden" value="{$search_content.open_time}">
+                            <input id="time_start" type="hidden" value="{$search_content.time_start}">
+                            <input id="time_end" type="hidden" value="{$search_content.time_end}">
+                            <button class="btn btn-default daterange daterange-date" type="button">
+                            <span class="date-title">{$search_content.time_start} 至 {$search_content.time_end}</span> <i class="fa fa-calendar"></i>
+                            </button> 
+                            <if condition="$search_content.open_time eq '1'"> 
+                            <a href="#" id="a_open_time" class="btn btn-primary">启用</a> 
+                            <else/>
+                            <a href="#" id="a_open_time" class="btn btn-default">启用</a> 
+                            </if>                  
+                            </div>  
+			</div>            
+            
+            
+            <div class="form-group">
+              <label class="col-xs-12 col-sm-2 col-md-2 col-lg-1 control-label">搜索</label>
+              <div class="col-sm-8 col-lg-10 col-xs-12">
+                <div class="input-group">
+                  <input type="text" class="form-control" id="fkeyword" value="{$search_content.fkeyword}" placeholder="{$keywordDefault}" onclick="lqKeywordOnclick(this)" onblur="lqKeywordOnblur(this)"/>
+                  <div class="input-group-btn">
+                    <button class="btn btn-default" id="listSearch"><i class="fa fa-search"></i> 搜索</button>
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><span class="caret"></span></button>
+                    <ul class="dropdown-menu dropdown-menu-right" role="menu">
+                      <li><a href="javascript:;" onclick="$('#fkeyword').attr('placeholder','精准搜索：请输入关键字');$('#keymode').val(1);">精准搜索</a></li>
+                      <li><a href="javascript:;" onclick="$('#fkeyword').attr('placeholder','模糊搜索：请输入关键字');$('#keymode').val(0);">模糊搜索</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-xs-12 col-sm-2 col-md-2 col-lg-1 control-label">角色/邦定/城市</label>
+              <div class="col-sm-8 col-lg-10 col-xs-12">
+                <div class="col-lg-3" style="padding:0px;"><select class="form-control" id="role">{$zl_role_str}</select></div>
+                <div class="col-lg-3"><select class="form-control" id="bind">{$bind_str}</select></div>
+                <div class="col-lg-3"><select class="form-control" id="city">{$city_str}</select></div>
+                <div class="col-lg-3"><select class="form-control" id="use">{$use_str}</select></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <script language="javascript">   
+            //时间开启
+            $("#a_open_time").click(function(){	
+				 		if($("#open_time").val()=="1"){
+							$("#open_time").val("0");
+							$(this).removeClass("btn-primary").addClass("btn-default");
+						}else{
+							$("#open_time").val("1");
+							$(this).removeClass("btn-default").addClass("btn-primary");
+						}
+            });	  
+            $(function(){
+                //通用搜索
+                $("#listSearch").click(function(){	
+                    require(['layer'], function(){
+						var fkeyword=$("#fkeyword").val();
+						var open_time=$("#open_time").val();
+						var role=$("#role").val();
+						var bind=$("#bind").val();
+						var city=$("#city").val();
+						var use=$("#use").val();
+						if(fkeyword!='{$keywordDefault}'||role||bind||city||use||open_time==1){
+							var searchurl=$("#thinkphpurl").val()+'index/s/';
+							var urlpara="fkeyword/"+encodeURIComponent(fkeyword)+"/";
+							urlpara+="keymode/"+encodeURIComponent($("#keymode").val())+"/";
+							urlpara+="pagesize/"+encodeURIComponent($("#pagesize").val())+"/";
+							urlpara+="open_time/"+encodeURIComponent($("#open_time").val())+"/";						
+							urlpara+="time_start/"+encodeURIComponent($("#time_start").val())+"/";
+							urlpara+="time_end/"+encodeURIComponent($("#time_end").val())+"/";								
+							if(role) urlpara+="role/"+role+"/";
+							if(bind) urlpara+="bind/"+bind+"/";
+							if(city) urlpara+="city/"+city+"/";
+							if(use) urlpara+="use/"+use+"/";
+							location.href=searchurl+base64encode(urlpara);
+						}else{
+							layer.msg("请输入搜索条件！",{icon:5,time:2000});
+						}  
+                    });			
+                });
+            });
+            </script>
+
+    <div class="row">
+      <div class="clearfix template">
+        <div class="panel panel-default">
+        
+
+	<div class="panel-body">
+          
+            <span><i class="fa fa-list-ol"></i> {$sys_heading}</span>
+            <div class="btn-group pull-right">
+              <span class="label label-danger blink" id="os_warning" style="font-size:1em;display:none;padding:6px 10px; "> 请操作 <i class="fa fa-hand-o-right"></i></span>
+              <button type="button" data-toggle="dropdown" id="os_button"> <i class="fa fa-chevron-down"></i> 操作 </button>
+              <ul class="dropdown-menu slidedown" id="os_button_list">
+              <if condition="ACTION_NAME eq 'index'">
+                <li> <a href="{:U('opExportXls')}" title="导出数据" id="export"> <i class="fa fa-file-excel-o"></i> 导出数据 </a> </li>
+                <li class="divider"></li>
+              	<if condition="$os_lock.edit eq '1'">
+                <li> <a href="{:U('add')}" title="{:L('ALT_BUTTON_ADD_RECORD')}"> <i class="fa fa-plus-circle"></i> 新增 </a> </li>
+                <else />
+                <li class="line-th"> <a href="javascript:;" title="{:L('ALT_BUTTON_ADD_RECORD')}"> <i class="fa fa-plus-circle"></i> 新增 </a> </li>
+                </if>              
+                <li class="divider"></li>
+              	<if condition="$os_lock.cache eq '1'">
+                <li> <a href="{:U('index?clearcache=1')}" title="{:L('ALT_BUTTON_REFRESH')}"> <i class="fa fa-refresh"></i> 刷新 </a> </li>
+                <else />
+                <li> <a href="{:U('index')}" title="{:L('ALT_BUTTON_REFRESH')}"> <i class="fa fa-refresh"></i> 刷新 </a> </li>
+                </if>  
+                <li class="divider"></li>
+              	<if condition="$os_lock.sort eq '1'">
+                <li> <a href="{:U('sort')}" title="{:L('ALT_BUTTON_SORT_RECORD')}"> <i class="fa fa-sort-numeric-asc"></i> 排序 </a> </li>
+                <else />
+                <li class="line-th"> <a href="javascript:;" title="{:L('ALT_BUTTON_SORT_RECORD')}"> <i class="fa fa-sort-numeric-asc"></i> 排序 </a> </li>
+                </if>                
+                <li class="divider"></li>
+                <if condition="$os_lock.delete eq '1'">
+                <li> <a href="javascript:;" op="opDeleteCheckbox" title="{:L('ALT_BUTTON_DELETE_RECORD')}"> <i class="fa fa-times-circle"></i> 删除 </a> </li>
+                <else />
+                <li class="line-th"> <a href="javascript:;" title="{:L('ALT_BUTTON_DELETE_RECORD')}"> <i class="fa fa-plus-circle"></i> 删除 </a> </li>
+                </if>  
+                <if condition="$os_lock.visible eq '1'">          
+   				<li> <a href="javascript:;" op="opVisibleCheckbox" state=1 title="{:L('ALT_BUTTON_VISIBLE_YES')}"> <i class="fa fa-check-square"></i> 审核通过 </a> </li>
+                <li> <a href="javascript:;" op="opVisibleCheckbox" state=0 title="{:L('ALT_BUTTON_VISIBLE_NO')}"> <i class="fa fa-minus-square"></i> 审核否决 </a> </li>
+                <else />
+   				<li class="line-th"> <a href="javascript:;" title="{:L('ALT_BUTTON_VISIBLE_YES')}"> <i class="fa fa-check-square"></i> 审核通过 </a> </li>
+                <li class="line-th"> <a href="javascript:;" title="{:L('ALT_BUTTON_VISIBLE_NO')}"> <i class="fa fa-minus-square"></i> 审核否决 </a> </li>                
+                </if>                 
+                <li class="divider"></li>
+                <li> <a href="javascript:;" title="每页10条" op="pagesize" val="10"> <i class="fa fa-repeat"></i> 每页10条 </a> </li>
+   				<li> <a href="javascript:;" title="每页20条" op="pagesize" val="20"> <i class="fa fa-repeat"></i> 每页20条 </a> </li>
+   				<li> <a href="javascript:;" title="每页30条" op="pagesize" val="30"> <i class="fa fa-repeat"></i> 每页30条 </a> </li>
+              <elseif condition="ACTION_NAME eq 'add'"/>
+                <li> <a href="javascript:;" title="{:L('ALT_BUTTON_SAVE_RECORD')}" id="aFormSubmit"> <i class="fa fa-floppy-o"></i> 保存数据 </a> </li>
+                <li class="divider"></li>
+                <li> <a href="{:U('index')}" title="返回列表"> <i class="fa fa-list"></i> 返回列表 </a> </li>
+                <li class="divider"></li>
+                <li> <a href="" title="刷新本页"> <i class="fa fa-refresh"></i> 刷新本页 </a> </li>
+              <elseif condition="ACTION_NAME eq 'edit'"/>
+                <li> <a href="javascript:;" title="{:L('ALT_BUTTON_SAVE_RECORD')}" id="aFormSubmit"> <i class="fa fa-floppy-o"></i> 保存数据 </a> </li>
+                <li class="divider"></li>
+                <li> <a href="{:U('index')}" title="返回列表"> <i class="fa fa-list"></i> 返回列表 </a> </li>
+                <li class="divider"></li>
+                <li> <a href="" title="刷新本页"> <i class="fa fa-refresh"></i> 刷新本页 </a> </li>
+                <li class="divider"></li>
+                {$data_up_down_page}
+              <elseif condition="ACTION_NAME eq 'sort'"/>
+                <li> <a href="" title="刷新本页"> <i class="fa fa-refresh"></i> 刷新本页 </a> </li>
+                <li class="divider"></li>
+                <li> <a href="{:U('index')}" title="返回列表"> <i class="fa fa-list"></i> 返回列表 </a> </li>
+              <elseif condition="ACTION_NAME eq 'config'"/>
+                <li> <a href="javascript:;" title="{:L('ALT_BUTTON_SAVE_RECORD')}" id="aFormSubmit"> <i class="fa fa-floppy-o"></i> 保存数据 </a> </li>
+                <li class="divider"></li>
+                <li> <a href="" title="刷新本页"> <i class="fa fa-refresh"></i> 刷新本页 </a> </li>
+                <li class="divider"></li>
+                <li> <a href="{:U('add')}" title="新增数据项"> <i class="fa fa-plus-circle"></i> 新增数据项 </a> </li>
+                <li class="divider"></li>
+                <li> <a href="{:U('index')}" title="数据列表"> <i class="fa fa-list"></i> 数据列表 </a> </li>
+              <else />
+                <li> <a href="" title="刷新本页"> <i class="fa fa-refresh"></i> 刷新本页 </a> </li>
+              </if> 
+              </ul>
+            </div>
+
+	</div>
+
+          
+          <div class="table-responsive panel-body">
+            <table class="table table-hover">
+              <thead class="navbar-inner">
+                  <tr>
+                    <th style="width:22px;"><input type="checkbox" class="checkbox" value="0" id="list_checkbox" /></th>
+                    <th style="width:100px;">序号</th>
+                    <th style="width:150px;">注册/修改时间</th>
+                    <th style="width:320px;">ID/帐户名/昵称</th>
+                    <th>角色/设计师</th>
+                    <th>积分:消费/等级</th>
+                    <th>联系电话</th>
+                    <th style="width:90px;">清零/邦定</th>
+                    <th style="width:60px;">状态</th>
+                    <th style="width:200px;text-align:center;"><a href="javascript:;" id="op_msg">操作?</a></th>
+                    </tr>
+              </thead>
+              <tbody id="list-tbody">
+                  <volist name="list" id="data" key="key" empty="$empty_msg">
+                    <tr id="{$data.id}" visible="{$data.zl_visible}" opCheck='1' msg='1'>
+                      <td><input type="checkbox" class="checkbox" value="{$data.id}" name="items" /></td>
+                      <td>{$data.no}/{$data.id}</td>
+                      <td>{$data.zn_cdate|date="y-m-d H:i:s",###}<br>{$data.zn_mdate|date="y-m-d H:i:s",###}</td>
+                      <td>{$data.id}/{$data.zc_account}/{$data.zc_nickname}</td>
+                      <td>{$data.role_label}</td>
+                      <td>{$data.zn_pay_integration}/{$data.zn_rank_integration}/{$data.member_rank}</td>
+                      <td>{$data.zc_mobile}</td>
+                      <td>
+                        <div class="btn-group"> 
+                            <button type="button" data-toggle="dropdown" id="os_button"> <i class="fa fa-chevron-down"></i> 设置 </button>
+                            <ul class="dropdown-menu slidedown">
+                              <li><a href="javascript:void(0);" op="login_clear" val="0">尝试登录清零</a></li>
+                              <li><a href="javascript:void(0);" op="account_bind" val="{$data.zl_account_bind}">{$data.account_bind_button}</a></li>
+                              <li><a href="javascript:void(0);" op="openid_bind" val="{$data.zl_openid_bind}">{$data.openid_bind_button}</a></li>
+                              <li><a href="javascript:void(0);" op="mobile_bind" val="{$data.zl_mobile_bind}">{$data.mobile_bind_button}</a></li>
+                              <li><a href="javascript:void(0);" op="email_bind" val="{$data.zl_email_bind}">{$data.email_bind_button}</a></li>                              
+                            </ul>
+                         </div>  
+                      </td>
+                      <td>{$data.visible_label}</td>
+                      <td class="manage-menu list-os-a">
+                      <a href="javascript:;" title="查看会员帐单明细"><i class="fa fa-list-alt"></i></a>
+                      <if condition="$data.manage eq '1'">
+                      <a href="__CONTROLLER__/authLogin/tnid/{$data.id}" title="授权管理" target="_blank"><i class="fa fa-desktop"></i></a>
+                      <else />
+                      <a href="javascript:void(0);" title="授权管理"><i class="fa fa-desktop ac_grey"></i></a>
+                      </if>
+                      <a href="__CONTROLLER__/edit/tnid/{$data.id}" title="{:L("LABEL_OS_EDITID")}[{$data.id}]"><i class="fa fa-edit"></i></a>
+					  <a href="__CONTROLLER__/editPass/tnid/{$data.id}" title="{:L("LABEL_OS_MODPASS")}[{$data.zc_account}]"><i class="fa fa-lock"></i></a>
+                      <a href="javascript:void(0);" class="myopStatus" val="{$data.zl_visible}" title="{:L("LABEL_OS_STATUS")}[{$data.id}]">{$data.visible_button}</a>
+                      <a href="javascript:;" class="opDelete" title="{:L("LABEL_OS_DEL")}[{$data.id}]"><i class="fa fa-times-circle"></i></a>
+                      </td>
+                    </tr>
+                  </volist>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        {$page} 
+      </div>
+    </div>
+  </div>
+  </form>
+  
+</div>
+<script>
+$(document).ready(function(){
+$('tbody>tr>td a[op]').click(function(){util.ajaxPropertyA($(this),'/sys-index.php/Member');});//单项属性切换
+	
+	$('.myopStatus').click(function(){
+		var obj=$(this);
+		require(['layer'], function(){
+			layer.confirm('确认要审核操作吗?',function(){
+				util.visible(obj,'/sys-index.php/Member/opVisible');
+			});
+		});		
+	});
+});
+</script>
+
+<include file="Public:footer" />

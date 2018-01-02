@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>案例详情 - {$data.title}</title>
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+<link rel="Shortcut Icon" href="http://wx.lxjjz.cn/wx//favicon.ico">
+<link rel="stylesheet" href="http://wx.lxjjz.cn/wx//css/pulic/common.css">
+<link rel="stylesheet" href="http://wx.lxjjz.cn/wx//fonts/iconfont.css">
+<link rel="stylesheet" href="http://wx.lxjjz.cn/wx//css/designer/caseDetails.css">
+
+</head>
+
+<body>
+
+<div class="contant">
+	<div v-html="strong.content"> {$data.content} </div>
+</div>
+
+
+</body>
+</html>
+<script language="javascript">
+/*适配各比例手机*/
+!(function(win, doc) {
+    function setFontSize() {
+
+        var winWidth = window.innerWidth;
+        // doc.documentElement.style.fontSize = (winWidth / 750) * 100 + 'px' ;
+
+        var size = (winWidth / 750) * 100;
+        doc.documentElement.style.fontSize = (size < 100 ? size : 100) + 'px';
+    }
+
+    var evt = 'onorientationchange' in win ? 'orientationchange' : 'resize';
+
+    var timer = null;
+
+    win.addEventListener(evt, function() {
+        clearTimeout(timer);
+
+        timer = setTimeout(setFontSize, 100);
+    }, false);
+
+    win.addEventListener("pageshow", function(e) {
+        if (e.persisted) {
+            clearTimeout(timer);
+
+            timer = setTimeout(setFontSize, 100);
+        }
+    }, false);
+    // 初始化
+    setFontSize();
+}(window, document));
+</script>

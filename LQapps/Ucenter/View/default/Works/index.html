@@ -1,0 +1,141 @@
+<include file="Public:header" />
+
+<div class="col-xs-12 col-sm-9 col-lg-10"> 
+
+  <div class="row">
+	<div class="col-sm-6 common-search-btn">
+		<label class="btn label-primary" title="{:L('PAGE_LIST')}"><i class="fa fa-list"></i> {:L('PAGE_LIST')}</label>
+		<a class="btn btn-primary" href="{:U('ucenter/works/add')}" title="{:L('PAGE_ADD')}"><i class="fa fa-plus"></i> {:L('PAGE_ADD')}</a>
+	</div>
+	<div class="col-sm-6" style="float:right;text-align:right;padding:0;margin:0px;">{$sys_current}</div>
+  </div>
+  
+  <form name="{$lq_form_list}" id="{$lq_form_list}" class="form-horizontal" onsubmit="return false">
+  <input type="hidden" id="thinkphpurl" name="thinkphpurl" value="{$page_config.thinkphpurl}" />
+  <input type="hidden" id="keymode" value="{$search_content.keymode}" />
+  <input type="hidden" id="pagesize" value="{$search_content.pagesize}" />
+  <input type="hidden" id="designer" value="{$search_content.designer}" />
+  <div class="clearfix welcome-container">
+  
+    <div class="clearfix welcome-container">
+    <div class="clearfix">
+        <div class="panel panel-info">
+          <div class="panel-body" style="position:relative;">
+            <div class="lq-panel-body-title"><span class="btn"><i class="fa fa-paw"></i> 筛选</span></div>
+            <div class="form-group">
+              <label class="col-xs-12 col-sm-2 col-md-2 col-lg-1 control-label">搜索</label>
+              <div class="col-sm-8 col-lg-10 col-xs-12">
+                <div class="input-group">
+                  <input type="text" class="form-control" id="fkeyword" value="{$search_content.fkeyword}" placeholder="{$keywordDefault}" onclick="lqKeywordOnclick(this)" onblur="lqKeywordOnblur(this)"/>
+                  <div class="input-group-btn">
+                    <button class="btn btn-default" id="listSearch"><i class="fa fa-search"></i> 搜索</button>
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><span class="caret"></span></button>
+                    <ul class="dropdown-menu dropdown-menu-right" role="menu">
+                      <li><a href="javascript:;" onclick="$('#fkeyword').attr('placeholder','精准搜索：请输入关键字');$('#keymode').val(1);">精准搜索</a></li>
+                      <li><a href="javascript:;" onclick="$('#fkeyword').attr('placeholder','模糊搜索：请输入关键字');$('#keymode').val(0);">模糊搜索</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-xs-12 col-sm-2 col-md-2 col-lg-1 control-label">户型</label>
+              <div class="col-sm-8 col-lg-10 col-xs-12">
+                <div class="col-lg-3" style="padding:0px;"><select class="form-control" id="style">{$style_select_str}</select></div>
+                <div class="col-lg-3"><select class="form-control" id="household">{$household_select_str}</select></div>
+                <div class="col-lg-3"><select class="form-control" id="area">{$area_select_str}</select></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+	<script language="javascript">   
+    $(function(){
+        //通用搜索
+        $("#listSearch").click(function(){	
+            require(['layer'], function(){
+                var fkeyword=$("#fkeyword").val();
+                var style=$("#style").val();
+                var household=$("#household").val();
+                var area=$("#area").val();
+                if(fkeyword!='{$keywordDefault}'||style||household||area){
+					var urlpara="fkeyword="+encodeURIComponent(fkeyword)+"=";
+					urlpara+="keymode="+encodeURIComponent($("#keymode").val())+"=";
+					urlpara+="pagesize="+encodeURIComponent($("#pagesize").val())+"=";
+					if(style) urlpara+="style="+encodeURIComponent(style)+"=";
+					if(household) urlpara+="household="+$("#household").val()+"=";					
+					if(area) urlpara+="area="+$("#area").val()+"=";
+                    location.href=$("#thinkphpurl").val()+"&a=index&lqs="+base64encode(urlpara);
+                }else{
+                    layer.msg("请输入搜索条件！",{icon:5,time:2000});
+                }
+            });			
+        });
+    });
+    </script>      
+    </div>
+
+    
+    <div class="row">
+      <div class="clearfix template">
+        <div class="panel panel-default">
+
+		<div class="panel-body">
+                    <span><i class="fa fa-list-ol"></i> {$sys_heading}</span>
+                    <div class="btn-group pull-right">
+                      <span class="label label-danger blink" id="os_warning" style="font-size:1em;display:none;padding:6px 10px; "> 请操作 <i class="fa fa-hand-o-right"></i></span>
+                      <button type="button" data-toggle="dropdown" id="os_button"> <i class="fa fa-chevron-down"></i> 操作 </button>
+                      <ul class="dropdown-menu slidedown" id="os_button_list">
+                        <li> <a href="{:U('ucenter/works/add')}" title="{:L('ALT_BUTTON_ADD_RECORD')}"> <i class="fa fa-plus-circle"></i> 新增 </a> </li>
+                        <li class="divider"></li>
+                        <li> <a href="{$refresh}" title="{:L('ALT_BUTTON_REFRESH')}"> <i class="fa fa-refresh"></i> 刷新 </a> </li>
+                        <li class="divider"></li>
+                        <li> <a href="javascript:;" op="opDeleteCheckbox" title="{:L('ALT_BUTTON_DELETE_RECORD')}"> <i class="fa fa-times-circle"></i> 删除 </a> </li>
+                        <li class="divider"></li>
+                        <li> <a href="javascript:;" title="每页10条" op="pagesize" val="10"> <i class="fa fa-repeat"></i> 每页10条 </a> </li>
+                        <li> <a href="javascript:;" title="每页20条" op="pagesize" val="20"> <i class="fa fa-repeat"></i> 每页20条 </a> </li>
+                        <li> <a href="javascript:;" title="每页30条" op="pagesize" val="30"> <i class="fa fa-repeat"></i> 每页30条 </a> </li>                        
+                      </ul>
+                    </div>
+		</div>
+                      
+          <div class="table-responsive panel-body">
+            <table class="table table-hover">
+              <include file="Public:common-table-thead" />
+              <tbody id="list-tbody">
+                  <volist name="list" id="data" key="key" empty="$empty_msg">
+                    <tr id="{$data.id}" visible="0" opCheck='0'>
+                      <td><input type="checkbox" class="checkbox" value="{$data.id}" name="items" /></td>
+                      <td align="center">{$data.no}</td>
+					  <td class="imgtd"><img src="{$data.zc_thumb}" alt="{$data.zc_title}"  width="100"/></td>
+                      <td>{$data.attribute}</td>
+                      <td edit="0" op="label" title="{:L('ALT_BUTTON_EDIT_LABEL')}">{$data.zc_caption}</td>
+                      <td>{$data.zn_clicks}/{$data.zn_agrees}/{$data.album}</td>
+                      <td>{$data.zl_is_index_label}</td>                       
+                      <td>{$data.visible_label}</td>
+                      <td class="manage-menu list-os-a">
+                      <a href="{$data.edit_url}" title="{:L("LABEL_OS_EDITID")}[{$data.id}]"><i class="fa fa-edit"></i></a>
+                      <a href="javascript:;" class="opDelete" title="{:L("LABEL_OS_DEL")}[{$data.id}]"><i class="fa fa-times-circle"></i></a>
+                      </td>
+                    </tr>
+                  </volist>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        {$page} 
+      </div>
+    </div>
+  </div>
+  </form>
+  
+</div>
+
+<include file="Public:footer" />
+<script>
+$(document).ready(function(){
+	$('#list-tbody tr:odd').addClass('tr_odd');//单双行样式
+	$('.opDelete').click(function(){util.delete($(this),"{:U('ucenter/works/op_delete')}");});//单记录删除操作
+	$('tbody>tr>td[op]').dblclick(function(){util.ajaxEdit($(this),"{:U('ucenter/works/op_label')}");});//单项编辑
+})
+</script>

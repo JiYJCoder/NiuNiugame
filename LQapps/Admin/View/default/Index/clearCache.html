@@ -1,0 +1,55 @@
+<include file="Public:header" />
+
+
+<div class="col-xs-12 col-sm-9 col-lg-10">
+  <ul class="nav nav-tabs">
+    <li class="active"><a href="#">清除缓存页面</a></li>
+  </ul>
+  <div class="clearfix welcome-container">
+    <form name="LQForm" id="LQForm" method="post" action="{:U('Index/clearCache')}" onsubmit="return check_choose();">
+	<table class="table table-hover">
+        <thead>
+          <tr>
+            <th style="width:150px;"><input type="checkbox" value="0" id="list_checkbox" /> 选择</th>
+            <th>清缓存项目</th>
+          </tr>
+        </thead>
+        <tbody>
+          <volist id="data" name="cache_item">
+            <tr>
+              <td><input type="checkbox" name="ids[]" value="{$data.id}" class="checkbox"></td>
+              <td><b>{$data.title}</b></td>
+            </tr>
+          </volist>
+        </tbody>
+      </table>
+      <div style="margin-bottom:100px;">
+        <input type="submit" value="提交更新" class="btn btn-primary col-lg-1" />
+      </div>
+    </form>
+  </div>
+</div>
+
+<include file="Public:footer" /> 
+<script type="text/javascript">
+function check_choose(){
+	var reutnValue=false;
+	$('input:checkbox').each(function() {
+			if($(this).prop('checked')===true){
+				 reutnValue=true;
+			}
+	});
+	if(reutnValue===false){
+		util.sysMsg(0,"清选择清除项目！");
+	}
+	return reutnValue;
+}
+
+//清除缓存 全选/反选
+$("#list_checkbox").click(function(){
+		  var checked_status = this.checked;
+		  $("input[type=checkbox]").each(function() {
+		  this.checked = checked_status;
+		  });
+});
+</script> 

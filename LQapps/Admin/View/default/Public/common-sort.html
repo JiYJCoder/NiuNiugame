@@ -1,0 +1,100 @@
+<include file="Public:header" />
+
+<div class="col-xs-12 col-sm-9 col-lg-10"> 
+  <include file="Public:common-current" />
+  <div class="clearfix welcome-container">
+    <div class="row">
+      <div class="clearfix template">
+        <div class="panel panel-default">
+		  <include file="Public:index-list-button" />
+				<style>
+                /*排序*/
+                .table-sort{width:800px; margin:0 auto 100px;line-height:22px;text-align:center;}
+                .table-sort select{width:350px; height:400px;}
+                .table-sort .btn{ width:120px;cursor:pointer; margin:4px 0;}
+                </style>          
+                <form name="{$lqForm_Save}" id="{$lqForm_Save}">
+                <input type="hidden" id="lq_post_lock" name="lq_post_lock" value="0" />
+                <input type="hidden" id="F_sortHid" name="F_sortHid"/>
+                <table cellSpacing=0 cellPadding=0 align=center border=0 class="table-sort" width="100%">
+                  <tbody>
+                  
+                    <tr>
+                      <td width="43%" align="right"><p class="label label-danger">当前排序&nbsp;总记录数  <i class="fa fa-cubes"></i> {$list|count} </p></td>
+                      <td width="14%">&nbsp;</td>
+                      <td width="43%" align="left"><p class="label label-success"><i class="fa fa-sort-numeric-asc"></i> 预设排序</p></td>
+                    </tr>
+                    
+                    <tr>
+                      <td>
+                        <select id="F_SortL"  multiple="multiple" ondblclick="lqSelectLR(1)" class="form-control">
+                          <volist name="list" id="data" key="key">
+                            <option value="{$data.id}">[{$data.id}]{$data.label}</option>
+                          </volist>
+                        </select>
+                      </td>
+                      <td>
+                        <div align="center" class="sort_input">
+                          <input id="checkAllL" name="checkAllL" type="checkbox" onclick="lqSelectAll(this,'L')" value="0" />
+                          <label for="checkAllL">左全选</label>
+                          <a class="btn btn-default" href="javascript:;" onclick="lqSelectLR(1)"><i class="fa fa-long-arrow-right"></i></a>
+                          <input id="checkAllR" name="checkAllR" type="checkbox" onclick="lqSelectAll(this,'R')" value="0" />
+                          <label for="checkAllR">右全选</label>
+                          <a class="btn btn-default" href="javascript:;" onclick="lqSelectLR(1)"><i class="fa fa-long-arrow-left"></i></a>
+                          <input type="checkbox" id="resetZero" name="resetZero" value="1" />
+                          <label for="resetZero">排序复位置<br>(系统默认值{:C("COM_SORT_NUM")})</label>
+                        </div>
+                        <div class="sort_arrow"> 
+                          <p class="label label-success"><i class="fa fa-wrench"></i> 右表操作</p>
+                          <a class="btn btn-default" href="javascript:;" onclick="lqMoveOptionFirst()"><i class="fa fa-arrow-up"></i> 放置最首</a>
+                          <a class="btn btn-default" href="javascript:;" onclick="lqMoveOptionUp()"><i class="fa fa-long-arrow-up"></i> 向上移动</a>
+                          <a class="btn btn-default" href="javascript:;" onclick="lqMoveOptionDown()"><i class="fa fa-long-arrow-down"></i> 朝下移动</a>
+                          <a class="btn btn-default" href="javascript:;" onclick="lqMoveOptionLast()"><i class="fa fa-arrow-down"></i> 移动最底</a>
+                        </div></td>
+                      <td valign="top"><select id="F_SortR" class="form-control" multiple="multiple" ondblclick="lqSelectLR(2)"></select></td>
+                    </tr>
+                  </tbody>
+                </table>
+                <div class="row" style="text-align:center; margin-bottom:100px;">
+			    <a class="btn btn-primary" style="width:200px;" href="javascript:;" id="lqFormSubmitsort" title="{:L('BUTTON_SAVE')}"><i class="fa fa-save"></i> {:L('BUTTON_SAVE')}</a>
+                </div>
+              </form>          
+          
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</div>
+
+<include file="Public:footer" />
+<import type='js' file="Static.js.admin-sort" />
+<script type="text/javascript">
+//排序提交
+$("#lqFormSubmitsort").click(function(){
+		var loForm=document.getElementById("F_SortR");
+		var lcSortStr="";
+		var resetzero=0;
+		
+		for(var lnindex=0; lnindex<loForm.length;lnindex++){
+		  if(lnindex==0){
+		   lcSortStr=loForm[lnindex].value;
+		  }else{lcSortStr+=","+loForm[lnindex].value;}
+		}
+		document.getElementById("F_sortHid").value=lcSortStr;
+		if(document.getElementById("F_sortHid").value==""){
+				util.sysMsg(0,'预设排序列表不能为空');
+			    return false;
+		}else{
+			if($('#resetZero').is(':checked')) resetzero=1;
+
+			    $.post("__CONTROLLER__/opSortlist",{tcsortid:$("#F_sortHid").val(),resetzero:resetzero,__hash__:$("#__hash__").val()}, function(json){
+						if(json.status==1){
+							util.sysMsg(1,json.msg,json.url);		
+						}else{
+							util.sysMsg(0,json.msg,json.url);		
+						}
+			    });
+		}
+});	 
+</script>

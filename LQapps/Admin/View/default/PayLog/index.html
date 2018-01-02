@@ -1,0 +1,171 @@
+<include file="Public:header" />
+
+<div class="col-xs-12 col-sm-9 col-lg-10"> 
+  <include file="Public:common-current" />
+  <form name="{$lq_form_list}" id="{$lq_form_list}" class="form-horizontal" onsubmit="return false">
+  <input type="hidden" id="thinkphpurl" name="thinkphpurl" value="{$page_config.thinkphpurl}" />
+  <input type="hidden" id="keymode" value="{$search_content.keymode}" />
+  <input type="hidden" id="pagesize" value="{$search_content.pagesize}" />
+  <div class="clearfix welcome-container">
+    {/* 在这里放特定搜索 */} 
+            <div class="clearfix">
+              <div class="panel panel-info">
+                <div class="panel-body" style="position:relative;">
+                    <div class="lq-panel-body-title"><span class="btn"><i class="fa fa-paw"></i> 筛选</span></div>
+                    <div class="form-group">
+                          <label class="col-xs-12 col-sm-3 col-md-2 col-lg-1 control-label">日期范围</label>
+                          <div class="col-sm-6 col-lg-8 col-xs-6"> 
+                            <script type="text/javascript">
+                                require(["daterangepicker"], function($){
+                                    $(function(){
+                                        $(".daterange.daterange-date").each(function(){
+                                            var elm = this;
+                                            $(this).daterangepicker({
+                                                startDate: $(elm).prev().prev().val(),
+                                                endDate: $(elm).prev().val(),
+                                                format: "YYYY-MM-DD"
+                                            }, function(start, end){
+                                                $(elm).find(".date-title").html(start.toDateStr() + " 至 " + end.toDateStr());
+                                                $(elm).prev().prev().val(start.toDateStr());
+                                                $(elm).prev().val(end.toDateStr());
+                                            });
+                                        });
+                                    });
+                                });
+                            </script>
+                            <input id="open_time" type="hidden" value="{$search_content.open_time}">
+                            <input id="time_start" type="hidden" value="{$search_content.time_start}">
+                            <input id="time_end" type="hidden" value="{$search_content.time_end}">
+                            <button class="btn btn-default daterange daterange-date" type="button"><span class="date-title">{$search_content.time_start} 至 {$search_content.time_end}</span> <i class="fa fa-calendar"></i></button>
+                            <if condition="$search_content.open_time eq '1'"> 
+                            <a href="#" id="a_open_time" class="btn btn-primary">启用</a> 
+                            <else/>
+                            <a href="#" id="a_open_time" class="btn btn-default">启用</a> 
+                            </if>                             
+                          </div>                    
+                    </div>
+                    <div class="form-group">
+                      <label class="col-xs-12 col-sm-2 col-md-2 col-lg-1 control-label">搜索</label>
+                      <div class="col-sm-8 col-lg-10 col-xs-12">
+                        <div class="input-group">
+                          <input type="text" class="form-control" id="fkeyword" value="{$search_content.fkeyword}" placeholder="{$keywordDefault}" onclick="lqKeywordOnclick(this)" onblur="lqKeywordOnblur(this)"/>
+                          <div class="input-group-btn">
+                            <button class="btn btn-default" id="listSearch"><i class="fa fa-search"></i> 搜索</button>
+                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><span class="caret"></span></button>
+                            <ul class="dropdown-menu dropdown-menu-right" role="menu">
+                            <li><a href="javascript:;" onclick="$('#fkeyword').attr('placeholder','精准搜索：请输入关键字');$('#keymode').val(1);">精准搜索</a></li>
+                            <li><a href="javascript:;" onclick="$('#fkeyword').attr('placeholder','模糊搜索：请输入关键字');$('#keymode').val(0);">模糊搜索</a></li>
+                            <li><a href="javascript:;" class="bySearch" lqid="0">未支付</a></li>
+                            <li><a href="javascript:;" class="bySearch" lqid="1">已支付</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+			<script language="javascript">   
+			//选择状态
+			$(".bySearch").click(function(){	
+				location.href=$("#thinkphpurl").val()+'index/s/'+base64encode("status/"+encodeURIComponent($(this).attr("lqid"))+"/");			
+			});			
+            $(function(){
+				 //时间开启
+				 $("#a_open_time").click(function(){	
+				 		if($("#open_time").val()=="1"){
+							$("#open_time").val("0");
+							$(this).removeClass("btn-primary").addClass("btn-default");
+						}else{
+							$("#open_time").val("1");
+							$(this).removeClass("btn-default").addClass("btn-primary");
+						}
+				 });				
+                //通用搜索
+                $("#listSearch").click(function(){	
+                    require(['layer'], function(){
+						var fkeyword=$("#fkeyword").val();
+						var status=$("#status").val();
+						var open_time=$("#open_time").val();
+						if(fkeyword!='{$keywordDefault}'||open_time==1){
+							var searchurl=$("#thinkphpurl").val()+'index/s/';
+							var urlpara="fkeyword/"+encodeURIComponent(fkeyword)+"/";
+							urlpara+="keymode/"+encodeURIComponent($("#keymode").val())+"/";
+							urlpara+="pagesize/"+encodeURIComponent($("#pagesize").val())+"/";
+							urlpara+="open_time/"+encodeURIComponent($("#open_time").val())+"/";						
+							urlpara+="time_start/"+encodeURIComponent($("#time_start").val())+"/";
+							urlpara+="time_end/"+encodeURIComponent($("#time_end").val())+"/";	
+							if(status!='') urlpara+="status/"+status+"/";
+							location.href=searchurl+base64encode(urlpara);
+						}else{
+							layer.msg("请输入搜索条件！",{icon:5,time:2000});
+						}						
+                    });			
+                });
+            });
+            </script>            
+    
+    <div class="row">
+      <div class="clearfix template">
+        <div class="panel panel-default">
+        <div class="panel-body">
+                <span><i class="fa fa-list-ol"></i> {$sys_heading}</span>
+                <div class="btn-group pull-right">
+                  <span class="label label-danger blink" id="os_warning" style="font-size:1em;display:none;padding:6px 10px; "> 请操作 <i class="fa fa-hand-o-right"></i></span>
+                  <button type="button" data-toggle="dropdown" id="os_button"> <i class="fa fa-chevron-down"></i> 操作 </button>
+                  <ul class="dropdown-menu slidedown" id="os_button_list">
+                    <li> <a href="" title="刷新本页"> <i class="fa fa-refresh"></i> 刷新本页 </a> </li>
+                    <li class="divider"></li>
+                    <li> <a href="javascript:;" title="每页10条" op="pagesize" val="10"> <i class="fa fa-repeat"></i> 每页10条 </a> </li>
+                    <li> <a href="javascript:;" title="每页20条" op="pagesize" val="20"> <i class="fa fa-repeat"></i> 每页20条 </a> </li>
+                    <li> <a href="javascript:;" title="每页30条" op="pagesize" val="30"> <i class="fa fa-repeat"></i> 每页30条 </a> </li>
+                  </ul>
+                </div>
+        </div>
+
+          <div class="table-responsive panel-body">
+            <table class="table table-hover">
+            
+                <thead class="navbar-inner">
+                  <tr>
+                    <th style="width:40px;"><input type="checkbox" class="checkbox" value="0" id="list_checkbox" /></th>
+                    <th style="width:90px;text-align:center;">序号</th>
+                    <th style="width:220px;">订单编号</th>
+                    <th style="width:150px;">创建时间</th>
+                    <th>支付方式</th>
+                    <th>支付业务</th>
+                    <th>支付会员</th>
+                    <th>支付金额</th>
+                    <th style="width:300px;">业务单据</th>
+                    <th style="width:80px;">支付状态</th>
+                  </tr>
+                </thead>
+              
+              <tbody id="list-tbody">
+                <volist name="list" id="data" key="key" empty="$empty_msg">
+                  <tr id="{$data.id}" lqno="{$data.zc_order_no}" visible="1" opCheck='0'>
+                    <td><input type="checkbox" class="checkbox" value="{$data.id}" name="items" /></td>
+                    <td style="text-align:center;" title="ID:{$data.id}">{$data.no}</td>
+                    <td>{$data.zc_order_no}</td>
+                    <td title="进跟时间:{$data.time_diff}">{$data.zn_cdate|date="Y-m-d H:i",###}</td>
+                    <td>{$data.zc_pay_type}</td>
+                    <td>{$data.zn_pay_business_label}</td>
+                    <td>{$data.zc_member_account}</td>
+                    <td>{$data.zf_order_amount}</td>
+                    <td>{$data.zc_transaction_id}</td>
+                    <td>{$data.zl_is_apy_label}</td>                       
+                  </tr>
+                </volist> 
+              </tbody>
+            </table>
+          </div>
+        </div>
+        {$page} 
+      </div>
+    </div>
+  </div>
+  </form>
+             
+</div>
+
+<include file="Public:footer" />

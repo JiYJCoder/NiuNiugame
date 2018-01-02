@@ -1,0 +1,106 @@
+获取会员信息
+http://wx.lxjjz.cn/do?g=api&m=member&a=get-member-info
+{
+    "status":1,
+    "msg":"返回成功",
+    "data":{
+        "nickname":"夏生",
+        "sex":"2",
+        "zl_sex_label":"女",
+        "pay_integration":"5",
+        "rank_integration":"5",
+        "headimg":"http://wx.qlogo.cn/mmopen/iarR9bsEGTXqcibX65KWnjdGEZq3ja2KY9O0qibYYlHIUz2UNmSWeJOpaUcCYNfnRGscquHLMog7oTibE0xMGjR5GbWgBZF5K2bia/0",
+        "province":"广东省",
+        "city":"佛山市",
+        "district":"禅城区",
+        "province_id":"440000",
+        "city_id":"440600",
+        "district_id":"440604",
+        "area":"广东省佛山市禅城区",
+        "address":"广东佛山市区"
+    },
+    "url":"",
+    "note":"获取会员信息"
+}
+
+
+修改会员昵称
+'nickname':'夏生'
+http://wx.lxjjz.cn/do?g=api&m=member&a=edit-nickname
+{
+    "status":1,
+    "msg":"编辑成功",
+    "data":"",
+    "url":"",
+    "note":"会员修改昵称"
+}
+
+
+会员修改性别
+'sex':'1'  0=>'保密',	1=>'男',2=>'女'
+http://wx.lxjjz.cn/do?g=api&m=member&a=edit-sex
+{
+    "status":1,
+    "msg":"编辑成功",
+    "data":"",
+    "url":"",
+    "note":"会员修改性别"
+}
+
+会员修改所在区域
+'province':'广东省','city':'佛山市','district':'禅城区'
+http://wx.lxjjz.cn/do?g=api&m=member&a=edit-area
+{
+    "status":1,
+    "msg":"编辑成功",
+    "data":"",
+    "url":"",
+    "note":"会员修改所在区域"
+}
+
+会员修改地址
+'address':'广东省佛山市禅城区祖庙'
+http://wx.lxjjz.cn/do?g=api&m=member&a=edit-address
+{
+    "status":1,
+    "msg":"编辑成功",
+    "data":"",
+    "url":"",
+    "note":"会员修改地址"
+}
+
+
+上传会员头像
+'type':'avatar'
+'fileid':'file_zc_headimg'
+http://wx.lxjjz.cn/do?g=api&m=upload&a=upload-image
+{
+    "status":1,
+    "msg":"上传成功",
+    "data":"/uploadfiles/images/20161205/584545fef32a0.jpg",
+    "url":"",
+    "note":"上传会员头像"
+}
+
+
+返回省份
+http://wx.lxjjz.cn/do?g=api&m=upload&a=get-province
+{
+    "status":1,
+    "msg":"操作成功",
+    "data":[
+        {
+            "id":"440000",
+            "title":"广东省"
+        },
+        {
+            "id":"110000",
+            "title":"北京市"
+        },
+        {
+            "id":"120000",
+            "title":"天津市"
+        }
+	...
+    ]
+}

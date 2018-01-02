@@ -1,0 +1,104 @@
+<include file="Public:header" />
+
+<div class="col-xs-12 col-sm-9 col-lg-10"> 
+  <include file="Public:common-current" />
+  <form name="{$lq_form_list}" id="{$lq_form_list}" class="form-horizontal" onsubmit="return false">
+  <input type="hidden" id="thinkphpurl" name="thinkphpurl" value="{$page_config.thinkphpurl}" />
+  <input type="hidden" id="keymode" value="{$search_content.keymode}" />
+  <input type="hidden" id="pagesize" value="{$search_content.pagesize}" />
+  <div class="clearfix welcome-container">
+  	<if condition="$os_lock.search eq '1'">  
+    <include file="Public:common-search" />
+    <else />
+    {/* 在这里放特定搜索 */} 
+    
+    </if> 
+    <div class="row">
+      <div class="clearfix template">
+        <div class="panel panel-default">
+		  <include file="Public:index-list-button" />
+          
+          <div class="table-responsive panel-body">
+            <table class="table table-hover">
+                <thead>
+                      <tr>
+                        <th style="width:100px;text-align:center;">ID</th>
+                        <th style="width:400px;" title="单击分类隐藏/显示该分类下在子类">分类名称</th>
+                        <th style="width:80px;text-align:center;">首页推送</th>
+                        <th style="width:50px;">排序</th>
+                        <th style="width:50px;">状态</th>
+                        <th style="width:80px;text-align:center;"><a href="javascript:;" id="op_msg">{:L("LABEL_OS")}?</a></th>
+                      </tr>
+                </thead>
+                <tbody id="list-tbody">
+                      <volist name="list" id="data" key="key" empty="$empty_msg">
+                        <tr id="{$data.id}" pid="{$data.zn_fid}" visible="{$data.zl_visible}" product_count="">
+                          <td align="center">{$data.id}</td>
+                          <td align="left" class="tree" style="cursor: pointer;"><ii class="tree_tip" id="tree_tip_{$data.id}">{$data.fullname}</ii></td>
+                          <td align="center">{$data.is_index_label}</td>
+                          <td edit="0" op="sort" title="{:L('ALT_BUTTON_EDIT_SORT')}">{$data.zn_sort}</td>
+                          <td>{$data.visible_label}</td>
+                          <td class="manage-menu list-os-a">
+                          <a href="__CONTROLLER__/edit/tnid/{$data.id}" title="{:L("LABEL_OS_EDITID")}[{$data.id}]"><i class="fa fa-edit"></i></a>
+                          <a href="javascript:;" class="opCopy" title="{:L("ALT_BUTTON_COPY")}该类别下的产品[{$data.id}]"><i class="fa fa-copy"></i></a>
+                          <a href="javascript:;" class="opTransform" title="{:L("ALT_BUTTON_TRANSFER")}该类别下的产品[{$data.id}]"><i class="fa fa-share"></i></a>
+                          <a href="javascript:void(0);" class="opStatus" val="{$data.zl_visible}" title="{:L("LABEL_OS_STATUS")}[{$data.id}]">{$data.visible_button}</a>
+                          <a href="javascript:;" class="opDelete" title="{:L("LABEL_OS_TITLE_DEL")}[{$data.zc_caption}]"><i class="fa fa-times-circle"></i></a>
+                          </td>
+                        </tr>
+                      </volist>
+                </tbody>    
+            </table>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </form>
+  
+</div>
+
+<include file="Public:footer" />
+<script type="text/javascript">
+$(function(){
+
+				$(".tree_tip").hover(function(){
+					var obj  = 	$(this);			  
+					var lqid =  obj.parents("tr").attr("id");	
+					var product_count =  obj.parents("tr").attr("product_count");	
+					require(['layer'], function(){
+						if( product_count=='' ){
+							$.getJSON('__CONTROLLER__/ajaxGetCount',{tnid:lqid}, function(json){
+								if(json.status==1){
+									obj.parents("tr").attr("product_count",json.data);
+									layer.tips('共有'+json.data+"个产品", '#tree_tip_'+lqid);
+								}
+							});								
+						}else{
+									layer.tips('共有'+product_count+"个产品", '#tree_tip_'+lqid);
+						}
+					});	
+				});
+
+				//复制弹出框
+                $(".opCopy").click(function(){
+					var obj  = 	$(this);			  
+					var lqid =  obj.parents("tr").attr("id");
+					var txt=$(this).parents("tr").find("td:eq(1)").html();
+					util.openWin('__CONTROLLER__/treeWin/op/copy/tnid/'+lqid,'复制“'+txt+'”下的产品至以下类别','420px','425px');
+				});		
+				
+				//转移弹出框
+                $(".opTransform").click(function(){
+					var obj  = 	$(this);
+					var lqid =  obj.parents("tr").attr("id");
+					var txt=$(this).parents("tr").find("td:eq(1)").html();
+					util.openWin('__CONTROLLER__/treeWin/op/transform/tnid/'+lqid,'转移“'+txt+'”下的产品至以下类别','420px','425px');					
+					transform_Func.tree();
+					
+                });				
+				
+
+});
+</script>

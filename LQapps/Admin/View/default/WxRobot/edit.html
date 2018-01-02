@@ -1,0 +1,86 @@
+<include file="Public:header" />
+
+<div class="col-xs-12 col-sm-9 col-lg-10"> 
+
+  <div class="row">
+	<div class="col-sm-6 common-search-btn">
+        <if condition="ACTION_NAME eq 'add'">
+        	<a class="btn btn-primary" href="{$edit_index_url}" title="{:L('PAGE_LIST')}"><i class="fa fa-list"></i> {:L('PAGE_LIST')}</a>
+            <label class="btn label-primary" title="{:L('PAGE_ADD')}"><i class="fa fa-plus"></i> {:L('PAGE_ADD')}</label>
+        <elseif condition="ACTION_NAME eq 'edit'" />
+			<a class="btn btn-primary" href="{$edit_index_url}" title="{:L('PAGE_LIST')}"><i class="fa fa-list"></i> {:L('PAGE_LIST')}</a>
+            <label class="btn label-primary" title="{:L('PAGE_EDIT')}"><i class="fa fa-edit"></i> {:L('PAGE_EDIT')}</label>  
+        </if>
+	</div>
+	<div class="col-sm-6" style="float:right;text-align:right;padding:0;margin:0px;">{$sys_current}</div>
+  </div>  
+  
+  <div class="clearfix welcome-container">
+    <div class="row">
+      <div class="clearfix template">
+        <div class="panel panel-default">
+
+
+            <div class="panel-body">
+                    <span><i class="fa fa-list-ol"></i> {$sys_heading}</span>
+                    <div class="btn-group pull-right">
+                      <span class="label label-danger blink" id="os_warning" style="font-size:1em;display:none;padding:6px 10px; "> 请操作 <i class="fa fa-hand-o-right"></i></span>
+                      <button type="button" data-toggle="dropdown" id="os_button"> <i class="fa fa-chevron-down"></i> 操作 </button>
+                      <ul class="dropdown-menu slidedown" id="os_button_list">
+                          <if condition="ACTION_NAME eq 'add'">
+                            <li> <a href="javascript:;" title="{:L('ALT_BUTTON_SAVE_RECORD')}" id="aFormSubmit"> <i class="fa fa-floppy-o"></i> 保存数据 </a> </li>
+                            <li class="divider"></li>
+                            <li> <a href="{:U('index')}" title="返回列表"> <i class="fa fa-list"></i> 返回列表 </a> </li>
+                            <li class="divider"></li>
+                            <li> <a href="" title="刷新本页"> <i class="fa fa-refresh"></i> 刷新本页 </a> </li>
+                          <elseif condition="ACTION_NAME eq 'edit'"/>
+                            <li> <a href="javascript:;" title="{:L('ALT_BUTTON_SAVE_RECORD')}" id="aFormSubmit"> <i class="fa fa-floppy-o"></i> 保存数据 </a> </li>
+                            <li class="divider"></li>
+                            <li> <a href="{$edit_index_url}" title="返回列表"> <i class="fa fa-list"></i> 返回列表 </a> </li>
+                            <li class="divider"></li>
+                            <li> <a href="" title="刷新本页"> <i class="fa fa-refresh"></i> 刷新本页 </a> </li>
+                            <li class="divider"></li>
+                            {$data_up_down_page}                        
+                          </if>     
+                             
+                      </ul>
+                    </div>
+            </div>
+
+          
+            {$LQFdata}
+          
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</div>
+
+<include file="Public:footer" />
+<script type="text/javascript" src="__RES__/js/lib/admin.validator.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	<if condition="ACTION_NAME eq 'add'">
+		$("#form_group_zc_image").hide();
+		$("#form_group_zc_url").hide();
+	</if> 	
+		//公共表单提交
+		$("#LQFormSubmit,#aFormSubmit").click(function(){
+		var loForm=document.getElementById("LQForm");
+		if(adminValidator(loForm)){util.commonAjaxSubmit();}
+		return false;
+		});
+	 	
+		//消息类型
+		$("#zl_type").change(function(){
+			if($(this).val()==1){
+				$("#form_group_zc_image").hide();
+				$("#form_group_zc_url").hide();
+			}else{
+				$("#form_group_zc_image").show();
+				$("#form_group_zc_url").show();
+			}
+		});
+});	
+</script>	

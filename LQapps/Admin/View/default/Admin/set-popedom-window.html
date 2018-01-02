@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>{$LQFdata.zc_account}用户权限设置</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<script type="text/javascript" src="__RES__/js/lib/jquery-1.11.1.min.js"></script>
+<link rel="stylesheet" href="__RES__/plugins/ztree/css/demo.css" type="text/css">
+<link rel="stylesheet" href="__RES__/plugins/ztree/css/zTreeStyle/zTreeStyle.css" type="text/css">
+<link rel="stylesheet" href="__RES__/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="__RES__/plugins/ztree/js/jquery.ztree.core-3.5.js"></script>
+<script type="text/javascript" src="__RES__/plugins/ztree/js/jquery.ztree.excheck-3.5.js"></script>
+<script type="text/javascript" src='__RES__/plugins/layer3/layer.js'></script>
+<script type="text/javascript">
+var setting = {check: {enable: true,chkboxType: {"Y":"ps", "N":"ps"}},data: {simpleData:{enable: true}},callback: {onCheck: setPop}};
+var zNodes = [
+	<volist id="data" name="listtree">
+	{id: {$data.id},pId:{$data.zn_fid},name:"{$data.zc_caption|html_entity_decode}",checked:{$data.checked},open:true},
+	</volist>	
+];
+function expandNode(e){
+			var zTree = $.fn.zTree.getZTreeObj("treePopedom"),
+			type = e.data.type,
+			nodes = zTree.getSelectedNodes();
+			if (type.indexOf("All")<0 && nodes.length == 0) {
+				alert("请先选择一个父节点");
+			}
+
+			if (type == "expandAll") {
+				zTree.expandAll(true);
+			}else if (type == "collapseAll") {
+				zTree.expandAll(false);
+			}else if (type == "checkAllTrue") {
+				zTree.checkAllNodes(true);
+				setPop();
+			}else if (type == "checkAllFalse") {
+				zTree.checkAllNodes(false);		
+				$("#zcadmpopedom").val('');		
+			}
+}
+function setPop(e, treeId, treeNode) {
+			var ids='';
+			var zTree = $.fn.zTree.getZTreeObj("treePopedom"),
+			nodes = zTree.getCheckedNodes();
+			for (var i=0, l=nodes.length; i<l; i++) {
+				if(i==0){
+				ids+=nodes[i].id;
+				}else{
+				ids+=','+nodes[i].id;
+				}
+			}
+			$("#zcadmpopedom").val(ids);	
+}
+</script>
+</head>
+<body>
+<script type="text/javascript">var page_loading=layer.load(0,{shade:[0.1,'#fff']});</script>
+<div class="page_box">
+  <form name="{$lq_form_save}" id="{$lq_form_save}">
+    <input id="znadmid" name="LQF[id]" type="hidden" value="{$LQFdata.id}">
+    <input id="zcadmpopedom" name="LQF[zc_popedom]" type="hidden" value="{$LQFdata.zc_popedom}">
+    <div class="info">
+      <table width="100%" border="0" cellspacing="0" cellpadding="5">
+        <tr>
+          <td class="title">管理员信息</td>
+        </tr>
+        <tr>
+          <td><h5><i class="fa fa-user"></i> 用户帐号：</h5></td>
+        </tr>
+        <tr>
+          <td><div class="txt_input">{$LQFdata.zc_account}</div></td>
+        </tr>
+        <tr>
+          <td><h5><i class="fa fa-lock"></i> 用户角色：</h5></td>
+        </tr>
+        <tr>
+          <td><select id="znadmrole" name="znadmrole">
+              {$LQFdata.zn_role_id_string}
+            </select></td>
+        </tr>
+        <tr>
+          <td><h5><i class="fa fa-calendar"></i> 创建时间：</h5></td>
+        </tr>
+        <tr>
+          <td><div class="txt_input">{$LQFdata.cdate}</div></td>
+        </tr>
+        <tr>
+          <td><h5><i class="fa fa-calendar"></i> 最后登录时间：</h5></td>
+        </tr>
+        <tr>
+          <td><div class="txt_input">{$LQFdata.last_login_time}</div></td>
+        </tr>
+        <tr>
+          <td class="button_box"><input id="B1" name="B1" type="button" value=" 保存 "></td>
+        </tr>
+      </table>
+    </div>
+    <div class="pop">
+      <div class="tit"> <a href="javascript:;" id="expandAllBtn">全部展开</a> | <a href="javascript:;" id="collapseAllBtn">全部折叠</a> | <a href="javascript:;" id="checkAllTrue">全选择</a> | <a href="javascript:;" id="checkAllFalse">全取消</a> </div>
+      <ul id="treePopedom" class="ztree">
+      </ul>
+    </div>
+  </form>
+</div>
+</body>
+<script language="javascript">
+$(document).ready(function(){
+	$.fn.zTree.init($("#treePopedom"), setting, zNodes);
+	$("#expandAllBtn").bind("click", {type:"expandAll"}, expandNode);
+	$("#collapseAllBtn").bind("click", {type:"collapseAll"}, expandNode);
+	$("#checkAllTrue").bind("click", {type:"checkAllTrue"}, expandNode);
+	$("#checkAllFalse").bind("click", {type:"checkAllFalse"}, expandNode);
+	layer.close(page_loading);//结束页面加载状态
+			
+	//保存
+	$("#B1").click(function(){
+		if($("#zcadmpopedom").val()=="") $("#zcadmpopedom").val="0";
+		page_loading = layer.load(0,{shade:[0.1,'#fff']});
+		$.post("__CONTROLLER__/setPopedomWindow/",{"LQF[id]":$("#znadmid").val(),"LQF[zn_role_id]":$("#znadmrole").val(),"LQF[zc_popedom]":$("#zcadmpopedom").val(),"LQF[__hash__]":$("#__hash__").val()},
+		function(json){
+			top.layer.closeAll();
+		});		
+	});
+		
+});
+</script>
+</html>

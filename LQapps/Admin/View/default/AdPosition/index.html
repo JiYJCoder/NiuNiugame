@@ -1,0 +1,97 @@
+<include file="Public:header" />
+
+<div class="col-xs-12 col-sm-9 col-lg-10"> 
+  <include file="Public:common-current" />
+  <form name="{$lq_form_list}" id="{$lq_form_list}" class="form-horizontal" onsubmit="return false">
+  <input type="hidden" id="thinkphpurl" name="thinkphpurl" value="{$page_config.thinkphpurl}" />
+  <input type="hidden" id="keymode" value="{$search_content.keymode}" />
+  <input type="hidden" id="pagesize" value="{$search_content.pagesize}" />
+  <div class="clearfix welcome-container">
+  	<if condition="$os_lock.search eq '1'">  
+    <include file="Public:common-search" />
+    <else />
+    {/* 在这里放特定搜索 */} 
+    
+    </if> 
+    <div class="row">
+      <div class="clearfix template">
+        <div class="panel panel-default">
+		  <include file="Public:index-list-button" />
+          
+          <div class="table-responsive panel-body">
+            <table class="table table-hover">
+              <include file="Public:common-table-thead" />
+              <tbody id="list-tbody">
+                  <volist name="list" id="data" key="key" empty="$empty_msg">
+                    <tr id="{$data.id}" visible="{$data.zl_visible}" opCheck='0'>
+                      <td><input type="checkbox" class="checkbox" value="{$data.id}" name="items" /></td>
+                      <td align="center">{$data.no}</td>
+                      <td class="ii"><span class="label label-danger">{$data.zc_caption}</span>
+                          <ii <if condition="$data.zl_visible eq '0'">style=" display:none"</if>>
+                          <a href="{$data.ad_add}" title="{:L("LABEL_OS_EDITID")}[{$data.id}]">|添加.</a>
+                          <a href="{$data.ad_list}" title="{:L("LABEL_OS_EDITID")}[{$data.id}]">|列表.</a>
+                          </ii>
+                          <ii <if condition="$data.zl_visible eq '1'">style=" display:none"</if>>|添加. |列表.</ii>   
+                      </td>
+                      <td><a href="{$data.ad_list}" title="管理 [{$data.zc_caption}] 广告"><span class="label label-danger">{$data.count}</span></a></td>
+                      <td edit="0" set="set_width" title="图册图片的宽度">{$data.zn_image_width}</td>
+                      <td edit="0" set="set_height" title="图册图片的高度">{$data.zn_image_height}</td>                                    
+                      <td edit="0" op="sort" title="{:L('ALT_BUTTON_EDIT_SORT')}">{$data.zn_sort}</td>
+                      <td>{$data.visible_label}</td>
+                      <td class="manage-menu list-os-a">
+                      <a href="__CONTROLLER__/edit/tnid/{$data.id}" title="{:L("LABEL_OS_EDITID")}[{$data.id}]"><i class="fa fa-edit"></i></a>
+             		  <a href="javascript:void(0);" class="adStatus" val="{$data.zl_visible}" title="{:L("LABEL_OS_STATUS")}[{$data.id}]">{$data.visible_button}</a>
+                      <a href="javascript:;" class="opDelete" title="{:L("LABEL_OS_TITLE_DEL")}[{$data.zc_caption}]"><i class="fa fa-times-circle"></i></a>
+                      </td>
+                    </tr>
+                  </volist>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        {$page} 
+      </div>
+    </div>
+  </div>
+  </form>
+  
+</div>
+
+<include file="Public:footer" />
+<script type="text/javascript">
+$(function(){
+                //快捷启用禁用操作
+                $(".adStatus").click(function(){
+						var obj	= $(this);	 
+						util.visible(obj,'__CONTROLLER__/opVisible');
+						var ii =  obj.parents("tr").find("ii");
+						if(obj.parents("tr").attr("visible")==0){
+							ii.eq(0).show();ii.eq(1).hide();
+						}else{
+							ii.eq(0).hide();ii.eq(1).show();							
+						}						
+                });
+	
+				
+                //设置宽度高度
+                $("tbody>tr>td[set]"). click(function(){
+					var obj=$(this);
+                    var lqval = obj.html();
+					var lqid =  obj.parents("tr").attr("id");
+					var lqop = obj.attr("set");
+					if(obj.attr('edit')==0) obj.attr('edit','1').html("<input class='form-control' id='edit_"+lqop+"_"+lqid+"' value='"+lqval+"' />").find("input").select();
+				    $("#edit_"+lqop+"_"+lqid).focus().bind("blur",function(){
+                        var editval = $(this).val();
+                        $(this).parents("td").html(editval).attr('edit','0');
+						if(lqval!=editval){
+                        require(['layer'], function(){
+                        var page_loading = layer.load(0,{shade:[0.1,'#fff']});
+                        if(lqval!=editval){$.post('__CONTROLLER__/opProperty',{tcop:lqop,tnid:lqid,value:editval},function(data){layer.close(page_loading);});}
+                        });	
+						}
+                    })						
+                });	
+				
+				
+});
+</script>

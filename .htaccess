@@ -1,0 +1,13 @@
+#保护限制访问 htaccess htm sql
+<IfModule mod_rewrite.c>
+  Options +FollowSymlinks
+  RewriteEngine On
+  ErrorDocument 404 /404.php
+
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteRule ^do$ index.php/$1 [QSA,PT,L]
+  RewriteRule ^admin$ ./sys-index.php [NC,L]
+
+</IfModule>
+

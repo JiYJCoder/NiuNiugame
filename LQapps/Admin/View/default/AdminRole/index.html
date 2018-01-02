@@ -1,0 +1,63 @@
+<include file="Public:header" />
+
+<div class="col-xs-12 col-sm-9 col-lg-10"> 
+  <include file="Public:common-current" />
+  <form name="{$lq_form_list}" id="{$lq_form_list}" class="form-horizontal" onsubmit="return false">
+  <input type="hidden" id="thinkphpurl" name="thinkphpurl" value="{$page_config.thinkphpurl}" />
+  <input type="hidden" id="keymode" value="{$search_content.keymode}" />
+  <input type="hidden" id="pagesize" value="{$search_content.pagesize}" />
+  <div class="clearfix welcome-container">
+  	<if condition="$os_lock.search eq '1'">  
+    <include file="Public:common-search" />
+    <else />
+    {/* 在这里放特定搜索 */} 
+    
+    </if> 
+    <div class="row">
+      <div class="clearfix template">
+        <div class="panel panel-default">
+		  <include file="Public:index-list-button" />
+          
+          <div class="table-responsive panel-body">
+            <table class="table table-hover">
+              <include file="Public:common-table-thead" />
+              <tbody id="list-tbody">
+                  <volist name="list" id="data" key="key" empty="$empty_msg">
+                    <tr id="{$data.id}" visible="{$data.zl_visible}" opCheck='0'>
+                      <td><input type="checkbox" class="checkbox" value="{$data.id}" name="items" /></td>
+                      <td align="center">{$data.no}</td>
+                      <td align="center">{$data.id}</td>
+                      <td edit="0" op="label" title="{:L('ALT_BUTTON_EDIT_LABEL')}">{$data.zc_caption}</td>
+                      <td edit="0" op="sort" title="{:L('ALT_BUTTON_EDIT_SORT')}">{$data.zn_sort}</td>
+                      <td>{$data.visible_label}</td>
+                    <td class="manage-menu list-os-a">
+                      <a href="__CONTROLLER__/edit/tnid/{$data.id}" title="{:L("LABEL_OS_EDITID")}[{$data.id}]"><i class="fa fa-edit"></i></a>
+             		  <a href="javascript:void(0);" class="myopStatus" val="{$data.zl_visible}" title="{:L("LABEL_OS_STATUS")}[{$data.id}]">{$data.visible_button}</a>
+                      <a href="javascript:;" class="opDelete" title="{:L("LABEL_OS_DEL")}[{$data.id}]"><i class="fa fa-times-circle"></i></a>
+                      </td>
+                    </tr>
+                  </volist>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        {$page} 
+      </div>
+    </div>
+  </div>
+  </form>
+  
+</div>
+<script>
+$(document).ready(function(){
+	$('.myopStatus').click(function(){
+		var obj=$(this);
+		require(['layer'], function(){
+			layer.confirm('确认要审核操作吗?',function(){
+				util.visible(obj,'/sys-index.php/AdminRole/opVisible');
+			});
+		});		
+	});
+});
+</script>
+<include file="Public:footer" />

@@ -1,0 +1,98 @@
+<include file="Public:header" />
+
+<div class="col-xs-12 col-sm-9 col-lg-10"> 
+  <include file="Public:common-current" />
+  <form name="{$lq_form_list}" id="{$lq_form_list}" class="form-horizontal" onsubmit="return false">
+  <input type="hidden" id="thinkphpurl" name="thinkphpurl" value="{$page_config.thinkphpurl}" />
+  <input type="hidden" id="keymode" value="{$search_content.keymode}" />
+  <input type="hidden" id="pagesize" value="{$search_content.pagesize}" />
+  <div class="clearfix welcome-container">
+  	<if condition="$os_lock.search eq '1'">  
+    <include file="Public:common-search" />
+    <else />
+    {/* 在这里放特定搜索 */} 
+    
+    </if> 
+    <div class="row">
+      <div class="clearfix template">
+        <div class="panel panel-default">
+		  <include file="Public:index-list-button" />
+          
+          <div class="table-responsive panel-body">
+            <table class="table table-hover">
+              <include file="Public:common-table-thead" />
+              <tbody id="list-tbody">
+                  <volist name="list" id="data" key="key" empty="$empty_msg">
+                    <tr id="{$data.id}" visible="{$data.zl_visible}" opCheck='0'>
+                      <td><input type="checkbox" class="checkbox" value="{$data.id}" name="items" /></td>
+                      <td align="center">{$data.no}</td>
+                      <td align="center">{$data.id}</td>
+                      <td>{$data.zc_account}/{$data.zc_name}</td>
+                      <td>{$data.role_label}</td>
+                      <td>{$data.zc_email}</td>
+                      <td>{$data.zc_mobile}</td>                      
+                      <td edit="0" op="sort" title="{:L('ALT_BUTTON_EDIT_SORT')}">{$data.zn_sort}</td>
+                      <td><a href="javascript:void(0);" op="login_clear" val="">清零</a></td>
+                      <td>{$data.visible_label}</td>
+                      <td class="manage-menu list-os-a">
+              		  <a href="javascript:;" class="opSetPop" title="{:L("LABEL_OS_SETPOP")}[{$data.zc_account}]"><i class="fa fa-cog"></i></a>
+              		  <a href="__CONTROLLER__/editPass/tnid/{$data.id}" title="{:L("LABEL_OS_MODPASS")}[{$data.zc_account}]"><i class="fa fa-lock"></i></a>
+                      <a href="__CONTROLLER__/edit/tnid/{$data.id}" title="{:L("LABEL_OS_EDITID")}[{$data.zc_account}]"><i class="fa fa-edit"></i></a>
+             		  <a href="javascript:;" class="myopStatus" val="{$data.zl_visible}" title="{:L("LABEL_OS_STATUS")}[{$data.id}]">{$data.visible_button}</a>
+                      <a href="javascript:;" class="opDelete" title="{:L("LABEL_OS_DEL")}[{$data.id}]"><i class="fa fa-times-circle"></i></a>
+                      </td>
+                    </tr>
+                  </volist>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        {$page} 
+      </div>
+    </div>
+  </div>
+  </form>
+  
+</div>
+
+<include file="Public:footer" />
+<script type="text/javascript">
+$(document).ready(function(){
+	$('.myopStatus').click(function(){
+		var obj=$(this);
+		require(['layer'], function(){
+			layer.confirm('确认要审核操作吗?',function(){
+				util.visible(obj,'/sys-index.php/Admin/opVisible');
+			});
+		});		
+	});
+});
+
+//更改
+function setProperty(obj,op){
+	require(['layer'], function(){
+					page_loading=layer.load(0,{shade:[0.1,'#fff']});
+                    var id=obj.parents("tr").attr("id");
+                    var url='__CONTROLLER__/opProperty';	
+                    $.getJSON(url, {tcop:op,tnid:id}, function(json){
+						layer.close(page_loading)
+                        util.sysMsg(json.status,json.msg,json.url);
+                    });	
+	});					
+}
+
+$(function(){
+		//设置权限 s
+		$(".opSetPop").click(function(){
+			var uid=$(this).parents("tr").attr("id");
+			$.getJSON("__CONTROLLER__/opIsOriginalAdmin", {tnid:uid}, function(json){
+				if(json.status==1){
+					util.openWin("__CONTROLLER__/setPopedomWindow/tnid/"+uid,'设置权限','630px','460px');
+				}else{
+					util.sysMsg(0,json.msg);
+				}
+			});
+		});
+		//设置权限 e				 
+});
+</script>

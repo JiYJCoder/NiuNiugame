@@ -1,0 +1,119 @@
+<include file="Public:header" />
+
+<div class="col-xs-12 col-sm-9 col-lg-10"> 
+  <include file="Public:common-current" />
+  
+  
+<div class="clearfix welcome-container">
+  <div class="row">
+    <div class="clearfix template">
+      <div class="panel panel-default">
+        <div class="panel-body"> <span><i class="fa fa-list-ol"></i> 文章管理.编辑页面</span>
+          <div class="btn-group pull-right"> <span class="label label-danger blink" id="os_warning" style="font-size:1em;display:none;padding:6px 10px; "> 请操作 <i class="fa fa-hand-o-right"></i></span>
+            <button type="button" data-toggle="dropdown" id="os_button"> <i class="fa fa-chevron-down"></i> 操作 </button>
+            <ul class="dropdown-menu slidedown" id="os_button_list">
+              <li> <a href="" title="刷新本页"> <i class="fa fa-refresh"></i> 刷新本页 </a> </li>
+            </ul>
+          </div>
+        </div>
+        <div class="panel-body">
+          <form name="LQForm" id="LQForm" method="post" target="hidden_frame" enctype="multipart/form-data" class="form-horizontal form">
+            <ul id="LQFormTab" class="nav nav-tabs">
+              <li class="active"><a href="#formTab1" data-toggle="tab">采集操作</a></li>
+              <li><a href="#formTab2" data-toggle="tab">采集列表</a></li>
+            </ul>
+            <div id="LQFormTabContent" class="tab-content">
+              <div class="tab-pane in active" id="formTab1">
+
+			  <div class="form-group"><label class="col-xs-12 col-sm-3 col-md-2 control-label"><span class="require">*</span>引用采集规则</label>
+              <div class="col-sm-6 col-md-8 col-xs-12">
+              <select class="form-control tpl-category-parent" id="collector_rule">{$collector_rule_str}</select>
+              <span class="help-block">引用采集规则</span></div>
+              </div>
+              
+			  <div class="form-group"><label class="col-xs-12 col-sm-3 col-md-2 control-label"><span class="require">*</span>采集类别</label>
+              <div class="col-sm-6 col-md-8 col-xs-12">
+              <select class="form-control tpl-category-parent" id="article_cat_id">{$cat_id_str}</select>
+              <span class="help-block">指定导入的文章分类</span></div>
+              </div>              
+
+              <div class="form-group"><label class="col-xs-12 col-sm-3 col-md-2 control-label"><span class="require">*</span>审核</label>
+              <div class="col-sm-9 col-xs-12"><label class="radio-inline"><input type="radio" name="zl_check" value="0">否</label><label class="radio-inline"><input type="radio" name="zl_check" value="1" checked="checked">是</label><span class="help-block">文章是否要审核，选择“否”采集的文章直接入库，选择“是”，文章要手动审核。</span></div>
+              </div>              
+                
+              </div>
+              <div class="tab-pane" id="formTab2">
+                <div class="form-group">
+                 <div class="col-sm-12"> <textarea id="article_temp_list" class="form-control" disabled="disabled" rows="10"></textarea></div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-sm-12">
+                <input id="collector_save" type="button" value="导入文章" class="btn btn-primary col-lg-1">
+                <input id="collector_load" type="button" value="采集" class="btn btn-primary col-lg-1" style="margin-left:100px;">
+              </div>
+            </div>
+            <input type="hidden" name="LQF[id]" value="22" />
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+  
+  
+</div>
+
+<include file="Public:footer" />
+<script language="javascript">
+$(document).ready(function(){
+	//保存
+	$("#collector_save").click(function(){
+		require(['layer'], function(){
+		var zl_check = $('input[name="zl_check"]:checked ').val();
+		//判断 数据有效性
+		var article_cat_id=$("#article_cat_id").val();
+		if( !$("#article_temp_list").val() ){layer.msg('采集数据不存在，请“采集”操作。',{icon:5,time:2000});return false;}
+		if( !article_cat_id ){layer.msg('请选择采集类别”',{icon:5,time:2000});return false;}
+		
+		//采集请求s
+		var dealling = layer.load(0,{shade:[0.1,'#fff']});
+		$.getJSON("{:U('ArticleCat/opCollection')}", { acid:article_cat_id,zl_check:zl_check }, function(json){
+				layer.close(dealling);
+				if(json.status==1){
+					layer.msg(json.msg,{icon:1,time:2000});
+					$("#article_temp_list").val('')
+				}else{
+					layer.msg(json.msg,{icon:2,time:2000});
+				}
+		});	//采集请求e	
+		});			
+	});
+
+	
+	//采集 display:block
+	$("#collector_load").click(function(){
+		require(['layer'], function(){
+		//判断 数据有效性
+		var collector_rule=$("#collector_rule").val();
+		var article_cat_id=$("#article_cat_id").val();
+		if( $("#article_temp_list").val() ){layer.msg('采集数据已存在，请“刷新”操作再采集。',{icon:5,time:2000});return false;}
+		if( !collector_rule|!article_cat_id ){layer.msg('请选择“引用采集规则”与“采集类别”',{icon:5,time:2000});return false;}
+		//采集请求s
+		var dealling = layer.load(0,{shade:[0.1,'#fff']});
+		$.getJSON("{:U('ArticleCat/queryList')}", { crid:collector_rule,acid:article_cat_id,check:$("input[name='zl_check']:checked").val() }, function(json){
+				layer.close(dealling);
+				if(json.status==1){
+					layer.msg(json.msg,{icon:1,time:2000});
+					$("#article_temp_list").val( json.data );
+					$("#LQFormTab>li").removeClass("active").eq(1).addClass("active");
+					$("#LQFormTabContent>div").css("display","none").eq(1).css("display","block");					
+				}
+		});	//采集请求e
+		});	
+	});	
+});
+
+</script> 

@@ -1,0 +1,97 @@
+<include file="Public:header"/>
+
+<div class="col-xs-12 col-sm-9 col-lg-10">
+    <div class="row">
+        <div class="col-sm-6 common-search-btn"><a class="btn btn-primary" href="" title="刷新本页"> <i
+                class="fa fa-refresh"></i> 刷新本页 </a></div>
+        <div class="col-sm-6" style="float:right;text-align:right;padding:0;margin:0px;">{$sys_current}</div>
+    </div>
+
+    <form id="LQForm" class="form-horizontal" method="post" action="">
+        <div class="clearfix welcome-container">
+            <div class="panel panel-info">
+                <div class="panel-heading">短信发送器</div>
+                <div class="panel-body">
+
+                    <div class="form-group">
+                        <label class="col-xs-12 col-sm-4 col-md-3 col-lg-2 control-label">活动名称</label>
+
+                        <div class="col-sm-8 col-xs-12">
+                            <input type="text" name="activity" id="activity" class="form-control" value="" required  controlTitle="请输入活动名称" placeholder="请输入活动名称"/>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-xs-12 col-sm-4 col-md-3 col-lg-2 control-label">客户手机</label>
+
+                        <div class="col-sm-8 col-xs-12">
+                            <input type="text" name="phone" id="phone" class="form-control" value="" required dataType="mobile"  controlTitle="请输入客户手机" placeholder="请输入客户手机"/>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-xs-12 col-sm-4 col-md-3 col-lg-2 control-label">优惠金额</label>
+
+                        <div class="col-sm-8 col-xs-12">
+                            <input type="text" name="money" id="money" class="form-control" value="" required controlTitle="请输入优惠金额" placeholder="请输入优惠金额"/>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-xs-12 col-sm-4 col-md-3 col-lg-2 control-label">有效期</label>
+
+                        <div class="col-sm-8 col-xs-12">
+                            <div class="input-group input-append date"><input type="text" class="form-control"
+                                                                              placeholder="请输入有效期" controlTitle="请输入有效期" id="validity"
+                                                                              name="validity" value=""
+                                                                              required="required" controltitle="有效期">
+                            </div>
+
+                        </div>
+                    </div>
+                    <script type="text/javascript">
+                        require(["datetimepicker"], function () {
+                            var zd_send_time_option = {
+                                lang: "zh",
+                                step: 5,
+                                timepicker: true,
+                                closeOnDateSelect: true,
+                                format: "Y-m-d"
+                            };
+                            $("#validity").datetimepicker(zd_send_time_option);
+                        });
+                    </script>
+                    <div class="form-group">
+                        <label class="col-xs-12 col-sm-4 col-md-3 col-lg-2 control-label">优惠码</label>
+
+                        <div class="col-sm-8 col-xs-12">
+                            <input type="text" name="coupon" id="coupon" class="form-control" value="<php>echo rand(10000,60000);</php>" required controlTitle="请输入优惠码" placeholder="请输入优惠码"/>
+                        </div>
+                        <div class="pull-right col-xs-12 col-sm-2 col-md-2 col-lg-2">
+                            <button class="btn btn-default" id="aFormSubmit"><i class="fa fa-file-excel-o"></i> 发送
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </form>
+
+</div>
+<script type="text/javascript" src="__RES__/js/lib/admin.validator.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        //公共表单提交
+        $("#LQFormSubmit,#aFormSubmit").click(function () {
+            var loForm = document.getElementById("LQForm");
+            if (adminValidator(loForm)) {
+                util.commonAjaxSubmit();
+            }
+            return false;
+        });
+    });
+</script>
+
+<include file="Public:footer"/>

@@ -1,0 +1,121 @@
+<include file="Public:header" />
+
+<div class="col-xs-12 col-sm-9 col-lg-10"> 
+  <include file="Public:common-current" />
+  <form name="{$lq_form_list}" id="{$lq_form_list}" class="form-horizontal" onsubmit="return false">
+  <input type="hidden" id="thinkphpurl" name="thinkphpurl" value="{$page_config.thinkphpurl}" />
+  <input type="hidden" id="keymode" value="{$search_content.keymode}" />
+  <input type="hidden" id="pagesize" value="{$search_content.pagesize}" />
+  <div class="clearfix welcome-container">
+  	<if condition="$os_lock.search eq '1'">  
+    <include file="Public:common-search" />
+    <else />
+    {/* 在这里放特定搜索 */} 
+
+            <div class="clearfix">
+              <div class="panel panel-info">
+                <div class="panel-body" style="position:relative;">
+                    <div class="lq-panel-body-title"><span class="btn"><i class="fa fa-paw"></i> 筛选</span></div>
+                    <div class="form-group">
+                          <label class="col-xs-12 col-sm-3 col-md-2 col-lg-1 control-label">发布日期范围</label>
+                          <div class="col-sm-6 col-lg-8 col-xs-6"> 
+                            <script type="text/javascript">
+                                require(["daterangepicker"], function($){
+                                    $(function(){
+                                        $(".daterange.daterange-date").each(function(){
+                                            var elm = this;
+                                            $(this).daterangepicker({
+                                                startDate: $(elm).prev().prev().val(),
+                                                endDate: $(elm).prev().val(),
+                                                format: "YYYY-MM-DD"
+                                            }, function(start, end){
+                                                $(elm).find(".date-title").html(start.toDateStr() + " 至 " + end.toDateStr());
+                                                $(elm).prev().prev().val(start.toDateStr());
+                                                $(elm).prev().val(end.toDateStr());
+                                            });
+                                        });
+                                    });
+                                });
+                            </script>
+                            <input id="time_start" type="hidden" value="{$search_content.time_start}">
+                            <input id="time_end" type="hidden" value="{$search_content.time_end}">
+                            <button class="btn btn-default daterange daterange-date" type="button"><span class="date-title">{$search_content.time_start} 至 {$search_content.time_end}</span> <i class="fa fa-calendar"></i></button>
+                          </div>                    
+                    </div>
+                    <div class="form-group">
+                      <label class="col-xs-12 col-sm-2 col-md-2 col-lg-1 control-label">搜索</label>
+                      <div class="col-sm-8 col-lg-10 col-xs-12">
+                        <div class="input-group">
+                          <input type="text" class="form-control" id="fkeyword" value="{$search_content.fkeyword}" placeholder="{$keywordDefault}" onclick="lqKeywordOnclick(this)" onblur="lqKeywordOnblur(this)"/>
+                          <div class="input-group-btn">
+                            <button class="btn btn-default" id="listSearch"><i class="fa fa-search"></i> 搜索</button>
+                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><span class="caret"></span></button>
+                            <ul class="dropdown-menu dropdown-menu-right" role="menu">
+                            <li><a href="javascript:;" onclick="$('#fkeyword').attr('placeholder','精准搜索：请输入关键字');$('#keymode').val(1);">精准搜索</a></li>
+                            <li><a href="javascript:;" onclick="$('#fkeyword').attr('placeholder','模糊搜索：请输入关键字');$('#keymode').val(0);">模糊搜索</a></li>
+                            <li><a href="javascript:;" onclick="$('#fkeyword').attr('placeholder','精准搜索：请输入文件后缀');$('#keymode').val(2);">搜索文件后缀</a></li>
+                            <li><a href="javascript:;" onclick="$('#fkeyword').attr('placeholder','精准搜索：请输入用户名');$('#keymode').val(3);">搜索用户名</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+			<script language="javascript">   
+            $(function(){
+                //通用搜索
+                $("#listSearch").click(function(){	
+                    require(['layer'], function(){
+						var fkeyword=$("#fkeyword").val();
+						if(fkeyword!='{$keywordDefault}'){
+							var searchurl=$("#thinkphpurl").val()+'index/s/';
+							var urlpara="fkeyword/"+encodeURIComponent(fkeyword)+"/";
+							urlpara+="keymode/"+encodeURIComponent($("#keymode").val())+"/";
+							urlpara+="time_start/"+encodeURIComponent($("#time_start").val())+"/";
+							urlpara+="time_end/"+encodeURIComponent($("#time_end").val())+"/";
+							location.href=searchurl+base64encode(urlpara);
+						}else{
+							layer.msg("请输入关键字！",{icon:5,time:2000});
+						}						
+                    });			
+                });
+            });
+            </script> 
+                
+    </if> 
+    <div class="row">
+      <div class="clearfix template">
+        <div class="panel panel-default">
+		  <include file="Public:index-list-button" />
+          
+          <div class="table-responsive panel-body">
+            <table class="table table-hover">
+              <include file="Public:common-table-thead" />
+              <tbody id="list-tbody">
+                  <volist name="list" id="data" key="key" empty="$empty_msg">
+                    <tr id="{$data.id}" visible="{$data.zl_visible}" opCheck='0'>
+                        <td><input type="checkbox" value="{$data.id}" name="items" /></td>
+                        <td align="center">{$data.no}</td>
+                        <td align="center">{$data.id}</td>
+                        <td>{$data.zc_account}</td>
+                        <td>{$data.zn_type_label}</td>
+                        <td>{$data.zc_original_name}</td>
+                        <td>{$data.zc_suffix}</td>
+                        <td>{$data.zn_cdate_label}</td>
+                    </tr>
+                  </volist>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        {$page} 
+      </div>
+    </div>
+  </div>
+  </form>
+  
+</div>
+
+<include file="Public:footer" />

@@ -1,0 +1,129 @@
+<include file="Public:header" />
+
+<div class="col-xs-12 col-sm-9 col-lg-10"> 
+
+  <div class="row">
+	<div class="col-sm-6 common-search-btn">
+		<label class="btn label-primary" title="{:L('PAGE_LIST')}"><i class="fa fa-list"></i> {$ad_position.zc_caption}.{:L('PAGE_LIST')}</label>
+		<if condition="$os_lock.edit eq '1'">
+		<a class="btn btn-primary" href="{$add}" title="{:L('PAGE_ADD')}"><i class="fa fa-plus"></i> {:L('PAGE_ADD')}</a>
+		</if>
+	</div>
+	<div class="col-sm-6" style="float:right;text-align:right;padding:0;margin:0px;">{$sys_current}</div>
+  </div>
+  
+  <form name="{$lq_form_list}" id="{$lq_form_list}" class="form-horizontal" onsubmit="return false">
+  <input type="hidden" id="thinkphpurl" name="thinkphpurl" value="{$page_config.thinkphpurl}" />
+  <input type="hidden" id="keymode" value="{$search_content.keymode}" />
+  <input type="hidden" id="pagesize" value="{$search_content.pagesize}" />
+  <input type="hidden" id="position" value="{$search_content.position}" />
+  <div class="clearfix welcome-container">
+  
+    <div class="clearfix">
+      <div class="panel panel-info">
+        <div class="panel-heading"><i class="fa fa-paw"></i> 筛选   {$ad_position.zc_caption}</div>
+        <div class="panel-body">
+          <div class="input-group">
+            <input type="text" class="form-control" id="fkeyword" value="{$search_content.fkeyword}" placeholder="{$keywordDefault}" onclick="lqKeywordOnclick(this)" onblur="lqKeywordOnblur(this)"/>
+            <div class="input-group-btn">
+              <button class="btn btn-default" id="commonSearch"><i class="fa fa-search"></i> 搜索</button>
+              <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="true"><span class="caret"></span></button>
+              <ul class="dropdown-menu dropdown-menu-right" role="menu">
+                <li><a href="javascript:;" onclick="$('#fkeyword').attr('placeholder','精准搜索：请输入关键字');$('#keymode').val(1);">精准搜索</a></li>
+                <li><a href="javascript:;" onclick="$('#fkeyword').attr('placeholder','模糊搜索：请输入关键字');$('#keymode').val(0);">模糊搜索</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+	<script language="javascript">   
+    $(function(){
+        //通用搜索
+        $("#commonSearch").click(function(){	
+            require(['layer'], function(){
+                var fkeyword=$("#fkeyword").val();
+                if(fkeyword!='{$keywordDefault}'){
+                    var searchurl=$("#thinkphpurl").val()+'index/s/';
+                    var urlpara="fkeyword/"+encodeURIComponent(fkeyword)+"/";
+                    urlpara+="keymode/"+encodeURIComponent($("#keymode").val())+"/";
+					urlpara+="pagesize/"+encodeURIComponent($("#pagesize").val())+"/";
+					urlpara+="position/"+encodeURIComponent($("#position").val())+"/";
+                    location.href=searchurl+base64encode(urlpara);
+                }else{
+                    layer.msg("请输入关键字！",{icon:5,time:2000});
+                }
+            });			
+        });
+    });
+    </script>      
+    </div>
+
+    
+    <div class="row">
+      <div class="clearfix template">
+        <div class="panel panel-default">
+
+            <div class="panel-body">
+                    <span><i class="fa fa-list-ol"></i> {$sys_heading}</span>
+                    <div class="btn-group pull-right">
+                      <span class="label label-danger blink" id="os_warning" style="font-size:1em;display:none;padding:6px 10px; "> 请操作 <i class="fa fa-hand-o-right"></i></span>
+                      <button type="button" data-toggle="dropdown" id="os_button"> <i class="fa fa-chevron-down"></i> 操作 </button>
+                      <ul class="dropdown-menu slidedown" id="os_button_list">
+                        <li> <a href="{$add}" title="{:L('ALT_BUTTON_ADD_RECORD')}"> <i class="fa fa-plus-circle"></i> 新增 </a> </li>
+                        <li class="divider"></li>
+                        <li> <a href="{$refresh}" title="{:L('ALT_BUTTON_REFRESH')}"> <i class="fa fa-refresh"></i> 刷新 </a> </li>
+                        <li class="divider"></li>
+                        <if condition="$os_lock.delete eq '1'">
+                        <li> <a href="javascript:;" op="opDeleteCheckbox" title="{:L('ALT_BUTTON_DELETE_RECORD')}"> <i class="fa fa-times-circle"></i> 删除 </a> </li>
+                        <else />
+                        <li class="line-th"> <a href="javascript:;" title="{:L('ALT_BUTTON_DELETE_RECORD')}"> <i class="fa fa-plus-circle"></i> 删除 </a> </li>
+                        </if>  
+                        <if condition="$os_lock.visible eq '1'">          
+                        <li> <a href="javascript:;" op="opVisibleCheckbox" state=1 title="{:L('ALT_BUTTON_VISIBLE_YES')}"> <i class="fa fa-check-square"></i> 审核通过 </a> </li>
+                        <li> <a href="javascript:;" op="opVisibleCheckbox" state=0 title="{:L('ALT_BUTTON_VISIBLE_NO')}"> <i class="fa fa-minus-square"></i> 审核否决 </a> </li>
+                        <else />
+                        <li class="line-th"> <a href="javascript:;" title="{:L('ALT_BUTTON_VISIBLE_YES')}"> <i class="fa fa-check-square"></i> 审核通过 </a> </li>
+                        <li class="line-th"> <a href="javascript:;" title="{:L('ALT_BUTTON_VISIBLE_NO')}"> <i class="fa fa-minus-square"></i> 审核否决 </a> </li>                
+                        </if>   
+                      </ul>
+                    </div>
+            </div>
+            
+          
+          <div class="table-responsive panel-body">
+            <table class="table table-hover">
+              <include file="Public:common-table-thead" />
+              <tbody id="list-tbody">
+                  <volist name="list" id="data" key="key" empty="$empty_msg">
+                    <tr id="{$data.id}" visible="{$data.zl_visible}" opCheck='0'>
+                      <td><input type="checkbox" class="checkbox" value="{$data.id}" name="items" /></td>
+                      <td align="center">{$data.no}</td>
+                      <if condition="$ad_position.zl_type eq '1'">
+					  <td class="imgtd"><img src="{$data.image}" alt="{$data.zc_caption}"  width="60"/></td>
+                      </if>
+                      <td>{$data.zl_client_type_label}</td>
+                      <td edit="0" op="label" title="{:L('ALT_BUTTON_EDIT_LABEL')}">{$data.zc_caption}</td>
+                      <td edit="0" op="sort" title="{:L('ALT_BUTTON_EDIT_SORT')}">{$data.zn_sort}</td>
+                      <td>{$data.zn_clicks}</td>
+                      <td>{$data.visible_label}</td>
+                      <td class="manage-menu list-os-a">
+                      <a href="__CONTROLLER__/edit/tnid/{$data.id}" title="{:L("LABEL_OS_EDITID")}[{$data.id}]"><i class="fa fa-edit"></i></a>
+             		  <a href="javascript:void(0);" class="opStatus" val="{$data.zl_visible}" title="{:L("LABEL_OS_STATUS")}[{$data.id}]">{$data.visible_button}</a>
+                      <a href="javascript:;" class="opDelete" title="{:L("LABEL_OS_TITLE_DEL")}[{$data.zc_caption}]"><i class="fa fa-times-circle"></i></a>
+                      </td>
+                    </tr>
+                  </volist>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        {$page} 
+      </div>
+    </div>
+  </div>
+  </form>
+  
+</div>
+
+<include file="Public:footer" />
+
