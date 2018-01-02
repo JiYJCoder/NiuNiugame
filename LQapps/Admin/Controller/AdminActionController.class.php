@@ -19,9 +19,8 @@ class AdminActionController extends PublicController{
 
     public function __construct() {
 		parent::__construct();
-		//if(session('admin_auth')["id"]!=1){$this->error('对不起，您未授权访问该页面！'.$this->systemMsg, U("/Index"));}
+		if(session('admin_auth')["id"]!=1){$this->error('对不起，您未授权访问该页面！'.$this->systemMsg, U("/Index"));}		
 		$this->myTable = M($this->pcTable);//主表实例化
-
 	}
     
 	//列表页

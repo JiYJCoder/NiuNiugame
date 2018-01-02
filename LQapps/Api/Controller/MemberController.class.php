@@ -289,6 +289,15 @@ class MemberController extends PublicController
                 $info["area"] = $this->login_member_info["zc_area"];
                 $info["address"] = $this->login_member_info["zc_address"];
 
+                //环信检测
+                if (!$this->login_member_info["zc_easemob_account"]) {
+                    $info["easemob_account"] = $this->easemob_prefix . $this->login_member_info["zc_account"];
+                    $info["easemob_password"] = $this->easemob_password;
+                    $this->hx_register($info["easemob_account"], $info["easemob_password"], $info["city"], 1);
+                } else {
+                    $info["easemob_account"] = $this->login_member_info["zc_easemob_account"];
+                    $info["easemob_password"] = $this->login_member_info["zc_easemob_password"];
+                }
 
                 $this->ajaxReturn(array('status' => 1, 'msg' => '会员登录成功', 'data' => array('uid' => $this->login_member_info["id"], 'token' => $token, 'member_info' => $info), "url" => "", "note" => '会员登录'), $this->JSONP);
             } else {
@@ -349,6 +358,9 @@ class MemberController extends PublicController
             $data["zn_last_login_time"] = NOW_TIME;
             $data["zn_trylogin_times"] = 0;
             $data["zn_trylogin_lasttime"] = NOW_TIME;
+            //环信帐号密码
+            $data["zc_easemob_account"] = $this->easemob_prefix . $mobile;
+            $data["zc_easemob_password"] = $this->easemob_password;
             $mid = $this->model_member->apiRegister($data);
             if (preg_match('/^([1-9]\d*)$/', $mid)) {
                 $data["id"] = $mid;
@@ -384,13 +396,6 @@ class MemberController extends PublicController
         }
     }
 
-    /*
-     * 会员注册
-     */
-    public function register()
-    {
-
-    }
     /* 会员登出 */
     public function login_out()
     {

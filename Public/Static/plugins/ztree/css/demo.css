@@ -39,7 +39,7 @@ div.ruler div.cursor {height:20px; width:30px; background-color:#3C6E31; color:w
 	margin: 0px;
 }
 .page_box{
-	/*width: 608px;*/
+	width: 608px;
 	margin: 10px auto 0;
 	overflow: hidden;
 }
@@ -65,18 +65,3 @@ div.ruler div.cursor {height:20px; width:30px; background-color:#3C6E31; color:w
 .page_box .pop{float:left;margin:0px;}
 .page_box .pop .tit{height:24px;width:375px; padding:5px 10px 0px 0px;border:1px #ACA899 solid; margin:0px ; text-align:right;}
 .page_box .pop .tit a{font-size:1.2em;line-height:24px;}
-
-.page_box .content{float:left;height:396px; width:100%;border:1px #ACA899 solid; margin:0px 8px 0px 0px; padding-left:6px;}
-.page_box .content table .title{height:30px; font-weight:600; font-size:1.2em; line-height:30px;}
-.page_box .content table h5{height:22px;font-size:1.02em; line-height:22px;color:#333;margin-top:10px;}
-.page_box .content table .button_box{height:24px;font-size:1.08em; line-height:24px; padding-top:10px; text-align:left;}
-.page_box .content table .button_box input{height:30px;width:192px;background-color:#428bca;border:#428bca;color:#FFF; margin-top:10px;}
-.page_box .content .txt_input{
-    border: 1px #999 solid;
-    background-color: #FFFFFF;
-    width: 285px;
-    height: 24px;
-    line-height:24px;
-    padding: 3px 0px 0px 5px;
-    text-align: left;
-}

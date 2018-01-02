@@ -249,8 +249,8 @@ class PublicModel extends Base {
 	//单记录删除
     public function lqDelete($isTree=0) {
         $data["id"] = I("get.tnid",'0','int');
-		//$lc_check=$this->lqDeletCheck($data,$isTree);//检查
-		//if($lc_check) return array('status' => 0, 'msg' => $lc_check );
+		$lc_check=$this->lqDeletCheck($data,$isTree);//检查
+		if($lc_check) return array('status' => 0, 'msg' => $lc_check );
 		if($isTree==1){
 		    $tree = new \LQLibs\Util\Category(CONTROLLER_TO_TABLE(CONTROLLER_NAME), array('id', 'zn_fid', 'zc_caption'));
 			$child_ids = $tree->get_child($data["id"],10,'');

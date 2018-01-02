@@ -25,7 +25,7 @@
                   <volist name="list" id="data" key="key" empty="$empty_msg">
                     <tr id="{$data.id}" visible="{$data.zl_visible}" opCheck='0'>
                       <td><input type="checkbox" class="checkbox" value="{$data.id}" name="items" /></td>
-                      <td align="center">{$data.id}</td>
+                      <td align="center">{$data.no}</td>
                       <td class="ii"><span class="label label-danger">{$data.zc_caption}</span>
                           <ii <if condition="$data.zl_visible eq '0'">style=" display:none"</if>>
                           <a href="{$data.ad_add}" title="{:L("LABEL_OS_EDITID")}[{$data.id}]">|添加.</a>

@@ -19,7 +19,7 @@
           <div class="col-xs-12 col-sm-8 col-md-9 col-lg-10">
             <h2>操作成功：</h2>
             <p><?php echo($message); ?></p>
-            <p class="jump"> 页面自动 <a id="href" href="<?php echo($jumpUrl); ?>">跳转</a> 等待时间： <b id="wait"><?php echo($waitSecond); ?></b>
+            <p class="jump"> 页面自动 <a id="href" href="<?php echo($jumpUrl); ?>">跳转</a> 等待时间： <b id="wait">3</b>
           </div>
         </div>
       </div>
@@ -45,11 +45,11 @@
 <div class="container-fluid footer" role="footer">
   <div class="page-header"></div>
   <span class="pull-left">
-  <p>Powered by <a href="#"><b>广州孜尔信息科技有限公司</b></a> v2.0 &copy; 2016-2020 <a href="#">www.zier21.com</a></p>
+  <p>Powered by <a href="#"><b>狸想家精英团队</b></a> v2.0 &copy; 2016-2020 <a href="#">www.jianyu020.com</a></p>
   </span> 
   <span class="pull-right">
   <a href="#"><b>集团网</b></a> |
-  <a href="#"><b>孜尔教育</b></a>
+  <a href="#"><b>狸想家</b></a>
   </span> 
 </div>
 

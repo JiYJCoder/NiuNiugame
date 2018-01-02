@@ -32,7 +32,7 @@ class Page {
     // 分页的栏的总页数
     protected $coolPages   ;
     // 分页显示定制
-    protected $config  =    array('header'=>'条记录','prev'=>'<','next'=>'>','first'=>'<<','last'=>'>>','theme'=>'%totalRow% %header% %nowPage% %upPage% %downPage% %first%  %prePage%  %linkPage%  %nextPage% %end%');
+    protected $config  =    array('header'=>'条记录','prev'=>'上一页','next'=>'下一页','first'=>'第一页','last'=>'最后页','theme'=>' %totalRow% %header% %nowPage%/%totalPage% 页 %upPage% %downPage% %first%  %prePage%  %linkPage%  %nextPage% %end%');
     // 默认分页变量名
     protected $varPage;
 
@@ -117,7 +117,7 @@ class Page {
             $prePage    =   '';
         }else{
             $preRow     =   $this->nowPage-$this->rollPage;
-            $prePage    =   "<a href='".str_replace('__PAGE__',$preRow,$url)."' ><</a>";
+            $prePage    =   "<a href='".str_replace('__PAGE__',$preRow,$url)."' >上".$this->rollPage."页</a>";
             $theFirst   =   "<a href='".str_replace('__PAGE__',1,$url)."' >".$this->config['first']."</a>";
         }
         if($nowCoolPage == $this->coolPages){
@@ -126,7 +126,7 @@ class Page {
         }else{
             $nextRow    =   $this->nowPage+$this->rollPage;
             $theEndRow  =   $this->totalPages;
-            $nextPage   =   "<a href='".str_replace('__PAGE__',$nextRow,$url)."' >></a>";
+            $nextPage   =   "<a href='".str_replace('__PAGE__',$nextRow,$url)."' >下".$this->rollPage."页</a>";
             $theEnd     =   "<a href='".str_replace('__PAGE__',$theEndRow,$url)."' >".$this->config['last']."</a>";
         }
         // 1 2 3 4 5
@@ -141,13 +141,13 @@ class Page {
                 }
             }else{
                 if($this->totalPages != 1){
-                    $linkPage .= "&nbsp;<a class='active'>".$page."</a>";
+                    $linkPage .= "&nbsp;<span class='current'>".$page."</span>";
                 }
             }
         }
         $pageStr     =   str_replace(
             array('%header%','%nowPage%','%totalRow%','%totalPage%','%upPage%','%downPage%','%first%','%prePage%','%linkPage%','%nextPage%','%end%'),
-            array('','','','',$upPage,$downPage,$theFirst,$prePage,$linkPage,$nextPage,$theEnd),$this->config['theme']);
+            array($this->config['header'],$this->nowPage,$this->totalRows,$this->totalPages,$upPage,$downPage,$theFirst,$prePage,$linkPage,$nextPage,$theEnd),$this->config['theme']);
         return $pageStr;
     }
 

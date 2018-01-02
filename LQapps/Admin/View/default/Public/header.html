@@ -20,12 +20,12 @@
             </div>
           </div>
         </div>
-      </li>
+      </li>    
       <li class="dropdown topbar-notice"> <a type="button" data-toggle="dropdown"> <i class="fa fa-bell"></i> <span class="badge" id="notice-total">0</span> </a>
         <div class="dropdown-menu" aria-labelledby="dLabel">
           <div class="topbar-notice-panel">
             <div class="topbar-notice-arrow"></div>
-            <div class="topbar-notice-head"> <span>系统公告</span> <a href="javascript:;" class="pull-right"></a> </div>
+            <div class="topbar-notice-head"> <span>系统公告</span> <a href="javascript:;" class="pull-right">更多公告>></a> </div>
             <div class="topbar-notice-body">
               <ul id="notice-container">
               </ul>
@@ -45,7 +45,7 @@
           <if condition="$login_admin_info.zn_role_id eq '1' ">
           <li><a href="{:U('Index/clearCache')}"><i class="fa fa-refresh fa-fw"></i> 更新缓存</a></li>
           </if>
-          <li><a href="/index.php/document#top" target="_blank"><i class="fa fa-gears"></i> 接口文档</a></li>
+          <li><a href="/do?g=api&m=document&a=index" target="_blank"><i class="fa fa-gears"></i> 接口文档</a></li>
           <li class="divider"></li>
           <li><a href="javascript:;" class="getUrl" lqhref="{:U('Login/opLoginOut')}" title="退出当前登陆"><i class="fa fa-sign-out fa-fw"></i> 退出系统</a></li>
         </ul>

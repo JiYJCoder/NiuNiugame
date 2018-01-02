@@ -72,7 +72,7 @@ class SmsController extends PublicController{
 
 
 		
-		$this->assign("sys_current",'<ol class="breadcrumb" style="padding:10px 0px;margin:5px 0px;"><span><a><i class="fa fa-location-arrow"></i> 当前位置：</a></span><li><a href="/sys-index.php/Index/index" title="">系统桌面</a></li><li><a href="javascript:;"> 孜尔教育平台</a></li><li><a href="javascript:;">其它</a></li><li><a href="javascript:;">辅助工具
+		$this->assign("sys_current",'<ol class="breadcrumb" style="padding:10px 0px;margin:5px 0px;"><span><a><i class="fa fa-location-arrow"></i> 当前位置：</a></span><li><a href="/sys-index.php/Index/index" title="">系统桌面</a></li><li><a href="javascript:;"> 狸想家平台</a></li><li><a href="javascript:;">其它</a></li><li><a href="javascript:;">辅助工具
 </a></li><li class="active">短信发送器</li></ol>');//搜索表单赋值
         $this->assign("sys_heading",'短信发送器');
 		
