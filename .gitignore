@@ -1,8 +1,0 @@
-.gitignore
-.git
-.idea
-.htaccess
-404.php
-demo_jyly.sql
-/LQapps/Common/Conf/dbconn.php
-uploadfiles
