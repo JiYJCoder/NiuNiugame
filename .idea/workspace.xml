@@ -33,6 +33,10 @@
       <command text="git merge dev" />
       <command text="git branch" />
       <command text="git checkout dev" />
+      <command text="git branch" />
+      <command text="git checkout dev" />
+      <command text="git add -A" />
+      <command text="git commit -m 'master 1'" />
     </commandsHistory>
   </component>
   <component name="Git.Settings">
