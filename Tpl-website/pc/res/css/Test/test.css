@@ -1,0 +1,104 @@
+@import "../common.css";
+.teacher-info-lrb {
+  height: 450px;
+  background: #2f3c39;
+  width: 100%;
+  overflow: hidden;
+}
+.teacher-info-lrb .teacher-info-ctn {
+  box-shadow: 0 0 10px #fff;
+  margin: 41px auto 0;
+  margin-top: 41px;
+  width: 661px;
+  height: 370px;
+  background: #fff;
+}
+.teacher-info-lrb .teacher-info-ctn .teacher-header {
+  float: left;
+  width: 165px;
+  height: 100%;
+  overflow: hidden;
+}
+.teacher-info-lrb .teacher-info-ctn .teacher-header img {
+  margin: 33px 0 0 40px;
+  width: 92px;
+  height: 92px;
+  border: 1px solid #d8d9d9;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.teacher-info-lrb .teacher-info-ctn .teacher-detail-info {
+  float: left;
+  position: relative;
+  height: 100%;
+  width: 496px;
+  padding-top: 57px;
+}
+.teacher-info-lrb .teacher-info-ctn .teacher-detail-info .parsonal-data {
+  position: relative;
+  font-size: 18px;
+  line-height: 1;
+  margin-bottom: 25px;
+}
+.teacher-info-lrb .teacher-info-ctn .teacher-detail-info .parsonal-data .teacher-school {
+  padding-top: 14px;
+  line-height: 1;
+}
+.teacher-info-lrb .teacher-info-ctn .teacher-detail-info .parsonal-data .teacher-verify-cm {
+  display: inline-block;
+  margin-left: 4px;
+}
+.teacher-info-lrb .teacher-info-ctn .teacher-detail-info .teacher-skill i {
+  margin-right: 8px;
+}
+.teacher-info-lrb .teacher-info-ctn .teacher-detail-info .teacher-skill span {
+  padding: 5px 11px;
+  display: inline-block;
+  border: 1px solid #c1c1c1;
+  border-radius: 5px;
+  margin-right: 5px;
+}
+.teacher-info-lrb .teacher-info-ctn .teacher-detail-info .teacher-simple-introduce {
+  overflow: hidden;
+  margin-top: 17px;
+}
+.teacher-info-lrb .teacher-info-ctn .teacher-detail-info .teacher-simple-introduce i {
+  float: left;
+  margin-right: 8px;
+}
+.teacher-info-lrb .teacher-info-ctn .teacher-detail-info .teacher-simple-introduce p {
+  float: left;
+  display: inline-block;
+  width: 440px;
+  word-break: break-all;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.teacher-info-lrb .teacher-info-ctn .teacher-detail-info .statistics-course .item {
+  margin-right: 45px;
+  padding-top: 40px;
+  text-align: center;
+  float: left;
+}
+.teacher-info-lrb .teacher-info-ctn .teacher-detail-info .statistics-course .item .count {
+  display: block;
+  font-size: 17px;
+  color: #02b78c;
+  line-height: 1;
+  margin-bottom: 12px;
+}
+.teacher-info-lrb .teacher-info-ctn .teacher-detail-info .statistics-course .item .text-js {
+  line-height: 1;
+  display: block;
+  color: #999999;
+}
+.teacher-verify-cm {
+  font-size: 11px;
+  padding: 6px 8px;
+  background: #ffb64d;
+  color: #fff;
+  border-radius: 10px;
+}

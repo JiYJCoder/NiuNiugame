@@ -1,0 +1,97 @@
+<include file="Public:header" />
+
+<div class="col-xs-12 col-sm-9 col-lg-10"> 
+  <include file="Public:common-current" />
+  <form name="{$lq_form_list}" id="{$lq_form_list}" class="form-horizontal" onsubmit="return false">
+  <input type="hidden" id="thinkphpurl" name="thinkphpurl" value="{$page_config.thinkphpurl}" />
+  <input type="hidden" id="keymode" value="{$search_content.keymode}" />
+  <input type="hidden" id="pagesize" value="{$search_content.pagesize}" />
+  <div class="clearfix welcome-container">
+    <div class="row">
+      <div class="clearfix template">
+        <div class="panel panel-default">
+        
+
+
+	<div class="panel-body">
+          
+            <span><i class="fa fa-list-ol"></i> {$sys_heading}</span>
+            <div class="btn-group pull-right">
+              <span class="label label-danger blink" id="os_warning" style="font-size:1em;display:none;padding:6px 10px; "> 请操作 <i class="fa fa-hand-o-right"></i></span>
+              <button type="button" data-toggle="dropdown" id="os_button"> <i class="fa fa-chevron-down"></i> 操作 </button>
+              <ul class="dropdown-menu slidedown" id="os_button_list">
+              	<if condition="$os_lock.edit eq '1'">
+                <li> <a href="{:U('add')}" title="{:L('ALT_BUTTON_ADD_RECORD')}"> <i class="fa fa-plus-circle"></i> 新增 </a> </li>
+                <else />
+                <li class="line-th"> <a href="javascript:;" title="{:L('ALT_BUTTON_ADD_RECORD')}"> <i class="fa fa-plus-circle"></i> 新增 </a> </li>
+                </if>              
+                <li class="divider"></li>
+              	<if condition="$os_lock.cache eq '1'">
+                <li> <a href="{:U('index?clearcache=1')}" title="{:L('ALT_BUTTON_REFRESH')}"> <i class="fa fa-refresh"></i> 刷新 </a> </li>
+                <else />
+                <li> <a href="{:U('index')}" title="{:L('ALT_BUTTON_REFRESH')}"> <i class="fa fa-refresh"></i> 刷新 </a> </li>
+                </if>  
+                <li class="divider"></li>
+                <li> <a href="javascript:;" id="creat_wx_menu" title="更新微信菜单"> <i class="fa fa-gavel"></i> 更新微信菜单 </a> </li>
+               
+              </ul>
+            </div>
+
+	</div>
+
+          
+          <div class="table-responsive panel-body">
+            <table class="table table-hover">
+                <include file="Public:common-table-thead" />
+                <tbody id="list-tbody">
+                      <volist name="list" id="data" key="key" empty="$empty_msg">
+                        <tr id="{$data.id}" pid="{$data.zn_fid}" visible="{$data.zl_visible}" product_count="">
+                          <td>{$data.no}</td>
+                          <td align="left" class="tree" style="cursor: pointer;"><ii class="tree_tip" id="tree_tip_{$data.id}">{$data.fullname}</ii></td>
+                          <td>{$data.type_label}</td>
+                          <td edit="0" op="sort" title="{:L('ALT_BUTTON_EDIT_SORT')}">{$data.zn_sort}</td>
+                          <td>{$data.visible_label}</td>
+                          <td class="manage-menu list-os-a">
+                          <a href="__CONTROLLER__/edit/tnid/{$data.id}" title="{:L("LABEL_OS_EDITID")}[{$data.id}]"><i class="fa fa-edit"></i></a>
+                          <a href="javascript:void(0);" class="opStatus" val="{$data.zl_visible}" title="{:L("LABEL_OS_STATUS")}[{$data.id}]">{$data.visible_button}</a>
+                          <a href="javascript:;" class="opDelete" title="{:L("LABEL_OS_DEL")}[{$data.id}]"><i class="fa fa-times-circle"></i></a>
+                          </td>
+                        </tr>
+                      </volist>
+                </tbody>    
+            </table>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </form>
+  
+</div>
+
+<include file="Public:footer" />
+<script type="text/javascript">
+$(function(){
+                //快捷启用禁用操作
+                $(".lqosStatus").click(function(){
+						lq_deal_status($(this),'__CONTROLLER__/opVisible');			
+                });
+                //快捷改变操作排序 click
+                $("tbody>tr>td[sort]"). click(function(){
+						lq_edit_sort($(this),'__CONTROLLER__/opSort');
+                });					
+				//树状列表显示隐藏 click
+                $(".tree").click(function(){
+						lq_edit_tree($(this));
+                });
+
+				//生成微信菜单
+                $("#creat_wx_menu").click(function(){
+					$.getJSON('__CONTROLLER__/creatWxMenu', {}, function(json){
+					util.sysMsg(json.status,json.msg);
+					});								
+                });					
+				
+});
+</script>

@@ -1,0 +1,178 @@
+<include file="Public:header" />
+
+<div class="col-xs-12 col-sm-9 col-lg-10"> <include file="Public:common-current" />
+  <div class="clearfix welcome-container">
+  
+  
+<div class="panel panel-default">
+  <div class="panel-heading">文章管理.设置关联</div>
+  <div class="panel-body">
+
+  <form name="{$lqForm_List}" id="{$lqForm_List}">
+  <input type="hidden" id="id" value="{$LQFdata.id}" />  
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="box">
+        
+          <header>
+              <div class="btn-group pull-right"> <span class="label label-danger blink" id="os_warning" style="font-size:1em;display:none;padding:6px 10px; "> 请操作 <i class="fa fa-hand-o-right"></i></span>
+              <button type="button" data-toggle="dropdown" id="os_button"> <i class="fa fa-chevron-down"></i> 操作 </button>
+              <ul class="dropdown-menu slidedown" id="os_button_list">
+                <li> <a href="javascript:;" title="保存记录" id="aFormSubmit"> <i class="fa fa-floppy-o"></i> 设置关联 </a> </li>
+                <li class="divider"></li>
+                <li> <a href="/sys-index.php/Article/index" title="返回列表"> <i class="fa fa-list"></i> 返回列表 </a> </li>
+                <li class="divider"></li>
+                <li> <a href="" title="刷新本页"> <i class="fa fa-refresh"></i> 刷新本页 </a> </li>
+                <li class="divider"></li>
+                {$data_up_down_page}
+              </ul>
+            </div>
+          </header>
+          
+          <div id="div-3" class="accordion-body collapse in body">
+            <div class="row">
+              <div class="col-lg-5">
+              
+                <div class="form-group">
+                  <div class="input-group">
+                  <select class="form-control" id="cat_id">{$zn_cat_id_str}</select>
+                  </div>
+                </div>
+              
+                <div class="form-group">
+                  <div class="input-group">
+                    <input type="text" class="form-control" id="fkeyword" value="{$search_content.fkeyword}" placeholder="{$keywordDefault}" onclick="lqKeywordOnclick(this)" onblur="lqKeywordOnblur(this)"/>
+                    <span class="input-group-btn">
+                    <button id="ajaxSearch" class="btn btn-warning" type="button"><i class="fa fa-search"></i></button>
+                    </span> </div>
+                </div>
+                
+                <div class="form-group">
+                  <select id="relation_query" multiple="multiple" class="form-control" size="16"></select>
+                </div>
+              </div>
+              <div class="col-lg-2">
+                <div class="btn-group btn-group-vertical" style="white-space:normal;margin-top:100px;">
+                  <button id="add" type="button" class="btn btn-primary"> <i class="fa fa-caret-right"></i> </button>
+                  <button id="add_all" type="button" class="btn btn-primary"> <i class="fa fa-angle-double-right"></i> </button>
+                  <button id="remove" type="button" class="btn btn-danger"> <i class="fa fa-caret-left"></i> </button>
+                  <button id="remove_all" type="button" class="btn btn-danger"> <i class="fa fa-angle-double-left"></i> </button>
+                </div>
+              </div>
+              <div class="col-lg-5">
+              <div class="form-group" style="margin-top:72px;"><select id="relation_select" multiple="multiple" class="form-control" size="16">{$LQFdata.zc_relation_ids_html}</select></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </form>
+  	
+  </div>
+</div>
+    
+  </div>
+</div>
+<include file="Public:footer" /> 
+<script type="text/javascript" src="__RES__/js/lib/admin.validator.js"></script> 
+<script type="text/javascript">
+	//搜索 s
+	$("#ajaxSearch").click(function(){
+		require(['layer'], function(){
+		var fkeyword=$("#fkeyword").val();
+		var searchurl='__CONTROLLER__/ajaxSearch/s/';
+		var urlpara='';
+		if( $("#fkeyword").val()!='{$keywordDefault}'|$("#cat_id").val()!=''){
+			
+		}else{
+			layer.msg("{:L('OS_ALERT_NOKEYWORD_FILTER')}",{icon:5,time:2000});
+			return false;
+		}		
+		if($("#fkeyword").val()&&$("#fkeyword").val()!='{$keywordDefault}') urlpara+="fkeyword/"+encodeURIComponent(fkeyword)+"/";
+		if($("#cat_id").val()) urlpara+="cat_id/"+$("#cat_id").val()+"/";
+		var ajax_search_url=searchurl+base64encode(urlpara);
+		var dealling = layer.load(0,{shade:[0.1,'#fff']});
+		$.getJSON(ajax_search_url, {}, function(json){
+				layer.close(dealling);
+				if(json.status==1){
+					layer.msg(json.msg,{icon:1,time:2000});
+					$("#relation_query").html( json.data );
+				}else{
+					layer.msg(json.msg,{icon:2,time:2000});
+				}
+		});				
+			
+			
+		});			
+	});	//搜索 e
+	
+//下拉框交换JQuery
+$(function(){
+    //移到右边
+    $('#add').click(function() {
+    //获取选中的选项，删除并追加给对方
+        $('#relation_query option:selected').appendTo('#relation_select');
+    });
+    //移到左边
+    $('#remove').click(function() {
+        $('#relation_select option:selected').appendTo('#relation_query');
+    });
+    //全部移到右边
+    $('#add_all').click(function() {
+        //获取全部的选项,删除并追加给对方
+        $('#relation_query option').appendTo('#relation_select');
+    });
+    //全部移到左边
+    $('#remove_all').click(function() {
+        $('#relation_select option').appendTo('#relation_query');
+    });
+    //双击选项
+    $('#relation_query').dblclick(function(){ //绑定双击事件
+        //获取全部的选项,删除并追加给对方
+        $("option:selected",this).appendTo('#relation_select'); //追加给对方
+    });
+    //双击选项
+    $('#relation_select').dblclick(function(){
+       $("option:selected",this).appendTo('#relation_query');
+    });
+});
+
+
+$(document).ready(function(){
+	//保存
+	$("#aFormSubmit").click(function(){
+		
+		require(['layer'], function(){
+			var id = $('#id').val();
+			var relation_select_ids = '';
+			var selectedComs = document.getElementById("relation_select");  
+			for(var i=0;i<selectedComs.length;i++){  
+				relation_select_ids += ','+selectedComs.options[i].value;
+			} 
+			if(relation_select_ids!='') relation_select_ids = relation_select_ids.substr(1);
+	
+			
+			//判断 数据有效性
+			if( id==''|relation_select_ids=='' ){
+					layer.msg('数据不完整，请“搜索数据并拉到右框中”。',{icon:2,time:2000});
+					return false;
+			}
+	
+			//采集请求s
+			var dealling = layer.load(0,{shade:[0.1,'#fff']});
+			$.post("{:U('Article/relation')}", {id:id, relation_select_ids:relation_select_ids}, function (json){
+						layer.close(dealling);
+						if(json.status==1){
+								layer.msg(json.msg,{icon:1,time:2000});
+						}else{
+								layer.msg(json.msg,{icon:2,time:2000});
+						}				
+			 });//post e	
+		});	
+	});
+	
+
+});
+</script> 

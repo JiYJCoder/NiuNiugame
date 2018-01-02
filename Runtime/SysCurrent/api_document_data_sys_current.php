@@ -1,0 +1,2 @@
+<?php
+ die();a:16:{s:2:"id";s:2:"95";s:6:"zn_fid";s:2:"51";s:8:"zn_class";s:1:"3";s:10:"zc_caption";s:18:"接口文档说明";s:7:"zn_sort";s:1:"1";s:12:"zl_check_pop";s:1:"1";s:7:"zn_type";s:1:"4";s:6:"zc_run";s:12:"/ApiDocument";s:12:"zc_run_table";s:12:"api_document";s:9:"zc_target";s:5:"_self";s:13:"zc_index_lock";s:11:"1|1|1|0|1|1";s:10:"zl_is_menu";s:1:"1";s:10:"zl_visible";s:1:"1";s:8:"zn_cdate";s:10:"1486625927";s:8:"zn_mdate";s:10:"1500604400";s:8:"fullname";s:70:"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├ 接口文档说明";}

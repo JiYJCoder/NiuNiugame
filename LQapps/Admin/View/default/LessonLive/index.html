@@ -1,0 +1,169 @@
+<include file="Public:header" />
+
+<div class="col-xs-12 col-sm-9 col-lg-10"> 
+  <include file="Public:common-current" />
+  <form name="{$lq_form_list}" id="{$lq_form_list}" class="form-horizontal" onsubmit="return false">
+  <input type="hidden" id="thinkphpurl" name="thinkphpurl" value="{$page_config.thinkphpurl}" />
+  <input type="hidden" id="keymode" value="{$search_content.keymode}" />
+  <input type="hidden" id="zc_cat_id" value="{$search_content.keymode}" />
+  <input type="hidden" id="pagesize" value="{$search_content.pagesize}" />
+  <div class="clearfix welcome-container">
+  	<if condition="$os_lock.search eq '1'">  
+    <include file="Public:common-search" />
+    <else />
+    {/* 在这里放特定搜索 */} 
+
+            <div class="clearfix">
+              <div class="panel panel-info">
+                <div class="panel-body" style="position:relative;">
+                    <div class="lq-panel-body-title"><span class="btn"><i class="fa fa-paw"></i> 筛选</span></div>
+                    
+                    <div class="form-group">
+                          <label class="col-xs-12 col-sm-3 col-md-2 col-lg-1 control-label">日期范围</label>
+                          <div class="col-sm-6 col-lg-8 col-xs-6">
+                            <script type="text/javascript">
+                                require(["daterangepicker"], function($){
+                                    $(function(){
+                                        $(".daterange.daterange-date").each(function(){
+                                            var elm = this;
+                                            $(this).daterangepicker({
+                                                startDate: $(elm).prev().prev().val(),
+                                                endDate: $(elm).prev().val(),
+                                                format: "YYYY-MM-DD"
+                                            }, function(start, end){
+                                                $(elm).find(".date-title").html(start.toDateStr() + " 至 " + end.toDateStr());
+                                                $(elm).prev().prev().val(start.toDateStr());
+                                                $(elm).prev().val(end.toDateStr());
+                                            });
+                                        });
+                                    });
+                                });
+                            </script>
+                            <input id="open_time" type="hidden" value="{$search_content.open_time}">
+                            <input id="time_start" type="hidden" value="{$search_content.time_start}">
+                            <input id="time_end" type="hidden" value="{$search_content.time_end}">
+                            <button class="btn btn-default daterange daterange-date" type="button">
+                            <span class="date-title">{$search_content.time_start} 至 {$search_content.time_end}</span> <i class="fa fa-calendar"></i>
+                            </button>
+                              <if condition="$search_content.open_time eq '1'">
+                                  <a href="#" id="a_open_time" class="btn btn-primary">启用</a>
+                                  <else/>
+                                  <a href="#" id="a_open_time" class="btn btn-default">启用</a>
+                              </if>
+                            </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-xs-12 col-sm-2 col-md-2 col-lg-1 control-label">搜索</label>
+                        <div class="col-sm-8 col-lg-10 col-xs-12">
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="fkeyword" value="{$search_content.fkeyword}" placeholder="{$keywordDefault}" onclick="lqKeywordOnclick(this)" onblur="lqKeywordOnblur(this)"/>
+                                <div class="input-group-btn">
+                                    <button class="btn btn-default" id="listSearch"><i class="fa fa-search"></i> 搜索</button>
+                                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><span class="caret"></span></button>
+                                    <ul class="dropdown-menu dropdown-menu-right" role="menu">
+                                        <li><a href="javascript:;" onclick="$('#fkeyword').attr('placeholder','模糊搜索：请输入关键字');$('#keymode').val(0);">模糊搜索</a></li>
+                                        <li><a href="javascript:;" onclick="$('#fkeyword').attr('placeholder','精准搜索：请输入关键字');$('#keymode').val(1);">精准搜索</a></li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                </div>
+              </div>
+            </div>
+			<script language="javascript">   
+            $(function(){
+				 //时间开启
+				 $("#a_open_time").click(function(){
+				 		if($("#open_time").val()=="1"){
+							$("#open_time").val("0");
+							$(this).removeClass("btn-primary").addClass("btn-default");
+						}else{
+							$("#open_time").val("1");
+							$(this).removeClass("btn-default").addClass("btn-primary");
+						}
+				 });
+                //通用搜索
+                $("#listSearch").click(function(){	
+                    require(['layer'], function(){
+						var fkeyword=$("#fkeyword").val();
+						var cat_id=$("#cat_id").val();
+						var recommend=$("#recommend").val();
+						var open_time=$("#open_time").val();
+						if(fkeyword!='{$keywordDefault}'||cat_id||recommend||open_time==1){
+							var searchurl=$("#thinkphpurl").val()+'index/s/';
+							var urlpara="fkeyword/"+encodeURIComponent(fkeyword)+"/";
+							urlpara+="keymode/"+encodeURIComponent($("#keymode").val())+"/";
+							urlpara+="pagesize/"+encodeURIComponent($("#pagesize").val())+"/";
+							urlpara+="open_time/"+encodeURIComponent($("#open_time").val())+"/";						
+							urlpara+="time_start/"+encodeURIComponent($("#time_start").val())+"/";
+							urlpara+="time_end/"+encodeURIComponent($("#time_end").val())+"/";	
+							if(cat_id) urlpara+="cat_id/"+cat_id+"/";
+							if(recommend) urlpara+="recommend/"+recommend+"/";
+							location.href=searchurl+base64encode(urlpara);
+						}else{
+							layer.msg("请输入搜索条件！",{icon:5,time:2000});
+						}					
+                    });			
+                });
+            });
+            </script> 
+                
+    </if> 
+    <div class="row">
+      <div class="clearfix template">
+        <div class="panel panel-default">
+		  <include file="Public:index-list-button" />
+          
+          <div class="table-responsive panel-body">
+            <table class="table table-hover">
+                 <thead>
+                      <tr>
+                        <th style="width:40px;"><input type="checkbox" class="checkbox" value="0" id="list_checkbox"></th>                      
+                        <th style="width:80px;text-align:left;">序号/ID</th>
+                          <th>标题</th>
+                          <th style="width:150px;">开始日期</th>
+                        <th style="width:100px;" title="">开始时间</th>
+                        <th style="width:100px;">结束时间</th>
+                        <th style="width:100px;">直播状态</th>
+                        <th style="width:100px;">启用状态</th>
+                        <th style="width:100px;">课件</th>
+                        <th style="width:150px;text-align:center;"><a href="javascript:;" id="op_msg">{:L("LABEL_OS")}?</a></th>
+                      </tr>
+                </thead>             
+              
+              <tbody id="list-tbody">
+                  <volist name="list" id="data" key="key" empty="$empty_msg">
+                    <tr id="{$data.id}" visible="{$data.zl_visible}" opCheck='0'>
+                      <td><input type="checkbox" class="checkbox" value="{$data.id}" name="items" /></td>
+                      <td align="left">{$data.no}/{$data.id}</td>
+                        <td edit="0" op="label" title="{:L('ALT_BUTTON_EDIT_LABEL')}">{$data.zc_title}</td>
+                        <td>{$data.zc_date}</td>
+                      <td >{$data.zc_start_time}</td>
+                      <td>{$data.zc_end_time}</td>
+                      <td>{$data.status_label}</td>
+                        <td>{$data.visible_label}</td>
+                        <td>{$data.oss_file}</td>
+                      <td class="manage-menu list-os-a">
+                      <a href="__CONTROLLER__/edit/tnid/{$data.id}" title="{:L("LABEL_OS_EDITID")}[{$data.id}]"><i class="fa fa-edit"></i></a>
+                          <a href="javascript:void(0);" class="opStatus" val="{$data.zl_visible}" title="{:L("LABEL_OS_STATUS")}[{$data.id}]">{$data.visible_button}</a>
+                      <a href="javascript:;" class="opDelete" title="{:L("LABEL_OS_TITLE_DEL")}[{$data.zc_title}]"><i class="fa fa-times-circle"></i></a>
+                      </td>
+                    </tr>
+                  </volist>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        {$page} 
+      </div>
+    </div>
+  </div>
+  </form>
+  
+</div>
+
+<include file="Public:footer" />

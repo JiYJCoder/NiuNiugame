@@ -1,0 +1,104 @@
+<include file="Public:header-base" />{/* 公共头部 */}
+ <div class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <ul class="nav navbar-nav" id="top-nav">
+      <li id="top-key-0"><a lqid="0" href="#"><i class="fa fa-home"></i>首页</a></li>
+      <volist name="system_top_menu" id="data_top" key="key_top">
+        <li id="top-key-{$key_top}"><a lqid="{$key_top}" href="#"><i class="fa fa-cog"></i>{$data_top.zc_caption}</a></li>
+      </volist>
+      <li><a href="javascript:;" class="getUrl" lqHref="{:U('Index/quickClearCache')}" title="快速清缓存"><i class="fa fa-retweet"></i>快速清缓存</a></li>
+    </ul>
+    
+    <ul class="nav navbar-nav navbar-right">
+      <li class="dropdown topbar-notice"> <a type="button" data-toggle="dropdown"> <i class="fa fa-qrcode"></i> </a>
+        <div class="dropdown-menu" aria-labelledby="dLabel">
+          <div class="topbar-notice-panel">
+            <div class="topbar-notice-arrow"></div>
+            <div class="topbar-notice-head"> <span>平台二维码</span></div>
+            <div class="topbar-notice-body" style="text-align:center;">
+              <img src="__RES__/images/system-qrcode.jpg" width="300" />
+            </div>
+          </div>
+        </div>
+      </li>
+      <li class="dropdown topbar-notice"> <a type="button" data-toggle="dropdown"> <i class="fa fa-bell"></i> <span class="badge" id="notice-total">0</span> </a>
+        <div class="dropdown-menu" aria-labelledby="dLabel">
+          <div class="topbar-notice-panel">
+            <div class="topbar-notice-arrow"></div>
+            <div class="topbar-notice-head"> <span>系统公告</span> <a href="javascript:;" class="pull-right"></a> </div>
+            <div class="topbar-notice-body">
+              <ul id="notice-container">
+              </ul>
+            </div>
+          </div>
+        </div>
+      </li>
+      
+      <li class="dropdown"> <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" style="display:block;max-width:205px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;"><i class="fa fa-user"></i>{$login_admin_info.zc_account}({$login_admin_info.zn_role_id_label})<b class="caret"></b></a>
+        <ul class="dropdown-menu">
+          <li><a href="{:U('Index/modifyMyself/action/info')}"><i class="fa fa-user"></i> 修改账号</a></li>
+          <li><a href="{:U('Index/modifyMyself/action/pass')}"><i class="fa fa-lock"></i> 修改密码</a></li>
+          <li class="divider"></li>
+          <if condition="$login_admin_info.id eq '1' ">
+          <li><a href="{:U('SystemMenu/index')}"><i class="fa fa-sitemap fa-fw"></i> 系统菜单</a></li>
+          </if>
+          <if condition="$login_admin_info.zn_role_id eq '1' ">
+          <li><a href="{:U('Index/clearCache')}"><i class="fa fa-refresh fa-fw"></i> 更新缓存</a></li>
+          </if>
+          <li><a href="/index.php/document#top" target="_blank"><i class="fa fa-gears"></i> 接口文档</a></li>
+          <li class="divider"></li>
+          <li><a href="javascript:;" class="getUrl" lqhref="{:U('Login/opLoginOut')}" title="退出当前登陆"><i class="fa fa-sign-out fa-fw"></i> 退出系统</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="container-fluid"  style="padding-top:55px;">
+  <div class="row">
+    <div class="col-xs-12 col-sm-3 col-lg-2 big-menu" id="left-menu">
+      <div id="search-menu">
+        <input class="form-control input-lg" style="border-radius:0; font-size:14px; height:43px;" type="text" placeholder="输入菜单名称可快速查找">
+      </div>
+      <volist id="data1" key="key1" name="system_left_menu"> <span class="left-menu" id="left-menu-{$key1}" {$data1.system_style}>
+        <volist id="data2" key="key2" name="data1.system_menu" >
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">{$data2.zc_caption}</h4>
+              <a class="panel-collapse collapsed" data-toggle="collapse" href="#frame-{$data2.id}"> <i class="fa fa-chevron-circle-down"></i> </a> </div>
+            <ul class="list-group collapse in" id="frame-{$data2.id}">
+              <volist id="data_child" key="key_child" name="data2.child" >
+              <if condition="$data_child.zc_run eq '' ">
+              <a id="left-key-{$data_child.id}" lqid="{$data_child.id}" class="list-group-item" href="javascript:;" kw="{$data_child.zc_caption}">{$data_child.zc_caption}</a>
+              <else />
+              <if condition="$data_child.zc_target eq 'openWin' ">
+              <a id="left-key-{$data_child.id}" lqid="{$data_child.id}" class="list-group-item" href="javascript:;" lqHref="{$data_child.run}" kw="{$data_child.zc_caption}">{$data_child.zc_caption}</a>
+              <else />
+              <a id="left-key-{$data_child.id}" lqid="{$data_child.id}" class="list-group-item" href="{$data_child.run}" kw="{$data_child.zc_caption}" target="{$data_child.zc_target}">{$data_child.zc_caption}</a>
+              </if>
+              </if>
+              </volist>
+            </ul>
+          </div>
+        </volist>
+        </span>
+      </volist>
+      <script type="text/javascript">
+		require(['bootstrap'], function(){
+			$('#search-menu input').keyup(function() {
+				var a = $(this).val();
+				$('.big-menu .list-group-item, .big-menu .panel-heading').hide();
+				$('.big-menu .list-group-item').each(function() {
+				$(this).css('border-left', '0');
+				if(a.length > 0 && $(this).attr('kw').indexOf(a) >= 0) {
+					$(this).parents(".panel").find('.panel-heading').show();
+					$(this).show().css('border-left', '3px #428bca double');
+				}
+				});
+				if(a.length == 0) {
+					$('.big-menu .list-group-item, .big-menu .panel-heading').show();
+				}
+			});
+		});
+      </script> 
+    </div>

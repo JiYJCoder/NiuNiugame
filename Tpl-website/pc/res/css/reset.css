@@ -1,0 +1,75 @@
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-box-sizing: border-box;
+}
+body {
+  font-size: 14px;
+  font-family: "Microsoft YaHei", "Microsoft JhengHei", STHeiti, MingLiu;
+  color: #333;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+  -webkit-overflow-scrolling: touch;
+}
+i {
+  font-style: normal;
+}
+a {
+  text-decoration: none;
+  color: #333;
+}
+ul,
+ol,
+dl,
+li {
+  list-style: none;
+}
+input,
+textarea,
+button {
+  border: none;
+  resize: none;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: rgba(0, 0, 0, 0);
+}
+/*xbt*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+  font-size: 12px;
+}
+i {
+  font-style: normal;
+}
+a {
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+}
+a,
+img {
+  display: block;
+}
+.zr_layout {
+  margin: 0 auto;
+}
+/*end*/

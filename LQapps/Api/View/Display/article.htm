@@ -1,0 +1,134 @@
+<html lang="zh-cn" style="font-size: 50px;">
+<head>
+<meta name="viewport" content="initial-scale=1, user-scalable=0, minimal-ui" charset="UTF-8">
+<title>文章详情 - {$data.title}</title>
+<link rel="Shortcut Icon" href="http://wx.lxjjz.cn/wx//favicon.ico">
+<link rel="stylesheet" href="http://wx.lxjjz.cn/wx//css/pulic/common.css">
+<link rel="stylesheet" href="http://wx.lxjjz.cn/wx//fonts/iconfont.css">
+<style>
+.strategyHead {
+	position: absolute;
+}
+.restImg img {
+	width: 100%!important;
+	margin: 0.36rem 0;
+	width: 100%;
+	height: 3.7rem!important;
+}
+.jy_header.grayBg[_v-0801f194] {
+}
+.detatilsHead[_v-0801f194] {
+	position: absolute;
+	z-index: 999999;
+}
+.details.fade-enter-active[_v-0801f194], .details.fade-leave-active[_v-0801f194] {
+	-webkit-transition: all 0.2s linear;
+	transition: all 0.2s linear;
+	-webkit-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
+}
+.details.fade-enter[_v-0801f194], .details.fade-leave-active[_v-0801f194] {
+	opacity: 0;
+	-webkit-transform: translate3d(100%, 0, 0);
+	transform: translate3d(100%, 0, 0);
+}
+.details[_v-0801f194] {
+	width: 100%;
+	height: 100%;
+	background-color: #fff;
+}
+.cover[_v-0801f194] {
+	position: relative;
+}
+.cover img[_v-0801f194] {
+	height: 3.72rem;
+	width: 100%;
+}
+.cover .titleWrap[_v-0801f194] {
+	position: absolute;
+	-ms-flex-item-align: center;
+	-ms-grid-row-align: center;
+	align-self: center;
+	width: 6.55rem;
+	height: 0.6rem;
+	text-align: center;
+	left: 50%;
+	bottom: -0.02rem;
+	background: #FFF;
+	padding: 0 0.55rem;
+	margin-left: -3.27rem;
+	border-radius: 0.06rem 0.06rem 0 0;
+	padding-top: 0.2rem;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.cover .title[_v-0801f194] {
+	font-size: 0.3rem;
+	font-weight: 700;
+}
+.content1[_v-0801f194] {
+	padding: 0.5rem 0.26rem;
+	color: #666666;
+}
+</style>
+</head>
+
+<body>
+
+<div id="strategy" class="jy_layout">
+
+  <div _v-0801f194="" class="details" style="">
+    <div _v-0801f194="" style="transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1); transition-duration: 0ms; transform: translate(0px, 0px) translateZ(0px);">
+      <div _v-0801f194="">
+        <div _v-0801f194="" class="cover"><img alt="" _v-0801f194="" src="{$data.image}">
+          <div _v-0801f194="" class="titleWrap"><span _v-0801f194="" class="title">{$data.title}</span></div>
+        </div>
+        <div _v-0801f194="" class="content1 restImg">
+          <div _v-0801f194="">
+           {$data.content}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+</div>
+
+
+
+
+<script language="javascript">
+/*适配各比例手机*/
+!(function(win, doc) {
+    function setFontSize() {
+        var winWidth = window.innerWidth;
+        var size = (winWidth / 750) * 100;
+        doc.documentElement.style.fontSize = (size < 100 ? size : 100) + 'px';
+    }
+
+    var evt = 'onorientationchange' in win ? 'orientationchange' : 'resize';
+
+    var timer = null;
+
+    win.addEventListener(evt, function() {
+        clearTimeout(timer);
+
+        timer = setTimeout(setFontSize, 100);
+    }, false);
+
+    win.addEventListener("pageshow", function(e) {
+        if (e.persisted) {
+            clearTimeout(timer);
+
+            timer = setTimeout(setFontSize, 100);
+        }
+    }, false);
+    // 初始化
+    setFontSize();
+}(window, document));
+</script>
+
+</body>
+</html>

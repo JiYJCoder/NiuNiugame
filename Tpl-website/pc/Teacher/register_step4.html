@@ -1,0 +1,90 @@
+<head>
+    <meta charset="UTF-8">
+    <title>注册 - 完善资料</title>
+    <meta name="keywords" content="{$seoData.keywords}">
+    <meta name="description" content="{$seoData.description}">
+    <script src="__JS__/lib/jquery-3.1.1.min.js"></script>
+
+    <script src="__PLUGINS__/unlock/unlock.js"></script>
+    <script src='__JS__/lib/require.js'></script>
+    <script src="__JS__/lib/main.js"></script>
+    <link rel="stylesheet" href=__CSS__/teacher/teacher.css>
+    <link rel="stylesheet" href="__PLUGINS__/unlock/unlock.css">
+</head>
+
+<body>
+    <include file="Public:header" />
+    <div class="register">
+        <div class="zr_layout">
+            <div class="content ">
+                <div class="tabs">
+                    <ul class="tabs_header clearfix">
+                        <li>
+                            <div class="item ">
+                                <span class="order fl">1</span>
+                                <span class="text fl">阅读协议</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="item">
+                                <span class="order fl">2</span>
+                                <span class="text fl">填写资料</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="item active">
+                                <span class="order fl">3</span>
+                                <span class="text fl">完善资料</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="item">
+                                <span class="order fl">4</span>
+                                <span class="text fl">签约成功</span>
+                            </div>
+                        </li>
+                    </ul>
+                    <form class="list_4">
+                        <div class="input_basic_data">输入基本资料</div>
+                        <div class="basic_data">
+                            <div class="row">
+                                <span>真实姓名：</span>
+                                <input name="username" class="has_boxshaw real_name username" type="text" placeholder="请填写与身份证相符的真实姓名">
+                            </div>
+                            <div class="row">
+                                <span>所在学校：</span>
+                                <input name="school" class="has_boxshaw sz_school" type="text" placeholder="请输入您所执教的学校">
+                            </div>
+                            <div class="row">
+                                <span>手机号码：</span>
+                                <input name="phone_number" onkeyup="this.value=this.value.replace(/\D/g,'')" onafterpaste="this.value=this.value.replace(/\D/g,'')" maxlength="11" class="has_boxshaw zs_phone" type="text" placeholder="请输入能联系到您的电话号码">
+                            </div>
+                            <div class="row">
+                                <span>验证码：</span>
+                                <input name="code" onkeyup="this.value=this.value.replace(/\D/g,'')" onafterpaste="this.value=this.value.replace(/\D/g,'')" maxlength="6" class="has_boxshaw codeTextInput" type="text" placeholder="请输入手机收到的验证码">
+                                <input class="fl code" type="button" value="发送验证码">
+                            </div>
+                            <div class="row">
+                                <span>登录密码：</span>
+                                <input name="password" class="has_boxshaw password1 password" type="password" placeholder="请输入您的个人登录密码">
+                            </div>
+                            <div class="row">
+                                <span>重复密码：</span>
+                                <input name="confirm_password" class="has_boxshaw password2" type="password" placeholder="请再次输入您的个人登录密码">
+                            </div>
+                            <input class="submitBtn" type="button" value="提交资料">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <include file="Public:footer" />
+</body>
+
+</html>
+<script>
+require(['register'], function(register) {
+    register.loadTip();
+});
+</script>

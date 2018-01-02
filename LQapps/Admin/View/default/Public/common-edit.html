@@ -1,0 +1,33 @@
+<include file="Public:header" />
+
+<div class="col-xs-12 col-sm-9 col-lg-10"> 
+  <include file="Public:common-current" />
+  <div class="clearfix welcome-container">
+    <div class="row">
+      <div class="clearfix template">
+        <div class="panel panel-default">
+		  <include file="Public:index-list-button" />
+          
+            {$LQFdata}
+          
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</div>
+
+<include file="Public:footer" />
+<script type="text/javascript" src="__RES__/js/lib/admin.validator.js"></script>
+<script type="text/javascript">
+require(['layer'], function(){layer.photos({photos: '#LQForm',anim: 1});});	
+function wordCount(obj){var chars=obj.value;$("#word_count_"+obj.id).html("输入了"+chars.length+"个字");} 
+$(document).ready(function(){
+     //公共表单提交
+	 $("#LQFormSubmit,#aFormSubmit").click(function(){
+		var loForm=document.getElementById("LQForm");
+		if(adminValidator(loForm)){util.commonAjaxSubmit();}
+		return false;
+	 });
+});
+</script>

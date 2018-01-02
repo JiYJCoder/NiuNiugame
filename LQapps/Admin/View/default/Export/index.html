@@ -1,0 +1,243 @@
+<include file="Public:header"/>
+<script type="text/javascript">
+    require(["daterangepicker"],
+            function ($) {
+                $(function () {
+                    $(".daterange.daterange-date").each(function () {
+                        var elm = this;
+                        $(this).daterangepicker({
+                                    startDate: $(elm).prev().prev().val(),
+                                    endDate: $(elm).prev().val(),
+                                    format: "YYYY-MM-DD"
+                                },
+                                function (start, end) {
+                                    $(elm).find(".date-title").html(start.toDateStr() + " 至 " + end.toDateStr());
+                                    $(elm).prev().prev().val(start.toDateStr());
+                                    $(elm).prev().val(end.toDateStr());
+                                });
+                    });
+                });
+            });
+</script>
+<div class="col-xs-12 col-sm-9 col-lg-10">
+    <div class="row">
+        <div class="col-sm-6 common-search-btn"><a class="btn btn-primary" href="" title="刷新本页"> <i
+                class="fa fa-refresh"></i> 刷新本页 </a></div>
+        <div class="col-sm-6" style="float:right;text-align:right;padding:0;margin:0px;">{$sys_current}</div>
+    </div>
+
+
+    <div class="clearfix welcome-container">
+        <!--装修攻略-->
+        <form id="article_form" name="article_form" class="form-horizontal" method="post"
+              action="{:U('opExportXls')}">
+            <div class="panel panel-info">
+                <div class="panel-heading">装修攻略</div>
+                <div class="panel-body">
+                    <div class="form-group">
+                        <label class="col-xs-12 col-sm-2 col-md-2 control-label">日期范围</label>
+                        <div class="col-sm-8 col-md-8 col-lg-8 col-xs-12">
+                            <input name="article_time_start" type="hidden" value="{$search_content.time_start}">
+                            <input name="article_time_end" type="hidden" value="{$search_content.time_end}">
+                            <button class="btn btn-default daterange daterange-date" type="button">
+                                <span class="date-title">{$search_content.time_start} 至 {$search_content.time_end}</span>
+                                <i class="fa fa-calendar"></i>
+                            </button>
+                        </div>
+                        <div class="pull-right col-xs-12 col-sm-2 col-md-2 col-lg-2">
+                            <input type="hidden" name="op" value="article">
+                            <button class="btn btn-default" onclick="document.article_form.submit()"><i
+                                    class="fa fa-file-excel-o"></i> 导出
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <!--设计师-->
+        <form id="designer_form" name="designer_form" class="form-horizontal" method="post"
+              action="{:U('opExportXls')}">
+            <div class="panel panel-info">
+                <div class="panel-heading">设计师</div>
+                <div class="panel-body">
+                    <div class="form-group">
+                        <label class="col-xs-12 col-sm-2 col-md-2 control-label">日期范围</label>
+                        <div class="col-sm-8 col-md-8 col-lg-8 col-xs-12">
+                            <input name="designer_time_start" type="hidden" value="{$search_content.time_start}">
+                            <input name="designer_time_end" type="hidden" value="{$search_content.time_end}">
+                            <button class="btn btn-default daterange daterange-date" type="button">
+                                <span class="date-title">{$search_content.time_start} 至 {$search_content.time_end}</span>
+                                <i class="fa fa-calendar"></i>
+                            </button>
+                        </div>
+                        <div class="pull-right col-xs-12 col-sm-2 col-md-2 col-lg-2">
+                            <input type="hidden" name="op" value="designer">
+                            <button class="btn btn-default" onclick="document.designer_form.submit()"><i
+                                    class="fa fa-file-excel-o"></i> 导出
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <!--案例-->
+        <form id="case_form" name="case_form" class="form-horizontal" method="post"
+              action="{:U('opExportXls')}">
+            <div class="panel panel-info">
+                <div class="panel-heading">案例</div>
+                <div class="panel-body">
+                    <div class="form-group">
+                        <label class="col-xs-12 col-sm-2 col-md-2 control-label">日期范围</label>
+                        <div class="col-sm-8 col-md-8 col-lg-8 col-xs-12">
+                            <input name="case_time_start" type="hidden" value="{$search_content.time_start}">
+                            <input name="case_time_end" type="hidden" value="{$search_content.time_end}">
+                            <button class="btn btn-default daterange daterange-date" type="button">
+                                <span class="date-title">{$search_content.time_start} 至 {$search_content.time_end}</span>
+                                <i class="fa fa-calendar"></i>
+                            </button>
+                        </div>
+                        <div class="pull-right col-xs-12 col-sm-2 col-md-2 col-lg-2">
+                            <input type="hidden" name="op" value="case">
+                            <button class="btn btn-default" onclick="document.case_form.submit()"><i
+                                    class="fa fa-file-excel-o"></i> 导出
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <!--装修日记-->
+        <form id="diary_form" name="diary_form" class="form-horizontal" method="post"
+              action="{:U('opExportXls')}">
+            <div class="panel panel-info">
+                <div class="panel-heading">装修日记</div>
+                <div class="panel-body">
+                    <div class="form-group">
+                        <label class="col-xs-12 col-sm-2 col-md-2 control-label">日期范围</label>
+                        <div class="col-sm-8 col-md-8 col-lg-8 col-xs-12">
+                            <input name="diary_time_start" type="hidden" value="{$search_content.time_start}">
+                            <input name="diary_time_end" type="hidden" value="{$search_content.time_end}">
+                            <button class="btn btn-default daterange daterange-date" type="button">
+                                <span class="date-title">{$search_content.time_start} 至 {$search_content.time_end}</span>
+                                <i class="fa fa-calendar"></i>
+                            </button>
+                        </div>
+                        <div class="pull-right col-xs-12 col-sm-2 col-md-2 col-lg-2">
+                            <input type="hidden" name="op" value="diary">
+                            <button class="btn btn-default" onclick="document.diary_form.submit()"><i
+                                    class="fa fa-file-excel-o"></i> 导出
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <!--分类图标-->
+        <form id="category_form" name="category_form" class="form-horizontal" method="post"
+              action="{:U('opExportXls')}">
+            <div class="panel panel-info">
+                <div class="panel-heading">分类图标</div>
+                <div class="panel-body">
+                    <div class="form-group">
+                        <label class="col-xs-12 col-sm-2 col-md-2 control-label">日期范围</label>
+                        <div class="col-sm-8 col-md-8 col-lg-8 col-xs-12">
+                            <input name="category_time_start" type="hidden" value="{$search_content.time_start}">
+                            <input name="category_time_end" type="hidden" value="{$search_content.time_end}">
+                            <button class="btn btn-default daterange daterange-date" type="button">
+                                <span class="date-title">{$search_content.time_start} 至 {$search_content.time_end}</span>
+                                <i class="fa fa-calendar"></i>
+                            </button>
+                        </div>
+                        <div class="pull-right col-xs-12 col-sm-2 col-md-2 col-lg-2">
+                            <input type="hidden" name="op" value="category">
+                            <button class="btn btn-default" onclick="document.category_form.submit()"><i
+                                    class="fa fa-file-excel-o"></i> 导出
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <!--软装建材-->
+        <form id="product_form" name="product_form" class="form-horizontal" method="post"
+              action="{:U('opExportXls')}">
+            <div class="panel panel-info">
+                <div class="panel-heading">软装建材</div>
+                <div class="panel-body">
+                    <div class="form-group">
+                        <label class="col-xs-12 col-sm-2 col-md-2 control-label">日期范围</label>
+                        <div class="col-sm-8 col-md-8 col-lg-8 col-xs-12">
+                            <input name="product_time_start" type="hidden" value="{$search_content.time_start}">
+                            <input name="product_time_end" type="hidden" value="{$search_content.time_end}">
+                            <button class="btn btn-default daterange daterange-date" type="button">
+                                <span class="date-title">{$search_content.time_start} 至 {$search_content.time_end}</span>
+                                <i class="fa fa-calendar"></i>
+                            </button>
+                        </div>
+                        <div class="pull-right col-xs-12 col-sm-2 col-md-2 col-lg-2">
+                            <input type="hidden" name="op" value="product">
+                            <button class="btn btn-default" onclick="document.product_form.submit()"><i
+                                    class="fa fa-file-excel-o"></i> 导出
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <!--平台内容统计-->
+        <form id="content_form" name="content_form" class="form-horizontal" method="post"
+              action="{:U('opExportXls')}">
+            <div class="panel panel-info">
+                <div class="panel-heading">平台内容统计</div>
+                <div class="panel-body">
+                    <div class="form-group">
+                        <label class="col-xs-12 col-sm-2 col-md-2 control-label">日期范围</label>
+                        <div class="col-sm-8 col-md-8 col-lg-8 col-xs-12">
+                            <input name="content_time_start" type="hidden" value="{$search_content.time_start}">
+                            <input name="content_time_end" type="hidden" value="{$search_content.time_end}">
+                            <button class="btn btn-default daterange daterange-date" type="button">
+                                <span class="date-title">{$search_content.time_start} 至 {$search_content.time_end}</span>
+                                <i class="fa fa-calendar"></i>
+                            </button>
+                        </div>
+                        <div class="pull-right col-xs-12 col-sm-2 col-md-2 col-lg-2">
+                            <input type="hidden" name="op" value="content">
+                            <button class="btn btn-default" onclick="document.content_form.submit()"><i
+                                    class="fa fa-file-excel-o"></i> 导出
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <!--会员注册-->
+        <form id="member_form" name="member_form" class="form-horizontal" method="post"
+              action="{:U('opExportXls')}">
+            <div class="panel panel-info">
+                <div class="panel-heading">会员注册</div>
+                <div class="panel-body">
+                    <div class="form-group">
+                        <label class="col-xs-12 col-sm-2 col-md-2 control-label">日期范围</label>
+                        <div class="col-sm-8 col-md-8 col-lg-8 col-xs-12">
+                            <input name="member_time_start" type="hidden" value="{$search_content.time_start}">
+                            <input name="member_time_end" type="hidden" value="{$search_content.time_end}">
+                            <button class="btn btn-default daterange daterange-date" type="button">
+                                <span class="date-title">{$search_content.time_start} 至 {$search_content.time_end}</span>
+                                <i class="fa fa-calendar"></i>
+                            </button>
+                        </div>
+                        <div class="pull-right col-xs-12 col-sm-2 col-md-2 col-lg-2">
+                            <input type="hidden" name="op" value="member">
+                            <button class="btn btn-default" onclick="document.member_form.submit()"><i
+                                    class="fa fa-file-excel-o"></i> 导出
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+
+    </div>
+</div>
+
+<include file="Public:footer"/>

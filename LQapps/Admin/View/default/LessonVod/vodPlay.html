@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>视频播放</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <script type="text/javascript" src="__RES__/js/lib/jquery-1.11.1.min.js"></script>
+    <link rel="stylesheet" href="__RES__/plugins/ztree/css/demo.css" type="text/css">
+    <link rel="stylesheet" href="__RES__/plugins/ztree/css/zTreeStyle/zTreeStyle.css" type="text/css">
+    <link rel="stylesheet" href="__RES__/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="__RES__/plugins/ztree/js/jquery.ztree.core-3.5.js"></script>
+    <script type="text/javascript" src="__RES__/plugins/ztree/js/jquery.ztree.excheck-3.5.js"></script>
+    <script type="text/javascript" src='__RES__/plugins/layer3/layer.js'></script>
+
+
+    <link rel="stylesheet" href="//g.alicdn.com/de/prismplayer/1.5.7/skins/default/index.css"/>
+    <script type="text/javascript" src="//g.alicdn.com/de/prismplayer/1.5.7/prism-min.js"></script>
+</head>
+<body>
+<script type="text/javascript">var page_loading=layer.load(0,{shade:[0.1,'#fff']});</script>
+<div class="page_box">
+<div id="J_prismPlayer" class="prism-player"></div>
+
+</div>
+<script>
+    $(document).ready(function() {
+
+        layer.close(page_loading);//结束页面加载状态
+        // 初始化播放器
+        var player = new prismplayer({
+            id: "J_prismPlayer", // 容器id
+            source: "<php>echo $vod['PalyInfo']['mp4']['PlayURL'];</php>",// 视频地址
+            autoplay: false,    //自动播放：否
+            width: "100%",       // 播放器宽度
+            height: "500px"      // 播放器高度
+        });
+        var clickDom = document.getElementById("J_clickToPlay");
+        clickDom.addEventListener("click", function (e) {
+            // 调用播放器的play方法
+            player.play();
+        });
+        // 监听播放器的pause事件
+        player.on("pause", function () {
+
+        });
+    })
+</script>
+</body>

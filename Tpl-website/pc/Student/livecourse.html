@@ -1,0 +1,132 @@
+<head>
+    <meta charset="UTF-8">
+    <title>直播-正在学习</title>
+    <meta name="keywords" content="{$seoData.keywords}">
+    <meta name="description" content="{$seoData.description}">
+    <link rel="stylesheet" href="__CSS__/student/student.css">
+    <script src="__JS__/lib/jquery-3.1.1.min.js"></script>
+    <script src='__JS__/lib/require.js'></script>
+    <script src="__JS__/lib/main.js"></script>
+    <script src="__JS__/common.js"></script>
+</head>
+
+<body>
+    <include file="Public:header" />
+    <include file="Public:student_nav" />
+    <div class="s-live-course">
+        <div class="zr_layout live-course-contain">
+            <div class="tabhead">
+                <ul class="clearfix">
+                    <li class="active first-link">
+                        <a href="{:U('/Student/livecourse')}">正在学习</a>
+                    </li>
+                    <li>
+                        <a href="{:U('/Student/livestar')}">我的收藏</a>
+                    </li>
+                    <li class=" last-link">
+                        <a href="{:U('/Student/liveexpire')}">已过期</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="course-list-contain">
+                <if condition="$live_msg">
+                <foreach name="live_msg" item="value">
+                    <if condition="($value['id'] gt 0) AND ($value['zl_status'] eq 6)">
+                        <div class="s-zx-course-list">
+                            <img class="picture" src="{$value['zc_image']}" alt="">
+                            <div class="course-detail">
+                                <div class="row clearfix">
+                                    <h3 class="item-title">{$value['live_title']}</h3>
+                                </div>
+                                <div class="row clearfix sub-title">
+                                    <span>{$value['zn_cat_name']}</span>
+                                    <span>{$value['zc_nickname']}</span>
+                                    <span>{$value['zc_school']}</span>
+                                </div>
+                                <div class="row progress-text">
+                                    <span class="recently-live-time">最近直播:{$value['zc_date']} {$value['zc_start_time']}-{$value['zc_end_time']}</span>
+                                </div>
+                            </div>
+                            <div class="keep-studying">
+                                <a class="hover-btn" href="{:U('/Live/livedetail',array('tnid' => $value['live_id']))}">继续学习</a>
+                            </div>
+                        </div>
+                        <elseif condition="($value['zl_status'] eq 1) OR (!$value['id'])" />
+                        <div class="s-zx-course-list">
+                            <img class="picture" src="{$value['zc_image']}" alt="">
+                            <div class="course-detail">
+                                <div class="row clearfix">
+                                    <h3 class="item-title">{$value['live_title']}</h3>
+                                </div>
+                                <div class="row clearfix sub-title">
+                                    <span>{$value['zn_cat_name']}</span>
+                                    <span>{$value['zc_nickname']}</span>
+                                    <span>{$value['zc_school']}</span>
+                                </div>
+                                <!-- 直播已完结显示 -->
+                                <div class="end-live">
+                                    <span>直播已完结</span>
+                                </div>
+                            </div>
+                            <div class="keep-studying">
+                                <a class="hover-btn" href="{:U('/Live/livedetail',array('tnid' => $value['live_id']))}">继续学习</a>
+                            </div>
+                        </div>
+                        <elseif condition="$value['zl_status'] eq 2" />
+                        <!-- 当课程不能访问添加no-visit -->
+                        <div class="s-zx-course-list no-visit">
+                            <img class="picture" src="{$value['zc_image']}" alt="">
+                            <div class="course-detail">
+                                <div class="row clearfix">
+                                    <h3 class="item-title">{$value['live_title']}</h3>
+                                </div>
+                                <div class="row clearfix sub-title">
+                                    <span>{$value['zn_cat_name']}</span>
+                                    <span>{$value['zc_nickname']}</span>
+                                    <span>{$value['zc_school']}</span>
+                                </div>
+                                <!-- 直播已完结显示 -->
+                                <div class="end-live">
+                                    <span>直播已完结</span>
+                                </div>
+                            </div>
+                            <!-- 无法访问课程 -->
+                            <div class="no-visit-live-course">
+                                <i class="live-course-warning-icon"></i>
+                                <span class="text">此课堂暂时无法访问</span>
+                            </div>
+                        </div>
+                    </if>
+                </foreach>
+                    <else />
+                <!-- 没有列表显示 -->
+                <div class="lb_list_item no_lb clearfix">
+                    <div class="lb_head_sculpture fl">
+                        <img src="__IMG__/teacher/no_lb_bg.png" alt="">
+                    </div>
+                    <div class="lb_info fl clearfix">
+                        <div class="fl">
+                            <div>
+                                <h3 class="lb_list_title"></h3>
+                                <h3 class="lb_list_title lb_list_title2"></h3>
+                            </div>
+                            <div class="curriculum_name_list">
+                                <a class="hover-btn" href="{:U('/Live/index')}">去报名</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </if>
+            </div>
+            <div class="list_page" style="position:relative;right:-1000px;bottom:60px;">
+                {$page}
+            </div>
+        </div>
+    </div>
+    <include file="Public:footer" />
+</body>
+<!-- <script>
+require(["student"], function(student) {
+    student()
+})
+</script> -->

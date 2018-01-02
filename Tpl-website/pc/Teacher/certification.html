@@ -1,0 +1,201 @@
+<head>
+    <meta charset="UTF-8">
+    <title>{$seoData.title}</title>
+    <meta name="keywords" content="{$seoData.keywords}">
+    <meta name="description" content="{$seoData.description}">
+    <link rel="stylesheet" href=__CSS__/teacher/teacher.css>
+    <script src="__JS__/lib/jquery-3.1.1.min.js"></script>
+    <script src="__JS__/common.js"></script>
+    <script src='__JS__/lib/require.js'></script>
+    <script src="__JS__/lib/main.js"></script>
+</head>
+
+<body>
+    <include file="Public:header"/>
+    <include file="Public:teacher_nav"/>
+    <div class="banner_bg"></div>
+    <div class="t_info_wrapper">
+        <div class="zr_layout">
+            <div class="t_s_content y_z_content">
+                <div class="w_s_title">
+                    <h1>完善个人资料</h1>
+                    <eq name="authInfo.zl_is_auth" value="1">
+                        <span class="y_yz_status yz_status">通过验证</span>
+                        <else/>
+                        <span class="no_yz_status yz_status">尚未验证</span>
+                    </eq>
+                </div>
+                <!-- 教室资格证 -->
+                <div style="margin-bottom: 46px;">
+                    <div class="sub_title">教师资格证</div>
+                    <div class="teacher_certification">
+                        <div class="uploadPic">
+                            <if condition="$authInfo['zc_cert_img'] eq ''">
+                            <!-- 默认显示 -->
+                            <div class="no_pic">
+                                <img src="../res/images/teacher/uploadPic.png" alt="">
+                                <input class="first_cert_img" type="file" accept="image/*">
+                            </div>
+                                <else/>
+                            <!-- 有图片显示 -->
+                            <div class="has_pic">
+                                <img src="{$authInfo.zc_cert_img}" alt="">
+                                <if condition="$authInfo['zn_cert_status'] eq 1">
+                                    <div class="s_k_status pass">
+                                        <i class="s_k_icon"></i>
+                                        <span>审核通过</span>
+
+                                    </div>
+                                    <else/>
+                                    <div class="s_k_status no_pass">
+                                        <i class="s_k_icon"></i>
+                                        <span>{$authInfo.zc_cert_reason}</span>
+                                        <div class="z_x_uploadpic">
+                                            <input class="first_cert_img" type="file" accept="image/*"> 重新上传
+                                        </div>
+                                    </div>
+                                </if>
+
+                            </div>
+                            </if>
+                        </div>
+                        <div class="examples_Pic">
+                            <div class="mask">
+                            </div>
+                            <img src="../res/images/teacher/examples_pic.png" alt="">
+                            <i class="search"></i>
+                            <span class="lock_examples_text">查看示例</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="sub_title">手持身份证</div>
+                <div class="teacher_certification">
+                    <div class="uploadPic">
+                        <if condition="$authInfo['zc_idcard_img'] eq ''">
+                        <div class="no_pic">
+                            <img src="../res/images/teacher/uploadPic.png" alt="">
+                            <input class="first_idcard_img" type="file" accept="image/*">
+                        </div>
+                            <else/>
+                         <div class="has_pic">
+                            <img src="{$authInfo.zc_idcard_img}" alt="">
+                             <if condition="$authInfo['zn_idcard_status'] eq 1">
+                                 <div class="s_k_status pass">
+                                     <i class="s_k_icon"></i>
+                                     <span>审核通过</span>
+
+                                 </div>
+                                 <else/>
+                                 <div class="s_k_status no_pass">
+                                     <i class="s_k_icon"></i>
+                                     <span>{$authInfo.zc_idcard_reason}</span>
+                                     <div class="z_x_uploadpic">
+                                         <input class="first_idcard_img" type="file" accept="image/*"> 重新上传
+                                     </div>
+                                 </div>
+                             </if>
+                        </div>
+                            </if>
+                    </div>
+                    <div class="examples_Pic">
+                        <div class="mask">
+                        </div>
+                        <img src="../res/images/teacher/examples_pic2.png" alt="">
+                        <i class="search"></i>
+                        <span class="lock_examples_text">查看示例</span>
+                    </div>
+                    <div class="clearfix" style="margin-top:53px;">
+                        <span class="fl">请输入身份证:</span>
+                        <input onkeyup="this.value=this.value.replace(/\D/g,'')"  onafterpaste="this.value=this.value.replace(/\D/g,'')" maxlength="18" value="{$authInfo.zc_idcard}"  class="has_boxshaw teacher_id fl" type="text" placeholder="请输入身份证" <if condition="$authInfo['zl_is_auth'] eq 1">readonly</if> >
+                    </div>
+                </div>
+                <neq name="authInfo.zl_is_auth" value="1"><input class="save_data" type="button" value="保存"></neq>
+            </div>
+        </div>
+    </div>
+    <!-- 图片预览层 -->
+    <div class="pic_mask">
+        <img class="show_examples" src="" alt="">
+    </div>
+    <include file="Public:footer"/>
+</body>
+
+</html>
+<script>
+    require(["layer","certification"],function(layer,certification){
+         showPreviewPic ();
+        function  showPreviewPic () {
+            var uploadPicBtn = $(".no_pic input")
+            uploadPicBtn.change(function() {
+                var imgUrl = window.URL.createObjectURL(this.files[0])
+                var imgBox = $(this).parent().find("img")
+                imgBox.attr("src", imgUrl)
+            })
+
+            $(".teacher_certification").on("click", ".examples_Pic", function() {
+                var src = $(this).find('img').attr("src");
+                $(".show_examples").attr("src", src)
+                $(".pic_mask").fadeIn(200, function() {
+                    $(".pic_mask").on("click", function() {
+                        $(".pic_mask").fadeOut(200);
+                    })
+                });
+
+            })
+        }
+
+
+        var uploadPicBtn = $(".no_pic input")
+        uploadPicBtn.change(function() {
+            var imgUrl = window.URL.createObjectURL(this.files[0])
+            var imgBox = $(this).parent().find("img")
+            imgBox.attr("src", imgUrl)
+        })
+
+        var cert_img;
+        var idcard_img;
+
+        $(".first_cert_img").change(function(){
+            var imgUrl = window.URL.createObjectURL(this.files[0])
+            var imgBox = $(this).parent().parent().parent().find("img")
+            imgBox.attr("src", imgUrl)
+
+            var reader = new FileReader();
+            reader.readAsDataURL(this.files[0]);
+            reader.onload = function(e) {
+                cert_img = e.target.result;
+            };
+        })
+        $(".first_idcard_img").change(function(){
+            var imgUrl = window.URL.createObjectURL(this.files[0])
+            var imgBox = $(this).parent().parent().parent().find("img")
+            imgBox.attr("src", imgUrl)
+
+            var reader = new FileReader();
+            reader.readAsDataURL(this.files[0]);
+            reader.onload = function(e) {
+                idcard_img = e.target.result;
+            };
+        })
+
+
+        $(".save_data").on("click",function(){
+            $.ajax({
+                url:"{:U('auth_update')}",
+                type:"POST",
+                data:{"cert_img":cert_img,"idcard_img":idcard_img,"idcard":$(".teacher_id").val()},
+
+                beforeSend: function() {
+                     loading = layer.load(1, {
+                        shade: [0.1, '#fff'] //0.1透明度的白色背景
+                    });
+                },
+                success:function(data){
+                    layer.close(loading)
+                    layer.msg(data.msg)
+                }
+            })
+        })
+    })
+
+</script>

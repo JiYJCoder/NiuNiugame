@@ -1,0 +1,2 @@
+<?php
+ die();a:16:{s:2:"id";s:2:"60";s:6:"zn_fid";s:2:"49";s:8:"zn_class";s:1:"3";s:10:"zc_caption";s:20:"后台登录通行IP";s:7:"zn_sort";s:3:"100";s:12:"zl_check_pop";s:1:"1";s:7:"zn_type";s:1:"4";s:6:"zc_run";s:19:"/AdminAllowIp/index";s:12:"zc_run_table";s:14:"admin_allow_ip";s:9:"zc_target";s:5:"_self";s:13:"zc_index_lock";s:11:"1|1|1|1|1|1";s:10:"zl_is_menu";s:1:"1";s:10:"zl_visible";s:1:"1";s:8:"zn_cdate";s:10:"1480475820";s:8:"zn_mdate";s:10:"1481167458";s:8:"fullname";s:102:"&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;└ 后台登录通行IP";}

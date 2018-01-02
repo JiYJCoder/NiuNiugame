@@ -1,0 +1,46 @@
+<div class="t_nav_bar">
+    <div class='zr_layout'>
+        <div class="fl nav_bar_f">
+            <a class="nav_link{$index_active}" href="{:U('index')}">老师首页</a>
+            <a class="nav_link{$mylive_active}" href="{:U('mylive')}">我的直播</a>
+            <a class="nav_link{$myrecorded_active}" href="{:U('myrecorded')}">我的录播</a>
+            <a class="nav_link{$myset_active}" href="{:U('myset')}">个人设置</a>
+            <a class="nav_link{$certification_active}" href="{:U('certification')}">教师验证</a>
+        </div>
+       <!--  <div class="fr user_info nav_bar_r">
+            <div class="fl">
+                <span>{$member_info.zc_nickname}</span>,您好！
+            </div>
+            <div class="fl user_pic">
+                <img src="{$member_info.zc_headimg}" alt="">
+            </div>
+        </div> -->
+    </div>
+</div>
+<script>
+navAnimate();
+    function navAnimate() {
+    var $nav_link = $('.nav_bar_f').find('.active');
+    var $index = $nav_link.index();
+    var leftDistance = $nav_link.position().left;
+    var NAVLEFT = 16;
+
+    $(".nav_bar_f").append('<span class="sideline"></span>');
+    $(".sideline").css({
+        "left": leftDistance + NAVLEFT
+    });
+
+    $(".nav_link").hover(function () {
+        $(".sideline").stop(true);
+        $(".sideline").animate({
+            left: $(this).position().left + NAVLEFT
+        }, 300);
+        $(this).addClass('active').siblings().removeClass("active");
+    }, function () {
+        $nav_link.addClass('active').siblings().removeClass("active");
+        $(".sideline").animate({
+            left: leftDistance + NAVLEFT
+        }, 300);
+    });
+}
+</script>

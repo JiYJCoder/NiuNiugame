@@ -1,0 +1,175 @@
+<head>
+    <meta charset="UTF-8">
+    <title>完善资料</title>
+    <meta name="keywords" content="{$seoData.keywords}">
+    <meta name="description" content="{$seoData.description}">
+    <script src="__JS__/lib/jquery-3.1.1.min.js"></script>
+    <script src="__PLUGINS__/unlock/unlock.js"></script>
+    <script src='__JS__/lib/require.js'></script>
+    <script src="__JS__/lib/main.js"></script>
+    <link rel="stylesheet" href=__CSS__/teacher/teacher.css>
+    <link rel="stylesheet" href="__PLUGINS__/unlock/unlock.css">
+</head>
+<body>
+    <include file="Public:header"/>
+    <div class="register">
+        <div class="zr_layout">
+            <div class="content ">
+                <div class="tabs">
+                    <ul class="tabs_header clearfix">
+                        <li>
+                            <div class="item active">
+                                <span class="order fl">1</span>
+                                <span class="text fl">阅读协议</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="item">
+                                <span class="order fl">2</span>
+                                <span class="text fl">填写资料</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="item">
+                                <span class="order fl">3</span>
+                                <span class="text fl">完善资料</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="item">
+                                <span class="order fl">4</span>
+                                <span class="text fl">签约成功</span>
+                            </div>
+                        </li>
+
+                    </ul>
+                    <div class="list_1">
+                        <div class="textbox">
+                            {$SET_CONFIG['TEACHERAGREEMENT']|lq_format_content}
+                        </div>
+                        <div class="agree_read clearfix">
+                            <label>
+                                <input type="checkbox">
+                                <i></i>
+                                我已阅读以上协议
+                            </label>
+                        </div>
+                        <input class="agree_btn" type="button" value="我同意">
+                    </div>
+                    <div class="list_2">
+                        <div class="select_drive">是否已开通孜尔成长</div>
+                        <div class="already_opened"></div>
+                        <div class="no_opened"></div>
+                    </div>
+                    <div class="list_3">
+                        <div class="enter_account_text">请输入孜尔账号进行验证</div>
+                        <div class="accout_verification">
+                            <div class="accout_box">
+                                <div class="row" style="margin-bottom:20px;">
+                                    <span>登录名：</span>
+                                    <input class="has_boxshaw" type="text" placeholder="请输入孜尔账号">
+                                </div>
+                                <div class="row">
+                                    <span>密码：</span>
+                                    <input class="has_boxshaw" style="margin-left: 14px;" type="text" placeholder="请输入密码">
+                                </div>
+                                <a class="forgot_password" href="">忘记密码？</a>
+                                <div class="bar1 bar"></div>
+                            </div>
+                        </div>
+                        <div class="user_archives">
+                            <div class="archives_box clearfix">
+                                    <img class="avatar fl" src="__IMG__/teacher/default_user_avatar.png" alt="">
+                                    <div class="archives_left fl">
+                                        <h5>孜尔用户档案</h5>
+                                        <!-- 没有资料默认显示这个 -->
+                                        <div class="default_text">
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                        </div>
+                                        <div class="user_info">
+                                            <div class="row">
+                                                <span>姓名:</span>
+                                                <span class="user_text user_t_name">刘建国</span>
+                                                <input class="user_t_name_input has_boxshaw"  type="text" value="">
+                                            </div>
+                                            <div class="row">
+                                                <span>学校:</span>
+                                                <span class="user_text user_t_school">雷州市第一中学</span>
+                                                <input class="user_t_school_input has_boxshaw" type="text" value="">
+                                            </div>
+                                            <div class="row">
+                                                <span>身份证号码:</span>
+                                                <span class="user_text user_t_id">238478234745262</span>
+                                                <input class="user_t_id_input has_boxshaw" type="text" value="">
+                                            </div>
+                                            <div class="row">
+                                                <span>手机号码:</span>
+                                                <span class="user_text user_t_phone">15268352642</span>
+                                                <input class="user_t_phone_input has_boxshaw" type="text" value="">
+                                            </div>
+                                        </div>
+                                    </div>
+                            </div>
+                            <div class="verif_result">
+                                <span class="tips_text">请先验证身份以获取用户档案</span>
+                                <input class="determine" type="button" name="" value="确认无误">
+                                <input class="backStep2" type="button" name="" value="返回上一步">
+                                <span class="modify_info">信息有误，我要修改</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="list_4">
+                        <div class="input_basic_data">输入基本资料</div>
+                        <div class="basic_data">
+                            <div class="row">
+                                <span>真实姓名：</span>
+                                <input class="has_boxshaw real_name " type="text" placeholder="请填写与身份证相符的真实姓名">
+                            </div>
+                            <div class="row">
+                                <span>所在学校：</span>
+                                <input class="has_boxshaw sz_school" type="text" placeholder="请输入您所执教的学校">
+                            </div>
+                            <div class="row">
+                                <span>手机号码：</span>
+                                <input onkeyup="this.value=this.value.replace(/\D/g,'')"  onafterpaste="this.value=this.value.replace(/\D/g,'')" maxlength="11"  class="has_boxshaw zs_phone" type="text" placeholder="请输入能联系到您的电话号码">
+                            </div>
+                            <div class="row">
+                                <span>验证码：</span>
+                                <input onkeyup="this.value=this.value.replace(/\D/g,'')"  onafterpaste="this.value=this.value.replace(/\D/g,'')" maxlength="6"  class="has_boxshaw codeTextInput" type="text" placeholder="请输入手机收到的验证码">
+                                <input class="fl code" type="button" value="发送验证码">
+                            </div>
+                            <div class="row">
+                                <span>登录密码：</span>
+                                <input class="has_boxshaw password1" type="password" placeholder="请输入您的个人登录密码">
+                            </div>
+                            <div class="row">
+                                <span>重复密码：</span>
+                                <input class="has_boxshaw password2" type="password" placeholder="请再次输入您的个人登录密码">
+                            </div>
+                            <input class="submitBtn" type="button" value="提交资料">
+                        </div>
+                    </div>
+                    <div class="list_5">
+                          <i class="q_y_success_bg"></i>
+                          <span class="q_y_text1">恭喜,刘建国老师 !</span>
+                          <span class="q_y_text2">您已成为孜尔直播签约教师</span>
+                          <a class="go_teacher_Backstage" href="">进入老师后台</a>
+                          <a class="back_index" href="">返回首页</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <include file="Public:footer"/>
+</body>
+
+</html>
+
+<script>
+    require(['register'], function(register) {
+        register.loadTip()
+    });
+</script>

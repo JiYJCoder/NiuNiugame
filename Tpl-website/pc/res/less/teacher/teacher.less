@@ -1,0 +1,2379 @@
+@import "./base.css";
+@import "../common.css";
+
+@green-color: #03b78b;
+@link-color2: #3face2;
+@orange-color: #e87515; // 老师主页开始
+//折线图样式
+#chart {
+    height: 432px;
+    position: relative; // top: 60px
+}
+
+.chart_wrapper {
+    background: #252934;
+    background-image: url("../../images/teacher/chart_bg.png");
+    background-repeat: no-repeat;
+    background-position: 0 bottom;
+    height: 432px;
+    .chrat_out {
+        position: relative; // width: 100%;
+        // height: 100%;
+        // background: red;
+        .select {
+            color: #fff;
+            position: relative;
+            z-index: 999;
+
+            h3 {
+                position: absolute;
+                font-size: 17px;
+                left: 0;
+                top: 33px;
+            }
+
+            .select_input {
+                position: absolute;
+                left: 100px;
+                top: 30px;
+
+                .select_zb_course {
+                    background: #2d364e;
+                    border: none;
+                    color: #fff;
+                    padding: 5px;
+                    border-radius: 10px;
+                    outline: none;
+                }
+
+                .select_zb_course:last-child {
+                    margin-left: 10px;
+                }
+            }
+        }
+    }
+}
+
+//主要内容样式
+.main-wrapper {
+    width: 100%;
+    background: #f2f2f2;
+
+    .main_layout {
+        width: 1200px;
+        margin: 0 auto;
+        padding-bottom: 100px;
+
+        .zb_coure_title {
+            height: 61px;
+            line-height: 61px;
+            border-bottom: 1px solid #f2f2f2;
+
+            i {
+                width: 3px;
+                height: 22px;
+                background: #03b78b;
+            }
+
+            h1 {
+                position: relative;
+                font-size: 23px;
+                color: #666666;
+                padding-left: 24px;
+                &:before {
+                    position: absolute;
+                    left: 0;
+                    top: 21px;
+                    content: "";
+                    height: 22px;
+                    width: 3px;
+                    background: #02b78c;
+                }
+            }
+
+            .zb_status_text {
+                width: 71px;
+                height: 30px;
+                line-height: 30px;
+                text-align: center;
+                border-radius: 15px;
+                background: #03b78b;
+                color: #fff;
+                margin-left: 27px;
+            }
+        }
+        .in_zb_course_live {
+            margin-bottom: 30px;
+            background: #fff;
+
+            .zb_content {
+                padding: 32px 0 0 45px; // 公共按钮样式
+                .xg_datum {
+                    margin-top: 29px;
+                }
+
+                .xg_datum>div {
+                    float: left;
+                }
+
+                .xg_datum a {
+                    width: 226px;
+                    height: 50px;
+                    text-align: center;
+                    line-height: 50px;
+                    border: 1px solid #03b78b;
+                    border-radius: 5px;
+                    color: #03b78b;
+                } // 没有直播状态
+                .no_zb {
+                    padding-top: 30px;
+                    padding-bottom: 50px;
+                    text-align: center;
+
+                    .xg_datum {
+                        padding-top: 30px;
+                        display: inline-block;
+                    }
+
+                    .no_zb_pic {
+                        width: 168px;
+                        height: 176px;
+                        margin: 0 auto;
+                    }
+                }
+
+                .zb_list {
+                    position: relative;
+                    float: left;
+                    width: 532px;
+                    height: 372px;
+                    border-radius: 20px;
+                    margin-right: 45px; // overflow: hidden;
+                    box-shadow: 0 1px 5px rgba(34, 25, 25, 0.4);
+                    margin-bottom: 32px;
+
+                    .zb_list_info {
+                        height: 130px;
+                        overflow: hidden; // background: url("../../images/zb_info_title_bg.png");
+                        color: #fff;
+                        position: relative;
+                        border-radius: 20px 20px 0 0;
+
+                        .list_inof_bg {
+                            position: absolute;
+                        }
+
+                        .info_title_wrapper {
+                            padding: 25px 0 0 19px;
+                            position: absolute;
+                            width: 100%;
+                            height: 100%;
+                            background: rgba(0, 0, 0, 0.5);
+                        }
+
+                        .sub_title {
+                            font-size: 20px;
+                            line-height: 30px;
+                        }
+
+                        .inof_title {
+                            font-size: 26px;
+                        }
+
+                        .z_inof_bottom {
+                            line-height: 26px;
+
+                            .z_t_classes {
+                                color: #df6d14;
+                                padding-right: 20px;
+                            }
+                        }
+                    } // 有直播应该显示的面板
+                    .zb_panel {
+                        height: 242px;
+                        padding: 21px 0 0 29px;
+                        position: relative;
+
+                        .icon {
+                            float: left;
+                            position: absolute;
+                            width: 12px;
+                            height: 14px;
+                            left: 1px;
+                            background: url("../../images/teacher/111.jpg");
+                        }
+
+                        .tl_text_1513 {
+                            float: left;
+                            color: #49aae9;
+                        }
+
+                        .tl_address {
+                            cursor: pointer;
+                            position: absolute;
+                            right: 43px;
+                            top: 26px;
+                            z-index: 9;
+                            padding-left: 24px;
+                            padding-right: 24px;
+
+                            .tl_triangle {
+                                position: absolute;
+                                top: 6px;
+                                right: 2px;
+                                width: 0;
+                                height: 0;
+                                float: left;
+                                overflow: hidden;
+                                border: 5px solid transparent;
+                                border-top-color: #49aae9;
+                                transition: all 0.5s;
+                            }
+                            .tl_text_13 {
+                                position: relative;
+                                top: -3px;
+                            } // &:hover {
+                            //     .copy_address {
+                            //         transform: translate3d(0, 0, 0);
+                            //         opacity: 1;
+                            //         display: block;
+                            //     }
+                            // }
+                            &:hover {
+                                .address-cr {
+                                    visibility: visible; // display: block;
+                                    transform: translate3d(0, 0, 0);
+                                    opacity: 1;
+                                    z-index: 3;
+                                }
+                            }
+
+                            .address-cr {
+                                visibility: hidden;
+                                transform: translate3d(0, 50px, 0);
+                                left: -120px;
+                                opacity: 0;
+                                top: 17px;
+                            } // .copy_address {
+                            //     display: none;
+                            //     opacity: 0;
+                            //     transition: all 0.5s;
+                            //     transform: translate3d(0, 50px, 0);
+                            //     position: absolute;
+                            //     z-index: -1;
+                            //     left: -70px;
+                            //     top: 15px;
+                            //     width: 209px;
+                            //     border-radius: 8px;
+                            //     padding: 12px;
+                            //     color: #666;
+                            //     box-shadow: 0 1px 2px rgba(34, 25, 25, 0.4);
+                            //     background: #fff;
+                            //     padding-bottom: 40px;
+                            //     .address_text {
+                            //         display: block;
+                            //         width: 100%;
+                            //         word-break: break-all;
+                            //     }
+                            //     input {
+                            //         position: absolute;
+                            //         right: 8px;
+                            //         bottom: 8px;
+                            //         display: block;
+                            //         padding: 4px;
+                            //         border-radius: 4px;
+                            //         background: #42ccff;
+                            //         color: #fff;
+                            //         cursor: pointer;
+                            //     }
+                            // }
+                            // .copy_address.active {
+                            //     display: block;
+                            //     -webkit-animation-name: fadeInRightBig;
+                            //     animation-name: fadeInRightBig;
+                            //     -webkit-animation-duration: 0.5s;
+                            //     animation-duration: 0.5s;
+                            //     -webkit-animation-fill-mode: both;
+                            //     animation-fill-mode: both;
+                            //     z-index: 99;
+                            //     @-webkit-keyframes fadeInRightBig {
+                            //         from {
+                            //             opacity: 0;
+                            //             -webkit-transform: translate3d(200px, 0, 0);
+                            //             transform: translate3d(200px, 0, 0);
+                            //         }
+                            //         to {
+                            //             opacity: 1;
+                            //             -webkit-transform: none;
+                            //             transform: none;
+                            //         }
+                            //     }
+                            // }
+                        }
+
+                        .zb_number {
+                            .item {
+                                position: relative;
+                                width: 33.333%;
+                                float: left;
+                                text-align: center;
+
+                                span {
+                                    display: block;
+                                    line-height: 1;
+                                }
+
+                                .number_text {
+                                    font-size: 28px;
+                                    color: #999;
+                                }
+
+                                .number_text2 {
+                                    padding-top: 14px;
+                                }
+
+                                .line {
+                                    position: absolute;
+                                    top: 5px;
+                                    height: 55px;
+                                    width: 1px;
+                                    background: #D9D9D9;
+                                }
+
+                                .line1 {
+                                    right: 0;
+                                }
+
+                                .line2 {
+                                    left: 0;
+                                }
+                            }
+                        }
+
+                        .datum_buttom1 {
+                            margin-right: 20px;
+                        }
+                    } // 没有直播显示的面板
+                    .no_zb_panel {
+                        padding-top: 29px;
+                        text-align: center;
+                        overflow: hidden;
+
+                        .zb_sk_status {
+                            position: relative;
+                            margin-top: 16px;
+                        }
+
+                        .curriculum_name_list.pass {
+                            a {
+                                border: 1px solid #02b78c;
+                                color: #02b78c;
+                            }
+                        }
+
+                        .curriculum_name_list a:last-child {
+                            margin-right: 0;
+                        }
+                    }
+                }
+            }
+        }
+
+        .lb_content {
+            background: #fff;
+
+            .lb_color {
+                background: #40aae1;
+            }
+
+            .no_lb {
+                overflow: hidden;
+
+                .lb_list_title {
+                    height: 19px;
+                    width: 275px;
+                    background: #f5f5f5;
+                }
+
+                .lb_list_title2 {
+                    margin-top: 17px;
+                    width: 152px;
+                }
+
+                .curriculum_name_list {
+                    margin-top: 15px;
+                }
+            }
+
+            .lb_list_item {
+                padding: 32px 0 35px 36px;
+                border: 1px solid #f2f2f2;
+
+                .lb_info {
+                    padding-left: 24px;
+                    width: 1012px;
+                    .orange_color {
+                        color: #ea7315;
+                    }
+
+
+                    .lb_list_title {
+                        line-height: 21px;
+                        font-size: 21px;
+                        font-weight: 500;
+                    }
+
+                    .number_of_courses>div {
+                        display: inline-block;
+                        line-height: 40px;
+                        height: 40px;
+                    }
+
+                    .stra_number {
+                        color: #a9a9a9;
+                        line-height: 14px;
+                    }
+
+                    .stra_number>div {
+                        display: inline-block;
+                        padding-right: 10px;
+                    }
+
+                    .sc_number {
+                        padding-right: 5px;
+                    }
+
+                    .lb_sq_status {
+                        position: relative;
+                        padding-top: 20px;
+                        text-align: center;
+                        width: 209px;
+                        height: 150px;
+
+                        .no_pass_reason {
+                            left: 0;
+                            top: 125px;
+                        }
+                    }
+
+                    .status_text {
+                        position: relative;
+                        display: block;
+                        margin-top: 15px;
+                    }
+
+                    .sjx_show.status_text {
+                        cursor: pointer;
+                    }
+
+                    .sjx_show::after {
+                        content: "";
+                        position: absolute;
+                        width: 20px;
+                        height: 20px;
+                        right: 10px;
+                        top: 7px;
+                    }
+                }
+
+                .lb_head_sculpture img {
+                    width: 150px;
+                    height: 150px;
+                    object-fit: cover;
+                }
+            }
+        }
+    } // 审核状态图标
+    .status_icon.icon1 {
+        display: block;
+        width: 71px;
+        height: 70px;
+        margin: 0 auto;
+        background: url("../../images/teacher/teacher_image_state.jpg") -4px 0;
+    }
+
+    .status_icon.icon2 {
+        display: block;
+        width: 80px;
+        height: 70px;
+        margin: 0 auto;
+        background: url("../../images/teacher/teacher_image_state.jpg") -0px -80px;
+    }
+
+    .status_icon.icon3 {
+        display: block;
+        width: 80px;
+        height: 70px;
+        margin: 0 auto;
+        background: url("../../images/teacher/teacher_image_state.jpg") -0px -160px;
+    } // 审核没有通过显示的三角形
+    padding-top:44px;
+}
+
+.sjx_show {
+    cursor: pointer;
+}
+
+.sjx_show::after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    right: 175px;
+    top: 8px;
+    background: url("../../images/triangle.png") no-repeat;
+}
+
+.no_pass_reason {
+    display: none;
+    position: absolute;
+    right: 21px;
+    top: 18px;
+    padding: 4px;
+    border: 1px solid #f54949;
+    color: #f54949;
+}
+
+// 修改课程的按钮样式
+.curriculum_name_list {
+    padding-top: 31px;
+}
+
+.curriculum_name_list a {
+    display: inline-block;
+    margin-right: 14px;
+    width: 163px;
+    height: 34px;
+    border: 1px solid #03b78b;
+    text-align: center;
+    line-height: 34px;
+    color: #03b78b;
+    border-radius: 2px;
+}
+
+.curriculum_name_list .no_pass {
+    // a {
+    border: 1px solid #ea7315 !important;
+    color: #ea7315 !important; // }
+}
+
+// 老师主页结束
+// 老师个人设置开始
+.banner_bg {
+    height: 175px;
+    background: url("../../images/teacher/teacherInfor_top_bg.jpg");
+}
+
+.t_info_wrapper {
+    background: #f2f2f2;
+    padding-bottom: 65px;
+
+    .t_s_content {
+        background: #fff;
+        padding-bottom: 57px;
+        position: relative;
+        top: -29px;
+
+        .t_info_l {
+            width: 189px;
+
+            .show_avatar {
+                position: relative;
+                top: -28px;
+                left: 33px;
+            }
+
+            .t_avatar {
+                position: relative;
+                width: 116px;
+                height: 116px;
+                border-radius: 58px;
+                background: #fff;
+                margin-bottom: 10px;
+
+                .t_pic {
+                    position: relative;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-50%, -50%);
+                    width: 106px;
+                    object-fit: cover;
+                    height: 106px;
+                    border-radius: 54px;
+                }
+            }
+
+            .suggested_size {
+                color: #C1C1C1;
+                font-size: 12px;
+            }
+        }
+
+        .t_info_r {
+            .inof_sub_title {
+                font-size: 16px;
+                padding: 29px 0 12px;
+            }
+
+            .t_info_top {
+                .t_name_wrapper {
+                    height: 62px;
+                    line-height: 62px;
+
+                    .t_name {
+                        color: #02B78C;
+                        font-size: 20px;
+                    }
+
+                    .select_file {
+                        margin-left: 15px;
+                        position: relative;
+                        padding: 4px 10px;
+                        height: 20px;
+                        line-height: 20px;
+                        position: relative;
+                        cursor: pointer;
+                        color: #333;
+                        background: #fafafa;
+                        border: 1px solid #ddd;
+                        border-radius: 4px;
+                        overflow: hidden;
+                        display: inline-block;
+                        display: inline;
+                        zoom: 1;
+
+                        input {
+                            position: absolute;
+                            font-size: 0px;
+                            right: 0;
+                            top: 0;
+                            opacity: 0;
+                            filter: alpha(opacity=0);
+                            cursor: pointer;
+                            height: 28px;
+                            width: 76px;
+                        }
+                    }
+                }
+
+                .t_info_text {
+                    line-height: 1;
+                    font-size: 16px;
+                    padding-bottom: 30px;
+                    border-bottom: 1px dashed #E8E8E8;
+                    a {
+                        display: inline-block;
+                        z-index: 99;
+                        cursor: pointer;
+                        text-decoration: underline;
+                        color: #3A94B9;
+                        ;
+                    }
+                }
+
+                .t_school {
+                    display: block;
+                    margin-bottom: 12px;
+                }
+
+                .t_s_phone {
+                    margin-left: 29px;
+                }
+            }
+
+            textarea::-webkit-input-placeholder {
+                color: #999999 !important;
+            }
+
+            .individual_resume {
+                textarea {
+                    text-indent: 20px;
+                    padding-top: 11px;
+                    width: 486px;
+                    height: 206px;
+                    line-height: 20px;
+                    border: 1px solid #e8e8e8;
+                    font-size: 12px;
+                    color: #333;
+                    background: #fafafa;
+                }
+            }
+
+            .the_good {
+                .skill_input {
+                    width: 326px;
+                    height: 34px;
+                    line-height: 34px;
+                    padding-left: 15px;
+                    border: 1px solid #e8e8e8;
+                    background: #fafafa;
+                    font-size: 12px;
+                    color: #333;
+                }
+
+                .skill_input::-webkit-input-placeholder {
+                    color: #999999 !important;
+                }
+
+                .suer_skill {
+                    width: 50px;
+                    margin-left: 16px;
+                    height: 27px;
+                    border-radius: 5px;
+                    line-height: 27px;
+                    text-align: center;
+                    cursor: pointer;
+                    border: 1px solid #C1C1C1;
+                }
+
+                .instance {
+                    display: block;
+                    padding: 10px 0 20px;
+                    color: #C1C1C1;
+                    font-size: 12px;
+                }
+
+                .skill_tag span {
+                    position: relative;
+                    float: left;
+                    margin-right: 12px;
+                    border-radius: 5px;
+                    padding: 9px 28px 9px 11px;
+                    border: 1px solid #C1C1C1;
+                    -webkit-transition: all 0.5s;
+                    transition: all 0.5s;
+                    margin-bottom: 10px;
+                }
+
+                .tag_extra {
+                    position: relative;
+                    float: left;
+                    cursor: pointer;
+
+                    i {
+                        display: block;
+                        width: 14px;
+                        height: 14px;
+                        background: url("../../images/teacher/X.png");
+                        position: absolute;
+                        right: 19px;
+                        top: 12px;
+                        transition: all 0.5s;
+                    }
+                }
+
+                .tag_extra:hover {
+                    span {
+                        color: #02B78C;
+                        border: 1px solid #02B78C;
+                    }
+
+                    i {
+                        transform: rotateZ(180deg);
+                    }
+                }
+            }
+
+            .t_set_save {
+                padding-top: 54px;
+
+                input {
+                    display: block;
+                    cursor: pointer;
+                    width: 179px;
+                    height: 50px;
+                    text-align: center;
+                    line-height: 50px;
+                    font-size: 18px;
+                    color: #fff;
+                    background: #02B78C;
+                    border-radius: 5px;
+                }
+            }
+        }
+    }
+}
+
+// 老师个人设置结束
+//教师验证
+.y_z_content {
+    display: block !important;
+    padding-left: 39px;
+
+    .save_data {
+        width: 180px;
+        height: 50px;
+        line-height: 50px;
+        font-size: 17px;
+        border-radius: 5px;
+        margin-top: 74px;
+        background: #02B78C;
+        color: #fff;
+        cursor: pointer;
+    }
+
+    .w_s_title {
+        padding: 26px 0 60px;
+
+        h1 {
+            display: inline;
+            font-size: 20px;
+            margin-right: 17px;
+        }
+
+        .yz_status {
+            display: inline;
+            border-radius: 5px;
+            padding: 6px 5px;
+            line-height: 1;
+            font-weight: 400;
+        }
+
+        .no_yz_status {
+            color: @orange-color;
+            border: 1px solid #e87515;
+        }
+
+        .y_yz_status {
+            color: #03b78b;
+            border: 1px solid #03b78b;
+        }
+    }
+
+    .sub_title {
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+
+    .teacher_certification {
+
+        .teacher_id {
+            border: 1px solid #e8e8e8;
+            padding: 10px;
+            position: relative;
+            top: -10px;
+            left: 10px;
+        }
+
+        .uploadPic {
+            position: relative;
+            display: inline-block;
+            width: 231px;
+            height: 155px;
+            overflow: hidden;
+            cursor: pointer;
+            border: 1px dashed #ccc;
+
+            .has_pic {
+                img {
+                    width: 230px;
+                    height: 122px;
+                    object-fit: cover;
+                }
+
+                .s_k_status {
+                    position: relative;
+                    height: 32px;
+                    line-height: 32px;
+                    padding-left: 14px;
+                    font-size: 12px;
+
+                    .s_k_icon {
+                        display: inline-block;
+                        position: relative;
+                        top: 2px;
+                        width: 16px;
+                        height: 16px;
+                    }
+
+                    .z_x_uploadpic {
+                        position: absolute;
+                        text-decoration: underline;
+                        right: 10px;
+                        z-index: 19;
+                        cursor: pointer;
+                        top: 0;
+                        color: #6597F2;
+
+                        input {
+                            position: absolute;
+                            left: 0;
+                            top: 0;
+                            opacity: 0;
+                            filter: alpha(opacity=0);
+                            width: 50px;
+                            height: 50px;
+                            z-index: 999;
+                        }
+                    }
+                }
+
+                .no_pass {
+                    .z_x_uploadpic {
+                        right: 73px;
+                    }
+
+                    .s_k_icon {
+                        background: url("../../images/teacher/cencel_icon.png");
+                    }
+
+                    span {
+                        color: #e87515;
+                    }
+                }
+
+                .pass {
+                    .s_k_icon {
+                        background: url("../../images/teacher/answer_icon.png");
+                    }
+
+                    span {
+                        color: #03b78b;
+                    }
+                }
+            }
+
+            .no_pic {
+                img {
+                    width: 231px;
+                    height: 155px;
+                    object-fit: cover;
+                }
+
+                input[type="file"] {
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    opacity: 0;
+                    filter: alpha(opacity=0);
+                    width: 231px;
+                    height: 155px;
+                    z-index: 999;
+                }
+            }
+        }
+
+        .examples_Pic {
+            margin-left: 24px;
+            display: inline-block;
+            position: relative;
+            width: 231px;
+            height: 155px;
+            overflow: hidden;
+            cursor: pointer;
+
+            .mask {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 231px;
+                height: 155px;
+                background: rgba(0, 0, 0, 0.6);
+                z-index: 9;
+            }
+
+            .search {
+                position: absolute;
+                z-index: 10;
+                left: 93px;
+                top: 47px;
+                width: 43px;
+                height: 41px;
+                background: url("../../images/teacher/search.png");
+            }
+
+            .lock_examples_text {
+                position: absolute;
+                top: 110px;
+                color: #fff;
+                z-index: 11;
+                left: 90px;
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+}
+
+.pic_mask {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 99;
+    background: rgba(0, 0, 0, 0.7);
+
+    .show_examples {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        z-index: 100;
+        transform: translate(-50%, -50%);
+    }
+}
+
+// 个人资料认证结束
+//申请直播开始
+.s_q_live_wrapper {
+    padding-top: 29px;
+    font-family: 'MicrosoftYaHei'; // 申请直播开始
+    .s_q_live {
+        padding: 31px 28px 0 26px;
+
+        .s_q_title {
+            font-size: 24px;
+            color: #02B78C;
+            line-height: 1;
+            padding-bottom: 29px;
+            border-bottom: 1px dashed #E8E8E8;
+        }
+
+        .s_q_option {
+            padding-top: 39px;
+
+            .sub_title {
+                font-size: 16px;
+                margin-right: 26px;
+            }
+
+            .classify {
+                padding-bottom: 36px;
+
+                .select_option {
+                    position: relative;
+                    top: -10px;
+                    margin-right: 8px;
+                    cursor: pointer;
+
+                    .sjx {
+                        position: absolute;
+                        right: 16px;
+                        top: 15px;
+                        width: 9px;
+                        height: 5px;
+                        background: url("../../images/teacher/s_q_sjx.png");
+                    }
+
+                    .select_class_btn {
+                        font-size: 12px;
+                        padding-left: 17px;
+                        width: 158px;
+                        height: 36px;
+                        line-height: 36px;
+                        text-align: left;
+                        border: 1px solid #D9D9D9;
+                        background: #FAFAFA;
+                    }
+
+                    .s_option_input {
+                        position: absolute;
+                        left: 0;
+                        top: 36px;
+                        z-index: 99;
+                        width: 100%;
+                        background: #fff;
+                        border: 1px solid #D9D9D9;
+                        border-top: none;
+                        display: none;
+
+                        span {
+                            background: #fff;
+                            display: block;
+                            height: 36px;
+                            line-height: 36px;
+                            padding-left: 17px;
+                        }
+
+                        span:hover {
+                            background: rgba(0, 0, 0, 0.2);
+                        }
+                    }
+                }
+
+                .select_option:hover {
+                    box-shadow: 0 0 5px rgba(0, 0, 0, .15);
+                }
+            }
+
+            .course_title {
+                padding-bottom: 39px;
+
+                .sub_title {}
+
+                input {
+                    width: 249px;
+                    height: 36px;
+                    border: 1px solid #D9D9D9;
+                    background: #FAFAFA;
+                    padding-left: 17px;
+                    color: #333;
+                    position: relative;
+                    top: -10px;
+                }
+
+                input:focus {
+                    box-shadow: 0 0 5px rgba(0, 0, 0, .15);
+                }
+            }
+
+            .coures_gh_pic {
+                padding-bottom: 39px;
+
+                .img_box {
+                    position: relative;
+                    top: -10px;
+                    width: 231px;
+                    height: 155px;
+                    border: 1px dashed #E8E8E8;
+                    cursor: pointer;
+
+                    .init_pic.mask {
+                        background: url("../../images/teacher/uploadpic.png");
+                        cursor: pointer;
+
+                        span:first-child {
+                            display: none;
+                        }
+                    }
+
+                    .mask {
+                        cursor: pointer;
+                        position: absolute;
+                        line-height: 155px;
+                        text-align: center;
+                        color: rgba(255, 255, 255, 0.5);
+                        z-index: 9;
+                        left: 0;
+                        top: 0;
+                        width: 100%;
+                        height: 100%;
+                        background: rgba(0, 0, 0, 0.7);
+
+                        .jy_fbl {
+                            position: absolute;
+                            right: -381px;
+                            left: 0;
+                            color: #999999;
+                            font-size: 12px;
+                        }
+
+                        input[type="file"] {
+                            position: absolute;
+                            font-size: 100px;
+                            right: 0;
+                            top: 0;
+                            opacity: 0;
+                            filter: alpha(opacity=0);
+                            cursor: pointer;
+                            width: 231px;
+                            height: 155px;
+                        }
+                    }
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+            }
+
+            .course_summary {
+                padding-bottom: 39px;
+
+                textarea {
+                    position: relative;
+                    top: -13px;
+                    padding: 12px 16px 0;
+                    color: 12px;
+                    line-height: 1.5;
+                    width: 487px;
+                    height: 207px;
+                    background: #FAFAFA;
+                    border: 1px solid #E8E8E8;
+                }
+
+                textarea:focus {
+                    box-shadow: 0 0 5px rgba(0, 0, 0, .15);
+                }
+            }
+
+            .course_syllabus {
+                .add_btn {
+                    margin-right: 8px;
+                    border-radius: 5px;
+                    height: 36px;
+                    line-height: 36px;
+                    padding: 0 12px;
+                    cursor: pointer;
+                    border: 1px solid #C1C1C1;
+                }
+
+                .add_one_content1 {
+                    display: none;
+                }
+
+                .add_one_content {
+                    position: absolute;
+                    z-index: 10;
+                    left: 0;
+                    top: 47px;
+                    background: #fff;
+                    padding-top: 7px;
+                    padding-left: 15px;
+                    box-shadow: 0 0 6px rgba(34, 25, 25, 0.4);
+                    position: absolute;
+                    width: 368px;
+
+                    .close {
+                        position: absolute;
+                        right: -12px;
+                        top: -14px;
+                        cursor: pointer;
+                        width: 38px;
+                        height: 38px;
+                        background: url("../../images/teacher/log_close.png");
+                        background-size: contain;
+                    }
+
+                    .btn {
+                        background: #FAFAFA;
+                        color: #666;
+                        border: 1px solid #D9D9D9;
+                        margin-left: 16px;
+                        height: 35px;
+                        line-height: 35px;
+                        text-align: left;
+                        padding-left: 15px;
+                    }
+
+                    .course_time {
+                        margin-top: 12px;
+                        height: 35px;
+                        line-height: 35px;
+                        position: relative;
+
+                        .btn {
+                            width: 135px;
+                        }
+                    }
+
+                    .course_sr_title {
+                        .btn {
+                            width: 262px;
+                        }
+                    }
+
+                    .coures_house {
+                        .coures_house_container {
+                            position: relative;
+                        }
+
+                        .btn {
+                            width: 108px;
+                        }
+                    }
+
+                    .add_one_save {
+                        text-align: center;
+                        margin-top: 25px;
+                        padding-bottom: 25px;
+
+                        input {
+                            width: 156px;
+                            height: 44px;
+                            border-radius: 5px;
+                            line-height: 44px;
+                            border: 1px solid #03b78b;
+                            color: #03b78b;
+                            font-size: 16;
+                            font-weight: 400;
+                            cursor: pointer;
+                        }
+                    }
+
+                    .sq_suffix {
+                        label {
+                            position: relative;
+                            padding-left: 22px;
+                            cursor: pointer;
+                            line-height: 2.5;
+
+                            input {
+                                position: absolute;
+                                left: 0;
+                                top: 0;
+                                opacity: 0;
+                                filter: alpha(opacity=0);
+                                cursor: pointer;
+                                height: 15px;
+                                width: 15px;
+                            }
+
+                            input[type="radio"]:checked+i {
+                                background: url("../../images/teacher/11_02.jpg");
+                            }
+
+                            i {
+                                display: block;
+                                position: absolute;
+                                left: 0;
+                                top: 11px;
+                                width: 15px;
+                                height: 15px;
+                                background: url("../../images/teacher/11_03.png");
+                            }
+                        }
+                    }
+                }
+
+                .add_many_content {
+                    background: #fff;
+                    display: none;
+
+                    .add_course_count {
+                        width: 50px !important;
+                        text-align: center !important;
+                        padding-left: 0 !important;
+                    }
+                }
+            }
+
+            .sq_syllabus {
+                height: 360px;
+                width: 487px;
+                border: 1px solid #D9D9D9;
+                background: #fff;
+                margin-left: 86px;
+                margin-top: 10px;
+                overflow-y: auto;
+
+                .arrange_course {
+                    width: 100%;
+                    height: 100%;
+                    position: relative;
+                    background: #fff;
+
+                    i {
+                        position: absolute;
+                        width: 174px;
+                        height: 180px;
+                        left: 50%;
+                        top: 50%;
+                        transform: translate(-50%, -50%);
+                        background: url("../../images/teacher/please_arrange_the_course.png");
+                    }
+                }
+
+                .syllabus_list:nth-child(odd) {
+                    background: #fff;
+                }
+
+                .syllabus_list:nth-child(even) {
+                    background: #FAFAFA;
+                }
+
+                .syllabus_list {
+                    height: 45px;
+                    line-height: 45px;
+                    border-bottom: 1px solid #D9D9D9;
+
+                    .list_left {
+                        .sq_syllabus_no {
+                            font-size: 18px;
+                            color: #999999;
+                            padding: 0 15px;
+                        }
+
+                        .sq_syllabus_title {
+                            font-size: 14px;
+                            max-width: 187px;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            white-space: nowrap;
+                        }
+
+                        .syllabus_title {
+                            position: relative;
+                            top: 2px;
+                            color: #999;
+                            font-size: 12px;
+                            padding-left: 12px;
+                        }
+                    }
+
+                    .syllabus_right {
+                        height: 100%;
+                        padding-right: 17px;
+
+                        i {
+                            float: left;
+                            position: relative;
+                            top: 50%;
+                            margin-top: -7px;
+                            width: 15px;
+                            height: 14px;
+                            cursor: pointer;
+                        }
+
+                        .revise {
+                            background: url("../../images/teacher/revise-and-del-icon.png") 0 0 no-repeat;
+                            margin-right: 14px;
+                        }
+
+                        .del {
+                            background: url("../../images/teacher/revise-and-del-icon.png") -28px 0 no-repeat;
+                        }
+                    }
+                }
+            }
+        }
+
+        .save_sq_btn {
+            width: 180px;
+            height: 51px;
+            line-height: 51px;
+            text-align: center;
+            background: #02B78C;
+            color: #fff;
+            font-size: 17px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 58px;
+            margin-bottom: 64px;
+            margin-left: 83px;
+        }
+    }
+}
+
+
+.save_sq_mask {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    background: rgba(0, 0, 0, 0.5);
+
+    .save_sq_box {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 458px;
+        height: 310px;
+        border-radius: 20px;
+        background: #fff;
+        text-align: center;
+
+        i {
+            position: absolute;
+            left: 50%;
+            top: 67px;
+            transform: translate(-50%);
+            width: 80px;
+            height: 70px;
+            margin: 0 auto;
+            background: url("../../images/teacher/teacher_image_state.jpg") 0 -160px;
+        }
+
+        span {
+            display: inline-block;
+            padding-top: 153px;
+        }
+
+        a {
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%);
+            bottom: 59px;
+            width: 154px;
+            height: 43px;
+            border: 1px solid #43c19b;
+            color: #43c19b;
+            line-height: 43px;
+            border-radius: 3px;
+            text-align: center;
+        }
+    }
+}
+
+
+//申请录播开始
+.sr-upload-file-box {
+    display: none;
+    position: fixed;
+    z-index: 99;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: rgba(0, 0, 0, 0.5);
+
+    .upload-wrp {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 371px;
+        padding: 46px 35px 35px;
+        background: #fff;
+
+        .close {
+            cursor: pointer;
+            position: absolute;
+            right: -14px;
+            top: -15px;
+            width: 48px;
+            height: 48px;
+            background: url("../../images/teacher/log_close.png");
+        }
+
+        .file-menu {
+            height: 32px;
+
+            .file-name {
+                display: inline-block;
+                max-width: 146px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+
+            .file-menu-left span {
+                color: #99a2aa;
+                font-size: 12px;
+                line-height: 1;
+            }
+
+            .icon {
+                width: 24px;
+                height: 32px;
+                float: left;
+                background: url("../../images/teacher/upload_file_bg_0505.png");
+                margin-right: 10px;
+            }
+
+            .progress-bar {
+                position: relative;
+                margin-top: 4px;
+                height: 6px;
+                width: 236px;
+                border-radius: 5px;
+                background: #ccd0d7;
+
+                .progress {
+                    position: absolute;
+                    width: 0%;
+                    height: 100%;
+                    border-radius: 5px;
+                    background: #02b78c;
+                }
+            }
+        }
+
+        .title {
+            padding: 45px 0;
+
+            span {}
+
+            input {
+                border: 1px solid #e6e6e6;
+                padding: 5px 5px 5px 10px;
+                margin-left: 5px;
+                width: 200px;
+            }
+        }
+
+        .upload-bottom {
+            padding: 18px;
+
+            .upload-btn {
+                position: relative;
+                float: left;
+                margin-left: 30px;
+
+                input {
+                    position: absolute;
+                    font-size: 0;
+                    right: 0;
+                    top: -9px;
+                    opacity: 0;
+                    filter: alpha(opacity=0);
+                    cursor: pointer;
+                    height: 38px;
+                    z-index: 99;
+                    width: 78px;
+                }
+
+                button {
+                    width: 78px;
+                    line-height: 28px;
+                    border: 1px solid #C1C1C1;
+                    height: 28px;
+                    text-align: center;
+                    position: relative;
+                    border-radius: 5px;
+                    top: -5px;
+                    cursor: pointer;
+                }
+            }
+
+            .start-upload {
+                float: left;
+                margin-left: 50px;
+                width: 78px;
+                line-height: 28px;
+                border: 1px solid #C1C1C1;
+                height: 28px;
+                text-align: center;
+                position: relative;
+                border-radius: 5px;
+                top: -5px;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+#sqbroadcast-file-upload {
+    .upload_file_bg {
+        background: rgba(0, 0, 0, 0)
+    }
+    .file_icon {
+        background: url(../../images/teacher/video_bg.png) no-repeat;
+    }
+    .file_list {
+        border: 1px solid #bccff9;
+    }
+    .file_file_text {
+
+        top: 14px;
+        font-size: 17px;
+        color: #bccff9;
+    }
+}
+
+// 我的直播开始
+.banner_bg.mylive {
+    color: #fff;
+    height: 175px;
+    background-image: url("../../images/teacher/mylive_bg.jpg");
+
+    h1 {
+        float: left;
+        font-size: 24px;
+        color: #fff;
+    }
+
+    span {
+        float: left;
+        margin-left: 16px;
+        height: 31px;
+        line-height: 31px;
+        background: #02B78C;
+        font-size: 16px;
+        border-radius: 15px;
+        width: 96px;
+        text-align: center;
+    }
+}
+
+.my_live_wrapper {
+    background: #f2f2f2;
+
+    .curriculum_name_list a {
+        border: 1px solid #02B78C;
+        color: #02B78C;
+        cursor: pointer;
+    }
+
+    .mylive {
+        position: relative;
+        top: -29px;
+        background: #fff; // overflow: hidden;
+        padding-bottom: 77px; // border: 1px solid transparent;
+        .no_live_stutas {
+            width: 168px;
+            height: 176px;
+            margin: 170px auto 380px;
+            padding-bottom: 200px;
+            background: url("../../images/teacher/teacher_image_noClass.jpg") no-repeat;
+        }
+
+        .lb_list_item .lb_info .lb_sq_status {
+            width: auto;
+            position: relative;
+            top: 35px;
+            right: 50px;
+
+            .next_zb_text1 {
+                margin-right: 2px;
+            }
+
+            .Be_through_with {
+                position: absolute;
+                width: 95px;
+                height: 95px;
+                right: -58px;
+                top: -76px;
+                background: url("../../images/teacher/Be_through_with.png");
+            }
+        } // 推流地址
+        .lb_list_item .lb_info .m-l-address {
+            .address-text {
+                position: relative;
+                top: 0;
+                left: 16px;
+                cursor: pointer;
+                font-size: 14px;
+                padding-right: 20px;
+                .address-cr {
+                    left: -111px;
+                    top: 27px;
+                     visibility: hidden;
+                    opacity: 0;
+                        transform: translate3d(0, 50px, 0);
+                }
+                &:hover {
+                    .address-cr {
+                        visibility: visible; // display: block;
+                        transform: translate3d(0, 0, 0);
+                        opacity: 1;
+                    }
+                }
+            }
+            .address-text:before {
+                position: absolute;
+                content: "";
+                width: 9px;
+                height: 5px;
+                left: 65px;
+                top: 19px;
+                background: url("../../images/teacher/s_q_sjx.png");
+            }
+        }
+    }
+}
+
+// 我的直播结束
+// 课程名单开始
+.course_list_wrapper {
+    background: #f2f2f2;
+    padding-top: 29px;
+    padding-bottom: 53px;
+
+    .course_list {
+        background: #fff;
+        padding: 31px 0 0 22px;
+
+        .coures_list_title {
+            border-bottom: 1px dashed #E8E8E8;
+            margin-bottom: 22px;
+
+            h1 {
+                font-size: 24px;
+                line-height: 1;
+            }
+
+            h3 {
+                font-size: 18px;
+                color: #999;
+                line-height: 1;
+                margin-top: 14px;
+                padding-bottom: 30px;
+            }
+        }
+
+        .name_list {
+            height: 665px;
+            position: relative;
+
+            .no_list {
+                position: absolute;
+                width: 174px;
+                height: 180px;
+                left: 50%;
+                top: 85px;
+                margin-left: -87px;
+                background: url("../../images/teacher/no_name_list.png");
+            }
+
+            .item:hover {
+                background: #f2f2f2;
+            }
+
+
+
+            .tag {
+                height: 36px;
+                line-height: 36px;
+                width: 100%;
+                background: #FAFAFA;
+                border: 1px solid #E8E8E8;
+                padding-left: 19px;
+
+                .student_name {
+                    width: 56px;
+                }
+
+                .student_school_name {
+                    width: 406px;
+                    text-align: center;
+                }
+
+                .student_progress {
+                    width: 56px;
+                    text-align: center;
+                }
+
+                .student_glance {
+                    width: 413px;
+                    text-align: center;
+                }
+
+                .student_sign_date {
+                    width: 200px;
+                    text-align: center;
+                }
+
+                span {
+                    float: left;
+                }
+            }
+
+            .item {
+                height: 51px;
+                line-height: 51px;
+                background: #fff;
+                border: none;
+                border-bottom: 1px solid #E8E8E8;
+            }
+        }
+    }
+}
+
+
+//完善课程开始
+.complete_course {
+    .content {
+        padding-top: 39px;
+        padding-left: 25px;
+        padding-bottom: 41px;
+        background: #fff;
+
+        .save_datum {
+            width: 180px;
+            height: 51px;
+            line-height: 51px;
+            text-align: center;
+            font-size: 17px;
+            color: #fff;
+            background: #02B78C;
+            border-radius: 5px;
+            margin-left: 95px;
+            cursor: pointer;
+        }
+    }
+    .upload-wrp {
+        padding: 16px 35px 35px;
+    }
+    .sr-upload-file-box .upload-wrp .close-file {
+        cursor: pointer;
+        position: absolute;
+        right: -14px;
+        top: -15px;
+        width: 48px;
+        height: 48px;
+        background: url(../../images/teacher/log_close.png);
+    }
+}
+
+//我的录播开始
+.s_q_record {
+    .s_q_live {
+        .s_q_title {
+            color: #02B78C;
+        }
+
+        .add_record_count {
+            .sub_title {
+                position: relative;
+                top: 6px;
+            }
+
+            input {
+                background: #FAFAFA;
+                border: 1px solid #D9D9D9;
+                height: 37px;
+                width: 37px;
+                text-align: center;
+                line-height: 37px;
+                margin-right: 10px;
+            }
+        }
+    }
+}
+
+// 完善直播
+.complete_course {
+    .s_q_title {
+        color: #3FACE2;
+    }
+    .course_summary {
+        padding-bottom: 39px;
+        .sub_title {
+            padding-right: 30px;
+            font-size: 16px;
+        }
+    }
+
+    .add_record_count {
+        .sub_title {
+            position: relative;
+            top: 6px;
+        }
+
+        input {
+            background: #FAFAFA;
+            border: 1px solid #D9D9D9;
+            height: 37px;
+            width: 37px;
+            text-align: center;
+            line-height: 37px;
+            margin-right: 10px;
+        }
+    }
+}
+
+// 完善录播
+.course-data-file-layer {
+    .upload-wrp {
+        padding: 10px 35px 35px;
+    }
+}
+
+.t_login {
+    width: 100%;
+    height: 956px;
+    background: url("../../images/teacher/log_bg.jpg") center center;
+
+    .login_wrapper {
+        position: relative;
+        height: 100%;
+        overflow: hidden;
+
+        .circle {
+            position: absolute;
+        }
+
+        .circle1 {
+            animation: "wobble" 5s infinite;
+            width: 259px;
+            height: 259px;
+            left: 0;
+            top: -129px;
+            background: url("../../images/teacher/log_circle4.png");
+        }
+
+        .circle2 {
+            width: 259px;
+            height: 259px;
+            right: 0;
+            bottom: -129px;
+            background: url("../../images/teacher/log_circle4.png");
+        }
+
+        .small {
+            width: 65px;
+            height: 65px;
+            left: 20px;
+            top: 500px;
+            background: url("../../images/teacher/log_circle3.png");
+        }
+
+        .smallPic {
+            width: 262px;
+            height: 262px;
+            background: url("../../images/teacher/log_circle1.png") no-repeat;
+        }
+
+        .circle3 {
+            left: 350px;
+            top: 218px;
+            z-index: 1;
+            animation-name: 'boat3';
+            /*动画属性名，也就是我们前面keyframes定义的动画名*/
+            animation-duration: 5s;
+            /*动画持续时间*/
+            animation-timing-function: linear;
+            /*动画频率，和transition-timing-function是一样的*/
+            animation-delay: 0s;
+            /*动画延迟时间*/
+            animation-iteration-count: infinite;
+            /*定义循环资料，infinite为无限次*/
+            animation-direction: alternate; //动画应该轮流反向播放。
+        }
+
+        .circle7 {
+            animation-name: 'boat';
+            /*动画属性名，也就是我们前面keyframes定义的动画名*/
+            animation-duration: 4s;
+            /*动画持续时间*/
+            animation-timing-function: linear;
+            /*动画频率，和transition-timing-function是一样的*/
+            animation-delay: 0s;
+            /*动画延迟时间*/
+            animation-iteration-count: infinite;
+            /*定义循环资料，infinite为无限次*/
+            animation-direction: alternate; //动画应该轮流反向播放。
+        }
+
+        .circle4 {
+            left: 1135px;
+            top: 652px;
+            z-index: 1;
+            animation-name: 'boat3';
+            /*动画属性名，也就是我们前面keyframes定义的动画名*/
+            animation-duration: 5s;
+            /*动画持续时间*/
+            animation-timing-function: linear;
+            /*动画频率，和transition-timing-function是一样的*/
+            animation-delay: 0s;
+            /*动画延迟时间*/
+            animation-iteration-count: infinite;
+            /*定义循环资料，infinite为无限次*/
+            animation-direction: alternate; //动画应该轮流反向播放。
+        }
+
+        .circle5 {
+            right: 23px;
+            top: 101px;
+            animation-name: 'boat';
+            /*动画属性名，也就是我们前面keyframes定义的动画名*/
+            animation-duration: 5s;
+            /*动画持续时间*/
+            animation-timing-function: linear;
+            /*动画频率，和transition-timing-function是一样的*/
+            animation-delay: 0s;
+            /*动画延迟时间*/
+            animation-iteration-count: infinite;
+            /*定义循环资料，infinite为无限次*/
+            animation-direction: alternate; //动画应该轮流反向播放。
+        }
+        @keyframes boat {
+            0% {
+                margin-top: -60px;
+            }
+
+            50% {
+                margin-top: 0;
+            }
+
+            100% {
+                margin-top: 60px;
+            }
+        }
+        @keyframes boat {
+            0% {
+                margin-top: -20px;
+            }
+
+            50% {
+                margin-top: 0;
+            }
+
+            100% {
+                margin-top: 20px;
+            }
+        }
+        @keyframes boat3 {
+            0% {
+                margin-top: 20px;
+            }
+
+            50% {
+                margin-top: 0;
+            }
+
+            100% {
+                margin-top: -20px;
+            }
+        }
+
+        .circle6 {
+            left: 153px;
+            z-index: 1;
+            top: 559px; // animation: boat 3s infinite;
+            // animation-direction: alternate;
+            background: url("../../images/teacher/log_circle2.png") no-repeat;
+            animation-name: 'boat';
+            /*动画属性名，也就是我们前面keyframes定义的动画名*/
+            animation-duration: 4s;
+            /*动画持续时间*/
+            animation-timing-function: linear;
+            /*动画频率，和transition-timing-function是一样的*/
+            animation-delay: 0s;
+            /*动画延迟时间*/
+            animation-iteration-count: infinite;
+            /*定义循环资料，infinite为无限次*/
+            animation-direction: alternate; //动画应该轮流反向播放。
+        }
+
+        .joinus {
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 617px;
+            height: 617px;
+            background: url("../../images/teacher/log_circle6.png");
+            text-align: center; // animation-name: 'boat';
+            /*动画属性名，也就是我们前面keyframes定义的动画名*/
+            // animation-duration: 6s;
+            /*动画持续时间*/
+            // animation-timing-function: linear;
+            /*动画频率，和transition-timing-function是一样的*/
+            // animation-delay: 0s;
+            /*动画延迟时间*/
+            // animation-iteration-count: infinite;
+            /*定义循环资料，infinite为无限次*/
+            // animation-direction: alternate; 
+            //动画应该轮流反向播放。
+            h1 {
+                font-size: 50px;
+                color: #fff;
+                line-height: 1;
+                letter-spacing: 5px;
+                font-weight: 700;
+                margin-top: 205px;
+            }
+
+            .sub_text1 {
+                margin-left: 42px;
+            }
+
+            h3:last-child {
+                margin-left: 24px;
+            }
+
+            h3 {
+                margin-top: 23px; // text-indent : 15px;
+                letter-spacing: 5px;
+                float: left;
+                line-height: 1;
+                font-size: 25px;
+                color: #fff;
+            }
+
+            .joinusBtn {
+                position: absolute;
+                left: 50%;
+                transform: translate(-50%);
+                cursor: pointer;
+                bottom: 182px;
+                width: 340px;
+                height: 69px;
+                background: url("../../images/teacher/log_join.png");
+            }
+
+            .already_joinus {
+                position: absolute;
+                bottom: 137;
+                left: 50%;
+                transform: translate(-50%);
+                font-size: 16px;
+                border-bottom: 1px solid #03b086;
+                color: #03b086;
+            }
+        }
+    }
+
+    .login {
+        display: none;
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 99;
+        background: rgba(0, 0, 0, 0.3);
+
+        .loginbox {
+            width: 388px;
+            height: 369px;
+            background: #fff;
+            z-index: 999;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+
+            .close {
+                position: absolute;
+                cursor: pointer;
+                width: 48px;
+                height: 48px;
+                right: -20px;
+                top: -19px;
+                background: url("../../images/teacher/log_close.png");
+            }
+
+            .login_text {
+                height: 97px;
+                line-height: 97px;
+                text-align: center;
+                font-size: 22px;
+            }
+
+            .login_btn {
+                width: 346px;
+                height: 45px;
+                line-height: 45px;
+                text-align: center;
+                font-size: 18px;
+                color: #fff;
+                background: #02B78C;
+                margin-top: 30;
+                cursor: pointer;
+            }
+
+            .account_box {
+                text-align: center;
+                position: relative;
+
+                a {
+                    text-align: right;
+                    color: #999999;
+                    font-size: 12px;
+                    margin-top: 11px;
+                    margin-right: 20px;
+                }
+
+                i {
+                    position: absolute;
+                    left: 36px;
+                    top: 13px;
+                    width: 18px;
+                    height: 20px;
+                }
+
+                i:first-child {
+                    top: 80px;
+                }
+
+                .pass_icon1 {
+                    background: url("../../images/teacher/log_pw.png");
+                }
+
+                .pass_icon2 {
+                    background: url("../../images/teacher/log_user.png");
+                }
+
+                input {
+                    width: 346px;
+                    height: 45px;
+                    line-height: 45px;
+                    padding-left: 55px;
+                    border: 1px solid #D9D9D9;
+                    background: #FAFAFA;
+                }
+                ;
+            }
+        }
+    }
+}
+
+// 注册页面开始
+.register_header {
+    height: 75px;
+    line-height: 61px;
+    border-bottom: 1px solid #e8e8e8;
+    padding: 14px 0;
+
+    .logo {
+        position: relative;
+        top: 50%;
+        margin-top: 8px;
+        width: 166px;
+        height: 32px;
+        background: url("../../images/teacher/logo.jpg");
+        background-size: cover;
+    }
+
+    .line {
+        width: 1px;
+        height: 100%;
+        background: #c1c1c1;
+        margin-left: 14px;
+        margin-right: 14px;
+    }
+
+    .header_text {
+        position: relative;
+        top: -4px;
+        font-size: 20px;
+        color: #c1c1c1;
+    }
+}
+
+
+.bar {
+    margin: 39px 39px 39px 92px;
+    height: 40px;
+    width: 300px;
+}
+
+.common {
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 3px;
+}
+
+.slide-to-unlock-bg {
+    text-align: center;
+    border: 1px solid #ccc;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 3px;
+}
+
+.slide-to-unlock-bg span {
+    position: relative;
+    z-index: 5;
+    color: #333;
+}
+
+.slide-to-unlock-progress {
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 3px;
+    left: 1px;
+    top: 1px;
+}
+
+.slide-to-unlock-handle {
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    z-index: 6;
+    cursor: move;
+}
+
+.slide-to-unlock-bg span {
+    font-size: 13px !important;
+    color: rgb(56, 42, 42) !important;
+}

@@ -1,0 +1,153 @@
+<head>
+    <meta charset="utf-8">
+    <title>
+        录播
+    </title>
+    <meta name="keywords" content="{$seoData.keywords}">
+    <meta name="description" content="{$seoData.description}">
+    <link href="__CSS__/student/student.css" rel="stylesheet">
+    <script src="__JS__/lib/jquery-3.1.1.min.js"></script>
+    <script src="__JS__/common.js"></script>
+    <script src="__JS__/lib/require.js"></script>
+    <script src="__JS__/lib/main.js"></script>
+    </link>
+    </meta>
+</head>
+<body>
+<include file="Public:header"/>
+<div class="s-sn-recordlist" class_url="Vod">
+    <div class="zr_layout">
+        <div class="record-classify">
+            <div class="classify-text fl">
+                全部分类 >
+            </div>
+            <div class="select-grade fl">
+                <button>
+                    <if condition="$fid_label neq ''">{$fid_label}
+                        <else/>
+                        请选择
+                    </if>
+                </button>
+                <i class="develop">
+                </i>
+            </div>
+            <div class="select-grade-panel">
+                <button val="0">
+                    全部
+                </button>
+                <volist name="cat" id="cat">
+                    <button val="{$cat.id}">
+                        {$cat.title}
+                    </button>
+                </volist>
+            </div>
+        </div>
+        <div class="record-title">
+            <div class="classify l-classify">
+                <button class="btn <if condition=" $search_content_array[
+                'cat_id'] ELT 0">active</if>">
+                全部({$catTotal})
+                </button>
+                <present name="catList">
+                    <volist name="catList" id="catList">
+                        <button class="btn <if condition=" $search_content_array[
+                        'cat_id'] eq $catList['id']">active</if>" cat_id="{$catList.id}">
+                        {$catList.title}({$catList.total})
+                        </button>
+                    </volist>
+                </present>
+            </div>
+        </div>
+        <div class="record-banner">
+            <a href="{$ad['url']}">
+                <img src="{$ad['image']}" alt="">
+            </a>
+        </div>
+        <div class="record-content">
+            <div class="record-statistics l-record-statistics">
+                <div class="statistics-left">
+                     <div class="item <if condition="($orderby eq 1) or ($orderby eq 2)">active</if>">
+                         <button class="btn">
+                             收藏数
+                         </button>
+                     <span class="develop <eq name="orderby" value="2">develop-up</eq>">
+                     </span>
+                </div>
+                <div class="item <if condition="($orderby eq 3) or ($orderby eq 4)">active</if>">
+                    <button class="btn">
+                        报名数
+                    </button>
+                <span class="develop <eq name="orderby" value="4">develop-up</eq>">
+                </span>
+            </div>
+            <div class="item <if condition="($orderby eq 5) or ($orderby eq 6)">active</if>" style="width: 75px;">
+            <button class="btn">
+                申请时间
+            </button>
+            <span class="develop <eq name="orderby" value="6">develop-up</eq>">
+            </span>
+        </div>
+
+                </div>
+                <label class="statistics-right">
+                    <input class="l-select-school-teacher" type="checkbox" name="teacher" value="1" <eq name="search_content_array.school" value="1"> checked</eq>>
+                    <i></i>
+                    本校老师
+                </label>
+        <input class="l-select-grade-input" type="hidden" name="fid" id="fid" value="{$search_content_array.fid}">
+        <input  class="l-cat-id" type="hidden" name="cat_id" id="cat_id" value="{$search_content_array.cat_id}">
+        <input class="l-school" type="hidden" name="school" id="school" value="{$search_content_array.school}">
+        <input class="l-orderby" type="hidden" name="orderby" id="orderby" value="{$search_content_array.orderby}">
+            </div>
+            <div class="course-content">
+                <ul class="clearfix">
+                    <volist name="list" id="list">
+                        <li class="list-coures" vod_id="{$list.id}">
+                            <a class="course-item-link" href="{:U('/Vod/videodetail',array('tnid' => $list['id']))}">
+                                <div class="mask">
+                                    <p class="course-describe">
+                                        {$list.zc_summary}
+                                    </p>
+                                    <img alt="" class="course-picture" src="{$list.zc_image}">
+                                    </img>
+                                </div>
+                                <h5>
+                                    {$list.zc_title}
+                                </h5>
+                                <span class="course-count">
+                                    {$list.count}课时
+                                </span>
+                            </a>
+                            <div class="item-first-row clearfix">
+                                <span>
+                                    {$list.zn_fav_num}人收藏
+                                </span>
+                                <span style="margin-left:13px;">
+                                    {$list.zn_enroll_num}人报名
+                                </span>
+                            </div>
+                            <div class="item-second-row clearfix">
+                                <span>
+                                    {$list.zc_nickname}
+                                </span>
+                                <span style="margin-left:16px;">
+                                    {$list.zc_school}
+                                </span>
+                            </div>
+                        </li>
+                    </volist>
+                </ul>
+                <div class="list_page">
+                    {$page}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<include file="Public:footer"/>
+</body>
+<script>
+    require(["live"], function (live) {
+        live()
+    })
+</script>

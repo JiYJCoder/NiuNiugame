@@ -1,0 +1,38 @@
+{/* 公共搜索 */}    
+    <div class="clearfix">
+      <div class="panel panel-info">
+        <div class="panel-heading"><i class="fa fa-paw"></i> 筛选</div>
+        <div class="panel-body">
+          <div class="input-group">
+            <input type="text" class="form-control" id="fkeyword" value="{$search_content.fkeyword}" placeholder="{$keywordDefault}" onclick="lqKeywordOnclick(this)" onblur="lqKeywordOnblur(this)"/>
+            <div class="input-group-btn">
+              <button class="btn btn-default" id="commonSearch"><i class="fa fa-search"></i> 搜索</button>
+              <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="true"><span class="caret"></span></button>
+              <ul class="dropdown-menu dropdown-menu-right" role="menu">
+                <li><a href="javascript:;" onclick="$('#fkeyword').attr('placeholder','精准搜索：请输入关键字');$('#keymode').val(1);">精准搜索</a></li>
+                <li><a href="javascript:;" onclick="$('#fkeyword').attr('placeholder','模糊搜索：请输入关键字');$('#keymode').val(0);">模糊搜索</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+	<script language="javascript">   
+    $(function(){
+        //通用搜索
+        $("#commonSearch").click(function(){	
+            require(['layer'], function(){
+                var fkeyword=$("#fkeyword").val();
+                if(fkeyword!='{$keywordDefault}'){
+                    var searchurl=$("#thinkphpurl").val()+'index/s/';
+                    var urlpara="fkeyword/"+encodeURIComponent(fkeyword)+"/";
+                    urlpara+="keymode/"+encodeURIComponent($("#keymode").val())+"/";
+					urlpara+="pagesize/"+encodeURIComponent($("#pagesize").val())+"/";
+                    location.href=searchurl+base64encode(urlpara);
+                }else{
+                    layer.msg("请输入关键字！",{icon:5,time:2000});
+                }
+            });			
+        });
+    });
+    </script>      
+    </div>

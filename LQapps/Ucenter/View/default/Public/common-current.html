@@ -1,0 +1,24 @@
+{/* 面包屑导航 */}    
+  <div class="row">
+	<div class="col-sm-6 common-search-btn">
+    	<if condition="ACTION_NAME eq 'index'">
+            <label class="btn label-primary" title="{:L('PAGE_LIST')}"><i class="fa fa-list"></i> {:L('PAGE_LIST')}</label>
+            <if condition="$os_lock.edit eq '1'">
+            <a class="btn btn-primary" href="{:U('add')}" title="{:L('PAGE_ADD')}"><i class="fa fa-plus"></i> {:L('PAGE_ADD')}</a>
+            </if>
+        <elseif condition="ACTION_NAME eq 'add'" />
+        	<a class="btn btn-primary" href="{:U('index')}" title="{:L('PAGE_LIST')}"><i class="fa fa-list"></i> {:L('PAGE_LIST')}</a>
+            <label class="btn label-primary" title="{:L('PAGE_ADD')}"><i class="fa fa-plus"></i> {:L('PAGE_ADD')}</label>
+        <elseif condition="ACTION_NAME eq 'edit'" />
+			<a class="btn btn-primary" href="{$edit_index_url}" title="{:L('PAGE_LIST')}"><i class="fa fa-list"></i> {:L('PAGE_LIST')}</a>
+            <label class="btn label-primary" title="{:L('PAGE_EDIT')}"><i class="fa fa-edit"></i> {:L('PAGE_EDIT')}</label>   
+        <elseif condition="ACTION_NAME eq 'sort'" />
+        	<a class="btn btn-primary" href="{:U('index')}" title="{:L('PAGE_LIST')}"><i class="fa fa-list"></i> {:L('PAGE_LIST')}</a>
+            <label class="btn label-primary" title="{:L('PAGE_SORT')}"><i class="fa fa-sort-numeric-asc"></i> {:L('PAGE_SORT')}</label>   
+        <else />
+        	<a class="btn btn-primary" href="" title="刷新本页"> <i class="fa fa-refresh"></i> 刷新本页 </a>       
+        </if> 
+	</div>
+	<div class="col-sm-6" style="float:right;text-align:right;padding:0;margin:0px;">{$sys_current}</div>
+  </div>
+  

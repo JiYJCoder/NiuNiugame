@@ -1,0 +1,106 @@
+<head>
+    <meta charset="UTF-8">
+    <title>直播搜索</title>
+    <meta name="keywords" content="{$seoData.keywords}">
+    <meta name="description" content="{$seoData.description}">
+    <link rel="stylesheet" href="__CSS__/student/student.css">
+    <link rel="stylesheet" href="__PLUGINS__/swiper/swiper.css">
+    <script src="__JS__/lib/jquery-3.1.1.min.js"></script>
+    <script src='__JS__/lib/require.js'></script>
+    <script src="__JS__/lib/main.js"></script>
+    <script src="__JS__/common.js"></script>
+</head>
+
+<body>
+    <include file="Public:header"/>
+    <!-- 这里需要引入头部 -->
+    <div class="search-index-pege">
+        <if condition="$count gt 0">
+        <div class="zr_layout">
+            <div class="s-search-info-bar">
+                <div class="search-text-record">
+                    搜索<i><if condition="$kw">
+                    “{$kw}”<else />全部
+                </if></i>共找到 <i>{$count}条</i> 有关记录
+                </div>
+                <form action="{:U('/Search/search_vod')}" type="get">
+                <div class="s-tabs-btn">
+                    <input type="hidden" value="{$kw}" name="kw">
+                    <button class="active">直播({$count})</button>
+                    <button>录播({$vod_num})</button>
+                </div>
+                </form>
+            </div>
+            <div class="s-search-content">
+                <!-- 搜索直播课程内容 -->
+                <div class="search-live-content">
+                    <div class="live-text">直播课程</div>
+                    <div class="live-list s-sr-live-list">
+                        <ul class="clearfix">
+                            <!--正在直播-->
+                            <!--<li>-->
+                                <!--<a href="">-->
+                                    <!--&lt;!&ndash; 如果正在直播的课程请添加liveing类名来显示状态 &ndash;&gt;-->
+                                    <!--<div class="picturebox liveing">-->
+                                        <!--<i class="live-icon"></i>-->
+                                        <!--<i class="paly-icon"></i>-->
+                                        <!--<img src="../res/images/teacher/10.jpg" alt="">-->
+                                        <!--<div class="time">-->
+                                            <!--<span class="date">正在直播</span>-->
+                                            <!--<span class="clock">25人观看</span>-->
+                                        <!--</div>-->
+                                    <!--</div>-->
+                                    <!--<div class="course-info">-->
+                                        <!--<h2>【小学.数学】勾股定理的快捷算法 及练习题</h2>-->
+                                        <!--<p>雷州市第一中学 刘建国老师</p>-->
+                                        <!--<div class="s-statistics">-->
+                                            <!--<span>500人收藏</span>-->
+                                            <!--<span>35人报名</span>-->
+                                        <!--</div>-->
+                                    <!--</div>-->
+                                <!--</a>-->
+                            <!--</li>-->
+                            <foreach name="live_search_info" item="value">
+                            <li>
+                                <a href="{:U('/Live/livedetail',array('tnid' => $value['id']))}">
+                                    <div class="picturebox">
+                                        <img src="{$value['zc_image']}" alt="">
+                                        <div class="time">
+                                            <span class="date">{$value['zc_date']}</span>
+                                            <span class="clock">{$value['zc_start_time']} - {$value['zc_end_time']}</span>
+                                        </div>
+                                    </div>
+                                    <div class="course-info">
+                                        <h2>【{$value['zn_cat_name']}】{$value['zc_title']}</h2>
+                                        <p>{$value['zc_school']} {$value['zc_teacher_name']}老师</p>
+                                        <div class="s-statistics">
+                                            <span>{$value['zn_fav_num']}人收藏</span>
+                                            <span>{$value['zn_enroll_num']}人报名</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            </foreach>
+                        </ul>
+                    </div>
+                    <div class="list_page"  style="right:185px;bottom:-360px">
+                        {$page}
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        <!-- 没有搜索到东西页面 -->
+        <else/>
+        <div class="no-found-search">
+            <div class="no-found-content">
+                <img src="../res/images/teacher/no-findthing-8237.png" alt="">
+                <div class="text">抱歉，未搜到有关<i>“{$kw}”</i>的记录</div>
+            </div>
+        </div>
+        </if>
+
+    </div>
+    <include file="Public:foot"/>
+</body>

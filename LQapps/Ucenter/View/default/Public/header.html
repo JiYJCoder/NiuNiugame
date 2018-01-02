@@ -1,0 +1,104 @@
+<include file="Public:header-base" />{/* 公共头部 */}
+ <div class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <ul class="nav navbar-nav" id="top-nav">
+      <volist name="sys_menu.top" id="top_menu_data" key="top_menu_key">
+        <li {$top_menu_data.css}><a href="{$top_menu_data.url}"><i class="fa fa-cog"></i>{$top_menu_data.title}</a></li>
+      </volist>
+    </ul>
+    
+    <ul class="nav navbar-nav navbar-right">
+      <li class="dropdown topbar-notice"> <a type="button" data-toggle="dropdown"> <i class="fa fa-qrcode"></i> </a>
+        <div class="dropdown-menu" aria-labelledby="dLabel">
+          <div class="topbar-notice-panel">
+            <div class="topbar-notice-arrow"></div>
+            <div class="topbar-notice-head"> <span>平台二维码</span></div>
+            <div class="topbar-notice-body" style="text-align:center;">
+              <img src="__RES__/images/system-qrcode.jpg" width="300" />
+            </div>
+          </div>
+        </div>
+      </li>    
+      <li class="dropdown topbar-notice"> <a type="button" data-toggle="dropdown"> <i class="fa fa-bell"></i> <span class="badge" id="notice-total">0</span> </a>
+        <div class="dropdown-menu" aria-labelledby="dLabel">
+          <div class="topbar-notice-panel">
+            <div class="topbar-notice-arrow"></div>
+            <div class="topbar-notice-head"> <span>系统公告</span> <a href="javascript:;" class="pull-right">更多公告>></a> </div>
+            <div class="topbar-notice-body">
+              <ul id="notice-container">
+              </ul>
+            </div>
+          </div>
+        </div>
+      </li>
+      
+      <li class="dropdown"> <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" style="display:block;max-width:205px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;"><i class="fa fa-user"></i>{$login_member_info.zc_account}<b class="caret"></b></a>
+        <ul class="dropdown-menu">
+          <li><a href="/do?g=ucenter&m=member&a=edit"><i class="fa fa-weixin fa-fw"></i> 修改会员信息</a></li>
+          <li class="divider"></li>
+          <li><a href="javascript:;" class="getUrl" lqhref="{:U('login/login_out')}" title="退出设计师系统"><i class="fa fa-sign-out fa-fw"></i> 退出系统</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="container-fluid"  style="padding-top:55px;">
+  <div class="row">
+    <div class="col-xs-12 col-sm-3 col-lg-2 big-menu" id="left-menu">
+      <div id="search-menu">
+        <input class="form-control input-lg" style="border-radius:0; font-size:14px; height:43px;" type="text" placeholder="输入菜单名称可快速查找">
+      </div>
+       
+      
+<if condition="$sys_menu.current_controller eq 'index'">
+
+      <volist name="sys_menu.left" id="left_menu_data" key="left_menu_key">
+      <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">{$left_menu_data.title}</h4>
+              <a class="panel-collapse collapsed" data-toggle="collapse" href="#frame-{$left_menu_key}"> <i class="fa fa-chevron-circle-down"></i> </a> </div>
+            <ul class="list-group collapse in"  id="frame-{$left_menu_key}">
+              <volist name="left_menu_data.list" id="data_list" key="data_key">
+     		  <li class="list-group-item" onclick="window.location.href='{$data_list.url}';" style="cursor:pointer; overflow:hidden;" kw="{$data_list.title}"> 
+              <a class="pull-right" href="{$data_list.url}"><i class="fa fa-plus"></i></a> {$data_list.title}
+              </li>
+              </volist>            
+            </ul>
+      </div>  
+      </volist>
+
+<else/>      
+      <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title">{$sys_menu.top_name}</h4>
+            <a class="panel-collapse collapsed" data-toggle="collapse" href="#"> <i class="fa fa-chevron-circle-down"></i> </a> 
+            </div>
+            <ul class="list-group collapse in">
+              <volist name="sys_menu.left" id="left_menu_data" key="left_menu_key">
+                <a class="{$left_menu_data.class}" href="{$left_menu_data.url}" kw="{$left_menu_data.title}" target="_self">{$left_menu_data.title}</a> 
+              </volist>            
+          </ul>
+      </div>      
+</if> 
+
+          
+      <script type="text/javascript">
+		require(['bootstrap'], function(){
+			$('#search-menu input').keyup(function() {
+				var a = $(this).val();
+				$('.big-menu .list-group-item, .big-menu .panel-heading').hide();
+				$('.big-menu .list-group-item').each(function() {
+				$(this).css('border-left', '0');
+				if(a.length > 0 && $(this).attr('kw').indexOf(a) >= 0) {
+					$(this).parents(".panel").find('.panel-heading').show();
+					$(this).show().css('border-left', '3px #428bca double');
+				}
+				});
+				if(a.length == 0) {
+					$('.big-menu .list-group-item, .big-menu .panel-heading').show();
+				}
+			});
+		});
+      </script> 
+    </div>
