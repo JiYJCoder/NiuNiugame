@@ -1,0 +1,207 @@
+<div class="zr_header zr_layout">
+    <div class="z_header_l">
+        <div class="header-logo">
+            <a href="{:U('/')}"></a>
+        </div>
+    </div>
+    <div class="z_header_r">
+        <div class="header_nav fl">
+            <ul class="nav_bar">
+                <li class="hover-nav">
+                    <a class="nav-link" href="{:U('/Vod')}">全部课程</a>
+                    <div class="mask"></div>
+                    <div class="lesson-wrapper">
+                        <ul class="clearfix">
+                            <foreach name="lesson_info" item="value">
+                                <li>
+                                    <h3>{$value['zc_caption']}</h3>
+                                    <foreach name="value['small_lesson']" item="val">
+                                        <a href="javascript:gotoUrl({$val['id']},{$value.id})">{$val['zc_caption']}</a>
+                                    </foreach>
+                                </li>
+                            </foreach>
+                        </ul>
+                    </div>
+                </li>
+                <li class="hover-nav nav-live">
+                    <a class="nav-link" href="{:U('/Live')}">正在直播</a>
+                    <div class="mask"></div>
+                    <div class="lesson-wrapper">
+                        <ul class="clearfix">
+                            <foreach name="lesson_info" item="value">
+                                <li>
+                                    <h3>{$value['zc_caption']}</h3>
+                                    <foreach name="value['small_lesson']" item="val">
+                                        <a href="javascript:goUrl({$val['id']},{$value.id})">{$val['zc_caption']}</a>
+                                    </foreach>
+                                </li>
+                            </foreach>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a class="nav-link" href="{:U('/Student')}">我的课程</a>
+                </li>
+                <li>
+                    <a class="nav-link" href="{:U('/Content/about')}">关于我们</a>
+                </li>
+                <li>
+                    <a class="nav-link" href="{:U('/Teacher/login')}">我是老师</a>
+                </li>
+            </ul>
+        </div>
+        <div class="header_search fl">
+            <form class="search_form" action="{:U('/Search/search_live')}" type="get">
+                <div class="h_select_wapper fl">
+                    <div class="v_select fl">
+                        <span class="h_course">直播</span>
+                        <i class="h_triangle"></i>
+                        <div class="select_s_type">
+                            <span class="search_live">直播</span>
+                            <span class="search_vod">录播</span>
+                            <span class="search_teacher">老师</span>
+                        </div>
+                    </div>
+                    <input class="header_select_input fl" placeholder="请输入" required="required" type="text" name="kw" id="kw">
+                </div>
+                <input class="select_input_icon fl" type="submit" value="搜索">
+            </form>
+        </div>
+        <if condition="$teacher_login gt 0">
+            <div class="fr nav_bar_r">
+                <a href="{:U('/Teacher')}" class="user-info">
+                <img class="user_picture" src="{$member_info_teacher['zc_headimg']}" alt="">
+                <span class="user-name">{$member_info_teacher.zc_nickname}</span>
+            </a>
+                <a class="signOut kbt-signOut" href="javascript:void(0)">退出</a>
+            </div>
+            <elseif condition="$student_login gt 0" />
+            <div class="fr nav_bar_r">
+                <a href="{:U('/Student')}" class="user-info">
+                    <img class="user_picture" src="{$member_info_student['zc_headimg']}" alt="">
+                    <span class="user-name">{$member_info_student.zc_nickname}</span>
+                </a>
+                <a class="signOut kbs-signOut" href="javascript:void(0)">退出</a>
+            </div>
+            <else/>
+            <a class="i_teacher h-n-login" href="javascript:void(0)">
+            <span>您好，请登陆</span>
+            <!-- <img class="teacher_pic" src="__IMG__/teacher/t.png" alt=""> -->
+        </a>
+        </if>
+    </div>
+</div>
+<div class="s-sx-login md-effect-1">
+    <div class="mask md-content ">
+        <div class="login-box">
+            <div class="tabs">
+                <span class="active">使用账号登录</span>
+                <span>使用绑定手机号登录</span>
+            </div>
+            <div class="account-login">
+                <div class="l-a-border-left">
+                    <input class="ipt account-btn " type="text" placeholder="请输入账号/身份证" value="">
+                </div>
+                <div class="l-a-border-left">
+                <input class="ipt password-btn " type="password" placeholder="请输入密码" value="">
+                 </div>
+                <a class="forget-password" href="{:U('/Forget/step1')}">忘记密码?</a>
+            </div>
+            <div class="account-login register-form">
+            <div class="l-a-border-left">
+                <input value="" class="ipt account-btn phoneNumber" type="text" placeholder="请输入注册手机号码">
+                </div>
+                <div class="l-a-border-left" style="display: inline-block;">
+                <input class="ipt password-btn code-text" type="text" placeholder="请输入手机验证码">
+                </div>
+                <input class="ipt send-code-btn" type="button" value="发送验证码">
+            </div>
+            <div class="rlf-group">
+                <input class="go-login-btn btn" type="button" value="立即登录">
+                <!-- <input  class="register-new-account btn" type="button" value="注册账号"> -->
+                <a class="register-new-account btn" href="{:U('/Student/register_step1')}">注册账号</a>
+            </div>
+            <i class="close-login-form"></i>
+        </div>
+    </div>
+
+</div>
+  <div class="md-overlay"></div>
+<script>
+function goUrl(cat_id, fid) {
+    var searchurl = '/index.php/Live/index/s/';
+    var urlpara = "fid/" + encodeURIComponent(fid) + "/";
+    urlpara += "cat_id/" + encodeURIComponent(cat_id) + "/";
+    location.href = searchurl + base64encode(urlpara);
+}
+
+function gotoUrl(cat_id, fid) {
+    var searchurl = '/index.php/Vod/index/s/';
+    var urlpara = "fid/" + encodeURIComponent(fid) + "/";
+    urlpara += "cat_id/" + encodeURIComponent(cat_id) + "/";
+    location.href = searchurl + base64encode(urlpara);
+}
+
+$(function() {
+    var search_live = $('.search_live');
+    var h_course = $('.h_course');
+    var search_vod = $('.search_vod');
+    var search_teacher = $('.search_teacher');
+    var search_form = $('.search_form');
+
+    search_live.click(function() {
+        h_course.html(search_live.html());
+        search_form.attr('action', "{:U('/Search/search_live')}");
+        $(".select_s_type").hide();
+    })
+
+    search_vod.click(function() {
+        h_course.html(search_vod.html())
+        search_form.attr('action', "{:U('/Search/search_vod')}");
+        $(".select_s_type").hide();
+    })
+
+    search_teacher.click(function() {
+        h_course.html(search_teacher.html())
+        search_form.attr('action', "{:U('/Search/index')}");
+        $(".select_s_type").hide();
+    })
+
+    $(".v_select").hover(function() {
+        $(".select_s_type").show();
+    }, function() {
+        $(".select_s_type").hide();
+    })
+})
+
+$(".kbs-signOut").on("click", function() {
+    $.get("/index.php/Student/loginout", function(data) {
+        if (data.status == 1) {
+            window.location.href = data.url;
+        }
+    })
+})
+$(".kbt-signOut").on("click", function() {
+    $.get("/index.php/Teacher/loginout", function(data) {
+        if (data.status == 1) {
+            window.location.href = data.url;
+        }
+    })
+})
+</script>
+<script>
+require(["login"], function(login) {
+    login()
+    $(".h-n-login").on("click", function() {
+        $(".s-sx-login").addClass('md-show');
+    })
+});
+
+/*输入框动画*/
+$(".l-a-border-left .ipt").focus(function() {
+    $(this).parent().addClass('active');
+})
+$(".l-a-border-left .ipt").blur(function() {
+    $(this).parent().removeClass('active');
+});
+</script>

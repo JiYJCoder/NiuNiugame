@@ -1,0 +1,63 @@
+<head>
+    <meta charset="UTF-8">
+    <title>注册 - 签约成功</title>
+    <meta name="keywords" content="{$seoData.keywords}">
+    <meta name="description" content="{$seoData.description}">
+    <script src="__JS__/lib/jquery-3.1.1.min.js"></script>
+    <script src="__PLUGINS__/unlock/unlock.js"></script>
+    <script src='__JS__/lib/require.js'></script>
+    <script src="__JS__/lib/main.js"></script>
+    <link rel="stylesheet" href=__CSS__/teacher/teacher.css>
+    <link rel="stylesheet" href="__PLUGINS__/unlock/unlock.css">
+
+</head>
+
+<body>
+
+    <include file="Public:header"/>
+    <div class="register">
+        <div class="zr_layout">
+            <div class="content ">
+                <div class="tabs">
+                    <ul class="tabs_header clearfix">
+                        <li>
+                            <div class="item">
+                                <span class="order fl">1</span>
+                                <span class="text fl">阅读协议</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="item">
+                                <span class="order fl">2</span>
+                                <span class="text fl">填写资料</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="item">
+                                <span class="order fl">3</span>
+                                <span class="text fl">完善资料</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="item active">
+                                <span class="order fl">4</span>
+                                <span class="text fl">签约成功</span>
+                            </div>
+                        </li>
+
+                    </ul>
+
+                    <div class="list_5">
+                          <i class="q_y_success_bg"></i>
+                          <span class="q_y_text1">恭喜,{$memberInfo.zc_nickname}老师 !</span>
+                          <span class="q_y_text2">您已成为孜尔直播签约教师</span>
+                          <a class="go_teacher_Backstage" href="./index.html">进入老师后台</a>
+                          <a class="back_index" href="./index.html">返回首页</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <include file="Public:footer"/>
+</body>
+</html>

@@ -17,7 +17,7 @@
                 <div class="panel-body" style="position:relative;">
                     <div class="lq-panel-body-title"><span class="btn"><i class="fa fa-paw"></i> 筛选</span></div>
                     <div class="form-group">
-                          <label class="col-xs-12 col-sm-3 col-md-2 col-lg-1 control-label">发布日期范围</label>
+                          <label class="col-xs-12 col-sm-3 col-md-2 col-lg-1 control-label">日期范围</label>
                           <div class="col-sm-6 col-lg-8 col-xs-6"> 
                             <script type="text/javascript">
                                 require(["daterangepicker"], function($){
@@ -37,9 +37,15 @@
                                     });
                                 });
                             </script>
+                              <input id="open_time" type="hidden" value="{$search_content.open_time}">
                             <input id="time_start" type="hidden" value="{$search_content.time_start}">
                             <input id="time_end" type="hidden" value="{$search_content.time_end}">
                             <button class="btn btn-default daterange daterange-date" type="button"><span class="date-title">{$search_content.time_start} 至 {$search_content.time_end}</span> <i class="fa fa-calendar"></i></button>
+                              <if condition="$search_content.open_time eq '1'">
+                                  <a href="#" id="a_open_time" class="btn btn-primary">启用</a>
+                                  <else/>
+                                  <a href="#" id="a_open_time" class="btn btn-default">启用</a>
+                              </if>
                           </div>                    
                     </div>
                     <div class="form-group">
@@ -65,14 +71,25 @@
             </div>
 			<script language="javascript">   
             $(function(){
+                $("#a_open_time").click(function(){
+                    if($("#open_time").val()=="1"){
+                        $("#open_time").val("0");
+                        $(this).removeClass("btn-primary").addClass("btn-default");
+                    }else{
+                        $("#open_time").val("1");
+                        $(this).removeClass("btn-default").addClass("btn-primary");
+                    }
+                });
                 //通用搜索
                 $("#listSearch").click(function(){	
                     require(['layer'], function(){
 						var fkeyword=$("#fkeyword").val();
-						if(fkeyword!='{$keywordDefault}'){
+                        var open_time=$("#open_time").val();
+						if(fkeyword!='{$keywordDefault}' || open_time==1){
 							var searchurl=$("#thinkphpurl").val()+'index/s/';
 							var urlpara="fkeyword/"+encodeURIComponent(fkeyword)+"/";
 							urlpara+="keymode/"+encodeURIComponent($("#keymode").val())+"/";
+                            urlpara+="open_time/"+encodeURIComponent($("#open_time").val())+"/";
 							urlpara+="time_start/"+encodeURIComponent($("#time_start").val())+"/";
 							urlpara+="time_end/"+encodeURIComponent($("#time_end").val())+"/";
 							location.href=searchurl+base64encode(urlpara);
@@ -97,12 +114,12 @@
                   <volist name="list" id="data" key="key" empty="$empty_msg">
                     <tr id="{$data.id}" visible="{$data.zl_visible}" opCheck='0'>
                         <td><input type="checkbox" value="{$data.id}" name="items" /></td>
-                        <td align="center">{$data.no}</td>
+
                         <td align="center">{$data.id}</td>
                         <td>{$data.zc_account}</td>
                         <td>{$data.zn_type_label}</td>
-                        <td>{$data.zc_original_name}</td>
-                        <td>{$data.zc_suffix}</td>
+                        <td>{$data.zc_original_name}.{$data.zc_suffix}</td>
+                        <td class="imgtd"><a href="javascript:;"><img src="{$data.zc_file_path}" height="60"></a></td>
                         <td>{$data.zn_cdate_label}</td>
                     </tr>
                   </volist>

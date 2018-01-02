@@ -2,7 +2,7 @@
 <IfModule mod_rewrite.c>
   Options +FollowSymlinks
   RewriteEngine On
-  ErrorDocument 404 /404.php
+  ###ErrorDocument 404 /404.php
 
   RewriteCond %{REQUEST_FILENAME} !-d
   RewriteCond %{REQUEST_FILENAME} !-f

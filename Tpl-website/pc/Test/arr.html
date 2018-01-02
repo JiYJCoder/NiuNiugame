@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+<table>
+    <volist name="arr" id="arr">
+        <tr><td>{$arr.zc_caption}</td></tr>
+        <volist name="arr.DRs" id="DRs">
+        <tr>
+            <td style="padding-left: 30px;">{$DRs.zc_caption}</td>
+            <td>
+                <table>
+                    <volist name="DRs.thr" id="thr">
+                    <tr>
+                <td  style="padding-left: 50px; color: #0000cc">{$thr.zc_title}</td>
+                </tr>
+                    </volist>
+                </table>
+            </td>
+        </tr>
+        </volist>
+    </volist>
+</table>
+</form>
+</body>
+</html>

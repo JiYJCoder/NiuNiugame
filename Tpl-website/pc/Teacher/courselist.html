@@ -1,0 +1,64 @@
+<head>
+    <meta charset="UTF-8">
+    <title>查看名单</title>
+    <meta name="keywords" content="{$seoData.keywords}">
+    <meta name="description" content="{$seoData.description}">
+    <link rel="stylesheet" href=__CSS__/teacher/teacher.css>
+    <script src="__JS__/lib/jquery-3.1.1.min.js"></script>
+    <script src="__JS__/common.js"></script>
+    <script src='__JS__/lib/require.js'></script>
+    <script src="__JS__/lib/main.js"></script>
+</head>
+
+<body>
+<include file="Public:header"/>
+<include file="Public:teacher_nav"/>
+
+<div class="course_list_wrapper">
+    <div class="zr_layout course_list">
+        <div class="coures_list_title">
+            <h1>课程名单</h1>
+            <h3>[{$catInfo}] {$lessonInfo.zc_title}</h3>
+        </div>
+        <div class="name_list">
+            <!-- 没人 -->
+            <!--<div>-->
+            <!--<i class="no_list"></i>-->
+            <!--</div>-->
+
+            <div class="has_list">
+                <div class="tag">
+                    <span class="student_name">学生姓名</span>
+                    <span class="student_school_name">所在学校</span>
+                    <span class="student_progress">参与程度</span>
+                    <span class="student_glance">浏览总时长</span>
+                    <span class="student_sign_date">报名时间</span>
+                </div>
+
+                <volist name="list" id="list">
+                <div class="tag item">
+                    <span class="student_name">{$list.zc_nickname}</span>
+                    <span class="student_school_name">{$list.zc_school}</span>
+                    <span class="student_progress">{$list.view_percent}%</span>
+                    <span class="student_glance">{$list.view_total}</span>
+                    <span class="student_sign_date">{$list.enroll_date}</span>
+                </div>
+                </volist>
+
+
+                <div class="list_page">
+                    {$page}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<include file="Public:footer"/>
+</body>
+
+</html>
+<script>
+    require(['myset'], function (myset) {
+        myset.loadTip();
+    });
+</script>

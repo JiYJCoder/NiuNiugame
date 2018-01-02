@@ -50,6 +50,7 @@ class PublicController extends Base{
 		if(!in_array(ACTION_NAME,$action_no_login_array) ){
 			self::checkLogin();//用户认证
 		}
+
 		$this->commonAssign();//页面公共标签赋值
 		//缓存数据
 		if($this->getSafeData('clearcache')){
@@ -81,7 +82,7 @@ class PublicController extends Base{
 			//系统菜单 e				
 			
 			// 检测节点访问权限
-			$node_no_check_array=array('Index','Attachment');
+			$node_no_check_array=array('Index','Attachment','LessonLive','LessonVod');
 			$access=99;
 			if( !in_array(CONTROLLER_NAME,$node_no_check_array) ){
 				$access = $this->UserModel->apiAccessControl($this->login_admin_info);
@@ -434,6 +435,9 @@ class PublicController extends Base{
 			case "add":
 				$label_location='添加页面';
 			break;
+            case "auth":
+                $label_location='教师资料认证';
+                break;
 			case "edit":
 				$label_location='编辑页面';
 				$current_url= U(CONTROLLER_NAME."/index");
@@ -475,11 +479,14 @@ class PublicController extends Base{
 		}else{
 			//读缓存
 			$data_sys_current = F($this->pcTable.C("S_PREFIX").'data_sys_current','',C(SYSTEM_MENU_CURRENT));
+
 			if($data_sys_current){
 				$lclocation=F($this->pcTable.C("S_PREFIX").'syslocation',"",C(SYSTEM_MENU_CURRENT));
+
 				$lc_sys_current=lqSysmuenLocation($lclocation);
 				//当前标题
 				$this->assign("sys_heading", $data_sys_current["zc_caption"].".".$label_location);
+				//$this->assign("sys_heading", $label_location);
 				//当前路径
 				$this->assign("sys_current", $lc_sys_current);		
 			}

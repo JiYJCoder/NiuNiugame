@@ -1,0 +1,263 @@
+<head>
+    <meta charset="utf-8">
+    <title>
+        直播
+    </title>
+    <link href="__CSS__/student/student.css" rel="stylesheet">
+    <script src="__JS__/lib/jquery-3.1.1.min.js"></script>
+    <script src="__JS__/common.js"></script>
+    <script src="__JS__/lib/require.js"></script>
+    <script src="__JS__/lib/main.js"></script>
+</head>
+
+<body>
+    <include file="Public:header" />
+    <div class="s-sn-recordlist" class_url="Live">
+     <div class="zr_layout">
+         <if condition="$is_login eq 1">
+            <div class="z-xr-live-header">
+                <div class="contain">
+                 <!--    <div class="left">
+                        <div class="time">
+                            <p class="lock"><?php echo date('H:i')?></p>
+                            <div class="date">
+                                <span><?php echo date('Y年m月')?></span>
+                                <span>周<?php echo C('CAPITAL_WEEK')[date('w')]?></span>
+                            </div>
+                        </div>
+                        <div class="lesson">
+                            <div class="hang-in-the-lesson">
+                                <div class="text">今日未上课</div>
+                                <span>{$today_count}</span>
+                            </div>
+                        </div>
+                          <div class="ling"></div>
+                    </div> -->
+                    <div class="left">
+                        <div class="ready-live-text">
+                            <i></i>
+                            <span>准备开始的直播</span>
+                        </div>
+                        <div class="live-time">
+                              <div class="clock"><?php echo date('H:i')?></div>
+                              <div class="live-date">
+                                  <span><?php echo date('Y年m月')?></span>
+                                  <span>星期<?php echo C('CAPITAL_WEEK')[date('w')]?></span>
+                              </div>
+                        </div>
+                        <div class="animate-wave">
+                            <div class="deep-color-wave">
+                                <div class="wave"></div>
+                                <div class="wave"></div>
+                            </div>
+                            <div class="linght-color-wave">
+                                <div class="wave"></div>
+                                <div class="wave"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <neq name="today_data.0.zn_object_id" value="">
+                        <div class="swiper-button swiper-button-prev"></div>
+                        <div class="swiper-button swiper-button-next"></div>
+                            </neq>
+                        <div class="live-list s-sr-live-list swiper-container">
+                            <ul class="clearfix swiper-wrapper">
+                                <neq name="today_data.0.zn_object_id" value="">
+                                <foreach name="today_data" item="value">
+                                    <if condition="$value['living'] eq 1">
+                                <!--正在直播-->
+                                <li class="swiper-slide">
+                                    <a href="{:U('/Live/livedetail',array('tnid'=>$value['zn_object_id']))}">
+                                    <!-- 如果正在直播的课程请添加liveing类名来显示状态 -->
+                                    <div class="picturebox liveing">
+                                        <i class="live-icon"></i>
+                                        <i class="paly-icon"></i>
+                                        <img src="{$value['zc_image']}" alt="">
+                                        <div class="time">
+                                            <span class="date">正在直播</span>
+                                            <span class="clock">{$value['online_num']}人观看</span>
+                                        </div>
+                                    </div>
+                                    <div class="course-info">
+                                        <h2>【{$value['fid_name']}.{$value['cat_name']}】{$value['zc_title']}</h2>
+                                        <p>{$value['zc_school']} {$value['zc_nickname']}</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <else />
+                                <li class="swiper-slide">
+                                    <a href="{:U('/Live/livedetail',array('tnid'=>$value['zn_object_id']))}">
+                                        <!-- 如果正在直播的课程请添加liveing类名来显示状态 -->
+                                        <div class="picturebox ">
+                                            <i class="live-icon"></i>
+                                            <i class="paly-icon"></i>
+                                            <img src="{$value['zc_image']}" alt="">
+                                            <div class="time">
+                                                <if condition="$value['next_time']">
+                                                <span class="date">距离开始还有</span>
+                                                <span class="clock">{$value['next_time']}</span>
+                                                    <else />
+                                                    <span class="date">直播马上开始,请耐心等待</span>
+                                                </if>
+                                            </div>
+                                        </div>
+                                        <div class="course-info">
+                                            <h2>【{$value['fid_name']}.{$value['cat_name']}】{$value['zc_title']}</h2>
+                                            <p>{$value['zc_school']} {$value['zc_nickname']}</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                    </if>
+                            </foreach>
+                                    <else/>
+                                            <img style="position: absolute;left:89px;top: 43px;" src="__IMG__/teacher/20170906321.png">
+                                    </neq>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+         </if>
+        </div>
+        <div class="zr_layout" style="margin-top: 44px; border-top: 1px dashed #e8e8e8;">
+            <div class="record-classify">
+                <div class="classify-text fl">
+                    全部分类 >
+                </div>
+                <div class="select-grade fl">
+                    <button>
+                        <if condition="$fid_label neq ''">{$fid_label}
+                            <else/>请选择</if>
+                    </button>
+                    <i class="develop">
+                </i>
+                </div>
+                <div class="select-grade-panel">
+                    <button val="0">
+                        全部
+                    </button>
+                    <volist name="cat" id="cat">
+                        <button val="{$cat.id}">
+                            {$cat.title}
+                        </button>
+                    </volist>
+                </div>
+            </div>
+            <div class="record-title">
+                <div class="classify l-classify">
+                    <button class="btn <if condition=" $search_content_array[ 'cat_id'] ELT 0 ">active</if>">
+                        全部({$catTotal})
+                    </button>
+                    <present name="catList">
+                        <volist name="catList" id="catList">
+                            <button class="btn <if condition=" $search_content_array[ 'cat_id'] eq $catList[ 'id'] ">active</if>" cat_id="{$catList.id}">
+                                {$catList.title}({$catList.total})
+                            </button>
+                        </volist>
+                    </present>
+                </div>
+            </div>
+            <a href="{$ad['url']}" class="record-banner">
+        <img src="{$ad['image']}" alt="">
+        </a>
+            <div class="record-content">
+                <div class="record-statistics l-record-statistics">
+                    <div class="statistics-left">
+                        <div class="item <if condition="($orderby eq 1) or ($orderby eq 2)">active</if>">
+                            <button class="btn">
+                                收藏数
+                            </button>
+                            <span class="develop <eq name="orderby" value="2">develop-up</eq>">
+                            </span>
+                        </div>
+                        <div class="item <if condition="($orderby eq 3) or ($orderby eq 4)">active</if>">
+                            <button class="btn">
+                                报名数
+                            </button>
+                            <span class="develop <eq name="orderby" value="4">develop-up</eq>">
+                            </span>
+                        </div>
+                        <div class="item <if condition="($orderby eq 5) or ($orderby eq 6)">active</if>" style="width: 75px;">
+                            <button class="btn">
+                                开始时间
+                            </button>
+                            <span class="develop <eq name="orderby" value="6">develop-up</eq>">
+                            </span>
+                        </div>
+                    </div>
+                    <label class="statistics-right">
+                        <if condition="$login_studnet_info['id'] gt 0">
+                            <input class="l-select-school-teacher" type="checkbox" name="teacher" value="1" <eq name="search_content_array.school" value="1"> checked</eq>>
+                            <i></i> 本校老师
+                        </if>
+                    </label>
+                    <input class="l-select-grade-input" type="hidden" name="fid" id="fid" value="{$search_content_array.fid}">
+                    <input class="l-cat-id" type="hidden" name="cat_id" id="cat_id" value="{$search_content_array.cat_id}">
+                    <input class="l-school" type="hidden" name="school" id="school" value="{$search_content_array.school}">
+                    <input class="l-orderby" type="hidden" name="orderby" id="orderby" value="{$search_content_array.orderby}">
+                </div>
+                <div class="course-content s-sr-live-list">
+                    <ul class="clearfix">
+                        <volist name="list" id="list">
+                        <if condition="$list['living'] eq 1">
+                        <li class="swiper-slide">
+                            <a href="{:U('/Live/livedetail',array('tnid'=>$list['id']))}">
+                                <div class="picturebox liveing">
+                                    <i class="live-icon"></i>
+                                    <i class="paly-icon"></i>
+                                    <img src="{$list.zc_image}" alt="">
+                                    <div class="time">
+                                        <span class="date">{$list['zc_date']}</span>
+                                        <span class="clock">{$list['zc_start_time']} - {$list['zc_end_time']}</span>
+                                    </div>
+                                </div>
+                                <div class="course-info">
+                                    <h2>【{$list.fid_name}.{$list.cat_name}】{$list.zc_title}</h2>
+                                    <p>{$list.zc_school} {$list.zc_nickname}老师</p>
+                                    <div class="s-statistics">
+                                        <span>{$list.zn_fav_num}人收藏</span>
+                                        <span>{$list.zn_enroll_num}人报名</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                            <else />
+                        <li>
+                                <a href="{:U('/Live/livedetail',array('tnid'=>$list['id']))}">
+                                    <div class="picturebox ">
+                                        <i class="live-icon"></i>
+                                        <i class="paly-icon"></i>
+                                        <img src="{$list.zc_image}" alt="">
+                                        <div class="time">
+                                            <span class="date">{$list['zc_date']}</span>
+                                            <span class="clock">{$list['zc_start_time']} - {$list['zc_end_time']}</span>
+                                        </div>
+                                    </div>
+                                    <div class="course-info">
+                                        <h2>【{$list.fid_name}.{$list.cat_name}】{$list.zc_title}</h2>
+                                        <p>{$list.zc_school} {$list.zc_nickname}老师</p>
+                                        <div class="s-statistics">
+                                            <span>{$list.zn_fav_num}人收藏</span>
+                                            <span>{$list.zn_enroll_num}人报名</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                        </if>
+                         </volist>
+                    </ul>
+                    <div class="list_page">
+                        {$page}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <include file="Public:footer" />
+</body>
+<script>
+require(["live"], function(live) {
+    live()
+})
+</script>

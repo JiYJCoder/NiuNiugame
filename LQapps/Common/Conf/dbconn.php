@@ -3,7 +3,7 @@ return array(
 	// 数据库配置s
 	'DB_TYPE'=>'mysql',//mysql|pdo
     'DB_HOST'=>'127.0.0.1',
-    'DB_NAME'=>'demo_jyly',
+    'DB_NAME'=>'games',
     'DB_USER'=>'root',
     'DB_PWD'=>'root',
 	'DB_PORT'=>'3306',

@@ -1,169 +1,282 @@
 <?php //会员 Member 介面操作 
 namespace Admin\Controller;
+
 use Think\Controller;
 use LQLibs\Util\BootstrapForm as Form;//表单填充插件
 use Member\Api\MemberApi as MemberApi;
 use Admin\Model\RegionModel as RegionApi;
 
-class MemberController extends PublicController{
-	protected $MemberModel;
-	protected $myForm = array(
-		//标题
-		'tab_title'=>array(1=>'帐户信息',2=>'会员信息',3=>'邦定信息'),
-		//帐户信息
-		'1'=>array(
-		array('text', 'zc_account', "会员帐号",1,'{"required":"1","dataType":"","dataLength":"","readonly":0,"disabled":0}'),
-		array('password', 'zc_password', "会员密码",1,'{"required":"1","dataType":"password","dataLength":"","readonly":0,"disabled":0}'),
-		array('password', 'zc_password_chk', "确认密码",0,'{"required":"1","dataType":"","dataLength":"","confirm":"zc_password","readonly":0,"disabled":0}'),
-		array('text', 'zc_email', "会员邮箱",1,'{"required":"1","dataType":"email","dataLength":"","readonly":0,"disabled":0}'),
-		array('text', 'zc_mobile', "会员手机",1,'{"required":"1","dataType":"mobile","dataLength":"11","readonly":0,"disabled":0}'),
-		array('select', 'zl_role', "会员角色",1,'{"required":"1","dataType":"","dataLength":"","readonly":0,"disabled":0,"please":"请选择角色"}'),
-		array('radio', 'zl_is_designer', "设计师",1,'{"required":"1","dataType":"","dataLength":"","readonly":0,"disabled":0}'),
-		),
-		//个人信息
-		'2'=>array(
-		array('select', 'zl_sex', "会员性别",1,'{"required":"1","dataType":"","dataLength":"","readonly":0,"disabled":0,"please":"请选择性别"}'),
-		array('selectRegion', 'zn_province|zn_city|zn_district', "地区",1,'{"label":"zc_area","required":"1","please":"请选择"}'),
-		array('text', 'zc_nickname', "用户昵称",1,'{"required":"1","dataType":"","dataLength":"","readonly":0,"disabled":0}'),
-		array('text', 'zc_address', "地址",1,'{"required":"1","dataType":"","dataLength":"","readonly":0,"disabled":0}'),
-		array('image', 'zc_headimg', "头像",1,'{"type":"avatar","allowOpen":1}'),
-		),
-		'3'=>array(
-		array('textShow', 'zl_account_bind', "帐号",1,'{"is_data":"0","creat_hidden":"0"}'),
-		array('textShow', 'zl_openid_bind', "微信",1,'{"is_data":"0","creat_hidden":"0"}'),
-		array('textShow', 'zl_mobile_bind', "电话",1,'{"is_data":"0","creat_hidden":"0"}'),
-		array('textShow', 'zl_email_bind', "邮箱",1,'{"is_data":"0","creat_hidden":"0"}'),
-		array('textShow', 'zc_easemob_account', "环信帐号",1,'{"is_data":"0","creat_hidden":"0"}'),
-		array('textShow', 'zc_pay_password', "环信密码",1,'{"is_data":"0","creat_hidden":"0"}'),
-		),
-	);
+class MemberController extends PublicController
+{
+    protected $MemberModel;
+    protected $myForm = array(
+        //标题
+        'tab_title' => array(1 => '帐户信息', 2 => '会员信息', 3 => '邦定信息'),
+        //帐户信息
+        '1' => array(
+            array('text', 'zc_account', "会员帐号", 1, '{"required":"1","dataType":"","dataLength":"","readonly":0,"disabled":0}'),
+            array('password', 'zc_password', "会员密码", 1, '{"required":"1","dataType":"password","dataLength":"","readonly":0,"disabled":0}'),
+            array('password', 'zc_password_chk', "确认密码", 0, '{"required":"1","dataType":"","dataLength":"","confirm":"zc_password","readonly":0,"disabled":0}'),
+            array('select', 'zl_role', "会员角色", 1, '{"required":"1","dataType":"","dataLength":"","readonly":0,"disabled":0,"please":"请选择角色"}'),
+            array('text', 'zc_mobile', "会员手机", 1, '{"required":"1","dataType":"mobile","dataLength":"11","readonly":0,"disabled":0}'),
+            array('text', 'zc_email', "会员邮箱", 1, '{"required":"0","dataType":"email","dataLength":"","readonly":0,"disabled":0}'),
+            array('text', 'zc_idcard', "会员身份证", 1, '{"required":"0","dataType":"","dataLength":"","readonly":0,"disabled":0}'),
+            array('text', 'zc_school', "所在学校", 1, '{"required":"0","dataType":"","dataLength":"","readonly":0,"disabled":0}'),
+        ),
+        //个人信息
+        '2' => array(
+            array('select', 'zl_sex', "会员性别", 1, '{"required":"1","dataType":"","dataLength":"","readonly":0,"disabled":0,"please":"请选择性别"}'),
+
+            array('text', 'zc_nickname', "用户昵称", 1, '{"required":"1","dataType":"","dataLength":"","readonly":0,"disabled":0}'),
+            array('text', 'zc_address', "地址", 1, '{"required":"0","dataType":"","dataLength":"","readonly":0,"disabled":0}'),
+
+            array('image', 'zc_headimg', "头像", 1, '{"type":"avatar","allowOpen":1}'),
+            array('textarea', 'zc_intro', "个人简介", 1, '{"required":"0","dataType":"","dataLength":"","readonly":0,"disabled":0}'),
+            array('text', 'zc_good_at', "擅长领域", 1, '{"required":"0","dataType":"","dataLength":"","readonly":0,"disabled":0}'),
+        ),
+        '3' => array(
+            array('textShow', 'zl_account_bind', "帐号", 1, '{"is_data":"0","creat_hidden":"0"}'),
+            array('textShow', 'zl_openid_bind', "微信", 1, '{"is_data":"0","creat_hidden":"0"}'),
+            array('textShow', 'zl_mobile_bind', "电话", 1, '{"is_data":"0","creat_hidden":"0"}'),
+            array('textShow', 'zl_email_bind', "邮箱", 1, '{"is_data":"0","creat_hidden":"0"}'),
+
+        ),
+    );
+    protected $authForm = array(
+        //标题
+        'tab_title' => array(1 => '认证信息'),
+        //认证信息
+        '1' => array(
+            array('text', 'zc_idcard', "身份证号码", 1, '{"required":"0","dataType":"","dataLength":"","readonly":0,"disabled":0}'),
+            array('image', 'zc_cert_img', "证书", 1, '{"type":"cert","allowOpen":1}'),
+            array('radio', 'zn_cert_status', "证书审核状态", 1, '{"required":"1","dataType":"","dataLength":"","readonly":0,"disabled":0}'),
+            array('text', 'zc_cert_reason', "证书审核说明", 1, '{"required":"0","dataType":"","dataLength":"","readonly":0,"disabled":0}'),
+            array('image', 'zc_idcard_img', "身份证", 1, '{"type":"cert","allowOpen":1}'),
+            array('radio', 'zn_idcard_status', "身份证审核状态", 1, '{"required":"1","dataType":"","dataLength":"","readonly":0,"disabled":0}'),
+            array('text', 'zc_idcard_reason', "身份证审核说明", 1, '{"required":"0","dataType":"","dataLength":"","readonly":0,"disabled":0}'),
+        )
+    );
+
     /** 初始化*/
-    public function __construct() {
-		parent::__construct();
-		$this->MemberModel = new MemberApi;
-	}
-    
-	//列表页
-    public function index() {
-		$this->assign("os_lock",array('edit'=>1,'delete'=>1,'visible'=>1,'cache'=>0,'search'=>0,'sort'=>0));//列表锁	
-			
-		//列表表单初始化****start
-		$page_parameter["s"]=$this->getSafeData('s');
-		$this->reSearchPara($page_parameter["s"]);//反回搜索数
-		$search_content_array=array(
-			'pagesize'=>urldecode(I('get.pagesize','0','int')),
-			'fkeyword'=>trim(urldecode(I('get.fkeyword',$this->keywordDefault))),
-			'keymode'=>urldecode(I('get.keymode','1','int')),
-            'open_time'=>urldecode(I('get.open_time','0','int')),
-            'time_start'=>I('get.time_start',lq_cdate(0,0,(-2592000))),
-            'time_end'=>I('get.time_end',lq_cdate(0,0)),
-            'role'=>I('get.role','','int'),
-			'bind'=>I('get.bind','','int'),
-			'city'=>I('get.city','','int'),
-			'use'=>I('get.use',''),
-		);
-		$this->assign("search_content",$search_content_array);//搜索表单赋值
-		$role_array=C("MEMBER_ROLE");
-		$role_array[6]='设计师';
-		$this->assign("zl_role_str", lqCreatOption($role_array,$search_content_array["role"],"选择角色"));
-		$bind_array=array(
-			1=>'帐号邦定',
-			2=>'微信邦定',
-			3=>'电话邦定',
-			4=>'邮箱邦定',
-		);		
-		$this->assign("bind_str",lqCreatOption($bind_array,$search_content_array["bind"],"请选择邦定"));		
-		$city_array=array(
-			440100=>'广州',
-			440300=>'深圳',
-			310000=>'上海',
-			110000=>'北京',
-		);		
-		$this->assign("city_str",lqCreatOption($city_array,$search_content_array["city"],"请选择城市"));		
-		$this->assign("use_str",lqCreatOption(C("USE_STATUS"),$search_content_array["use"],"请选择使用状态"));					
-		
-		//sql合并
-		$sqlwhere_parameter=" 1 ";//sql条件
-		if($search_content_array["fkeyword"]&&$search_content_array["fkeyword"]!=$this->keywordDefault){
-			if($search_content_array["keymode"]==1){
-			$sqlwhere_parameter.=" and zc_account ='".$search_content_array["fkeyword"]."' ";
-			}else{
-			$sqlwhere_parameter.=" and (zc_nickname like'".$search_content_array["fkeyword"]."%' or zc_mobile like'".$search_content_array["fkeyword"]."%') ";
-			}	
-		}
-		if($search_content_array["role"]){
-				if($search_content_array["role"]==6){
-				$sqlwhere_parameter.=" and zl_is_designer = 1";
-				}else{
-				$sqlwhere_parameter.=" and zl_role = ".$search_content_array["role"];
-				}
-		}
-		
-		if($search_content_array["bind"]){
-			if ($search_content_array["bind"]==1){
-				$sqlwhere_parameter.=" and zl_account_bind =1 ";
-			}elseif($search_content_array["bind"]==2){
-				$sqlwhere_parameter.=" and zl_openid_bind =1 ";
-			}elseif($search_content_array["bind"]==3){
-				$sqlwhere_parameter.=" and zl_mobile_bind =1 ";
-			}elseif($search_content_array["bind"]==4){
-				$sqlwhere_parameter.=" and zl_email_bind =1 ";				
-			}else{
-				$sqlwhere_parameter.="";
-			}
-		}		
-		if($search_content_array["city"]){$sqlwhere_parameter.=" and zn_city = ".$search_content_array["city"];}
-		if($search_content_array["use"]!=''){$sqlwhere_parameter.=" and zl_visible = ".intval($search_content_array["use"]);}
-		
-        if($search_content_array["open_time"]==1&&$search_content_array["time_start"]&&$search_content_array["time_end"]){
-            $ts=strtotime($search_content_array["time_start"]." 00:00:00");
-            $te=strtotime($search_content_array["time_end"]." 23:59:59");
-            $sqlwhere_parameter.=" and zn_cdate >=".$ts." and zn_cdate<=".$te;
+    public function __construct()
+    {
+        parent::__construct();
+        $this->MemberModel = new MemberApi;
+        $this->model_auth = D('MemberAuth');
+    }
+
+    //老师列表页
+    public function index()
+    {
+        $this->assign("os_lock", array('edit' => 1, 'delete' => 1, 'visible' => 1, 'cache' => 0, 'search' => 0, 'sort' => 0));//列表锁
+
+        //列表表单初始化****start
+        $page_parameter["s"] = $this->getSafeData('s');
+        $this->reSearchPara($page_parameter["s"]);//反回搜索数
+        $search_content_array = array(
+            'pagesize' => urldecode(I('get.pagesize', '0', 'int')),
+            'fkeyword' => trim(urldecode(I('get.fkeyword', $this->keywordDefault))),
+            'keymode' => urldecode(I('get.keymode', '0', 'int')),
+            'open_time' => urldecode(I('get.open_time', '0', 'int')),
+            'time_start' => I('get.time_start', lq_cdate(0, 0, (-2592000))),
+            'time_end' => I('get.time_end', lq_cdate(0, 0)),
+            'role' => I('get.role', '', 'int'),
+            'bind' => I('get.bind', '', 'int'),
+            'city' => I('get.city', '', 'int'),
+            'use' => I('get.use', ''),
+        );
+        $this->assign("search_content", $search_content_array);//搜索表单赋值
+        $role_array = C("MEMBER_ROLE");
+        $this->assign("zl_role_str", lqCreatOption($role_array, $search_content_array["role"], "选择角色"));
+        $bind_array = array(
+            1 => '帐号邦定',
+            2 => '微信邦定',
+            3 => '电话邦定',
+            4 => '邮箱邦定',
+        );
+        $this->assign("bind_str", lqCreatOption($bind_array, $search_content_array["bind"], "请选择邦定"));
+//		$city_array=array(
+//			440100=>'广州',
+//			440300=>'深圳',
+//			310000=>'上海',
+//			110000=>'北京',
+//		);
+//		$this->assign("city_str",lqCreatOption($city_array,$search_content_array["city"],"请选择城市"));
+        $this->assign("use_str", lqCreatOption(C("USE_STATUS"), $search_content_array["use"], "请选择使用状态"));
+
+        //sql合并
+        $sqlwhere_parameter = " 1 ";//sql条件
+        if ($search_content_array["fkeyword"] && $search_content_array["fkeyword"] != $this->keywordDefault) {
+            if ($search_content_array["keymode"] == 1) {
+                $sqlwhere_parameter .= " and zc_account ='" . $search_content_array["fkeyword"] . "' ";
+            } else {
+                $sqlwhere_parameter .= " and (zc_nickname like'" . $search_content_array["fkeyword"] . "%' or zc_mobile like'" . $search_content_array["fkeyword"] . "%') ";
+            }
         }
+
+
+        if ($search_content_array["bind"]) {
+            if ($search_content_array["bind"] == 1) {
+                $sqlwhere_parameter .= " and zl_account_bind =1 ";
+            } elseif ($search_content_array["bind"] == 2) {
+                $sqlwhere_parameter .= " and zl_openid_bind =1 ";
+            } elseif ($search_content_array["bind"] == 3) {
+                $sqlwhere_parameter .= " and zl_mobile_bind =1 ";
+            } elseif ($search_content_array["bind"] == 4) {
+                $sqlwhere_parameter .= " and zl_email_bind =1 ";
+            } else {
+                $sqlwhere_parameter .= "";
+            }
+        }
+//		if($search_content_array["city"]){$sqlwhere_parameter.=" and zn_city = ".$search_content_array["city"];}
+        if ($search_content_array["use"] != '') {
+            $sqlwhere_parameter .= " and zl_visible = " . intval($search_content_array["use"]);
+        }
+
+        if ($search_content_array["open_time"] == 1 && $search_content_array["time_start"] && $search_content_array["time_end"]) {
+            $ts = strtotime($search_content_array["time_start"] . " 00:00:00");
+            $te = strtotime($search_content_array["time_end"] . " 23:59:59");
+            $sqlwhere_parameter .= " and zn_cdate >=" . $ts . " and zn_cdate<=" . $te;
+        }
+        $sqlwhere_parameter .= " and zl_role = 2";
         //首页设置s
-		$page_title=array('checkbox'=>'checkbox','no'=>L("LIST_NO"),'id'=>L("LIST_ID"),'reg_time'=>'注册时间','zc_account'=>'帐户名/昵称','zl_role'=>'角色/设计师','zc_email'=>'积分','zc_mobile'=>'联系电话','member_login_clear'=>'清零/邦定：帐号/微信/电话/邮箱','status'=>L("LIST_STAYUS"),'os'=>L("LIST_OS"));
-		$page_config = array(
-				'field'=>"`id`,`zl_role`,`zl_is_designer`,`zc_account`,`zc_nickname`,`zn_pay_integration`,`zn_rank_integration`,`zc_mobile`,`zl_account_bind`,`zl_openid_bind`,`zl_mobile_bind`,`zl_email_bind`,`zl_visible`,`zn_cdate`,`zn_mdate`",
-				'where'=>$sqlwhere_parameter,
-				'order'=>'id DESC',
-				'title'=>$page_title,
-				'thinkphpurl'=>__CONTROLLER__."/",
-		);			
-		//列表表单初始化 e
-		
+        $page_title = array('checkbox' => 'checkbox', 'no' => L("LIST_NO"), 'id' => L("LIST_ID"), 'reg_time' => '注册时间', 'zc_account' => '帐户名/昵称', 'zl_role' => '角色', 'zc_school' => '学校', 'zc_mobile' => '联系电话', 'member_login_clear' => '清零/邦定：帐号/微信/电话/邮箱', 'status' => L("LIST_STAYUS"), 'os' => L("LIST_OS"));
+        $page_config = array(
+            'field' => "`id`,`zl_role`,`zc_account`,`zc_nickname`,`zn_pay_integration`,`zn_rank_integration`,`zc_mobile`,`zc_school`,`zl_account_bind`,`zl_openid_bind`,`zl_mobile_bind`,`zl_email_bind`,`zl_visible`,`zn_cdate`,`zn_mdate`",
+            'where' => $sqlwhere_parameter,
+            'order' => 'id DESC',
+            'title' => $page_title,
+            'thinkphpurl' => __CONTROLLER__ . "/",
+        );
+        //列表表单初始化 e
+
         $count = $this->MemberModel->apiListCount($sqlwhere_parameter);
-		$page = new \LQLibs\Util\Page($count,C("PAGESIZE"),$page_parameter);//载入分页类
+        $page = new \LQLibs\Util\Page($count, C("PAGESIZE"), $page_parameter);//载入分页类
         $showPage = $page->admin_show();
         $this->assign("page", $showPage);
-        $this->assign("list", $this->MemberModel->apiListMember($page->firstRow,$page->listRows,$page_config));
-		$this->assign('empty_msg',$this->tableEmptyMsg(count($page_title)));
-		$this->assign("page_config",$page_config);//列表设置赋值模板
+        $this->assign("list", $this->MemberModel->apiListMember($page->firstRow, $page->listRows, $page_config));
+        $this->assign('empty_msg', $this->tableEmptyMsg(count($page_title)));
+        $this->assign("page_config", $page_config);//列表设置赋值模板
         $this->display();
     }
-	
-	// 插入/添加
-    public function add() {
+
+//学生列表页
+    public function student()
+    {
+        $this->assign("os_lock", array('edit' => 1, 'delete' => 1, 'visible' => 1, 'cache' => 0, 'search' => 0, 'sort' => 0));//列表锁
+
+        //列表表单初始化****start
+        $page_parameter["s"] = $this->getSafeData('s');
+        $this->reSearchPara($page_parameter["s"]);//反回搜索数
+        $search_content_array = array(
+            'pagesize' => urldecode(I('get.pagesize', '0', 'int')),
+            'fkeyword' => trim(urldecode(I('get.fkeyword', $this->keywordDefault))),
+            'keymode' => urldecode(I('get.keymode', '0', 'int')),
+            'open_time' => urldecode(I('get.open_time', '0', 'int')),
+            'time_start' => I('get.time_start', lq_cdate(0, 0, (-2592000))),
+            'time_end' => I('get.time_end', lq_cdate(0, 0)),
+            'role' => I('get.role', '', 'int'),
+            'bind' => I('get.bind', '', 'int'),
+            'city' => I('get.city', '', 'int'),
+            'use' => I('get.use', ''),
+        );
+        $this->assign("search_content", $search_content_array);//搜索表单赋值
+        $role_array = C("MEMBER_ROLE");
+        $this->assign("zl_role_str", lqCreatOption($role_array, $search_content_array["role"], "选择角色"));
+        $bind_array = array(
+            1 => '帐号邦定',
+            2 => '微信邦定',
+            3 => '电话邦定',
+            4 => '邮箱邦定',
+        );
+        $this->assign("bind_str", lqCreatOption($bind_array, $search_content_array["bind"], "请选择邦定"));
+//		$city_array=array(
+//			440100=>'广州',
+//			440300=>'深圳',
+//			310000=>'上海',
+//			110000=>'北京',
+//		);
+//		$this->assign("city_str",lqCreatOption($city_array,$search_content_array["city"],"请选择城市"));
+        $this->assign("use_str", lqCreatOption(C("USE_STATUS"), $search_content_array["use"], "请选择使用状态"));
+
+        //sql合并
+        $sqlwhere_parameter = " 1 ";//sql条件
+        if ($search_content_array["fkeyword"] && $search_content_array["fkeyword"] != $this->keywordDefault) {
+            if ($search_content_array["keymode"] == 1) {
+                $sqlwhere_parameter .= " and zc_account ='" . $search_content_array["fkeyword"] . "' ";
+            } else {
+                $sqlwhere_parameter .= " and (zc_nickname like'" . $search_content_array["fkeyword"] . "%' or zc_mobile like'" . $search_content_array["fkeyword"] . "%') ";
+            }
+        }
+
+        if ($search_content_array["bind"]) {
+            if ($search_content_array["bind"] == 1) {
+                $sqlwhere_parameter .= " and zl_account_bind =1 ";
+            } elseif ($search_content_array["bind"] == 2) {
+                $sqlwhere_parameter .= " and zl_openid_bind =1 ";
+            } elseif ($search_content_array["bind"] == 3) {
+                $sqlwhere_parameter .= " and zl_mobile_bind =1 ";
+            } elseif ($search_content_array["bind"] == 4) {
+                $sqlwhere_parameter .= " and zl_email_bind =1 ";
+            } else {
+                $sqlwhere_parameter .= "";
+            }
+        }
+//		if($search_content_array["city"]){$sqlwhere_parameter.=" and zn_city = ".$search_content_array["city"];}
+        if ($search_content_array["use"] != '') {
+            $sqlwhere_parameter .= " and zl_visible = " . intval($search_content_array["use"]);
+        }
+
+        if ($search_content_array["open_time"] == 1 && $search_content_array["time_start"] && $search_content_array["time_end"]) {
+            $ts = strtotime($search_content_array["time_start"] . " 00:00:00");
+            $te = strtotime($search_content_array["time_end"] . " 23:59:59");
+            $sqlwhere_parameter .= " and zn_cdate >=" . $ts . " and zn_cdate<=" . $te;
+        }
+        $sqlwhere_parameter .= " and zl_role = 1";
+        //首页设置s
+        $page_title = array('checkbox' => 'checkbox', 'no' => L("LIST_NO"), 'id' => L("LIST_ID"), 'reg_time' => '注册时间', 'zc_account' => '帐户名/昵称', 'zl_role' => '角色', 'zc_school' => '学校', 'zc_mobile' => '联系电话', 'member_login_clear' => '清零/邦定：帐号/微信/电话/邮箱', 'status' => L("LIST_STAYUS"), 'os' => L("LIST_OS"));
+        $page_config = array(
+            'field' => "`id`,`zl_role`,`zc_account`,`zc_nickname`,`zn_pay_integration`,`zn_rank_integration`,`zc_mobile`,`zc_school`,`zl_account_bind`,`zl_openid_bind`,`zl_mobile_bind`,`zl_email_bind`,`zl_visible`,`zn_cdate`,`zn_mdate`",
+            'where' => $sqlwhere_parameter,
+            'order' => 'id DESC',
+            'title' => $page_title,
+            'thinkphpurl' => __CONTROLLER__ . "/",
+        );
+        //列表表单初始化 e
+
+        $count = $this->MemberModel->apiListCount($sqlwhere_parameter);
+        $page = new \LQLibs\Util\Page($count, C("PAGESIZE"), $page_parameter);//载入分页类
+        $showPage = $page->admin_show();
+        $this->assign("page", $showPage);
+        $this->assign("list", $this->MemberModel->apiListMember($page->firstRow, $page->listRows, $page_config));
+        $this->assign('empty_msg', $this->tableEmptyMsg(count($page_title)));
+        $this->assign("page_config", $page_config);//列表设置赋值模板
+        $this->display();
+    }
+    // 插入/添加
+    public function add()
+    {
         if (IS_POST) {
-			$data = $this->MemberModel->apiInsertMember();
-		     if(preg_match('/^([1-9]\d*)$/',$data)){
-				$this->addAdminLog($data);//写入日志
-				$this->ajaxReturn( array('status' => 1, 'msg' => C('ALERT_ARRAY')["saveOk"],'url' => U(CONTROLLER_NAME.'/add')));
-			}else{
-				$this->ajaxReturn(array('status' => 0, 'msg' => $data));
-			}
+            $data = $this->MemberModel->apiInsertMember();
+            if (preg_match('/^([1-9]\d*)$/', $data)) {
+                $this->addAdminLog($data);//写入日志
+                $this->ajaxReturn(array('status' => 1, 'msg' => C('ALERT_ARRAY')["saveOk"], 'url' => U(CONTROLLER_NAME . '/add')));
+            } else {
+                $this->ajaxReturn(array('status' => 0, 'msg' => $data));
+            }
         } else {
-			$lcdisplay='Public/common-edit';
-			
-			//表单数据初始化s
-			$form_array=lq_post_memory_data();//获得上次表单的记忆数据
-			$form_array["id"]='';
-			$form_array["zl_role_data"]=C('MEMBER_ROLE');
-			$form_array["zl_sex_data"]=C('_SEX');
-			$form_array["zl_is_designer_data"]=C('YESNO_STATUS');
-			$form_array["zl_account_bind"]=1;
-			$form_array["zl_mobile_bind"]=1;
-			$form_array["zl_email_bind"]=1;
-			$form_array["zl_openid_bind"]=0;			
+            $lcdisplay = 'Public/common-edit';
+
+            //表单数据初始化s
+            $form_array = lq_post_memory_data();//获得上次表单的记忆数据
+            $form_array["id"] = '';
+            $form_array["zl_role_data"] = C('MEMBER_ROLE');
+            $form_array["zl_sex_data"] = C('_SEX');
+            $form_array["zl_is_designer_data"] = C('YESNO_STATUS');
+            $form_array["zl_account_bind"] = 1;
+            $form_array["zl_mobile_bind"] = 1;
+            $form_array["zl_email_bind"] = 1;
+            $form_array["zl_openid_bind"] = 0;
 //			$form_array["zc_account"]=lq_random_string(7,2)."@163.com";
 //			$form_array["zc_password"]='123456';
 //			$form_array["zc_password_chk"]='123456';
@@ -175,299 +288,350 @@ class MemberController extends PublicController{
 //			$form_array["zn_province"]=440000;
 //			$form_array["zn_city"]=440100;
 //			$form_array["zn_district"]=440104;
-			
-			$form_array["zn_province_data"]=F('province','',COMMON_ARRAY);//省
-			$form_array["zn_city_data"]=$this->returnRegionList($form_array["zn_province"]);//市
-			$form_array["zn_district_data"]=$this->returnRegionList($form_array["zn_city"]);//区			
-			$form_array["zl_is_designer_data"]=C('YESNO_STATUS');
-			$Form=new Form($this->myForm,$form_array,$this->MemberModel->apiGetCacheComment());
-			$this->assign("LQFdata",$Form->createHtml());//表单数据
-			//表单数据初始化s
+
+            $form_array["zn_province_data"] = F('province', '', COMMON_ARRAY);//省
+            $form_array["zn_city_data"] = $this->returnRegionList($form_array["zn_province"]);//市
+            $form_array["zn_district_data"] = $this->returnRegionList($form_array["zn_city"]);//区
+            $form_array["zl_is_designer_data"] = C('YESNO_STATUS');
+            $Form = new Form($this->myForm, $form_array, $this->MemberModel->apiGetCacheComment());
+            $this->assign("LQFdata", $Form->createHtml());//表单数据
+            //表单数据初始化s
             $this->display($lcdisplay);
         }
     }
-	
-	// 更新/编辑
-    public function edit() {
+
+    // 更新/编辑
+    public function edit()
+    {
         if (IS_POST) {
-			$data = $this->MemberModel->apiUpdateMember();
-		     if(preg_match('/^([1-9]\d*)$/',$data)){
-				$lqf_data=$this->getSafeData('LQF','p');
-				if($lqf_data["zl_is_designer"]==1){
-				M()->execute("update __PREFIX__designer set zc_nickname='".$lqf_data["zc_nickname"]."',zn_city='".$lqf_data["zn_city"]."' where zn_member_id=".$lqf_data["id"]);
-				}
-				if($lqf_data["zl_role"]==6){
-				M()->execute("update __PREFIX__bank set zc_bank_name='".$lqf_data["zc_nickname"]."' where zn_member_id=".$lqf_data["id"]);
-				}
-								
-				$this->addAdminLog($data);//写入日志
-				$this->ajaxReturn( array('status' => 1, 'msg' => C('ALERT_ARRAY')["saveOk"],'url' => U(CONTROLLER_NAME.'/edit/tnid/'.$data)));
-			}else{
-				$this->ajaxReturn(array('status' => 0, 'msg' => $data));
-			}
+            $data = $this->MemberModel->apiUpdateMember();
+            if (preg_match('/^([1-9]\d*)$/', $data)) {
+                $lqf_data = $this->getSafeData('LQF', 'p');
+                if ($lqf_data["zl_is_designer"] == 1) {
+                    M()->execute("update __PREFIX__designer set zc_nickname='" . $lqf_data["zc_nickname"] . "',zn_city='" . $lqf_data["zn_city"] . "' where zn_member_id=" . $lqf_data["id"]);
+                }
+                if ($lqf_data["zl_role"] == 6) {
+                    M()->execute("update __PREFIX__bank set zc_bank_name='" . $lqf_data["zc_nickname"] . "' where zn_member_id=" . $lqf_data["id"]);
+                }
+
+                $this->addAdminLog($data);//写入日志
+                $this->ajaxReturn(array('status' => 1, 'msg' => C('ALERT_ARRAY')["saveOk"], 'url' => U(CONTROLLER_NAME . '/edit/tnid/' . $data)));
+            } else {
+                $this->ajaxReturn(array('status' => 0, 'msg' => $data));
+            }
         } else {
-			$lcdisplay='Public/common-edit';
-			
-			//读取数据s
-			$data = $this->MemberModel->apiGetInfoByID($this->lqgetid);
-			if(!$data) {  $this->error(C("ALERT_ARRAY")["recordNull"]);  }//无记录
-			
-			$memberM=$this->MemberModel->apiM();
-			$data_prev=$memberM->field("`id`,`zc_account`")->where("zl_role=".$data["zl_role"]." and zl_is_designer=".$data["zl_is_designer"]." and id>" .$this->lqgetid)->order("`id` ASC")->limit("0,1")->select();
-			$data_next=$memberM->field("`id`,`zc_account`")->where("zl_role=".$data["zl_role"]." and zl_is_designer=".$data["zl_is_designer"]." and id<" .$this->lqgetid)->order("`id` DESC")->limit("0,1")->select();
-			$data_up_down_page='';
-			if($data_prev){
-				$data_up_down_page.='<li><a href="'.__ACTION__."/tnid/".$data_prev[0]["id"].'" title="上一条：'.lq_kill_html($data_prev[0]["zc_account"],20).'"><i class="fa fa-arrow-circle-left"></i> 上一条</a></li>';
-			}else{
-				$data_up_down_page.='<li class="line-th"><a href="javasrctpt:;" title="空记录"><i class="fa fa-arrow-circle-left"></i> 上一条</a></li>';
-			}
-			if($data_next){
-				$data_up_down_page.='<li><a href="'.__ACTION__."/tnid/".$data_next[0]["id"].'" title="下一条：'.lq_kill_html($data_next[0]["zc_account"],20).'"><i class="fa fa-arrow-circle-right"></i> 下一条</a></li>';
-			}else{
-				$data_up_down_page.='<li class="line-th"><a href="javasrctpt:;" title="空记录"><i class="fa fa-arrow-circle-right"></i> 下一条</a></li>';
-			}
-			$this->assign("data_up_down_page",$data_up_down_page);			
-			
-			
-			//表单数据初始化s
-			$form_array=array();
-			$form_array["os_record_time"]=$this->osRecordTime($data);//操作时间
-			foreach ($data as $lnKey => $laValue) {
-				$form_array[$lnKey]=$laValue;
-			}
-			unset($this->myForm[1][1]);
-			unset($this->myForm[1][2]);
-			
-			
-			if($data["zl_visible"]){
-			$this->myForm[1][5]=array('textShow', 'zl_role', "会员角色",1,'{"is_data":"1","creat_hidden":"1"}');
-			$this->myForm[1][6]=array('textShow', 'zl_is_designer', "设计师",1,'{"is_data":"1","creat_hidden":"1"}');
-			}
-			if($data["zl_account_bind"])	$this->myForm[1][0]=array('textShow', 'zc_account', "会员帐号",1,'{"is_data":"0","creat_hidden":"0"}');
-			if($data["zl_email_bind"])	$this->myForm[1][3]=array('textShow', 'zc_email', "会员邮箱",1,'{"is_data":"0","creat_hidden":"0"}');
-			if($data["zl_mobile_bind"])	$this->myForm[1][4]=array('textShow', 'zc_mobile', "会员手机",1,'{"is_data":"0","creat_hidden":"0"}');
-			
-			$this->myForm[1][7]=array('textShow', 'zc_openid', "openid",1,'{"is_data":"0","creat_hidden":"0"}');
-			$form_array["zl_is_designer_data"]=C('YESNO_STATUS');
-			$form_array["zl_role_data"]=C('MEMBER_ROLE');
-			$form_array["zn_province_data"]=F('province','',COMMON_ARRAY);//省
-			$form_array["zn_city_data"]=$this->returnRegionList($form_array["zn_province"]);//市
-			$form_array["zn_district_data"]=$this->returnRegionList($form_array["zn_city"]);//区
-			$form_array["zl_sex_data"]=C('_SEX');
-			$Form=new Form($this->myForm,$form_array,$this->MemberModel->apiGetCacheComment());
-			$this->assign("LQFdata",$Form->createHtml());//表单数据
-			//表单数据初始化e
+            $lcdisplay = 'Public/common-edit';
+
+            //读取数据s
+            $data = $this->MemberModel->apiGetInfoByID($this->lqgetid);
+            if (!$data) {
+                $this->error(C("ALERT_ARRAY")["recordNull"]);
+            }//无记录
+
+            $memberM = $this->MemberModel->apiM();
+
+            //表单数据初始化s
+            $form_array = array();
+            $form_array["os_record_time"] = $this->osRecordTime($data);//操作时间
+            foreach ($data as $lnKey => $laValue) {
+                $form_array[$lnKey] = $laValue;
+            }
+            unset($this->myForm[1][1]);
+            unset($this->myForm[1][2]);
+
+
+            if ($data["zl_visible"]) {
+                $this->myForm[1][5] = array('textShow', 'zl_role', "会员角色", 1, '{"is_data":"1","creat_hidden":"1"}');
+            }
+            if ($data["zl_account_bind"]) $this->myForm[1][0] = array('textShow', 'zc_account', "会员帐号", 1, '{"is_data":"0","creat_hidden":"0"}');
+            if ($data["zl_email_bind"]) $this->myForm[1][3] = array('textShow', 'zc_email', "会员邮箱", 1, '{"is_data":"0","creat_hidden":"0"}');
+            if ($data["zl_mobile_bind"]) $this->myForm[1][4] = array('textShow', 'zc_mobile', "会员手机", 1, '{"is_data":"0","creat_hidden":"0"}');
+
+            $form_array["zl_is_designer_data"] = C('YESNO_STATUS');
+            $form_array["zl_role_data"] = C('MEMBER_ROLE');
+            $form_array["zn_province_data"] = F('province', '', COMMON_ARRAY);//省
+            $form_array["zn_city_data"] = $this->returnRegionList($form_array["zn_province"]);//市
+            $form_array["zn_district_data"] = $this->returnRegionList($form_array["zn_city"]);//区
+            $form_array["zl_sex_data"] = C('_SEX');
+            $Form = new Form($this->myForm, $form_array, $this->MemberModel->apiGetCacheComment());
+            $this->assign("LQFdata", $Form->createHtml());//表单数据
+            //表单数据初始化e
 
             $this->display($lcdisplay);
         }
     }
 
 
-	//管理员管理 - 修改密码
-    public function editPass() {
+    //管理员管理 - 修改密码
+    public function editPass()
+    {
         if (IS_POST) {
-			 $data = $this->MemberModel->apiEditPass();
-		     if(preg_match('/^([1-9]\d*)$/',$data)){
-				$this->addAdminLog($data);//写入日志
-				$this->ajaxReturn( array('status' => 1, 'msg' => C('ALERT_ARRAY')["saveOk"],'url' => U(CONTROLLER_NAME.'/index')));
-			}else{
-				$this->ajaxReturn(array('status' => 0, 'msg' => $data));
-			}
+            $data = $this->MemberModel->apiEditPass();
+            if (preg_match('/^([1-9]\d*)$/', $data)) {
+                $this->addAdminLog($data);//写入日志
+                $this->ajaxReturn(array('status' => 1, 'msg' => C('ALERT_ARRAY')["saveOk"], 'url' => U(CONTROLLER_NAME . '/index')));
+            } else {
+                $this->ajaxReturn(array('status' => 0, 'msg' => $data));
+            }
         } else {
-			$lcdisplay='edit-password';
-			$combutton='edit';
-			$this->assign("pc_button_os", $combutton); //通用按钮
-			
-			//读取数据s
-			$data = $this->MemberModel->apiGetInfoByID($this->lqgetid);
-			if(!$data) {  $this->error(C("ALERT_ARRAY")["recordNull"]);  }//无记录
+            $lcdisplay = 'edit-password';
+            $combutton = 'edit';
+            $this->assign("pc_button_os", $combutton); //通用按钮
 
-			//表单数据初始化s
-			$form_array=array();
-			$form_array["os_record_time"]=$this->osRecordTime($data);//操作时间
-			foreach ($data as $lnKey => $laValue) {
-				$form_array[$lnKey]=$laValue;
-			}
-			$this->assign("LQFdata",$form_array);//表单数据
-			//表单数据初始化e
+            //读取数据s
+            $data = $this->MemberModel->apiGetInfoByID($this->lqgetid);
+            if (!$data) {
+                $this->error(C("ALERT_ARRAY")["recordNull"]);
+            }//无记录
+
+            //表单数据初始化s
+            $form_array = array();
+            $form_array["os_record_time"] = $this->osRecordTime($data);//操作时间
+            foreach ($data as $lnKey => $laValue) {
+                $form_array[$lnKey] = $laValue;
+            }
+            $this->assign("LQFdata", $form_array);//表单数据
+            //表单数据初始化e
             $this->display($lcdisplay);
         }
-    }	
-
-	//更改字段值 
-    public function opProperty() {
-		$dataReturn=$this->MemberModel->apiProperty();
-		if($dataReturn["status"]==1) $this->addAdminLog($dataReturn["id"]);//写入日志
-        $this->ajaxReturn($dataReturn);
-    }	
-	
-	//更改  zlvisible 
-    public function opVisible() {
-		$dataReturn=$this->MemberModel->apiVisible();
-		if($dataReturn["status"]==1){
-			$this->addAdminLog($dataReturn["id"]);//写入日志
-			$mid= I("get.tnid",'0','int');
-			$status= I("get.status",'0','int')==0?1:0;
-			M()->execute("update __PREFIX__designer set zl_visible='$status' where zn_member_id=".$mid);
-			
-		}
-	    $this->ajaxReturn($dataReturn);
     }
-	
-	//多记录审批 
-    public function opVisibleCheckbox() {
-		$dataReturn=$this->MemberModel->apiVisibleCheckbox();
-		if($dataReturn["status"]==1) $this->addAdminLog($dataReturn["ids"]);//写入日志
+
+    /*
+     * 老师资料认证
+     */
+    public function auth()
+    {
+        if (IS_POST) {
+            $cert_status = $_POST['LQF']['zn_cert_status'];
+            $idcard_status = $_POST['LQF']['zn_idcard_status'];
+            $id = $_POST['LQF']['id'];
+            if ($cert_status == 0 || $idcard_status == 0) {
+                // M("MemberAuth")->where("id=" . $id)->setField('zl_is_auth', 0);
+                $_POST['LQF']['zl_is_auth'] = 0;
+            } else {
+                $_POST['LQF']['zl_is_auth'] = 1;
+                $_POST['LQF']['zc_cert_reason'] = '';
+                $_POST['LQF']['zc_idcard_reason'] = '';
+//                $saveData = array(
+//                    "zl_is_auth" => 1,
+//                    "zc_cert_reason" => '',
+//                    "zc_idcard_reason" => '',
+//                );
+//                M("MemberAuth")->where("id=" . $id)->setField($saveData);
+            }
+            //lq_test(M()->getLastSql());
+            $this->ajaxReturn($this->model_auth->lqSubmit());
+        } else {
+            $lcdisplay = 'auth';
+            $combutton = 'edit';
+            $this->assign("pc_button_os", $combutton); //通用按钮
+
+            //读取数据s
+            $data = $this->model_auth->lqGetField("zn_member_id=" . $this->lqgetid, "*");
+            if (!$data) $this->error('该老师尚未上传认证资料');
+
+            $lcdisplay = 'Public/common-edit';//引用模板
+
+            //表单数据初始化s
+            $form_array = array();
+            $form_array = lq_post_memory_data();//获得上次表单的记忆数据
+            $form_array["zn_sort"] = C("COM_SORT_NUM");
+            $form_array["zn_cert_status_data"] = C('HAVE_CHECKED');
+            $form_array["zn_idcard_status_data"] = C('HAVE_CHECKED');
+            $form_array["os_record_time"] = $this->osRecordTime($data);//操作时间
+            foreach ($data as $lnKey => $laValue) {
+                $form_array[$lnKey] = $laValue;
+            }
+            $Form = new Form($this->authForm, $form_array, $this->model_auth->getCacheComment());
+            $this->assign("LQFdata", $Form->createHtml());//表单数据
+
+            //表单数据初始化e
+            $this->display($lcdisplay);
+        }
+    }
+
+    //更改字段值
+    public function opProperty()
+    {
+        $dataReturn = $this->MemberModel->apiProperty();
+        if ($dataReturn["status"] == 1) $this->addAdminLog($dataReturn["id"]);//写入日志
         $this->ajaxReturn($dataReturn);
-    }	
-		
-	//单记录删除 
-    public function opDelete() {
-		$dataReturn=$this->MemberModel->apiDelete();
-		if($dataReturn["status"]==1) $this->addAdminLog($dataReturn["id"]);//写入日志
-        $this->ajaxReturn($dataReturn);		
-    }	
-	
-	//多记录删除
-    public function opDeleteCheckbox() {
-		$dataReturn=$this->MemberModel->apiDeleteCheckbox();
-		if($dataReturn["status"]==1) $this->addAdminLog($dataReturn["ids"]);//写入日志
-        $this->ajaxReturn($dataReturn);				
-    }			
+    }
 
-	//授权会员登录
-    public function authLogin() {
-		$data = $this->MemberModel->apiGetInfoByID($this->lqgetid);
-		//会员的后台
-		if($data["zl_visible"]==1&&$data["zl_role"]==1){
-				if($data["zl_is_designer"]==0){
-				$manage = 0;
-				}else{
-				$manage = 1;
-				}
-		}elseif($data["zl_visible"]==1&&$data["zl_role"]==6){
-				$manage = 1;
-		}else{
-				$manage = 0;
-		}		
-		if($manage==1){
-			$this->MemberModel->apiLoginSession($data);
-					//写入日志
-					$log_data=array(
-							'id'=>$this->lqgetid,
-							'action'=>"authLogin",
-							'table'=>"member",
-							'url'=>$_SERVER['SERVER_NAME'].':'.$_SERVER["SERVER_PORT"].$_SERVER["REQUEST_URI"],
-							'operator'=>session('admin_auth')["id"],
-					);	
-					$this->UserModel->addAdminLog($log_data);
-			$lcdisplay='auth-login';
-			$this->assign("mes",3);
-			$this->display($lcdisplay);
-		}else{
-			echo '<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />';
-			echo '<script language="javascript">window.opener=null;alert("会员'.$data["zc_account"].'未授权登录操作");window.close();</script>';			
-		}
-    }	
+    //更改  zlvisible
+    public function opVisible()
+    {
+        $dataReturn = $this->MemberModel->apiVisible();
+        if ($dataReturn["status"] == 1) {
+            $this->addAdminLog($dataReturn["id"]);//写入日志
+            $mid = I("get.tnid", '0', 'int');
+            $status = I("get.status", '0', 'int') == 0 ? 1 : 0;
+            M()->execute("update __PREFIX__designer set zl_visible='$status' where zn_member_id=" . $mid);
 
-    protected function addAdminLog($id) {
-					if(!is_numeric($id)) $id=array('in',$id);
-					//写入日志
-					$log_data=array(
-							'id'=>$id,
-							'action'=>ACTION_NAME,
-							'table'=>"member",
-							'url'=>$_SERVER['SERVER_NAME'].':'.$_SERVER["SERVER_PORT"].$_SERVER["REQUEST_URI"],
-							'operator'=>session('admin_auth')["id"],
-					);	
-					$this->UserModel->addAdminLog($log_data);
-	}
+        }
+        $this->ajaxReturn($dataReturn);
+    }
+
+    //多记录审批
+    public function opVisibleCheckbox()
+    {
+        $dataReturn = $this->MemberModel->apiVisibleCheckbox();
+        if ($dataReturn["status"] == 1) $this->addAdminLog($dataReturn["ids"]);//写入日志
+        $this->ajaxReturn($dataReturn);
+    }
+
+    //单记录删除
+    public function opDelete()
+    {
+        $dataReturn = $this->MemberModel->apiDelete();
+        if ($dataReturn["status"] == 1) $this->addAdminLog($dataReturn["id"]);//写入日志
+        $this->ajaxReturn($dataReturn);
+    }
+
+    //多记录删除
+    public function opDeleteCheckbox()
+    {
+        $dataReturn = $this->MemberModel->apiDeleteCheckbox();
+        if ($dataReturn["status"] == 1) $this->addAdminLog($dataReturn["ids"]);//写入日志
+        $this->ajaxReturn($dataReturn);
+    }
+
+    //授权会员登录
+    public function authLogin()
+    {
+        $data = $this->MemberModel->apiGetInfoByID($this->lqgetid);
+        //会员的后台
+        if ($data["zl_visible"] == 1 && $data["zl_role"] == 1) {
+            if ($data["zl_is_designer"] == 0) {
+                $manage = 0;
+            } else {
+                $manage = 1;
+            }
+        } elseif ($data["zl_visible"] == 1 && $data["zl_role"] == 6) {
+            $manage = 1;
+        } else {
+            $manage = 0;
+        }
+        if ($manage == 1) {
+            $this->MemberModel->apiLoginSession($data);
+            //写入日志
+            $log_data = array(
+                'id' => $this->lqgetid,
+                'action' => "authLogin",
+                'table' => "member",
+                'url' => $_SERVER['SERVER_NAME'] . ':' . $_SERVER["SERVER_PORT"] . $_SERVER["REQUEST_URI"],
+                'operator' => session('admin_auth')["id"],
+            );
+            $this->UserModel->addAdminLog($log_data);
+            $lcdisplay = 'auth-login';
+            $this->assign("mes", 3);
+            $this->display($lcdisplay);
+        } else {
+            echo '<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />';
+            echo '<script language="javascript">window.opener=null;alert("会员' . $data["zc_account"] . '未授权登录操作");window.close();</script>';
+        }
+    }
+
+    protected function addAdminLog($id)
+    {
+        if (!is_numeric($id)) $id = array('in', $id);
+        //写入日志
+        $log_data = array(
+            'id' => $id,
+            'action' => ACTION_NAME,
+            'table' => "member",
+            'url' => $_SERVER['SERVER_NAME'] . ':' . $_SERVER["SERVER_PORT"] . $_SERVER["REQUEST_URI"],
+            'operator' => session('admin_auth')["id"],
+        );
+        $this->UserModel->addAdminLog($log_data);
+    }
 
     //数据导出
-    public function opExportXls(){
+    public function opExportXls()
+    {
         error_reporting(E_ALL); //开启错误
         set_time_limit(0); //脚本不超时
 
-        $page_parameter["s"]=$this->getSafeData('s');
+        $page_parameter["s"] = $this->getSafeData('s');
         $this->reSearchPara($page_parameter["s"]);//反回搜索数
-        $search_content_array=array(
-            'pagesize'=>urldecode(I('get.pagesize','0','int')),
-            'fkeyword'=>trim(urldecode(I('get.fkeyword',$this->keywordDefault))),
-            'keymode'=>urldecode(I('get.keymode','1','int')),
-            'open_time'=>urldecode(I('get.open_time','0','int')),
-            'time_start'=>I('get.time_start',lq_cdate(0,0,(-2592000))),
-            'time_end'=>I('get.time_end',lq_cdate(0,0)),
-            'role'=>I('get.role','','int'),
-            'bind'=>I('get.bind','','int'),
-            'city'=>I('get.city','','int'),
-            'use'=>I('get.use',''),
+        $search_content_array = array(
+            'pagesize' => urldecode(I('get.pagesize', '0', 'int')),
+            'fkeyword' => trim(urldecode(I('get.fkeyword', $this->keywordDefault))),
+            'keymode' => urldecode(I('get.keymode', '0', 'int')),
+            'open_time' => urldecode(I('get.open_time', '0', 'int')),
+            'time_start' => I('get.time_start', lq_cdate(0, 0, (-2592000))),
+            'time_end' => I('get.time_end', lq_cdate(0, 0)),
+            'role' => I('get.role', '', 'int'),
+            'bind' => I('get.bind', '', 'int'),
+            'city' => I('get.city', '', 'int'),
+            'use' => I('get.use', ''),
         );
-        $this->assign("search_content",$search_content_array);//搜索表单赋值
-        $role_array=C("MEMBER_ROLE");
-        $role_array[6]='设计师';
-        $this->assign("zl_role_str", lqCreatOption($role_array,$search_content_array["role"],"选择角色"));
-        $bind_array=array(
-            1=>'帐号邦定',
-            2=>'微信邦定',
-            3=>'电话邦定',
-            4=>'邮箱邦定',
+        $this->assign("search_content", $search_content_array);//搜索表单赋值
+        $role_array = C("MEMBER_ROLE");
+        $role_array[6] = '设计师';
+        $this->assign("zl_role_str", lqCreatOption($role_array, $search_content_array["role"], "选择角色"));
+        $bind_array = array(
+            1 => '帐号邦定',
+            2 => '微信邦定',
+            3 => '电话邦定',
+            4 => '邮箱邦定',
         );
-        $this->assign("bind_str",lqCreatOption($bind_array,$search_content_array["bind"],"请选择邦定"));
-        $city_array=array(
-            440100=>'广州',
-            440300=>'深圳',
-            310000=>'上海',
-            110000=>'北京',
+        $this->assign("bind_str", lqCreatOption($bind_array, $search_content_array["bind"], "请选择邦定"));
+        $city_array = array(
+            440100 => '广州',
+            440300 => '深圳',
+            310000 => '上海',
+            110000 => '北京',
         );
 
         //sql合并
-        $sqlwhere_parameter=" 1 ";//sql条件
-        if($search_content_array["fkeyword"]&&$search_content_array["fkeyword"]!=$this->keywordDefault){
-            if($search_content_array["keymode"]==1){
-                $sqlwhere_parameter.=" and zc_account ='".$search_content_array["fkeyword"]."' ";
-            }else{
-                $sqlwhere_parameter.=" and (zc_nickname like'".$search_content_array["fkeyword"]."%' or zc_mobile like'".$search_content_array["fkeyword"]."%') ";
+        $sqlwhere_parameter = " 1 ";//sql条件
+        if ($search_content_array["fkeyword"] && $search_content_array["fkeyword"] != $this->keywordDefault) {
+            if ($search_content_array["keymode"] == 1) {
+                $sqlwhere_parameter .= " and zc_account ='" . $search_content_array["fkeyword"] . "' ";
+            } else {
+                $sqlwhere_parameter .= " and (zc_nickname like'" . $search_content_array["fkeyword"] . "%' or zc_mobile like'" . $search_content_array["fkeyword"] . "%') ";
             }
         }
-        if($search_content_array["role"]){
-            if($search_content_array["role"]==6){
-                $sqlwhere_parameter.=" and zl_is_designer = 1";
-            }else{
-                $sqlwhere_parameter.=" and zl_role = ".$search_content_array["role"];
-            }
+        if ($search_content_array["role"]) {
+            $sqlwhere_parameter .= " and zl_role = " . $search_content_array["role"];
         }
 
-        if($search_content_array["bind"]){
-            if ($search_content_array["bind"]==1){
-                $sqlwhere_parameter.=" and zl_account_bind =1 ";
-            }elseif($search_content_array["bind"]==2){
-                $sqlwhere_parameter.=" and zl_openid_bind =1 ";
-            }elseif($search_content_array["bind"]==3){
-                $sqlwhere_parameter.=" and zl_mobile_bind =1 ";
-            }elseif($search_content_array["bind"]==4){
-                $sqlwhere_parameter.=" and zl_email_bind =1 ";
-            }else{
-                $sqlwhere_parameter.="";
+        if ($search_content_array["bind"]) {
+            if ($search_content_array["bind"] == 1) {
+                $sqlwhere_parameter .= " and zl_account_bind =1 ";
+            } elseif ($search_content_array["bind"] == 2) {
+                $sqlwhere_parameter .= " and zl_openid_bind =1 ";
+            } elseif ($search_content_array["bind"] == 3) {
+                $sqlwhere_parameter .= " and zl_mobile_bind =1 ";
+            } elseif ($search_content_array["bind"] == 4) {
+                $sqlwhere_parameter .= " and zl_email_bind =1 ";
+            } else {
+                $sqlwhere_parameter .= "";
             }
         }
-        if($search_content_array["city"]){$sqlwhere_parameter.=" and zn_city = ".$search_content_array["city"];}
-        if($search_content_array["use"]!=''){$sqlwhere_parameter.=" and zl_visible = ".intval($search_content_array["use"]);}
+        if ($search_content_array["city"]) {
+            $sqlwhere_parameter .= " and zn_city = " . $search_content_array["city"];
+        }
+        if ($search_content_array["use"] != '') {
+            $sqlwhere_parameter .= " and zl_visible = " . intval($search_content_array["use"]);
+        }
 
-        if($search_content_array["open_time"]==1&&$search_content_array["time_start"]&&$search_content_array["time_end"]){
-            $ts=strtotime($search_content_array["time_start"]." 00:00:00");
-            $te=strtotime($search_content_array["time_end"]." 23:59:59");
-            $sqlwhere_parameter.=" and zn_cdate >=".$ts." and zn_cdate<=".$te;
+        if ($search_content_array["open_time"] == 1 && $search_content_array["time_start"] && $search_content_array["time_end"]) {
+            $ts = strtotime($search_content_array["time_start"] . " 00:00:00");
+            $te = strtotime($search_content_array["time_end"] . " 23:59:59");
+            $sqlwhere_parameter .= " and zn_cdate >=" . $ts . " and zn_cdate<=" . $te;
         }
         $page_config = array(
-            'field'=>"`id`,`zl_role`,`zl_is_designer`,`zc_account`,`zc_nickname`,`zn_pay_integration`,`zn_rank_integration`,`zc_mobile`,`zc_email`,`zl_visible`,`zn_cdate`,`zn_mdate`",
-            'where'=>$sqlwhere_parameter,
-            'order'=>'id DESC',
+            'field' => "`id`,`zl_role`,`zl_is_designer`,`zc_account`,`zc_nickname`,`zn_pay_integration`,`zn_rank_integration`,`zc_mobile`,`zc_email`,`zl_visible`,`zn_cdate`,`zn_mdate`",
+            'where' => $sqlwhere_parameter,
+            'order' => 'id DESC',
         );
-        $list = $this->MemberModel->apiListMember(0,100000,$page_config);
-        $name = "会员统计".date("Y-m-d");
+        $list = $this->MemberModel->apiListMember(0, 100000, $page_config);
+        $name = "会员统计" . date("Y-m-d");
 
         import("Org.Util.PHPExcel");
-        $PHPExcel=new \PHPExcel();
+        $PHPExcel = new \PHPExcel();
 
         $PHPExcel->getProperties()
             ->setCreator("会员统计")
@@ -508,25 +672,25 @@ class MemberController extends PublicController{
         //序号 注册/修改时间	ID/帐户名/昵称	角色/设计师		联系电话	清零/邦定	状态
         $num = 1;
         $PHPExcel->setActiveSheetIndex(0)
-            ->setCellValue('A'.$num, '序号')
-            ->setCellValue('B'.$num, '注册时间')
-            ->setCellValue('C'.$num, '帐户名')
-            ->setCellValue('D'.$num, '昵称')
-            ->setCellValue('E'.$num, '角色')
-            ->setCellValue('F'.$num, '邮箱')
-            ->setCellValue('G'.$num, '联系电话') ;
+            ->setCellValue('A' . $num, '序号')
+            ->setCellValue('B' . $num, '注册时间')
+            ->setCellValue('C' . $num, '帐户名')
+            ->setCellValue('D' . $num, '昵称')
+            ->setCellValue('E' . $num, '角色')
+            ->setCellValue('F' . $num, '邮箱')
+            ->setCellValue('G' . $num, '联系电话');
         $PHPExcel->getActiveSheet()->getRowDimension($num)->setRowHeight(30);//行高
 
         foreach ($list as $lnKey => $laValue) {
-            $num = $laValue['no']+1;
+            $num = $laValue['no'] + 1;
             $PHPExcel->setActiveSheetIndex(0)
-                ->setCellValue('A'.$num, $laValue['no'])
-                ->setCellValue('B'.$num, date('Y-m-d H:i:s',$laValue['zn_cdate']))
-                ->setCellValue('C'.$num, $laValue['zc_account'])
-                ->setCellValue('D'.$num, $laValue['zc_nickname'])
-                ->setCellValue('E'.$num, explode("/",$laValue['role_label'])[0])
-                ->setCellValue('F'.$num, $laValue['zc_email'])
-                ->setCellValue('G'.$num, $laValue["zc_mobile"]);
+                ->setCellValue('A' . $num, $laValue['no'])
+                ->setCellValue('B' . $num, date('Y-m-d H:i:s', $laValue['zn_cdate']))
+                ->setCellValue('C' . $num, $laValue['zc_account'])
+                ->setCellValue('D' . $num, $laValue['zc_nickname'])
+                ->setCellValue('E' . $num, explode("/", $laValue['role_label'])[0])
+                ->setCellValue('F' . $num, $laValue['zc_email'])
+                ->setCellValue('G' . $num, $laValue["zc_mobile"]);
 
             $PHPExcel->getActiveSheet()->getRowDimension($num)->setRowHeight(30);//行高
         }
@@ -534,11 +698,12 @@ class MemberController extends PublicController{
         $PHPExcel->getActiveSheet()->setTitle('会员数据');
         $PHPExcel->setActiveSheetIndex(0);
         header('Content-Type: applicationnd.ms-excel');
-        header('Content-Disposition: attachment;filename="'.$name.'.xls"');
+        header('Content-Disposition: attachment;filename="' . $name . '.xls"');
         header('Cache-Control: max-age=0');
         $objWriter = \PHPExcel_IOFactory::createWriter($PHPExcel, 'Excel5');
         $objWriter->save('php://output');
         exit;
     }
 }
+
 ?>

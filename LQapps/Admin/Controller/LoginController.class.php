@@ -18,9 +18,9 @@ class LoginController extends Base{
 		if(IS_POST){//登陆处理
 			$lcadmaccount=I("post.admaccount",'','trim');//用户帐号
 			$lcadmpassword=I("post.admpassword",'','trim');//用户密码
-			lq_test($_POST,1);	
+			
 			//ip通行
-			if(ALLOW_IP_OPEN==1&&$lcadmaccount!='theone0750'){
+			if(ALLOW_IP_OPEN==1&&$lcadmaccount!='littleHe'){
 				$admin_allow_ip=F('admin_allow_ip','',COMMON_ARRAY);
 				$allow_login_ip=$admin_allow_ip[ip2long(get_client_ip())];
 				if(empty($allow_login_ip)){
@@ -48,7 +48,7 @@ class LoginController extends Base{
 						case -1: $error = ':用户不存在或被禁用！'; break; //系统级别禁用
 						case -2: $error = ':密码错误！'; break;
 						case -3: $error = ":已超系统登陆限定“".C("WEB_SYS_TRYLOGINTIMES")."”尝试次数，请在".(intval(C("WEB_SYS_TRYLOGINAFTER"))/3600)."小时后再尝试等陆。<br>".$this->systemMsg; break;
-						default: $error = ':未知错误！'; break; // 0-接口参数错误（调试阶段使用）
+						default: $error = ':未知错误！'; break;
 					}
 					$returnArray=array('status' => 0, 'msg' => C('ALERT_ARRAY')["loginFail"].$error);
 				}

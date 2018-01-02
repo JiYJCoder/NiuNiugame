@@ -1,0 +1,1012 @@
+[ 2017-09-11T15:01:46+08:00 ] 127.0.0.1 /sys-index.php/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-09-11T15:01:46+08:00 ] 127.0.0.1 /sys-index.php/Login/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.032002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.032002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\ShowRuntimeBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-09-11T15:01:46+08:00 ] 127.0.0.1 /sys-index.php/Login/checkCode
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-09-11T15:01:50+08:00 ] 127.0.0.1 /admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Admin\Controller\AdminController::opVisible() should be compatible with Admin\Controller\PublicController::opVisible($is_tree = 0) E:\Little\web\video_hd\LQapps\Admin\Controller\AdminController.class.php 第 6 行.
+NOTIC: [2048] Declaration of Admin\Controller\AdminController::opDelete() should be compatible with Admin\Controller\PublicController::opDelete($is_tree = 0) E:\Little\web\video_hd\LQapps\Admin\Controller\AdminController.class.php 第 6 行.
+
+[ 2017-09-11T15:01:50+08:00 ] 127.0.0.1 /sys-index.php/Login/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\ShowRuntimeBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-09-11T15:01:50+08:00 ] 127.0.0.1 /sys-index.php/Login/checkCode
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-09-11T15:01:58+08:00 ] 127.0.0.1 /sys-index.php/Login/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003001s ]
+SQL: SELECT `id`,`zc_account`,`zc_email`,`zc_mobile`,`zc_password`,`zc_salt`,`zn_trylogin_times`,`zn_trylogin_lasttime`,`zl_visible` FROM `lq_admin` WHERE `zc_account` = 'littleHe' LIMIT 1   [ RunTime:0.0040s ]
+SQL: UPDATE `lq_admin` SET `zn_login_times`=zn_login_times+1,`zn_last_login_time`='1505113317',`zn_mdate`='1505113317',`zn_trylogin_times`='0',`zn_trylogin_lasttime`='1505113317' WHERE `id` = 1 [ RunTime:0.0000s ]
+SQL: SELECT * FROM `lq_admin` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`zn_fid`,`zc_caption` FROM `lq_system_menu` WHERE ( zn_fid=1 and zl_is_menu=1 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0040s ]
+NOTIC: [8] Undefined variable: index E:\Little\web\video_hd\LQapps\User\Model\AdminModel.class.php 第 495 行.
+NOTIC: [8] Undefined index: zc_run E:\Little\web\video_hd\LQapps\User\Model\AdminModel.class.php 第 502 行.
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=2 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=48 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=49 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=50 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: zc_run E:\Little\web\video_hd\LQapps\User\Model\AdminModel.class.php 第 502 行.
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=41 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=65 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: zc_run E:\Little\web\video_hd\LQapps\User\Model\AdminModel.class.php 第 502 行.
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=42 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=113 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: zc_run E:\Little\web\video_hd\LQapps\User\Model\AdminModel.class.php 第 502 行.
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=45 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=67 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: zc_run E:\Little\web\video_hd\LQapps\User\Model\AdminModel.class.php 第 502 行.
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=47 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: zc_run E:\Little\web\video_hd\LQapps\User\Model\AdminModel.class.php 第 502 行.
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=110 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=69 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=73 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: zc_run E:\Little\web\video_hd\LQapps\User\Model\AdminModel.class.php 第 502 行.
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=111 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: zc_run E:\Little\web\video_hd\LQapps\User\Model\AdminModel.class.php 第 502 行.
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=46 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: zc_run E:\Little\web\video_hd\LQapps\User\Model\AdminModel.class.php 第 502 行.
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=64 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=83 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=51 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0010s ]
+SQL: SELECT `zc_popedom` FROM `lq_admin` WHERE ( id=0 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `lq_admin` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`zn_fid`,`zc_caption` FROM `lq_system_menu` WHERE ( zn_fid=1 and zl_is_menu=1 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: index E:\Little\web\video_hd\LQapps\User\Model\AdminModel.class.php 第 495 行.
+NOTIC: [8] Undefined index: zc_run E:\Little\web\video_hd\LQapps\User\Model\AdminModel.class.php 第 502 行.
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=2 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=48 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=49 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=50 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: zc_run E:\Little\web\video_hd\LQapps\User\Model\AdminModel.class.php 第 502 行.
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=41 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=65 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: zc_run E:\Little\web\video_hd\LQapps\User\Model\AdminModel.class.php 第 502 行.
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=42 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=113 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: zc_run E:\Little\web\video_hd\LQapps\User\Model\AdminModel.class.php 第 502 行.
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=45 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=67 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: zc_run E:\Little\web\video_hd\LQapps\User\Model\AdminModel.class.php 第 502 行.
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=47 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: zc_run E:\Little\web\video_hd\LQapps\User\Model\AdminModel.class.php 第 502 行.
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=110 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=69 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=73 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: zc_run E:\Little\web\video_hd\LQapps\User\Model\AdminModel.class.php 第 502 行.
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=111 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: zc_run E:\Little\web\video_hd\LQapps\User\Model\AdminModel.class.php 第 502 行.
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=46 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: zc_run E:\Little\web\video_hd\LQapps\User\Model\AdminModel.class.php 第 502 行.
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=64 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=83 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=51 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0000s ]
+SQL: SELECT `zc_popedom` FROM `lq_admin` WHERE ( id=0 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `lq_admin` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: login E:\Little\web\video_hd\LQapps\User\Api\AdminApi.class.php 第 326 行.
+NOTIC: [8] Undefined index: description E:\Little\web\video_hd\LQapps\User\Api\AdminApi.class.php 第 339 行.
+SQL: INSERT INTO `lq_admin_log` (`zn_type`,`zc_action`,`zc_table`,`zc_table_id`,`zc_description`,`zn_ip`,`zn_cdate`,`zn_operator`,`zc_account`) VALUES ('1','login','admin','1','littleHe对数据表admin进行操作。url请求:www.zier.com:80/sys-index.php/Login/login','2130706433','1505113317','1','littleHe') [ RunTime:0.1950s ]
+
+[ 2017-09-11T15:01:58+08:00 ] 127.0.0.1 /sys-index.php/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.099006s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.099006s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\ShowRuntimeBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-09-11T15:01:58+08:00 ] 127.0.0.1 /sys-index.php/Index/ajaxSearch
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_live` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_live` WHERE ( zl_status = 6 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_vod` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_vod` WHERE ( zl_status = 6 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_member` WHERE ( zl_role=1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_member` WHERE ( zl_role=2 ) LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2017-09-11T15:01:59+08:00 ] 127.0.0.1 /sys-index.php/Index/ajaxVodStatus
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_lesson_vod` WHERE ( zn_cdate >=1504540800 and zn_cdate<=1504627199 ) LIMIT 1   [ RunTime:0.0060s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_member_favorite` WHERE ( zn_type = 2 and  zn_cdate >=1504540800 and zn_cdate<=1504627199 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_member_enroll` WHERE ( zn_type = 2 and zn_cdate >=1504540800 and zn_cdate<=1504627199 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_lesson_vod` WHERE ( zn_cdate >=1504627200 and zn_cdate<=1504713599 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_member_favorite` WHERE ( zn_type = 2 and  zn_cdate >=1504627200 and zn_cdate<=1504713599 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_member_enroll` WHERE ( zn_type = 2 and zn_cdate >=1504627200 and zn_cdate<=1504713599 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_lesson_vod` WHERE ( zn_cdate >=1504713600 and zn_cdate<=1504799999 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_member_favorite` WHERE ( zn_type = 2 and  zn_cdate >=1504713600 and zn_cdate<=1504799999 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_member_enroll` WHERE ( zn_type = 2 and zn_cdate >=1504713600 and zn_cdate<=1504799999 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_lesson_vod` WHERE ( zn_cdate >=1504800000 and zn_cdate<=1504886399 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_member_favorite` WHERE ( zn_type = 2 and  zn_cdate >=1504800000 and zn_cdate<=1504886399 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_member_enroll` WHERE ( zn_type = 2 and zn_cdate >=1504800000 and zn_cdate<=1504886399 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_lesson_vod` WHERE ( zn_cdate >=1504886400 and zn_cdate<=1504972799 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_member_favorite` WHERE ( zn_type = 2 and  zn_cdate >=1504886400 and zn_cdate<=1504972799 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_member_enroll` WHERE ( zn_type = 2 and zn_cdate >=1504886400 and zn_cdate<=1504972799 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_lesson_vod` WHERE ( zn_cdate >=1504972800 and zn_cdate<=1505059199 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_member_favorite` WHERE ( zn_type = 2 and  zn_cdate >=1504972800 and zn_cdate<=1505059199 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_member_enroll` WHERE ( zn_type = 2 and zn_cdate >=1504972800 and zn_cdate<=1505059199 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_lesson_vod` WHERE ( zn_cdate >=1505059200 and zn_cdate<=1505145599 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_member_favorite` WHERE ( zn_type = 2 and  zn_cdate >=1505059200 and zn_cdate<=1505145599 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_member_enroll` WHERE ( zn_type = 2 and zn_cdate >=1505059200 and zn_cdate<=1505145599 ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-09-11T15:01:59+08:00 ] 127.0.0.1 /sys-index.php/Index/ajaxLiveStatus
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_lesson_live` WHERE ( zc_live_start >=1504540800 and zc_live_start<=1504627199 ) LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_member_favorite` WHERE ( zn_type = 1 and zn_cdate >=1504540800 and zn_cdate<=1504627199 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_member_enroll` WHERE ( zn_type = 1 and zn_cdate >=1504540800 and zn_cdate<=1504627199 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_lesson_live` WHERE ( zc_live_start >=1504627200 and zc_live_start<=1504713599 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_member_favorite` WHERE ( zn_type = 1 and zn_cdate >=1504627200 and zn_cdate<=1504713599 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_member_enroll` WHERE ( zn_type = 1 and zn_cdate >=1504627200 and zn_cdate<=1504713599 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_lesson_live` WHERE ( zc_live_start >=1504713600 and zc_live_start<=1504799999 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_member_favorite` WHERE ( zn_type = 1 and zn_cdate >=1504713600 and zn_cdate<=1504799999 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_member_enroll` WHERE ( zn_type = 1 and zn_cdate >=1504713600 and zn_cdate<=1504799999 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_lesson_live` WHERE ( zc_live_start >=1504800000 and zc_live_start<=1504886399 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_member_favorite` WHERE ( zn_type = 1 and zn_cdate >=1504800000 and zn_cdate<=1504886399 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_member_enroll` WHERE ( zn_type = 1 and zn_cdate >=1504800000 and zn_cdate<=1504886399 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_lesson_live` WHERE ( zc_live_start >=1504886400 and zc_live_start<=1504972799 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_member_favorite` WHERE ( zn_type = 1 and zn_cdate >=1504886400 and zn_cdate<=1504972799 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_member_enroll` WHERE ( zn_type = 1 and zn_cdate >=1504886400 and zn_cdate<=1504972799 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_lesson_live` WHERE ( zc_live_start >=1504972800 and zc_live_start<=1505059199 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_member_favorite` WHERE ( zn_type = 1 and zn_cdate >=1504972800 and zn_cdate<=1505059199 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_member_enroll` WHERE ( zn_type = 1 and zn_cdate >=1504972800 and zn_cdate<=1505059199 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_lesson_live` WHERE ( zc_live_start >=1505059200 and zc_live_start<=1505145599 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_member_favorite` WHERE ( zn_type = 1 and zn_cdate >=1505059200 and zn_cdate<=1505145599 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_member_enroll` WHERE ( zn_type = 1 and zn_cdate >=1505059200 and zn_cdate<=1505145599 ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-09-11T15:02:22+08:00 ] 127.0.0.1 /sys-index.php/Vod/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2048] Declaration of Admin\Model\VodModel::setProperty() should be compatible with Think\Model::setProperty($name, $value) E:\Little\web\video_hd\LQapps\Admin\Model\VodModel.class.php 第 5 行.
+NOTIC: [8] Use of undefined constant SYSTEM_MENU_CURRENT - assumed 'SYSTEM_MENU_CURRENT' E:\Little\web\video_hd\LQapps\Admin\Controller\PublicController.class.php 第 481 行.
+NOTIC: [8] Use of undefined constant SYSTEM_MENU_CURRENT - assumed 'SYSTEM_MENU_CURRENT' E:\Little\web\video_hd\LQapps\Admin\Controller\PublicController.class.php 第 484 行.
+NOTIC: [8] Undefined variable: s E:\Little\web\video_hd\LQapps\Common\Common\function.php 第 1029 行.
+NOTIC: [8] Undefined variable: s E:\Little\web\video_hd\LQapps\Common\Common\function.php 第 1029 行.
+NOTIC: [8] Undefined variable: s E:\Little\web\video_hd\LQapps\Common\Common\function.php 第 1029 行.
+NOTIC: [8] Undefined variable: s E:\Little\web\video_hd\LQapps\Common\Common\function.php 第 1029 行.
+NOTIC: [8] Undefined variable: s E:\Little\web\video_hd\LQapps\Common\Common\function.php 第 1029 行.
+NOTIC: [8] Undefined variable: s E:\Little\web\video_hd\LQapps\Common\Common\function.php 第 1029 行.
+NOTIC: [8] Undefined variable: s E:\Little\web\video_hd\LQapps\Common\Common\function.php 第 1029 行.
+NOTIC: [8] Undefined variable: s E:\Little\web\video_hd\LQapps\Common\Common\function.php 第 1029 行.
+NOTIC: [8] Undefined variable: s E:\Little\web\video_hd\LQapps\Common\Common\function.php 第 1029 行.
+NOTIC: [8] Undefined variable: s E:\Little\web\video_hd\LQapps\Common\Common\function.php 第 1029 行.
+NOTIC: [8] Undefined variable: s E:\Little\web\video_hd\LQapps\Common\Common\function.php 第 1029 行.
+NOTIC: [8] Undefined variable: s E:\Little\web\video_hd\LQapps\Common\Common\function.php 第 1029 行.
+NOTIC: [8] Undefined variable: s E:\Little\web\video_hd\LQapps\Common\Common\function.php 第 1029 行.
+SQL: SELECT COUNT(*) AS tp_count FROM lq_vod p WHERE (  1  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`zn_fid`,`zn_cat_id`,`zn_teacher_id`,`zc_image`,`zc_title`,`zl_is_index`,`zc_expect_lesson`,`zl_is_good`,`zl_status` FROM `lq_vod` WHERE (  1  ) ORDER BY zn_sort,id DESC LIMIT 0,5   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: zl_visible E:\Little\web\video_hd\LQapps\Admin\Model\VodModel.class.php 第 41 行.
+NOTIC: [8] Undefined index:  E:\Little\web\video_hd\LQapps\Admin\Model\VodModel.class.php 第 41 行.
+SQL: SELECT `zc_nickname` FROM `lq_member` WHERE ( id=4 ) LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: zl_visible E:\Little\web\video_hd\LQapps\Admin\Model\VodModel.class.php 第 43 行.
+NOTIC: [8] Undefined index: zl_visible E:\Little\web\video_hd\LQapps\Admin\Model\VodModel.class.php 第 41 行.
+NOTIC: [8] Undefined index:  E:\Little\web\video_hd\LQapps\Admin\Model\VodModel.class.php 第 41 行.
+SQL: SELECT `zc_nickname` FROM `lq_member` WHERE ( id=4 ) LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: zl_visible E:\Little\web\video_hd\LQapps\Admin\Model\VodModel.class.php 第 43 行.
+NOTIC: [8] Undefined index: zl_visible E:\Little\web\video_hd\LQapps\Admin\Model\VodModel.class.php 第 41 行.
+NOTIC: [8] Undefined index:  E:\Little\web\video_hd\LQapps\Admin\Model\VodModel.class.php 第 41 行.
+SQL: SELECT `zc_nickname` FROM `lq_member` WHERE ( id=4 ) LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: zl_visible E:\Little\web\video_hd\LQapps\Admin\Model\VodModel.class.php 第 43 行.
+NOTIC: [8] Undefined index: zl_visible E:\Little\web\video_hd\LQapps\Admin\Model\VodModel.class.php 第 41 行.
+NOTIC: [8] Undefined index:  E:\Little\web\video_hd\LQapps\Admin\Model\VodModel.class.php 第 41 行.
+SQL: SELECT `zc_nickname` FROM `lq_member` WHERE ( id=4 ) LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: zl_visible E:\Little\web\video_hd\LQapps\Admin\Model\VodModel.class.php 第 43 行.
+NOTIC: [8] Undefined index: zl_visible E:\Little\web\video_hd\LQapps\Admin\Model\VodModel.class.php 第 41 行.
+NOTIC: [8] Undefined index:  E:\Little\web\video_hd\LQapps\Admin\Model\VodModel.class.php 第 41 行.
+SQL: SELECT `zc_nickname` FROM `lq_member` WHERE ( id=4 ) LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: zl_visible E:\Little\web\video_hd\LQapps\Admin\Model\VodModel.class.php 第 43 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: zl_visible E:\Little\web\video_hd\Runtime\Cache\Admin\23adb3df43060b9908c814b6d7f7facf.php 第 379 行.
+NOTIC: [8] Undefined index: zl_visible E:\Little\web\video_hd\Runtime\Cache\Admin\23adb3df43060b9908c814b6d7f7facf.php 第 379 行.
+NOTIC: [8] Undefined index: zl_visible E:\Little\web\video_hd\Runtime\Cache\Admin\23adb3df43060b9908c814b6d7f7facf.php 第 379 行.
+NOTIC: [8] Undefined index: zl_visible E:\Little\web\video_hd\Runtime\Cache\Admin\23adb3df43060b9908c814b6d7f7facf.php 第 379 行.
+NOTIC: [8] Undefined index: zl_visible E:\Little\web\video_hd\Runtime\Cache\Admin\23adb3df43060b9908c814b6d7f7facf.php 第 379 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.062400s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.062400s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\ShowRuntimeBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.015600s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.015600s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-09-11T15:02:22+08:00 ] 127.0.0.1 /sys-index.php/Vod/ajaxSearchData
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+NOTIC: [2048] Declaration of Admin\Model\VodModel::setProperty() should be compatible with Think\Model::setProperty($name, $value) E:\Little\web\video_hd\LQapps\Admin\Model\VodModel.class.php 第 5 行.
+NOTIC: [8] Use of undefined constant SYSTEM_MENU_CURRENT - assumed 'SYSTEM_MENU_CURRENT' E:\Little\web\video_hd\LQapps\Admin\Controller\PublicController.class.php 第 481 行.
+NOTIC: [8] Use of undefined constant SYSTEM_MENU_CURRENT - assumed 'SYSTEM_MENU_CURRENT' E:\Little\web\video_hd\LQapps\Admin\Controller\PublicController.class.php 第 484 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_vod` WHERE ( zl_status = 6 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_vod` WHERE ( zl_status = 1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_vod` WHERE ( zl_status = 2 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_vod` WHERE ( zl_status = 4 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `lq_vod` GROUP BY zn_teacher_id  [ RunTime:0.0050s ]
+SQL: SELECT * FROM `lq_vod_record` GROUP BY zn_member_id  [ RunTime:0.0130s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_lesson_vod` WHERE ( zc_vod_info <> '' ) LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2017-09-11T15:02:25+08:00 ] 127.0.0.1 /sys-index.php/Vod/edit/tnid/30
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of Admin\Model\VodModel::setProperty() should be compatible with Think\Model::setProperty($name, $value) E:\Little\web\video_hd\LQapps\Admin\Model\VodModel.class.php 第 5 行.
+NOTIC: [8] Use of undefined constant SYSTEM_MENU_CURRENT - assumed 'SYSTEM_MENU_CURRENT' E:\Little\web\video_hd\LQapps\Admin\Controller\PublicController.class.php 第 481 行.
+NOTIC: [8] Use of undefined constant SYSTEM_MENU_CURRENT - assumed 'SYSTEM_MENU_CURRENT' E:\Little\web\video_hd\LQapps\Admin\Controller\PublicController.class.php 第 484 行.
+SQL: SELECT * FROM `lq_vod` WHERE ( id=30 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`zc_title` FROM `lq_vod` WHERE ( id>30 ) ORDER BY `id` ASC LIMIT 0,1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`zc_title` FROM `lq_vod` WHERE ( id<30 ) ORDER BY `id` DESC LIMIT 0,1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: display E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 60 行.
+NOTIC: [8] Undefined index: field E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 354 行.
+NOTIC: [8] Undefined index: controlTitle E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 90 行.
+NOTIC: [8] Undefined index: dataType E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 93 行.
+NOTIC: [8] Undefined index: confirm E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 94 行.
+NOTIC: [8] Undefined index: dataBetween E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 96 行.
+NOTIC: [8] Undefined index: rows E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 99 行.
+NOTIC: [8] Undefined index: maxl E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 100 行.
+NOTIC: [8] Undefined index: width E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 101 行.
+NOTIC: [8] Undefined index: height E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 102 行.
+NOTIC: [8] Undefined index: style E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 103 行.
+NOTIC: [8] Undefined index: display E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 60 行.
+NOTIC: [8] Undefined index: fast-fill E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 161 行.
+NOTIC: [8] Undefined index: controlTitle E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 90 行.
+NOTIC: [8] Undefined index: confirm E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 94 行.
+NOTIC: [8] Undefined index: dataBetween E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 96 行.
+NOTIC: [8] Undefined index: rows E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 99 行.
+NOTIC: [8] Undefined index: width E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 101 行.
+NOTIC: [8] Undefined index: height E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 102 行.
+NOTIC: [8] Undefined index: style E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 103 行.
+NOTIC: [8] Undefined index: zc_image_label E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 495 行.
+NOTIC: [8] Undefined index: display E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 60 行.
+NOTIC: [8] Undefined index: uploadsize E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 511 行.
+NOTIC: [8] Undefined index: required E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 530 行.
+NOTIC: [8] Undefined index: display E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 60 行.
+NOTIC: [8] Undefined index: controlTitle E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 90 行.
+NOTIC: [8] Undefined index: confirm E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 94 行.
+NOTIC: [8] Undefined index: dataBetween E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 96 行.
+NOTIC: [8] Undefined index: rows E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 99 行.
+NOTIC: [8] Undefined index: maxl E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 100 行.
+NOTIC: [8] Undefined index: width E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 101 行.
+NOTIC: [8] Undefined index: height E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 102 行.
+NOTIC: [8] Undefined index: style E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 103 行.
+NOTIC: [8] Undefined index: display E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 60 行.
+NOTIC: [8] Undefined index: fast-fill E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 161 行.
+NOTIC: [8] Undefined index: controlTitle E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 90 行.
+NOTIC: [8] Undefined index: confirm E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 94 行.
+NOTIC: [8] Undefined index: dataBetween E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 96 行.
+NOTIC: [8] Undefined index: rows E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 99 行.
+NOTIC: [8] Undefined index: maxl E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 100 行.
+NOTIC: [8] Undefined index: width E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 101 行.
+NOTIC: [8] Undefined index: height E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 102 行.
+NOTIC: [8] Undefined index: style E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 103 行.
+NOTIC: [8] Undefined index: display E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 60 行.
+NOTIC: [8] Undefined index: display E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 60 行.
+NOTIC: [8] Undefined index: fast-fill E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 161 行.
+NOTIC: [8] Undefined index: controlTitle E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 90 行.
+NOTIC: [8] Undefined index: confirm E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 94 行.
+NOTIC: [8] Undefined index: dataBetween E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 96 行.
+NOTIC: [8] Undefined index: rows E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 99 行.
+NOTIC: [8] Undefined index: maxl E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 100 行.
+NOTIC: [8] Undefined index: width E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 101 行.
+NOTIC: [8] Undefined index: height E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 102 行.
+NOTIC: [8] Undefined index: style E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 103 行.
+NOTIC: [8] Undefined index: zd_send_time E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 455 行.
+NOTIC: [8] Undefined index: display E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 60 行.
+NOTIC: [8] Undefined index: zd_send_time E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 477 行.
+NOTIC: [8] Undefined index: controlTitle E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 90 行.
+NOTIC: [8] Undefined index: confirm E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 94 行.
+NOTIC: [8] Undefined index: dataBetween E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 96 行.
+NOTIC: [8] Undefined index: rows E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 99 行.
+NOTIC: [8] Undefined index: maxl E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 100 行.
+NOTIC: [8] Undefined index: width E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 101 行.
+NOTIC: [8] Undefined index: height E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 102 行.
+NOTIC: [8] Undefined index: style E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 103 行.
+NOTIC: [8] Undefined index: display E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 60 行.
+NOTIC: [8] Undefined index: display E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 60 行.
+NOTIC: [8] Undefined index: controlTitle E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 90 行.
+NOTIC: [8] Undefined index: confirm E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 94 行.
+NOTIC: [8] Undefined index: dataBetween E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 96 行.
+NOTIC: [8] Undefined index: rows E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 99 行.
+NOTIC: [8] Undefined index: maxl E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 100 行.
+NOTIC: [8] Undefined index: width E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 101 行.
+NOTIC: [8] Undefined index: height E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 102 行.
+NOTIC: [8] Undefined index: style E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 103 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.025600s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025600s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\ShowRuntimeBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.015600s ]
+INFO: [ app_end ] --END-- [ RunTime:0.015600s ]
+
+[ 2017-09-11T15:02:26+08:00 ] 127.0.0.1 /sys-index.php/index/ueditorConfig//noCache/1505113346621
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Undefined index: editorfile E:\Little\web\video_hd\LQapps\Common\LQPublic\Controller\Base.class.php 第 245 行.
+
+[ 2017-09-11T15:02:29+08:00 ] 127.0.0.1 /sys-index.php/Vod/edit/tnid/30
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+NOTIC: [2048] Declaration of Admin\Model\VodModel::setProperty() should be compatible with Think\Model::setProperty($name, $value) E:\Little\web\video_hd\LQapps\Admin\Model\VodModel.class.php 第 5 行.
+NOTIC: [8] Use of undefined constant SYSTEM_MENU_CURRENT - assumed 'SYSTEM_MENU_CURRENT' E:\Little\web\video_hd\LQapps\Admin\Controller\PublicController.class.php 第 481 行.
+NOTIC: [8] Use of undefined constant SYSTEM_MENU_CURRENT - assumed 'SYSTEM_MENU_CURRENT' E:\Little\web\video_hd\LQapps\Admin\Controller\PublicController.class.php 第 484 行.
+NOTIC: [8] Undefined variable: returndata E:\Little\web\video_hd\LQapps\Common\LQPublic\Model\Base.class.php 第 39 行.
+NOTIC: [8] Undefined index: auto E:\Little\web\video_hd\Public\ThinkPHP\Library\Think\Model.class.php 第 1173 行.
+SQL: UPDATE `lq_vod` SET `zn_cat_id`='8',`zc_title`='牛顿第三定律',`zc_image`='/uploadfiles/20170818/1503020755383201.jpeg',`zc_summary`='牛顿第三定律牛顿第三定律',`zc_expect_lesson`='5',`zc_content`='',`zn_sort`='0',`zl_status`='6',`zc_reason`='',`zn_mdate`='1505113349' WHERE `id` = 30 [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: description E:\Little\web\video_hd\LQapps\User\Api\AdminApi.class.php 第 339 行.
+SQL: INSERT INTO `lq_admin_log` (`zn_type`,`zc_action`,`zc_table`,`zc_table_id`,`zc_description`,`zn_ip`,`zn_cdate`,`zn_operator`,`zc_account`) VALUES ('1','edit','vod','30','littleHe对数据表vod进行修改页面操作。url请求:www.zier.com:80/sys-index.php/Vod/edit/tnid/30','2130706433','1505113349','1','littleHe') [ RunTime:0.0000s ]
+
+[ 2017-09-11T15:02:31+08:00 ] 127.0.0.1 /sys-index.php/Vod/edit/tnid/30
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of Admin\Model\VodModel::setProperty() should be compatible with Think\Model::setProperty($name, $value) E:\Little\web\video_hd\LQapps\Admin\Model\VodModel.class.php 第 5 行.
+NOTIC: [8] Use of undefined constant SYSTEM_MENU_CURRENT - assumed 'SYSTEM_MENU_CURRENT' E:\Little\web\video_hd\LQapps\Admin\Controller\PublicController.class.php 第 481 行.
+NOTIC: [8] Use of undefined constant SYSTEM_MENU_CURRENT - assumed 'SYSTEM_MENU_CURRENT' E:\Little\web\video_hd\LQapps\Admin\Controller\PublicController.class.php 第 484 行.
+SQL: SELECT * FROM `lq_vod` WHERE ( id=30 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`zc_title` FROM `lq_vod` WHERE ( id>30 ) ORDER BY `id` ASC LIMIT 0,1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`zc_title` FROM `lq_vod` WHERE ( id<30 ) ORDER BY `id` DESC LIMIT 0,1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: display E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 60 行.
+NOTIC: [8] Undefined index: field E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 354 行.
+NOTIC: [8] Undefined index: controlTitle E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 90 行.
+NOTIC: [8] Undefined index: dataType E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 93 行.
+NOTIC: [8] Undefined index: confirm E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 94 行.
+NOTIC: [8] Undefined index: dataBetween E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 96 行.
+NOTIC: [8] Undefined index: rows E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 99 行.
+NOTIC: [8] Undefined index: maxl E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 100 行.
+NOTIC: [8] Undefined index: width E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 101 行.
+NOTIC: [8] Undefined index: height E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 102 行.
+NOTIC: [8] Undefined index: style E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 103 行.
+NOTIC: [8] Undefined index: display E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 60 行.
+NOTIC: [8] Undefined index: fast-fill E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 161 行.
+NOTIC: [8] Undefined index: controlTitle E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 90 行.
+NOTIC: [8] Undefined index: confirm E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 94 行.
+NOTIC: [8] Undefined index: dataBetween E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 96 行.
+NOTIC: [8] Undefined index: rows E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 99 行.
+NOTIC: [8] Undefined index: width E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 101 行.
+NOTIC: [8] Undefined index: height E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 102 行.
+NOTIC: [8] Undefined index: style E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 103 行.
+NOTIC: [8] Undefined index: zc_image_label E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 495 行.
+NOTIC: [8] Undefined index: display E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 60 行.
+NOTIC: [8] Undefined index: uploadsize E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 511 行.
+NOTIC: [8] Undefined index: required E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 530 行.
+NOTIC: [8] Undefined index: display E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 60 行.
+NOTIC: [8] Undefined index: controlTitle E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 90 行.
+NOTIC: [8] Undefined index: confirm E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 94 行.
+NOTIC: [8] Undefined index: dataBetween E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 96 行.
+NOTIC: [8] Undefined index: rows E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 99 行.
+NOTIC: [8] Undefined index: maxl E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 100 行.
+NOTIC: [8] Undefined index: width E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 101 行.
+NOTIC: [8] Undefined index: height E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 102 行.
+NOTIC: [8] Undefined index: style E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 103 行.
+NOTIC: [8] Undefined index: display E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 60 行.
+NOTIC: [8] Undefined index: fast-fill E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 161 行.
+NOTIC: [8] Undefined index: controlTitle E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 90 行.
+NOTIC: [8] Undefined index: confirm E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 94 行.
+NOTIC: [8] Undefined index: dataBetween E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 96 行.
+NOTIC: [8] Undefined index: rows E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 99 行.
+NOTIC: [8] Undefined index: maxl E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 100 行.
+NOTIC: [8] Undefined index: width E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 101 行.
+NOTIC: [8] Undefined index: height E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 102 行.
+NOTIC: [8] Undefined index: style E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 103 行.
+NOTIC: [8] Undefined index: display E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 60 行.
+NOTIC: [8] Undefined index: display E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 60 行.
+NOTIC: [8] Undefined index: fast-fill E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 161 行.
+NOTIC: [8] Undefined index: controlTitle E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 90 行.
+NOTIC: [8] Undefined index: confirm E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 94 行.
+NOTIC: [8] Undefined index: dataBetween E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 96 行.
+NOTIC: [8] Undefined index: rows E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 99 行.
+NOTIC: [8] Undefined index: maxl E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 100 行.
+NOTIC: [8] Undefined index: width E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 101 行.
+NOTIC: [8] Undefined index: height E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 102 行.
+NOTIC: [8] Undefined index: style E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 103 行.
+NOTIC: [8] Undefined index: zd_send_time E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 455 行.
+NOTIC: [8] Undefined index: display E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 60 行.
+NOTIC: [8] Undefined index: zd_send_time E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 477 行.
+NOTIC: [8] Undefined index: controlTitle E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 90 行.
+NOTIC: [8] Undefined index: confirm E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 94 行.
+NOTIC: [8] Undefined index: dataBetween E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 96 行.
+NOTIC: [8] Undefined index: rows E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 99 行.
+NOTIC: [8] Undefined index: maxl E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 100 行.
+NOTIC: [8] Undefined index: width E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 101 行.
+NOTIC: [8] Undefined index: height E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 102 行.
+NOTIC: [8] Undefined index: style E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 103 行.
+NOTIC: [8] Undefined index: display E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 60 行.
+NOTIC: [8] Undefined index: display E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 60 行.
+NOTIC: [8] Undefined index: controlTitle E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 90 行.
+NOTIC: [8] Undefined index: confirm E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 94 行.
+NOTIC: [8] Undefined index: dataBetween E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 96 行.
+NOTIC: [8] Undefined index: rows E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 99 行.
+NOTIC: [8] Undefined index: maxl E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 100 行.
+NOTIC: [8] Undefined index: width E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 101 行.
+NOTIC: [8] Undefined index: height E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 102 行.
+NOTIC: [8] Undefined index: style E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 103 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.015600s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031200s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031200s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\ShowRuntimeBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-09-11T15:02:34+08:00 ] 127.0.0.1 /sys-index.php/index/ueditorConfig//noCache/1505113354666
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+NOTIC: [8] Undefined index: editorfile E:\Little\web\video_hd\LQapps\Common\LQPublic\Controller\Base.class.php 第 245 行.
+
+[ 2017-09-11T15:02:37+08:00 ] 127.0.0.1 /sys-index.php/Vod/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2048] Declaration of Admin\Model\VodModel::setProperty() should be compatible with Think\Model::setProperty($name, $value) E:\Little\web\video_hd\LQapps\Admin\Model\VodModel.class.php 第 5 行.
+NOTIC: [8] Use of undefined constant SYSTEM_MENU_CURRENT - assumed 'SYSTEM_MENU_CURRENT' E:\Little\web\video_hd\LQapps\Admin\Controller\PublicController.class.php 第 481 行.
+NOTIC: [8] Use of undefined constant SYSTEM_MENU_CURRENT - assumed 'SYSTEM_MENU_CURRENT' E:\Little\web\video_hd\LQapps\Admin\Controller\PublicController.class.php 第 484 行.
+NOTIC: [8] Undefined variable: s E:\Little\web\video_hd\LQapps\Common\Common\function.php 第 1029 行.
+NOTIC: [8] Undefined variable: s E:\Little\web\video_hd\LQapps\Common\Common\function.php 第 1029 行.
+NOTIC: [8] Undefined variable: s E:\Little\web\video_hd\LQapps\Common\Common\function.php 第 1029 行.
+NOTIC: [8] Undefined variable: s E:\Little\web\video_hd\LQapps\Common\Common\function.php 第 1029 行.
+NOTIC: [8] Undefined variable: s E:\Little\web\video_hd\LQapps\Common\Common\function.php 第 1029 行.
+NOTIC: [8] Undefined variable: s E:\Little\web\video_hd\LQapps\Common\Common\function.php 第 1029 行.
+NOTIC: [8] Undefined variable: s E:\Little\web\video_hd\LQapps\Common\Common\function.php 第 1029 行.
+NOTIC: [8] Undefined variable: s E:\Little\web\video_hd\LQapps\Common\Common\function.php 第 1029 行.
+NOTIC: [8] Undefined variable: s E:\Little\web\video_hd\LQapps\Common\Common\function.php 第 1029 行.
+NOTIC: [8] Undefined variable: s E:\Little\web\video_hd\LQapps\Common\Common\function.php 第 1029 行.
+NOTIC: [8] Undefined variable: s E:\Little\web\video_hd\LQapps\Common\Common\function.php 第 1029 行.
+NOTIC: [8] Undefined variable: s E:\Little\web\video_hd\LQapps\Common\Common\function.php 第 1029 行.
+NOTIC: [8] Undefined variable: s E:\Little\web\video_hd\LQapps\Common\Common\function.php 第 1029 行.
+SQL: SELECT COUNT(*) AS tp_count FROM lq_vod p WHERE (  1  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`zn_fid`,`zn_cat_id`,`zn_teacher_id`,`zc_image`,`zc_title`,`zl_is_index`,`zc_expect_lesson`,`zl_is_good`,`zl_status` FROM `lq_vod` WHERE (  1  ) ORDER BY zn_sort,id DESC LIMIT 0,5   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: zl_visible E:\Little\web\video_hd\LQapps\Admin\Model\VodModel.class.php 第 41 行.
+NOTIC: [8] Undefined index:  E:\Little\web\video_hd\LQapps\Admin\Model\VodModel.class.php 第 41 行.
+SQL: SELECT `zc_nickname` FROM `lq_member` WHERE ( id=4 ) LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: zl_visible E:\Little\web\video_hd\LQapps\Admin\Model\VodModel.class.php 第 43 行.
+NOTIC: [8] Undefined index: zl_visible E:\Little\web\video_hd\LQapps\Admin\Model\VodModel.class.php 第 41 行.
+NOTIC: [8] Undefined index:  E:\Little\web\video_hd\LQapps\Admin\Model\VodModel.class.php 第 41 行.
+SQL: SELECT `zc_nickname` FROM `lq_member` WHERE ( id=4 ) LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: zl_visible E:\Little\web\video_hd\LQapps\Admin\Model\VodModel.class.php 第 43 行.
+NOTIC: [8] Undefined index: zl_visible E:\Little\web\video_hd\LQapps\Admin\Model\VodModel.class.php 第 41 行.
+NOTIC: [8] Undefined index:  E:\Little\web\video_hd\LQapps\Admin\Model\VodModel.class.php 第 41 行.
+SQL: SELECT `zc_nickname` FROM `lq_member` WHERE ( id=4 ) LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: zl_visible E:\Little\web\video_hd\LQapps\Admin\Model\VodModel.class.php 第 43 行.
+NOTIC: [8] Undefined index: zl_visible E:\Little\web\video_hd\LQapps\Admin\Model\VodModel.class.php 第 41 行.
+NOTIC: [8] Undefined index:  E:\Little\web\video_hd\LQapps\Admin\Model\VodModel.class.php 第 41 行.
+SQL: SELECT `zc_nickname` FROM `lq_member` WHERE ( id=4 ) LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: zl_visible E:\Little\web\video_hd\LQapps\Admin\Model\VodModel.class.php 第 43 行.
+NOTIC: [8] Undefined index: zl_visible E:\Little\web\video_hd\LQapps\Admin\Model\VodModel.class.php 第 41 行.
+NOTIC: [8] Undefined index:  E:\Little\web\video_hd\LQapps\Admin\Model\VodModel.class.php 第 41 行.
+SQL: SELECT `zc_nickname` FROM `lq_member` WHERE ( id=4 ) LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: zl_visible E:\Little\web\video_hd\LQapps\Admin\Model\VodModel.class.php 第 43 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: zl_visible E:\Little\web\video_hd\Runtime\Cache\Admin\23adb3df43060b9908c814b6d7f7facf.php 第 379 行.
+NOTIC: [8] Undefined index: zl_visible E:\Little\web\video_hd\Runtime\Cache\Admin\23adb3df43060b9908c814b6d7f7facf.php 第 379 行.
+NOTIC: [8] Undefined index: zl_visible E:\Little\web\video_hd\Runtime\Cache\Admin\23adb3df43060b9908c814b6d7f7facf.php 第 379 行.
+NOTIC: [8] Undefined index: zl_visible E:\Little\web\video_hd\Runtime\Cache\Admin\23adb3df43060b9908c814b6d7f7facf.php 第 379 行.
+NOTIC: [8] Undefined index: zl_visible E:\Little\web\video_hd\Runtime\Cache\Admin\23adb3df43060b9908c814b6d7f7facf.php 第 379 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023600s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023600s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\ShowRuntimeBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.015600s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.015600s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-09-11T15:02:37+08:00 ] 127.0.0.1 /sys-index.php/Vod/ajaxSearchData
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004001s ]
+NOTIC: [2048] Declaration of Admin\Model\VodModel::setProperty() should be compatible with Think\Model::setProperty($name, $value) E:\Little\web\video_hd\LQapps\Admin\Model\VodModel.class.php 第 5 行.
+NOTIC: [8] Use of undefined constant SYSTEM_MENU_CURRENT - assumed 'SYSTEM_MENU_CURRENT' E:\Little\web\video_hd\LQapps\Admin\Controller\PublicController.class.php 第 481 行.
+NOTIC: [8] Use of undefined constant SYSTEM_MENU_CURRENT - assumed 'SYSTEM_MENU_CURRENT' E:\Little\web\video_hd\LQapps\Admin\Controller\PublicController.class.php 第 484 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_vod` WHERE ( zl_status = 6 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_vod` WHERE ( zl_status = 1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_vod` WHERE ( zl_status = 2 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_vod` WHERE ( zl_status = 4 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `lq_vod` GROUP BY zn_teacher_id  [ RunTime:0.0070s ]
+SQL: SELECT * FROM `lq_vod_record` GROUP BY zn_member_id  [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_lesson_vod` WHERE ( zc_vod_info <> '' ) LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2017-09-11T15:02:43+08:00 ] 127.0.0.1 /sys-index.php/Vod/index/p/2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: [2048] Declaration of Admin\Model\VodModel::setProperty() should be compatible with Think\Model::setProperty($name, $value) E:\Little\web\video_hd\LQapps\Admin\Model\VodModel.class.php 第 5 行.
+NOTIC: [8] Use of undefined constant SYSTEM_MENU_CURRENT - assumed 'SYSTEM_MENU_CURRENT' E:\Little\web\video_hd\LQapps\Admin\Controller\PublicController.class.php 第 481 行.
+NOTIC: [8] Use of undefined constant SYSTEM_MENU_CURRENT - assumed 'SYSTEM_MENU_CURRENT' E:\Little\web\video_hd\LQapps\Admin\Controller\PublicController.class.php 第 484 行.
+NOTIC: [8] Undefined variable: s E:\Little\web\video_hd\LQapps\Common\Common\function.php 第 1029 行.
+NOTIC: [8] Undefined variable: s E:\Little\web\video_hd\LQapps\Common\Common\function.php 第 1029 行.
+NOTIC: [8] Undefined variable: s E:\Little\web\video_hd\LQapps\Common\Common\function.php 第 1029 行.
+NOTIC: [8] Undefined variable: s E:\Little\web\video_hd\LQapps\Common\Common\function.php 第 1029 行.
+NOTIC: [8] Undefined variable: s E:\Little\web\video_hd\LQapps\Common\Common\function.php 第 1029 行.
+NOTIC: [8] Undefined variable: s E:\Little\web\video_hd\LQapps\Common\Common\function.php 第 1029 行.
+NOTIC: [8] Undefined variable: s E:\Little\web\video_hd\LQapps\Common\Common\function.php 第 1029 行.
+NOTIC: [8] Undefined variable: s E:\Little\web\video_hd\LQapps\Common\Common\function.php 第 1029 行.
+NOTIC: [8] Undefined variable: s E:\Little\web\video_hd\LQapps\Common\Common\function.php 第 1029 行.
+NOTIC: [8] Undefined variable: s E:\Little\web\video_hd\LQapps\Common\Common\function.php 第 1029 行.
+NOTIC: [8] Undefined variable: s E:\Little\web\video_hd\LQapps\Common\Common\function.php 第 1029 行.
+NOTIC: [8] Undefined variable: s E:\Little\web\video_hd\LQapps\Common\Common\function.php 第 1029 行.
+NOTIC: [8] Undefined variable: s E:\Little\web\video_hd\LQapps\Common\Common\function.php 第 1029 行.
+SQL: SELECT COUNT(*) AS tp_count FROM lq_vod p WHERE (  1  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`zn_fid`,`zn_cat_id`,`zn_teacher_id`,`zc_image`,`zc_title`,`zl_is_index`,`zc_expect_lesson`,`zl_is_good`,`zl_status` FROM `lq_vod` WHERE (  1  ) ORDER BY zn_sort,id DESC LIMIT 5,5   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: zl_visible E:\Little\web\video_hd\LQapps\Admin\Model\VodModel.class.php 第 41 行.
+NOTIC: [8] Undefined index:  E:\Little\web\video_hd\LQapps\Admin\Model\VodModel.class.php 第 41 行.
+SQL: SELECT `zc_nickname` FROM `lq_member` WHERE ( id=4 ) LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: zl_visible E:\Little\web\video_hd\LQapps\Admin\Model\VodModel.class.php 第 43 行.
+NOTIC: [8] Undefined index: zl_visible E:\Little\web\video_hd\LQapps\Admin\Model\VodModel.class.php 第 41 行.
+NOTIC: [8] Undefined index:  E:\Little\web\video_hd\LQapps\Admin\Model\VodModel.class.php 第 41 行.
+SQL: SELECT `zc_nickname` FROM `lq_member` WHERE ( id=4 ) LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: zl_visible E:\Little\web\video_hd\LQapps\Admin\Model\VodModel.class.php 第 43 行.
+NOTIC: [8] Undefined index: zl_visible E:\Little\web\video_hd\LQapps\Admin\Model\VodModel.class.php 第 41 行.
+NOTIC: [8] Undefined index:  E:\Little\web\video_hd\LQapps\Admin\Model\VodModel.class.php 第 41 行.
+SQL: SELECT `zc_nickname` FROM `lq_member` WHERE ( id=4 ) LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: zl_visible E:\Little\web\video_hd\LQapps\Admin\Model\VodModel.class.php 第 43 行.
+NOTIC: [8] Undefined index: zl_visible E:\Little\web\video_hd\LQapps\Admin\Model\VodModel.class.php 第 41 行.
+NOTIC: [8] Undefined index:  E:\Little\web\video_hd\LQapps\Admin\Model\VodModel.class.php 第 41 行.
+SQL: SELECT `zc_nickname` FROM `lq_member` WHERE ( id=4 ) LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: zl_visible E:\Little\web\video_hd\LQapps\Admin\Model\VodModel.class.php 第 43 行.
+NOTIC: [8] Undefined index: zl_visible E:\Little\web\video_hd\LQapps\Admin\Model\VodModel.class.php 第 41 行.
+NOTIC: [8] Undefined index:  E:\Little\web\video_hd\LQapps\Admin\Model\VodModel.class.php 第 41 行.
+SQL: SELECT `zc_nickname` FROM `lq_member` WHERE ( id=4 ) LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: zl_visible E:\Little\web\video_hd\LQapps\Admin\Model\VodModel.class.php 第 43 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: zl_visible E:\Little\web\video_hd\Runtime\Cache\Admin\23adb3df43060b9908c814b6d7f7facf.php 第 379 行.
+NOTIC: [8] Undefined index: zl_visible E:\Little\web\video_hd\Runtime\Cache\Admin\23adb3df43060b9908c814b6d7f7facf.php 第 379 行.
+NOTIC: [8] Undefined index: zl_visible E:\Little\web\video_hd\Runtime\Cache\Admin\23adb3df43060b9908c814b6d7f7facf.php 第 379 行.
+NOTIC: [8] Undefined index: zl_visible E:\Little\web\video_hd\Runtime\Cache\Admin\23adb3df43060b9908c814b6d7f7facf.php 第 379 行.
+NOTIC: [8] Undefined index: zl_visible E:\Little\web\video_hd\Runtime\Cache\Admin\23adb3df43060b9908c814b6d7f7facf.php 第 379 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031200s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031200s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\ShowRuntimeBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-09-11T15:02:43+08:00 ] 127.0.0.1 /sys-index.php/Vod/ajaxSearchData
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: [2048] Declaration of Admin\Model\VodModel::setProperty() should be compatible with Think\Model::setProperty($name, $value) E:\Little\web\video_hd\LQapps\Admin\Model\VodModel.class.php 第 5 行.
+NOTIC: [8] Use of undefined constant SYSTEM_MENU_CURRENT - assumed 'SYSTEM_MENU_CURRENT' E:\Little\web\video_hd\LQapps\Admin\Controller\PublicController.class.php 第 481 行.
+NOTIC: [8] Use of undefined constant SYSTEM_MENU_CURRENT - assumed 'SYSTEM_MENU_CURRENT' E:\Little\web\video_hd\LQapps\Admin\Controller\PublicController.class.php 第 484 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_vod` WHERE ( zl_status = 6 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_vod` WHERE ( zl_status = 1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_vod` WHERE ( zl_status = 2 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_vod` WHERE ( zl_status = 4 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `lq_vod` GROUP BY zn_teacher_id  [ RunTime:0.0050s ]
+SQL: SELECT * FROM `lq_vod_record` GROUP BY zn_member_id  [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_lesson_vod` WHERE ( zc_vod_info <> '' ) LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2017-09-11T15:02:45+08:00 ] 127.0.0.1 /sys-index.php/Vod/edit/tnid/25
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of Admin\Model\VodModel::setProperty() should be compatible with Think\Model::setProperty($name, $value) E:\Little\web\video_hd\LQapps\Admin\Model\VodModel.class.php 第 5 行.
+NOTIC: [8] Use of undefined constant SYSTEM_MENU_CURRENT - assumed 'SYSTEM_MENU_CURRENT' E:\Little\web\video_hd\LQapps\Admin\Controller\PublicController.class.php 第 481 行.
+NOTIC: [8] Use of undefined constant SYSTEM_MENU_CURRENT - assumed 'SYSTEM_MENU_CURRENT' E:\Little\web\video_hd\LQapps\Admin\Controller\PublicController.class.php 第 484 行.
+SQL: SELECT * FROM `lq_vod` WHERE ( id=25 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`zc_title` FROM `lq_vod` WHERE ( id>25 ) ORDER BY `id` ASC LIMIT 0,1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`zc_title` FROM `lq_vod` WHERE ( id<25 ) ORDER BY `id` DESC LIMIT 0,1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: display E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 60 行.
+NOTIC: [8] Undefined index: field E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 354 行.
+NOTIC: [8] Undefined index: controlTitle E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 90 行.
+NOTIC: [8] Undefined index: dataType E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 93 行.
+NOTIC: [8] Undefined index: confirm E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 94 行.
+NOTIC: [8] Undefined index: dataBetween E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 96 行.
+NOTIC: [8] Undefined index: rows E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 99 行.
+NOTIC: [8] Undefined index: maxl E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 100 行.
+NOTIC: [8] Undefined index: width E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 101 行.
+NOTIC: [8] Undefined index: height E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 102 行.
+NOTIC: [8] Undefined index: style E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 103 行.
+NOTIC: [8] Undefined index: display E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 60 行.
+NOTIC: [8] Undefined index: fast-fill E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 161 行.
+NOTIC: [8] Undefined index: controlTitle E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 90 行.
+NOTIC: [8] Undefined index: confirm E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 94 行.
+NOTIC: [8] Undefined index: dataBetween E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 96 行.
+NOTIC: [8] Undefined index: rows E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 99 行.
+NOTIC: [8] Undefined index: width E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 101 行.
+NOTIC: [8] Undefined index: height E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 102 行.
+NOTIC: [8] Undefined index: style E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 103 行.
+NOTIC: [8] Undefined index: zc_image_label E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 495 行.
+NOTIC: [8] Undefined index: display E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 60 行.
+NOTIC: [8] Undefined index: uploadsize E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 511 行.
+NOTIC: [8] Undefined index: required E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 530 行.
+NOTIC: [8] Undefined index: display E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 60 行.
+NOTIC: [8] Undefined index: controlTitle E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 90 行.
+NOTIC: [8] Undefined index: confirm E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 94 行.
+NOTIC: [8] Undefined index: dataBetween E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 96 行.
+NOTIC: [8] Undefined index: rows E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 99 行.
+NOTIC: [8] Undefined index: maxl E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 100 行.
+NOTIC: [8] Undefined index: width E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 101 行.
+NOTIC: [8] Undefined index: height E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 102 行.
+NOTIC: [8] Undefined index: style E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 103 行.
+NOTIC: [8] Undefined index: display E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 60 行.
+NOTIC: [8] Undefined index: fast-fill E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 161 行.
+NOTIC: [8] Undefined index: controlTitle E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 90 行.
+NOTIC: [8] Undefined index: confirm E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 94 行.
+NOTIC: [8] Undefined index: dataBetween E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 96 行.
+NOTIC: [8] Undefined index: rows E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 99 行.
+NOTIC: [8] Undefined index: maxl E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 100 行.
+NOTIC: [8] Undefined index: width E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 101 行.
+NOTIC: [8] Undefined index: height E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 102 行.
+NOTIC: [8] Undefined index: style E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 103 行.
+NOTIC: [8] Undefined index: display E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 60 行.
+NOTIC: [8] Undefined index: display E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 60 行.
+NOTIC: [8] Undefined index: fast-fill E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 161 行.
+NOTIC: [8] Undefined index: controlTitle E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 90 行.
+NOTIC: [8] Undefined index: confirm E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 94 行.
+NOTIC: [8] Undefined index: dataBetween E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 96 行.
+NOTIC: [8] Undefined index: rows E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 99 行.
+NOTIC: [8] Undefined index: maxl E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 100 行.
+NOTIC: [8] Undefined index: width E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 101 行.
+NOTIC: [8] Undefined index: height E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 102 行.
+NOTIC: [8] Undefined index: style E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 103 行.
+NOTIC: [8] Undefined index: zd_send_time E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 455 行.
+NOTIC: [8] Undefined index: display E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 60 行.
+NOTIC: [8] Undefined index: zd_send_time E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 477 行.
+NOTIC: [8] Undefined index: controlTitle E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 90 行.
+NOTIC: [8] Undefined index: confirm E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 94 行.
+NOTIC: [8] Undefined index: dataBetween E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 96 行.
+NOTIC: [8] Undefined index: rows E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 99 行.
+NOTIC: [8] Undefined index: maxl E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 100 行.
+NOTIC: [8] Undefined index: width E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 101 行.
+NOTIC: [8] Undefined index: height E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 102 行.
+NOTIC: [8] Undefined index: style E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 103 行.
+NOTIC: [8] Undefined index: display E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 60 行.
+NOTIC: [8] Undefined index: display E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 60 行.
+NOTIC: [8] Undefined index: controlTitle E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 90 行.
+NOTIC: [8] Undefined index: confirm E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 94 行.
+NOTIC: [8] Undefined index: dataBetween E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 96 行.
+NOTIC: [8] Undefined index: rows E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 99 行.
+NOTIC: [8] Undefined index: maxl E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 100 行.
+NOTIC: [8] Undefined index: width E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 101 行.
+NOTIC: [8] Undefined index: height E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 102 行.
+NOTIC: [8] Undefined index: style E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 103 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031200s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031200s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\ShowRuntimeBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-09-11T15:02:46+08:00 ] 127.0.0.1 /sys-index.php/index/ueditorConfig//noCache/1505113366094
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003001s ]
+NOTIC: [8] Undefined index: editorfile E:\Little\web\video_hd\LQapps\Common\LQPublic\Controller\Base.class.php 第 245 行.
+
+[ 2017-09-11T15:02:49+08:00 ] 127.0.0.1 /sys-index.php/Vod/edit/tnid/25
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2048] Declaration of Admin\Model\VodModel::setProperty() should be compatible with Think\Model::setProperty($name, $value) E:\Little\web\video_hd\LQapps\Admin\Model\VodModel.class.php 第 5 行.
+NOTIC: [8] Use of undefined constant SYSTEM_MENU_CURRENT - assumed 'SYSTEM_MENU_CURRENT' E:\Little\web\video_hd\LQapps\Admin\Controller\PublicController.class.php 第 481 行.
+NOTIC: [8] Use of undefined constant SYSTEM_MENU_CURRENT - assumed 'SYSTEM_MENU_CURRENT' E:\Little\web\video_hd\LQapps\Admin\Controller\PublicController.class.php 第 484 行.
+NOTIC: [8] Undefined variable: returndata E:\Little\web\video_hd\LQapps\Common\LQPublic\Model\Base.class.php 第 39 行.
+NOTIC: [8] Undefined index: auto E:\Little\web\video_hd\Public\ThinkPHP\Library\Think\Model.class.php 第 1173 行.
+SQL: UPDATE `lq_vod` SET `zn_cat_id`='7',`zc_title`='高数教学',`zc_image`='/uploadfiles/20170808/1502172458693448.jpeg',`zc_summary`='高数高数高数666',`zc_expect_lesson`='5',`zc_content`='',`zn_sort`='0',`zl_status`='6',`zc_reason`='',`zn_mdate`='1505113369' WHERE `id` = 25 [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: description E:\Little\web\video_hd\LQapps\User\Api\AdminApi.class.php 第 339 行.
+SQL: INSERT INTO `lq_admin_log` (`zn_type`,`zc_action`,`zc_table`,`zc_table_id`,`zc_description`,`zn_ip`,`zn_cdate`,`zn_operator`,`zc_account`) VALUES ('1','edit','vod','25','littleHe对数据表vod进行修改页面操作。url请求:www.zier.com:80/sys-index.php/Vod/edit/tnid/25','2130706433','1505113369','1','littleHe') [ RunTime:0.0000s ]
+
+[ 2017-09-11T15:02:50+08:00 ] 127.0.0.1 /sys-index.php/Vod/edit/tnid/25
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Admin\Model\VodModel::setProperty() should be compatible with Think\Model::setProperty($name, $value) E:\Little\web\video_hd\LQapps\Admin\Model\VodModel.class.php 第 5 行.
+NOTIC: [8] Use of undefined constant SYSTEM_MENU_CURRENT - assumed 'SYSTEM_MENU_CURRENT' E:\Little\web\video_hd\LQapps\Admin\Controller\PublicController.class.php 第 481 行.
+NOTIC: [8] Use of undefined constant SYSTEM_MENU_CURRENT - assumed 'SYSTEM_MENU_CURRENT' E:\Little\web\video_hd\LQapps\Admin\Controller\PublicController.class.php 第 484 行.
+SQL: SELECT * FROM `lq_vod` WHERE ( id=25 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`zc_title` FROM `lq_vod` WHERE ( id>25 ) ORDER BY `id` ASC LIMIT 0,1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`zc_title` FROM `lq_vod` WHERE ( id<25 ) ORDER BY `id` DESC LIMIT 0,1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: display E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 60 行.
+NOTIC: [8] Undefined index: field E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 354 行.
+NOTIC: [8] Undefined index: controlTitle E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 90 行.
+NOTIC: [8] Undefined index: dataType E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 93 行.
+NOTIC: [8] Undefined index: confirm E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 94 行.
+NOTIC: [8] Undefined index: dataBetween E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 96 行.
+NOTIC: [8] Undefined index: rows E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 99 行.
+NOTIC: [8] Undefined index: maxl E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 100 行.
+NOTIC: [8] Undefined index: width E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 101 行.
+NOTIC: [8] Undefined index: height E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 102 行.
+NOTIC: [8] Undefined index: style E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 103 行.
+NOTIC: [8] Undefined index: display E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 60 行.
+NOTIC: [8] Undefined index: fast-fill E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 161 行.
+NOTIC: [8] Undefined index: controlTitle E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 90 行.
+NOTIC: [8] Undefined index: confirm E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 94 行.
+NOTIC: [8] Undefined index: dataBetween E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 96 行.
+NOTIC: [8] Undefined index: rows E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 99 行.
+NOTIC: [8] Undefined index: width E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 101 行.
+NOTIC: [8] Undefined index: height E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 102 行.
+NOTIC: [8] Undefined index: style E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 103 行.
+NOTIC: [8] Undefined index: zc_image_label E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 495 行.
+NOTIC: [8] Undefined index: display E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 60 行.
+NOTIC: [8] Undefined index: uploadsize E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 511 行.
+NOTIC: [8] Undefined index: required E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 530 行.
+NOTIC: [8] Undefined index: display E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 60 行.
+NOTIC: [8] Undefined index: controlTitle E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 90 行.
+NOTIC: [8] Undefined index: confirm E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 94 行.
+NOTIC: [8] Undefined index: dataBetween E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 96 行.
+NOTIC: [8] Undefined index: rows E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 99 行.
+NOTIC: [8] Undefined index: maxl E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 100 行.
+NOTIC: [8] Undefined index: width E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 101 行.
+NOTIC: [8] Undefined index: height E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 102 行.
+NOTIC: [8] Undefined index: style E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 103 行.
+NOTIC: [8] Undefined index: display E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 60 行.
+NOTIC: [8] Undefined index: fast-fill E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 161 行.
+NOTIC: [8] Undefined index: controlTitle E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 90 行.
+NOTIC: [8] Undefined index: confirm E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 94 行.
+NOTIC: [8] Undefined index: dataBetween E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 96 行.
+NOTIC: [8] Undefined index: rows E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 99 行.
+NOTIC: [8] Undefined index: maxl E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 100 行.
+NOTIC: [8] Undefined index: width E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 101 行.
+NOTIC: [8] Undefined index: height E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 102 行.
+NOTIC: [8] Undefined index: style E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 103 行.
+NOTIC: [8] Undefined index: display E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 60 行.
+NOTIC: [8] Undefined index: display E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 60 行.
+NOTIC: [8] Undefined index: fast-fill E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 161 行.
+NOTIC: [8] Undefined index: controlTitle E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 90 行.
+NOTIC: [8] Undefined index: confirm E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 94 行.
+NOTIC: [8] Undefined index: dataBetween E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 96 行.
+NOTIC: [8] Undefined index: rows E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 99 行.
+NOTIC: [8] Undefined index: maxl E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 100 行.
+NOTIC: [8] Undefined index: width E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 101 行.
+NOTIC: [8] Undefined index: height E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 102 行.
+NOTIC: [8] Undefined index: style E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 103 行.
+NOTIC: [8] Undefined index: zd_send_time E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 455 行.
+NOTIC: [8] Undefined index: display E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 60 行.
+NOTIC: [8] Undefined index: zd_send_time E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 477 行.
+NOTIC: [8] Undefined index: controlTitle E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 90 行.
+NOTIC: [8] Undefined index: confirm E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 94 行.
+NOTIC: [8] Undefined index: dataBetween E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 96 行.
+NOTIC: [8] Undefined index: rows E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 99 行.
+NOTIC: [8] Undefined index: maxl E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 100 行.
+NOTIC: [8] Undefined index: width E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 101 行.
+NOTIC: [8] Undefined index: height E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 102 行.
+NOTIC: [8] Undefined index: style E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 103 行.
+NOTIC: [8] Undefined index: display E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 60 行.
+NOTIC: [8] Undefined index: display E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 60 行.
+NOTIC: [8] Undefined index: controlTitle E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 90 行.
+NOTIC: [8] Undefined index: confirm E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 94 行.
+NOTIC: [8] Undefined index: dataBetween E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 96 行.
+NOTIC: [8] Undefined index: rows E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 99 行.
+NOTIC: [8] Undefined index: maxl E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 100 行.
+NOTIC: [8] Undefined index: width E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 101 行.
+NOTIC: [8] Undefined index: height E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 102 行.
+NOTIC: [8] Undefined index: style E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 103 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001001s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001001s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\ShowRuntimeBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.005000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-09-11T15:02:51+08:00 ] 127.0.0.1 /sys-index.php/index/ueditorConfig//noCache/1505113371252
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Undefined index: editorfile E:\Little\web\video_hd\LQapps\Common\LQPublic\Controller\Base.class.php 第 245 行.
+

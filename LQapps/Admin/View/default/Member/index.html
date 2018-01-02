@@ -15,7 +15,7 @@
             <div class="lq-panel-body-title"><span class="btn"><i class="fa fa-paw"></i> 筛选</span></div>
             
 			<div class="form-group">
-                          <label class="col-xs-12 col-sm-3 col-md-2 col-lg-1 control-label">注册日期范围</label>
+                          <label class="col-xs-12 col-sm-3 col-md-2 col-lg-1 control-label">注册日期</label>
                           <div class="col-sm-6 col-lg-8 col-xs-6"> 
                             <script type="text/javascript">
                                 require(["daterangepicker"], function($){
@@ -59,19 +59,18 @@
                     <button class="btn btn-default" id="listSearch"><i class="fa fa-search"></i> 搜索</button>
                     <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><span class="caret"></span></button>
                     <ul class="dropdown-menu dropdown-menu-right" role="menu">
+                        <li><a href="javascript:;" onclick="$('#fkeyword').attr('placeholder','模糊搜索：请输入关键字');$('#keymode').val(0);">模糊搜索</a></li>
                       <li><a href="javascript:;" onclick="$('#fkeyword').attr('placeholder','精准搜索：请输入关键字');$('#keymode').val(1);">精准搜索</a></li>
-                      <li><a href="javascript:;" onclick="$('#fkeyword').attr('placeholder','模糊搜索：请输入关键字');$('#keymode').val(0);">模糊搜索</a></li>
+
                     </ul>
                   </div>
                 </div>
               </div>
             </div>
             <div class="form-group">
-              <label class="col-xs-12 col-sm-2 col-md-2 col-lg-1 control-label">角色/邦定/城市</label>
+              <label class="col-xs-12 col-sm-2 col-md-2 col-lg-1 control-label">角色/邦定</label>
               <div class="col-sm-8 col-lg-10 col-xs-12">
-                <div class="col-lg-3" style="padding:0px;"><select class="form-control" id="role">{$zl_role_str}</select></div>
                 <div class="col-lg-3"><select class="form-control" id="bind">{$bind_str}</select></div>
-                <div class="col-lg-3"><select class="form-control" id="city">{$city_str}</select></div>
                 <div class="col-lg-3"><select class="form-control" id="use">{$use_str}</select></div>
               </div>
             </div>
@@ -127,14 +126,14 @@
 
 	<div class="panel-body">
           
-            <span><i class="fa fa-list-ol"></i> {$sys_heading}</span>
+            <span><i class="fa fa-list-ol"></i> 老师列表</span>
             <div class="btn-group pull-right">
               <span class="label label-danger blink" id="os_warning" style="font-size:1em;display:none;padding:6px 10px; "> 请操作 <i class="fa fa-hand-o-right"></i></span>
               <button type="button" data-toggle="dropdown" id="os_button"> <i class="fa fa-chevron-down"></i> 操作 </button>
               <ul class="dropdown-menu slidedown" id="os_button_list">
               <if condition="ACTION_NAME eq 'index'">
-                <li> <a href="{:U('opExportXls')}" title="导出数据" id="export"> <i class="fa fa-file-excel-o"></i> 导出数据 </a> </li>
-                <li class="divider"></li>
+                <!--<li> <a href="{:U('opExportXls')}" title="导出数据" id="export"> <i class="fa fa-file-excel-o"></i> 导出数据 </a> </li>-->
+                <!--<li class="divider"></li>-->
               	<if condition="$os_lock.edit eq '1'">
                 <li> <a href="{:U('add')}" title="{:L('ALT_BUTTON_ADD_RECORD')}"> <i class="fa fa-plus-circle"></i> 新增 </a> </li>
                 <else />
@@ -211,10 +210,10 @@
                     <th style="width:22px;"><input type="checkbox" class="checkbox" value="0" id="list_checkbox" /></th>
                     <th style="width:100px;">序号</th>
                     <th style="width:150px;">注册/修改时间</th>
-                    <th style="width:320px;">ID/帐户名/昵称</th>
-                    <th>角色/设计师</th>
-                    <th>积分:消费/等级</th>
-                    <th>联系电话</th>
+                    <th style="width:270px;">ID/帐户名/昵称</th>
+                    <th style="width:80px;">直播数</th>
+                    <th style="width:80px;">录播数</th>
+                    <th>学校</th>
                     <th style="width:90px;">清零/邦定</th>
                     <th style="width:60px;">状态</th>
                     <th style="width:200px;text-align:center;"><a href="javascript:;" id="op_msg">操作?</a></th>
@@ -227,9 +226,9 @@
                       <td>{$data.no}/{$data.id}</td>
                       <td>{$data.zn_cdate|date="y-m-d H:i:s",###}<br>{$data.zn_mdate|date="y-m-d H:i:s",###}</td>
                       <td>{$data.id}/{$data.zc_account}/{$data.zc_nickname}</td>
-                      <td>{$data.role_label}</td>
-                      <td>{$data.zn_pay_integration}/{$data.zn_rank_integration}/{$data.member_rank}</td>
-                      <td>{$data.zc_mobile}</td>
+                      <td><a href="javascript:viewLesson({$data.id},1)"> {$data.live_total}</a></td>
+                      <td><a href="javascript:viewLesson({$data.id},2)"> {$data.vod_total}</a></td>
+                      <td>{$data.zc_school}</td>
                       <td>
                         <div class="btn-group"> 
                             <button type="button" data-toggle="dropdown" id="os_button"> <i class="fa fa-chevron-down"></i> 设置 </button>
@@ -244,12 +243,9 @@
                       </td>
                       <td>{$data.visible_label}</td>
                       <td class="manage-menu list-os-a">
-                      <a href="javascript:;" title="查看会员帐单明细"><i class="fa fa-list-alt"></i></a>
-                      <if condition="$data.manage eq '1'">
-                      <a href="__CONTROLLER__/authLogin/tnid/{$data.id}" title="授权管理" target="_blank"><i class="fa fa-desktop"></i></a>
-                      <else />
-                      <a href="javascript:void(0);" title="授权管理"><i class="fa fa-desktop ac_grey"></i></a>
-                      </if>
+                          <!--<i class="fa fa-list-alt"></i>-->
+                          <if condition="$data.zl_role eq '2'"><a href="__CONTROLLER__/auth/tnid/{$data.id}" title="查看认证信息">认证审核</a></if>
+
                       <a href="__CONTROLLER__/edit/tnid/{$data.id}" title="{:L("LABEL_OS_EDITID")}[{$data.id}]"><i class="fa fa-edit"></i></a>
 					  <a href="__CONTROLLER__/editPass/tnid/{$data.id}" title="{:L("LABEL_OS_MODPASS")}[{$data.zc_account}]"><i class="fa fa-lock"></i></a>
                       <a href="javascript:void(0);" class="myopStatus" val="{$data.zl_visible}" title="{:L("LABEL_OS_STATUS")}[{$data.id}]">{$data.visible_button}</a>
@@ -281,6 +277,14 @@ $('tbody>tr>td a[op]').click(function(){util.ajaxPropertyA($(this),'/sys-index.p
 		});		
 	});
 });
+function viewLesson(id,type)
+{
+    var urlpara =base64encode("teacher_id/"+id+"/");
+    if(type == 1) url = "__APP__/Live/";
+    else url = "__APP__/Vod/";
+    window.location.href = url+"index/s/"+urlpara;
+}
+
 </script>
 
 <include file="Public:footer" />

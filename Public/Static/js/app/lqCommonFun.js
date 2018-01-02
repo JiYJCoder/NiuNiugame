@@ -1,9 +1,3 @@
-/*
-项目：狸想家【建誉集团】
-开发日期始于：20161108
-作者:国雾院theone(438675036@qq.com)、狸想家精英团队
-说明:公共函数库
-*/
 
 /*
 * Interfaces:
@@ -318,14 +312,31 @@ var LQ = {
 			page_loading = layer.load(0,{shade:[0.1,'#fff']});
 			$.getJSON(url+"/opProperty",{tcop:obj.attr("op"),tnid:obj.parents("tr").attr("id"),vlaue:obj.attr("val")},function(json){layer.close(page_loading);obj.attr("val",json.data.status);obj.html(json.data.txt);if(json.status==0){util.sysMsg(0,json.msg,json.url);}});
 	    });
-	};	
-	
-	/*
-	AJAX表单提交（POST）：
-	url:提交请求的地址
-	formObj:表单
-	return:boolean
-	*/	
+	};
+
+    util.ajaxPropertyB = function(obj,url){
+        require(['layer'], function(){
+            layer.confirm('确定要设置该课程状态吗?',function() {
+                page_loading2 = layer.load(0, {shade: [0.1, '#fff']});
+                $.getJSON(url + "/opProperty", {
+                    tcop: obj.attr("op"),
+                    tnid: obj.parents("tr").attr("id"),
+                    vlaue: obj.attr("val")
+                }, function (json) {
+                    layer.closeAll();
+                    obj.attr("val", json.data.status);
+                    obj.parent().parent().parent().parent().parent().find(".status").html(json.data.txt);
+                });
+            })
+        });
+    };
+
+    /*
+    AJAX表单提交（POST）：
+    url:提交请求的地址
+    formObj:表单
+    return:boolean
+    */
 	util.commonAjaxSubmit = function(url,form){
 		require(['jquery','layer','ajax.post'], function(){
 			if(!url||url==''){url=lq_current_url;}			
@@ -342,7 +353,7 @@ var LQ = {
 							if(json.url&&json.url!=''){
 								if(json.flag=="login"){util.R(0,json.url);}else{if(json.status==1){util.R(2,json.url);}else{util.R(3,json.url);}}
 							}else{
-								layer.close(page_loading);	
+								layer.close(page_loading);
 							}
 			}
 			});

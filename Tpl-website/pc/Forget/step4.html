@@ -1,0 +1,35 @@
+<head>
+    <meta charset="UTF-8">
+    <title>找回密码</title>
+    <meta name="keywords" content="{$seoData.keywords}">
+    <meta name="description" content="{$seoData.description}">
+    <link rel="stylesheet" href="__CSS__/student/student.css">
+    <script src="__JS__/lib/jquery-3.1.1.min.js"></script>
+    <script src='__JS__/lib/require.js'></script>
+    <script src="__JS__/lib/main.js"></script>
+    <script src="__JS__/common.js"></script>
+</head>
+
+<body>
+<include file="Public:header"/>
+    <div class="x-xs-forget-password">
+        <div class="fpw-wrapper">
+            <div class="zr_layout">
+                <div class="contain">
+                    <div class="pwdForm phoneForm">
+                        <input type="password" class="text-input has_boxshaw new-pass-word1" placeholder="请输入新密码">
+                         <input style="margin-top: 29px" type="password" class="has_boxshaw text-input new-pass-word2" placeholder="请再次输入密码">
+                        <input  type="button" class="next-step-btn step4-btn" value="保存">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+<script>
+require(["forget"], function(forget) {
+    forget()
+})
+</script>

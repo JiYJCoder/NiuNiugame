@@ -1,0 +1,175 @@
+<head>
+    <meta charset="UTF-8">
+    <title>我的录播</title>
+    <meta name="keywords" content="{$seoData.keywords}">
+    <meta name="description" content="{$seoData.description}">
+    <link rel="stylesheet" href=__CSS__/teacher/teacher.css>
+    <script src="__JS__/lib/jquery.js"></script>
+    <script src="__JS__/common.js"></script>
+    <script src='__JS__/lib/require.js'></script>
+    <script src="__JS__/lib/main.js"></script>
+</head>
+
+<body>
+
+<include file="Public:header"/>
+<include file="Public:teacher_nav"/>
+
+    <div class="banner_bg mylive">
+        <div class="zr_layout">
+            <div style="position: relative;top:73px;">
+                <h1>我的录播</h1>
+                <if condition="$vod_count eq 1">
+                    <span style="background: #3FACE2;"><a style="color:#fff;" href="{:U('sqbroadcast')}"> 申请录播</a></span>
+                    <else />
+                    <span style="background: #3FACE2;" id="gx_vod"><a style="color:#fff;cursor:not-allowed;"> 申请录播</a></span>
+                    <script>
+                        $('#gx_vod').hover(function(){
+                            layer.tips('最多只能存在五个未完结的录播哦', '#gx_vod', {
+                                tips: [1, '#0FA6D8'] //还可配置颜色
+                            });
+                        },function(){
+
+                        })
+                    </script>
+                </if>
+            </div>
+        </div>
+    </div>
+    <div class="my_live_wrapper">
+        <div class="zr_layout mylive">
+            <!--  没有录播出现的状态-->
+            <if condition="$has_Myrecorded eq 0">
+                 <div class="no_live_stutas"></div>
+            <else />
+                <foreach name="message" item="value">
+                    <if condition="$value['zl_status'] eq 6">
+                        <div class="lb_list">
+                            <div class="lb_list_item clearfix">
+                                <div class="lb_head_sculpture fl">
+                                    <img src="{$value.image}" alt="">
+                                </div>
+                                <div class="lb_info fl clearfix">
+                                    <div class="fl">
+                                        <div>
+                                            <h3 class="lb_list_title">{$value.zc_title}</h3>
+                                            <div>
+                                                <div class="number_of_courses">
+                                                    <div class="p_r_23" style="padding-right: 23px;">
+                                                        <span>{$value.cat_id_label}</span>
+                                                    </div>
+                                                    <div>
+                                                        <span>预计</span>
+                                                        <span class="orange_color">{$value.zc_expect_lesson}</span>
+                                                        <span>节，</span>
+                                                    </div>
+                                                    <div>
+                                                        <span>已上传</span>
+                                                        <span class="orange_color">{$value.upload_class}</span>
+                                                        <span>节</span>
+                                                    </div>
+                                                </div>
+                                                <div class="stra_number">
+                                                    <div>
+                                                        <span class="sc_number">{$value.favorite}</span>
+                                                        <span class="sc_number_text">人收藏</span>
+                                                    </div>
+                                                    <div>
+                                                        <span class="bm_number">{$value.enroll}</span>
+                                                        <span class="bm_number_text">人报名</span>
+                                                    </div>
+                                                    <div>
+                                                        <span class="kc_number_text">课程排名第</span>
+                                                        <span>{$value['rank']}</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="curriculum_name_list">
+                                            {$value['btn']}
+                                        </div>
+                                    </div>
+                                    <div class="fr lb_sq_status">
+                                        {$value['msg']}
+                                        <!-- <i class="Be_through_with"></i> -->
+                                        <i class="{$value['pic']}"></i>
+                                        <!--<img src="__IMAGES__/live_status1.png"-->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <else />
+                        <!-- 下架课程模板 -->
+                        <div class="lb_list">
+                            <div class="lb_list_item clearfix">
+                                <div class="lb_head_sculpture fl">
+                                    <img src="{$value.image}" alt="">
+                                </div>
+                                <div class="lb_info fl clearfix">
+                                    <div class="fl">
+                                        <div>
+                                            <h3 class="lb_list_title">{$value.zc_title}</h3>
+                                            <div>
+                                                <div class="number_of_courses">
+                                                    <div class="p_r_23" style="padding-right: 23px;">
+                                                        <span>{$value.cat_id_label}</span>
+                                                    </div>
+                                                    <div>
+                                                        <span>预计</span>
+                                                        <span class="orange_color">{$value.zc_expect_lesson}</span>
+                                                        <span>节，</span>
+                                                    </div>
+                                                    <div>
+                                                        <span>已上传</span>
+                                                        <span class="orange_color">{$value.upload_class}</span>
+                                                        <span>节</span>
+                                                    </div>
+                                                </div>
+                                                <div class="stra_number">
+                                                    <div>
+                                                        <span class="sc_number">{$value.favorite}</span>
+                                                        <span class="sc_number_text">人收藏</span>
+                                                    </div>
+                                                    <div>
+                                                        <span class="bm_number">{$value.enroll}</span>
+                                                        <span class="bm_number_text">人报名</span>
+                                                    </div>
+                                                    <div>
+                                                        <span class="kc_number_text">课程排名第</span>
+                                                        <span>{$value['rank']}</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="curriculum_name_list">
+                                           {$value['btn']}
+                                        </div>
+                                    </div>
+                                    <div class="fr lb_sq_status">
+                                        {$value['msg']}
+                                        <!-- <i class="Be_through_with"></i> -->
+                                        <i class="{$value['pic']}"></i>
+                                        <!--<img src="__IMAGES__/live_status1.png"-->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </if>
+                </foreach>
+            </if>
+            <div class="list_page">
+                {$page}
+            </div>
+        </div>
+    </div>
+  <include file="Public:footer"/>
+    
+</body>
+</html>
+<script>
+    require(['teacher'], function(teacher) {
+        teacher();
+    });
+
+
+</script>

@@ -1,0 +1,99 @@
+<head>
+    <meta charset="utf-8">
+    <title>
+        帮助中心
+    </title>
+    <link href="__CSS__/student/student.css" rel="stylesheet">
+    <script src="__JS__/lib/jquery-3.1.1.min.js"></script>
+    <script src="__PLUGINS__/swiper/swiper-3.4.2.jquery.min.js"></script>
+    <script src="__JS__/common.js"></script>
+    <script src="__JS__/lib/require.js"></script>
+    <script src="__JS__/lib/main.js"></script>
+</head>
+
+<body>
+<include file="Public:header"/>
+<div class="z-zx-help-wrapper">
+
+    <div style="background:#f2f2f2;">
+        <div class="zr_layout">
+            <div class="help-contain clearfix">
+                <div class="main-left">
+                    <ul>
+                        <foreach name="article_list" item="value" key="key">
+                            <li >
+                                <if condition="$value['id'] eq $cat_id">
+                                    <a href="{:U('/Content/help',array('cat_id'=>$value['id']))}" class="g_active active">{$value['zc_caption']}</a>
+                                    <else />
+                                    <a href="{:U('/Content/help',array('cat_id'=>$value['id']))}" class="g_active ">{$value['zc_caption']}</a>
+                                </if>
+                            </li>
+                        </foreach>
+                    </ul>
+                </div>
+                <div class="main-right">
+                    <div class="header">
+                        <a href="{:U('/Content/help')}">首页</a>
+                        <span>></span>
+                        <if condition="$cat_name">
+                        <a href="javascript:void(0)">{$cat_name}</a>
+                            <else />
+                            <a href="javascript:void(0)" class="Platform_announcement">全部</a>
+                        </if>
+                    </div>
+                    <div class="list">
+                        <ul class="get_article">
+                            <foreach name="article" item="value">
+                                <li>
+                                    <a href="{:U('/Content/detail',array('id'=>$value['id']))}">{$value['zc_title']}</a>
+                                </li>
+                            </foreach>
+                            <div  class="list_page" style="position:relative;right:-20px;bottom:-40px;" >
+                                {$page}
+                            </div>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <include file="Public:footer"/>
+</body>
+<script>
+//    $(function(){
+//        var get_article = $('.get_article');
+//        var g_active = $('.g_active');
+////        var url = "{:U('/Content/get_article')}";
+////        g_active.on('click',function(){
+////            $.post(url,{
+////                'id' : $(this).attr('cid'),
+////            },function(data){
+////                get_article.html('');
+////                get_article.append(data['msg']);
+////
+////            },'json');
+//            $(this).addClass('active')
+//            $(this).parent().siblings().find("a").removeClass('active');
+//        })
+//
+//
+////        $('.main-left :first-child').children().first().children().click();
+//
+//
+//    })
+
+$(function(){
+    $('.Platform_announcement').html($('.active').html())
+    $(".main-left li").on("click",function(){
+        var index = $(this).index();
+        $(this).parent().find("a").removeClass('active');
+        $(this).find("a").addClass('active')
+        $('.Platform_announcement').html($(this).html())
+    })
+})
+
+
+
+</script>

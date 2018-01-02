@@ -1,10 +1,5 @@
 <?php
-/*
-项目：狸想家【建誉集团】
-开发日期始于：20161108
-作者:国雾院theone(438675036@qq.com)、狸想家精英团队
-说明:会员登陆
-*/
+
 namespace Ucenter\Controller;
 use LQPublic\Controller\Base;
 use Member\Api\MemberApi as MemberApi;
@@ -26,7 +21,6 @@ class LoginController extends Base{
 	//用户登陆 
     public function index() {
 		if(IS_POST){//登陆处理
-			
 			$lcAccount=I("post.account");//用户帐号
 			$lcPassword=I("post.password");//用户密码	
 			$returnArray=array('status' => 1, 'msg' => C('ALERT_ARRAY')["loginSuccess"], 'url' => U('ucenter/index/index'), 'flag' => 'login');

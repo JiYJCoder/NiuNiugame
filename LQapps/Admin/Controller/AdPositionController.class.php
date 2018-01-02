@@ -14,6 +14,7 @@ class AdPositionController extends PublicController{
 		array('radio', 'zl_type', "位置类别",1,'{"required":"1","dataType":"","dataLength":"","readonly":0,"disabled":0}'),
 		array('text', 'zn_image_width', "图册图片的宽度",1,'{"required":"0","dataType":"number","dataLength":"","readonly":1,"disabled":0}'),
 		array('text', 'zn_image_height', "图册图片的高度",1,'{"required":"0","dataType":"number","dataLength":"","readonly":1,"disabled":0}'),
+            array('text', 'zn_scroll_time', "轮播时间",1,'{"required":"1","dataType":"number","dataLength":"","readonly":0,"disabled":0}'),
 		array('text', 'zn_max_ad', "最多数目",1,'{"required":"1","dataType":"number","dataLength":"","readonly":0,"disabled":0}'),
 		array('text', 'zn_sort', "排序",1,'{"required":"1","dataType":"number","dataLength":"","readonly":0,"disabled":0}'),
 		),
@@ -47,7 +48,7 @@ class AdPositionController extends PublicController{
 		}
 		
 		//首页设置
-		$page_title=array('checkbox'=>'checkbox','no'=>L("LIST_NO"),'zc_caption'=>'位置标题','count'=>'广告数目','zn_image_width'=>'图片的宽度(px)','zn_image_height'=>'图片的高度(px)','zn_sort'=>L("LIST_SOTR"),'status'=>L("LIST_STAYUS"),'os'=>L("LIST_OS"));
+		$page_title=array('checkbox'=>'checkbox','id'=>'ID','zc_caption'=>'位置标题','count'=>'广告数目','zn_image_width'=>'图片的宽度(px)','zn_image_height'=>'图片的高度(px)','zn_sort'=>L("LIST_SOTR"),'status'=>L("LIST_STAYUS"),'os'=>L("LIST_OS"));
 		$page_config = array(
 				'field'=>"`id`,`zc_caption`,`zn_sort`,`zn_image_width`,`zn_image_height`,`zl_visible`",
 				'where'=>$sqlwhere_parameter,

@@ -42,12 +42,12 @@ if(navigator.appName == 'Microsoft Internet Explorer'){
             </div>
           </div>
         </div>
-      </li>    
+      </li>
       <li class="dropdown topbar-notice"> <a type="button" data-toggle="dropdown"> <i class="fa fa-bell"></i> <span class="badge" id="notice-total">0</span> </a>
         <div class="dropdown-menu" aria-labelledby="dLabel">
           <div class="topbar-notice-panel">
             <div class="topbar-notice-arrow"></div>
-            <div class="topbar-notice-head"> <span>系统公告</span> <a href="javascript:;" class="pull-right">更多公告>></a> </div>
+            <div class="topbar-notice-head"> <span>系统公告</span> <a href="javascript:;" class="pull-right"></a> </div>
             <div class="topbar-notice-body">
               <ul id="notice-container">
               </ul>
@@ -63,7 +63,7 @@ if(navigator.appName == 'Microsoft Internet Explorer'){
           <li class="divider"></li>
           <?php if($login_admin_info["id"] == '1' ): ?><li><a href="<?php echo U('SystemMenu/index');?>"><i class="fa fa-sitemap fa-fw"></i> 系统菜单</a></li><?php endif; ?>
           <?php if($login_admin_info["zn_role_id"] == '1' ): ?><li><a href="<?php echo U('Index/clearCache');?>"><i class="fa fa-refresh fa-fw"></i> 更新缓存</a></li><?php endif; ?>
-          <li><a href="/do?g=api&m=document&a=index" target="_blank"><i class="fa fa-gears"></i> 接口文档</a></li>
+          <li><a href="/index.php/document#top" target="_blank"><i class="fa fa-gears"></i> 接口文档</a></li>
           <li class="divider"></li>
           <li><a href="javascript:;" class="getUrl" lqhref="<?php echo U('Login/opLoginOut');?>" title="退出当前登陆"><i class="fa fa-sign-out fa-fw"></i> 退出系统</a></li>
         </ul>
@@ -118,69 +118,51 @@ if(navigator.appName == 'Microsoft Internet Explorer'){
     <li class="active"><a href="#">账号概况 - 平台相关数据</a></li>
   </ul>
   <div class="clearfix welcome-container">
-    <div class="page-header">
-      <h4><i class="fa fa-plane"></i> 快捷操作</h4>
-    </div>
+    <!--<div class="page-header">-->
+      <!--<h4><i class="fa fa-plane"></i> 快捷操作</h4>-->
+    <!--</div>-->
     
     
-    <div class="shortcut clearfix"> 
-    <a href="#"> <i class="fa fa-weixin"></i> <span>粉丝列表</span> </a> 
-    <a href="#"> <i class="fa fa-users"></i> <span>会员列表</span> </a> 
-    <a href="#"> <i class="fa fa-database"></i> <span>会员日志</span> </a> 
-    <a href="#"> <i class="fa fa-comments"></i> <span>会员反馈</span> </a> 
-    <a href="#"> <i class="fa fa-reorder"></i> <span>装修贷订单</span> </a> 
-    <a href="#"> <i class="fa fa-reorder"></i> <span>咨询订单</span> </a> 
-    <a href="#"> <i class="fa fa-reorder"></i> <span>家装订单</span> </a> 
-    <a href="#" style="color:rgba(203,48,48,1);"> <i class="fa fa-users"></i> <span>管理员列表</span> </a> 
-    <a href="#" style="color:rgba(203,48,48,1);"> <i class="fa fa-database"></i> <span>管理员日志</span> </a> 
-    </div>
+    <!--<div class="shortcut clearfix"> -->
+    <!--<a href="<?php echo U('WebConfig/config');?>"> <i class="fa fa-weixin"></i> <span>系统设置</span> </a>-->
+    <!--<a href="<?php echo U('/Member');?>"> <i class="fa fa-users"></i> <span>会员管理</span> </a>-->
+    <!--<a href="<?php echo U('/Live');?>"> <i class="fa fa-database"></i> <span>直播管理</span> </a>-->
+    <!--<a href="<?php echo U('/Vod');?>"> <i class="fa fa-database"></i> <span>录播管理</span> </a>-->
+    <!--<a href="<?php echo U('/Article');?>"> <i class="fa fa-comments"></i> <span>资讯内容管理</span> </a>-->
+    <!--<a href="<?php echo U('/AdPosition');?>"> <i class="fa fa-reorder"></i> <span>广告管理</span> </a>-->
+    <!--&lt;!&ndash;<a href="#"> <i class="fa fa-reorder"></i> <span>咨询订单</span> </a> &ndash;&gt;-->
+    <!--&lt;!&ndash;<a href="#"> <i class="fa fa-reorder"></i> <span>家装订单</span> </a> &ndash;&gt;-->
+    <!--&lt;!&ndash;<a href="#" style="color:rgba(203,48,48,1);"> <i class="fa fa-users"></i> <span>管理员列表</span> </a> &ndash;&gt;-->
+    <!--&lt;!&ndash;<a href="#" style="color:rgba(203,48,48,1);"> <i class="fa fa-database"></i> <span>管理员日志</span> </a> &ndash;&gt;-->
+    <!--</div>-->
 
 
         <div class="panel panel-default" id="scroll" style="margin-top:20px;">
             <div class="panel-heading">
-                今日关注指数
+                统计概况
             </div>
             <div class="account-stat">
                 <div class="account-stat-btn">
-                    <div>今日新关注<span id="today_new">0</span></div>
-                    <div>今日取消关注<span id="today_cancel">0</span></div>
-                    <div>今日净增关注<span id="today_increase">0</span></div>
-                    <div>累积关注<span id="today_cumulate">0</span></div>
-                    <div>累积授权<span id="today_page_auth">0</span></div>
-                    <div>会员注册<span id="today_member">0</span></div>
+                    <div>直播总量<span id="live_total">0</span></div>
+                    <div>生效直播<span id="live_effect">0</span></div>
+                    <div>录播总量<span id="vod_total">0</span></div>
+                    <div>生效录播<span id="vod_effect">0</span></div>
+                    <div>老师注册<span id="teacher_total">0</span></div>
+                    <div>学生注册<span id="student_total">0</span></div>
                 </div>
             </div>
         </div>
             
-        <div class="panel panel-default" id="scroll" style="margin-top:20px;">
-            <div class="panel-heading">
-                昨日关注指数
-            </div>
-            <div class="account-stat">
-                <div class="account-stat-btn">
-                    <div>昨日新关注<span id="yesterday_new">0</span></div>
-                    <div>昨日取消关注<span id="yesterday_cancel">0</span></div>
-                    <div>昨日净增关注<span id="yesterday_increase">0</span></div>
-                    <div>累积关注<span id="yesterday_cumulate">0</span></div>
-                    <div>累积授权<span id="yesterday_page_auth">0</span></div>
-                    <div>会员注册<span id="yesterday_member">0</span></div>
-                </div>
-            </div>
-        </div>    
-    
-    
 <div class="panel panel-default">
-	<div class="panel-heading">关注指数详解(周度)
-	<a class="text-danger" href="/sys-index.php/Follow/index">查看更多</a>
+	<div class="panel-heading">直播指数曲线图(周度)
+	<a class="text-danger" href="/sys-index.php/Live/index">查看更多</a>
     </div>
 	<div class="panel-body">
 		<div class="pull-right">
 			<div class="checkbox" id="subscribe">
-				<label style="color:#57B9E6;"><input checked type="checkbox"> 新关注人数</label>&nbsp;
-				<label style="color:#00439d"><input checked type="checkbox"> 取消关注人数</label>&nbsp;
-				<label style="color:rgba(149,192,0,1);"><input checked type="checkbox"> 净增人数</label>&nbsp;
-				<label style="color:#e7a017;"><input type="checkbox"> 累积关注人数</label>
-				<label style="color:#ff0000;"><input type="checkbox"> 会员注册</label>
+                <label style="color:rgba(149,192,0,1);"><input checked type="checkbox"> 直播场次</label>&nbsp;
+				<label style="color:#57B9E6;"><input checked type="checkbox"> 报名人数</label>&nbsp;
+				<label style="color:#00439d"><input checked type="checkbox"> 收藏人数</label>
 			</div>
 		</div>
 		<div style="margin-top:20px">
@@ -189,55 +171,49 @@ if(navigator.appName == 'Microsoft Internet Explorer'){
 	</div>
 </div>
 <script>
+    var url = '<?php echo U("Index/ajaxSearch");?>';
+    $.post(url, function(data) {
+        //今日指数
+        $("#live_total").html(data.live_total);
+        $("#live_effect").html(data.live_effect);
+        $("#vod_total").html(data.vod_total);
+        $("#vod_effect").html(data.vod_effect);
+        $("#teacher_total").html(data.teacher_total);
+        $("#student_total").html(data.student_total);
+    })
+
 	require(['chart', 'daterangepicker'], function(c) {
 		var chart_subscribe = null;
 		var chart_datasets_subscribe = null;
 		var templates_subscribe = {
 			flow1: {
-				label: '新关注人数',
-				fillColor : "rgba(36,165,222,0.1)",
-				strokeColor : "rgba(36,165,222,1)",
-				pointColor : "rgba(36,165,222,1)",
-				pointStrokeColor : "#fff",
-				pointHighlightFill : "#fff",
-				pointHighlightStroke : "rgba(36,165,222,1)",
-			},
-			flow2: {
-				label: '取消关注人数',
-				fillColor : "rgba(0,67,157,0.1)",
-				strokeColor : "rgba(0,67,157,1)",
-				pointColor : "rgba(0,67,157,1)",
-				pointStrokeColor : "#fff",
-				pointHighlightFill : "#fff",
-				pointHighlightStroke : "rgba(0,67,157,1)",
-			},
-			flow3: {
-				label: '净增人数',
+				label: '直播场次',
 				fillColor : "rgba(149,192,0,0.1)",
 				strokeColor : "rgba(149,192,0,1)",
 				pointColor : "rgba(149,192,0,1)",
 				pointStrokeColor : "#fff",
 				pointHighlightFill : "#fff",
+				pointHighlightStroke : "rgba(36,165,222,1)",
+			},
+			flow2: {
+				label: '报名人数',
+				fillColor : "rgba(36,165,222,0.1)",
+				strokeColor : "rgba(36,165,222,0)",
+				pointColor : "rgba(36,165,222,0)",//0,67,157,1
+				pointStrokeColor : "#fff",
+				pointHighlightFill : "#fff",
+				pointHighlightStroke : "rgba(0,67,157,1)",
+			},
+			flow3: {
+				label: '收藏人数',
+				fillColor : "rgba(0,67,157,0.1)",
+				strokeColor : "rgba(0,67,157,1)",
+				pointColor : "rgba(0,67,157,1)",
+				pointStrokeColor : "#fff",
+				pointHighlightFill : "#fff",
 				pointHighlightStroke : "rgba(149,192,0,1)",
 			},
-			flow4: {
-				label: '累计人数',
-				fillColor : "rgba(231,160,23,0.1)",
-				strokeColor : "rgba(231,160,23,1)",
-				pointColor : "rgba(231,160,23,1)",
-				pointStrokeColor : "#fff",
-				pointHighlightFill : "#fff",
-				pointHighlightStroke : "rgba(231,160,23,1)"
-			},
-			flow5: {
-				label: '会员注册',
-				fillColor : "rgba(255,0,0,0.1)",
-				strokeColor : "rgba(255,0,0,1)",
-				pointColor : "rgba(255,0,0,1)",
-				pointStrokeColor : "#fff",
-				pointHighlightFill : "#fff",
-				pointHighlightStroke : "rgba(255,0,0,1)"
-			}			
+
 		};
 
 		function refreshDataSubscribe() {
@@ -261,36 +237,19 @@ if(navigator.appName == 'Microsoft Internet Explorer'){
 			chart_subscribe.update();
 		}
 
-		var url = '<?php echo U("Index/ajaxSearch/tcop/subscribe");?>';
-		$.post(url, function(data){
-			//今日关注指数
-			$("#today_new").html(data.today_datasets.new);
-			$("#today_cancel").html(data.today_datasets.cancel);
-			$("#today_increase").html(data.today_datasets.increase);
-			$("#today_cumulate").html(data.today_datasets.cumulate);
-			$("#today_page_auth").html(data.today_datasets.page_auth);
-			$("#today_member").html(data.today_datasets.member);
-			//昨日关注指数
-			$("#yesterday_new").html(data.yesterday_datasets.new);
-			$("#yesterday_cancel").html(data.yesterday_datasets.cancel);
-			$("#yesterday_increase").html(data.yesterday_datasets.increase);
-			$("#yesterday_cumulate").html(data.yesterday_datasets.cumulate);
-			$("#yesterday_page_auth").html(data.yesterday_datasets.page_auth);
-			$("#yesterday_member").html(data.yesterday_datasets.member);
-						
-			//关注指数详解
+        var live_url = '<?php echo U("Index/ajaxLiveStatus");?>';
+        $.post(live_url, function(data){
+			//指数详解
 			var datasets = data.datasets;
 			if(!chart_subscribe) {
 				var label = data.label;
 				var ds = $.extend(true, {}, templates_subscribe);
-				ds.flow1.data = datasets.new;
-				ds.flow2.data = datasets.cancel;
-				ds.flow3.data = datasets.increase;
-				ds.flow4.data = datasets.cumulate;
-				ds.flow5.data = datasets.member;
-				var lineChartData = {
+				ds.flow1.data = datasets.liveNum;
+				ds.flow2.data = datasets.enrollNum;
+				ds.flow3.data = datasets.favNum;
+		    var lineChartData = {
 					labels : label,
-					datasets : [ds.flow1, ds.flow2, ds.flow3, ds.flow4, ds.flow5]
+					datasets : [ds.flow1, ds.flow2, ds.flow3]
 				};
 				var ctx = document.getElementById("myChartSubscribe").getContext("2d");
 				chart_subscribe = new Chart(ctx).Line(lineChartData, {
@@ -310,15 +269,15 @@ if(navigator.appName == 'Microsoft Internet Explorer'){
     
 
 <div class="panel panel-default">
-	<div class="panel-heading">家装订单指数详解(月度)
-    <a class="text-danger" href="/sys-index.php/HdOrder/index">查看更多</a>
+	<div class="panel-heading">录播指数曲线图(周度)
+    <a class="text-danger" href="/sys-index.php/Vod/index">查看更多</a>
     </div>
 	<div class="panel-body">
 		<div class="pull-right">
 			<div class="checkbox" id="hd_order">
-				<label style="color:#57B9E6;"><input checked type="checkbox"> 咨询</label>&nbsp;
-				<label style="color:rgba(149,192,0,1);"><input checked type="checkbox"> 订单</label>&nbsp;
-				<label style="color:rgba(203,48,48,1)"><input type="checkbox"> 售后</label>&nbsp;
+                <label style="color:#57B9E6;"><input checked type="checkbox"> 录播发布</label>&nbsp;
+				<label style="color:rgba(149,192,0,1);"><input checked type="checkbox"> 报名人数</label>&nbsp;
+                <label style="color:rgba(203,48,48,1);"><input checked type="checkbox"> 收藏指数</label>&nbsp;
 			</div>
 		</div>
 		<div style="margin-top:20px">
@@ -332,7 +291,7 @@ if(navigator.appName == 'Microsoft Internet Explorer'){
 		var chart_datasets_hd_order = null;
 		var templates_hd_order = {
 			flow1: {
-				label: '咨询',
+				label: '录播场次',
 				fillColor : "rgba(36,165,222,0.1)",
 				strokeColor : "rgba(36,165,222,1)",
 				pointColor : "rgba(36,165,222,1)",
@@ -341,7 +300,7 @@ if(navigator.appName == 'Microsoft Internet Explorer'){
 				pointHighlightStroke : "rgba(36,165,222,1)",
 			},
 			flow2: {
-				label: '订单',
+				label: '报名数',
 				fillColor : "rgba(149,192,0,0.1)",
 				strokeColor : "rgba(149,192,0,1)",
 				pointColor : "rgba(149,192,0,1)",
@@ -350,14 +309,14 @@ if(navigator.appName == 'Microsoft Internet Explorer'){
 				pointHighlightStroke : "rgba(149,192,0,1)",
 			},
 			flow3: {
-				label: '售后',
+				label: '收藏数',
 				fillColor : "rgba(203,48,48,0.1)",
 				strokeColor : "rgba(203,48,48,1)",
 				pointColor : "rgba(203,48,48,1)",
 				pointStrokeColor : "#fff",
 				pointHighlightFill : "#fff",
 				pointHighlightStroke : "rgba(203,48,48,1)",
-			}			
+			}
 		};
 
 		function refreshDataHdOrder() {
@@ -381,16 +340,16 @@ if(navigator.appName == 'Microsoft Internet Explorer'){
 			chart_hd_order.update();
 		}
 
-		var url = '<?php echo U("Index/ajaxSearch/tcop/hdorder");?>';
+		var url = '<?php echo U("Index/ajaxVodStatus");?>';
 		$.post(url, function(data){
 			//关注指数详解
 			var datasets = data.datasets;
 			if(!chart_hd_order) {
 				var label = data.label;
 				var ds = $.extend(true, {}, templates_hd_order);
-				ds.flow1.data = datasets.hd_application;
-				ds.flow2.data = datasets.hd_order;
-				ds.flow3.data = datasets.hd_order_service;
+                ds.flow1.data = datasets.vodNum;
+                ds.flow2.data = datasets.enrollNum;
+                ds.flow3.data = datasets.favNum;
 				var lineChartData = {
 					labels : label,
 					datasets : [ds.flow1, ds.flow2, ds.flow3]
@@ -424,8 +383,8 @@ if(navigator.appName == 'Microsoft Internet Explorer'){
               <span class="label label-success" style="display:inline-block; margin-right:10px;"> 授权使用中 </span> 
               </p>
               
-              <p><strong>授权链接： </strong> http://www.xxx.com/do?g=api&amp;m=auth&amp;a=index</p>
-              <p><strong>授权码： </strong> <a href="javascript:;" title="点击复制Token" style="color:#66667C;">omJNpZEhZeHj1ZxFECKkP48B5VFbk1HP</a></p>
+              <!--<p><strong>授权链接： </strong> http://www.xxx.com/do?g=api&amp;m=auth&amp;a=index</p>-->
+              <!--<p><strong>授权码： </strong> <a href="javascript:;" title="点击复制Token" style="color:#66667C;">omJNpZEhZeHj1ZxFECKkP48B5VFbk1HP</a></p>-->
               
             </div>
           </div>
@@ -443,7 +402,7 @@ if(navigator.appName == 'Microsoft Internet Explorer'){
 <div class="container-fluid footer" role="footer">
   <div class="page-header"></div>
   <span class="pull-left">
-  <p>Powered by <a href="#"><b><?php echo L('PROJECT_TEAM');?></b></a> v2.0 &copy; 2016-2020 <a href="http://www.jianyuly.com/" target="_blank">www.jianyuly.com</a></p>
+  <p>Powered by <a href="#"><b><?php echo L('PROJECT_TEAM');?></b></a> <?php echo L('PROJECT_COPYRIGHT');?> </p>
   </span> 
   <span class="pull-right">
   <p class="label label-info">{__RUNTIME__} </p>
@@ -452,10 +411,10 @@ if(navigator.appName == 'Microsoft Internet Explorer'){
 
 <?php if(ACTION_NAME == 'index'): ?><div class="TopBottomMenu">
 	<ul>
-		<li><a href="/sys-index.php/Member/index" title="会员列表">会员列表</a></li>
-		<li><a href="/sys-index.php/LoanApply/index" title="装修贷订单">装修贷订单</a></li>
-		<li><a href="/sys-index.php/HdApplication/index" title="咨询订单">咨询订单</a></li>
-		<li><a href="/sys-index.php/HdOrder/index" title="家装订单">家装订单</a></li>
+		<li><a href="/sys-index.php/WebConfig/config" title="系统参数">系统参数</a></li>
+		<li><a href="/sys-index.php/videoLive/index" title="直播管理">直播管理</a></li>
+		<li><a href="/sys-index.php/videoVod/index" title="点播管理">点播管理</a></li>
+
 	</ul>
 </div>
 <script type="text/javascript" src="/Public/Static/js/dwsee.top.bottom.menu.min.js" ></script>

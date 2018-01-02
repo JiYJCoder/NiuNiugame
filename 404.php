@@ -1,7 +1,7 @@
 <?php //  - 404页面
 $floor=""; 
 $page_url='http://'.$_SERVER['HTTP_HOST'] .'/';
-$page_title='对不起，您访问的地址不存在或已被清理  -  狸想家平台';
+$page_title='对不起，您访问的地址不存在或已被清理  -  孜尔教育平台';
 ?>
 <!DOCTYPE html>
 <!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
@@ -39,7 +39,7 @@ body {padding-top: 40px;}
     <div class="logo">
       <h1>Error 404 !</h1>
     </div>
-    <p class="lead text-muted">对不起，你找的页面不存在</p>
+    <p class="lead text-muted">对不起，你找的页面不存在!!</p>
     <p class="lead text-muted">页面将在<span id="wait">5</span>秒后自动跳转到之前页面，如未跳转请点击返回按钮</p>
     <div class="clearfix"></div>
     <div class="col-lg-6 col-lg-offset-3">

@@ -1,9 +1,3 @@
-/*
-项目：狸想家【建誉集团】
-开发日期始于：20161108
-作者:国雾院theone(438675036@qq.com)、狸想家精英团队
-说明:公共函数库
-*/
 
 /*
 * Interfaces:
@@ -302,7 +296,7 @@ var LQ = {
 							if(json.url&&json.url!=''){
 								if(json.flag=="login"){util.R(0,json.url);}else{if(json.status==1){util.R(2,json.url);}else{util.R(3,json.url);}}
 							}else{
-								layer.close(page_loading);	
+								layer.close(page_loading);
 							}
 			}
 			});

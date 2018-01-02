@@ -1,0 +1,440 @@
+[ 2017-09-14T15:38:52+08:00 ] 127.0.0.1 /admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.005000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005000s ]
+NOTIC: [2048] Declaration of Admin\Controller\AdminController::opVisible() should be compatible with Admin\Controller\PublicController::opVisible($is_tree = 0) E:\Little\web\video_hd\LQapps\Admin\Controller\AdminController.class.php 第 6 行.
+NOTIC: [2048] Declaration of Admin\Controller\AdminController::opDelete() should be compatible with Admin\Controller\PublicController::opDelete($is_tree = 0) E:\Little\web\video_hd\LQapps\Admin\Controller\AdminController.class.php 第 6 行.
+
+[ 2017-09-14T15:38:53+08:00 ] 127.0.0.1 /sys-index.php/Login/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.048002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.048002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\ShowRuntimeBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.001001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-09-14T15:38:53+08:00 ] 127.0.0.1 /sys-index.php/Login/checkCode
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-09-14T15:39:01+08:00 ] 127.0.0.1 /sys-index.php/Login/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SELECT `id`,`zc_account`,`zc_email`,`zc_mobile`,`zc_password`,`zc_salt`,`zn_trylogin_times`,`zn_trylogin_lasttime`,`zl_visible` FROM `lq_admin` WHERE `zc_account` = 'littleHe' LIMIT 1   [ RunTime:0.0010s ]
+SQL: UPDATE `lq_admin` SET `zn_login_times`=zn_login_times+1,`zn_last_login_time`='1505374740',`zn_mdate`='1505374740',`zn_trylogin_times`='0',`zn_trylogin_lasttime`='1505374740' WHERE `id` = 1 [ RunTime:0.0010s ]
+SQL: SELECT * FROM `lq_admin` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`zn_fid`,`zc_caption` FROM `lq_system_menu` WHERE ( zn_fid=1 and zl_is_menu=1 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: index E:\Little\web\video_hd\LQapps\User\Model\AdminModel.class.php 第 495 行.
+NOTIC: [8] Undefined index: zc_run E:\Little\web\video_hd\LQapps\User\Model\AdminModel.class.php 第 502 行.
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=2 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=48 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=49 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=50 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: zc_run E:\Little\web\video_hd\LQapps\User\Model\AdminModel.class.php 第 502 行.
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=41 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=65 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: zc_run E:\Little\web\video_hd\LQapps\User\Model\AdminModel.class.php 第 502 行.
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=42 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=113 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: zc_run E:\Little\web\video_hd\LQapps\User\Model\AdminModel.class.php 第 502 行.
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=45 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=67 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: zc_run E:\Little\web\video_hd\LQapps\User\Model\AdminModel.class.php 第 502 行.
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=47 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: zc_run E:\Little\web\video_hd\LQapps\User\Model\AdminModel.class.php 第 502 行.
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=110 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=69 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=73 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: zc_run E:\Little\web\video_hd\LQapps\User\Model\AdminModel.class.php 第 502 行.
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=111 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: zc_run E:\Little\web\video_hd\LQapps\User\Model\AdminModel.class.php 第 502 行.
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=46 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: zc_run E:\Little\web\video_hd\LQapps\User\Model\AdminModel.class.php 第 502 行.
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=64 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=83 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=51 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0010s ]
+SQL: SELECT `zc_popedom` FROM `lq_admin` WHERE ( id=0 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `lq_admin` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`zn_fid`,`zc_caption` FROM `lq_system_menu` WHERE ( zn_fid=1 and zl_is_menu=1 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: index E:\Little\web\video_hd\LQapps\User\Model\AdminModel.class.php 第 495 行.
+NOTIC: [8] Undefined index: zc_run E:\Little\web\video_hd\LQapps\User\Model\AdminModel.class.php 第 502 行.
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=2 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=48 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=49 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=50 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: zc_run E:\Little\web\video_hd\LQapps\User\Model\AdminModel.class.php 第 502 行.
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=41 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=65 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: zc_run E:\Little\web\video_hd\LQapps\User\Model\AdminModel.class.php 第 502 行.
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=42 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=113 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: zc_run E:\Little\web\video_hd\LQapps\User\Model\AdminModel.class.php 第 502 行.
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=45 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=67 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: zc_run E:\Little\web\video_hd\LQapps\User\Model\AdminModel.class.php 第 502 行.
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=47 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: zc_run E:\Little\web\video_hd\LQapps\User\Model\AdminModel.class.php 第 502 行.
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=110 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=69 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=73 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: zc_run E:\Little\web\video_hd\LQapps\User\Model\AdminModel.class.php 第 502 行.
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=111 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: zc_run E:\Little\web\video_hd\LQapps\User\Model\AdminModel.class.php 第 502 行.
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=46 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: zc_run E:\Little\web\video_hd\LQapps\User\Model\AdminModel.class.php 第 502 行.
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=64 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=83 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=51 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0000s ]
+SQL: SELECT `zc_popedom` FROM `lq_admin` WHERE ( id=0 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `lq_admin` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: login E:\Little\web\video_hd\LQapps\User\Api\AdminApi.class.php 第 326 行.
+NOTIC: [8] Undefined index: description E:\Little\web\video_hd\LQapps\User\Api\AdminApi.class.php 第 339 行.
+SQL: INSERT INTO `lq_admin_log` (`zn_type`,`zc_action`,`zc_table`,`zc_table_id`,`zc_description`,`zn_ip`,`zn_cdate`,`zn_operator`,`zc_account`) VALUES ('1','login','admin','1','littleHe对数据表admin进行操作。url请求:www.zier.com:80/sys-index.php/Login/login','2130706433','1505374740','1','littleHe') [ RunTime:0.0020s ]
+
+[ 2017-09-14T15:39:01+08:00 ] 127.0.0.1 /sys-index.php/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.051003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.051003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\ShowRuntimeBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.002001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-09-14T15:39:01+08:00 ] 127.0.0.1 /sys-index.php/Index/ajaxSearch
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_live` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_live` WHERE ( zl_status = 6 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_vod` LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_vod` WHERE ( zl_status = 6 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_member` WHERE ( zl_role=1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_member` WHERE ( zl_role=2 ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-09-14T15:39:01+08:00 ] 127.0.0.1 /sys-index.php/Index/ajaxLiveStatus
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_lesson_live` WHERE ( zc_live_start >=1504800000 and zc_live_start<=1504886399 ) LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_member_favorite` WHERE ( zn_type = 1 and zn_cdate >=1504800000 and zn_cdate<=1504886399 ) LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_member_enroll` WHERE ( zn_type = 1 and zn_cdate >=1504800000 and zn_cdate<=1504886399 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_lesson_live` WHERE ( zc_live_start >=1504886400 and zc_live_start<=1504972799 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_member_favorite` WHERE ( zn_type = 1 and zn_cdate >=1504886400 and zn_cdate<=1504972799 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_member_enroll` WHERE ( zn_type = 1 and zn_cdate >=1504886400 and zn_cdate<=1504972799 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_lesson_live` WHERE ( zc_live_start >=1504972800 and zc_live_start<=1505059199 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_member_favorite` WHERE ( zn_type = 1 and zn_cdate >=1504972800 and zn_cdate<=1505059199 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_member_enroll` WHERE ( zn_type = 1 and zn_cdate >=1504972800 and zn_cdate<=1505059199 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_lesson_live` WHERE ( zc_live_start >=1505059200 and zc_live_start<=1505145599 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_member_favorite` WHERE ( zn_type = 1 and zn_cdate >=1505059200 and zn_cdate<=1505145599 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_member_enroll` WHERE ( zn_type = 1 and zn_cdate >=1505059200 and zn_cdate<=1505145599 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_lesson_live` WHERE ( zc_live_start >=1505145600 and zc_live_start<=1505231999 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_member_favorite` WHERE ( zn_type = 1 and zn_cdate >=1505145600 and zn_cdate<=1505231999 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_member_enroll` WHERE ( zn_type = 1 and zn_cdate >=1505145600 and zn_cdate<=1505231999 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_lesson_live` WHERE ( zc_live_start >=1505232000 and zc_live_start<=1505318399 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_member_favorite` WHERE ( zn_type = 1 and zn_cdate >=1505232000 and zn_cdate<=1505318399 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_member_enroll` WHERE ( zn_type = 1 and zn_cdate >=1505232000 and zn_cdate<=1505318399 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_lesson_live` WHERE ( zc_live_start >=1505318400 and zc_live_start<=1505404799 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_member_favorite` WHERE ( zn_type = 1 and zn_cdate >=1505318400 and zn_cdate<=1505404799 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_member_enroll` WHERE ( zn_type = 1 and zn_cdate >=1505318400 and zn_cdate<=1505404799 ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-09-14T15:39:01+08:00 ] 127.0.0.1 /sys-index.php/Index/ajaxVodStatus
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_lesson_vod` WHERE ( zn_cdate >=1504800000 and zn_cdate<=1504886399 ) LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_member_favorite` WHERE ( zn_type = 2 and  zn_cdate >=1504800000 and zn_cdate<=1504886399 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_member_enroll` WHERE ( zn_type = 2 and zn_cdate >=1504800000 and zn_cdate<=1504886399 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_lesson_vod` WHERE ( zn_cdate >=1504886400 and zn_cdate<=1504972799 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_member_favorite` WHERE ( zn_type = 2 and  zn_cdate >=1504886400 and zn_cdate<=1504972799 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_member_enroll` WHERE ( zn_type = 2 and zn_cdate >=1504886400 and zn_cdate<=1504972799 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_lesson_vod` WHERE ( zn_cdate >=1504972800 and zn_cdate<=1505059199 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_member_favorite` WHERE ( zn_type = 2 and  zn_cdate >=1504972800 and zn_cdate<=1505059199 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_member_enroll` WHERE ( zn_type = 2 and zn_cdate >=1504972800 and zn_cdate<=1505059199 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_lesson_vod` WHERE ( zn_cdate >=1505059200 and zn_cdate<=1505145599 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_member_favorite` WHERE ( zn_type = 2 and  zn_cdate >=1505059200 and zn_cdate<=1505145599 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_member_enroll` WHERE ( zn_type = 2 and zn_cdate >=1505059200 and zn_cdate<=1505145599 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_lesson_vod` WHERE ( zn_cdate >=1505145600 and zn_cdate<=1505231999 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_member_favorite` WHERE ( zn_type = 2 and  zn_cdate >=1505145600 and zn_cdate<=1505231999 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_member_enroll` WHERE ( zn_type = 2 and zn_cdate >=1505145600 and zn_cdate<=1505231999 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_lesson_vod` WHERE ( zn_cdate >=1505232000 and zn_cdate<=1505318399 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_member_favorite` WHERE ( zn_type = 2 and  zn_cdate >=1505232000 and zn_cdate<=1505318399 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_member_enroll` WHERE ( zn_type = 2 and zn_cdate >=1505232000 and zn_cdate<=1505318399 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_lesson_vod` WHERE ( zn_cdate >=1505318400 and zn_cdate<=1505404799 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_member_favorite` WHERE ( zn_type = 2 and  zn_cdate >=1505318400 and zn_cdate<=1505404799 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_member_enroll` WHERE ( zn_type = 2 and zn_cdate >=1505318400 and zn_cdate<=1505404799 ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-09-14T15:39:03+08:00 ] 127.0.0.1 /sys-index.php/Member/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2048] Declaration of Admin\Controller\MemberController::opVisible() should be compatible with Admin\Controller\PublicController::opVisible($is_tree = 0) E:\Little\web\video_hd\LQapps\Admin\Controller\MemberController.class.php 第 10 行.
+NOTIC: [2048] Declaration of Admin\Controller\MemberController::opDelete() should be compatible with Admin\Controller\PublicController::opDelete($is_tree = 0) E:\Little\web\video_hd\LQapps\Admin\Controller\MemberController.class.php 第 10 行.
+NOTIC: [8] Use of undefined constant SYSTEM_MENU_CURRENT - assumed 'SYSTEM_MENU_CURRENT' E:\Little\web\video_hd\LQapps\Admin\Controller\PublicController.class.php 第 481 行.
+NOTIC: [8] Use of undefined constant SYSTEM_MENU_CURRENT - assumed 'SYSTEM_MENU_CURRENT' E:\Little\web\video_hd\LQapps\Admin\Controller\PublicController.class.php 第 484 行.
+NOTIC: [8] Undefined variable: s E:\Little\web\video_hd\LQapps\Common\Common\function.php 第 1033 行.
+NOTIC: [8] Undefined variable: s E:\Little\web\video_hd\LQapps\Common\Common\function.php 第 1033 行.
+NOTIC: [8] Undefined variable: s E:\Little\web\video_hd\LQapps\Common\Common\function.php 第 1033 行.
+NOTIC: [8] Undefined variable: s E:\Little\web\video_hd\LQapps\Common\Common\function.php 第 1033 行.
+NOTIC: [8] Undefined variable: s E:\Little\web\video_hd\LQapps\Common\Common\function.php 第 1033 行.
+NOTIC: [8] Undefined variable: s E:\Little\web\video_hd\LQapps\Common\Common\function.php 第 1033 行.
+NOTIC: [8] Undefined variable: s E:\Little\web\video_hd\LQapps\Common\Common\function.php 第 1033 行.
+NOTIC: [8] Undefined variable: s E:\Little\web\video_hd\LQapps\Common\Common\function.php 第 1033 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_member` WHERE (  1  and zl_role = 2 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`zl_role`,`zc_account`,`zc_nickname`,`zn_pay_integration`,`zn_rank_integration`,`zc_mobile`,`zc_school`,`zl_account_bind`,`zl_openid_bind`,`zl_mobile_bind`,`zl_email_bind`,`zl_visible`,`zn_cdate`,`zn_mdate` FROM `lq_member` WHERE (  1  and zl_role = 2 ) ORDER BY id DESC LIMIT 0,10   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: unapprove E:\Little\web\video_hd\LQapps\Member\Model\MemberModel.class.php 第 555 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_live` WHERE ( zn_teacher_id=21 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_vod` WHERE ( zn_teacher_id=21 ) LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: unapprove E:\Little\web\video_hd\LQapps\Member\Model\MemberModel.class.php 第 555 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_live` WHERE ( zn_teacher_id=14 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_vod` WHERE ( zn_teacher_id=14 ) LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: unapprove E:\Little\web\video_hd\LQapps\Member\Model\MemberModel.class.php 第 555 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_live` WHERE ( zn_teacher_id=9 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_vod` WHERE ( zn_teacher_id=9 ) LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: unapprove E:\Little\web\video_hd\LQapps\Member\Model\MemberModel.class.php 第 555 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_live` WHERE ( zn_teacher_id=4 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_vod` WHERE ( zn_teacher_id=4 ) LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.067004s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.067004s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\ShowRuntimeBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.002001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-09-14T15:39:12+08:00 ] 127.0.0.1 /sys-index.php/Member/auth/tnid/21
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2048] Declaration of Admin\Controller\MemberController::opVisible() should be compatible with Admin\Controller\PublicController::opVisible($is_tree = 0) E:\Little\web\video_hd\LQapps\Admin\Controller\MemberController.class.php 第 10 行.
+NOTIC: [2048] Declaration of Admin\Controller\MemberController::opDelete() should be compatible with Admin\Controller\PublicController::opDelete($is_tree = 0) E:\Little\web\video_hd\LQapps\Admin\Controller\MemberController.class.php 第 10 行.
+NOTIC: [8] Use of undefined constant SYSTEM_MENU_CURRENT - assumed 'SYSTEM_MENU_CURRENT' E:\Little\web\video_hd\LQapps\Admin\Controller\PublicController.class.php 第 481 行.
+NOTIC: [8] Use of undefined constant SYSTEM_MENU_CURRENT - assumed 'SYSTEM_MENU_CURRENT' E:\Little\web\video_hd\LQapps\Admin\Controller\PublicController.class.php 第 484 行.
+NOTIC: [8192] Function split() is deprecated E:\Little\web\video_hd\LQapps\Admin\Model\MemberAuthModel.class.php 第 19 行.
+SQL: SELECT * FROM `lq_member_auth` WHERE ( zn_member_id=21 ) LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: last_post_cookie E:\Little\web\video_hd\LQapps\Common\Common\function.php 第 1745 行.
+NOTIC: [8] Undefined index: display E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 60 行.
+NOTIC: [8] Undefined index: fast-fill E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 161 行.
+NOTIC: [8] Undefined index: controlTitle E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 90 行.
+NOTIC: [8] Undefined index: confirm E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 94 行.
+NOTIC: [8] Undefined index: dataBetween E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 96 行.
+NOTIC: [8] Undefined index: rows E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 99 行.
+NOTIC: [8] Undefined index: maxl E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 100 行.
+NOTIC: [8] Undefined index: width E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 101 行.
+NOTIC: [8] Undefined index: height E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 102 行.
+NOTIC: [8] Undefined index: style E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 103 行.
+NOTIC: [8] Undefined index: zc_cert_img_label E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 495 行.
+NOTIC: [8] Undefined index: display E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 60 行.
+NOTIC: [8] Undefined index: uploadsize E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 511 行.
+NOTIC: [8] Undefined index: required E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 530 行.
+NOTIC: [8] Undefined index: display E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 60 行.
+NOTIC: [8] Undefined index: display E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 60 行.
+NOTIC: [8] Undefined index: fast-fill E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 161 行.
+NOTIC: [8] Undefined index: controlTitle E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 90 行.
+NOTIC: [8] Undefined index: confirm E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 94 行.
+NOTIC: [8] Undefined index: dataBetween E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 96 行.
+NOTIC: [8] Undefined index: rows E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 99 行.
+NOTIC: [8] Undefined index: maxl E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 100 行.
+NOTIC: [8] Undefined index: width E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 101 行.
+NOTIC: [8] Undefined index: height E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 102 行.
+NOTIC: [8] Undefined index: style E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 103 行.
+NOTIC: [8] Undefined index: zc_idcard_img_label E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 495 行.
+NOTIC: [8] Undefined index: display E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 60 行.
+NOTIC: [8] Undefined index: uploadsize E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 511 行.
+NOTIC: [8] Undefined index: required E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 530 行.
+NOTIC: [8] Undefined index: display E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 60 行.
+NOTIC: [8] Undefined index: display E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 60 行.
+NOTIC: [8] Undefined index: fast-fill E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 161 行.
+NOTIC: [8] Undefined index: controlTitle E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 90 行.
+NOTIC: [8] Undefined index: confirm E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 94 行.
+NOTIC: [8] Undefined index: dataBetween E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 96 行.
+NOTIC: [8] Undefined index: rows E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 99 行.
+NOTIC: [8] Undefined index: maxl E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 100 行.
+NOTIC: [8] Undefined index: width E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 101 行.
+NOTIC: [8] Undefined index: height E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 102 行.
+NOTIC: [8] Undefined index: style E:\Little\web\video_hd\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 103 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.045003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.045003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\ShowRuntimeBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-09-14T15:39:51+08:00 ] 127.0.0.1 /sys-index.php/Member/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2048] Declaration of Admin\Controller\MemberController::opVisible() should be compatible with Admin\Controller\PublicController::opVisible($is_tree = 0) E:\Little\web\video_hd\LQapps\Admin\Controller\MemberController.class.php 第 10 行.
+NOTIC: [2048] Declaration of Admin\Controller\MemberController::opDelete() should be compatible with Admin\Controller\PublicController::opDelete($is_tree = 0) E:\Little\web\video_hd\LQapps\Admin\Controller\MemberController.class.php 第 10 行.
+NOTIC: [8] Use of undefined constant SYSTEM_MENU_CURRENT - assumed 'SYSTEM_MENU_CURRENT' E:\Little\web\video_hd\LQapps\Admin\Controller\PublicController.class.php 第 481 行.
+NOTIC: [8] Use of undefined constant SYSTEM_MENU_CURRENT - assumed 'SYSTEM_MENU_CURRENT' E:\Little\web\video_hd\LQapps\Admin\Controller\PublicController.class.php 第 484 行.
+NOTIC: [8] Undefined variable: s E:\Little\web\video_hd\LQapps\Common\Common\function.php 第 1033 行.
+NOTIC: [8] Undefined variable: s E:\Little\web\video_hd\LQapps\Common\Common\function.php 第 1033 行.
+NOTIC: [8] Undefined variable: s E:\Little\web\video_hd\LQapps\Common\Common\function.php 第 1033 行.
+NOTIC: [8] Undefined variable: s E:\Little\web\video_hd\LQapps\Common\Common\function.php 第 1033 行.
+NOTIC: [8] Undefined variable: s E:\Little\web\video_hd\LQapps\Common\Common\function.php 第 1033 行.
+NOTIC: [8] Undefined variable: s E:\Little\web\video_hd\LQapps\Common\Common\function.php 第 1033 行.
+NOTIC: [8] Undefined variable: s E:\Little\web\video_hd\LQapps\Common\Common\function.php 第 1033 行.
+NOTIC: [8] Undefined variable: s E:\Little\web\video_hd\LQapps\Common\Common\function.php 第 1033 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_member` WHERE (  1  and zl_role = 2 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`zl_role`,`zc_account`,`zc_nickname`,`zn_pay_integration`,`zn_rank_integration`,`zc_mobile`,`zc_school`,`zl_account_bind`,`zl_openid_bind`,`zl_mobile_bind`,`zl_email_bind`,`zl_visible`,`zn_cdate`,`zn_mdate` FROM `lq_member` WHERE (  1  and zl_role = 2 ) ORDER BY id DESC LIMIT 0,10   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: unapprove E:\Little\web\video_hd\LQapps\Member\Model\MemberModel.class.php 第 555 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_live` WHERE ( zn_teacher_id=21 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_vod` WHERE ( zn_teacher_id=21 ) LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: unapprove E:\Little\web\video_hd\LQapps\Member\Model\MemberModel.class.php 第 555 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_live` WHERE ( zn_teacher_id=14 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_vod` WHERE ( zn_teacher_id=14 ) LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: unapprove E:\Little\web\video_hd\LQapps\Member\Model\MemberModel.class.php 第 555 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_live` WHERE ( zn_teacher_id=9 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_vod` WHERE ( zn_teacher_id=9 ) LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: unapprove E:\Little\web\video_hd\LQapps\Member\Model\MemberModel.class.php 第 555 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_live` WHERE ( zn_teacher_id=4 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_vod` WHERE ( zn_teacher_id=4 ) LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.028002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\ShowRuntimeBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-09-14T15:42:12+08:00 ] 127.0.0.1 /sys-index.php/Member/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2048] Declaration of Admin\Controller\MemberController::opVisible() should be compatible with Admin\Controller\PublicController::opVisible($is_tree = 0) E:\Little\web\video_hd\LQapps\Admin\Controller\MemberController.class.php 第 10 行.
+NOTIC: [2048] Declaration of Admin\Controller\MemberController::opDelete() should be compatible with Admin\Controller\PublicController::opDelete($is_tree = 0) E:\Little\web\video_hd\LQapps\Admin\Controller\MemberController.class.php 第 10 行.
+NOTIC: [8] Use of undefined constant SYSTEM_MENU_CURRENT - assumed 'SYSTEM_MENU_CURRENT' E:\Little\web\video_hd\LQapps\Admin\Controller\PublicController.class.php 第 481 行.
+NOTIC: [8] Use of undefined constant SYSTEM_MENU_CURRENT - assumed 'SYSTEM_MENU_CURRENT' E:\Little\web\video_hd\LQapps\Admin\Controller\PublicController.class.php 第 484 行.
+NOTIC: [8] Undefined variable: s E:\Little\web\video_hd\LQapps\Common\Common\function.php 第 1033 行.
+NOTIC: [8] Undefined variable: s E:\Little\web\video_hd\LQapps\Common\Common\function.php 第 1033 行.
+NOTIC: [8] Undefined variable: s E:\Little\web\video_hd\LQapps\Common\Common\function.php 第 1033 行.
+NOTIC: [8] Undefined variable: s E:\Little\web\video_hd\LQapps\Common\Common\function.php 第 1033 行.
+NOTIC: [8] Undefined variable: s E:\Little\web\video_hd\LQapps\Common\Common\function.php 第 1033 行.
+NOTIC: [8] Undefined variable: s E:\Little\web\video_hd\LQapps\Common\Common\function.php 第 1033 行.
+NOTIC: [8] Undefined variable: s E:\Little\web\video_hd\LQapps\Common\Common\function.php 第 1033 行.
+NOTIC: [8] Undefined variable: s E:\Little\web\video_hd\LQapps\Common\Common\function.php 第 1033 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_member` WHERE (  1  and zl_role = 2 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`zl_role`,`zc_account`,`zc_nickname`,`zn_pay_integration`,`zn_rank_integration`,`zc_mobile`,`zc_school`,`zl_account_bind`,`zl_openid_bind`,`zl_mobile_bind`,`zl_email_bind`,`zl_visible`,`zn_cdate`,`zn_mdate` FROM `lq_member` WHERE (  1  and zl_role = 2 ) ORDER BY id DESC LIMIT 0,10   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: unapprove E:\Little\web\video_hd\LQapps\Member\Model\MemberModel.class.php 第 555 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_live` WHERE ( zn_teacher_id=21 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_vod` WHERE ( zn_teacher_id=21 ) LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: unapprove E:\Little\web\video_hd\LQapps\Member\Model\MemberModel.class.php 第 555 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_live` WHERE ( zn_teacher_id=14 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_vod` WHERE ( zn_teacher_id=14 ) LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: unapprove E:\Little\web\video_hd\LQapps\Member\Model\MemberModel.class.php 第 555 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_live` WHERE ( zn_teacher_id=9 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_vod` WHERE ( zn_teacher_id=9 ) LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: unapprove E:\Little\web\video_hd\LQapps\Member\Model\MemberModel.class.php 第 555 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_live` WHERE ( zn_teacher_id=4 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_vod` WHERE ( zn_teacher_id=4 ) LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.029002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.029002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\ShowRuntimeBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.003000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+

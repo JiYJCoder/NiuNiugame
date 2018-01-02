@@ -1,10 +1,5 @@
 <?php
-/*
-项目：狸想家【建誉集团】
-开发日期始于：20161108
-作者:国雾院theone(438675036@qq.com)、狸想家精英团队
-说明:会员中心
-*/
+
 namespace Ucenter\Controller;
 use Think\Controller;
 use LQLibs\Util\BootstrapForm as Form;//表单填充插件

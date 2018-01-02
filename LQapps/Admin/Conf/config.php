@@ -20,6 +20,7 @@ return array(
 	
 	'SYSMUEN_MODEL'=>array(1=>'项目（GROUP_NAME）','系统(SYSTEM)','归类(CLASSIFY)','控制器名(CONTROLLER_NAME)','操作(ACTION_NAME)','链接(LINK)'),//系统架构-节点类型
 	'USE_STATUS'=>array('禁用','启用'),//使用情况
+	'FINISH_STATUS'=>array('未直播','已直播'),//使用情况
 	'INSTALL_STATUS'=>array('卸载','安装'),//安装情况
 	'DISPLAY_STATUS'=>array('隐藏','显示'),//可视状态
 	'POPLABEL'=>array('绿色','加权'),//权限通道

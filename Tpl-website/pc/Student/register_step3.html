@@ -1,0 +1,67 @@
+<head>
+    <meta charset="UTF-8">
+    <title>注册 - 注册成功</title>
+    <meta name="keywords" content="{$seoData.keywords}">
+    <meta name="description" content="{$seoData.description}">
+    <script src="__JS__/lib/jquery-3.1.1.min.js"></script>
+    <script src='__JS__/lib/require.js'></script>
+    <script src="__JS__/lib/main.js"></script>
+    <link rel="stylesheet" href="__CSS__/student/student.css">
+    <script src="__JS__/common.js"></script>
+</head>
+
+<body>
+    <include file="Public:header" />
+    <div class="register student-register">
+        <div class="zr_layout">
+            <div class="content ">
+                <div class="tabs">
+                    <ul class="tabs_header clearfix">
+                        <li>
+                            <div class="item ">
+                                <span class="order fl">1</span>
+                                <span class="text fl">阅读协议</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="item">
+                                <span class="order fl">2</span>
+                                <span class="text fl">填写资料</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="item active">
+                                <span class="order fl">3</span>
+                                <span class="text fl">注册成功</span>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="list_2 list_3">
+                        <div class="textbox">
+                              <div class="r_book_bg"></div>
+                              <h3>恭喜你，注册成功!</h3>
+                              <a class="go_home" href="../index.html">返回首页</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="s-sn-footer">
+        <span>孜尔教育 粤ICP备12012570号-2</span>
+    </div>
+</body>
+
+</html>
+<script>
+$(".tabs label").on("click", function() {
+    var index = $(this).index();
+    $(".tabs-body .tabs-item").hide()
+    if(index == 1) {
+        $(".go-email-link").show()
+    }else{
+        $(".go-email-link").hide()
+    }
+    $(".tabs-body .tabs-item").eq(index).show()
+})
+</script>

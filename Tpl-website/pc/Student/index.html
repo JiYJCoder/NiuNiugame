@@ -1,0 +1,226 @@
+<head>
+    <meta charset="UTF-8">
+    <title>学生中心</title>
+    <meta name="keywords" content="{$seoData.keywords}">
+    <meta name="description" content="{$seoData.description}">
+    <link rel="stylesheet" href="__CSS__/student/student.css">
+    <script src="__JS__/lib/jquery-3.1.1.min.js"></script>
+    <script src="__JS__/lib/YMDClass.mini.js"></script>
+    <script src='__JS__/lib/require.js'></script>
+    <script src="__JS__/lib/main.js"></script>
+    <script src="__JS__/common.js"></script>
+</head>
+
+<body>
+    <include file="Public:header" />
+    <include file="Public:student_nav" />
+    </div>
+    <div class="s-m-course-banner">
+        <div class="zr_layout">
+            <div class="user-info">
+                <div class="h-avatar">
+                    <img src="{$student_msg['zc_headimg']}" alt="">
+                </div>
+                <span class="user-name">{$student_msg['zc_nickname']}</span>
+            </div>
+            <div class="c-statistics">
+                <div class="record-registration row" style="margin-left:300px;">
+                    <span class="count">{$student_msg['vod_num']}</span>
+                    <span class="text2">录播报名</span>
+                </div>
+                <div class="record-registration row" style="margin-left:68px;">
+                    <span class="count">{$student_msg['live_num']}</span>
+                    <span class="text2">直播报名</span>
+                </div>
+                <div class="record-registration row" style="margin-left:77px;">
+                    <span class="count">{$student_msg['time']}</span>
+                    <span class="text1">{$student_msg['time_unit']}</span>
+                    <span class="text2">总观看时长</span>
+                </div>
+                <div class="record-registration row" style="margin-left:57px;">
+                    <span class="count">{$student_msg['teacher_num']}</span>
+                    <span class="text1">位</span>
+                    <span class="text2">听过老师数量</span>
+                </div>
+                <div class="record-registration row" style="margin-left:83px;">
+                    <span class="count">0</span>
+                    <span class="text1">元</span>
+                    <span class="text2">总花费</span>
+                </div>
+            </div>
+        </div>
+        <i class="circle circle1"></i>
+        <i class="circle circle2"></i>
+        <i class="circle circle3"></i>
+        <i class="circle circle4"></i>
+        <i class="circle circle5"></i>
+        <i class="circle circle6"></i>
+        <i class="circle circle7"></i>
+        <i class="circle circle8"></i>
+        <i class="circle circle9"></i>
+        <i class="circle circle10"></i>
+        <i class="circle circle11"></i>
+        <i class="circle circle12"></i>
+        <i class="circle circle13"></i>
+        <i class="circle circle14"></i>
+    </div>
+    <div class="recently-study-course">
+        <div class="my-course-content zr_layout">
+            <div class="title">
+                <h1>最近学习的课程</h1>
+                <div style="display: inline-block;">
+                    <span class="active tab">直播课程</span>
+                    <span class="tab">录播课程</span>
+                </div>
+            </div>
+            <div class="course-list-wapper tabcontain course-tab-1">
+                <if condition="$live_msg">
+                <foreach name="live_msg" item="value">
+                    <if condition="($value['id'] gt 0) AND ($value['zl_status'] eq 6)">
+                        <div class="s-zx-course-list">
+                            <img class="picture" src="{$value['zc_image']}" alt="">
+                            <div class="course-detail">
+                                <div class="row clearfix">
+                                    <h3 class="item-title">{$value['live_title']}</h3>
+                                </div>
+                                <div class="row clearfix sub-title">
+                                    <span>{$value['zn_cat_name']}</span>
+                                    <span>{$value['zc_nickname']}</span>
+                                    <span>{$value['zc_school']}</span>
+                                </div>
+                                <div class="row progress-text">
+                                    <span class="recently-live-time">最近直播:{$value['zc_date']} {$value['zc_start_time']}-{$value['zc_end_time']}</span>
+                                </div>
+                            </div>
+                            <div class="keep-studying">
+                                <a class="hover-btn" href="{:U('/Live/livedetail',array('tnid' => $value['live_id']))}">继续学习</a>
+                            </div>
+                        </div>
+                        <else />
+                        <div class="s-zx-course-list">
+                            <img class="picture" src="{$value['zc_image']}" alt="">
+                            <div class="course-detail">
+                                <div class="row clearfix">
+                                    <h3 class="item-title">{$value['live_title']}</h3>
+                                </div>
+                                <div class="row clearfix sub-title">
+                                    <span>{$value['zn_cat_name']}</span>
+                                    <span>{$value['zc_nickname']}</span>
+                                    <span>{$value['zc_school']}</span>
+                                </div>
+                                <!-- 直播已完结显示 -->
+                                <div class="end-live">
+                                    <span>直播已完结</span>
+                                </div>
+                            </div>
+                            <div class="keep-studying">
+                                <a class="hover-btn" href="{:U('/Live/livedetail',array('tnid' => $value['live_id']))}">继续学习</a>
+                            </div>
+                        </div>
+                    </if>
+                </foreach>
+                <!-- 没有列表显示 -->
+                <else />
+                <div class="lb_list_item no_lb clearfix">
+                        <div class="lb_head_sculpture fl">
+                            <img src="__IMG__/teacher/no_lb_bg.png" alt="">
+                        </div>
+                        <div class="lb_info fl clearfix">
+                            <div class="fl">
+                                <div>
+                                    <h3 class="lb_list_title"></h3>
+                                    <h3 class="lb_list_title lb_list_title2"></h3>
+                                </div>
+                                <div class="curriculum_name_list">
+                                    <a class="hover-btn" href="{:U('/Live/index')}">去报名</a>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+                </if>
+            </div>
+            <div class="course-list-wapper tabcontain course-tab-2">
+                <if condition="$vod_msg">
+                <foreach name="vod_msg" item="value">
+                    <if condition="$value['zn_total'] LT $value['total_lesson_num']">
+                        <div class="s-zx-course-list">
+                            <img class="picture" src="{$value['zc_image']}" alt="">
+                            <div class="course-detail">
+                                <div class="row clearfix">
+                                    <h3 class="item-title">{$value['zc_title']}</h3>
+                                    <i class="icon">更新</i>
+                                </div>
+                                <div class="row clearfix sub-title">
+                                    <span>{$value['zn_cat_name']}</span>
+                                    <span>{$value['zc_nickname']}</span>
+                                    <span>{$value['zc_school']}</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress" style="width:{$value['percentage']}%"></div>
+                                </div>
+                                <div class="row progress-text">
+                                    <span>学习到</span>
+                                    <span>{$value['current_lesson_num']}/{$value['total_lesson_num']}</span>
+                                    <span>课时</span>
+                                </div>
+                            </div>
+                            <div class="keep-studying">
+                                <a class="hover-btn" href="{:U('/Vod/videodetail',array('tnid' => $value['id']))}">查看回放</a>
+                            </div>
+                        </div>
+                        <else />
+                        <div class="s-zx-course-list">
+                            <img class="picture" src="{$value['zc_image']}" alt="">
+                            <div class="course-detail">
+                                <div class="row clearfix">
+                                    <h3 class="item-title">{$value['zc_title']}</h3>
+                                </div>
+                                <div class="row clearfix sub-title">
+                                    <span>{$value['zn_cat_name']}</span>
+                                    <span>{$value['zc_nickname']}</span>
+                                    <span>{$value['zc_school']}</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress" style="width:{$value['percentage']}%"></div>
+                                </div>
+                                <div class="row progress-text">
+                                    <span>学习到</span>
+                                    <span>{$value['current_lesson_num']}/{$value['total_lesson_num']}</span>
+                                    <span>课时</span>
+                                </div>
+                            </div>
+                            <div class="keep-studying">
+                                <a class="hover-btn" href="{:U('/Vod/videodetail',array('tnid' => $value['id']))}">查看回放</a>
+                            </div>
+                        </div>
+                    </if>
+                </foreach>
+                <else />
+                 <!-- 没有列表显示 -->
+                <div class="lb_list_item no_lb clearfix">
+                        <div class="lb_head_sculpture fl">
+                            <img src="__IMG__/teacher/no_lb_bg.png" alt="">
+                        </div>
+                        <div class="lb_info fl clearfix">
+                            <div class="fl">
+                                <div>
+                                    <h3 class="lb_list_title"></h3>
+                                    <h3 class="lb_list_title lb_list_title2"></h3>
+                                </div>
+                                <div class="curriculum_name_list">
+                                        <a class="hover-btn" href="{:U('/Vod/index')}">去报名</a>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+                </if>
+            </div>
+        </div>
+    </div>
+    <include file="Public:footer" />
+</body>
+<script>
+require(["myCourse"], function(myCourse) {
+    myCourse()
+})
+</script>

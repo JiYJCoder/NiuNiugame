@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="__JS__/lib/jquery-3.1.1.min.js"></script>
+    <script>
+        $(function(){
+            setTimeout('liveSum()',10000);
+        })
+        var lesson_id = {$lesson_id};
+        function liveSum(){
+            $.ajax({
+                type: "POST",
+                url: "{:U('/Test/liveSum')}",
+                data: "lesson_id="+lesson_id,
+                success: function(msg){
+                    setTimeout('liveSum()',{$countTime});
+                }
+            });
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

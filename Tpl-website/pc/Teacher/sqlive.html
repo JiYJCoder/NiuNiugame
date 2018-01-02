@@ -1,0 +1,335 @@
+<head>
+    <meta charset="UTF-8">
+    <title>申请直播</title>
+    <meta name="keywords" content="{$seoData.keywords}">
+    <meta name="description" content="{$seoData.description}">
+    <link rel="stylesheet" href=__CSS__/teacher/teacher.css>
+    <script src="__JS__/lib/jquery.js"></script>
+    <script src='__JS__/lib/require.js'></script>
+    <script src="__JS__/lib/main.js"></script>
+    <script src="__JS__/common.js"></script>
+</head>
+<body>
+    <include file="Public:header"/>
+    <include file="Public:teacher_nav"/>
+    <div class="t_info_wrapper s_q_live_wrapper">
+        <div class="zr_layout">
+            <div class="t_s_content s_q_live" style="top: 0;">
+                <h1 class="s_q_title">
+                申请直播
+            </h1>
+                <div class="s_q_option">
+                    <div class="s-w-addCircle classify clearfix">
+                        <span class="sub_title fl">课程分类</span>
+                        <div class="fl select_option">
+                            <input class="select_class_btn one-catalog-btn" type="button" value="请选择一级分类">
+                            <i class="sjx"></i>
+                            <div class="s_option_input select-one-catalog">
+                                <volist name="parentCat" id="parentCat">
+                                    <span val="{$parentCat.id}">{$parentCat.title}</span>
+                                </volist>
+                            </div>
+                        </div>
+                        <div class="fl select_option">
+                            <input class="select_class_btn two-catalog-btn" type="button" value="请选择二级分类">
+                            <i class="sjx"></i>
+                            <div class="s_option_input select-two-option">
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="s-w-addCircle course_title clearfix">
+                        <h1 class="sub_title fl">课题名称</h1>
+                        <input class="fl" type="text" placeholder="请输入课题名称">
+                    </div>
+                    <div class="s-w-addCircle coures_gh_pic clearfix">
+                        <h1 class="sub_title fl">课题封面</h1>
+                        <div class="img_box fl">
+                            <!-- 初始状态没有上传图片在mask添加 -->
+                            <div class="mask init_pic">
+                                <span>点击更换</span>
+                                <span class="jy_fbl">建议尺寸:800*600</span>
+                                <input class="uploadPic" accept="image/*" type="file">
+                            </div>
+                            <img class="coures_img" src="" alt="">
+                        </div>
+                    </div>
+                    <div class="s-w-addCircle course_summary clearfix">
+                        <h1 class="sub_title fl">课题简介</h1>
+                        <textarea type="text" placeholder="对课题作简单介绍"></textarea>
+                    </div>
+                    <div class="s-w-addCircle course_syllabus clearfix">
+                        <div class="clearfix">
+                            <h1 class="sub_title fl">课程表</h1>
+                            <div class="fl" style="position: relative;top: -10px;left:13px">
+                                <div class="fl" style="position:relative">
+                                    <input class="add_btn add_one_btn" type="button" value="添加单节">
+                                    <div class="add_one_content add_one_content1">
+                                        <i class="close"></i>
+                                        <div class="clearfix course_time">
+                                            <span class="fl">课节日期</span>
+                                            <input class="fl btn has_boxshaw add_one_timeBtn" type="button" value="选择日期">
+                                        </div>
+                                        <div class="clearfix course_time course_sr_title">
+                                            <span class="fl">课节标题</span>
+                                            <input class="fl btn has_boxshaw add_sligle_title" type="text" value="" placeholder="请输入标题">
+                                        </div>
+                                        <div class="clearfix course_time coures_house">
+                                            <div class="coures_house_container">
+                                                <span class="fl">直播时间</span>
+                                            </div>
+                                            <div style="position: relative;">
+                                                <input class="fl btn has_boxshaw sr_start_time1" type="button" value="请输入">
+                                            </div>
+                                            <span class="fl" style="margin-left: 16px;">至</span>
+                                            <div style="position: relative;">
+                                                <input class="fl btn has_boxshaw sr_start_time2" type="button" value="请输入">
+                                            </div>
+                                        </div>
+                                        <div class="add_one_save">
+                                            <input class="hover_btn save_sigle_btn" type="button" value="确定">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="fl">
+                                    <input class="add_btn add_double_btn" type="button" value="添加多节">
+                                    <div class="add_one_content add_many_content">
+                                        <i class="close"></i>
+                                        <div class="clearfix course_time">
+                                            <span class="fl">添加节数</span>
+                                            <input maxlength="3" onkeyup="(this.v=function(){this.value=this.value.replace(/[^0-9-]+/,'');}).call(this)" onblur="this.v();" class="fl btn has_boxshaw add_course_count add_course_count1" type="text" value="1">
+                                            <span style="padding-left:12px">节</span>
+                                        </div>
+                                        <div class="clearfix course_time">
+                                            <span class="fl">间隔天数</span>
+                                            <input  maxlength="3" onkeyup="(this.v=function(){this.value=this.value.replace(/[^0-9-]+/,'');}).call(this)" onblur="this.v();" class="fl btn has_boxshaw add_course_count add_course_day" type="text" value="1">
+                                            <span style="padding-left:12px">天</span>
+                                        </div>
+                                        <div class="clearfix course_time">
+                                            <span class="fl">课节日期</span>
+                                            <input   class="fl btn has_boxshaw add_many_timeBtn" type="button" value="选择日期">
+                                        </div>
+                                        <div class="clearfix course_time course_sr_title">
+                                            <span class="fl">课节标题</span>
+                                                <input class="fl btn has_boxshaw add_double_title" type="text" value="" placeholder="请输入标题">
+                                        </div>
+                                        <div class="clearfix course_time coures_house">
+                                            <div class="coures_house_container">
+                                                <span class="fl">直播时间</span>
+                                            </div>
+                                            <div style="position: relative;">
+                                                <input class="fl btn has_boxshaw sr_many_time1" type="button" value="请输入">
+                                            </div>
+                                            <span class="fl" style="margin-left: 16px;">至</span>
+                                            <div style="position: relative;">
+                                                <input class="fl btn has_boxshaw sr_many_time2" type="button" value="请输入">
+                                            </div>
+                                        </div>
+                                        <div class="clearfix course_time sq_suffix">
+                                            <span class="fl">后缀识别</span>
+                                            <label  class="fl" style="margin-left: 16px;" >
+                                                <input type="radio" value="number" checked name="numberOrCharacter">
+                                                <i></i>
+                                                数字(N)
+                                            </label>
+                                            <label class="fl" style="margin-left: 25px;">
+                                                <input type="radio" value="char" name="numberOrCharacter">
+                                                <i></i>
+                                                字母(N)
+                                            </label>
+                                        </div>
+                                        <div class="add_one_save">
+                                            <input class="hover_btn save_double_btn" type="button" value="确定">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sq_syllabus">
+                            <!-- 没有课程安排现在这个状态 -->
+                             <div class="arrange_course">
+                                <i></i>
+                            </div>
+                            <!-- <div class="syllabus_list clearfix">
+                                <div class="list_left fl">
+                                    <span class="sq_syllabus_no fl">1.</span>
+                                    <span class="sq_syllabus_title fl">勾股定理的练习题练习题习题习题习题df(1)</span>
+                                    <div class="syllabus_title fl">
+                                        <span style="padding-right:4px;"class="sq_syllabus_date">2017-05-15</span>
+                                        <span>22:00</span>
+                                        <span>-</span>
+                                        <span>23:00</span>
+                                    </div>
+                                </div>
+                                <div class="syllabus_right fr">
+                                    <i class="revise"></i>
+                                    <i class="del"></i>
+                                </div>
+                            </div>
+                            <div class="syllabus_list clearfix">
+                                <div class="list_left fl">
+                                    <span class="sq_syllabus_no fl">1.</span>
+                                    <span class="sq_syllabus_title fl">勾股定理的练习题(1)</span>
+                                    <div class="syllabus_title fl">
+                                        <span style="padding-right:4px;"class="sq_syllabus_date">2017-05-15</span>
+                                        <span>22:00</span>
+                                        <span>-</span>
+                                        <span>23:00</span>
+                                    </div>
+                                </div>
+                                <div class="syllabus_right fr">
+                                    <i class="revise"></i>
+                                    <i class="del"></i>
+                                </div>
+                            </div>
+                            <div class="syllabus_list clearfix">
+                                <div class="list_left fl">
+                                    <span class="sq_syllabus_no fl">1.</span>
+                                    <span class="sq_syllabus_title fl">勾股定理的练习题(1)</span>
+                                    <div class="syllabus_title fl">
+                                        <span style="padding-right:4px;"class="sq_syllabus_date">2017-05-15</span>
+                                        <span>22:00</span>
+                                        <span>-</span>
+                                        <span>23:00</span>
+                                    </div>
+                                </div>
+                                <div class="syllabus_right fr">
+                                    <i class="revise"></i>
+                                    <i class="del"></i>
+                                </div>
+                            </div>
+                            <div class="syllabus_list clearfix">
+                                <div class="list_left fl">
+                                    <span class="sq_syllabus_no fl">1.</span>
+                                    <span class="sq_syllabus_title fl">勾股定理的练习题(1)</span>
+                                    <div class="syllabus_title fl">
+                                        <span style="padding-right:4px;"class="sq_syllabus_date">2017-05-15</span>
+                                        <span>22:00</span>
+                                        <span>-</span>
+                                        <span>23:00</span>
+                                    </div>
+                                </div>
+                                <div class="syllabus_right fr">
+                                    <i class="revise"></i>
+                                    <i class="del"></i>
+                                </div>
+                            </div>
+                            <div class="syllabus_list clearfix">
+                                <div class="list_left fl">
+                                    <span class="sq_syllabus_no fl">1.</span>
+                                    <span class="sq_syllabus_title fl">勾股定理的练习题(1)</span>
+                                    <div class="syllabus_title fl">
+                                        <span style="padding-right:4px;"class="sq_syllabus_date">2017-05-15</span>
+                                        <span>22:00</span>
+                                        <span>-</span>
+                                        <span>23:00</span>
+                                    </div>
+                                </div>
+                                <div class="syllabus_right fr">
+                                    <i class="revise"></i>
+                                    <i class="del"></i>
+                                </div>
+                            </div>
+                            <div class="syllabus_list clearfix">
+                                <div class="list_left fl">
+                                    <span class="sq_syllabus_no fl">1.</span>
+                                    <span class="sq_syllabus_title fl">勾股定理的练习题(1)</span>
+                                    <div class="syllabus_title fl">
+                                        <span style="padding-right:4px;"class="sq_syllabus_date">2017-05-15</span>
+                                        <span>22:00</span>
+                                        <span>-</span>
+                                        <span>23:00</span>
+                                    </div>
+                                </div>
+                                <div class="syllabus_right fr">
+                                    <i class="revise"></i>
+                                    <i class="del"></i>
+                                </div>
+                            </div>
+                            <div class="syllabus_list clearfix">
+                                <div class="list_left fl">
+                                    <span class="sq_syllabus_no fl">1.</span>
+                                    <span class="sq_syllabus_title fl">勾股定理的练习题(1)</span>
+                                    <div class="syllabus_title fl">
+                                        <span style="padding-right:4px;"class="sq_syllabus_date">2017-05-15</span>
+                                        <span>22:00</span>
+                                        <span>-</span>
+                                        <span>23:00</span>
+                                    </div>
+                                </div>
+                                <div class="syllabus_right fr">
+                                    <i class="revise"></i>
+                                    <i class="del"></i>
+                                </div>
+                            </div>
+                            <div class="syllabus_list clearfix">
+                                <div class="list_left fl">
+                                    <span class="sq_syllabus_no fl">1.</span>
+                                    <span class="sq_syllabus_title fl">勾股定理的练习题(1)</span>
+                                    <div class="syllabus_title fl">
+                                        <span style="padding-right:4px;"class="sq_syllabus_date">2017-05-15</span>
+                                        <span>22:00</span>
+                                        <span>-</span>
+                                        <span>23:00</span>
+                                    </div>
+                                </div>
+                                <div class="syllabus_right fr">
+                                    <i class="revise"></i>
+                                    <i class="del"></i>
+                                </div>
+                            </div>
+                            <div class="syllabus_list clearfix">
+                                <div class="list_left fl">
+                                    <span class="sq_syllabus_no fl">1.</span>
+                                    <span class="sq_syllabus_title fl">勾股定理的练习题(1)</span>
+                                    <div class="syllabus_title fl">
+                                        <span style="padding-right:4px;"class="sq_syllabus_date">2017-05-15</span>
+                                        <span>22:00</span>
+                                        <span>-</span>
+                                        <span>23:00</span>
+                                    </div>
+                                </div>
+                                <div class="syllabus_right fr">
+                                    <i class="revise"></i>
+                                    <i class="del"></i>
+                                </div>
+                            </div>
+                            <div class="syllabus_list clearfix">
+                                <div class="list_left fl">
+                                    <span class="sq_syllabus_no fl">1.</span>
+                                    <span class="sq_syllabus_title fl">勾股定理的练习题(1)</span>
+                                    <div class="syllabus_title fl">
+                                        <span style="padding-right:4px;"class="sq_syllabus_date">2017-05-15</span>
+                                        <span>22:00</span>
+                                        <span>-</span>
+                                        <span>23:00</span>
+                                    </div>
+                                </div>
+                                <div class="syllabus_right fr">
+                                    <i class="revise"></i>
+                                    <i class="del"></i>
+                                </div>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+                    <div class="save_sq_mask">
+                        <div class="save_sq_box">
+                            <i></i>
+                            <span>工作人员正加班审核中，请耐心等候</span>
+                            <a class="hover_btn" href="{:U('teacher/index')}">返回首页</a>
+                        </div>
+                    </div>
+                    <input class="save_sq_btn" type="button" value="提交申请">
+            </div>
+        </div>
+    </div>
+    <include file="Public:footer"/>
+</body>
+
+<script>
+
+require(['sqlive'], function(sqlive) {
+    sqlive.loadTip();
+});
+</script>

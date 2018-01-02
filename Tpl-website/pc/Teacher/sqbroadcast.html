@@ -1,0 +1,135 @@
+<head>
+    <meta charset="UTF-8">
+    <title>申请录播</title>
+    <meta name="keywords" content="{$seoData.keywords}">
+    <meta name="description" content="{$seoData.description}">
+    <link rel="stylesheet" href=__CSS__/teacher/teacher.css>
+    <script src="__JS__/lib/jquery.js"></script>
+    <script src="https://cdn.bootcss.com/layer/3.0.1/mobile/layer.js"></script>
+    <script src="https://cdn.bootcss.com/layer/3.0.1/layer.min.js"></script>
+    <script src="__JS__/lib/aliyun-sdk.min.js"></script>
+    <script src="__JS__/common.js"></script>
+    <script src="__JS__/lib/vod-sdk-upload-1.0.6.min.js"></script>
+    <script src="__JS__/teacher/sqbroadcast.js"></script>
+
+</head>
+
+<body>
+    <include file="Public:header" />
+    <include file="Public:teacher_nav" />
+    <div class="t_info_wrapper s_q_live_wrapper s_q_record sq_com_course">
+        <div class="zr_layout">
+            <div class="t_s_content s_q_live" style="top: 0;">
+                <h1 class="s_q_title">
+                申请录播
+            </h1>
+                <div class="s_q_option sq_com_content">
+                    <div class="s-w-addCircle classify clearfix">
+                        <span class="sub_title fl">课程分类</span>
+                        <div class="fl select_option">
+                            <input class="select_class_btn one-catalog-btn" type="button" value="请选择一级分类">
+                            <i class="sjx"></i>
+                            <div class="s_option_input select-one-catalog">
+                                <volist name="parentCat" id="parentCat">
+                                    <span val="{$parentCat.id}">{$parentCat.title}</span>
+                                </volist>
+                            </div>
+                        </div>
+                        <div class="fl select_option">
+                            <input class="select_class_btn two-catalog-btn" type="button" value="请选择二级分类">
+                            <i class="sjx"></i>
+                            <div class="s_option_input select-two-option">
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="s-w-addCircle course_title clearfix">
+                        <h1 class="sub_title fl">课题名称</h1>
+                        <input class="s-course-name" class="fl" type="text" placeholder="请输入课题名称">
+                    </div>
+                    <div class="s-w-addCircle coures_gh_pic clearfix">
+                        <h1 class="sub_title fl">课程封面</h1>
+                        <div class="img_box fl">
+                            <!-- 初始状态没有上传图片在mask添加 -->
+                            <div class="mask init_pic">
+                                <span>点击更换</span>
+                                <span class="jy_fbl">建议尺寸:800*600</span>
+                                <input class="uploadPic" accept="image/*" type="file">
+                            </div>
+                            <img class="coures_img" src="" alt="">
+                        </div>
+                    </div>
+                    <div class="s-w-addCircle course_summary clearfix">
+                        <h1 class="sub_title fl">课题简介</h1>
+                        <textarea type="text" placeholder="对课题作简单介绍"></textarea>
+                    </div>
+                    <div class="s-w-addCircle course_summary clearfix add_record_count">
+                        <h1 class="sub_title fl ">预计节课</h1>
+                        <input class="exp_lesson" onkeyup="this.value=this.value.replace(/\D/g,'')" onafterpaste="this.value=this.value.replace(/\D/g,'')" maxlength="3" size="14" class="has_boxshaw" type="text" value="1">
+                        <span>节</span>
+                    </div>
+                    <div class="item clearfix" id="sqbroadcast-file-upload">
+                        <h3 class="c_title fl">课程上传</h3>
+                        <div class="fl sliderLeft clearfix">
+                            <div class="uploadBtn">
+                                <input type="button" value="课程上传"> 上传
+                            </div>
+                            <div class="fileBox clearfix">
+                                <!-- <div class="file_list">
+                                    <span class="upload_file_bg"></span>
+                                    <i class="file_icon"></i>
+                                    <span class="file_file_text">Video</span>
+                                    <i class="del_file"></i>
+                                    <span class="file_text">5年模拟试题5年模拟试题5年模拟试题</span>
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="save_sq_mask">
+                    <div class="save_sq_box">
+                        <i></i>
+                        <span>工作人员正加班审核中，请耐心等候</span>
+                        <a class="hover_btn" href="{:U('teacher/myrecorded')}">返回首页</a>
+                    </div>
+                </div>
+                <input class="save_sq_btn save_sqbroad_btn" type="button" value="提交申请">
+            </div>
+        </div>
+    </div>
+     <div class="save_sq_mask">
+                        <div class="save_sq_box">
+                            <i></i>
+                            <span>工作人员正加班审核中，请耐心等候</span>
+                            <a class="hover_btn" href="{:U('teacher/myrecorded')}">返回首页</a>
+                        </div>
+                    </div>
+
+    <div class="sr-upload-file-box">
+        <form class="upload-wrp">
+            <div class="file-menu clearfix">
+                <div class="icon"></div>
+                <div class="fl file-menu-left">
+                    <span class="file-name">请上传文件</span>
+                    <span class="now-upload-text"></span>
+                    <div class="progress-bar">
+                        <div class="progress"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="title">
+                <span>文件名称:</span>
+                <input class="has_boxshaw place-edit-file-name" type="text" placeholder="请输入文件名称">
+            </div>
+            <div class="upload-bottom">
+                <div class="upload-btn">
+                    <input class="upload-video-btn" id="files" type="file" accept=".avi,.divx,.3gp,.mov,.mpeg,.mpg,.xvid,.flv,.asf,.rm,.dat,.mp4,.vob,.mkv,.wmv,.rmvb,.flv" value="选择视频">
+                    <button type="button" name="button">上传视频</button>
+                </div>
+                <input class="start-upload" type="button" value="开始上传">
+            </div>
+            <i class="close"></i>
+        </form>
+    </div>
+    <include file="Public:footer" />
+</body>

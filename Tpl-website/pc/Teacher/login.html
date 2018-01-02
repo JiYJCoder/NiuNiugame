@@ -1,0 +1,87 @@
+<head>
+    <meta charset="UTF-8">
+    <title>{$seoData.title}</title>
+    <meta name="keywords" content="{$seoData.keywords}">
+    <meta name="description" content="{$seoData.description}">
+    <link rel="stylesheet" href=__CSS__/teacher/teacher.css>
+    <script src="__JS__/lib/jquery-3.1.1.min.js"></script>
+    <script src='__JS__/lib/require.js'></script>
+    <script src="__JS__/lib/main.js"></script>
+    <script src="__JS__/common.js"></script>
+</head>
+<body>
+
+<include file="Public:header"/>
+
+
+<div class="t_login">
+    <div class="zr_layout login_wrapper">
+        <i class="circle circle1"></i>
+        <i class="circle circle2"></i>
+        <i class="circle small circle7"></i>
+        <i class="circle small circle3"></i>
+        <i class="circle small circle4"></i>
+        <i class="circle smallPic circle5"></i>
+        <i class="circle smallPic circle6"></i>
+        <div class="joinus clearfix">
+            <h1>孜尔直播签约教师</h1>
+            <h3 class="sub_text1">深耕本地教育模式</h3>
+            <h3>直播与录播多种形式</h3>
+            <a href="javascript:void(0)" class="joinusBtn joinusBt1"></a>
+            <a href="{:U('register_step1')}" class="already_joinus">还不是签约教师?点击这里开始签约</a>
+        </div>
+    </div>
+    <div class="login">
+        <div class="loginbox">
+               <i class="close"></i>
+                <h3 class="login_text">登录后台</h3>
+                <div class="account_box">
+                    <i class="pass_icon1"></i>
+                    <i class="pass_icon2"></i>
+                    <input class="username" value="" style="margin-bottom: 23px;" type="text" placeholder="请输入账号或手机号码">
+                    <input class="password" value="" type="password" placeholder="请输入密码">
+                    <a href="{:U('/Forget/step1')}">忘记密码?</a>
+                </div>
+                <input class="login_btn" type="button" value="立即登录">
+        </div>
+    </div>
+</div>
+<include file="Public:footer"/>
+</body>
+</html>
+<script>
+    require(["verify"], function (verify) {
+        $(".joinusBt1").on("click",function(){
+            $(".login").show();
+        })
+        $(".close").on("click",function(){
+            $(".login").hide();
+        })
+
+        $(".login_btn").on("click", function() {
+            $(".login_btn").val("正在登录...")
+            $(".login_btn").prop("disabled",true)
+            $.ajax({
+                url: "{:U('login')}",
+                type: 'POST',
+                data: {
+                    "type": 1,
+                    "username": $(".username").val(),
+                    "password": $(".password").val()
+                },
+
+                success: function (data) {
+                    if (data.status == 0) {
+                        // layer.msg(data.msg)
+                        layer.alert(data.msg)
+                        $(".login_btn").val("立即登录")
+                        $(".login_btn").prop("disabled",false)
+                        return false;
+                    }
+                    // 通过验证
+                    window.location.href = "{:U('index')}";
+                }
+            })
+        })
+    })
+</script>

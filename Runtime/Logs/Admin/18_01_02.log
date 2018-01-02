@@ -1,0 +1,631 @@
+[ 2018-01-02T11:58:29+08:00 ] 127.0.0.1 /sys-index.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.010000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.010000s ]
+
+[ 2018-01-02T11:58:29+08:00 ] 127.0.0.1 /sys-index.php/Login/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.010000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.010000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\ShowRuntimeBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-01-02T11:58:30+08:00 ] 127.0.0.1 /sys-index.php/Login/checkCode
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-01-02T11:59:27+08:00 ] 127.0.0.1 /sys-index.php/Login/checkCode/v/0.08932149174057114
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-01-02T11:59:34+08:00 ] 127.0.0.1 /sys-index.php/Login/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+ERR: SQLSTATE[HY000] [1049] Unknown database 'video_hd'
+NOTIC: [8] Undefined index: debug E:\Ooooh\WebSite\games\Public\ThinkPHP\Library\Think\Db\Driver.class.php 第 108 行.
+NOTIC: [8] Undefined offset: 194 E:\Ooooh\WebSite\games\Public\ThinkPHP\Library\Think\Db\Driver.class.php 第 113 行.
+
+[ 2018-01-02T11:59:47+08:00 ] 127.0.0.1 /sys-index.php/Login/checkCode/v/0.24653475067734654
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `lq_admin` [ RunTime:0.0040s ]
+SQL: select COLUMN_NAME,COLUMN_COMMENT,character_maximum_length FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME='lq_admin' and TABLE_SCHEMA='games' [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `lq_admin_log` [ RunTime:0.0030s ]
+SQL: select COLUMN_NAME,COLUMN_COMMENT,character_maximum_length FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME='lq_admin_log' and TABLE_SCHEMA='games' [ RunTime:0.0030s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-01-02T11:59:51+08:00 ] 127.0.0.1 /sys-index.php/Login/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SELECT `id`,`zc_account`,`zc_email`,`zc_mobile`,`zc_password`,`zc_salt`,`zn_trylogin_times`,`zn_trylogin_lasttime`,`zl_visible` FROM `lq_admin` WHERE `zc_account` = 'littleHe' LIMIT 1   [ RunTime:0.0010s ]
+SQL: UPDATE `lq_admin` SET `zn_login_times`=zn_login_times+1,`zn_last_login_time`='1514865590',`zn_mdate`='1514865590',`zn_trylogin_times`='0',`zn_trylogin_lasttime`='1514865590' WHERE `id` = 1 [ RunTime:0.0000s ]
+SQL: SELECT * FROM `lq_admin` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `lq_system_menu` [ RunTime:0.0040s ]
+SQL: select COLUMN_NAME,COLUMN_COMMENT,character_maximum_length FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME='lq_system_menu' and TABLE_SCHEMA='games' [ RunTime:0.0030s ]
+SQL: SELECT `id`,`zn_fid`,`zc_caption` FROM `lq_system_menu` WHERE ( zn_fid=1 and zl_is_menu=1 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: index E:\Ooooh\WebSite\games\LQapps\User\Model\AdminModel.class.php 第 495 行.
+NOTIC: [8] Undefined index: zc_run E:\Ooooh\WebSite\games\LQapps\User\Model\AdminModel.class.php 第 502 行.
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=2 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=48 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=49 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=50 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: zc_run E:\Ooooh\WebSite\games\LQapps\User\Model\AdminModel.class.php 第 502 行.
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=41 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=65 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: zc_run E:\Ooooh\WebSite\games\LQapps\User\Model\AdminModel.class.php 第 502 行.
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=42 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=113 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: zc_run E:\Ooooh\WebSite\games\LQapps\User\Model\AdminModel.class.php 第 502 行.
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=45 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=67 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: zc_run E:\Ooooh\WebSite\games\LQapps\User\Model\AdminModel.class.php 第 502 行.
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=47 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: zc_run E:\Ooooh\WebSite\games\LQapps\User\Model\AdminModel.class.php 第 502 行.
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=110 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=69 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=73 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: zc_run E:\Ooooh\WebSite\games\LQapps\User\Model\AdminModel.class.php 第 502 行.
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=111 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: zc_run E:\Ooooh\WebSite\games\LQapps\User\Model\AdminModel.class.php 第 502 行.
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=46 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: zc_run E:\Ooooh\WebSite\games\LQapps\User\Model\AdminModel.class.php 第 502 行.
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=64 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=83 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=51 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0000s ]
+SQL: SELECT `zc_popedom` FROM `lq_admin` WHERE ( id=0 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `lq_admin` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`zn_fid`,`zc_caption` FROM `lq_system_menu` WHERE ( zn_fid=1 and zl_is_menu=1 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: index E:\Ooooh\WebSite\games\LQapps\User\Model\AdminModel.class.php 第 495 行.
+NOTIC: [8] Undefined index: zc_run E:\Ooooh\WebSite\games\LQapps\User\Model\AdminModel.class.php 第 502 行.
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=2 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=48 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=49 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=50 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: zc_run E:\Ooooh\WebSite\games\LQapps\User\Model\AdminModel.class.php 第 502 行.
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=41 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=65 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: zc_run E:\Ooooh\WebSite\games\LQapps\User\Model\AdminModel.class.php 第 502 行.
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=42 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=113 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: zc_run E:\Ooooh\WebSite\games\LQapps\User\Model\AdminModel.class.php 第 502 行.
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=45 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=67 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: zc_run E:\Ooooh\WebSite\games\LQapps\User\Model\AdminModel.class.php 第 502 行.
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=47 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: zc_run E:\Ooooh\WebSite\games\LQapps\User\Model\AdminModel.class.php 第 502 行.
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=110 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=69 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=73 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: zc_run E:\Ooooh\WebSite\games\LQapps\User\Model\AdminModel.class.php 第 502 行.
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=111 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: zc_run E:\Ooooh\WebSite\games\LQapps\User\Model\AdminModel.class.php 第 502 行.
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=46 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: zc_run E:\Ooooh\WebSite\games\LQapps\User\Model\AdminModel.class.php 第 502 行.
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=64 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=83 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=51 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0000s ]
+SQL: SELECT `zc_popedom` FROM `lq_admin` WHERE ( id=0 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `lq_admin` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: login E:\Ooooh\WebSite\games\LQapps\User\Api\AdminApi.class.php 第 326 行.
+NOTIC: [8] Undefined index: description E:\Ooooh\WebSite\games\LQapps\User\Api\AdminApi.class.php 第 339 行.
+SQL: INSERT INTO `lq_admin_log` (`zn_type`,`zc_action`,`zc_table`,`zc_table_id`,`zc_description`,`zn_ip`,`zn_cdate`,`zn_operator`,`zc_account`) VALUES ('1','login','admin','1','littleHe对数据表admin进行操作。url请求:www.games.hd:80/sys-index.php/Login/login','2130706433','1514865590','1','littleHe') [ RunTime:0.0010s ]
+
+[ 2018-01-02T11:59:51+08:00 ] 127.0.0.1 /sys-index.php/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\ShowRuntimeBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-01-02T11:59:51+08:00 ] 127.0.0.1 /sys-index.php/Index/ajaxSearch
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `lq_live` [ RunTime:0.0060s ]
+SQL: select COLUMN_NAME,COLUMN_COMMENT,character_maximum_length FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME='lq_live' and TABLE_SCHEMA='games' [ RunTime:0.0030s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_live` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_live` WHERE ( zl_status = 6 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `lq_vod` [ RunTime:0.0040s ]
+SQL: select COLUMN_NAME,COLUMN_COMMENT,character_maximum_length FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME='lq_vod' and TABLE_SCHEMA='games' [ RunTime:0.0030s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_vod` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_vod` WHERE ( zl_status = 6 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `lq_member` [ RunTime:0.0040s ]
+SQL: select COLUMN_NAME,COLUMN_COMMENT,character_maximum_length FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME='lq_member' and TABLE_SCHEMA='games' [ RunTime:0.0030s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_member` WHERE ( zl_role=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_member` WHERE ( zl_role=2 ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2018-01-02T11:59:51+08:00 ] 127.0.0.1 /sys-index.php/Index/ajaxLiveStatus
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `lq_lesson_live` [ RunTime:0.0030s ]
+SQL: select COLUMN_NAME,COLUMN_COMMENT,character_maximum_length FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME='lq_lesson_live' and TABLE_SCHEMA='games' [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `lq_member_favorite` [ RunTime:0.0020s ]
+SQL: select COLUMN_NAME,COLUMN_COMMENT,character_maximum_length FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME='lq_member_favorite' and TABLE_SCHEMA='games' [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `lq_member_enroll` [ RunTime:0.0020s ]
+SQL: select COLUMN_NAME,COLUMN_COMMENT,character_maximum_length FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME='lq_member_enroll' and TABLE_SCHEMA='games' [ RunTime:0.0020s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_lesson_live` WHERE ( zc_live_start >=1514304000 and zc_live_start<=1514390399 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_member_favorite` WHERE ( zn_type = 1 and zn_cdate >=1514304000 and zn_cdate<=1514390399 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_member_enroll` WHERE ( zn_type = 1 and zn_cdate >=1514304000 and zn_cdate<=1514390399 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_lesson_live` WHERE ( zc_live_start >=1514390400 and zc_live_start<=1514476799 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_member_favorite` WHERE ( zn_type = 1 and zn_cdate >=1514390400 and zn_cdate<=1514476799 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_member_enroll` WHERE ( zn_type = 1 and zn_cdate >=1514390400 and zn_cdate<=1514476799 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_lesson_live` WHERE ( zc_live_start >=1514476800 and zc_live_start<=1514563199 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_member_favorite` WHERE ( zn_type = 1 and zn_cdate >=1514476800 and zn_cdate<=1514563199 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_member_enroll` WHERE ( zn_type = 1 and zn_cdate >=1514476800 and zn_cdate<=1514563199 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_lesson_live` WHERE ( zc_live_start >=1514563200 and zc_live_start<=1514649599 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_member_favorite` WHERE ( zn_type = 1 and zn_cdate >=1514563200 and zn_cdate<=1514649599 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_member_enroll` WHERE ( zn_type = 1 and zn_cdate >=1514563200 and zn_cdate<=1514649599 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_lesson_live` WHERE ( zc_live_start >=1514649600 and zc_live_start<=1514735999 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_member_favorite` WHERE ( zn_type = 1 and zn_cdate >=1514649600 and zn_cdate<=1514735999 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_member_enroll` WHERE ( zn_type = 1 and zn_cdate >=1514649600 and zn_cdate<=1514735999 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_lesson_live` WHERE ( zc_live_start >=1514736000 and zc_live_start<=1514822399 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_member_favorite` WHERE ( zn_type = 1 and zn_cdate >=1514736000 and zn_cdate<=1514822399 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_member_enroll` WHERE ( zn_type = 1 and zn_cdate >=1514736000 and zn_cdate<=1514822399 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_lesson_live` WHERE ( zc_live_start >=1514822400 and zc_live_start<=1514908799 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_member_favorite` WHERE ( zn_type = 1 and zn_cdate >=1514822400 and zn_cdate<=1514908799 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_member_enroll` WHERE ( zn_type = 1 and zn_cdate >=1514822400 and zn_cdate<=1514908799 ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2018-01-02T11:59:51+08:00 ] 127.0.0.1 /sys-index.php/Index/ajaxVodStatus
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `lq_lesson_vod` [ RunTime:0.0030s ]
+SQL: select COLUMN_NAME,COLUMN_COMMENT,character_maximum_length FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME='lq_lesson_vod' and TABLE_SCHEMA='games' [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_lesson_vod` WHERE ( zn_cdate >=1514304000 and zn_cdate<=1514390399 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_member_favorite` WHERE ( zn_type = 2 and  zn_cdate >=1514304000 and zn_cdate<=1514390399 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_member_enroll` WHERE ( zn_type = 2 and zn_cdate >=1514304000 and zn_cdate<=1514390399 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_lesson_vod` WHERE ( zn_cdate >=1514390400 and zn_cdate<=1514476799 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_member_favorite` WHERE ( zn_type = 2 and  zn_cdate >=1514390400 and zn_cdate<=1514476799 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_member_enroll` WHERE ( zn_type = 2 and zn_cdate >=1514390400 and zn_cdate<=1514476799 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_lesson_vod` WHERE ( zn_cdate >=1514476800 and zn_cdate<=1514563199 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_member_favorite` WHERE ( zn_type = 2 and  zn_cdate >=1514476800 and zn_cdate<=1514563199 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_member_enroll` WHERE ( zn_type = 2 and zn_cdate >=1514476800 and zn_cdate<=1514563199 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_lesson_vod` WHERE ( zn_cdate >=1514563200 and zn_cdate<=1514649599 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_member_favorite` WHERE ( zn_type = 2 and  zn_cdate >=1514563200 and zn_cdate<=1514649599 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_member_enroll` WHERE ( zn_type = 2 and zn_cdate >=1514563200 and zn_cdate<=1514649599 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_lesson_vod` WHERE ( zn_cdate >=1514649600 and zn_cdate<=1514735999 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_member_favorite` WHERE ( zn_type = 2 and  zn_cdate >=1514649600 and zn_cdate<=1514735999 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_member_enroll` WHERE ( zn_type = 2 and zn_cdate >=1514649600 and zn_cdate<=1514735999 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_lesson_vod` WHERE ( zn_cdate >=1514736000 and zn_cdate<=1514822399 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_member_favorite` WHERE ( zn_type = 2 and  zn_cdate >=1514736000 and zn_cdate<=1514822399 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_member_enroll` WHERE ( zn_type = 2 and zn_cdate >=1514736000 and zn_cdate<=1514822399 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_lesson_vod` WHERE ( zn_cdate >=1514822400 and zn_cdate<=1514908799 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_member_favorite` WHERE ( zn_type = 2 and  zn_cdate >=1514822400 and zn_cdate<=1514908799 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_member_enroll` WHERE ( zn_type = 2 and zn_cdate >=1514822400 and zn_cdate<=1514908799 ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2018-01-02T13:47:15+08:00 ] 127.0.0.1 /sys-index.php/WebConfig/config
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.010000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.011000s ]
+NOTIC: [8] Use of undefined constant SYSTEM_MENU_CURRENT - assumed 'SYSTEM_MENU_CURRENT' E:\Ooooh\WebSite\games\LQapps\Admin\Controller\PublicController.class.php 第 481 行.
+NOTIC: [8] Use of undefined constant SYSTEM_MENU_CURRENT - assumed 'SYSTEM_MENU_CURRENT' E:\Ooooh\WebSite\games\LQapps\Admin\Controller\PublicController.class.php 第 484 行.
+SQL: SHOW COLUMNS FROM `lq_web_config` [ RunTime:0.0120s ]
+SQL: select COLUMN_NAME,COLUMN_COMMENT,character_maximum_length FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME='lq_web_config' and TABLE_SCHEMA='games' [ RunTime:0.0070s ]
+NOTIC: [8] Undefined index: display E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 60 行.
+NOTIC: [8] Undefined index: fast-fill E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 161 行.
+NOTIC: [8] Undefined index: controlTitle E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 90 行.
+NOTIC: [8] Undefined index: confirm E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 94 行.
+NOTIC: [8] Undefined index: dataBetween E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 96 行.
+NOTIC: [8] Undefined index: rows E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 99 行.
+NOTIC: [8] Undefined index: maxl E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 100 行.
+NOTIC: [8] Undefined index: width E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 101 行.
+NOTIC: [8] Undefined index: height E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 102 行.
+NOTIC: [8] Undefined index: style E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 103 行.
+NOTIC: [8] Undefined index: display E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 60 行.
+NOTIC: [8] Undefined index: fast-fill E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 161 行.
+NOTIC: [8] Undefined index: controlTitle E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 90 行.
+NOTIC: [8] Undefined index: confirm E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 94 行.
+NOTIC: [8] Undefined index: dataBetween E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 96 行.
+NOTIC: [8] Undefined index: rows E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 99 行.
+NOTIC: [8] Undefined index: maxl E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 100 行.
+NOTIC: [8] Undefined index: width E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 101 行.
+NOTIC: [8] Undefined index: height E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 102 行.
+NOTIC: [8] Undefined index: style E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 103 行.
+NOTIC: [8] Undefined index: WEB_LOGO_label E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 495 行.
+NOTIC: [8] Undefined index: display E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 60 行.
+NOTIC: [8] Undefined index: uploadsize E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 511 行.
+NOTIC: [8] Undefined index: required E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 530 行.
+NOTIC: [8] Undefined index: FOOT_LOGO_label E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 495 行.
+NOTIC: [8] Undefined index: display E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 60 行.
+NOTIC: [8] Undefined index: uploadsize E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 511 行.
+NOTIC: [8] Undefined index: required E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 530 行.
+NOTIC: [8] Undefined index: WEB_CODE_label E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 495 行.
+NOTIC: [8] Undefined index: display E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 60 行.
+NOTIC: [8] Undefined index: uploadsize E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 511 行.
+NOTIC: [8] Undefined index: required E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 530 行.
+NOTIC: [8] Undefined index: display E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 60 行.
+NOTIC: [8] Undefined index: fast-fill E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 161 行.
+NOTIC: [8] Undefined index: controlTitle E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 90 行.
+NOTIC: [8] Undefined index: confirm E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 94 行.
+NOTIC: [8] Undefined index: dataBetween E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 96 行.
+NOTIC: [8] Undefined index: rows E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 99 行.
+NOTIC: [8] Undefined index: maxl E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 100 行.
+NOTIC: [8] Undefined index: width E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 101 行.
+NOTIC: [8] Undefined index: height E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 102 行.
+NOTIC: [8] Undefined index: style E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 103 行.
+NOTIC: [8] Undefined index: display E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 60 行.
+NOTIC: [8] Undefined index: required E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 441 行.
+NOTIC: [8] Undefined index: display E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 60 行.
+NOTIC: [8] Undefined index: fast-fill E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 161 行.
+NOTIC: [8] Undefined index: controlTitle E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 90 行.
+NOTIC: [8] Undefined index: confirm E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 94 行.
+NOTIC: [8] Undefined index: dataBetween E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 96 行.
+NOTIC: [8] Undefined index: rows E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 99 行.
+NOTIC: [8] Undefined index: maxl E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 100 行.
+NOTIC: [8] Undefined index: width E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 101 行.
+NOTIC: [8] Undefined index: height E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 102 行.
+NOTIC: [8] Undefined index: style E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 103 行.
+NOTIC: [8] Undefined index: display E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 60 行.
+NOTIC: [8] Undefined index: fast-fill E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 161 行.
+NOTIC: [8] Undefined index: controlTitle E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 90 行.
+NOTIC: [8] Undefined index: confirm E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 94 行.
+NOTIC: [8] Undefined index: dataBetween E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 96 行.
+NOTIC: [8] Undefined index: rows E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 99 行.
+NOTIC: [8] Undefined index: maxl E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 100 行.
+NOTIC: [8] Undefined index: width E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 101 行.
+NOTIC: [8] Undefined index: height E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 102 行.
+NOTIC: [8] Undefined index: style E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 103 行.
+NOTIC: [8] Undefined index: display E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 60 行.
+NOTIC: [8] Undefined index: fast-fill E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 161 行.
+NOTIC: [8] Undefined index: controlTitle E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 90 行.
+NOTIC: [8] Undefined index: confirm E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 94 行.
+NOTIC: [8] Undefined index: dataBetween E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 96 行.
+NOTIC: [8] Undefined index: rows E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 99 行.
+NOTIC: [8] Undefined index: maxl E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 100 行.
+NOTIC: [8] Undefined index: width E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 101 行.
+NOTIC: [8] Undefined index: height E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 102 行.
+NOTIC: [8] Undefined index: style E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 103 行.
+NOTIC: [8] Undefined index: display E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 60 行.
+NOTIC: [8] Undefined index: fast-fill E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 161 行.
+NOTIC: [8] Undefined index: controlTitle E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 90 行.
+NOTIC: [8] Undefined index: confirm E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 94 行.
+NOTIC: [8] Undefined index: dataBetween E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 96 行.
+NOTIC: [8] Undefined index: rows E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 99 行.
+NOTIC: [8] Undefined index: maxl E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 100 行.
+NOTIC: [8] Undefined index: width E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 101 行.
+NOTIC: [8] Undefined index: height E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 102 行.
+NOTIC: [8] Undefined index: style E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 103 行.
+NOTIC: [8] Undefined index: display E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 60 行.
+NOTIC: [8] Undefined index: required E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 441 行.
+NOTIC: [8] Undefined index: display E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 60 行.
+NOTIC: [8] Undefined index: required E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 441 行.
+NOTIC: [8] Undefined index: display E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 60 行.
+NOTIC: [8] Undefined index: required E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 441 行.
+NOTIC: [8] Undefined index: display E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 60 行.
+NOTIC: [8] Undefined index: fast-fill E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 161 行.
+NOTIC: [8] Undefined index: controlTitle E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 90 行.
+NOTIC: [8] Undefined index: confirm E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 94 行.
+NOTIC: [8] Undefined index: dataBetween E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 96 行.
+NOTIC: [8] Undefined index: rows E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 99 行.
+NOTIC: [8] Undefined index: maxl E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 100 行.
+NOTIC: [8] Undefined index: width E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 101 行.
+NOTIC: [8] Undefined index: height E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 102 行.
+NOTIC: [8] Undefined index: style E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 103 行.
+NOTIC: [8] Undefined index: display E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 60 行.
+NOTIC: [8] Undefined index: controlTitle E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 90 行.
+NOTIC: [8] Undefined index: confirm E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 94 行.
+NOTIC: [8] Undefined index: dataBetween E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 96 行.
+NOTIC: [8] Undefined index: maxl E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 100 行.
+NOTIC: [8] Undefined index: width E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 101 行.
+NOTIC: [8] Undefined index: height E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 102 行.
+NOTIC: [8] Undefined index: style E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 103 行.
+NOTIC: [8] Undefined index: display E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 60 行.
+NOTIC: [8] Undefined index: controlTitle E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 90 行.
+NOTIC: [8] Undefined index: confirm E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 94 行.
+NOTIC: [8] Undefined index: dataBetween E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 96 行.
+NOTIC: [8] Undefined index: maxl E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 100 行.
+NOTIC: [8] Undefined index: width E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 101 行.
+NOTIC: [8] Undefined index: height E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 102 行.
+NOTIC: [8] Undefined index: style E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 103 行.
+NOTIC: [8] Undefined index: display E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 60 行.
+NOTIC: [8] Undefined index: fast-fill E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 161 行.
+NOTIC: [8] Undefined index: controlTitle E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 90 行.
+NOTIC: [8] Undefined index: confirm E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 94 行.
+NOTIC: [8] Undefined index: dataBetween E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 96 行.
+NOTIC: [8] Undefined index: rows E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 99 行.
+NOTIC: [8] Undefined index: maxl E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 100 行.
+NOTIC: [8] Undefined index: width E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 101 行.
+NOTIC: [8] Undefined index: height E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 102 行.
+NOTIC: [8] Undefined index: style E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 103 行.
+NOTIC: [8] Undefined index: display E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 60 行.
+NOTIC: [8] Undefined index: fast-fill E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 161 行.
+NOTIC: [8] Undefined index: controlTitle E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 90 行.
+NOTIC: [8] Undefined index: confirm E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 94 行.
+NOTIC: [8] Undefined index: dataBetween E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 96 行.
+NOTIC: [8] Undefined index: rows E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 99 行.
+NOTIC: [8] Undefined index: maxl E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 100 行.
+NOTIC: [8] Undefined index: width E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 101 行.
+NOTIC: [8] Undefined index: height E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 102 行.
+NOTIC: [8] Undefined index: style E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 103 行.
+NOTIC: [8] Undefined index: display E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 60 行.
+NOTIC: [8] Undefined index: fast-fill E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 161 行.
+NOTIC: [8] Undefined index: controlTitle E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 90 行.
+NOTIC: [8] Undefined index: confirm E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 94 行.
+NOTIC: [8] Undefined index: dataBetween E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 96 行.
+NOTIC: [8] Undefined index: rows E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 99 行.
+NOTIC: [8] Undefined index: maxl E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 100 行.
+NOTIC: [8] Undefined index: width E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 101 行.
+NOTIC: [8] Undefined index: height E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 102 行.
+NOTIC: [8] Undefined index: style E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 103 行.
+NOTIC: [8] Undefined index: display E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 60 行.
+NOTIC: [8] Undefined index: fast-fill E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 161 行.
+NOTIC: [8] Undefined index: controlTitle E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 90 行.
+NOTIC: [8] Undefined index: confirm E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 94 行.
+NOTIC: [8] Undefined index: dataBetween E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 96 行.
+NOTIC: [8] Undefined index: rows E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 99 行.
+NOTIC: [8] Undefined index: maxl E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 100 行.
+NOTIC: [8] Undefined index: width E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 101 行.
+NOTIC: [8] Undefined index: height E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 102 行.
+NOTIC: [8] Undefined index: style E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 103 行.
+NOTIC: [8] Undefined index: display E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 60 行.
+NOTIC: [8] Undefined index: display E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 60 行.
+NOTIC: [8] Undefined index: fast-fill E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 161 行.
+NOTIC: [8] Undefined index: controlTitle E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 90 行.
+NOTIC: [8] Undefined index: confirm E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 94 行.
+NOTIC: [8] Undefined index: dataBetween E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 96 行.
+NOTIC: [8] Undefined index: rows E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 99 行.
+NOTIC: [8] Undefined index: maxl E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 100 行.
+NOTIC: [8] Undefined index: width E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 101 行.
+NOTIC: [8] Undefined index: height E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 102 行.
+NOTIC: [8] Undefined index: style E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 103 行.
+NOTIC: [8] Undefined index: display E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 60 行.
+NOTIC: [8] Undefined index: fast-fill E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 161 行.
+NOTIC: [8] Undefined index: controlTitle E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 90 行.
+NOTIC: [8] Undefined index: confirm E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 94 行.
+NOTIC: [8] Undefined index: dataBetween E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 96 行.
+NOTIC: [8] Undefined index: rows E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 99 行.
+NOTIC: [8] Undefined index: maxl E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 100 行.
+NOTIC: [8] Undefined index: width E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 101 行.
+NOTIC: [8] Undefined index: height E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 102 行.
+NOTIC: [8] Undefined index: style E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 103 行.
+NOTIC: [8] Undefined index: display E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 60 行.
+NOTIC: [8] Undefined index: fast-fill E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 161 行.
+NOTIC: [8] Undefined index: controlTitle E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 90 行.
+NOTIC: [8] Undefined index: confirm E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 94 行.
+NOTIC: [8] Undefined index: dataBetween E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 96 行.
+NOTIC: [8] Undefined index: rows E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 99 行.
+NOTIC: [8] Undefined index: maxl E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 100 行.
+NOTIC: [8] Undefined index: width E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 101 行.
+NOTIC: [8] Undefined index: height E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 102 行.
+NOTIC: [8] Undefined index: style E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 103 行.
+NOTIC: [8] Undefined index: display E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 60 行.
+NOTIC: [8] Undefined index: controlTitle E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 90 行.
+NOTIC: [8] Undefined index: confirm E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 94 行.
+NOTIC: [8] Undefined index: dataBetween E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 96 行.
+NOTIC: [8] Undefined index: rows E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 99 行.
+NOTIC: [8] Undefined index: maxl E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 100 行.
+NOTIC: [8] Undefined index: width E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 101 行.
+NOTIC: [8] Undefined index: height E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 102 行.
+NOTIC: [8] Undefined index: style E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 103 行.
+NOTIC: [8] Undefined index: display E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 60 行.
+NOTIC: [8] Undefined index: THUMB_WATER_IMAGE_label E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 495 行.
+NOTIC: [8] Undefined index: display E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 60 行.
+NOTIC: [8] Undefined index: uploadsize E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 511 行.
+NOTIC: [8] Undefined index: required E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 530 行.
+NOTIC: [8] Undefined index: display E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 60 行.
+NOTIC: [8] Undefined index: fast-fill E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 161 行.
+NOTIC: [8] Undefined index: controlTitle E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 90 行.
+NOTIC: [8] Undefined index: confirm E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 94 行.
+NOTIC: [8] Undefined index: dataBetween E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 96 行.
+NOTIC: [8] Undefined index: rows E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 99 行.
+NOTIC: [8] Undefined index: maxl E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 100 行.
+NOTIC: [8] Undefined index: width E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 101 行.
+NOTIC: [8] Undefined index: height E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 102 行.
+NOTIC: [8] Undefined index: style E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 103 行.
+NOTIC: [8] Undefined index: display E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 60 行.
+NOTIC: [8] Undefined index: controlTitle E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 90 行.
+NOTIC: [8] Undefined index: confirm E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 94 行.
+NOTIC: [8] Undefined index: dataBetween E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 96 行.
+NOTIC: [8] Undefined index: rows E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 99 行.
+NOTIC: [8] Undefined index: maxl E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 100 行.
+NOTIC: [8] Undefined index: width E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 101 行.
+NOTIC: [8] Undefined index: height E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 102 行.
+NOTIC: [8] Undefined index: style E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 103 行.
+NOTIC: [8] Undefined index: display E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 60 行.
+NOTIC: [8] Undefined index: fast-fill E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 161 行.
+NOTIC: [8] Undefined index: controlTitle E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 90 行.
+NOTIC: [8] Undefined index: confirm E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 94 行.
+NOTIC: [8] Undefined index: dataBetween E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 96 行.
+NOTIC: [8] Undefined index: rows E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 99 行.
+NOTIC: [8] Undefined index: maxl E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 100 行.
+NOTIC: [8] Undefined index: width E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 101 行.
+NOTIC: [8] Undefined index: height E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 102 行.
+NOTIC: [8] Undefined index: style E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 103 行.
+NOTIC: [8] Undefined index: display E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 60 行.
+NOTIC: [8] Undefined index: fast-fill E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 161 行.
+NOTIC: [8] Undefined index: controlTitle E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 90 行.
+NOTIC: [8] Undefined index: confirm E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 94 行.
+NOTIC: [8] Undefined index: dataBetween E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 96 行.
+NOTIC: [8] Undefined index: rows E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 99 行.
+NOTIC: [8] Undefined index: maxl E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 100 行.
+NOTIC: [8] Undefined index: width E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 101 行.
+NOTIC: [8] Undefined index: height E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 102 行.
+NOTIC: [8] Undefined index: style E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 103 行.
+NOTIC: [8] Undefined index: display E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 60 行.
+NOTIC: [8] Undefined index: display E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 60 行.
+NOTIC: [8] Undefined index: fast-fill E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 161 行.
+NOTIC: [8] Undefined index: controlTitle E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 90 行.
+NOTIC: [8] Undefined index: confirm E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 94 行.
+NOTIC: [8] Undefined index: dataBetween E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 96 行.
+NOTIC: [8] Undefined index: rows E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 99 行.
+NOTIC: [8] Undefined index: maxl E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 100 行.
+NOTIC: [8] Undefined index: width E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 101 行.
+NOTIC: [8] Undefined index: height E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 102 行.
+NOTIC: [8] Undefined index: style E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 103 行.
+NOTIC: [8] Undefined index: display E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 60 行.
+NOTIC: [8] Undefined index: display E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 60 行.
+NOTIC: [8] Undefined index: fast-fill E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 161 行.
+NOTIC: [8] Undefined index: controlTitle E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 90 行.
+NOTIC: [8] Undefined index: confirm E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 94 行.
+NOTIC: [8] Undefined index: dataBetween E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 96 行.
+NOTIC: [8] Undefined index: rows E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 99 行.
+NOTIC: [8] Undefined index: maxl E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 100 行.
+NOTIC: [8] Undefined index: width E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 101 行.
+NOTIC: [8] Undefined index: height E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 102 行.
+NOTIC: [8] Undefined index: style E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 103 行.
+NOTIC: [8] Undefined index: display E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 60 行.
+NOTIC: [8] Undefined index: fast-fill E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 161 行.
+NOTIC: [8] Undefined index: controlTitle E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 90 行.
+NOTIC: [8] Undefined index: confirm E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 94 行.
+NOTIC: [8] Undefined index: dataBetween E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 96 行.
+NOTIC: [8] Undefined index: rows E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 99 行.
+NOTIC: [8] Undefined index: maxl E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 100 行.
+NOTIC: [8] Undefined index: width E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 101 行.
+NOTIC: [8] Undefined index: height E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 102 行.
+NOTIC: [8] Undefined index: style E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 103 行.
+NOTIC: [8] Undefined index: display E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 60 行.
+NOTIC: [8] Undefined index: display E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 60 行.
+NOTIC: [8] Undefined index: display E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 60 行.
+NOTIC: [8] Undefined index: display E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 60 行.
+NOTIC: [8] Undefined index: editMsg E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 397 行.
+NOTIC: [8] Undefined index: display E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 60 行.
+NOTIC: [8] Undefined index: controlTitle E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 90 行.
+NOTIC: [8] Undefined index: confirm E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 94 行.
+NOTIC: [8] Undefined index: dataBetween E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 96 行.
+NOTIC: [8] Undefined index: maxl E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 100 行.
+NOTIC: [8] Undefined index: width E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 101 行.
+NOTIC: [8] Undefined index: height E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 102 行.
+NOTIC: [8] Undefined index: style E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 103 行.
+NOTIC: [8] Undefined index: os_record_time E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 934 行.
+NOTIC: [8] Undefined index: id E:\Ooooh\WebSite\games\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 937 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.053000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.053000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\ShowRuntimeBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.005000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.009000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2018-01-02T13:47:16+08:00 ] 127.0.0.1 /sys-index.php/index/ueditorConfig//noCache/1514872035981
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Undefined index: editorfile E:\Ooooh\WebSite\games\LQapps\Common\LQPublic\Controller\Base.class.php 第 245 行.
+
+[ 2018-01-02T13:47:16+08:00 ] 127.0.0.1 /sys-index.php/index/ueditorConfig//noCache/1514872035981
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: editorfile E:\Ooooh\WebSite\games\LQapps\Common\LQPublic\Controller\Base.class.php 第 245 行.
+
+[ 2018-01-02T13:47:16+08:00 ] 127.0.0.1 /sys-index.php/index/ueditorConfig//noCache/1514872035980
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Undefined index: editorfile E:\Ooooh\WebSite\games\LQapps\Common\LQPublic\Controller\Base.class.php 第 245 行.
+
+[ 2018-01-02T13:47:16+08:00 ] 127.0.0.1 /sys-index.php/index/ueditorConfig//noCache/1514872035981
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Undefined index: editorfile E:\Ooooh\WebSite\games\LQapps\Common\LQPublic\Controller\Base.class.php 第 245 行.
+

@@ -1,2 +1,2 @@
 <?php
- die();s:118:"|@1@|文章分类|@2@|/ArticleCat/index|@1@|文章系统|@2@|nourl|@1@|内容|@2@|nourl|@1@| 狸想家平台|@2@|nourl";
+ die();s:120:"|@1@|文章分类|@2@|/ArticleCat/index|@1@|文章系统|@2@|nourl|@1@|资讯内容|@2@|nourl|@1@|孜尔平台|@2@|nourl";

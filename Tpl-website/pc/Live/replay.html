@@ -1,0 +1,94 @@
+<head>
+    <meta charset="UTF-8">
+    <title>{$seoData.title}</title>
+    <meta name="keywords" content="{$seoData.keywords}">
+    <meta name="description" content="{$seoData.description}">
+    <link rel="stylesheet" href="__CSS__/student/student.css">
+    <script src="__JS__/lib/jquery-3.1.1.min.js"></script>
+    <script src='__JS__/lib/require.js'></script>
+    <script src="__JS__/lib/main.js"></script>
+    <script type="text/javascript" src="__PLUGINS__/ckplayer/barrage.js" charset="utf-8"></script>
+    <script type="text/javascript" src="__PLUGINS__/ckplayer/ckplayer.js" charset="utf-8"></script>
+</head>
+
+<body>
+    <div class="broadcast-wapper">
+        <button class="close-window-btn"><a href="{:U('/Live/livedetail',array('tnid'=>$id))}">退出</a></button>
+        <div class="broadcast-right">
+            <div class="course-title">
+                <div class="class-hour">
+                    <span class="class-text">课时</span>
+                    <span class="no_number">{$lesson_info.lesson_now}</span>
+                </div>
+                <h3>【{$detailInfo.fid_label}.{$detailInfo.cat_id_label}】</h3>
+                <span>{$lesson_info.zc_title}</span>
+            </div>
+            <div class="player-wapper">
+                <div class="player-content tab1" id="player-content">
+                    <script type="text/javascript">
+                        var flashvars={
+                            f:'<php>echo $url</php>',
+                            c:0,
+                            b:0,
+                            fs:1,
+                            loaded:'loadedHandler'
+                        };
+                        var video=['<php>echo $url</php>'];
+                        var params={bgcolor:'#FFF',allowFullScreen:true,allowScriptAccess:'always',wmode:'transparent',allowFullScreenInteractive:true};
+                        CKobject.embed('__PLUGINS__/ckplayer/ckplayer.swf','player-content','ckplayer_a1','100%','100%',false,flashvars,video,params)
+                    </script>
+                </div>
+                 <div style="display: none" class="player-content tab2" id="player-content">
+                    <iframe style="width: 100%;height: 100%;" src="http://ow365.cn/?i=13502&furl=http://live-upload.oss-cn-shanghai.aliyuncs.com/2017-08-04/598410793dbbb.pptx" frameborder="0"></iframe>
+                </div>
+            </div>
+        </div>
+        <div class="broadcast-left">
+            <div class="shrink"></div>
+            <div class="slider-top">
+                <img class="teacher-photo" src="{$teacherInfo.zc_headimg}" alt="">
+                <div class="teacher-info">
+                    <span>主讲人:</span>
+                    <span style="padding-left: 5px; ">{$teacherInfo.zc_nickname}</span>
+                    <p style="margin-top:5px;font-size:12px;color: #a1a1a1;">{$teacherInfo.zc_school}</p>
+                    <eq name="teacherInfo.is_auth" value="1"><i>认证教师</i></eq>
+                </div>
+
+            </div>
+            <div class="forum-box">
+                <div class="forum-title">
+                    <i class="icon"></i>
+                    <span>讨论区</span>
+                </div>
+                <div class="chat-bxo" >
+                </div>
+                <div class="send-sms">
+                    <input class="sms-content" type="text" placeholder="请输入内容">
+                    <button class="send-sms-btn live-send-msg" lesson_id="{$lesson_info.id}">发送</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+    require(["studentBrodcast"], function(studentBrodcast) {
+          studentBrodcast()
+    })
+    $(function(){
+        talk();
+    })
+    var lesson_id = {$lesson_info.id};
+
+    function talk(){
+        var url = "{:U('/Live/talk')}";
+        var talk =
+        $.post(url,{
+            "lesson_id" : lesson_id,
+        },function(data){
+            $('.chat-bxo').empty();
+            $('.chat-bxo').append(data);
+            setTimeout('talk()',9000);
+        },'json')
+    }
+</script>

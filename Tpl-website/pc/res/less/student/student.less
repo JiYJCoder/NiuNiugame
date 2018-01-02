@@ -1,0 +1,4097 @@
+@import "./base.css";
+@import "../common.css"; // 学生主页开始
+.swiper-pagination-bullet-active {
+    opacity: 1;
+    background: #FCFDFF;
+}
+
+// 用户首页开始
+.s-sx-banner {
+    position: relative;
+    .zr_layout {
+        position: absolute;
+        left: 50%;
+        top: 0;
+        transform: translate(-50%);
+        z-index: 2;
+        .logo-wrapper {
+            position: absolute;
+            right: 0;
+            top: 27px;
+            z-index: 99;
+            width: 258px;
+            height: 425px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px #999;
+            .login-status {
+                margin: 56px 0 0 41px;
+                .login-pic {
+                    width: 181px;
+                    height: 213px;
+                    background: url("../../images/student/book.png");
+                }
+                .login-btn {
+                    position: relative;
+                    left: -9px;
+                    cursor: pointer;
+                    width: 202px;
+                    height: 56px;
+                    line-height: 56px;
+                    font-size: 21px;
+                    text-align: center;
+                    background: #02B78C;
+                    border-radius: 5px;
+                    margin: 61px 0 0;
+                    color: #fff;
+                }
+            }
+            .Logged-in {
+                .user-info {
+                    display: block;
+                    cursor: pointer;
+                    text-align: center;
+                    padding-top: 36px;
+                    margin-bottom: 32px;
+                    img {
+                        width: 80px;
+                        height: 80px;
+                        border-radius: 40px;
+                        object-fit: cover;
+                        margin: 0 auto 10px;
+                        border: 1px solid #e8e8e8;
+                    }
+                    .user-name {
+                        font-size: 18px;
+                        font-weight: 700;
+                    }
+                }
+                .s-statistics {
+                    .enroll-count,
+                    .enroll-count {
+                        width: 50%;
+                        float: left;
+                        text-align: center;
+                        span {
+                            display: block;
+                            line-height: 1;
+                            color: #999999;
+                            font-size: 12px;
+                        }
+                        span:first-child {
+                            color: #FF6600;
+                            font-size: 17px;
+                            padding-bottom: 10px;
+                        }
+                    }
+                    .enroll-count-left {
+                        border-right: 1px solid #E9E9E9;
+                    }
+                }
+                .s-my-course {
+                    display: block;
+                    margin: 30px auto 27px;
+                    width: 210px;
+                    height: 51px;
+                    line-height: 51px;
+                    text-align: center;
+                    border-radius: 5px;
+                    font-size: 18px;
+                    background: #02B78C;
+                    color: #fff;
+                }
+                .recently-broadcast {
+                    width: 100%;
+                    padding: 17px 0 0 24px;
+                    border-top: 1px solid #f1f1f1;
+                    .recently-broadcast-icon {
+                        margin-right: 8px;
+                        display: inline-block;
+                        padding: 4px;
+                        margin-bottom: 9px;
+                        color: #F49658;
+                        font-size: 12px;
+                        background: #fff;
+                        border: 1px solid #F49658;
+                        border-radius: 3px;
+                    }
+                    a {
+                        font-size: 12px;
+                        max-width: 176px;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                        display: inline-block;
+                    }
+                    .right-number {
+                        position: relative;
+                        right: -15px;
+                        font-size: 18px;
+                        color: #C1C1C1;
+                    }
+                    .date {
+                        display: inline-block;
+                        color: #C1C1C1;
+                    }
+                    .time {
+                        display: inline-block;
+                        color: #C1C1C1;
+                    }
+                }
+            }
+        }
+    }
+    .swiper-wrapper {
+        height: 482px;
+    }
+    .swiper-slide {
+        width: 100%;
+        height: 100%;
+        a {
+            width: 100%;
+            height: 100%; // img {
+            //     height: 100%;
+            //     margin: 0 auto;
+            // }
+            div {
+                height: 100%;
+                width: 100%;
+            }
+            .item-pic-02 {
+                background-repeat: no;
+                background-position: center center;
+            }
+        }
+    }
+}
+
+.s-sx-main {
+    background: #f2f2f2;
+    border: 1px solid transparent;
+    .advert-bar {
+        height: 168px;
+        background: #fff;
+        padding: 20px 0 0 17px; // margin-bottom: 31px;
+        ul {
+            li {
+                float: left;
+                margin-right: 13px;
+                a {
+                    width: 184px;
+                    height: 129px;
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+            }
+        }
+    }
+    .s-sx-foreshow-live {
+        margin-top: 31px;
+
+        .swiper-container {
+            // overflow: visible;
+        }
+        height: 370px;
+        background: #fff;
+        .foreshow-left-box {
+            position: relative;
+            z-index: 3;
+            float: left;
+            width: 195px;
+            height: 369px;
+            background: url("../../images/student/today_live_bg_1515.png");
+            text-align: center;
+            background-size: contain;
+            box-shadow: 5px 0 8px rgba(0, 0, 0, 0.2);
+            h3 {
+                font-size: 20px;
+                color: #CE6161;
+                line-height: 1;
+                margin-top: 65px;
+            }
+            .foreshow-date-box {
+                position: relative;
+                width: 162px;
+                height: 162px;
+                text-align: ccenter;
+                margin: 26px auto 0;
+                background: url("../../images/student/date-bg-15451.png");
+                .week {
+                    position: relative;
+                    top: 7px;
+                    font-size: 17px;
+                    color: fff;
+                }
+                .yg-live-date {
+                    position: absolute;
+                    font-size: 39px;
+                    left: 30px;
+                    bottom: 42px;
+                    font-weight: 700;
+                    color: #CE6161;
+                    span {
+                        float: left;
+                    }
+                    .span3 {
+                        position: relative;
+                        left: -11px;
+                    }
+                }
+            }
+        }
+        .foreshow-right-box {
+            position: relative;
+            background: #fff;
+            float: left;
+            width: 1005px;
+            // padding: 27px 34px 0;
+            padding: 0px 34px 0;
+            .swiper-container {
+                padding-top: 27px;
+                // overflow: visible;
+            } 
+            .top-line {
+                position: absolute;
+                left: 0;
+                top: 297px;
+                width: 100%;
+                border-top: 1px solid #e8e8e8;
+                z-index: -1;
+            }
+            .swiper-container {
+                height: 370px!important;
+            }
+            .swiper-slide {
+                text-align: center;
+                width: 200px!important;
+                .item-link {
+                    transition: all 0.2s;
+                    height: 250px;
+                    border: 1px solid #e8e8e8;
+                    overflow: hidden;
+                }
+                .has-item-boxshadow:hover {
+                    z-index: 2;
+                    box-shadow: 0 0 5px rgba(34, 25, 25, 0.4);
+                    transform: translate3d(0, -4px, 0);
+                }
+                .no-live-pic{
+                    width: 100%;
+                    height: 100%;
+                    background:url("../../images/student/20170918153017.jpg");
+                }
+                .page-pic {
+                    width: 200px;
+                    height: 200px;
+                    object-fit: cover;
+                }
+                h5 {
+                    display: inline-block;
+                    font-size: 15px;
+                    padding-top: 13px;
+                    padding-bottom: 18px;
+                    line-height: 1.5;
+                }
+                .line {
+                    border-bottom: 1px solid #E8E8E8;
+                    position: relative;
+                    margin-top: 20px;
+                }
+                .line:before {
+                    position: absolute;
+                    left: 50%;
+                    margin-left: -5px;
+                    border-radius: 5px;
+                    top: -5px;
+                    content: "";
+                    width: 10px;
+                    height: 10px;
+                    background: #CE6161;
+                }
+                .show-live-time {
+                    display: block;
+                    margin-top: 15px;
+                    margin-bottom: 5px;
+                    line-height: 1;
+                }
+                .color999 {
+                    color: #999;
+                }
+            }
+            .swiper-button {
+                position: absolute;
+                top: 50%;
+                width: 18px;
+                height: 70px;
+                margin-top: -35px;
+                cursor: pointer;
+            }
+            .swiper-button-prev {
+                left: 0;
+                background: url("../../images/student/yg-live-prev-btn-21466.png");
+            }
+            .swiper-button-next {
+                right: 0;
+                background: url("../../images/student/yg-live-next-21466.png");
+            }
+        }
+    }
+}
+
+// 用户首页结束
+// 我的课程开始
+.s-sx-course {
+    position: relative;
+    background: #fff;
+
+    padding-bottom: 63px;
+    background: #f2f2f2;
+    .course-wapper {
+        // padding-bottom: 29px;
+        margin-top: 29px;
+        .course-title {
+            padding-left: 21px;
+            height: 61px;
+            line-height: 61px;
+            position: relative;
+            background: #fff;
+            border-bottom: 1px solid #f2f2f2;
+            &:after {
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 50%;
+                margin-top: -11px;
+                width: 3px;
+                height: 23px;
+                background: #02B78C;
+            }
+            h3 {
+                font-size: 24px;
+                float: left;
+                margin-right: 25px;
+            }
+            .course-title-middle {
+                li {
+                    position: relative;
+                    width: 100px;
+                    text-align: center;
+                    font-size: 16px;
+                    float: left;
+                    cursor: pointer;
+                    color: #999;
+                    &.active {
+                        color: #02B78C;
+                        &:after {
+                            content: "";
+                            position: absolute;
+                            left: 50%;
+                            bottom: 12px;
+                            margin-left: -17px;
+                            border-radius: 15px;
+                            width: 31px;
+                            height: 4px;
+                            background: #02B78C;
+                        }
+                    }
+                }
+            }
+            .course-title-right {
+                padding-right: 24px;
+                float: right;
+                a {
+                    float: left;
+                    color: #999999;
+                }
+                i {
+                    float: left;
+                    color: #999999;
+                    margin-left: 11px;
+                }
+            }
+        }
+        .tab-contain {
+            display: none;
+            min-height: 600px;
+        }
+        .tab-contain:first-child {
+            display: block;
+        }
+    }
+}
+
+// 我的课程开始
+@keyframes topToBottomAnimate1 {
+    0% {
+        top: -100%;
+    }
+    100% {
+        top: 100%;
+    }
+}
+
+@keyframes topToBottomAnimate11 {
+    0% {
+        top: -100%;
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(0.5);
+    }
+    100% {
+        top: 100%;
+        transform: scale(1);
+    }
+}
+
+@keyframes topToBottomAnimate2 {
+    0% {
+        top: 240px;
+    }
+    100% {
+        top: -240px;
+        opacity: 0;
+    }
+}
+
+@keyframes topToBottomAnimate3 {
+    0% {
+        top: 263px;
+        transform: scale(1);
+    }
+    100% {
+        top: -263px;
+        transform: scale(0.5);
+    }
+}
+
+@keyframes topToBottomAnimate4 {
+    0% {
+        top: -135%;
+        transform: scale(1);
+    }
+    100% {
+        top: 100%;
+        transform: scale(0.5);
+    }
+}
+
+.s-m-course-banner {
+    height: 289px;
+    background: #49d2b0;
+    position: relative;
+    overflow: hidden;
+    .circle {
+        position: absolute;
+        left: 10%;
+        top: -100%;
+        width: 164px;
+        height: 164px;
+        border-radius: 50%;
+    }
+    .circle1 {
+        background: rgba(0, 0, 0, 0.04);
+        animation: topToBottomAnimate1 35s ease 0s infinite;
+    }
+    .circle2 {
+        left: 4%;
+        z-index: 1;
+        width: 240px;
+        height: 240px;
+        background: rgba(0, 0, 0, 0.04);
+        animation: topToBottomAnimate2 28s ease-out 3s infinite;
+    }
+    .circle3 {
+        left: 1.5%;
+        z-index: 2;
+        width: 263px;
+        height: 263px;
+        background: rgba(250, 180, 0, 0.3);
+        animation: topToBottomAnimate11 35s ease 6s infinite;
+    }
+    .circle4 {
+        left: 23%; // top: 255px;
+        z-index: 2;
+        width: 290px;
+        height: 290px;
+        background: rgba(86, 235, 150, 0.3);
+        animation: topToBottomAnimate11 35s ease 2s infinite alternate;
+    }
+    .circle5 {
+        left: 35%; // top: 267px;
+        z-index: 2;
+        width: 187px;
+        height: 187px;
+        background: rgba(245, 217, 60, 0.3);
+        animation: topToBottomAnimate3 33s ease-out 0s infinite;
+    }
+    .circle6 {
+        left: 54%; // top: 196px;
+        z-index: 2;
+        width: 122px;
+        height: 122px;
+        background: rgba(0, 0, 0, 0.04);
+        animation: topToBottomAnimate1 25s ease 0s infinite;
+    }
+    .circle7 {
+        left: 68%; // top: -46px;
+        z-index: 2;
+        width: 153px;
+        height: 153px;
+        background: rgba(0, 0, 0, 0.04);
+        animation: topToBottomAnimate1 45s ease 0s infinite;
+    }
+    .circle8 {
+        left: 70%;
+        top: -135%;
+        z-index: 2;
+        width: 367px;
+        height: 367px;
+        background: rgba(245, 217, 60, 0.3);
+        animation: topToBottomAnimate4 45s ease 2s infinite;
+    }
+    .circle9 {
+        // top: 213px;
+        left: 80%;
+        z-index: 1;
+        width: 240px;
+        height: 240px;
+        background: rgba(60, 177, 245, 0.3);
+        animation: topToBottomAnimate1 36s ease 1s infinite;
+    }
+    .circle10 {
+        // top: 231px;
+        left: 88%;
+        z-index: 1;
+        width: 254px;
+        height: 254px;
+        background: rgba(86, 235, 150, 0.3);
+        animation: topToBottomAnimate1 25s ease 0s infinite;
+    }
+    .circle11 {
+        left: -7%;
+        z-index: 1;
+        width: 240px;
+        height: 240px;
+        background: rgba(60, 177, 245, 0.3);
+        animation: topToBottomAnimate11 45s ease 0s infinite;
+    }
+    .zr_layout {
+        overflow: hidden;
+        position: relative;
+        height: 100%;
+    }
+    .user-info {
+        width: 115px;
+        text-align: center;
+        margin: 0 auto;
+        padding-top: 29px;
+        .h-avatar {
+            width: 115px;
+            height: 115px;
+            border: 5px solid hsla(0, 0%, 100%, .3);
+            border-radius: 58px;
+            overflow: hidden;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        .user-name {
+            margin: 10px;
+            display: block;
+            z-index: 2;
+            font-size: 20px;
+            color: #fff;
+            line-height: 1;
+        }
+    }
+    .c-statistics {
+        margin-top: 35px;
+        .row {
+            float: left;
+            text-align: center;
+            .count {
+                font-size: 35px;
+                color: #b0ffd7;
+                line-height: 1;
+                text-align: center;
+            }
+            .text1 {
+                font-size: 23px;
+                color: #b0ffd7;
+                line-height: 1;
+                text-align: center;
+            }
+            .text2 {
+                display: block;
+                font-size: 15px;
+                color: #fff;
+                line-height: 1;
+                margin-top: 10px;
+                text-align: center;
+            }
+        }
+        .record-registration {}
+    }
+}
+
+.recently-study-course {
+    padding-top: 30px;
+    padding-bottom: 63px;
+    background: #f2f2f2;
+    width: 100%;
+    .my-course-content {
+        background: #fff;
+        .title {
+            height: 61px;
+            line-height: 61px;
+            border-bottom: 1px solid #f2f2f2;
+            position: relative;
+            &:before {
+                position: absolute;
+                left: 0;
+                top: 21px;
+                content: "";
+                height: 22px;
+                width: 3px;
+                background: #02b78c;
+            }
+            h1 {
+                font-size: 23px;
+                padding-left: 17px;
+                display: inline-block;
+                padding-right: 11px;
+            }
+            span {
+                display: inline-block;
+                font-size: 16px;
+                margin-left: 38px;
+                position: relative;
+                cursor: pointer;
+                &.active {
+                    color: #02b78c;
+                    &:before {
+                        position: absolute;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        bottom: 12;
+                        content: "";
+                        width: 30px;
+                        height: 4px;
+                        background: #02b78c;
+                        border-radius: 2px;
+                    }
+                }
+            }
+        }
+        .course-list-wapper {
+            // padding-bottom: 220px;
+            display: none;
+        }
+        .course-tab-1 {
+            display: block;
+        }
+    }
+}
+
+// 注册页面开始
+.student-register {
+    background: #fff;
+    .content {
+        .tabs {
+            .tabs_header {
+                background: #fff;
+                li {
+                    width: 33.33%;
+                }
+            }
+            .textbox {
+                .input-box {
+                    font-size: 18px;
+                }
+            }
+            .list_1 {
+                padding-top: 67px;
+                background: #fff; // .textbox {
+                //     background: #fff;
+                //     margin-top: 0;
+                //     padding: 27px 110px 0 119px;
+                //     border: 1px solid #e8e8e8;
+                //     p {
+                //         line-height: 1;
+                //         font-size: 17px;
+                //         margin-bottom: 17px;
+                //         span {
+                //             font-weight: 700;
+                //             font-size: 17px;
+                //         }
+                //     }
+                //     a {
+                //         color: #02b78c;
+                //         line-height: 30px;
+                //     }
+                //     .agree_read {
+                //         label {
+                //             left: 9%;
+                //             top: 21px;
+                //         }
+                //     }
+                //     .agree_btn {
+                //         top: 83px;
+                //         margin-bottom: 35px;
+                //     }
+                // }
+            }
+            .list_2 {
+                padding-top: 67px;
+                background: #fff;
+                margin-bottom: 67px;
+                .textbox {
+                    background: #fff;
+                    border: 1px solid #e8e8e8;
+                    padding: 63px 0 0 103px;
+                    .user-id {
+                        position: relative;
+                        left: -14px;
+                    }
+                    .row {
+                        height: 56px;
+                        line-height: 56px;
+                        width: 100%;
+                        margin-bottom: 25px;
+
+                        label.error {
+                            position: relative;
+                            left: 20px;
+                            color: #f04848;
+                        }
+                        input.error {
+                            border: 1px solid #f04848;
+                        }
+
+
+                        .input-text {
+                            float: left;
+                            color: #999999;
+                        }
+                        .input-box {
+                            float: left;
+                            border: 1px solid #e8e8e8;
+                            height: 56px;
+                            line-height: 56px;
+                            background: #f8f8f8;
+                            padding-left: 19px;
+                            width: 460px;
+                            border-radius: 5px;
+                            margin-left: 24px;
+                        }
+                    }
+                    .code {
+                        position: relative;
+                        left: 12px;
+                        .input-box {
+                            width: 231px;
+                        }
+                        .send-code-btn {
+                            height: 56px;
+                            line-height: 56px;
+                            border: 1px solid #25bc94;
+                            border-radius: 5px;
+                            padding: 0 54px;
+                            margin-left: 32px;
+                            color: #25bc94;
+                            cursor: pointer;
+                        }
+                    }
+                    .go-email-link {
+                        display: none;
+                        position: relative;
+                        top: 12px;
+                        left: 12px;
+                        span {
+                            float: left;
+                            color: #999999;
+                            font-size: 16px;
+                        }
+                        a {
+                            float: left;
+                            color: #25bc94;
+                            font-size: 16px;
+                        }
+                    }
+                    .tabs {
+                        padding-left: 31px;
+                        label {
+                            position: relative;
+                            margin-left: 95px;
+                            cursor: pointer;
+                            input {
+                                position: absolute;
+                                left: -32px;
+                                top: -3px;
+                                z-index: 5;
+                                opacity: 0;
+                                filter: alpha(opacity=0);
+                                cursor: pointer;
+                                width: 23px;
+                                height: 23px;
+                            }
+                            i {
+                                position: absolute;
+                                left: -32px;
+                                top: -3px;
+                                cursor: pointer;
+                                width: 23px;
+                                height: 23px;
+                                background: url(../../images/student/nu-checked-bg-1415.png) no-repeat;
+                            }
+                            input:checked+i {
+                                background: url(../../images/student/checked-bg-1415.png) no-repeat;
+                            }
+                        }
+                    }
+                    .submit-btn {
+                        width: 100%;
+                        text-align: center;
+                        input {
+                            cursor: pointer;
+                            display: inline-block;
+                            margin: 0 auto;
+                            width: 260px;
+                            height: 60px;
+                            line-height: 60px;
+                            text-align: center;
+                            color: #fff;
+                            font-size: 24px;
+                            background: #02b78c;
+                            border-radius: 5px;
+                            margin-bottom: 53px;
+                            margin-top: 82px;
+                        }
+                    }
+                }
+            }
+            .list_3 {
+                .textbox {
+                    padding: 0;
+                    height: 680px;
+                    position: relative;
+                    text-align: center;
+                    border: none;
+                    .r_book_bg {
+                        position: relative;
+                        top: 147px;
+                        margin: 0 auto;
+                        width: 113px;
+                        height: 138px;
+                        padding-bottom: 35px;
+                        background: url("../../images/student/book_bg_3545.png") no-repeat;
+                    }
+                    h3 {
+                        position: relative;
+                        top: 163px;
+                        font-size: 20px;
+                        line-height: 1;
+                        color: #02b78c;
+                    }
+                    .go_home {
+                        margin: 250px auto 0;
+                        width: 240px;
+                        height: 60px;
+                        line-height: 60px;
+                        text-align: center;
+                        border-radius: 5px;
+                        color: #fff;
+                        background: #02b78c;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// 播放列表
+.s-sn-recordlist {
+    overflow: hidden;
+    background: #fff;
+    padding-bottom: 63px;
+    .z-xr-live-header {
+        margin-top: 32px;
+        height: 417px;
+        overflow: hidden;
+        width: 100%;
+        background: #fff;
+        box-shadow: 0px 0px 10px #d9d9d9;
+        .contain {
+            .left {
+                float: left;
+                height: 100%;
+                width: 243px;
+                background: #fff;
+                position: relative;
+                overflow: hidden;
+                border-right: 1px solid #ebebeb;
+                .ready-live-text {
+                    margin-top: 21px;
+                    margin-left: 17px;
+                    i {
+                        display: inline-block;
+                        width: 24px;
+                        height: 24px;
+                        background: url("../../images/student/playicon.gif");
+                    }
+                    span {
+                        position: relative;
+                        top: -6px;
+                        left: 6px;
+                        font-size: 15px;
+                    }
+                }
+                .live-time {
+                    margin-top: 104px;
+                    text-align: center;
+                    .clock {
+                        font-size: 43px;
+                        font-weight: 700;
+                    }
+                    .live-date {
+                        span {
+                            font-size: 11px;
+                            color: #939393;
+                        }
+                    }
+                }
+                .animate-wave {
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    .deep-color-wave {
+                        position: absolute;
+                        bottom: 0;
+                        width: 1952px;
+                        // animate:wavedeepanimate 2s;
+                        animation: wavedeepanimate1 29s linear 0s infinite;
+                        .wave {
+                            float: left;
+                            width: 976px;
+                            height: 45px;
+                            background: url("../../images/student/wave-1.png");
+                        }
+                    }
+                    .linght-color-wave{
+                        position: absolute;
+                        bottom: 0;
+                        width: 2050px;
+                        left: -1087px;
+                        animation: wavedeepanimate2 28s linear 0s infinite;
+                        .wave {
+                            float: left;
+                            width: 1025px;
+                            height: 58px;
+                            background: url("../../images/student/wave-2.png");
+                        }
+                    }
+                }
+                @keyframes wavedeepanimate1 {
+                    0% {
+                        left: 0;
+                    }
+                    100% {
+                        left: -990px;
+                    }
+                } 
+                 @keyframes wavedeepanimate2 {
+                    0% {
+                        left: -1087px;
+                        //1025
+                    }
+                    100% {
+                        left: -62px;
+                    }
+                } 
+                // .time {
+                //     padding: 21px 0 0 22px;
+                //     .lock {
+                //         font-size: 35px;
+                //         line-height: 1;
+                //         color: #748998;
+                //         font-weight: 700;
+                //         margin-bottom: 6px;
+                //     }
+                //     .date {
+                //         margin-bottom: 6px;
+                //         span {
+                //             line-height: 1;
+                //             color: #697e8d;
+                //         }
+                //     }
+                // }
+                // .lesson {
+                //     position: relative;
+                //     width: 230px;
+                //     height: 260px;
+                //     border: 22px solid #adc9dc;
+                //     border-left: none;
+                //     border-radius: 5px;
+                //     background: #eff6fe;
+                //     .no-sign-up {
+                //         position: absolute;
+                //         width: 132px;
+                //         height: 175px;
+                //         left: 50%;
+                //         top: 50%;
+                //         transform: translate(-50%, -50%);
+                //         background: url("../../images/teacher/weidenglv.png");
+                //         span {
+                //             position: relative;
+                //             left: 14px;
+                //             top: 27px;
+                //             color: #697e8d;
+                //             font-size: 15px;
+                //         }
+                //     }
+                //     .hang-in-the-lesson {
+                //         position: absolute;
+                //         width: 118px;
+                //         height: 150px;
+                //         left: 50%;
+                //         top: 50%;
+                //         transform: translate(-50%, -50%);
+                //         background: url("../../images/teacher/2017081832.png");
+                //         text-align: center;
+                //         .text {
+                //             display: inline-block;
+                //             color: #fff;
+                //             position: relative;
+                //             top: 26px;
+                //         }
+                //         span {
+                //             display: block;
+                //             position: relative;
+                //             top: 45px;
+                //             color: #697e8d;
+                //             font-size: 60px;
+                //         }
+                //     }
+                //     .ling {
+                //         position: absolute;
+                //         right: -5px;
+                //         bottom: -83px;
+                //         width: 106px;
+                //         height: 121px;
+                //         background: url("../../images/teacher/20117080-32.png");
+                //     }
+                // }
+            }
+            .right {
+                position: relative;
+                float: left;
+                width: 957px; // overflow: hidden;
+                .s-sr-live-list {
+                    position: relative;
+                    margin-left: 30px;
+                    padding-top: 28px;
+                    margin-right: 58px;
+                    ul {
+                        li {
+                            margin: 0;
+                            height: 355px;
+                            overflow: hidden;
+                            border: 1px solid #e8e8e8;
+                            margin-right: 10px;
+                        }
+                        li:hover {
+                            box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.3);
+                            position: relative;
+                            top: 1px;
+                            border-radius: 2px;
+                            transition: all .2s;
+                        }
+                    }
+                }
+                .swiper-button {
+                    cursor: pointer;
+                    position: absolute;
+                    top: 50%;
+                    width: 18px;
+                    height: 70px;
+                    margin-top: -35px;
+                    cursor: pointer;
+                }
+                .swiper-button-prev {
+                    left: 0;
+                    background: url("../../images/student/yg-live-prev-btn-21466.png");
+                }
+                .swiper-button-next {
+                    right: 0;
+                    background: url("../../images/student/yg-live-next-21466.png");
+                }
+            }
+        }
+    }
+
+    .record-title {
+        background: #fff;
+        height: 61px;
+        line-height: 61px;
+        border: 1px solid #e8e8e8;
+        background-color: #fafafa;
+        overflow: hidden;
+        .classify {
+            float: left;
+            margin-left: 37px;
+            height: 61px;
+            line-height: 61px;
+            .btn {
+                position: relative;
+                top: 50%;
+                transform: translateY(-50%);
+                font-size: 11px;
+                padding: 0 12px;
+                margin-right: 25px;
+                height: 32px;
+                border: 1px solid #e8e8e8;
+                background-color: #fff;
+                color: #999;
+                float: left;
+                border-radius: 16px;
+                line-height: 32px;
+                cursor: pointer;
+            }
+            .btn.active {
+                background: #fff;
+                border: 1px solid #02b78c;
+                color: #02b78c;
+            }
+        }
+    }
+    .record-classify {
+        height: 68px;
+        position: relative;
+        .classify-text {
+            height: 68px;
+            line-height: 68px;
+            padding-left: 7px;
+        }
+        .select-grade {
+            position: relative;
+            left: 12px;
+            top: 21px;
+            padding: 0 26 0 13px; // width: 69px;
+            height: 25px;
+            line-height: 25px;
+            padding-left: 10px;
+            border: 1px solid #dadada;
+            background: #fff;
+            cursor: pointer;
+            button {
+                cursor: pointer;
+                height: 25px;
+                line-height: 25px;
+            }
+            .develop {
+                position: absolute;
+                right: 10px;
+                top: 9px;
+                width: 13px;
+                height: 6px;
+                background: url("../../images/student/develop_no_2219.png");
+                background-size: 100% 100%;
+            }
+        }
+        .select-grade-panel {
+            display: none;
+            position: absolute;
+            left: 88px;
+            top: 51px;
+            width: 95px;
+            border: 1px solid #d9d9d9;
+            padding-top: 6px;
+            padding-bottom: 9px;
+            background: #fff;
+            z-index: 9;
+            button {
+                display: block;
+                width: 100%;
+                padding-left: 9px;
+                text-align: left;
+                line-height: 1;
+                font-size: 11px;
+                height: 28px;
+                cursor: pointer;
+            }
+            button:hover {
+                background: #cfc7c7;
+            }
+        }
+    }
+    .record-banner {
+        display: block;
+        width: 1200px;
+        height: 171px;
+        margin-top: 20px;
+        cursor: pointer; // background: url("../../images/student/record_list_bg_3535.png")
+        img {
+            width: 1200px;
+            height: 171px;
+            cursor: pointer;
+        }
+    }
+    .record-content {
+        position: relative;
+        background: #fff;
+        min-height: 800px;
+        .record-statistics {
+            height: 61px;
+            line-height: 61px;
+            margin-bottom: 12px;
+            .statistics-left {
+                float: left;
+                padding-left: 0px;
+                padding-top: 20px;
+                .item {
+                    float: left;
+                    width: 65px;
+                    height: 24px;
+                    line-height: 24px;
+                    background: #fff;
+                    position: relative;
+                    cursor: pointer;
+                    border: 1px solid #dad8dd;
+                    border-right: none;
+                    padding-left: 6px;
+                    .btn {
+                        float: left;
+                        font-size: 12px;
+                        height: 24px;
+                        line-height: 24px;
+                        cursor: pointer; // position: relative;
+                        // top: 20px;
+                    }
+                    .develop {
+                        position: absolute;
+                        top: 7px;
+                        right: 6px;
+                        width: 10px;
+                        height: 10px;
+                        margin-left: 11px;
+                        background: url("../../images/student/develop_no_2224.png") no-repeat;
+                    }
+                    .develop-up {
+                        transform: rotate(180deg);
+                    }
+                    &.active {
+                        background: #02b78c;
+                        border: 1px solid #02b78c;
+                        .btn {
+                            color: #fff; // background: #02b78c;
+                        }
+                        .develop {
+                            background: url("../../images/student/develop_no_2223.png") no-repeat;
+                        }
+                    }
+                }
+                .item:last-child {
+                    border-right: 1px solid #dad8dd;
+                }
+            }
+            .statistics-right {
+                float: left;
+                position: relative;
+                top: 3px;
+                padding-left: 20px;
+                margin-left: 39px;
+                color: #999999;
+                font-size: 13px;
+                cursor: pointer;
+                i {
+                    position: absolute;
+                    left: 0px;
+                    top: 21px;
+                    width: 15px;
+                    height: 15px;
+                    background: url("../../images/teacher/11_03.png")
+                }
+                input {
+                    position: absolute;
+                    left: 0px;
+                    top: 21px;
+                    width: 15px;
+                    height: 15px;
+                    z-index: 9;
+                }
+                input:checked+i {
+                    background: url("../../images/teacher/11_02.jpg")
+                }
+            }
+        }
+        .course-content {
+            position: relative;
+            padding: 0px 0 86px 0px;
+        }
+        .s-sr-live-list {
+            ul {
+                li {
+                    margin-right: 20px;
+                    margin-bottom: 20px;
+                    border: 1px solid #e8e8e8;
+                }
+            }
+        }
+    }
+}
+
+// 播放页面
+.broadcast-wapper {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    background: url("../../images/student/broadcast_bg_8585_02.png");
+    position: relative;
+    padding-right: 400px;
+    .close-window-btn {
+        position: absolute;
+        left: 0;
+        top: 18px;
+        width: 60px;
+        line-height: 38px;
+        font-size: 15px;
+        height: 38px;
+        text-align: center;
+        background: #fff;
+        cursor: pointer;
+        border-radius: 0 19px 19px 0;
+        z-index: 10;
+    }
+    .broadcast-right {
+        width: 100%;
+        height: 100%;
+        float: left;
+        padding-left: 44px;
+        padding-right: 105px;
+
+        .course-title {
+            // position: absolute;
+            position: relative;
+            padding-top: 86px;
+            .class-hour {
+                position: relative;
+                .class-text {
+                    float: left;
+                    line-height: 19px;
+                    height: 19px;
+                    padding: 0 7px;
+                    color: #333;
+                    border-radius: 9px 0 0 9px;
+                    background: #fff;
+                }
+                .no_number {
+                    position: absolute;
+                    float: left;
+                    left: 34px;
+                    top: -6px;
+                    width: 30px;
+                    text-align: center;
+                    border-radius: 15px;
+                    height: 30px;
+                    line-height: 30px; // color: #333;
+                    font-size: 17px;
+                    background: #a3af9c;
+                }
+            }
+            h3 {
+                display: inline-block;
+                margin-left: 30px;
+                color: #fff;
+                font-size: 17px;
+            }
+            span {
+                display: inline-block;
+                color: #fff;
+            }
+            .online-people-count {
+                position: relative;
+                float: right;
+                .count-text {
+                    font-size: 17px;
+                    color: #faca4c;
+                }
+            }
+        }
+        .player-wapper {
+            // background-color: #fff;
+            width: 100%;
+            position: absolute;
+            top: 150px;
+            bottom: 86px;
+            left: 0px;
+            padding-left: 44px;
+            padding-right: 505px;
+            .player-content {
+                height: 100%;
+                overflow: hidden;
+            }
+        }
+    }
+    .broadcast-left {
+        width: 400px;
+        height: 100%;
+        background: #f2f2f2;
+        float: left;
+        position: absolute;
+        right: 0;
+        top: 0;
+        .shrink {
+            position: absolute;
+            left: -38px;
+            top: 24px;
+            width: 42px;
+            height: 37px;
+            z-index: 2;
+            cursor: pointer;
+            background: url("../../images/student/pack_up_sideer_btn_5155.png");
+        }
+        .shrink.rotate {
+            transform: rotate(180deg);
+        }
+        .slider-top {
+            height: 131px;
+            border-bottom: 1px solid #d9d9d9;
+            background: #fff;
+            padding: 32px 18px 0 21px;
+            .teacher-photo {
+                width: 56px;
+                height: 56px;
+                border: 1px solid #d9d9d9;
+                border-radius: 50%;
+                object-fit: cover;
+                float: left;
+            }
+            .teacher-info {
+                float: left;
+                padding: 7px 0 0 17px;
+                position: relative;
+                i {
+                    position: absolute;
+                    right: -67px;
+                    top: 13px;
+                    padding: 4px 6px;
+                    background: #ffb64d;
+                    color: #fff;
+                    border-radius: 15px;
+                    font-size: 8px;
+                }
+            }
+            .tabs-screen {
+                float: right;
+                width: 115px;
+                height: 72px;
+                right: -7px;
+                top: -5px;
+                cursor: pointer;
+                position: relative;
+                .mask {
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                    background: rgba(0, 0, 0, 0.5);
+                    z-index: 2;
+                }
+                img {
+                    width: 115px;
+                    height: 72px;
+                }
+                i {
+                    position: absolute;
+                    top: 40%;
+                    right: 50%;
+                    transform: translate(50%, -50%);
+                    z-index: 3;
+                    width: 23px;
+                    height: 23px;
+                    background: url("../../images/student/tabs_screen_3536.png")
+                }
+                .tabs-text {
+                    position: relative;
+                    top: -29px;
+                    right: -27px; // transform:translate(50%,-50%);
+                    z-index: 3;
+                    color: #fff;
+                }
+            }
+        }
+        .forum-box {
+            .forum-title {
+                height: 54px;
+                line-height: 54px;
+                border-bottom: 1px solid #d9d9d9;
+                width: 100%;
+                padding-left: 51px;
+                position: relative;
+                .icon {
+                    position: absolute;
+                    left: 23px;
+                    top: 19px;
+                    width: 18px;
+                    height: 16px;
+                    z-index: 2;
+                    background: url("../../images/student/forum_icon_1516.png");
+                }
+                span {
+                    font-size: 16px;
+                    color: #999999;
+                }
+            }
+            .chat-bxo {
+                &::-webkit-scrollbar-thumb {
+                    cursor: pointer;
+                    border-radius: 4px;
+                    background: rgba(0, 0, 0, 0.2);
+                    height: 50px;
+                    outline-offset: -2px;
+                    outline: 0px solid #fff;
+                    -webkit-border-radius: 4px;
+                    border: 0px solid #fff;
+                }
+                /*---鼠标点击滚动条显示样式--*/
+                // &::-webkit-scrollbar-thumb:hover {
+                //     background-color: #018EE8;
+                //     height: 50px;
+                //     -webkit-border-radius: 4px;
+                // }
+                /*---滚动条大小--*/
+                &::-webkit-scrollbar {
+                    width: 8px;
+                    height: 8px;
+                }
+                /*---滚动框背景样式--*/
+                &::-webkit-scrollbar-track-piece {
+                    background-color: rgba(0, 0, 0, 0.1);
+                    -webkit-border-radius: 0;
+                }
+
+
+                padding: 18px 0px 0 18px;
+                margin-bottom: 65px;
+                overflow-y: auto;
+                overflow-x: hidden;
+                width: 100%;
+                position: absolute;
+                top: 200px;
+                bottom: 0;
+                .row {
+                    margin-bottom: 27px;
+                    .info {
+                        float: left;
+                        .user-header-img {
+                            width: 50px;
+                            height: 50px;
+                            border-radius: 50%;
+                            object-fit: cover;
+                        }
+                        text-align: center;
+                        .user-name {
+                            line-height: 1;
+                            display: inline-block;
+                            color: #999999;
+                            margin-top: 12px;
+                        }
+                    }
+                    .chat-text {
+                        width: 100%;
+                        position: relative;
+                        top: 2px;
+                        left: 17px;
+                        padding-left: 20px;
+                        line-height: 28px;
+                        float: left;
+                        width: 259px;
+                        background: #fff;
+                        border: 1px solid #e8e8e8;
+                        border-radius: 5px;
+                        padding-top: 12px;
+                        padding-bottom: 12px;
+                        .bottomLevel {
+                            position: absolute;
+                            top: 12px;
+                            left: -10px;
+                            border-top: 15px solid #fff;
+                            border-left: 15px solid transparent;
+                        }
+                    }
+                }
+                .my-row {
+                    position: relative;
+                    right: 25px;
+                    .info {
+                        float: right;
+                    }
+                    .chat-text {
+                        float: right;
+                        left: -17px;
+                        background: #8da181;
+                        color: #fff;
+                        .bottomLevel {
+                            transform: rotate(270deg);
+                            left: 255px;
+                            border-top: 15px solid #8da181;
+                            border-left: 15px solid transparent;
+                        }
+                    }
+                }
+            }
+            .send-sms {
+                position: absolute;
+                width: 100%;
+                left: 0;
+                bottom: 0;
+                height: 65px;
+                background: #d9d9d9;
+                padding: 9px 0 0 11px;
+                .sms-content {
+                    float: left;
+                    width: 291px;
+                    height: 45px;
+                    background: #fff;
+                    border-radius: 5px;
+                    padding-left: 13px;
+                }
+                .send-sms-btn {
+                    float: left;
+                    height: 45px;
+                    line-height: 45px;
+                    border-radius: 5px;
+                    width: 77px;
+                    text-align: center;
+                    background: #707d64;
+                    color: #fff;
+                    cursor: pointer;
+                    margin-left: 12px;
+                }
+            }
+        }
+    }
+}
+
+
+//直播详情页开始
+.detail-wrapper {
+    background: #f2f2f2;
+    padding-top: 44px;
+    padding-bottom: 63px;
+    .live-detail-top {
+        background: #fff;
+        .live-detail-bread {
+            height: 60px;
+            line-height: 60px;
+            padding-left: 45px;
+            border-bottom: 1px solid #e8e8e8;
+            span {
+                font-size: 16px;
+                color: #999999;
+            }
+        }
+        .play-info {
+            overflow: hidden;
+            padding: 0px 0px 0px 0px;
+            .video-info {
+                float: left;
+                width: 733px;
+                height: 426px;
+                position: relative;
+                cursor: pointer;
+                .video-bg-picture {
+                    width: 100%;
+                    height: 100%;
+                }
+                .mask {
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    left: 0px;
+                    top: 0px;
+                    background: rgba(0, 0, 0, 0.5);
+                    z-index: 2;
+                }
+                .playe-video-icon {
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    width: 120px;
+                    height: 120px;
+                    z-index: 3;
+                    margin-left: -60px;
+                    margin-top: -60px; // transform: translate(-50%, -50%);
+                    background: url("../../images/student/paly-detail-3828.png");
+                    transition: all 0.5s;
+                }
+                .playe-video-icon:hover {
+                        transform: scale3d(0.95, 0.95, 0.95)
+                }
+                .describe {
+                    position: absolute;
+                    left: 0;
+                    bottom: 27px;
+                    z-index: 9;
+                    width: 100%;
+                    .title-video {
+                        position: relative;
+                        left: 21px;
+                        top: -10px;
+                        color: #fff;
+                        font-size: 27px;
+                    }
+                    .sub-title {
+                        position: relative;
+                        left: 21px;
+                        color: #fff;
+                        font-size: 18px;
+                    }
+                    .surplus-course {
+                        position: absolute;
+                        right: 22px;
+                        bottom: 0px;
+                        span {
+                            color: #fff;
+                            font-size: 18px;
+                        }
+                    }
+                }
+            }
+            .teaher-info {
+                float: left;
+                margin-left: 0px;
+                width: 467px;
+                height: 426px;
+                position: relative;
+                overflow: hidden;
+                .teaher-info-card {
+                    height: 168px;
+                    border-bottom: 1px dashed #e8e8e8;
+                    position: relative;
+
+                    .card-top {
+                        padding: 14px 0 0 36px;
+                        .teacher-hander-pictrue {
+                            float: left;
+                            width: 72px;
+                            height: 72px;
+                            border: 1px solid #d9d9d9;
+                            border-radius: 50%;
+                            object-fit: cover;
+                        }
+                        .teacher-name {
+                            float: left;
+                            font-size: 17px;
+                            position: relative;
+                            top: 10px;
+                            left: 23px;
+                            a {
+                                display: inline-block;
+                            }
+                            .identification {
+                                position: relative;
+                                left: 7px;
+                                top: -2px;
+                                display: inline-block;
+                                border-radius: 10px;
+                                width: 57px;
+                                height: 20px;
+                                background: #ffb64d;
+                                color: #fff;
+                                font-size: 10px;
+                                text-align: center;
+                                line-height: 20px;
+                            }
+                            p {
+                                color: #a8a8a8;
+                                line-height: 2;
+                                font-size: 14px;
+                            }
+                        }
+                    }
+                    .card-statistics {
+                        padding-left: 10px;
+                        padding-top: 20px;
+                        .item {
+                            float: left;
+                            width: 33.33%;
+                            text-align: center;
+                            span {
+                                display: block;
+                                line-height: 1;
+                                font-size: 14px;
+                                color: #999999;
+                            }
+                            .number {
+                                color: #F7B97B;
+                                font-size: 20px;
+                                margin-bottom: 11px;
+                            }
+                        }
+                    }
+                }
+                .teacher-live-descript {
+                    padding: 17px 0 0 29px;
+                    .fc {
+                        position: absolute;
+                        bottom: 22px;
+                        left: 31px;
+                    }
+                    .teacher-live-time {
+                        span {
+                            color: #999;
+                            margin-right: 10px;
+                        }
+                        .recently-live-title {
+                            display: inline-block;
+                            width: 110px;
+                            height: 27px;
+                            line-height: 27px;
+                            text-align: center;
+                            border-radius: 5px;
+                            font-size: 12px;
+                            border: 1px solid #F3992F;
+                            color: #F3992F;
+                        }
+                    }
+                    .course-descript {
+                        padding-top: 10px;
+                        color: #666;
+                        line-height: 2;
+                        text-overflow: -o-ellipsis-lastline;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        display: -webkit-box;
+                        -webkit-line-clamp: 4;
+                        -webkit-box-orient: vertical;
+                        padding-right: 10px;
+                    }
+                    .btn {
+                        float: left;
+                        width: 140px;
+                        height: 47px;
+                        line-height: 47px;
+                        text-align: center;
+                        color: #fff; // border: 1px solid #02B78C;
+                        border-radius: 5px;
+                    }
+                    .sign-up {
+                        margin-right: 20px;
+                        background: #02B78C;
+                        color: #fff;
+                        width: 190px;
+                    }
+                    .sign-up.active {
+                        background: #e9e9e9;
+                        color: #aaaaaa;
+                    }
+                    .collect {
+                        width: 190px;
+                        cursor: pointer;
+                        padding-left: 10px;
+                        border: 1px solid #fd7a7a;
+                        color: #fd7a7a;
+                        background: url("../../images/student/heart_on.png") no-repeat 28px 15px;
+                    }
+                    .collect.active {
+                        // background: #02B78C;
+                        border: 1px solid #c1c1c1;
+                        ;
+                        color: #666;
+                        background: url("../../images/student/heart.png") no-repeat 28px 15px;
+                    }
+                }
+                .small-round {
+                    position: absolute;
+                    width: 8px;
+                    height: 8px;
+                    background: #fff;
+                    border-radius: 4px;
+                    border: 1px solid #e9e9e9;
+                }
+                .round1 {
+                    top: 9px;
+                    left: 11px;
+                }
+                .round2 {
+                    top: 9px;
+                    right: 11px;
+                }
+                .round3 {
+                    bottom: 9px;
+                    right: 11px;
+                }
+                .round4 {
+                    bottom: 9px;
+                    left: 11px;
+                }
+            }
+        }
+    }
+    .live-detail-content {
+        width: 100%;
+        overflow: hidden;
+        background: #fff;
+        .course-tabs-top {
+            height: 61px;
+            line-height: 61px;
+            padding-left: 33px;
+            position: relative;
+            border-bottom: 1px solid #f1f1f1;
+            ul {
+                li {
+                    float: left;
+                    padding: 0px 30px;
+                    cursor: pointer;
+                }
+            }
+            .line {
+                position: absolute;
+                left: 0;
+                bottom: 0; // width: 100px;
+                height: 3px;
+                background: #02B78C;
+                i {
+                    position: absolute;
+                    left: 50%;
+                    top: -50%;
+                    width: 0;
+                    height: 0;
+                    z-index: 2;
+                    border-style: solid;
+                    border-width: 0 3.5px 3px 3.5px;
+                    border-color: transparent transparent #02B78C transparent;
+                    transform: translate(-50%, -50%);
+                }
+            }
+        }
+        .course-tabs {
+            overflow: hidden;
+            .tabs-course-synopsis {
+                min-height: 600px; // display: none;
+                padding: 36px 35px 52px 34px;
+                .row {
+                    margin-bottom: 38px;
+                    .title {
+                        position: relative;
+                        margin-bottom: 27px;
+                        i {
+                            position: absolute;
+                            left: 0;
+                            top: 0;
+                            width: 0;
+                            height: 0;
+                            border-style: solid;
+                            border-width: 7px 0 7px 7px;
+                            border-color: transparent transparent transparent #16B991;
+                        }
+                        span {
+                            padding-left: 17px;
+                            color: #16B991;
+                            position: relative;
+                            top: -1px;
+                        }
+                    }
+                    .artcle-text {
+                        font-size: 16px;
+                        line-height: 27px;
+                        text-indent: 2em;
+                    }
+                    .base-data {
+                        position: relative;
+                        span {
+                            line-height: 2;
+                        }
+                        .base-text-right {
+                            position: absolute;
+                            left: 270px;
+                        }
+                    }
+                    .picture-data {
+                        width: 541px;
+                        height: 285px;
+                        object-fit: cover;
+                    }
+                    .original-works {
+                        p {
+                            font-size: 16px;
+                            line-height: 2;
+                        }
+                    }
+                }
+            }
+            .tabs-course-table {
+                padding-left: 41px;
+                padding-top: 22px;
+                padding-bottom: 30px;
+                display: none;
+                min-height: 600px;
+                .row {
+                    height: 154px;
+                    background: #fff;
+                    position: relative;
+
+                    .playback {
+                        position: absolute;
+                        right: 110px;
+                        top: 60px;
+                        padding: 12px 15px;
+                        background: #02B78C;
+                        border-radius: 5px;
+                        color: #fff;
+                        cursor: pointer;
+                    }
+
+                    .join {
+                        height: 154px;
+                        line-height: 154px;
+                        float: left;
+                        .join-icon {
+                            position: relative;
+                            top: 2px;
+                            display: inline-block;
+                            width: 14px;
+                            height: 14px;
+                            background: url("../../images/student/finish-icon-2878.png");
+                        }
+                        span {
+                            position: relative;
+                            left: 7px;
+                        }
+                    }
+                    .row-round {
+                        float: left;
+                        width: 12px;
+                        height: 12px;
+                        border: 1px solid #C1C1C1;
+                        border-radius: 50%;
+                        position: relative;
+                        top: 50%;
+                        left: 38px;
+                        transform: translateY(-50%);
+                        .line {
+                            position: absolute;
+                            left: 5px;
+                            border-left: 1px dashed #d9d9d9;
+                            height: 142px;
+                            top: -142px;
+                        }
+                        .round-heart {
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            width: 5px;
+                            height: 5px;
+                            background: #C1C1C1;
+                        }
+                    }
+                    .course-title {
+                        float: left;
+                        position: relative;
+
+                        left: 80px;
+                        top: 55px;
+                        h3 {
+                            line-height: 1;
+                            margin-bottom: 15px;
+                            font-size: 16px;
+                        }
+                        span {
+                            line-height: 1;
+                            position: relative;
+                            left: 0px;
+                            font-size: 10px;
+                            color: #999999;
+                        }
+                        span:last-child {
+                            padding-left: 8px;
+                        }
+                    }
+                }
+                .row.no-join-course {
+                    .join-icon {
+                        position: relative;
+                        top: 2px;
+                        display: inline-block;
+                        width: 14px;
+                        height: 14px;
+                        background: url("../../images/student/no-finish-icon-2878.png");
+                    }
+                    .row-round {
+                        border: none;
+                        background: #fbb890;
+                    }
+                    .round-heart {
+                        background: #fff;
+                    }
+                    .line {
+                        border-left: 1px solid #d9d9d9;
+                        height: 142px;
+                        top: -142px;
+                    }
+                }
+            }
+            .tabs-course-download {
+                display: none;
+                padding: 33px 0 0px 35px;
+                overflow: hidden;
+                min-height: 600px;
+                .item {
+                    float: left;
+                    margin-right: 44px;
+                    margin-bottom: 50px;
+                    padding: 16px 0 0 16px;
+                    width: 189px;
+                    height: 138px;
+
+                    .time {
+                        font-size: 11px;
+                        color: #fff;
+                        line-height: 1;
+                    }
+                    .file-name {
+                        font-size: 14px;
+                        color: #fff;
+                        line-height: 1;
+                        margin-top: 11px;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                        overflow: hidden;
+                    }
+                }
+                .item.file-type-avi {
+                    background: url("../../images/student/file-type-avi.png") no-repeat;
+                }
+                .item.file-type-doc {
+                    background: url("../../images/student/file-type-doc.png") no-repeat;
+                }
+                .item.file-type-jpg {
+                    background: url("../../images/student/file-type-jpg.png") no-repeat;
+                }
+                .item.file-type-mp3 {
+                    background: url("../../images/student/file-type-mp3.png") no-repeat;
+                }
+                .item.file-type-pdf {
+                    background: url("../../images/student/file-type-pdf.png") no-repeat;
+                }
+                .item.file-type-zip {
+                    background: url("../../images/student/file-type-zip.png") no-repeat;
+                }
+                .item.file-type-default {
+                    background: url("../../images/student/file-type-default.png") no-repeat;
+                }
+                .item.file-type-ppt {
+                    background: url("../../images/student/file-type-ppt.png") no-repeat;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 录播详情页开始 */
+
+.video-detail-wrapper {
+    .play-info {
+        border-bottom: none;
+    }
+    .video-list {
+        float: left;
+        border-left: none;
+        height: 426px;
+        width: 467px;
+        background: #fafafa;
+        overflow-y: auto;
+
+        /*---滚动条默认显示样式--*/
+        &::-webkit-scrollbar-thumb {
+            cursor: pointer;
+            border-radius: 4px;
+            background: rgba(0, 0, 0, 0.3);
+            height: 50px;
+            outline-offset: -2px;
+            outline: 0px solid #fff;
+            -webkit-border-radius: 4px;
+            border: 0px solid #fff;
+        }
+        /*---鼠标点击滚动条显示样式--*/
+        // &::-webkit-scrollbar-thumb:hover {
+        //     background-color: #018EE8;
+        //     height: 50px;
+        //     -webkit-border-radius: 4px;
+        // }
+        /*---滚动条大小--*/
+        &::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        /*---滚动框背景样式--*/
+        &::-webkit-scrollbar-track-piece {
+            background-color: #9DBFE4;
+            -webkit-border-radius: 0;
+        }
+
+        ul {
+            li {
+                &:last-child {
+                    a {}
+                }
+                a {
+                    height: 80px;
+                    padding-left: 25px;
+                    line-height: 80px;
+                    padding-right: 13px;
+                    position: relative;
+
+                    .line {
+                        position: absolute;
+                        left: 33px;
+                        top: 0px;
+                        height: 80px;
+                        width: 1px;
+                        background: #e8e8e8;
+                        z-index: 1;
+                    }
+                    .sort {
+                        z-index: 2;
+                        position: relative;
+                        margin-top: 32px;
+                        float: left;
+                        margin-right: 30px;
+                        line-height: 17px;
+                        text-align: center;
+                        width: 17px;
+                        height: 17px;
+                        background: #c1c1c1;
+                        color: #fff;
+                        border-radius: 50%;
+                    }
+                    .title {
+                        float: left;
+                        max-width: 200px;
+                        overflow: hidden;
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                    }
+                    .time {
+                        float: right;
+                    }
+                }
+            }
+            li.active {
+                position: relative;
+                background: #fff;
+                &:after {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    top: 18px;
+                    width: 4px;
+                    height: 43px;
+                    background: #02b78c;
+                }
+                a {
+                    border-bottom: none;
+                    .line {
+                        width: 0px;
+                    }
+                    .sort {
+                        background: #02b78c;
+                    }
+                }
+            }
+        }
+    }
+    .teacher-info {
+        border-top: 1px solid #f1f1f1;
+        height: 150px;
+        padding: 30px 0 0 40px;
+        .info-left {
+            height: 161px;
+            width: 406px;
+            position: relative;
+            float: left;
+            .header {
+                float: left;
+                width: 72px;
+                height: 72px;
+                border-radius: 50%;
+                border: 1px solid #dbdbdb;
+                margin-top: 10px;
+                margin-right: 23px;
+                object-fit: cover;
+            }
+            .teacher-name {
+                float: left;
+                span {
+                    font-size: 16px;
+                    line-height: 39px;
+                }
+                a {
+                    display: inline-block;
+                    font-size: 16px;
+                    line-height: 39px;
+                }
+                p {
+                    font-size: 14px;
+                    color: #999999;
+                }
+            }
+            .accreditation-teacher {
+                position: relative;
+                left: 15px;
+                top: 9px;
+                display: inline-block;
+                border-radius: 10px;
+                width: 57px;
+                height: 20px;
+                background: #ffb64d;
+                color: #fff;
+                font-size: 10px;
+                text-align: center;
+                line-height: 20px;
+            }
+            .statistics {
+                position: absolute;
+                bottom: 74px;
+                left: 94px;
+                span {
+                    color: #999;
+                    margin-right: 20px;
+                }
+            }
+        }
+        .info-mind {
+            float: left;
+            width: 488px;
+            height: 100px;
+            color: #666;
+            p {
+                line-height: 1.5;
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 6;
+                overflow: hidden;
+            }
+        }
+        .info-right {
+            float: left;
+            margin-left: 59px;
+            .btn {
+                // float: left;
+                width: 140px;
+                height: 47px;
+                line-height: 47px;
+                text-align: center;
+                color: #fff; // border: 1px solid #02B78C;
+                border-radius: 5px;
+            }
+
+            .sign-up {
+                margin-right: 48px; // background: #02B78C;
+                background: #02B78C;
+                color: #fff;
+                margin-bottom: 10px;
+            }
+
+            .sign-up.active {
+                background: #e9e9e9;
+                color: #aaaaaa;
+            }
+
+            .collect {
+                cursor: pointer;
+                padding-left: 15px;
+                color: #fd7a7a;
+                border: 1px solid #fd7a7a;
+                background: url("../../images/student/heart_on.png") no-repeat 28px 15px;
+            }
+            .collect.active {
+                padding-left: 29px; // background: #02B78C;
+                border: 1px solid #c1c1c1;
+                color: #666;
+                background: url("../../images/student/heart.png") no-repeat 28px 15px;
+            }
+        }
+    }
+}
+
+
+// 老师详情页
+.h-teacher-detail-page {
+    position: relative;
+    z-index: -1; // .h-teacher-detail {
+    //     position: relative;
+    //     height: 528px;
+    //     width: 100%;
+    //     background: url("../../images/teacher/teacher-detai-banner-bg.png") center center; // background-size:contain;
+    //     background-size: 100% 100%;
+    //     background-repeat: no-repeat;
+    //     overflow: hidden;
+    //     .h-teacher-wapper {
+    //         position: absolute;
+    //         z-index: 9;
+    //         left: 50%;
+    //         top: 50%;
+    //         transform: translate(-50%, -50%);
+    //         height: 441px;
+    //         width: 1093px;
+    //         .h-teacher-info {
+    //             position: relative;
+    //             z-index: 1;
+    //             width: 100%;
+    //             height: 100%;
+    //             background: #fff;
+    //             border-radius: 5px;
+    //             padding: 59px 22px 0 64px;
+    //             .base-data {
+    //                 margin-bottom: 40px;
+    //                 img {
+    //                     float: left;
+    //                     margin-right: 28px;
+    //                     width: 74px;
+    //                     height: 74px;
+    //                     border-radius: 50%;
+    //                     object-fit: cover;
+    //                 }
+    //                 .user-name {
+    //                     position: relative;
+    //                     top: 9px;
+    //                     .text1 {
+    //                         font-size: 22px;
+    //                         line-height: 1;
+    //                     }
+    //                     .text2 {
+    //                         font-size: 23px;
+    //                         position: relative;
+    //                         left: -11px;
+    //                         line-height: 1;
+    //                     }
+    //                     p {
+    //                         position: relative;
+    //                         top: 15px;
+    //                         left: 3px;
+    //                         color: #5a8078;
+    //                         line-height: 1;
+    //                     }
+    //                     .teacher-gold {
+    //                         text-align: center;
+    //                         color: #fff;
+    //                         position: absolute;
+    //                         left: 268px;
+    //                         top: 0px;
+    //                         width: 66px;
+    //                         height: 23px;
+    //                         line-height: 23px;
+    //                         font-size: 12px;
+    //                         background: #ffb64d;
+    //                         border-radius: 10px;
+    //                     }
+    //                 }
+    //             }
+    //             .statistics {
+    //                 position: relative;
+    //                 left: 62px;
+    //                 padding-bottom: 55px;
+    //                 .row {
+    //                     float: left;
+    //                     width: 117px;
+    //                     height: 67px;
+    //                     border-right: 1px solid #9ec5bd;
+    //                     text-align: center;
+    //                     span {
+    //                         color: #5a8078;
+    //                     }
+    //                     .count {
+    //                         display: block;
+    //                         position: relative;
+    //                         font-size: 16px;
+    //                         top: -3px;
+    //                         left: 50%;
+    //                         margin-bottom: 10px;
+    //                         transform: translateX(-50%);
+    //                         border-radius: 50%;
+    //                         width: 48px;
+    //                         height: 48px;
+    //                         line-height: 48px;
+    //                         background: #9ec5bd;
+    //                         color: #fff;
+    //                         text-align: center;
+    //                     }
+    //                 }
+    //             }
+    //             .introduce {
+    //                 position: relative;
+    //                 left: 91px;
+    //                 max-width: 910px;
+    //                 span {
+    //                     font-size: 12px;
+    //                     color: #5a8078;
+    //                     line-height: 24px;
+    //                 }
+    //             }
+    //         }
+    //         .backgroung-icon-flower {
+    //             position: absolute;
+    //             z-index: -2;
+    //             left: -288px;
+    //             top: -14px;
+    //             width: 341px;
+    //             height: 421px;
+    //             background: url("../../images/teacher/teacher-detail-flower-8787.png") no-repeat;
+    //         }
+    //         .backgroung-icon-book {
+    //             width: 412px;
+    //             height: 255px;
+    //             position: absolute;
+    //             left: -278px;
+    //             bottom: -63px;
+    //             background: url("../../images/teacher/teacher-detail-book-8787.png") no-repeat;
+    //         }
+    //         .backgroung-icon-lamp {
+    //             position: absolute;
+    //             right: -282px;
+    //             bottom: -77px;
+    //             width: 895px;
+    //             height: 501px;
+    //             background: url("../../images/teacher/teacher-detail-lamp-8787.png");
+    //         }
+    //         .backgroung-icon-mark {
+    //             position: absolute;
+    //             right: 24px;
+    //             top: 25px;
+    //             width: 284px;
+    //             height: 161px;
+    //             background: url("../../images/teacher/zhibojiaoshi+.png");
+    //         }
+    //     }
+    // }
+    .teacher-info-lrb {
+        height: 450px;
+        background: #2f3c39;
+        width: 100%;
+        overflow: hidden;
+        .teacher-info-ctn {
+            box-shadow: 0 0 10px #fff;
+            margin: 41px auto 0; // position: absolute;
+            // left: 50%;
+            // margin-left: -330px;
+            margin-top: 41px;
+            width: 661px;
+            height: 370px;
+            background: #fff; // box-shadow: 6px 6px 4px #fff;
+            .teacher-header {
+                float: left;
+                width: 165px;
+                height: 100%; // background: pink;
+                overflow: hidden;
+                img {
+                    margin: 33px 0 0 40px;
+                    width: 92px;
+                    height: 92px;
+                    border: 1px solid #d8d9d9;
+                    border-radius: 50%;
+                    object-fit: cover;
+                }
+            }
+            .teacher-detail-info {
+                float: left; // background: skyblue;
+                position: relative; // width: 100%;
+                height: 100%;
+                width: 496px;
+                padding-top: 57px;
+
+                .parsonal-data {
+                    position: relative;
+                    font-size: 18px;
+                    line-height: 1;
+                    margin-bottom: 25px;
+                    .teacher-school {
+                        padding-top: 14px;
+                        line-height: 1;
+                    }
+                    .teacher-verify-cm {
+                        display: inline-block;
+                        margin-left: 4px;
+                    }
+                    .ip-31-o {}
+                }
+                .teacher-skill {
+                    i {
+                        margin-right: 8px;
+                    }
+                    span {
+                        padding: 5px 11px;
+                        display: inline-block;
+                        border: 1px solid #c1c1c1;
+                        border-radius: 5px;
+                        margin-right: 5px;
+                    }
+                }
+                .teacher-simple-introduce {
+                    overflow: hidden;
+                    margin-top: 17px;
+                    i {
+                        float: left;
+                        margin-right: 8px;
+                    }
+                    p {
+                        float: left;
+                        display: inline-block;
+                        width: 440px;
+                        word-break: break-all;
+                        display: -webkit-box;
+                        -webkit-line-clamp: 2;
+                        -webkit-box-orient: vertical;
+                        overflow: hidden;
+                    }
+                }
+                .statistics-course {
+                    .item {
+                        margin-right: 45px;
+                        padding-top: 40px;
+                        text-align: center;
+                        float: left;
+                        .count {
+                            display: block;
+                            font-size: 17px;
+                            color: #02b78c;
+                            line-height: 1;
+                            margin-bottom: 12px;
+                        }
+                        .text-js {
+                            line-height: 1;
+                            display: block;
+                            color: #999999;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+    .h-teacher-course-content {
+        color: #f2f2f2;
+        padding-top: 52px;
+        .course-tabs-top {
+            height: 60px;
+            line-height: 60px;
+            border-bottom: 1px solid #f2f2f2;
+            padding-left: 31px;
+            .oLi {
+                float: left;
+                height: 60px;
+                line-height: 60px;
+                font-size: 19px;
+                margin-right: 60px;
+                cursor: pointer;
+                position: relative;
+            }
+            .oLi.active {
+                border-bottom: 3px solid #16B991;
+            }
+            .oLi.active:after {
+                content: "";
+                position: absolute;
+                left: 50%;
+                top: 54px;
+                width: 0;
+                height: 0;
+                z-index: 99;
+                border-style: solid;
+                border-width: 0 3.5px 3px 3.5px;
+                border-color: transparent transparent #16B991 transparent;
+                -webkit-transform: translate(-50%, -50%);
+                transform: translateX(-50%);
+            }
+        }
+        .course-tabs-content {
+            .recorded-course-tabs1 {
+                min-height: 750px;
+                padding-left: 30px;
+                h3 {
+                    height: 64px;
+                    line-height: 64px;
+                    font-size: 16px;
+                    color: #999999;
+                }
+                .row {
+                    padding-bottom: 50px;
+                    height: 275px;
+                    .big-course {
+                        float: left;
+                        width: 353px;
+                        height: 225px;
+                        margin-right: 32px;
+                        position: relative;
+                        .mask {
+                            position: absolute;
+                            left: 0;
+                            top: 0;
+                            width: 100%;
+                            height: 100%;
+                            background: rgba(0, 0, 0, 0.3);
+                            z-index: 5;
+                        }
+                        .course-picture {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                        }
+                        .descript {
+                            position: absolute;
+                            left: 0px;
+                            bottom: 0px;
+                            padding-left: 18px;
+                            z-index: 8;
+                            padding-bottom: 13px;
+                            h3 {
+                                display: block;
+                                width: 100%;
+                                height: 17px;
+                                font-size: 17px;
+                                color: #fff;
+                                font-weight: 600;
+                                line-height: 1;
+                                margin-bottom: 8px;
+                            }
+                            p {
+                                font-size: 15px;
+                                color: #fff;
+                                font-weight: 600;
+                                line-height: 1;
+                                margin-bottom: 18px;
+                            }
+                            span {
+                                font-weight: 600;
+                                line-height: 1;
+                            }
+                        }
+                    }
+                    .small-course {
+                        float: left;
+                        width: 784px;
+                        ul {
+                            li {
+                                height: 225px;
+                                width: 218px;
+                                float: left;
+                                a {
+                                    display: block;
+                                    width: 100%;
+                                    height: 100%;
+                                }
+                                .card {
+                                    width: 218px;
+                                    height: 139px;
+                                    position: relative;
+                                    overflow: hidden;
+                                    margin-bottom: 11px;
+                                    img {
+                                        width: 100%;
+                                        height: 100%;
+                                        object-fit: cover;
+                                    }
+                                    h3 {
+                                        position: absolute;
+                                        left: 16px;
+                                        top: 14px;
+                                        font-weight: 700;
+                                        font-size: 35px;
+                                        color: #fff;
+                                        z-index: 8;
+                                        line-height: 1;
+                                    }
+                                    i {
+                                        position: absolute;
+                                        left: 57px;
+                                        top: 31px;
+                                        color: #fff;
+                                        font-size: 11px;
+                                        z-index: 8;
+                                    }
+                                    .main-teacher-name {
+                                        position: absolute;
+                                        left: 0;
+                                        bottom: 0;
+                                        height: 34px;
+                                        line-height: 34px;
+                                        padding-left: 18px;
+                                        color: #fff;
+                                        z-index: 8;
+                                    }
+                                    .mask {
+                                        position: absolute;
+                                        left: 0;
+                                        top: 102px;
+                                        width: 100%;
+                                        height: 100%;
+                                        background: rgba(0, 0, 0, 0.4);
+                                        z-index: 2;
+                                    }
+                                    .mask.mask-fill {
+                                        top: 0px;
+                                    }
+                                }
+                                .course-descript {
+                                    padding-left: 8px;
+                                    p {
+                                        line-height: 23px;
+                                        font-size: 15px;
+                                        color: #333;
+                                        text-overflow: -o-ellipsis-lastline;
+                                        overflow: hidden;
+                                        text-overflow: ellipsis;
+                                        display: -webkit-box;
+                                        -webkit-line-clamp: 2;
+                                        -webkit-box-orient: vertical;
+                                    }
+                                    span {
+                                        display: block;
+                                        margin-top: 8px;
+                                        color: #a9a9a9;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .recorded-course-tabs2 {
+                padding: 40px 0 0 0px;
+                min-height: 750px;
+                display: none;
+                ul {
+                    li {
+                        float: left;
+                        padding-right: 25px;
+                        padding-bottom: 34px;
+                        position: relative;
+                        .course-status {
+                            position: absolute;
+                            left: -10px;
+                            top: 14px;
+                            width: 66px;
+                            height: 33px;
+                            line-height: 31px;
+                            z-index: 8; // padding-left: 8px;
+                            text-align: center;
+                            background: url("../../images/teacher/already-course-7688.png");
+                        }
+                        .course-status.finish {
+                            background: url("../../images/teacher/already-course-7687.png");
+                        }
+                        .picture-box {
+                            width: 215px;
+                            height: 137px;
+                            position: relative;
+                            img {
+                                width: 215px;
+                                height: 137px;
+                            }
+                            p {
+                                height: 34px;
+                                line-height: 34px;
+                                padding-left: 12px;
+                                color: #fff;
+                                position: absolute;
+                                left: 0px;
+                                bottom: 0px;
+                                width: 100%;
+                                background: rgba(0, 0, 0, 0.5);
+                            }
+                        }
+                        .course-descript {
+                            width: 215px;
+                            height: 82px;
+                            padding-top: 17px;
+                            padding-left: 17px;
+                            p {
+                                text-overflow: -o-ellipsis-lastline;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                                display: -webkit-box;
+                                -webkit-line-clamp: 2;
+                                -webkit-box-orient: vertical;
+                            }
+                            .time {
+                                padding-top: 14px;
+                                span {
+                                    color: #a1a1a1;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*search-page */
+
+.search-index-pege {
+    padding-bottom: 56px;
+    background: #f2f2f2;
+    padding-top: 40px;
+
+    .s-search-info-bar {
+        height: 61px;
+        margin-bottom: 10px;
+        line-height: 61px;
+        background: #fff;
+        padding-left: 14px;
+        .search-text-record {
+            float: left;
+            font-size: 16px;
+            i {
+                font-size: 23px;
+                color: #F15F45;
+            }
+        }
+        .s-tabs-btn {
+            float: left;
+            padding-left: 40px;
+            margin-bottom: 9px;
+            button {
+                position: relative;
+                cursor: pointer;
+                top: 16px;
+                float: left;
+                margin-right: 25px;
+                height: 32px;
+                line-height: 32px;
+                border: 1px solid #c1c1c1;
+                font-size: 12px;
+                color: #c1c1c1;
+                border-radius: 15px;
+                padding: 0 16px;
+            }
+            button.active {
+                color: #16B991;
+                border: 1px solid #16B991;
+            }
+        }
+    }
+    .s-search-content {
+        min-height: 900px;
+        background: #fff; // 搜索直播内容
+        .search-live-content {
+            .live-text {
+                height: 61px;
+                text-align: left;
+                padding-left: 60px;
+                background: #fff;
+                line-height: 61px;
+                font-size: 15px;
+                position: relative;
+                &:after {
+                    content: "";
+                    position: absolute;
+                    left: 23px;
+                    top: 22px;
+                    width: 24px;
+                    height: 16px;
+                    background: url("../../images/teacher/data-icon-8932.png") no-repeat;
+                }
+            }
+        }
+        .search-record-video-content {
+            .live-text {
+                &:after {
+                    width: 26px;
+                    height: 18px;
+                    background: url("../../images/teacher/record-icon-0909.png") no-repeat;
+                }
+            }
+        }
+        .search-teacher {
+            .live-text {
+                &:after {
+                    width: 17px;
+                    height: 21px;
+                    top: 18px;
+                    left: 31px;
+                    background: url("../../images/teacher/teacher-icon-1297.png") no-repeat;
+                }
+            }
+            .live-list {
+                ul {
+                    li {
+                        position: relative;
+                        .student-count {
+                            position: absolute;
+                            right: 17px;
+                            top: -6px;
+                            z-index: 2;
+                            background: #f15f45;
+                            color: #fff;
+                            text-align: center;
+                            height: 24px;
+                            line-height: 24px;
+                            padding: 0 11px;
+                            &:after {
+                                content: "";
+                                position: absolute;
+                                right: -8px;
+                                top: 0;
+                                width: 8px;
+                                height: 6px;
+                                z-index: 3;
+                                background: url("../../images/teacher/s_q_sjx-8980.png");
+                            }
+                        }
+                        .course-info {
+                            background: #f2f2f2;
+                            height: 77px;
+
+                            .row {
+                                width: 33.33%;
+                                float: left;
+                                text-align: center;
+                                span {
+                                    font-size: 13px;
+                                    color: #FF9900;
+                                }
+                                p {
+                                    color: #999999;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .no-found-search {
+        height: 1000px;
+        position: relative;
+        .no-found-content {
+            position: absolute;
+            left: 50%;
+            top: 122px;
+            transform: translateX(-70%);
+            img {
+                width: 210px;
+                height: 278px;
+                float: left;
+            }
+            .text {
+                position: relative;
+                left: 43px;
+                top: 27px;
+                height: 278px;
+                line-height: 278px;
+                float: left;
+                color: #999999;
+                i {
+
+                    font-size: 28px;
+                    color: #f15f45;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 学生课程首页 */
+
+.s-live-course {
+    background: #f2f2f2;
+    padding-top: 30px;
+    padding-bottom: 63px;
+    .live-course-contain {
+        background: #fff;
+        padding-top: 29px;
+        .tabhead {
+            // margin: 0 auto;
+            position: relative;
+            ul {
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                li {
+                    float: left;
+                    a {
+                        display: block;
+                        padding: 0 31px;
+                        border: 1px solid #02b78c;
+                        border-right: none;
+                        color: #02b78c;
+                        height: 40px;
+                        line-height: 38px;
+                        position: relative;
+                        .updata-icon {
+                            position: absolute;
+                            right: 9px;
+                            top: 12px; // padding: 4px 6px;
+                            width: 17px;
+                            height: 17px;
+                            text-align: center;
+                            line-height: 17px;
+                            background: #ff6600;
+                            color: #fff;
+                            border-radius: 50%;
+                            font-size: 12px;
+                        }
+                    }
+                }
+                li.active {
+                    a {
+                        background: #ccf1e8;
+                    }
+                }
+                .first-link {
+                    a {
+                        border-radius: 5px 0 0 5px;
+                    }
+                }
+                .last-link {
+                    a {
+                        border-radius: 0 5px 5px 0;
+                        border-right: 1px solid #02b78c;
+                    }
+                }
+            }
+        }
+    }
+    .course-list-contain {
+        background: #fff;
+        padding-bottom: 100px;
+        padding-top: 100px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 个人设置 */
+
+.s-m-banner {
+    height: 175px;
+    background: url("../../images/teacher/teacherInfor_top_bg.jpg");
+}
+
+.s-m-my-wrapper {
+    background: #f2f2f2;
+    padding-bottom: 60px;
+
+    .s-my-contain {
+        background: #fff;
+        position: relative;
+        top: -20px;
+        overflow: hidden;
+        .tabhead {
+            cursor: pointer;
+            z-index: 9;
+            height: 40px;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            margin-top: 29px;
+            .base-data {
+                cursor: pointer;
+                border-radius: 5px 0 0 5px;
+                border-right: none;
+            }
+            .safe-set {
+                border-radius: 0 5px 5px 0;
+            }
+            button {
+                cursor: pointer;
+                float: left;
+                height: 40px;
+                line-height: 40px;
+                padding: 0 37px;
+                border: 1px solid #02b78c;
+                color: #02b78c;
+            }
+            button.active {
+                background: #ccf1e8;
+            }
+        }
+        .tab-contain {
+            position: relative;
+            padding-top: 92px;
+            .tab {
+                .save-btn {
+                    padding-bottom: 57px;
+                    input {
+                        display: block;
+                        cursor: pointer;
+                        width: 179px;
+                        height: 50px;
+                        text-align: center;
+                        line-height: 50px;
+                        font-size: 18px;
+                        color: #fff;
+                        background: #02B78C;
+                        border-radius: 5px;
+                    }
+                }
+            }
+            .user-data {
+                padding-left: 186px;
+                padding-top: 30px;
+                .base-data {
+                    position: relative;
+                    .user-name {
+                        font-size: 19px;
+                        color: #02b78c;
+                        float: left;
+                        margin-right: 20px;
+                    }
+                    .user-id {
+                        line-height: 1;
+                        margin-top: 17px;
+                        padding-bottom: 34px;
+                        border-bottom: 1px dashed #e8e8e8;
+                    }
+                    .change-head-picture {
+                        position: relative;
+                        top: -3px;
+                        float: left;
+                        input {
+                            cursor: pointer;
+                            position: absolute;
+                            left: 0;
+                            top: 0;
+                            width: 69px;
+                            height: 27px;
+                            z-index: 5;
+                            opacity: 0;
+                            filter: alpha(opacity=0);
+                        }
+                        button {
+                            cursor: pointer;
+                            width: 69px;
+                            height: 27px;
+                            line-height: 27px;
+                            text-align: center;
+                            border: 1px solid #c1c1c1;
+                            border-radius: 5px;
+                        }
+                    }
+                    .preview-picture {
+                        position: absolute;
+                        left: -140px;
+                        top: -33px;
+                        img {
+                            width: 105px;
+                            height: 105px;
+                            border-radius: 50%;
+                            margin-bottom: 10px;
+                            object-fit: cover;
+                        }
+                        span {
+                            font-size: 12px;
+                            color: #c5c5c5;
+                        }
+                    }
+                }
+                .other-data {
+                    margin-bottom: 125px;
+                    .row {
+                        .caption {
+                            padding-top: 39px;
+                            padding-bottom: 14px;
+                            line-height: 1;
+                            font-size: 15px;
+                        }
+                        .select-school {
+                            position: relative;
+                            .school-contain {
+                                display: none;
+                                position: absolute;
+                                left: 0;
+                                top: 35px;
+                                border: 1px solid #e8e8e8;
+                                background: #fff;
+                                padding: 8px 0px;
+                                background: #fafafa;
+                                z-index: 8;
+                                overflow-x: auto;
+                                height: 204px;
+                                button {
+                                    width: 100%;
+                                    display: block;
+                                    padding: 12px 26px;
+                                }
+                                button:hover {
+                                    background-color: #ccf1e8;
+                                }
+                            }
+                            input {
+                                position: relative;
+                                height: 34px;
+                                border: 1px solid #e8e8e8;
+                                padding-left: 14px;
+                                background: #fafafa;
+                            }
+                            .c-school {
+                                display: inline-block;
+                                position: relative;
+                                cursor: pointer;
+                                &:before {
+                                    content: "";
+                                    position: absolute;
+                                    right: 15px;
+                                    top: 14px;
+                                    width: 9px;
+                                    height: 5px;
+                                    background: url("../../images/triangle.png") no-repeat;
+                                    z-index: 3;
+                                }
+                                input {
+                                    padding-right: 40px;
+                                    position: relative;
+                                }
+                            }
+                        }
+                        .select-sex {
+                            label {
+                                position: relative;
+                                padding-left: 22px;
+                                cursor: pointer;
+                                margin-right: 20px;
+                                input {
+                                    position: absolute;
+                                    cursor: pointer;
+                                    left: 0;
+                                    top: 0;
+                                    z-index: 9;
+                                    opacity: 0;
+                                    filter: alpha(opacity=0);
+                                }
+                                input:checked+i {
+                                    background: url("../../images/teacher/11_02.jpg");
+                                }
+                                i {
+                                    position: absolute;
+                                    left: 0;
+                                    top: 3px;
+                                    z-index: 2;
+                                    width: 15px;
+                                    height: 15px;
+                                    background: url("../../images/teacher/11_03.png");
+                                }
+                            }
+                        }
+                        .select-born-date {
+                            select {
+                                position: relative;
+                                height: 34px;
+                                border: 1px solid #e8e8e8;
+                                padding-left: 14px;
+                                background: #fafafa;
+                            }
+
+                            .select-year,
+                            .select-moon,
+                            .select-day {
+                                float: left;
+                                position: relative;
+                                margin-right: 9px;
+                                &:before {
+                                    content: "";
+                                    position: absolute;
+                                    right: 8px;
+                                    top: 14px;
+                                    width: 9px;
+                                    height: 5px;
+                                    background: url("../../images/triangle.png") no-repeat;
+                                    z-index: 3;
+                                }
+                            }
+                            select {
+                                // padding-right: 24px;
+                                position: relative;
+                            }
+                        }
+                    }
+                }
+            }
+            .tab-2 {
+                display: none;
+                height: 630px;
+                .modify-password {
+                    padding-top: 20px;
+                    z-index: 8;
+                    position: absolute;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    .row {
+                        input {
+                            margin-top: 13px;
+                            margin-bottom: 29px;
+                            height: 34px;
+                            width: 223px;
+                            line-height: 34px;
+                            padding-left: 14px;
+                            border: 1px solid #e8e8e8;
+                            background: #fafafa;
+                        }
+                    }
+                }
+                .save-btn {
+                    padding-bottom: 57px;
+                    input {
+                        position: absolute;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        bottom: 57px;
+                        display: block;
+                        cursor: pointer;
+                        width: 179px;
+                        height: 50px;
+                        text-align: center;
+                        line-height: 50px;
+                        font-size: 18px;
+                        color: #fff;
+                        background: #02B78C;
+                        border-radius: 5px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 关于我们 */
+
+.z-zx-about-wrapper {
+    // padding-top: 124px;
+    height: 100%;
+    width: 100%;
+    .zr_header {
+        background: #fff;
+        position: absolute;
+        left: 50%;
+        top: 0;
+        transform: translatex(-50%);
+    }
+    .about-contain {
+        .swiper-container {
+            .swiper-wrapper {
+                // height: 975px;
+                position: relative;
+                .swiper-slide {
+                    background-size: cover;
+                    position: relative;
+                    .brief-introduction {
+                        position: absolute;
+                        left: 50%;
+                        top: 80px;
+                        transform: translateX(-50%);
+                        .sub_title {
+                            position: relative;
+                            p {
+                                font-size: 45px;
+                                color: #21a281;
+                                padding-left: 65px;
+                                letter-spacing: 9px;
+                            }
+                            i {
+                                position: absolute;
+                                left: 0;
+                                top: 50%;
+                                width: 20px;
+                                height: 20px;
+                                background: #21a281;
+                                border-radius: 50%;
+                                transform: translateY(-50%);
+                            }
+                        }
+                        .explain {
+                            margin-top: 30px;
+                            p {
+                                color: #2e7e6d;
+                                font-size: 16px;
+                                line-height: 1.8;
+                            }
+                        }
+                    }
+                }
+
+                .swiper-slide1 {
+                    width: 100%;
+                    height: 100%;
+                    margin-top: 124px;
+                    background: url("../../images/about/about-screen-1.jpg") no-repeat center 0; // background:#fafafa;
+                    .brief-introduction {
+                        top: 170px!important;
+                    }
+                }
+                .swiper-slide2 {
+                    background: url("../../images/about/about-screen-2.jpg") no-repeat center 0;
+                    background-size: cover;
+                    .brief-introduction {
+                        .sub_title {
+                            i {
+                                background-color: #fff;
+                            }
+                            p {
+                                color: #fff;
+                                letter-spacing: 11px;
+                            }
+                        }
+                        .explain {
+                            p {
+                                color: #fff;
+                            }
+                        }
+                    }
+                }
+                .swiper-slide3 {
+                    background: url("../../images/about/about-screen-3.jpg") no-repeat center 0;
+                    background-size: cover;
+                    .brief-introduction {
+                        .sub_title {
+                            i {
+                                background-color: #34b191;
+                            }
+                            p {
+                                // color: #fff;
+                                color: #34b191;
+                                letter-spacing: 3px;
+                            }
+                        }
+                        .explain {
+                            p {
+                                // color: #fff;
+                                font-size: 14px;
+                                color: #02b78c;
+                            }
+                        }
+                    }
+                }
+                .swiper-slide4 {
+                    background: url("../../images/about/about-screen-4.jpg") no-repeat center 0;
+                    background-size: cover;
+                    .brief-introduction {
+                        .sub_title {
+                            i {
+                                background-color: #fff;
+                            }
+                            p {
+                                color: #fff;
+                                letter-spacing: 2px;
+                            }
+                        }
+                        .explain {
+                            p {
+                                color: #fff;
+                                font-size: 14px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 帮助中心 */
+
+.z-zx-help-wrapper {
+    min-height: 860px;
+    background: #f2f2f2;
+    .help-contain {
+        background: #f2f2f2;
+        height: 100%;
+        padding-top: 31px;
+        .main-left {
+            width: 220px;
+            background: #fff;
+            height: 760px;
+            float: left;
+            margin-right: 10px;
+            font-size: 16px;
+            ul {
+                li {
+                    a {
+                        height: 56px;
+                        line-height: 56px;
+                        text-align: center;
+                    }
+                    a.active {
+                        background: #02B78C;
+                        color: #fff;
+                    }
+                }
+            }
+        }
+        .main-right.item {
+            display: none;
+        }
+        .main-right.item:first-child {
+            display: block;
+        }
+        .main-right {
+            float: left;
+            width: 970px;
+            overflow-y: auto;
+            height: 760px;
+            background: #fff;
+            border: 1px solid #e8e8e8;
+            .header {
+                padding-left: 23px;
+                background: #fff;
+                border-bottom: 1px solid #e8e8e8;
+                a {
+                    height: 58px;
+                    line-height: 58px;
+                    display: inline-block;
+                }
+                span {
+                    height: 58px;
+                    line-height: 58px;
+                }
+            }
+            .list {
+                ul {
+                    li {
+                        a {
+                            padding-left: 23px;
+                            height: 58px;
+                            line-height: 58px;
+                            border-bottom: 1px dashed #e8e8e8;
+                        }
+                    }
+                }
+            }
+            .forgot-password {
+                height: 60px;
+                position: relative;
+                h3 {
+                    font-size: 22px;
+                    text-align: center;
+                    padding-top: 29px;
+                }
+                .time {
+                    position: absolute;
+                    right: 29px;
+                    top: 34px;
+                    z-index: 2;
+                    span {
+                        color: #999999;
+                        font-size: 11px;
+                        &:first-child {
+                            margin-right: 10px;
+                        }
+                    }
+                }
+                .contain {
+                    padding-left: 50px;
+                    p {
+                        line-height: 2;
+                    }
+                    .method {
+                        color: #faa02a;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 忘记密码页面 */
+
+.x-xs-forget-password {
+    .fpw-wrapper {
+        background: #f8f8f8;
+        overflow: hidden;
+        .contain {
+            margin-top: 60px;
+            background: #fff;
+            height: 680px;
+            border: 1px solid #e8e8e8;
+            margin-bottom: 170px;
+            .pwdForm {
+                width: 100%;
+                .text-input {
+                    display: block;
+                    margin: 0 auto;
+                    width: 562px;
+                    height: 62px;
+                    line-height: 62px;
+                    padding-left: 21px;
+                    border-radius: 5px;
+                    border: 1px solid #e8e8e8;
+                    background: #f2f2f2;
+                    font-size: 17px;
+                }
+            }
+            .accountForm {
+                padding-top: 65px;
+                .forget-account {
+                    text-align: center;
+                    margin-top: 30px;
+                    color: #fc8f9a;
+                    font-size: 13px;
+                    position: relative;
+                    left: -245px;
+                    margin-bottom: 262px;
+                }
+            }
+            .selectForm {
+                padding-top: 180px;
+                .tab {
+                    position: relative;
+                    left: 80px;
+                    margin-bottom: 100px;
+                    .column {
+                        display: inline-block;
+                        text-align: center;
+                        margin-left: 195px;
+                        img {
+                            width: 206px;
+                            height: 183px;
+                            cursor: pointer;
+                        }
+                        label {
+                            cursor: pointer;
+                            position: relative;
+                            left: 10px;
+                            top: 10px;
+                            i {
+                                position: relative;
+                                margin-right: 5px;
+                                top: 5px;
+                                display: inline-block;
+                                width: 22px;
+                                height: 22px;
+                                background: url("../../images/other/2017072814302r78.png");
+                            }
+                            input:checked+i {
+                                background: url("../../images/other/2017072814302r48.png");
+                            }
+                        }
+                    }
+                }
+            }
+            .phoneForm {
+                padding-top: 65px;
+                .row {
+                    text-align: center;
+                    padding-top: 31px;
+                    .code-input {
+                        position: relative;
+                        left: -8px;
+                        display: inline-block;
+                        width: 332px;
+                    }
+                    .send-code-btn {
+                        cursor: pointer;
+                        position: relative;
+                        left: 10px;
+                        top: 3px;
+                        display: inline-block;
+                        width: 206px;
+                        height: 60px;
+                        line-height: 60px;
+                        text-align: center;
+                        color: #fff;
+                        background: #02b78c;
+                        font-size: 23px;
+                        text-align: center;
+                        border-radius: 5px;
+                    }
+                }
+                .go-email-link {
+                    display: none;
+                    position: relative;
+                    left: 319px;
+                    top: 42px;
+                    display: none;
+                    span {
+                        float: left;
+                        color: #999999;
+                        font-size: 16px;
+                    }
+                    a {
+                        float: left;
+                        color: #25bc94;
+                        font-size: 16px;
+                    }
+                }
+                .next-step-btn {
+                    margin-top: 118px;
+                }
+            }
+        }
+        .next-step-btn {
+            display: block;
+            text-align: center;
+            margin: 0 auto;
+            height: 70px;
+            line-height: 70px;
+            font-size: 22px;
+            color: #fff;
+            background: #02b78c;
+            padding: 0 107px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    }
+}
+
+.z-zx-contact-wrapper {
+    .contact-contain {
+        background-color: #fff;
+        border: 1px solid #d9d9d9;
+        padding: 40px 0 0 38px;
+        height: 811px;
+        position: relative;
+        .top {
+            margin-bottom: 37px;
+            .text1 {
+                display: inline-block;
+                width: 155px;
+                height: 37px;
+                background: url("../../images/student/2017090123.png");
+            }
+            .text2 {
+                display: inline-block;
+                width: 125px;
+                height: 22px;
+                margin-left: 22px;
+                background: url("../../images/student/2017090124.png");
+            }
+        }
+        .company-address {
+            .address1 {
+                margin-bottom: 14px;
+            }
+            p {
+                line-height: 1.8;
+            }
+            .text1 {
+                font-size: 18px;
+            }
+            .text2 {
+                font-size: 15px;
+                color: #999999;
+                padding-bottom: 32px;
+            }
+            .line {
+                border-bottom: 1px dashed #d9d9d9;
+                width: 361px;
+            }
+        }
+        .icon {
+            position: absolute;
+            width: 261px;
+            height: 369px;
+            bottom: 219px;
+            right: 159px;
+            background: url("../../images/student/2017090125.png");
+        }
+    }
+}

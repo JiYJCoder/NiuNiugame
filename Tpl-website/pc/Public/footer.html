@@ -1,0 +1,31 @@
+<footer class="zr_footer">
+    <div class="zr_layout clearfix">
+        <div class="zr_footer_l fl">
+            <div class="logo"></div>
+            <div class="siteinfo">
+                <div class="phone clearfix">
+                    <i class="phoneIcon fl"></i>
+                    <div class='fl phone_number'>
+                        <span>{$SET_CONFIG['CONTACT_TEL']}</span>
+                        <span>{$SET_CONFIG['SERVER_TIME']}</span>
+                    </div>
+                    <input class="fl qq_server" type="button" value="">
+                </div>
+            </div>
+        </div>
+        <div class="f_line fl"></div>
+        <div class="zr_footer_r fl">
+            <div class=" two_dimension_code ">
+                <img src="{$SET_CONFIG['WEB_CODE']}" alt="">
+            </div>
+            <div class="copyright clearfix">
+                <div class="copyright_text">
+                    <a href="{:U('content/about')}">关于我们</a>
+                    <a href="{:U('content/contact')}">联系我们</a>
+                    <a href="{:U('content/help')}">帮助中心</a>
+                </div>
+                <div class="copyright_text2">{$SET_CONFIG['WEB_ICP']}</div>
+            </div>
+        </div>
+    </div>
+</footer>

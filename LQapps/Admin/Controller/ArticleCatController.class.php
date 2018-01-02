@@ -25,7 +25,7 @@ class ArticleCatController extends PublicController{
     
 	//列表页
     public function index() {
-		if($this->getSafeData('clearcache')){$this->C_D->lqCacheData(1);}		
+		if($this->getSafeData('clearcache')){$this->C_D->lqCacheData(1);}
 		//首页设置
 		$page_title=array('no'=>L("LIST_NO")."/".L("LIST_ID"),'zc_caption'=>'节点结构','is_index'=>'首页推送','zn_sort'=>L("LIST_SOTR"),'status'=>L("LIST_STAYUS"),'os'=>L("LIST_OS")."(采集/复制/转移/编辑/审核/删除)");
 		$page_config = array(
