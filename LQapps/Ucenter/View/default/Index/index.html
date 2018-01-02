@@ -1,0 +1,155 @@
+<include file="Public:header" />
+
+<div class="col-xs-12 col-sm-9 col-lg-10">
+
+  <div class="row">
+	<div class="col-sm-6 common-search-btn">
+        	<a class="btn btn-primary" href="" title="刷新本页"> <i class="fa fa-refresh"></i> 刷新本页 </a>       
+	</div>
+	<div class="col-sm-6" style="float:right;text-align:right;padding:0;margin:0px;">{$sys_current}</div>
+  </div>  
+  
+  
+	<if condition="$login_member_info.zl_role eq 6"> 
+  	<p style="font-size:3rem; text-align:center; margin:4rem auto 5rem;">尊敬的用户，您好！欢迎使用狸想家 - 银行贷款数据管理系统</p>
+    
+    <div class="panel panel-default">
+        <div class="panel-heading">装修贷数据汇总(月度)
+        <a class="text-danger" href="/do?g=ucenter&m=loan&a=index">查看更多</a>
+        </div>
+        <div class="panel-body">
+            <div class="pull-right">
+                <div class="checkbox" id="loan_apply">
+                    <label style="color:#95c000;"><input checked type="checkbox"> 成功</label>&nbsp;
+                    <label style="color:#cccccc;"><input checked type="checkbox"> 失败</label>&nbsp;
+                    <label style="color:#c00000;"><input type="checkbox"> 总量</label>&nbsp;
+                </div>
+            </div>
+            <div style="margin-top:20px">
+                <canvas id="myChartLoanApply" width="1200" height="400"></canvas>
+            </div>
+        </div>
+    </div>
+	<script>
+        require(['chart', 'daterangepicker'], function(c) {
+            var chart_loan_apply = null;
+            var chart_datasets_loan_apply = null;
+            var templates_loan_apply = {
+                flow1: {
+                    label: '成功',
+                    fillColor : "rgba(149,192,0,0.1)",
+                    strokeColor : "rgba(149,192,0,1)",
+                    pointColor : "rgba(149,192,0,1)",
+                    pointStrokeColor : "#fff",
+                    pointHighlightFill : "#fff",
+                    pointHighlightStroke : "rgba(149,192,0,1)",
+                },
+                flow2: {
+                    label: '失败',
+                    fillColor : "rgba(204,204,204,0.1)",
+                    strokeColor : "rgba(204,204,204,1)",
+                    pointColor : "rgba(204,204,204,1)",
+                    pointStrokeColor : "#fff",
+                    pointHighlightFill : "#fff",
+                    pointHighlightStroke : "rgba(204,204,204,1)",
+                },
+                flow3: {
+                    label: '总量',
+                    fillColor : "rgba(192,0,0,0.1)",
+                    strokeColor : "rgba(192,0,0,1)",
+                    pointColor : "rgba(192,0,0,1)",
+                    pointStrokeColor : "#fff",
+                    pointHighlightFill : "#fff",
+                    pointHighlightStroke : "rgba(192,0,0,1)",
+                }			
+            };
+    
+            function refreshData() {
+                if(!chart_loan_apply || !chart_datasets_loan_apply) {
+                    return;
+                }
+                var visables = [];
+                var i = 0;
+                $('#loan_apply input[type="checkbox"]').each(function(){
+                    if($(this).attr('checked')) {
+                        visables.push(i);
+                    }
+                    i++;
+                });
+                var ds = [];
+                $.each(visables, function(){
+                    var o = chart_datasets_loan_apply[this];
+                    ds.push(o);
+                });
+                chart_loan_apply.datasets = ds;
+                chart_loan_apply.update();
+            }
+    
+            var url = '{:U("Index/ajaxSearch")}';
+            $.post(url, function(data){
+                //关注指数详解
+                var datasets = data.datasets;
+                if(!chart_loan_apply) {
+                    var label = data.label;
+                    var ds = $.extend(true, {}, templates_loan_apply);
+                    ds.flow1.data = datasets.success;
+                    ds.flow2.data = datasets.fail;
+                    ds.flow3.data = datasets.total;
+                    var lineChartData = {
+                        labels : label,
+                        datasets : [ds.flow1, ds.flow2, ds.flow3]
+                    };
+                    var ctx = document.getElementById("myChartLoanApply").getContext("2d");
+                    chart_loan_apply = new Chart(ctx).Line(lineChartData, {
+                        responsive: true
+                    });
+                    chart_datasets_loan_apply = $.extend(true, {}, chart_loan_apply.datasets);
+                }
+                refreshData();
+            });
+    
+            $('#loan_apply input[type="checkbox"]').on('click', function(){
+                $(this).attr('checked', !$(this).attr('checked'))
+                refreshData();
+            });
+        });
+    </script>   
+     
+	<else/>
+  	<p style="font-size:3rem;text-align:center;margin:4rem auto 5rem;">尊敬的用户，您好！欢迎使用狸想家 - 设计师数据管理系统</p>
+    
+    
+    <div class="panel panel-default">
+        <div class="panel-heading">我的作品</div>
+        <div class="panel-body">
+ 			<div class="pull-right">
+                <div class="checkbox" id="loan_apply">
+       			 <a style="color:#95c000;" href="/do?g=ucenter&m=works&a=index">已审核</a>&nbsp;|&nbsp;<a style="color:#666666;" href="/do?g=ucenter&m=works&a=index0">未审核</a>
+                </div>
+            </div>       
+            <div style="margin-top:20px">
+                <canvas id="myChartWorks" width="1200" height="400"></canvas>
+            </div>
+        </div>
+    </div>
+	<script>
+        require(['chart', 'daterangepicker'], function(c) {
+            var url = '{:U("Index/ajaxSearch")}';
+            $.post(url, function(data){
+				var ctx = document.getElementById("myChartWorks").getContext("2d");
+				chart_hd_order = new Chart(ctx).Pie(data,{responsive: true});
+            });
+        });
+    </script>       
+	</if>    
+  
+  
+  
+
+
+
+
+  
+</div>
+
+<include file="Public:footer" /> 

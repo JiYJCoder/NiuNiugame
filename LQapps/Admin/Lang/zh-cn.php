@@ -2,12 +2,11 @@
 return array(
 		//问候
 		'ADMIN_HELLO'=>'你好,',
-		'ADMIN_TITLE'=>'孜尔教育后台管理系统',
+		'ADMIN_TITLE'=>'多人牛牛房主游戏',
 		'ADMIN_HOME'=>'系统首页',
 		'ADMIN_DESKTOP'=>'系统桌面',
-		'PROJECT_NAME'=>'孜尔教育',
-		'PROJECT_TEAM'=>'孜尔教育',
-        'PROJECT_COPYRIGHT'=>'v1.0 &copy; 2017-2018 <a href="http://www.zier21.com/" target="_blank">www.zier21.com</a>',
+		'PROJECT_NAME'=>'多人牛牛房主游戏',
+		'PROJECT_TEAM'=>'多人牛牛房主游戏',
 		
 		//按钮s
 		'BUTTON_ADD'=>'添加',
@@ -77,13 +76,11 @@ return array(
 		'LABEL_OS_UPCLASS'=>'上一级',
 		'LABEL_OS_DOWNCLASS'=>'下一级',
 		'LABEL_OS_MODPASS'=>'修改密码',
-		'LABEL_OS_AUTH'=>'资料认证',
 		'LABEL_OS_SETPOP'=>'设置权限',
 		'LABEL_NULL_RECORD'=>'没数据记录...',
 		'LABEL_OS_INFO'=>'查看详细信息',
 		'LABEL_TOP_FID'=>'顶级',
 		'LABEL_SET_RELATION'=>'设置相关文章',
-		'LABEL_RELATION'=>'查看相关课节',
 		'LABEL_AUTH_LOGIN'=>'授权登录',
         //页面e		
         

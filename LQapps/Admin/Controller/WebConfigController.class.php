@@ -49,7 +49,6 @@ class WebConfigController extends PublicController{
 			$config_form = array();
 			$comment =  array();
 			$list = F('web_config','',COMMON_ARRAY);
-
 			foreach ($list as $lnKey => $laValue) {
 			$config_form["tab_title"][$lnKey+1] = $laValue["zc_label"];
 			
@@ -99,7 +98,7 @@ class WebConfigController extends PublicController{
 			$config_form[$form_max]=array(array('editMsg', 'editMsg', "前端引用",0,'{"required":"0","dataType":"","dataLength":"","readonly":1,"disabled":0,"rows":"20"}'),);
 			$Form=new Form($config_form,$form_array,$comment);
 			$this->assign("LQFdata",$Form->createHtml());//表单数据
-
+			
 			$lcdisplay='config';//引用模板
 			$this->display($lcdisplay);
 		}

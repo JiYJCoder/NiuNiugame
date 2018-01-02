@@ -1,6 +1,8 @@
 <?php
 /*
  * 通用配置文件
+ * Author：国雾院theone（438675036@qq.com）
+ * Date:2013-06-27
  * 凡树状结构表都添加 class 级别字段  作用于树状结构显示
  */
 $config_array = array(
@@ -14,7 +16,7 @@ $config_array = array(
     'APP_DOMAIN_SUFFIX' => '', // 域名后缀 如果是com.cn net.cn 之类的后缀必须设置    
     'ACTION_SUFFIX' => '', // 操作方法后缀
     'MULTI_MODULE' => true, // 是否允许多模块 如果为false 则必须设置 DEFAULT_MODULE
-    'MODULE_DENY_LIST' => array('Common', 'Attachment', 'User', 'Member', 'Video'), // 设置禁止访问的模块列表
+    'MODULE_DENY_LIST' => array('Common', 'Attachment', 'User', 'Member'), // 设置禁止访问的模块列表
     'CONTROLLER_LEVEL' => 1, //多级控制器
     'APP_AUTOLOAD_LAYER' => 'Controller,Model', // 自动加载的应用类库层 关闭APP_USE_NAMESPACE后有效
     'APP_AUTOLOAD_PATH' => '', // 自动加载的路径 关闭APP_USE_NAMESPACE后有效
@@ -22,8 +24,8 @@ $config_array = array(
     //默认设定
     'APP_GROUP_LIST' => 'Api,Admin',
     'DEFAULT_GROUP' => 'Api',
-    'MODULE_ALLOW_LIST' => array('Admin', 'Ucenter', 'Notify', 'Api'),
-    'DEFAULT_MODULE' => 'Home',  // 默认模块
+    'MODULE_ALLOW_LIST' => array('Api', 'Admin', 'Ucenter'),
+    'DEFAULT_MODULE' => 'Api',  // 默认模块
     'DEFAULT_CONTROLLER' => 'Index', // 默认控制器名称
     'DEFAULT_ACTION' => 'index', // 默认操作名称
     'DEFAULT_M_LAYER' => 'Model', // 默认的模型层名称
@@ -33,7 +35,7 @@ $config_array = array(
     'DEFAULT_AJAX_RETURN' => 'JSON',  // 默认AJAX 数据返回格式,可选JSON XML ...
     'DEFAULT_JSONP_HANDLER' => 'jsonpReturn', // 默认JSONP格式返回的处理方法
     'DEFAULT_FILTER' => 'htmlspecialchars', // 默认参数过滤方法 用于I函数...
-    'EMAIL' => '532243346@qq.com',
+    'EMAIL' => '438675036@qq.com',
 
     //Cookie设置
     'COOKIE_EXPIRE' => 0,    // Cookie有效期
@@ -55,7 +57,6 @@ $config_array = array(
 
 
     // 数据库配置s
-
     'DB_FIELDS_CACHE' => true,        // 启用字段缓存
     'DB_CHARSET' => 'utf8',      // 数据库编码默认采用utf8
     'DB_DEPLOY_TYPE' => 1, // 数据库部署方式:0 集中式(单一服务器),1 分布式(主从服务器)
@@ -68,7 +69,7 @@ $config_array = array(
     /* 数据缓存设置 */
     'SHOW_PAGE_TRACE' => FALSE,
     'S_PREFIX' => '_', //缓存分格
-    'DATA_CACHE_TIME' => 3600 * 24, // 数据缓存有效期 0表示永久缓存
+    'DATA_CACHE_TIME' => 3600, // 数据缓存有效期 0表示永久缓存
     'DATA_CACHE_COMPRESS' => false, // 数据缓存是否压缩缓存
     'DATA_CACHE_CHECK' => false, // 数据缓存是否校验缓存
     'DATA_CACHE_PREFIX' => '', // 缓存前缀
@@ -81,15 +82,15 @@ $config_array = array(
 
 
     /* 错误设置 */
-    'ERROR_MESSAGE' => '页面错误！请稍后再试。强我中国梦，由我做起', //错误显示信息,非调试模式有效
-    'ERROR_PAGE' => '/404.php', // 错误定向页面
+    'ERROR_MESSAGE' => '页面错误！请稍后再试。强我中国梦，由我做起---国雾院theone。', //错误显示信息,非调试模式有效
+    'ERROR_PAGE' => '/404.html', // 错误定向页面
     'SHOW_ERROR_MSG' => true, // 显示错误信息
     'TRACE_MAX_RECORD' => 100, // 每个级别的错误信息 最大记录数
 
     /* 日志设置 */
     'LOG_RECORD' => true,// 默认不记录日志
     'LOG_TYPE' => 'File', // 日志记录类型 默认为文件方式
-    'LOG_LEVEL' => 'ERR', // 允许记录的日志级别
+    'LOG_LEVEL' => 'EMERG,ALERT,CRIT,ERR', // 允许记录的日志级别
     'LOG_FILE_SIZE' => 2097152, // 日志文件大小限制
     'LOG_EXCEPTION_RECORD' => true, // 是否记录异常信息日志
 
@@ -169,9 +170,9 @@ $config_array = array(
 
     /* 开发人员相关信息 */
     'AUTHOR_INFO' => array(
-        'author' => 'LittleHe',
+        'author' => 'Little',
         'author_email' => '532243346@qq.com',
-        'author_phone' => '13631479553',
+        'author_phone' => '13425647971',
     ),
 
     //微信配置
@@ -186,49 +187,16 @@ $config_array = array(
         'debug' => false,
     ),
 
-//	视频接口设置
-    'ALI_API' => array(
-        'AccessKeyId' => 'RcPlKGWq9M1JjgDk',////access key
-        'AccessKeySecret' => 'gi2uhQGRg9Ju343f9en6sb9VmuG34g',/////access secret
-        'Live_Version' => '2016-11-01',/////视频直播版本号
-        'Vod_Version' => '2017-03-21',/////视频点播版本号
-        'Format' => "JSON",/////格式
-        'videoHost' => 'rtmp://video-center.alivecdn.com',               //推流域名
-        'appName' => 'zier21live',///app应用名
-        'privateKey' => 'zier21abc',/////鉴权
-        'vhost' => 'live.zier21.com',/////加速域名
-        'apiLiveDomain' => 'live.aliyuncs.com', /////api接口请求地址
-        'apiVodDomain' => 'vod.cn-shanghai.aliyuncs.com', /////api接口请求地址
-        'SignatureMethod' => 'HMAC-SHA1',///签名方式
-        'SignatureNonce' => rand(100000, 999999),////唯一随机数
-        'SignatureVersion' => '1.0',//签名算法版本
-        'Credential' => 'GET',/////数据提交方式
-        'expireTime' => 3600 * 24, ////直播地址有效时间
-        'endpoint' => 'oss-cn-shanghai.aliyuncs.com',/////老师附件上传endpoint
-        'bucket' => 'live-upload', /////oss存储bucket
-        'replay' => 'http://zier21-in.oss-cn-shanghai.aliyuncs.com/', // 直播视频回放地址
-        'push_url_first' => 'rtmp://video-center.alivecdn.com/zier21live', // 推流地址前缀
-    ),
 
-    ////阿里大于短信
-    'AliSMS' => array(
-        'key' => '24530627',//AppID(应用ID)
-        'secret' => 'c63579ad6eaf829cc6aaba4e4b2dac8c',//AppSecret(应用密钥)
-        'sign_name' => '孜尔直播',
-        'debug' => false,
-    ),
-    ////成长api接口地址
-    'API_GROW_URL' => 'http://www.zier365.com',
-
-    'SYSTEM_SEO_TITLE' => '孜尔教育',
-    'SYSTEM_SEO_COPYRIGHT' => '&copy; Copyright 2013-2020 孜尔教育',
-    'WEB_SYS_ITEMS_NAME' => '孜尔教育平台',//平台名称
+    'SYSTEM_SEO_TITLE' => '游戏科技',
+    'SYSTEM_SEO_COPYRIGHT' => '&copy; Copyright 2013-2020 游戏科技',
+    'WEB_SYS_ITEMS_NAME' => '游戏科技',//平台名称
     'WEB_SYS_DOMAIN' => 'http://www.qq-tech.cn/',//域名
     'WEB_SYS_TRYLOGINTIMES' => 3,//最大尝试登陆次数
     'WEB_SYS_TRYLOGINAFTER' => 3600 * 1,//超出登陆次数多少秒后再可以尝试
     'SYS_ALLOW_BACKUPDATA' => 1,//允许后台 数据库备份/修复 操作
     'SYS_ALLOW_MPORTDATA' => 0,//允许后台 数据库导入 操作
-    'SYS_ENCRYPT_PWD' => '!zier21@pwd2017#',/////系统自定义加密串
+
     //网站公共数组s
     'ROOT_CLASS' => array('根', '一级', '二级', '三级', '四级', '五级', '六级', '七级'), //相对于根级别
     'ARRAY_TARGET' => array("_self" => "_self", '_blank' => '_blank', "_parent" => "_parent", "_top" => "_top", "openWin" => "openWin"), //TARGET目标
@@ -278,12 +246,6 @@ $config_array = array(
         1 => '有',
     ),
 
-    //是否审核
-    'HAVE_CHECKED' => array(
-        0 => '审核不通过',
-        1 => '审核通过',
-    ),
-
     //微信公众账号分类
     'WEIXIN_TYPE' => array(
         0 => '普通订阅号',
@@ -314,16 +276,13 @@ $config_array = array(
     '_SEX' => array(0 => '保密', 1 => '男', 2 => '女'),
     //广告位置类别
     'AD_POSITION_TYPE' => array(0 => '文字', 1 => '图文'),
-
-
     //会员角色
-    'MEMBER_ROLE' => array(1 => '学生', 2 => '老师'),
+    'MEMBER_ROLE' => array(1 => '普通会员'),
     //会员日志操作
     'LQ_MEMBER_LOG' => array(
         'operation' => '会员操作',
         'register' => '会员注册并登录',
         'login' => '会员登陆',
-        'auth' => '会员资料认证',
         'login_out' => '会员登出',
         'info_bind' => '会员完善绑定',
         'add' => '添加数据',
@@ -335,35 +294,19 @@ $config_array = array(
         'op_label' => '更改标题',
         'op_delete' => '单记录删除',
         'op_delete_checkbox' => '多记录删除',
-        'op_favorite' => '收藏视频',
-        'op_del_favorite' => '删除收藏视频',
-        'op_enroll' => '报名',
-        'complete_live' => '完善直播课程',
-        'sq_broadcast' => '申请录播',
-        'sq_live' => '申请直播',
-        'cancel_lesson' => "取消课程",
-        'sqbroadcast_sub' => '视频录播信息提交',
-        'sqbroadcast_change' => '视频录播信息修改',
-        'sqlive_change' => '课程修改',
-        'sqlive_complete' => '课程完善',
-        'sqlive_sub' => '课程申请',
-        'find_password' => '找回密码',
-        'find_account' => '查询账号是否存在'
+        'article_agrees' => '文章点赞',
+        'article_view' => '文章查看',
+        'upload_image' => '上传图片'
     ),
     //会员积分值
     'LQ_MEMBER_INTEGRATION' => array(
         'register' => '5',//会员注册并登录
         'sign_in' => '5',//会员签到
     ),
-    //会员喜欢夹
-    'MEMBER_FAVORITE' => array(
-        1 => '直播',//直播
-        2 => '点播'//点播
-    ),
 
     //ajax 最大请求次数，否则要间隔 INTERVAL
     'REQUEST_INTERVAL' => 10,//间隔请求时间(以秒杀计)
-    'REQUEST_SESSION' => array('loan_apply' => 3, 'hd_application' => 50, 'article_view' => 1, 'product_view' => 1, 'works_view' => 1, 'works_agrees' => 1, 'android_update' => 1, 'edit_member' => 10, 'edit_pass' => 3, 'upload_image' => 50, 'subscribe_designer' => 0, 'hd_diary_detail' => 10,'help' => 10),
+    'REQUEST_SESSION' => array('loan_apply' => 3, 'hd_application' => 50, 'article_view' => 1, 'product_view' => 1, 'works_view' => 1, 'works_agrees' => 1, 'android_update' => 1, 'edit_member' => 10, 'edit_pass' => 3, 'upload_image' => 50, 'subscribe_designer' => 0, 'hd_diary_detail' => 10),
 
     //会员等级:key/等级名称/区间最小分值/区间最大分值/购买折购
     'MEMBER_RANK' => array(
@@ -372,35 +315,26 @@ $config_array = array(
         3 => array('rank_name' => '金尊', 'min_points' => 2800, 'max_points' => 5799, 'discount' => 0.95),
         4 => array('rank_name' => '至尊', 'min_points' => 5800, 'max_points' => 99999999, 'discount' => 0.9)
     ),
-    //视频直播 点播状态
-    'LIVE_STATUS' => array(1 => "完结", 2 => "管理员下架", 3 => "审核未通过", 4 => "审核中", 5 => "审核通过", 6 => "上线状态"),
-    'LESSON_STATUS' => array(1 => "未开始", 2 => "直播开始", 3 => "直播结束"),
-    'LESSON_APPLY_STATUS' => array(1 => "审核中", 2 => "通过审核", 3 => "审核不通过"),
-    'VOD_STATUS' => array(1 => "停止更新", 2 => "管理员下架", 3 => "审核未通过", 4 => "审核中", 5 => "审核通过", 6 => "上线状态"),
 
-    //接口文档分类
-    'API_DOCUMENT_TYPE' => array(
-        0 => "其他",
-        1 => "老师PC",
-        2 => "学生PC",
-        3 => "广告"
-    ),
     //指数
     'INDEX' => array(0 => '一般', 1 => '可以', 2 => '很好', 3 => '非常好'),
     //大写数字
     'CAPITAL_NUMBER' => array('零', '一', '二', '三', '四', '五', '六', '七', '八', '九'),
-    'CAPITAL_WEEK' => array('天', '一', '二', '三', '四', '五', '六'),
     //网站公共数组e
 
     //客户端每页显示数目
-    'API_PAGESIZE' => array('live_list' => 3, 'vod_list' => 3, 'article_list' => 10, 'course_list' => 10, 'live' => 10, 'search' => 8,'student_live' => 3,'teacher_detail_vod' => 2,'teacher_detail_live' => 10,'help' => 10),
+    'API_PAGESIZE' => array('works_list' => 10, 'article_list' => 10, 'product_list' => 10, 'designer_list' => 10, 'diary_list' => 10),
 
     //缩略图集合
     'INT_THUMB_SIZE' => array(
         'avatar' => array('width' => 120, 'height' => 120, "type" => 3),
-        'lesson_cat' => array('width' => 170, 'height' => 140, "type" => 3),
-        'live' => array('width' => 357, 'height' => 357, "type" => 3),
-        'vod' => array('width' => 140, 'height' => 140, "type" => 3),
+        'products_cat' => array('width' => 170, 'height' => 140, "type" => 3),
+        'products' => array('width' => 357, 'height' => 357, "type" => 1),
+        'product_brand' => array('width' => 140, 'height' => 140, "type" => 3),
+        'album' => array('width' => 750, 'height' => 500, "type" => 3),
+        'works' => array('width' => 357, 'height' => 357, "type" => 1),
+        'diary_list' => array('width' => 750, 'height' => 430, "type" => 3),
+        'diary_item' => array('width' => 226, 'height' => 226, "type" => 3),
         'article_list' => array('width' => 726, 'height' => 360, "type" => 3),
     ),
 
@@ -417,22 +351,11 @@ $config_array = array(
     'SPLIT_04' => "#-04-#",
     //**********ajax的字符串分格符***************
 
-
-    /////附件类型设置
-    'OSS_FILE' => array(
-        "doc" => array("doc", "docx"),
-        "mp3" => array("mp3"),
-        "zip" => array("zip", "rar"),
-        "pdf" => array("pdf"),
-        "jpg" => array('gif', 'jpg', 'jpeg', 'png'),
-        "avi" => array('swf', 'flv', 'wmv', 'mid', 'avi', 'mpg', 'mp4', 'asf', 'rm', 'rmvb')
-    ),
-
     //**********上传设置*****************************************************start
     'UPLOAD_EXT' => array(//上传格式
         'avatar' => array('gif', 'jpg', 'jpeg', 'png'),
         'brand' => array('gif', 'jpg', 'jpeg', 'png'),
-        'cert' => array('gif', 'jpg', 'jpeg', 'png'),
+        'works' => array('gif', 'jpg', 'jpeg', 'png'),
         'products' => array('gif', 'jpg', 'jpeg', 'png'),
         'images' => array('gif', 'jpg', 'jpeg', 'png'),
         'file' => array('doc', 'docx', 'xls', 'xlsx', 'ppt', 'pdf', 'txt', 'zip', 'rar', 'gz', 'bz2', 'gif', 'jpg', 'jpeg', 'png', 'bmp', 'swf', 'flv', 'mp3', 'wav', 'wma', 'wmv', 'mid', 'avi', 'mpg', 'asf', 'rm', 'rmvb', 'ico'),
@@ -454,7 +377,7 @@ $config_array = array(
         'list' => array(
             'avatar' => 'avatar/',
             'brand' => 'brand/',
-            'auth' => 'auth/',
+            'works' => 'works/',
             'products' => 'products/',
             'images' => 'images/',
             'file' => 'file/',
@@ -464,9 +387,9 @@ $config_array = array(
         ),
     ),
     'UPLOAD_MAX_SIZE' => array(//上传文件大小
-        'avatar' => 1024 * 1024 * 2,
+        'avatar' => 1024 * 1024 * 0.5,
         'brand' => 1024 * 1024 * 2,
-        'cert' => 1024 * 1024 * 5,
+        'works' => 1024 * 1024 * 2,
         'products' => 1024 * 1024 * 2,
         'images' => 1024 * 1024 * 5,
         'file' => 1024 * 1024 * 4,
@@ -476,16 +399,23 @@ $config_array = array(
         0 => "图片",
         1 => "文件"
     ),
-    //数据展示端口
-    'DATA_DISPLAY_PORT' => array(0 => '通用', 1 => '移动端', 2 => 'PC端'),
-
+    //接口文档分类
+    'API_DOCUMENT_TYPE' => array(
+        0 => "其他",
+        1 => "会员中心",
+        2 => "房卡",
+        3 => "房间",
+        4 => "充值",
+        5 => "聊天",
+    ),
+    //支付类型
+    'PAY_BUSINESS' => array(1 => '充值'),
 );
 
 //通用配置文件
 $key_load_dbconn = 1;
 $dbconn = APP_COMMON_PATH . "Conf/dbconn.php";//数据库配置
 $dbconn_config = file_exists($dbconn) ? include_once "$dbconn" : array();
-
 $config_array = array_merge($config_array, $dbconn_config);
 
 return $config_array;

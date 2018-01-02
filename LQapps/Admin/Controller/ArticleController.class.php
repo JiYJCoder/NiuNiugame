@@ -99,7 +99,7 @@ class ArticleController extends PublicController{
 				$sqlwhere_parameter.="";
 			}
 		}
-		if($search_content_array["open_time"] == 1&&$search_content_array["time_start"]&&$search_content_array["time_end"]){
+		if($search_content_array["open_time"]==1&&$search_content_array["time_start"]&&$search_content_array["time_end"]){
 				$ts=strtotime($search_content_array["time_start"]." 00:00:00");
 				$te=strtotime($search_content_array["time_end"]." 23:59:59");
 				$sqlwhere_parameter.=" and zd_send_time >=".$ts." and zd_send_time<=".$te;	

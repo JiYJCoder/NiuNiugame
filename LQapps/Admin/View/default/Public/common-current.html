@@ -11,11 +11,8 @@
             <label class="btn label-primary" title="{:L('PAGE_ADD')}"><i class="fa fa-plus"></i> {:L('PAGE_ADD')}</label>
         <elseif condition="ACTION_NAME eq 'edit'" />
 			<a class="btn btn-primary" href="{$edit_index_url}" title="{:L('PAGE_LIST')}"><i class="fa fa-list"></i> {:L('PAGE_LIST')}</a>
-            <label class="btn label-primary" title="{:L('PAGE_EDIT')}"><i class="fa fa-edit"></i> {:L('PAGE_EDIT')}</label>
-            <elseif condition="ACTION_NAME eq 'auth'" />
-            <a class="btn btn-primary" href="{:U('index')}" title="{:L('LABEL_OS_AUTH')}"><i class="fa fa-list"></i> {:L('PAGE_LIST')}</a>
-            <label class="btn label-primary" title="{:L('PAGE_EDIT')}"><i class="fa fa-edit"></i> {:L('LABEL_OS_AUTH')}</label>
-            <elseif condition="ACTION_NAME eq 'sort'" />
+            <label class="btn label-primary" title="{:L('PAGE_EDIT')}"><i class="fa fa-edit"></i> {:L('PAGE_EDIT')}</label>   
+        <elseif condition="ACTION_NAME eq 'sort'" />
         	<a class="btn btn-primary" href="{:U('index')}" title="{:L('PAGE_LIST')}"><i class="fa fa-list"></i> {:L('PAGE_LIST')}</a>
             <label class="btn label-primary" title="{:L('PAGE_SORT')}"><i class="fa fa-sort-numeric-asc"></i> {:L('PAGE_SORT')}</label>   
         <else />

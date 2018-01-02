@@ -2,11 +2,11 @@
 return array(
 		//问候
 		'MEMBER_HELLO'=>'你好,',
-		'MEMBER_TITLE'=>'孜尔教育管理中心',
+		'MEMBER_TITLE'=>'狸想家管理中心',
 		'MEMBER_HOME'=>'系统首页',
 		'MEMBER_DESKTOP'=>'系统桌面',
-		'PROJECT_NAME'=>'孜尔教育',
-		'PROJECT_TEAM'=>'孜尔教育团队',
+		'PROJECT_NAME'=>'狸想家',
+		'PROJECT_TEAM'=>'狸想家精英团队',
 		
 		//按钮s
 		'BUTTON_ADD'=>'添加',
