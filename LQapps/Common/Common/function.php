@@ -1554,7 +1554,6 @@ function lqSendSms($mobile,$datas,$tempId){
      $result = $rest->sendTemplateSMS($mobile,$datas,$tempId);
      if($result == NULL ) {
          return array('status'=>0,'msg'=>'result error!');
-         break;
      }
      if($result->statusCode!=0) {
 		 return array('status'=>0,'msg'=>$result->statusMsg);

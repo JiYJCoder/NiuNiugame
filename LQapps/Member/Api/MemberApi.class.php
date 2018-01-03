@@ -42,7 +42,7 @@ class MemberApi extends Api{
         if (empty($member)) {
             return 0;
         } else {
-            return session('member_auth_sign') == $this->dataAuthSign($member) ? $member['mid'] : 0;
+            return session('member_auth_sign') == self::dataAuthSign($member) ? $member['mid'] : 0;
         }
     }	
 	
@@ -138,7 +138,7 @@ class MemberApi extends Api{
 	public function apiCacheInfo($mid, $is_username = false){
 		return $this->model->lqCacheInfo($mid, $is_username);
 	}	
-	//获取会员表某个字段（如昵称/头像）
+	//获取会员表某个字段（按id）
 	public function apiGetFieldByID($mid,$field = 'zc_nickname'){
 		return $this->model->lqGetFieldByID($mid,$field);
 	}
