@@ -296,9 +296,6 @@ class IndexController extends PublicController{
 		D('Admin/WebConfig')->lqCacheData();//基本设置
 		D('Admin/AdPosition')->lqCacheData();//图册位置
 		D('Admin/ArticleCat')->lqCacheData();//文章分类
-		D('Admin/ProductCat')->lqCacheData();//产品分类
-		D('Admin/ProductBrand')->lqCacheData();//品牌
-		D('Admin/hdAttribute')->lqCacheData();//家装属性管理
 		D('Admin/Region')->lqCacheData();//缓存区域数组
     }
 	

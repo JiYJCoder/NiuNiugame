@@ -2,11 +2,11 @@
 return array(
 		//问候
 		'ADMIN_HELLO'=>'你好,',
-		'ADMIN_TITLE'=>'狸想家管理中心',
+		'ADMIN_TITLE'=>'多人牛牛房主游戏',
 		'ADMIN_HOME'=>'系统首页',
 		'ADMIN_DESKTOP'=>'系统桌面',
-		'PROJECT_NAME'=>'狸想家',
-		'PROJECT_TEAM'=>'狸想家精英团队',
+		'PROJECT_NAME'=>'多人牛牛房主游戏',
+		'PROJECT_TEAM'=>'多人牛牛房主游戏',
 		
 		//按钮s
 		'BUTTON_ADD'=>'添加',

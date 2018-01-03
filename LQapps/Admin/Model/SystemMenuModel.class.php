@@ -42,6 +42,7 @@ class SystemMenuModel extends PublicModel {
 		$list = $cat->getList($condition,0,' zn_fid,zn_sort ASC,id ASC');               //获取分类结构
 		$systemid_module=array();//模块
 		$sysmuen_list=array();//树状数据
+
 		foreach ($list as $lnKey => $laValue) {
 			if($laValue["zc_run_table"]){
 				F($laValue["zc_run_table"].C("S_PREFIX").'data_sys_current',$laValue,C(SYSTEM_MENU_CURRENT));//写缓存
@@ -53,6 +54,7 @@ class SystemMenuModel extends PublicModel {
 			}
 			if($laValue["zn_fid"]==1)  $systemid_module[$laValue["id"]]=$laValue;
 		}
+
 		F('SystemMenu',$list,COMMON_ARRAY);
 		F('sysmuen_tree',$sysmuen_list,COMMON_ARRAY);
 		$accessControl=$accessControlCheckPop=$system_controller_to_table=array();

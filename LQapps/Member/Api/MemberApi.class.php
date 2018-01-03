@@ -42,7 +42,7 @@ class MemberApi extends Api{
         if (empty($member)) {
             return 0;
         } else {
-            return session('member_auth_sign') == $this->dataAuthSign($member) ? $member['mid'] : 0;
+            return session('member_auth_sign') == self::dataAuthSign($member) ? $member['mid'] : 0;
         }
     }	
 	

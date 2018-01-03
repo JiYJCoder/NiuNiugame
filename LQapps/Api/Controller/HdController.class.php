@@ -28,18 +28,16 @@ class HdController extends PublicController
     public function __construct()
     {
         parent::__construct();
-        $this->D_DESIGNER = D("Api/Designer");//设计师
-        $this->D_ART = D("Api/Article");//文章
-        $this->D_PRO = D("Api/Product");//产品
-        $this->D_HDDIARY = D("Api/Hddiary");//日记
-        $this->D_LOANAPPLY = D("Api/Loanapply");//贷款
+
+
+
         $this->D_SMS = D("Api/SmsLog");//接口短信实例化
         //免死金牌
-        $action_no_login_array = array('article-view-count', 'product-view-count', 'designer-view-count', 'designer-agrees-count');
+        $action_no_login_array = array('get_attribute', 'product-view-count', 'designer-view-count', 'designer-agrees-count');
         if (in_array(ACTION_NAME, $action_no_login_array)) {
 
         } else {
-            //self::checkLogin();//用户认证
+            self::apiCheckToken();//用户认证
         }
 
     }
@@ -252,22 +250,19 @@ class HdController extends PublicController
     //文章列表-数据输出
     public function article_list()
     {
-        self::apiCheckToken(0);//用户认证
-        $catid = I("get.catid", '0', 'int');//分类
+
+        //self::apiCheckToken(0);//用户认证
+       // $catid = I("get.catid", '0', 'int');//分类
         $pageno = I("get.p", '1', 'int');//页码
 
-        if ($catid == 0) $this->ajaxReturn(array('status' => 0, 'msg' => '访问参数出错！', 'data' => array(), "url" => "", "note" => ""), $this->JSONP);
+       // if ($catid == 0) $this->ajaxReturn(array('status' => 0, 'msg' => '访问参数出错！', 'data' => array(), "url" => "", "note" => ""), $this->JSONP);
         $cat = $this->D_ART->getCatById($catid);
-        if (!$cat) $this->ajaxReturn(array('status' => 0, 'msg' => '没有数据！', 'data' => array(), "url" => "", "note" => ""), $this->JSONP); //无记录
+       // if (!$cat) $this->ajaxReturn(array('status' => 0, 'msg' => '没有数据！', 'data' => array(), "url" => "", "note" => ""), $this->JSONP); //无记录
 
         $sqlwhere_parameter = " zl_visible=1 ";//sql条件
-        $tree = new Category('article_cat', array('id', 'zn_fid', 'zc_caption'));
-        $child_ids = $tree->get_child($catid, 10, 'zl_visible=1');
-        if (ereg("^[0-9]+$", $child_ids)) {
-            $sqlwhere_parameter .= " and zn_cat_id = " . intval($child_ids);
-        } else {
-            $sqlwhere_parameter .= " and zn_cat_id in (" . $child_ids . ") ";
-        }
+        //$tree = new Category('article_cat', array('id', 'zn_fid', 'zc_caption'));
+        //$child_ids = $tree->get_child($catid, 10, 'zl_visible=1');
+
 
         $page_config = array(
             'field' => "`id`,`zn_cat_id` as cat_id ,`zc_image` as image,`zc_title` as title,`zd_send_time` as send_time,`zc_summary` as summary,`zn_page_view` as page_view,`zn_share` as share,`zc_author`,`zc_source`,`zn_agrees` as agrees",

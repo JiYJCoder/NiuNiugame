@@ -9,7 +9,7 @@ return array(
 	
 	//url重定义
 	'VAR_MODULE' => 'g', // 默认模块获取变量
-	'URL_MODEL'  =>  0,  //URL访问模式
+	'URL_MODEL'  =>  1,  //URL访问模式
 	'URL_CASE_INSENSITIVE' => true, // 默认false 表示URL区分大小写 true则表示不区分大小
 	
 	'SHOW_RUN_TIME'    => false, // 运行时间显示

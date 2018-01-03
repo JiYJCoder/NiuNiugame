@@ -466,7 +466,7 @@ class PublicController extends Base{
 
 		#当前标题/当前路径
 		if(CONTROLLER_NAME=='Index'){
-				$lc_sys_current='<span>当前位置：</span><ul class="placeul"><li><a href="'.U("Index/index").'" title="">'.L("SYS_HOME").'</a></li><li class="current">'.$label_location.'</li></ul>';	
+				$lc_sys_current='<span>当前位置：</span><ul class="placeul"><li><a href="'.U("Index/index").'" title="">'.L("SYS_HOME").'</a></li><li class="current">'.$label_location.'</li></ul>';
 			   //当前标题
 			   $this->assign("sys_heading", $label_location);
 			   //当前路径
@@ -475,6 +475,8 @@ class PublicController extends Base{
 		}else{
 			//读缓存
 			$data_sys_current = F($this->pcTable.C("S_PREFIX").'data_sys_current','',C(SYSTEM_MENU_CURRENT));
+
+//pr($this->pcTable.C("S_PREFIX").'data_sys_current','',C(SYSTEM_MENU_CURRENT));
 			if($data_sys_current){
 				$lclocation=F($this->pcTable.C("S_PREFIX").'syslocation',"",C(SYSTEM_MENU_CURRENT));
 				$lc_sys_current=lqSysmuenLocation($lclocation);
@@ -486,6 +488,7 @@ class PublicController extends Base{
 			
 			//列表表单初始化  1开锁/0开锁  s
 			if($data_sys_current["zc_index_lock"]){
+
 				$os_lock = explode("|",$data_sys_current["zc_index_lock"]);
 				$this->index_lock=array(
 						'edit'=>$os_lock[0],//列表编辑锁

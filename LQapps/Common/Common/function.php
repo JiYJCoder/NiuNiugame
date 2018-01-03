@@ -425,6 +425,7 @@ function lq_random_string($length = 5, $type = 0) {
         $string = $arr[$type];
     }
     $count = strlen($string) - 1;
+    $code = '';
     for ($i = 0; $i < $length; $i++) {
         $str[$i] = $string[rand(0, $count)];
         $code .= $str[$i];
@@ -746,6 +747,7 @@ function lqRandCode($length = 5, $type = 0) {
         $string = $arr[$type];
     }
     $count = strlen($string) - 1;
+    $code = '';
     for ($i = 0; $i < $length; $i++) {
         $str[$i] = $string[rand(0, $count)];
         $code .= $str[$i];
@@ -1554,7 +1556,6 @@ function lqSendSms($mobile,$datas,$tempId){
      $result = $rest->sendTemplateSMS($mobile,$datas,$tempId);
      if($result == NULL ) {
          return array('status'=>0,'msg'=>'result error!');
-         break;
      }
      if($result->statusCode!=0) {
 		 return array('status'=>0,'msg'=>$result->statusMsg);
@@ -1573,7 +1574,7 @@ function lq_get_url() {
 }
 
 //header 跳转
-function lq_header($url,$js=0,$replace=true)
+function lq_header($url,$js=0,$replace=true,$http_response_code = 200)
 {
     if ($js==1){
 		echo '<script type="text/javascript">window.location.href="' . $url . '";</script>';
@@ -1613,5 +1614,13 @@ function lq_set_nickname($str=''){
 			$return = '微信用户-'.time();
 		}    
 		return $return;	
+}
+
+
+function pr($data)
+{
+    echo "<prev>";
+    print_r($data);
+    echo "</prev>";
 }
 ?>
