@@ -110,7 +110,7 @@ class ProductController extends PublicController {
 		}else if($by==3){
 			$orderby='zf_shop_price asc,id desc';				
 		}else{
-			$orderby='zn_sort asc,id desc';				
+			$orderby='zn_sort asc,id desc';
 		}
 		
 		//作品列表

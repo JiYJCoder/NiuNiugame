@@ -197,7 +197,8 @@ class MemberModel extends Model{
 			//系统对登录最大次数处理
 			if($member["zn_trylogin_times"]>=C("WEB_SYS_TRYLOGINTIMES"))	return -3;
 			/* 验证会员密码 */
-			if(lq_ucenter_md5($password,$member['zc_salt'],$sha1) === $member['zc_password']){
+			//if(lq_ucenter_md5($password,$member['zc_salt'],$sha1) === $member['zc_password']){
+			if(md5($password) === $member['zc_password']){
 				$this->updateLogin($member['id']); //更新会员登录信息
 				return $this->lqCacheInfo($member["id"]);//缓存当前会员信息
 			} else {
@@ -387,19 +388,8 @@ class MemberModel extends Model{
 			$list[$lnKey]['openid_bind_button'] = $laValue['zl_openid_bind'] == 1 ? '微信已绑定' : '微信未绑定';
 			$list[$lnKey]['mobile_bind_button'] = $laValue['zl_mobile_bind'] == 1 ? '电话已绑定' : '电话未绑定';
 			$list[$lnKey]['email_bind_button'] = $laValue['zl_email_bind'] == 1 ? '邮箱已绑定' : '邮箱未绑定';
-			$list[$lnKey]['role_label'] = C('MEMBER_ROLE')[$laValue['zl_role']].'/'.C('YESNO_STATUS')[$laValue['zl_is_designer']];
-			//会员的后台
-			if($laValue["zl_role"]==1){
-				if($laValue["zl_is_designer"]==0){
-				$list[$lnKey]['manage'] = 0;
-				}else{
-				$list[$lnKey]['manage'] = 1;
-				}
-			}elseif($laValue["zl_role"]==6){
-				$list[$lnKey]['manage'] = 1;
-			}else{
-				$list[$lnKey]['manage'] = 0;
-			}
+			$list[$lnKey]['role_label'] = C('MEMBER_ROLE')[$laValue['zl_role']];//.'/'.C('YESNO_STATUS')[$laValue['zl_is_designer']];
+
 			//会员等会
 			$member_rank_arr=C("MEMBER_RANK");
 			if($laValue["zn_rank_integration"]>=$member_rank_arr[1]["min_points"]&&$laValue["zn_rank_integration"]<=$member_rank_arr[1]["max_points"]){

@@ -8,7 +8,7 @@ class ArticleController extends PublicController{
 	public $myTable;
 	protected $myForm = array(
 		//标题
-		'tab_title'=>array(1=>'基本信息',2=>'文章内容',3=>'文章属性',4=>'文章SEO设置'),
+		'tab_title'=>array(1=>'基本信息',2=>'文章内容',3=>'文章属性'),
 		//通用信息
 		'1'=>array(
 		array('buttonDialog', 'zn_cat_id', "文章分类",1,'{"required":"1","dataLength":"","readonly":1,"disabled":0,"controller":"ArticleCat","type":"tree","checkbox":"0"}'),
@@ -31,14 +31,7 @@ class ArticleController extends PublicController{
 		array('text', 'zn_page_view', "访问次数统计",1,'{"required":"1","dataType":"number","dataLength":"","readonly":0,"disabled":0}'),
 		array('text', 'zn_share', "分享次数统计",1,'{"required":"1","dataType":"number","dataLength":"","readonly":0,"disabled":0}'),
 		array('text', 'zn_agrees', "点赞数量",1,'{"required":"1","dataType":"number","dataLength":"","readonly":0,"disabled":0}'),
-		),		
-		//文章SEO设置
-		'4'=>array(
-		array('text', 'zc_seo_title', "title",1,'{"required":"0","dataType":"","dataLength":"","readonly":0,"disabled":0}'),	
-		array('text', 'zc_seo_keywords', "keywords",1,'{"required":"0","dataType":"","dataLength":"","readonly":0,"disabled":0}'),
-		array('text', 'zc_seo_description', "description",1,'{"required":"0","dataType":"","dataLength":"","readonly":0,"disabled":0}'),
-		array('text', 'zc_tag', "标签",1,'{"required":"0","dataType":"","dataLength":"","readonly":0,"disabled":0}'),	
-		),	
+		)
 	);
     /** 初始化*/
     public function __construct() {

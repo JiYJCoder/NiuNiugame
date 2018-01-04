@@ -134,7 +134,52 @@ if(navigator.appName == 'Microsoft Internet Explorer'){
 	<div class="col-sm-6" style="float:right;text-align:right;padding:0;margin:0px;"><?php echo ($sys_current); ?></div>
   </div>
   
+  <form name="<?php echo ($lq_form_list); ?>" id="<?php echo ($lq_form_list); ?>" class="form-horizontal" onsubmit="return false">
+  <input type="hidden" id="thinkphpurl" name="thinkphpurl" value="<?php echo ($page_config["thinkphpurl"]); ?>" />
+  <input type="hidden" id="keymode" value="<?php echo ($search_content["keymode"]); ?>" />
+  <input type="hidden" id="pagesize" value="<?php echo ($search_content["pagesize"]); ?>" />
   <div class="clearfix welcome-container">
+  	<?php if($os_lock["search"] == '1'): ?>    
+    <div class="clearfix">
+      <div class="panel panel-info">
+        <div class="panel-heading"><i class="fa fa-paw"></i> 筛选</div>
+        <div class="panel-body">
+          <div class="input-group">
+            <input type="text" class="form-control" id="fkeyword" value="<?php echo ($search_content["fkeyword"]); ?>" placeholder="<?php echo ($keywordDefault); ?>" onclick="lqKeywordOnclick(this)" onblur="lqKeywordOnblur(this)"/>
+            <div class="input-group-btn">
+              <button class="btn btn-default" id="commonSearch"><i class="fa fa-search"></i> 搜索</button>
+              <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="true"><span class="caret"></span></button>
+              <ul class="dropdown-menu dropdown-menu-right" role="menu">
+                <li><a href="javascript:;" onclick="$('#fkeyword').attr('placeholder','模糊搜索：请输入关键字');$('#keymode').val(0);">模糊搜索</a></li>
+                <li><a href="javascript:;" onclick="$('#fkeyword').attr('placeholder','精准搜索：请输入关键字');$('#keymode').val(1);">精准搜索</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+	<script language="javascript">   
+    $(function(){
+        //通用搜索
+        $("#commonSearch").click(function(){	
+            require(['layer'], function(){
+                var fkeyword=$("#fkeyword").val();
+                if(fkeyword!='<?php echo ($keywordDefault); ?>'){
+                    var searchurl=$("#thinkphpurl").val()+'index/s/';
+                    var urlpara="fkeyword/"+encodeURIComponent(fkeyword)+"/";
+                    urlpara+="keymode/"+encodeURIComponent($("#keymode").val())+"/";
+					urlpara+="pagesize/"+encodeURIComponent($("#pagesize").val())+"/";
+                    location.href=searchurl+base64encode(urlpara);
+                }else{
+                    layer.msg("请输入关键字！",{icon:5,time:2000});
+                }
+            });			
+        });
+    });
+    </script>      
+    </div>
+
+    <?php else: ?>
+    <?php endif; ?> 
     <div class="row">
       <div class="clearfix template">
         <div class="panel panel-default">
@@ -203,12 +248,43 @@ if(navigator.appName == 'Microsoft Internet Explorer'){
 
 	</div>
           
-            <?php echo ($LQFdata); ?>
-          
+          <div class="table-responsive panel-body">
+            <table class="table table-hover">
+                <thead>
+                      <tr>
+                        <th style="width:100px;text-align:center;">ID</th>
+                        <th style="width:400px;" title="单击分类隐藏/显示该分类下在子类">分类名称</th>
+                        <th style="width:80px;text-align:center;">首页推送</th>
+                        <th style="width:50px;">排序</th>
+                        <th style="width:50px;">状态</th>
+                        <th style="width:100px;text-align:center;"><a href="javascript:;" id="op_msg"><?php echo L("LABEL_OS");?>?</a></th>
+                      </tr>
+                </thead>
+                <tbody id="list-tbody">
+                      <?php if(is_array($list)): $key = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "$empty_msg" ;else: foreach($__LIST__ as $key=>$data): $mod = ($key % 2 );++$key;?><tr id="<?php echo ($data["id"]); ?>" pid="<?php echo ($data["zn_fid"]); ?>" visible="<?php echo ($data["zl_visible"]); ?>" article_count="">
+                          <td align="center"><?php echo ($data["id"]); ?></td>
+                          <td align="left" class="tree" style="cursor: pointer;"><ii class="tree_tip" id="tree_tip_<?php echo ($data["id"]); ?>"><?php echo ($data["fullname"]); ?></ii></td>
+                          <td align="center"><?php echo ($data["is_index_label"]); ?></td>
+                          <td edit="0" op="sort" title="<?php echo L('ALT_BUTTON_EDIT_SORT');?>"><?php echo ($data["zn_sort"]); ?></td>
+                          <td><?php echo ($data["visible_label"]); ?></td>
+                          <td class="manage-menu list-os-a">
+                          <a href="/sys-index.php/ArticleCat/edit/tnid/<?php echo ($data["id"]); ?>" title="<?php echo L("LABEL_OS_EDITID");?>[<?php echo ($data["id"]); ?>]"><i class="fa fa-edit"></i></a>
+                          <a href="/sys-index.php/ArticleCat/collection/tnid/<?php echo ($data["id"]); ?>" title="<?php echo L("LABEL_OS_COLLECTION");?>[<?php echo ($data["id"]); ?>]"><i class="fa fa-tag"></i></a>
+                          <a href="javascript:;" class="opCopy" title="<?php echo L("ALT_BUTTON_COPY");?>该类别下的文章[<?php echo ($data["id"]); ?>]"><i class="fa fa-copy"></i></a>
+                          <a href="javascript:;" class="opTransform" title="<?php echo L("ALT_BUTTON_TRANSFER");?>该类别下的文章[<?php echo ($data["id"]); ?>]"><i class="fa fa-share"></i></a>
+                          <a href="javascript:void(0);" class="opStatus" val="<?php echo ($data["zl_visible"]); ?>" title="<?php echo L("LABEL_OS_STATUS");?>[<?php echo ($data["id"]); ?>]"><?php echo ($data["visible_button"]); ?></a>
+                          <a href="javascript:;" class="opDelete" title="<?php echo L("LABEL_OS_TITLE_DEL");?>[<?php echo ($data["zc_caption"]); ?>]"><i class="fa fa-times-circle"></i></a>
+                          </td>
+                        </tr><?php endforeach; endif; else: echo "$empty_msg" ;endif; ?>
+                </tbody>    
+            </table>
+            
+          </div>
         </div>
       </div>
     </div>
   </div>
+  </form>
   
 </div>
 
@@ -247,7 +323,7 @@ $(document).ready(function(){
 var top_nav_id=util.cookie.get('top_nav_id');
 var left_nav_id=util.cookie.get('left_nav_id');
 if(top_nav_id) util.menuDisplay(top_nav_id,left_nav_id);
-<?php if(ACTION_NAME=='index') { echo "$('#list-tbody tr:odd').addClass('tr_odd');//单双行样式\n"; echo "$('.opStatus').click(function(){util.visible($(this),'/sys-index.php/RoomHarging/opVisible');});//快捷启用禁用操作\n"; echo "$('.opDelete').click(function(){util.delete($(this),'/sys-index.php/RoomHarging/opDelete');});//单记录删除操作\n"; echo "$('tbody>tr>td[op]').dblclick(function(){util.ajaxEdit($(this),'/sys-index.php/RoomHarging');});//单项编辑\n"; echo "$('tbody>tr>td>a[op]').click(function(){util.ajaxPropertyA($(this),'/sys-index.php/RoomHarging');});//单项属性切换\n"; } ?>	
+<?php if(ACTION_NAME=='index') { echo "$('#list-tbody tr:odd').addClass('tr_odd');//单双行样式\n"; echo "$('.opStatus').click(function(){util.visible($(this),'/sys-index.php/ArticleCat/opVisible');});//快捷启用禁用操作\n"; echo "$('.opDelete').click(function(){util.delete($(this),'/sys-index.php/ArticleCat/opDelete');});//单记录删除操作\n"; echo "$('tbody>tr>td[op]').dblclick(function(){util.ajaxEdit($(this),'/sys-index.php/ArticleCat');});//单项编辑\n"; echo "$('tbody>tr>td>a[op]').click(function(){util.ajaxPropertyA($(this),'/sys-index.php/ArticleCat');});//单项属性切换\n"; } ?>	
 	//ajax点击响应href
 	$(".getUrl").click(function(){util.getUrl($(this).attr("lqHref"));});
 	//顶部菜单展示
@@ -278,16 +354,45 @@ if(top_nav_id) util.menuDisplay(top_nav_id,left_nav_id);
 </script>
 </body>
 </html>
-<script type="text/javascript" src="/Public/Static/js/lib/admin.validator.js"></script>
 <script type="text/javascript">
-require(['layer'], function(){layer.photos({photos: '#LQForm',anim: 1});});	
-function wordCount(obj){var chars=obj.value;$("#word_count_"+obj.id).html("输入了"+chars.length+"个字");} 
-$(document).ready(function(){
-     //公共表单提交
-	 $("#LQFormSubmit,#aFormSubmit").click(function(){
-		var loForm=document.getElementById("LQForm");
-		if(adminValidator(loForm)){util.commonAjaxSubmit();}
-		return false;
-	 });
+$(function(){
+
+				$(".tree_tip").hover(function(){
+					var obj  = 	$(this);			  
+					var lqid =  obj.parents("tr").attr("id");	
+					var article_count =  obj.parents("tr").attr("article_count");	
+					require(['layer'], function(){
+						if( article_count=='' ){
+							$.getJSON('/sys-index.php/ArticleCat/ajaxGetCount',{tnid:lqid}, function(json){
+								if(json.status==1){
+									obj.parents("tr").attr("article_count",json.data);
+									layer.tips('共有'+json.data+"个文章", '#tree_tip_'+lqid);
+								}
+							});								
+						}else{
+									layer.tips('共有'+article_count+"个文章", '#tree_tip_'+lqid);
+						}
+					});	
+				});
+
+				//复制弹出框
+                $(".opCopy").click(function(){
+					var obj  = 	$(this);			  
+					var lqid =  obj.parents("tr").attr("id");
+					var txt=$(this).parents("tr").find("td:eq(1)").html();
+					util.openWin('/sys-index.php/ArticleCat/treeWin/op/copy/tnid/'+lqid,'复制“'+txt+'”下的文章至以下类别','420px','425px');
+				});		
+				
+				//转移弹出框
+                $(".opTransform").click(function(){
+					var obj  = 	$(this);
+					var lqid =  obj.parents("tr").attr("id");
+					var txt=$(this).parents("tr").find("td:eq(1)").html();
+					util.openWin('/sys-index.php/ArticleCat/treeWin/op/transform/tnid/'+lqid,'转移“'+txt+'”下的文章至以下类别','420px','425px');					
+					transform_Func.tree();
+					
+                });				
+				
+
 });
 </script>

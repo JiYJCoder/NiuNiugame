@@ -2,192 +2,31 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c9819966-1c75-4b19-b026-2fc3e3a29c94" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/LQapps/Common/LQLibs/Util/BootstrapForm.class.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/LQapps/Admin/Model/RoomCardModel.class.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/LQapps/Admin/Controller/RoomHargingController.class.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/LQapps/Admin/Model/RoomHargingModel.class.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploadfiles/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploadfiles/apk/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploadfiles/avatar/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploadfiles/editorfile/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploadfiles/file/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploadfiles/images/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploadfiles/tmp/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Runtime/SysCurrent/recharge_data_sys_current.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Runtime/SysCurrent/recharge_syslocation.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Runtime/SysCurrent/room_syslocation.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Runtime/SysCurrent/roomharging_data_sys_current.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Runtime/SysCurrent/roomharging_syslocation.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sys-index.php" />
-      <change type="DELETED" beforePath="E:\Ooooh\WebSite\games\.idea\.name" afterPath="" />
-      <change type="DELETED" beforePath="E:\Ooooh\WebSite\games\.idea\encodings.xml" afterPath="" />
-      <change type="DELETED" beforePath="E:\Ooooh\WebSite\games\.idea\games.iml" afterPath="" />
-      <change type="DELETED" beforePath="E:\Ooooh\WebSite\games\.idea\modules.xml" afterPath="" />
-      <change type="DELETED" beforePath="E:\Ooooh\WebSite\games\.idea\scopes\scope_settings.xml" afterPath="" />
-      <change type="DELETED" beforePath="E:\Ooooh\WebSite\games\.idea\vcs.xml" afterPath="" />
-      <change type="DELETED" beforePath="E:\Ooooh\WebSite\games\Api-test.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\Ooooh\WebSite\games\Api.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\Ooooh\WebSite\games\LQapps\Admin\Controller\DesignerController.class.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\Ooooh\WebSite\games\LQapps\Admin\Controller\DesignerWorksController.class.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\Ooooh\WebSite\games\LQapps\Admin\Controller\FollowController1.class.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\Ooooh\WebSite\games\LQapps\Admin\Controller\HdApplicationController.class.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\Ooooh\WebSite\games\LQapps\Admin\Controller\HdAttributeController.class.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\Ooooh\WebSite\games\LQapps\Admin\Controller\HdDiaryController.class.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\Ooooh\WebSite\games\LQapps\Admin\Controller\HdDiaryDetailController.class.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\Ooooh\WebSite\games\LQapps\Admin\Controller\HdOrderController.class.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\Ooooh\WebSite\games\LQapps\Admin\Controller\HdOrderServiceController.class.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\Ooooh\WebSite\games\LQapps\Admin\Controller\LoanApplyController.class.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\Ooooh\WebSite\games\LQapps\Admin\Controller\PayNotifyController1.class.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\Ooooh\WebSite\games\LQapps\Admin\Controller\ProductBrandController.class.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\Ooooh\WebSite\games\LQapps\Admin\Controller\ProductCatController.class.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\Ooooh\WebSite\games\LQapps\Admin\Model\DesignerModel.class.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\Ooooh\WebSite\games\LQapps\Admin\Model\DesignerWorksModel.class.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\Ooooh\WebSite\games\LQapps\Admin\Model\HdApplicationModel.class.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\Ooooh\WebSite\games\LQapps\Admin\Model\HdAttributeModel.class.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\Ooooh\WebSite\games\LQapps\Admin\Model\HdDiaryDetailModel.class.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\Ooooh\WebSite\games\LQapps\Admin\Model\HdDiaryModel.class.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\Ooooh\WebSite\games\LQapps\Admin\Model\HdOrderModel.class.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\Ooooh\WebSite\games\LQapps\Admin\Model\HdOrderServiceModel.class.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\Ooooh\WebSite\games\LQapps\Admin\Model\LoanApplyModel.class.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\Ooooh\WebSite\games\LQapps\Admin\Model\ProductBrandModel.class.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\Ooooh\WebSite\games\LQapps\Admin\Model\ProductCatModel.class.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\Ooooh\WebSite\games\LQapps\Admin\Model\ProductModel.class.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\Ooooh\WebSite\games\LQapps\Admin\View\default\Bank\index.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\Ooooh\WebSite\games\LQapps\Admin\View\default\Bank\window.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\Ooooh\WebSite\games\LQapps\Admin\View\default\DesignerWorks\edit.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\Ooooh\WebSite\games\LQapps\Admin\View\default\DesignerWorks\index.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\Ooooh\WebSite\games\LQapps\Admin\View\default\DesignerWorks\window.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\Ooooh\WebSite\games\LQapps\Admin\View\default\Designer\index.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\Ooooh\WebSite\games\LQapps\Admin\View\default\Designer\window.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\Ooooh\WebSite\games\LQapps\Admin\View\default\HdApplication\edit.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\Ooooh\WebSite\games\LQapps\Admin\View\default\HdApplication\index.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\Ooooh\WebSite\games\LQapps\Admin\View\default\HdAttribute\index.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\Ooooh\WebSite\games\LQapps\Admin\View\default\HdDiaryDetail\edit.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\Ooooh\WebSite\games\LQapps\Admin\View\default\HdDiaryDetail\index.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\Ooooh\WebSite\games\LQapps\Admin\View\default\HdDiary\edit.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\Ooooh\WebSite\games\LQapps\Admin\View\default\HdDiary\index.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\Ooooh\WebSite\games\LQapps\Admin\View\default\HdOffer\index.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\Ooooh\WebSite\games\LQapps\Admin\View\default\HdOrder\edit.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\Ooooh\WebSite\games\LQapps\Admin\View\default\LoanApply\edit.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\Ooooh\WebSite\games\LQapps\Admin\View\default\LoanApply\index.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\Ooooh\WebSite\games\LQapps\Admin\View\default\ProductBrand\index.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\Ooooh\WebSite\games\LQapps\Admin\View\default\ProductCat\index.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\Ooooh\WebSite\games\LQapps\Admin\View\default\ProductCat\treeWin.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\Ooooh\WebSite\games\LQapps\Admin\View\default\Product\index.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\Ooooh\WebSite\games\LQapps\Common\Conf\config-0407.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\Ooooh\WebSite\games\LQapps\Common\Conf\dbconn.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\Ooooh\WebSite\games\Public\txt.txt" afterPath="" />
-      <change type="DELETED" beforePath="E:\Ooooh\WebSite\games\Runtime\Array\hd_attribute_1.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\Ooooh\WebSite\games\Runtime\Array\hd_attribute_2.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\Ooooh\WebSite\games\Runtime\Array\hd_attribute_3.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\Ooooh\WebSite\games\Runtime\Array\product_brand.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\Ooooh\WebSite\games\Runtime\Array\product_cat.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\Ooooh\WebSite\games\Runtime\Cache\Home\pc\f3e2108b557985fe80f8406890f87e17.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\Ooooh\WebSite\games\Runtime\Data\_theone\demo_jyly.lq_bank.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\Ooooh\WebSite\games\Runtime\Data\_theone\demo_jyly.lq_designer.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\Ooooh\WebSite\games\Runtime\Data\_theone\demo_jyly.lq_hd_application.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\Ooooh\WebSite\games\Runtime\Data\_theone\demo_jyly.lq_hd_order.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\Ooooh\WebSite\games\Runtime\Data\_theone\demo_jyly.lq_hd_order_service.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\Ooooh\WebSite\games\Runtime\Data\_theone\demo_jyly.lq_member_favorite.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\Ooooh\WebSite\games\Runtime\Data\_theone\demo_jyly.lq_member_integration_log.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\Ooooh\WebSite\games\Runtime\Data\_theone\demo_jyly.lq_member_token.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\Ooooh\WebSite\games\Runtime\Data\_theone\demo_jyly.lq_pay_log.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\Ooooh\WebSite\games\Runtime\Data\_theone\demo_jyly.lq_product_brand.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\Ooooh\WebSite\games\Runtime\Data\_theone\games.lq_follow.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\Ooooh\WebSite\games\Runtime\Logs\Admin\17_06_17.log" afterPath="" />
-      <change type="DELETED" beforePath="E:\Ooooh\WebSite\games\Runtime\Logs\Home\17_06_18.log" afterPath="" />
-      <change type="DELETED" beforePath="E:\Ooooh\WebSite\games\Runtime\Logs\Home\17_06_19.log" afterPath="" />
-      <change type="DELETED" beforePath="E:\Ooooh\WebSite\games\Runtime\SysCurrent\bank_data_sys_current.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\Ooooh\WebSite\games\Runtime\SysCurrent\bank_syslocation.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\Ooooh\WebSite\games\Runtime\SysCurrent\designer_data_sys_current.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\Ooooh\WebSite\games\Runtime\SysCurrent\designer_syslocation.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\Ooooh\WebSite\games\Runtime\SysCurrent\designer_works_data_sys_current.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\Ooooh\WebSite\games\Runtime\SysCurrent\designer_works_syslocation.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\Ooooh\WebSite\games\Runtime\SysCurrent\hd_application_data_sys_current.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\Ooooh\WebSite\games\Runtime\SysCurrent\hd_application_syslocation.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\Ooooh\WebSite\games\Runtime\SysCurrent\hd_attribute_data_sys_current.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\Ooooh\WebSite\games\Runtime\SysCurrent\hd_attribute_syslocation.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\Ooooh\WebSite\games\Runtime\SysCurrent\hd_diary_data_sys_current.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\Ooooh\WebSite\games\Runtime\SysCurrent\hd_diary_detail_data_sys_current.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\Ooooh\WebSite\games\Runtime\SysCurrent\hd_diary_detail_syslocation.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\Ooooh\WebSite\games\Runtime\SysCurrent\hd_diary_syslocation.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\Ooooh\WebSite\games\Runtime\SysCurrent\hd_order_data_sys_current.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\Ooooh\WebSite\games\Runtime\SysCurrent\hd_order_service_data_sys_current.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\Ooooh\WebSite\games\Runtime\SysCurrent\hd_order_service_syslocation.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\Ooooh\WebSite\games\Runtime\SysCurrent\hd_order_syslocation.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\Ooooh\WebSite\games\Runtime\SysCurrent\loan_apply_data_sys_current.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\Ooooh\WebSite\games\Runtime\SysCurrent\loan_apply_syslocation.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\Ooooh\WebSite\games\Runtime\SysCurrent\product_brand_data_sys_current.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\Ooooh\WebSite\games\Runtime\SysCurrent\product_brand_syslocation.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\Ooooh\WebSite\games\Runtime\SysCurrent\product_cat_data_sys_current.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\Ooooh\WebSite\games\Runtime\SysCurrent\product_cat_syslocation.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\Ooooh\WebSite\games\Runtime\SysCurrent\product_data_sys_current.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\Ooooh\WebSite\games\Runtime\SysCurrent\product_syslocation.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\Ooooh\WebSite\games\Runtime\SysUser\2_3d449017ca18a3215ce3a146e6319f21.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\Ooooh\WebSite\games\demo_jyly.sql" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.htaccess" afterPath="$PROJECT_DIR$/.htaccess" />
+      <change type="DELETED" beforePath="E:\Ooooh\WebSite\games\Runtime\Cache\Admin\62e5f79f098ef923ba9f3db64b26209a.php" afterPath="" />
+      <change type="DELETED" beforePath="E:\Ooooh\WebSite\games\Runtime\Cache\Admin\f5d4c223922ae84bd73c8853ede38212.php" afterPath="" />
+      <change type="DELETED" beforePath="E:\Ooooh\WebSite\games\Runtime\Data\_theone\games.lq_room_harging.php" afterPath="" />
+      <change type="DELETED" beforePath="E:\Ooooh\WebSite\games\Runtime\Logs\Admin\18_01_03.log" afterPath="" />
+      <change type="DELETED" beforePath="E:\Ooooh\WebSite\games\Runtime\Logs\Api\18_01_03.log" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Public/Static/images/logo.png" afterPath="$PROJECT_DIR$/Public/Static/images/logo.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Runtime/SysUser/1_3d449017ca18a3215ce3a146e6319f21.php" afterPath="$PROJECT_DIR$/Runtime/SysUser/1_3d449017ca18a3215ce3a146e6319f21.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LQapps/Api/Controller/HdController.class.php" afterPath="$PROJECT_DIR$/LQapps/Api/Controller/HdController.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LQapps/Admin/Controller/IndexController.class.php" afterPath="$PROJECT_DIR$/LQapps/Admin/Controller/IndexController.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LQapps/Member/Api/MemberApi.class.php" afterPath="$PROJECT_DIR$/LQapps/Member/Api/MemberApi.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LQapps/Admin/Controller/ArticleController.class.php" afterPath="$PROJECT_DIR$/LQapps/Admin/Controller/ArticleController.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LQapps/Admin/Controller/MemberController.class.php" afterPath="$PROJECT_DIR$/LQapps/Admin/Controller/MemberController.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LQapps/Api/Controller/MemberController.class.php" afterPath="$PROJECT_DIR$/LQapps/Api/Controller/MemberController.class.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LQapps/Member/Model/MemberModel.class.php" afterPath="$PROJECT_DIR$/LQapps/Member/Model/MemberModel.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LQapps/Admin/Controller/PublicController.class.php" afterPath="$PROJECT_DIR$/LQapps/Admin/Controller/PublicController.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LQapps/Common/LQLibs/Util/Page.class.php" afterPath="$PROJECT_DIR$/LQapps/Common/LQLibs/Util/Page.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LQapps/Api/Controller/ProductController.class.php" afterPath="$PROJECT_DIR$/LQapps/Api/Controller/ProductController.class.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Runtime/Array/SystemMenu.php" afterPath="$PROJECT_DIR$/Runtime/Array/SystemMenu.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LQapps/Admin/Model/SystemMenuModel.class.php" afterPath="$PROJECT_DIR$/LQapps/Admin/Model/SystemMenuModel.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Runtime/Array/accessControl.php" afterPath="$PROJECT_DIR$/Runtime/Array/accessControl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Runtime/SysCurrent/activity_syslocation.php" afterPath="$PROJECT_DIR$/Runtime/SysCurrent/activity_syslocation.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Runtime/SysCurrent/ad_list_data_sys_current.php" afterPath="$PROJECT_DIR$/Runtime/SysCurrent/ad_list_data_sys_current.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Runtime/SysCurrent/ad_list_syslocation.php" afterPath="$PROJECT_DIR$/Runtime/SysCurrent/ad_list_syslocation.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Runtime/SysCurrent/ad_position_data_sys_current.php" afterPath="$PROJECT_DIR$/Runtime/SysCurrent/ad_position_data_sys_current.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Runtime/SysCurrent/ad_position_syslocation.php" afterPath="$PROJECT_DIR$/Runtime/SysCurrent/ad_position_syslocation.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Runtime/SysCurrent/admin_action_syslocation.php" afterPath="$PROJECT_DIR$/Runtime/SysCurrent/admin_action_syslocation.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Runtime/SysCurrent/admin_allow_ip_syslocation.php" afterPath="$PROJECT_DIR$/Runtime/SysCurrent/admin_allow_ip_syslocation.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Runtime/SysCurrent/admin_log_syslocation.php" afterPath="$PROJECT_DIR$/Runtime/SysCurrent/admin_log_syslocation.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Runtime/SysCurrent/admin_role_syslocation.php" afterPath="$PROJECT_DIR$/Runtime/SysCurrent/admin_role_syslocation.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Runtime/SysCurrent/admin_syslocation.php" afterPath="$PROJECT_DIR$/Runtime/SysCurrent/admin_syslocation.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Runtime/SysCurrent/android_version_syslocation.php" afterPath="$PROJECT_DIR$/Runtime/SysCurrent/android_version_syslocation.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Runtime/SysCurrent/api_document_syslocation.php" afterPath="$PROJECT_DIR$/Runtime/SysCurrent/api_document_syslocation.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Runtime/Array/article_cat.php" afterPath="$PROJECT_DIR$/Runtime/Array/article_cat.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Runtime/SysCurrent/article_cat_data_sys_current.php" afterPath="$PROJECT_DIR$/Runtime/SysCurrent/article_cat_data_sys_current.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Runtime/SysCurrent/article_cat_syslocation.php" afterPath="$PROJECT_DIR$/Runtime/SysCurrent/article_cat_syslocation.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Runtime/SysCurrent/article_data_sys_current.php" afterPath="$PROJECT_DIR$/Runtime/SysCurrent/article_data_sys_current.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Runtime/SysCurrent/article_syslocation.php" afterPath="$PROJECT_DIR$/Runtime/SysCurrent/article_syslocation.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Runtime/SysCurrent/attachment_syslocation.php" afterPath="$PROJECT_DIR$/Runtime/SysCurrent/attachment_syslocation.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Runtime/SysCurrent/collector_rule_syslocation.php" afterPath="$PROJECT_DIR$/Runtime/SysCurrent/collector_rule_syslocation.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LQapps/Admin/View/default/Public/common-search.html" afterPath="$PROJECT_DIR$/LQapps/Admin/View/default/Public/common-search.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LQapps/Api/Conf/config.php" afterPath="$PROJECT_DIR$/LQapps/Api/Conf/config.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Runtime/SysCurrent/collector_rule_data_sys_current.php" afterPath="$PROJECT_DIR$/Runtime/SysCurrent/collector_rule_data_sys_current.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Public/Static/css/common.css" afterPath="$PROJECT_DIR$/Public/Static/css/common.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LQapps/Common/Conf/config.php" afterPath="$PROJECT_DIR$/LQapps/Common/Conf/config.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Runtime/SysCurrent/export_data_sys_current.php" afterPath="$PROJECT_DIR$/Runtime/SysCurrent/export_data_sys_current.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Runtime/SysCurrent/export_syslocation.php" afterPath="$PROJECT_DIR$/Runtime/SysCurrent/export_syslocation.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Runtime/SysCurrent/follow_syslocation.php" afterPath="$PROJECT_DIR$/Runtime/SysCurrent/follow_syslocation.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LQapps/Common/Common/function.php" afterPath="$PROJECT_DIR$/LQapps/Common/Common/function.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LQapps/Admin/View/default/Public/index-list-button.html" afterPath="$PROJECT_DIR$/LQapps/Admin/View/default/Public/index-list-button.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Runtime/SysCurrent/member_feedback_syslocation.php" afterPath="$PROJECT_DIR$/Runtime/SysCurrent/member_feedback_syslocation.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Runtime/SysCurrent/member_integration_log_syslocation.php" afterPath="$PROJECT_DIR$/Runtime/SysCurrent/member_integration_log_syslocation.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Runtime/SysCurrent/member_log_syslocation.php" afterPath="$PROJECT_DIR$/Runtime/SysCurrent/member_log_syslocation.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Runtime/SysCurrent/member_syslocation.php" afterPath="$PROJECT_DIR$/Runtime/SysCurrent/member_syslocation.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Runtime/SysCurrent/pay_log_syslocation.php" afterPath="$PROJECT_DIR$/Runtime/SysCurrent/pay_log_syslocation.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Runtime/SysCurrent/region_syslocation.php" afterPath="$PROJECT_DIR$/Runtime/SysCurrent/region_syslocation.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Runtime/SysCurrent/register_share_syslocation.php" afterPath="$PROJECT_DIR$/Runtime/SysCurrent/register_share_syslocation.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Runtime/Data/_theone/games.lq_member.php" afterPath="$PROJECT_DIR$/Runtime/Data/_theone/games.lq_member.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LQapps/Admin/View/default/Member/index.html" afterPath="$PROJECT_DIR$/LQapps/Admin/View/default/Member/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Runtime/Array/set_config.php" afterPath="$PROJECT_DIR$/Runtime/Array/set_config.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Runtime/SysCurrent/sms_syslocation.php" afterPath="$PROJECT_DIR$/Runtime/SysCurrent/sms_syslocation.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Runtime/Array/sys_table.php" afterPath="$PROJECT_DIR$/Runtime/Array/sys_table.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Runtime/Array/sysmuen_tree.php" afterPath="$PROJECT_DIR$/Runtime/Array/sysmuen_tree.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Runtime/SysCurrent/system_menu_syslocation.php" afterPath="$PROJECT_DIR$/Runtime/SysCurrent/system_menu_syslocation.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Public/txt.txt" afterPath="$PROJECT_DIR$/Public/txt.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Runtime/Array/web_config.php" afterPath="$PROJECT_DIR$/Runtime/Array/web_config.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Runtime/SysCurrent/web_config_syslocation.php" afterPath="$PROJECT_DIR$/Runtime/SysCurrent/web_config_syslocation.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Runtime/SysCurrent/wx_menu_syslocation.php" afterPath="$PROJECT_DIR$/Runtime/SysCurrent/wx_menu_syslocation.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Runtime/SysCurrent/wx_robot_syslocation.php" afterPath="$PROJECT_DIR$/Runtime/SysCurrent/wx_robot_syslocation.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LQapps/Admin/Lang/zh-cn.php" afterPath="$PROJECT_DIR$/LQapps/Admin/Lang/zh-cn.php" />
-      <change type="MOVED" beforePath="E:\Ooooh\WebSite\games\LQapps\Admin\Controller\ProductController.class.php" afterPath="$PROJECT_DIR$/LQapps/Admin/Controller/RoomCardController.class.php" />
-      <change type="MOVED" beforePath="E:\Ooooh\WebSite\games\LQapps\Admin\View\default\HdOrderService\index.html" afterPath="$PROJECT_DIR$/LQapps/Admin/View/default/RoomHarging/index.html" />
-      <change type="MOVED" beforePath="E:\Ooooh\WebSite\games\LQapps\Admin\View\default\HdOrder\index.html" afterPath="$PROJECT_DIR$/LQapps/Admin/View/default/RoomCard/index.html" />
-      <change type="MOVED" beforePath="E:\Ooooh\WebSite\games\Runtime\Data\_theone\demo_jyly.lq_admin.php" afterPath="$PROJECT_DIR$/Runtime/Data/_theone/games.lq_admin.php" />
-      <change type="MOVED" beforePath="E:\Ooooh\WebSite\games\Runtime\Data\_theone\demo_jyly.lq_admin_log.php" afterPath="$PROJECT_DIR$/Runtime/Data/_theone/games.lq_admin_log.php" />
-      <change type="MOVED" beforePath="E:\Ooooh\WebSite\games\Runtime\Data\_theone\demo_jyly.lq_member.php" afterPath="$PROJECT_DIR$/Runtime/Data/_theone/games.lq_member.php" />
-      <change type="MOVED" beforePath="E:\Ooooh\WebSite\games\Runtime\Data\_theone\demo_jyly.lq_member_log.php" afterPath="$PROJECT_DIR$/Runtime/Data/_theone/games.lq_member_log.php" />
-      <change type="MOVED" beforePath="E:\Ooooh\WebSite\games\Runtime\Data\_theone\demo_jyly.lq_system_menu.php" afterPath="$PROJECT_DIR$/Runtime/Data/_theone/games.lq_system_menu.php" />
     </list>
     <ignored path="games.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -212,88 +51,91 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="RoomCardController.class.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/LQapps/Admin/Controller/RoomCardController.class.php">
+      <file leaf-file-name="MemberModel.class.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/LQapps/Member/Model/MemberModel.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="25.0" vertical-offset="2400" max-vertical-offset="6700">
-              <caret line="32" column="50" selection-start-line="32" selection-start-column="50" selection-end-line="32" selection-end-column="50" />
+            <state vertical-scroll-proportion="-8.671875" vertical-offset="4445" max-vertical-offset="22700">
+              <caret line="202" column="67" selection-start-line="202" selection-start-column="67" selection-end-line="202" selection-end-column="67" />
               <folding>
-                <element signature="e#56#77#0#PHP" expanded="true" />
+                <marker date="1515060753829" expanded="true" signature="23260:23382" placeholder="DELETE FROM ..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RoomHargingController.class.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/LQapps/Admin/Controller/RoomHargingController.class.php">
+      <file leaf-file-name="MemberApi.class.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/LQapps/Member/Api/MemberApi.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.294118" vertical-offset="0" max-vertical-offset="6600">
-              <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+            <state vertical-scroll-proportion="-4.453125" vertical-offset="1790" max-vertical-offset="10550">
+              <caret line="86" column="28" selection-start-line="86" selection-start-column="23" selection-end-line="86" selection-end-column="28" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MemberController.class.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/LQapps/Admin/Controller/MemberController.class.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.2259887" vertical-offset="2625" max-vertical-offset="12875">
+              <caret line="112" column="162" selection-start-line="112" selection-start-column="162" selection-end-line="112" selection-end-column="162" />
               <folding>
-                <element signature="e#56#77#0#PHP" expanded="true" />
+                <element signature="e#53#74#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ProductModel.class.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/LQapps/Api/Model/ProductModel.class.php">
+      <file leaf-file-name="function.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/LQapps/Common/Common/function.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.39548022" vertical-offset="2325" max-vertical-offset="5750">
-              <caret line="103" column="75" selection-start-line="103" selection-start-column="75" selection-end-line="103" selection-end-column="75" />
+            <state vertical-scroll-proportion="1.9117647" vertical-offset="41315" max-vertical-offset="42675">
+              <caret line="1650" column="57" selection-start-line="1650" selection-start-column="57" selection-end-line="1650" selection-end-column="57" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="config.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/LQapps/Common/Conf/config.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-7.03125" vertical-offset="4125" max-vertical-offset="11800">
+              <caret line="183" column="28" selection-start-line="183" selection-start-column="28" selection-end-line="183" selection-end-column="28" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-9.0" vertical-offset="519" max-vertical-offset="1675">
+              <caret line="40" column="8" selection-start-line="40" selection-start-column="8" selection-end-line="40" selection-end-column="8" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="PublicController.class.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/LQapps/Api/Controller/PublicController.class.php">
+        <entry file="file://$PROJECT_DIR$/LQapps/Admin/Controller/PublicController.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.109375" vertical-offset="565" max-vertical-offset="5775">
-              <caret line="38" column="63" selection-start-line="38" selection-start-column="63" selection-end-line="38" selection-end-column="63" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/LQapps/Admin/View/default/RoomHarging/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.294118" vertical-offset="3150" max-vertical-offset="4525">
-              <caret line="140" column="77" selection-start-line="140" selection-start-column="77" selection-end-line="140" selection-end-column="77" />
+            <state vertical-scroll-proportion="-2.109375" vertical-offset="9990" max-vertical-offset="12800">
+              <caret line="413" column="29" selection-start-line="413" selection-start-column="15" selection-end-line="413" selection-end-column="29" />
               <folding>
-                <element signature="n#style#0;n#th#1;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+                <marker date="1514970565674" expanded="true" signature="3700:3862" placeholder="INSERT INTO ..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RoomCardModel.class.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/LQapps/Admin/Model/RoomCardModel.class.php">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/LQapps/Admin/View/default/Member/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.2941175" vertical-offset="395" max-vertical-offset="2200">
-              <caret line="23" column="41" selection-start-line="23" selection-start-column="41" selection-end-line="23" selection-end-column="41" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RoomHargingModel.class.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/LQapps/Admin/Model/RoomHargingModel.class.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-15.441176" vertical-offset="300" max-vertical-offset="2100">
-              <caret line="33" column="70" selection-start-line="33" selection-start-column="70" selection-end-line="33" selection-end-column="70" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PublicModel.class.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/LQapps/Admin/Model/PublicModel.class.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.015625" vertical-offset="6665" max-vertical-offset="7750">
-              <caret line="288" column="113" selection-start-line="288" selection-start-column="100" selection-end-line="288" selection-end-column="113" />
-              <folding />
+            <state vertical-scroll-proportion="-15.0" vertical-offset="2190" max-vertical-offset="7225">
+              <caret line="108" column="0" selection-start-line="108" selection-start-column="0" selection-end-line="108" selection-end-column="0" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#div#0;n#div#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#th#3;n#tr#0;n#thead#0;n#table#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -302,9 +144,6 @@
   </component>
   <component name="FrameworkCommandLineHistory">
     <commandsHistory>
-      <command text="git add -A" />
-      <command text="git commit -m 'master 1'" />
-      <command text="git branch " />
       <command text="git checkout dev" />
       <command text="git merge dev" />
       <command text="git add -A" />
@@ -327,6 +166,9 @@
       <command text="git checkout dev" />
       <command text="git merge dev" />
       <command text="git rm .idea/scopes/scope_settings.xml" />
+      <command text="gti add -A" />
+      <command text="git add -A" />
+      <command text="git commit -m '20180103'" />
     </commandsHistory>
   </component>
   <component name="Git.Settings">
@@ -336,12 +178,8 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/LQapps/Member/Api/MemberApi.class.php" />
-        <option value="$PROJECT_DIR$/LQapps/Member/Model/MemberModel.class.php" />
-        <option value="$PROJECT_DIR$/LQapps/Api/Controller/MemberController.class.php" />
         <option value="$PROJECT_DIR$/LQapps/Common/Conf/dbconn.php" />
         <option value="$PROJECT_DIR$/LQapps/Api/Controller/HdController.class.php" />
-        <option value="$PROJECT_DIR$/LQapps/Common/Conf/config.php" />
-        <option value="$PROJECT_DIR$/LQapps/Common/Common/function.php" />
         <option value="$PROJECT_DIR$/Runtime/SysCurrent/room_data_sys_current.php" />
         <option value="$PROJECT_DIR$/LQapps/Admin/Model/SystemMenuModel.class.php" />
         <option value="$PROJECT_DIR$/LQapps/Admin/Controller/IndexController.class.php" />
@@ -354,6 +192,16 @@
         <option value="$PROJECT_DIR$/LQapps/Admin/Controller/RoomHargingController.class.php" />
         <option value="$PROJECT_DIR$/LQapps/Admin/Model/RoomHargingModel.class.php" />
         <option value="$PROJECT_DIR$/LQapps/Admin/View/default/RoomHarging/index.html" />
+        <option value="$PROJECT_DIR$/LQapps/Admin/Controller/ArticleController.class.php" />
+        <option value="$PROJECT_DIR$/LQapps/Common/LQLibs/Util/Page.class.php" />
+        <option value="$PROJECT_DIR$/Public/Static/css/common.css" />
+        <option value="$PROJECT_DIR$/LQapps/Api/Controller/ProductController.class.php" />
+        <option value="$PROJECT_DIR$/LQapps/Admin/View/default/Member/index.html" />
+        <option value="$PROJECT_DIR$/LQapps/Common/Conf/config.php" />
+        <option value="$PROJECT_DIR$/LQapps/Api/Controller/MemberController.class.php" />
+        <option value="$PROJECT_DIR$/LQapps/Member/Model/MemberModel.class.php" />
+        <option value="$PROJECT_DIR$/LQapps/Common/Common/function.php" />
+        <option value="$PROJECT_DIR$/LQapps/Admin/Controller/MemberController.class.php" />
       </list>
     </option>
   </component>
@@ -390,6 +238,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -418,20 +267,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Runtime" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="games" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="games" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="LQapps" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -450,61 +285,12 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Common" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="games" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="games" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LQapps" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Common" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LQLibs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="games" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="games" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LQapps" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Common" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LQLibs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Util" />
+              <option name="myItemId" value="Ucenter" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -518,6 +304,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Ooooh\WebSite\games\Public\Static\images" />
       <recent name="E:\Ooooh\WebSite\games\LQapps\Admin\Controller" />
       <recent name="E:\Ooooh\WebSite\games\LQapps\Admin\View\default" />
       <recent name="E:\Ooooh\WebSite\games\LQapps\Admin\Model" />
@@ -539,6 +326,9 @@
       <BehatRunner />
       <method />
     </configuration>
+    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
+      <method />
+    </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
       <node-options />
       <gulpfile />
@@ -546,9 +336,6 @@
       <arguments />
       <pass-parent-envs>true</pass-parent-envs>
       <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
       <method />
     </configuration>
     <list size="0" />
@@ -573,23 +360,23 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32911393" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18489583" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32911393" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32911393" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Command Line Tools Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23417722" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Command Line Tools Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30063292" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -613,19 +400,10 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/LQapps/Common/Conf/config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="8075" max-vertical-offset="10675">
-          <caret line="323" column="0" selection-start-line="323" selection-start-column="0" selection-end-line="323" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/LQapps/Common/Conf/dbconn.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="125" max-vertical-offset="450">
           <caret line="5" column="21" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="21" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -633,13 +411,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="12300">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#487#508#0#PHP" expanded="true" />
-            <marker date="1514891076305" expanded="true" signature="-1:-1" placeholder="SELECT DISTI..." />
-            <marker date="1514891076305" expanded="true" signature="-1:-1" placeholder="SELECT DISTI..." />
-            <marker date="1514891076305" expanded="true" signature="-1:-1" placeholder="SELECT DISTI..." />
-            <marker date="1514891076305" expanded="true" signature="-1:-1" placeholder="SELECT DISTI..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -655,13 +426,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="325">
           <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LQapps/Api/Conf/config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="919">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -695,21 +459,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/LQapps/Member/Api/MemberApi.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33333334" vertical-offset="1340" max-vertical-offset="10550">
-          <caret line="68" column="31" selection-start-line="68" selection-start-column="20" selection-end-line="68" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LQapps/Member/Api/Api.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5762712" vertical-offset="365" max-vertical-offset="1250">
-          <caret line="37" column="23" selection-start-line="37" selection-start-column="23" selection-end-line="37" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/LQapps/Common/Conf/Api.config.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.2259887" vertical-offset="0" max-vertical-offset="885">
@@ -717,24 +466,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/LQapps/Member/Model/MemberModel.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.1543943" vertical-offset="11420" max-vertical-offset="23075">
-          <caret line="459" column="36" selection-start-line="459" selection-start-column="36" selection-end-line="459" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/LQapps/Api/Controller/HdController.class.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.16949153" vertical-offset="1275" max-vertical-offset="12600">
           <caret line="69" column="14" selection-start-line="69" selection-start-column="14" selection-end-line="69" selection-end-column="14" />
-          <folding>
-            <element signature="e#487#508#0#PHP" expanded="true" />
-            <marker date="1514891076305" expanded="true" signature="-1:-1" placeholder="SELECT DISTI..." />
-            <marker date="1514891076305" expanded="true" signature="-1:-1" placeholder="SELECT DISTI..." />
-            <marker date="1514891076305" expanded="true" signature="-1:-1" placeholder="SELECT DISTI..." />
-            <marker date="1514891076305" expanded="true" signature="-1:-1" placeholder="SELECT DISTI..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -742,7 +477,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.14124294" vertical-offset="0" max-vertical-offset="885">
           <caret line="5" column="21" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="21" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -750,7 +484,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2275">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -758,17 +491,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.096045196" vertical-offset="690" max-vertical-offset="2400">
           <caret line="43" column="25" selection-start-line="43" selection-start-column="20" selection-end-line="43" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LQapps/Api/Controller/MemberController.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.1871345" vertical-offset="3465" max-vertical-offset="33400">
-          <caret line="142" column="54" selection-start-line="142" selection-start-column="41" selection-end-line="142" selection-end-column="54" />
-          <folding>
-            <element signature="e#6#433#0#PHP" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -776,15 +498,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.9322034" vertical-offset="825" max-vertical-offset="2150">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3457627" vertical-offset="469" max-vertical-offset="1675">
-          <caret line="38" column="8" selection-start-line="38" selection-start-column="8" selection-end-line="38" selection-end-column="8" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -800,9 +513,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33847982" vertical-offset="715" max-vertical-offset="2750">
           <caret line="41" column="23" selection-start-line="41" selection-start-column="21" selection-end-line="41" selection-end-column="23" />
-          <folding>
-            <element signature="e#6#458#0#PHP" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -810,7 +520,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.53801167" vertical-offset="5040" max-vertical-offset="7650">
           <caret line="222" column="16" selection-start-line="222" selection-start-column="16" selection-end-line="222" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -818,23 +527,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2125">
           <caret line="0" column="16" selection-start-line="0" selection-start-column="16" selection-end-line="0" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LQapps/Common/Conf/config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.609375" vertical-offset="10158" max-vertical-offset="11000">
-          <caret line="413" column="14" selection-start-line="413" selection-start-column="5" selection-end-line="413" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LQapps/Admin/Controller/ArticleController.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.671875" vertical-offset="4140" max-vertical-offset="7000">
-          <caret line="177" column="62" selection-start-line="177" selection-start-column="12" selection-end-line="177" selection-end-column="62" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -842,7 +534,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.39181286" vertical-offset="690" max-vertical-offset="3700">
           <caret line="42" column="37" selection-start-line="42" selection-start-column="37" selection-end-line="42" selection-end-column="37" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -850,17 +541,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-5.5080276" vertical-offset="4803" max-vertical-offset="5675">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1495415580000" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LQapps/Common/Common/function.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.40617576" vertical-offset="39933" max-vertical-offset="40775">
-          <caret line="1593" column="17" selection-start-line="1593" selection-start-column="17" selection-end-line="1593" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -868,7 +548,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-1.0294118" vertical-offset="265" max-vertical-offset="1150">
           <caret line="12" column="120" selection-start-line="12" selection-start-column="120" selection-end-line="12" selection-end-column="120" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -876,23 +555,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-8.359375" vertical-offset="3240" max-vertical-offset="4700">
           <caret line="151" column="39" selection-start-line="151" selection-start-column="33" selection-end-line="151" selection-end-column="39" />
-          <folding>
-            <element signature="n#style#0;n#th#0;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#th#1;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#th#3;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#th#8;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#th#9;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LQapps/Admin/Controller/PublicController.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.59375" vertical-offset="4070" max-vertical-offset="12625">
-          <caret line="180" column="55" selection-start-line="180" selection-start-column="38" selection-end-line="180" selection-end-column="55" />
-          <folding>
-            <marker date="1514970565674" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -900,7 +562,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-6.015625" vertical-offset="6665" max-vertical-offset="7750">
           <caret line="288" column="113" selection-start-line="288" selection-start-column="100" selection-end-line="288" selection-end-column="113" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -908,13 +569,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.39548022" vertical-offset="0" max-vertical-offset="2550">
           <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/LQapps/Admin/Model/RoomCardModel.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.2941175" vertical-offset="395" max-vertical-offset="2200">
+        <state vertical-scroll-proportion="0.0" vertical-offset="395" max-vertical-offset="2200">
           <caret line="23" column="41" selection-start-line="23" selection-start-column="41" selection-end-line="23" selection-end-column="41" />
           <folding />
         </state>
@@ -922,7 +582,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/LQapps/Admin/Model/RoomHargingModel.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-15.441176" vertical-offset="300" max-vertical-offset="2100">
+        <state vertical-scroll-proportion="0.0" vertical-offset="300" max-vertical-offset="2100">
           <caret line="33" column="70" selection-start-line="33" selection-start-column="70" selection-end-line="33" selection-end-column="70" />
           <folding />
         </state>
@@ -932,26 +592,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-2.6158192" vertical-offset="2315" max-vertical-offset="3200">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/LQapps/Admin/View/default/RoomHarging/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.294118" vertical-offset="3150" max-vertical-offset="4525">
+        <state vertical-scroll-proportion="0.0" vertical-offset="3500" max-vertical-offset="4400">
           <caret line="140" column="77" selection-start-line="140" selection-start-column="77" selection-end-line="140" selection-end-column="77" />
           <folding>
-            <element signature="n#style#0;n#th#1;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LQapps/Admin/Controller/RoomCardController.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="25.0" vertical-offset="2400" max-vertical-offset="6700">
-          <caret line="32" column="50" selection-start-line="32" selection-start-column="50" selection-end-line="32" selection-end-column="50" />
-          <folding>
-            <element signature="e#56#77#0#PHP" expanded="true" />
+            <element signature="n#style#0;n#th#1;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#form#0;n#div#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -960,29 +609,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.14124294" vertical-offset="375" max-vertical-offset="5900">
           <caret line="20" column="51" selection-start-line="20" selection-start-column="42" selection-end-line="20" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LQapps/Api/Controller/PublicController.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.109375" vertical-offset="565" max-vertical-offset="5775">
-          <caret line="38" column="63" selection-start-line="38" selection-start-column="63" selection-end-line="38" selection-end-column="63" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LQapps/Api/Controller/ProductController.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.101695" vertical-offset="2025" max-vertical-offset="5125">
-          <caret line="133" column="29" selection-start-line="133" selection-start-column="29" selection-end-line="133" selection-end-column="29" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/LQapps/Admin/Controller/RoomHargingController.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.294118" vertical-offset="0" max-vertical-offset="6600">
+        <state vertical-scroll-proportion="0.0" vertical-offset="350" max-vertical-offset="6550">
           <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
           <folding>
             <element signature="e#56#77#0#PHP" expanded="true" />
@@ -990,11 +622,182 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/LQapps/Api/Controller/PublicController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="565" max-vertical-offset="5750">
+          <caret line="38" column="63" selection-start-line="38" selection-start-column="63" selection-end-line="38" selection-end-column="63" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/LQapps/Api/Model/ProductModel.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.39548022" vertical-offset="2325" max-vertical-offset="5750">
-          <caret line="103" column="75" selection-start-line="103" selection-start-column="75" selection-end-line="103" selection-end-column="75" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="2300" max-vertical-offset="5575">
+          <caret line="92" column="42" selection-start-line="92" selection-start-column="42" selection-end-line="92" selection-end-column="42" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LQapps/Common/LQLibs/Util/Page.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.19774011" vertical-offset="825" max-vertical-offset="9825">
+          <caret line="48" column="69" selection-start-line="48" selection-start-column="69" selection-end-line="48" selection-end-column="69" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LQapps/Admin/Controller/RoomCardController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-16.17647" vertical-offset="750" max-vertical-offset="6750">
+          <caret line="52" column="8" selection-start-line="52" selection-start-column="8" selection-end-line="55" selection-end-column="9" />
+          <folding>
+            <element signature="e#56#77#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LQapps/Admin/Controller/ArticleController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.0" vertical-offset="875" max-vertical-offset="6825">
+          <caret line="37" column="30" selection-start-line="37" selection-start-column="30" selection-end-line="37" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Public/Static/css/common.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.40805224" vertical-offset="25" max-vertical-offset="12700">
+          <caret line="15" column="83" selection-start-line="15" selection-start-column="77" selection-end-line="15" selection-end-column="83" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LQapps/Api/Controller/ProductController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="9.558824" vertical-offset="2800" max-vertical-offset="5125">
+          <caret line="112" column="43" selection-start-line="112" selection-start-column="43" selection-end-line="112" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LQapps/Member/Api/Api.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3457627" vertical-offset="144" max-vertical-offset="1250">
+          <caret line="20" column="14" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LQapps/Common/LQPublic/Controller/Base.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.16271186" vertical-offset="469" max-vertical-offset="8000">
+          <caret line="19" column="20" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LQapps/Admin/Controller/PublicController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.109375" vertical-offset="9990" max-vertical-offset="12800">
+          <caret line="413" column="29" selection-start-line="413" selection-start-column="15" selection-end-line="413" selection-end-column="29" />
+          <folding>
+            <marker date="1514970565674" expanded="true" signature="3700:3862" placeholder="INSERT INTO ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LQapps/Admin/View/default/Member/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-15.0" vertical-offset="2190" max-vertical-offset="7225">
+          <caret line="108" column="0" selection-start-line="108" selection-start-column="0" selection-end-line="108" selection-end-column="0" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#div#0;n#div#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#th#3;n#tr#0;n#thead#0;n#table#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LQapps/Api/Conf/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="885">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../SetUp/www.1jianfa.com/LQapps/Common/Conf/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.47953215" vertical-offset="4515" max-vertical-offset="13075">
+          <caret line="197" column="6" selection-start-line="190" selection-start-column="4" selection-end-line="197" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LQapps/Api/Controller/MemberController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.17514125" vertical-offset="3495" max-vertical-offset="32675">
+          <caret line="157" column="28" selection-start-line="157" selection-start-column="28" selection-end-line="157" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.0" vertical-offset="519" max-vertical-offset="1675">
+          <caret line="40" column="8" selection-start-line="40" selection-start-column="8" selection-end-line="40" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LQapps/Common/Conf/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.03125" vertical-offset="4125" max-vertical-offset="11800">
+          <caret line="183" column="28" selection-start-line="183" selection-start-column="28" selection-end-line="183" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LQapps/Common/LQLibs/Util/HxCall.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.1977401" vertical-offset="290" max-vertical-offset="2150">
+          <caret line="54" column="10" selection-start-line="54" selection-start-column="10" selection-end-line="54" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LQapps/Common/Common/function.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.9117647" vertical-offset="41315" max-vertical-offset="42675">
+          <caret line="1650" column="57" selection-start-line="1650" selection-start-column="57" selection-end-line="1650" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LQapps/Member/Api/MemberApi.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.453125" vertical-offset="1790" max-vertical-offset="10550">
+          <caret line="86" column="28" selection-start-line="86" selection-start-column="23" selection-end-line="86" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LQapps/Member/Model/MemberModel.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.671875" vertical-offset="4445" max-vertical-offset="22700">
+          <caret line="202" column="67" selection-start-line="202" selection-start-column="67" selection-end-line="202" selection-end-column="67" />
+          <folding>
+            <marker date="1515060753829" expanded="true" signature="23260:23382" placeholder="DELETE FROM ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LQapps/Admin/Controller/MemberController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2259887" vertical-offset="2625" max-vertical-offset="12875">
+          <caret line="112" column="162" selection-start-line="112" selection-start-column="162" selection-end-line="112" selection-end-column="162" />
+          <folding>
+            <element signature="e#53#74#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

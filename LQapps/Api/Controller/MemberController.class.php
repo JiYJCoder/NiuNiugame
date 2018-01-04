@@ -36,7 +36,7 @@ class MemberController extends PublicController
         $this->D_LOANAPPLY = D("Api/Loanapply");//贷款接口实例化
         $this->D_SMS = D("Api/SmsLog");//接口短信实例化
         $this->model_region = M("region");
-        $this->easemob_prefix = 'easemob_';//环信帐号前缀
+        $this->easemob_prefix = 'easemobwjb_';//环信帐号前缀
         $this->easemob_password = '123456';//环信密码
 
 

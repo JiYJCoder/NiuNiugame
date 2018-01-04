@@ -175,6 +175,15 @@ $config_array = array(
         'author_phone' => '13425647971',
     ),
 
+    //环信配置
+    'EASEMOB'=>array(
+        'app_key' => '1193161215115877#kefuchannelapp32922',//YOUR_CLIENT_ID
+        'client_id' => 'YXA6UgM7sMJzEeaJ_TsXq3fCCw',//YOUR_CLIENT_ID
+        'client_secret' => 'YXA6gwib0OIu_svsVCmga9o-S16xD_k',//YOUR_CLIENT_SECRET
+        'url' => "https://a1.easemob.com/1193161215115877/kefuchannelapp32922",
+        'token_path' => STATIC_TEMP."token",
+    ),
+
     //微信配置
     'WECHAT' => array(
         'appid' => 'wx29dedd3e19a1aa33',//AppID(应用ID)
@@ -296,7 +305,21 @@ $config_array = array(
         'op_delete_checkbox' => '多记录删除',
         'article_agrees' => '文章点赞',
         'article_view' => '文章查看',
-        'upload_image' => '上传图片'
+        'upload_image' => '上传图片',
+        /*行为流水记录操作*/
+        'buy_card' => '购买房卡',
+        'use_card' => '消费房卡',
+        'make_friends' => '添加好友',
+        'delete_friends' => '删除好友',
+        'modify_friend_name' => '修改好友备注',
+        'create_room' => '创建房间',
+        'delete_room' => '解散房间',
+        'join_room' => '用户加入房间',
+        'invite_member' => '邀请进入房间',
+        'kick_member' => '踢出房间',
+        'points_add' => '给用户加分',
+        'points_dec' => '给用户减分',
+        'send_notice' => '发放通知公告',
     ),
     //会员积分值
     'LQ_MEMBER_INTEGRATION' => array(

@@ -59,19 +59,17 @@
                     <button class="btn btn-default" id="listSearch"><i class="fa fa-search"></i> 搜索</button>
                     <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><span class="caret"></span></button>
                     <ul class="dropdown-menu dropdown-menu-right" role="menu">
-                      <li><a href="javascript:;" onclick="$('#fkeyword').attr('placeholder','精准搜索：请输入关键字');$('#keymode').val(1);">精准搜索</a></li>
-                      <li><a href="javascript:;" onclick="$('#fkeyword').attr('placeholder','模糊搜索：请输入关键字');$('#keymode').val(0);">模糊搜索</a></li>
+                      <li><a href="javascript:;" onclick="$('#fkeyword').attr('placeholder','精准搜索：请输入关键字');$('#keymode').val(1);">模糊搜索</a></li>
+                      <li><a href="javascript:;" onclick="$('#fkeyword').attr('placeholder','模糊搜索：请输入关键字');$('#keymode').val(0);">精准搜索</a></li>
                     </ul>
                   </div>
                 </div>
               </div>
             </div>
             <div class="form-group">
-              <label class="col-xs-12 col-sm-2 col-md-2 col-lg-1 control-label">角色/邦定/城市</label>
+              <label class="col-xs-12 col-sm-2 col-md-2 col-lg-1 control-label">邦定/状态</label>
               <div class="col-sm-8 col-lg-10 col-xs-12">
-                <div class="col-lg-3" style="padding:0px;"><select class="form-control" id="role">{$zl_role_str}</select></div>
-                <div class="col-lg-3"><select class="form-control" id="bind">{$bind_str}</select></div>
-                <div class="col-lg-3"><select class="form-control" id="city">{$city_str}</select></div>
+                <div class="col-lg-3" style="padding:0px;"><select class="form-control" id="bind">{$bind_str}</select></div>
                 <div class="col-lg-3"><select class="form-control" id="use">{$use_str}</select></div>
               </div>
             </div>
@@ -97,7 +95,6 @@
 						var open_time=$("#open_time").val();
 						var role=$("#role").val();
 						var bind=$("#bind").val();
-						var city=$("#city").val();
 						var use=$("#use").val();
 						if(fkeyword!='{$keywordDefault}'||role||bind||city||use||open_time==1){
 							var searchurl=$("#thinkphpurl").val()+'index/s/';
@@ -109,7 +106,6 @@
 							urlpara+="time_end/"+encodeURIComponent($("#time_end").val())+"/";								
 							if(role) urlpara+="role/"+role+"/";
 							if(bind) urlpara+="bind/"+bind+"/";
-							if(city) urlpara+="city/"+city+"/";
 							if(use) urlpara+="use/"+use+"/";
 							location.href=searchurl+base64encode(urlpara);
 						}else{
@@ -117,7 +113,11 @@
 						}  
                     });			
                 });
-            });
+
+                $("#listSearch").click(function(){
+
+                    })
+                });
             </script>
 
     <div class="row">
@@ -212,8 +212,8 @@
                     <th style="width:100px;">序号</th>
                     <th style="width:150px;">注册/修改时间</th>
                     <th style="width:320px;">ID/帐户名/昵称</th>
-                    <th>角色/设计师</th>
-                    <th>积分:消费/等级</th>
+                    <th>角色</th>
+                    <!--<th>积分:消费/等级</th>-->
                     <th>联系电话</th>
                     <th style="width:90px;">清零/邦定</th>
                     <th style="width:60px;">状态</th>
@@ -228,7 +228,7 @@
                       <td>{$data.zn_cdate|date="y-m-d H:i:s",###}<br>{$data.zn_mdate|date="y-m-d H:i:s",###}</td>
                       <td>{$data.id}/{$data.zc_account}/{$data.zc_nickname}</td>
                       <td>{$data.role_label}</td>
-                      <td>{$data.zn_pay_integration}/{$data.zn_rank_integration}/{$data.member_rank}</td>
+                      <!--<td>{$data.zn_pay_integration}/{$data.zn_rank_integration}/{$data.member_rank}</td>-->
                       <td>{$data.zc_mobile}</td>
                       <td>
                         <div class="btn-group"> 
@@ -245,11 +245,7 @@
                       <td>{$data.visible_label}</td>
                       <td class="manage-menu list-os-a">
                       <a href="javascript:;" title="查看会员帐单明细"><i class="fa fa-list-alt"></i></a>
-                      <if condition="$data.manage eq '1'">
-                      <a href="__CONTROLLER__/authLogin/tnid/{$data.id}" title="授权管理" target="_blank"><i class="fa fa-desktop"></i></a>
-                      <else />
-                      <a href="javascript:void(0);" title="授权管理"><i class="fa fa-desktop ac_grey"></i></a>
-                      </if>
+                      <a href="__APP__/Room/index/tnid/{$data.id}" title="查看房间列表"><i class="fa fa-desktop"></i></a>
                       <a href="__CONTROLLER__/edit/tnid/{$data.id}" title="{:L("LABEL_OS_EDITID")}[{$data.id}]"><i class="fa fa-edit"></i></a>
 					  <a href="__CONTROLLER__/editPass/tnid/{$data.id}" title="{:L("LABEL_OS_MODPASS")}[{$data.zc_account}]"><i class="fa fa-lock"></i></a>
                       <a href="javascript:void(0);" class="myopStatus" val="{$data.zl_visible}" title="{:L("LABEL_OS_STATUS")}[{$data.id}]">{$data.visible_button}</a>

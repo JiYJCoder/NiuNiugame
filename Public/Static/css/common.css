@@ -13,7 +13,7 @@ a:focus{outline:none; -moz-outline:none}
 /*登录注册*/
 .login,.register{background:#3a3a3a url('../images/login-bg.jpg') no-repeat fixed; background-size:cover; -webkit-background-size:cover; -o-background-size:cover;padding-top:5em;}
 .login .logo,.register .logo{width:100%; text-align:center; margin-bottom:2em;}
-.login .logo a,.register .logo a{background:url('../images/logo.png') no-repeat; display:inline-block;width:420px;height:95px;margin-left:0 !important;}
+.login .logo a,.register .logo a{background:url('../images/logo.png') center center no-repeat;  display:inline-block;width:420px;height:95px;margin-left:0 !important; background-size: contain}
 .login .panel,.register .panel{padding:30px 15px;}
 .login i,.register i{color:#999999;}
 .login .footer,.register .footer{padding:2em 0;}
