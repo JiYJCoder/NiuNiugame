@@ -138,7 +138,7 @@ class MemberApi extends Api{
 	public function apiCacheInfo($mid, $is_username = false){
 		return $this->model->lqCacheInfo($mid, $is_username);
 	}	
-	//获取会员表某个字段（如昵称/头像）
+	//获取会员表某个字段（按id）
 	public function apiGetFieldByID($mid,$field = 'zc_nickname'){
 		return $this->model->lqGetFieldByID($mid,$field);
 	}

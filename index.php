@@ -1,11 +1,9 @@
 <?php  
 /*
-项目：狸想家【建誉集团】
-开发日期始于：20161108
-作者:国雾院theone(438675036@qq.com)、狸想家精英团队
+项目：牛牛游戏
+开发日期始于：2017.01.02
+作者:纪大师
 说明:基于 ThinkPHP3.2.3 框架开发, 应用入口文件
-家装:hd(home-decoration)
-管家:hk(house-keeper)
 */
 
 define("GZIP_ENABLE",function_exists ( 'ob_gzhandler'));
