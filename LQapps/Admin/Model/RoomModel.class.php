@@ -5,9 +5,8 @@ use Think\Model;
 class RoomModel extends PublicModel {
 	/* 用户模型自动验证 */
 	protected $_validate = array(
-		array('zc_title','require','标题必须填写',self::MUST_VALIDATE),
-		array('zc_title','1,100','文章标题在1~100个字符',self::MUST_VALIDATE,'length'),
-		array('zn_sort','0,65535','排序在0~65535之间',self::MUST_VALIDATE,'between'),
+		array('zc_title','require','房名必须填写',self::MUST_VALIDATE),
+		array('zc_title','1,100','房名在1~100个字符',self::MUST_VALIDATE,'length'),
 	);
 
 	/* 用户模型自动完成 */

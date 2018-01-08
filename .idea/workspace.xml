@@ -2,11 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c9819966-1c75-4b19-b026-2fc3e3a29c94" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/LQapps/Admin/Controller/RoomController.class.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/LQapps/Admin/Model/RoomModel.class.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/LQapps/Admin/View/default/Room/index.html" />
+      <change type="DELETED" beforePath="E:\Ooooh\WebSite\games\Runtime\Cache\Admin\883ee83be700e374a283571565c0e3f3.php" afterPath="" />
+      <change type="DELETED" beforePath="E:\Ooooh\WebSite\games\Runtime\Cache\Admin\ac6ee3ce918fcddafb3c4f70fee574d5.php" afterPath="" />
+      <change type="DELETED" beforePath="E:\Ooooh\WebSite\games\Runtime\Cache\Admin\d1464b061437b6a5bbfe3a27d27d2a00.php" afterPath="" />
+      <change type="DELETED" beforePath="E:\Ooooh\WebSite\games\Runtime\Cache\Admin\eec537cfacb6bf5a60c187018b70de93.php" afterPath="" />
+      <change type="DELETED" beforePath="E:\Ooooh\WebSite\games\Runtime\Cache\Admin\f60e3b0d8d1873a88f486578b327dc1c.php" afterPath="" />
+      <change type="DELETED" beforePath="E:\Ooooh\WebSite\games\Runtime\Data\_theone\games.lq_web_config.php" afterPath="" />
+      <change type="DELETED" beforePath="E:\Ooooh\WebSite\games\Runtime\Logs\Admin\18_01_04.log" afterPath="" />
+      <change type="DELETED" beforePath="E:\Ooooh\WebSite\games\Runtime\Logs\Admin\18_01_05.log" afterPath="" />
+      <change type="DELETED" beforePath="E:\Ooooh\WebSite\games\Runtime\Logs\Api\18_01_04.log" afterPath="" />
+      <change type="DELETED" beforePath="E:\Ooooh\WebSite\games\Runtime\Logs\Api\18_01_05.log" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Runtime/Logs/Admin/18_01_08.log" afterPath="$PROJECT_DIR$/Runtime/Logs/Admin/18_01_08.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Runtime/Logs/Api/18_01_08.log" afterPath="$PROJECT_DIR$/Runtime/Logs/Api/18_01_08.log" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Runtime/SysUser/1_3d449017ca18a3215ce3a146e6319f21.php" afterPath="$PROJECT_DIR$/Runtime/SysUser/1_3d449017ca18a3215ce3a146e6319f21.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LQapps/Admin/Controller/MemberController.class.php" afterPath="$PROJECT_DIR$/LQapps/Admin/Controller/MemberController.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LQapps/Admin/Controller/RoomController.class.php" afterPath="$PROJECT_DIR$/LQapps/Admin/Controller/RoomController.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LQapps/Admin/Model/RoomModel.class.php" afterPath="$PROJECT_DIR$/LQapps/Admin/Model/RoomModel.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Runtime/Array/SystemMenu.php" afterPath="$PROJECT_DIR$/Runtime/Array/SystemMenu.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Runtime/Array/ad_position.php" afterPath="$PROJECT_DIR$/Runtime/Array/ad_position.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LQapps/Common/Conf/config.php" afterPath="$PROJECT_DIR$/LQapps/Common/Conf/config.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Runtime/Data/_theone/games.lq_room.php" afterPath="$PROJECT_DIR$/Runtime/Data/_theone/games.lq_room.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Runtime/SysCurrent/room_data_sys_current.php" afterPath="$PROJECT_DIR$/Runtime/SysCurrent/room_data_sys_current.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Runtime/Array/sysmuen_tree.php" afterPath="$PROJECT_DIR$/Runtime/Array/sysmuen_tree.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Public/txt.txt" afterPath="$PROJECT_DIR$/Public/txt.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -33,11 +49,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="RoomController.class.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="RoomController.class.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/LQapps/Admin/Controller/RoomController.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.2542373" vertical-offset="150" max-vertical-offset="6775">
-              <caret line="15" column="46" selection-start-line="15" selection-start-column="46" selection-end-line="15" selection-end-column="46" />
+            <state vertical-scroll-proportion="-11.029411" vertical-offset="3675" max-vertical-offset="6800">
+              <caret line="162" column="64" selection-start-line="162" selection-start-column="64" selection-end-line="162" selection-end-column="64" />
               <folding>
                 <element signature="e#56#77#0#PHP" expanded="true" />
               </folding>
@@ -45,11 +61,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BankController.class.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/LQapps/Admin/Controller/BankController.class.php">
+      <file leaf-file-name="config.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/LQapps/Common/Conf/config.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.294118" vertical-offset="0" max-vertical-offset="3950">
-              <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.3502825" vertical-offset="8540" max-vertical-offset="12025">
+              <caret line="346" column="52" selection-start-line="346" selection-start-column="52" selection-end-line="346" selection-end-column="52" />
               <folding />
             </state>
           </provider>
@@ -58,8 +74,8 @@
       <file leaf-file-name="RoomModel.class.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/LQapps/Admin/Model/RoomModel.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.9411764" vertical-offset="0" max-vertical-offset="2200">
-              <caret line="4" column="10" selection-start-line="4" selection-start-column="10" selection-end-line="4" selection-end-column="10" />
+            <state vertical-scroll-proportion="23.529411" vertical-offset="1200" max-vertical-offset="2175">
+              <caret line="16" column="12" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
               <folding />
             </state>
           </provider>
@@ -68,7 +84,7 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/LQapps/Admin/View/default/Room/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="4625">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4575">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
@@ -132,15 +148,15 @@
         <option value="$PROJECT_DIR$/Public/Static/css/common.css" />
         <option value="$PROJECT_DIR$/LQapps/Api/Controller/ProductController.class.php" />
         <option value="$PROJECT_DIR$/LQapps/Admin/View/default/Member/index.html" />
-        <option value="$PROJECT_DIR$/LQapps/Common/Conf/config.php" />
         <option value="$PROJECT_DIR$/LQapps/Api/Controller/MemberController.class.php" />
         <option value="$PROJECT_DIR$/LQapps/Member/Model/MemberModel.class.php" />
         <option value="$PROJECT_DIR$/LQapps/Common/Common/function.php" />
         <option value="$PROJECT_DIR$/LQapps/Admin/Controller/MemberController.class.php" />
         <option value="$PROJECT_DIR$/../../SetUp/jingpai/Admin/Lib/Action/GiftlogAction.class.php" />
         <option value="$PROJECT_DIR$/../../SetUp/jingpai/Admin/Tpl/Giftlog/index.html" />
-        <option value="$PROJECT_DIR$/LQapps/Admin/Model/RoomModel.class.php" />
+        <option value="$PROJECT_DIR$/LQapps/Common/Conf/config.php" />
         <option value="$PROJECT_DIR$/LQapps/Admin/Controller/RoomController.class.php" />
+        <option value="$PROJECT_DIR$/LQapps/Admin/Model/RoomModel.class.php" />
       </list>
     </option>
   </component>
@@ -224,7 +240,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Ucenter" />
+              <option name="myItemId" value="Common" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -242,107 +258,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Admin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="games" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="games" />
+              <option name="myItemId" value="Common" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="LQapps" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Admin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="View" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="games" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="games" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LQapps" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Admin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="View" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="default" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="games" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="games" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LQapps" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Admin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="View" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="default" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Room" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="games" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="games" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LQapps" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Admin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Controller" />
+              <option name="myItemId" value="Conf" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -422,17 +342,17 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18489583" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32911393" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20991561" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32911393" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Command Line Tools Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5886076" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -457,20 +377,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/LQapps/Api/Controller/HdController.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.16949153" vertical-offset="1275" max-vertical-offset="12600">
-          <caret line="69" column="14" selection-start-line="69" selection-start-column="14" selection-end-line="69" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LQapps/Common/Conf/dbconn.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.14124294" vertical-offset="0" max-vertical-offset="885">
-          <caret line="5" column="21" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/LQapps/Api/Model/SmsLogModel.class.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2275">
@@ -632,13 +538,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/LQapps/Admin/Controller/ArticleController.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0" vertical-offset="875" max-vertical-offset="6825">
-          <caret line="37" column="30" selection-start-line="37" selection-start-column="30" selection-end-line="37" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Public/Static/css/common.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.40805224" vertical-offset="25" max-vertical-offset="12700">
@@ -664,7 +563,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.16271186" vertical-offset="469" max-vertical-offset="8000">
           <caret line="19" column="20" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -689,21 +587,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/LQapps/Api/Controller/MemberController.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.17514125" vertical-offset="3495" max-vertical-offset="32675">
-          <caret line="157" column="28" selection-start-line="157" selection-start-column="28" selection-end-line="157" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LQapps/Common/Conf/config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="4575" max-vertical-offset="11575">
-          <caret line="183" column="28" selection-start-line="183" selection-start-column="28" selection-end-line="183" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/LQapps/Common/LQLibs/Util/HxCall.class.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="1.1977401" vertical-offset="290" max-vertical-offset="2150">
@@ -723,7 +606,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="2075" max-vertical-offset="10525">
           <caret line="86" column="28" selection-start-line="86" selection-start-column="23" selection-end-line="86" selection-end-column="28" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -731,9 +613,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="5000" max-vertical-offset="22625">
           <caret line="202" column="67" selection-start-line="202" selection-start-column="67" selection-end-line="202" selection-end-column="67" />
-          <folding>
-            <marker date="1515060753829" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -741,9 +620,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="10175" max-vertical-offset="12400">
           <caret line="407" column="107" selection-start-line="407" selection-start-column="88" selection-end-line="407" selection-end-column="107" />
-          <folding>
-            <element signature="e#53#74#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -779,9 +655,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.53672314" vertical-offset="8250" max-vertical-offset="12800">
           <caret line="352" column="12" selection-start-line="352" selection-start-column="12" selection-end-line="352" selection-end-column="12" />
-          <folding>
-            <marker date="1514970565674" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -789,14 +663,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3457627" vertical-offset="519" max-vertical-offset="1675">
           <caret line="40" column="8" selection-start-line="40" selection-start-column="8" selection-end-line="40" selection-end-column="8" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/LQapps/Admin/Model/RoomModel.class.php">
+    <entry file="file://$PROJECT_DIR$/LQapps/Admin/Model/AdListModel.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.9411764" vertical-offset="0" max-vertical-offset="2200">
-          <caret line="4" column="10" selection-start-line="4" selection-start-column="10" selection-end-line="4" selection-end-column="10" />
+        <state vertical-scroll-proportion="-0.16949153" vertical-offset="150" max-vertical-offset="2600">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LQapps/Admin/Controller/BankController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="350" max-vertical-offset="3950">
+          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -809,29 +689,73 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/LQapps/Admin/Model/AdListModel.class.php">
+    <entry file="file://$PROJECT_DIR$/LQapps/Api/Controller/MemberController.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.16949153" vertical-offset="150" max-vertical-offset="2600">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state vertical-scroll-proportion="1.5310735" vertical-offset="2295" max-vertical-offset="32675">
+          <caret line="157" column="28" selection-start-line="157" selection-start-column="28" selection-end-line="157" selection-end-column="28" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/LQapps/Admin/Controller/BankController.class.php">
+    <entry file="file://$PROJECT_DIR$/LQapps/Common/LQLibs/Util/BootstrapForm.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.294118" vertical-offset="0" max-vertical-offset="3950">
-          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+        <state vertical-scroll-proportion="-37.484398" vertical-offset="25227" max-vertical-offset="25900">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1514887416091" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1514887416091" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1514887416091" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1514887416091" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1514887416091" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1514887416091" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1514887416091" expanded="true" signature="-1:-1" placeholder="{&quot;type&quot;: 2...}" />
+            <marker date="1514887416091" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1514887416091" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1514887416091" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1514887416091" expanded="true" signature="-1:-1" placeholder="{&quot;type&quot;: 2...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LQapps/Admin/Model/RoomModel.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="23.529411" vertical-offset="1200" max-vertical-offset="2175">
+          <caret line="16" column="12" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LQapps/Admin/Controller/ArticleController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3440367" vertical-offset="200" max-vertical-offset="6750">
+          <caret line="21" column="125" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="125" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LQapps/Api/Controller/DocumentController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="919">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/LQapps/Admin/Controller/RoomController.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2542373" vertical-offset="150" max-vertical-offset="6775">
-          <caret line="15" column="46" selection-start-line="15" selection-start-column="46" selection-end-line="15" selection-end-column="46" />
+        <state vertical-scroll-proportion="-11.029411" vertical-offset="3675" max-vertical-offset="6800">
+          <caret line="162" column="64" selection-start-line="162" selection-start-column="64" selection-end-line="162" selection-end-column="64" />
           <folding>
             <element signature="e#56#77#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LQapps/Common/Conf/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3502825" vertical-offset="8540" max-vertical-offset="12025">
+          <caret line="346" column="52" selection-start-line="346" selection-start-column="52" selection-end-line="346" selection-end-column="52" />
+          <folding />
         </state>
       </provider>
     </entry>

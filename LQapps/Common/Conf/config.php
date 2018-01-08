@@ -176,12 +176,12 @@ $config_array = array(
     ),
 
     //环信配置
-    'EASEMOB'=>array(
+    'EASEMOB' => array(
         'app_key' => '1193161215115877#kefuchannelapp32922',//YOUR_CLIENT_ID
         'client_id' => 'YXA6UgM7sMJzEeaJ_TsXq3fCCw',//YOUR_CLIENT_ID
         'client_secret' => 'YXA6gwib0OIu_svsVCmga9o-S16xD_k',//YOUR_CLIENT_SECRET
         'url' => "https://a1.easemob.com/1193161215115877/kefuchannelapp32922",
-        'token_path' => STATIC_TEMP."token",
+        'token_path' => STATIC_TEMP . "token",
     ),
 
     //微信配置
@@ -337,6 +337,15 @@ $config_array = array(
         2 => array('rank_name' => '贵宾', 'min_points' => 980, 'max_points' => 2799, 'discount' => 0.98),
         3 => array('rank_name' => '金尊', 'min_points' => 2800, 'max_points' => 5799, 'discount' => 0.95),
         4 => array('rank_name' => '至尊', 'min_points' => 5800, 'max_points' => 99999999, 'discount' => 0.9)
+    ),
+
+    ///房间设置选项
+    'ROOM_SET' => array(
+        'room_type' => array(1 => '公开', 2 => '隐藏'),
+        'confirm' => array(1 => '需要确认', 2 => '不确认'),
+        'play_type' => array(1 => '5副牌', 2 => '7副牌'),
+        'pay_type' => array(1 => '钟点房', 2 => '日费房'),
+        'bet_time' => array(1 => '30秒', 2 => '1分钟', 3 => '2分钟', 4 => '3分钟', 5 => '5分钟',6 => '8分钟'),
     ),
 
     //指数
