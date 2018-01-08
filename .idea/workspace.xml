@@ -1,0 +1,1382 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="d4b7adf7-a934-40ce-ae09-f7688694ef81" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/LQapps/Api/Controller/DocumentController.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Runtime/Cache/Api/c73f855cb1fbab0ba8b7a2fd5426e3ce.php" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Runtime/Cache/Admin/ac6ee3ce918fcddafb3c4f70fee574d5.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Runtime/Data/_theone/games.lq_web_config.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Runtime/Logs/Admin/18_01_04.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Runtime/Logs/Admin/18_01_05.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Runtime/Logs/Api/18_01_04.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Runtime/Logs/Api/18_01_05.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Runtime/SysCurrent/roomharging_data_sys_current.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Runtime/SysCurrent/roomharging_syslocation.php" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Runtime/Cache/Admin/883ee83be700e374a283571565c0e3f3.php" afterPath="$PROJECT_DIR$/Runtime/Cache/Admin/a80a2f6d0988ff20ec5a915486da997d.php~HEAD" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Runtime/Cache/Admin/eec537cfacb6bf5a60c187018b70de93.php" afterPath="$PROJECT_DIR$/Runtime/Cache/Admin/17157bbf6ab23e30400adaea9c88650d.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Runtime/Cache/Admin/f60e3b0d8d1873a88f486578b327dc1c.php" afterPath="$PROJECT_DIR$/Runtime/Cache/Admin/62e5f79f098ef923ba9f3db64b26209a.php~HEAD" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LQapps/Admin/Controller/RoomController.class.php" afterPath="$PROJECT_DIR$/LQapps/Admin/Controller/RoomController.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LQapps/Admin/Model/RoomModel.class.php" afterPath="$PROJECT_DIR$/LQapps/Admin/Model/RoomModel.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LQapps/Api/Controller/HdController.class.php" afterPath="$PROJECT_DIR$/LQapps/Api/Controller/HdController.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LQapps/Api/Controller/MemberController.class.php" afterPath="$PROJECT_DIR$/LQapps/Api/Controller/MemberController.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LQapps/Api/Controller/ProductController.class.php" afterPath="$PROJECT_DIR$/LQapps/Api/Controller/ProductController.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LQapps/Api/Controller/SmsController.class.php" afterPath="$PROJECT_DIR$/LQapps/Api/Controller/SmsController.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LQapps/Common/Common/function.php" afterPath="$PROJECT_DIR$/LQapps/Common/Common/function.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LQapps/Common/Conf/config.php" afterPath="$PROJECT_DIR$/LQapps/Common/Conf/config.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LQapps/Member/Model/MemberModel.class.php" afterPath="$PROJECT_DIR$/LQapps/Member/Model/MemberModel.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Public/txt.txt" afterPath="$PROJECT_DIR$/Public/txt.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Runtime/Array/SystemMenu.php" afterPath="$PROJECT_DIR$/Runtime/Array/SystemMenu.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Runtime/Array/ad_position.php" afterPath="$PROJECT_DIR$/Runtime/Array/ad_position.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Runtime/Array/admin_role.php" afterPath="$PROJECT_DIR$/Runtime/Array/admin_role.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Runtime/Array/sys_table.php" afterPath="$PROJECT_DIR$/Runtime/Array/sys_table.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Runtime/Array/sysmuen_tree.php" afterPath="$PROJECT_DIR$/Runtime/Array/sysmuen_tree.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Runtime/Cache/Admin/62e5f79f098ef923ba9f3db64b26209a.php" afterPath="$PROJECT_DIR$/Runtime/Cache/Admin/62e5f79f098ef923ba9f3db64b26209a.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Runtime/Cache/Admin/a80a2f6d0988ff20ec5a915486da997d.php" afterPath="$PROJECT_DIR$/Runtime/Cache/Admin/a80a2f6d0988ff20ec5a915486da997d.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Runtime/Data/_theone/games.lq_room.php" afterPath="$PROJECT_DIR$/Runtime/Data/_theone/games.lq_room.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Runtime/Logs/Admin/18_01_08.log" afterPath="$PROJECT_DIR$/Runtime/Logs/Admin/18_01_08.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Runtime/Logs/Api/18_01_08.log" afterPath="$PROJECT_DIR$/Runtime/Logs/Api/18_01_08.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Runtime/SysCurrent/room_data_sys_current.php" afterPath="$PROJECT_DIR$/Runtime/SysCurrent/room_data_sys_current.php" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="Page.class.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/LQapps/Common/LQLibs/Util/Page.class.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="54" column="82" lean-forward="false" selection-start-line="54" selection-start-column="82" selection-end-line="54" selection-end-column="82" />
+              <folding>
+                <marker date="1515382142868" expanded="true" signature="5545:5551" ph=" " />
+                <marker date="1515382142868" expanded="true" signature="14404:14416" ph="..." />
+                <marker date="1515382142868" expanded="true" signature="16297:16399" ph="..." />
+                <marker date="1515382142868" expanded="true" signature="16338:16381" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MemberModel.class.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/LQapps/Member/Model/MemberModel.class.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="625">
+              <caret line="27" column="19" lean-forward="false" selection-start-line="27" selection-start-column="19" selection-end-line="27" selection-end-column="19" />
+              <folding>
+                <marker date="1515399505185" expanded="true" signature="106:31055" ph="..." />
+                <marker date="1515399505185" expanded="true" signature="357:380" ph="..." />
+                <marker date="1515399505185" expanded="true" signature="3474:3576" ph="..." />
+                <marker date="1515399505185" expanded="true" signature="3585:3718" ph=" 检测会员信息 ..." />
+                <marker date="1515399505185" expanded="true" signature="3768:4065" ph="..." />
+                <marker date="1515399505185" expanded="true" signature="3806:4007" ph="..." />
+                <marker date="1515399505185" expanded="true" signature="3817:3862" ph="..." />
+                <marker date="1515399505185" expanded="true" signature="3873:3916" ph="..." />
+                <marker date="1515399505185" expanded="true" signature="3927:3971" ph="..." />
+                <marker date="1515399505185" expanded="true" signature="3983:3997" ph="..." />
+                <marker date="1515399505185" expanded="true" signature="4076:4186" ph=" 检测微信的OPENID是不是合法 ..." />
+                <marker date="1515399505185" expanded="true" signature="4234:4352" ph="..." />
+                <marker date="1515399505185" expanded="true" signature="4397:4496" ph="..." />
+                <marker date="1515399505185" expanded="true" signature="4414:4465" ph="..." />
+                <marker date="1515399505185" expanded="true" signature="4471:4493" ph="..." />
+                <marker date="1515399505185" expanded="true" signature="4504:4609" ph=" 检测会员帐号是不是合法 ..." />
+                <marker date="1515399505185" expanded="true" signature="4700:4802" ph=" 检测密码是不是合法 ..." />
+                <marker date="1515399505185" expanded="true" signature="4941:5053" ph="..." />
+                <marker date="1515399505185" expanded="true" signature="4960:5035" ph="..." />
+                <marker date="1515399505185" expanded="true" signature="5061:5187" ph=" mid-auth 登录认证 ..." />
+                <marker date="1515399505185" expanded="true" signature="5228:5753" ph="..." />
+                <marker date="1515399505185" expanded="true" signature="5248:5268" ph="..." />
+                <marker date="1515399505185" expanded="true" signature="5399:5724" ph="..." />
+                <marker date="1515399505185" expanded="true" signature="5423:5619" ph="..." />
+                <marker date="1515399505185" expanded="true" signature="5671:5692" ph="..." />
+                <marker date="1515399505185" expanded="true" signature="5698:5720" ph="..." />
+                <marker date="1515399505185" expanded="true" signature="5730:5750" ph="..." />
+                <marker date="1515399505185" expanded="true" signature="5762:6004" ph=" 会员登录认证 ..." />
+                <marker date="1515399505185" expanded="true" signature="6087:7641" ph="..." />
+                <marker date="1515399505185" expanded="true" signature="6293:6597" ph="..." />
+                <marker date="1515399505185" expanded="true" signature="6304:6362" ph="..." />
+                <marker date="1515399505185" expanded="true" signature="6373:6429" ph="..." />
+                <marker date="1515399505185" expanded="true" signature="6440:6497" ph="..." />
+                <marker date="1515399505185" expanded="true" signature="6508:6561" ph="..." />
+                <marker date="1515399505185" expanded="true" signature="6573:6587" ph="..." />
+                <marker date="1515399505185" expanded="true" signature="6616:6637" ph="..." />
+                <marker date="1515399505185" expanded="true" signature="6874:7601" ph="..." />
+                <marker date="1515399505185" expanded="true" signature="7054:7151" ph="..." />
+                <marker date="1515399505185" expanded="true" signature="7398:7508" ph="..." />
+                <marker date="1515399505185" expanded="true" signature="7516:7597" ph="..." />
+                <marker date="1515399505185" expanded="true" signature="7609:7638" ph="..." />
+                <marker date="1515399505185" expanded="true" signature="7698:8211" ph="..." />
+                <marker date="1515399505185" expanded="true" signature="8046:8171" ph="..." />
+                <marker date="1515399505185" expanded="true" signature="8179:8208" ph="..." />
+                <marker date="1515399505185" expanded="true" signature="8266:8381" ph="..." />
+                <marker date="1515399505185" expanded="true" signature="8437:10332" ph="..." />
+                <marker date="1515399505185" expanded="true" signature="8891:9056" ph="..." />
+                <marker date="1515399505185" expanded="true" signature="9198:9363" ph="..." />
+                <marker date="1515399505185" expanded="true" signature="9505:9670" ph="..." />
+                <marker date="1515399505185" expanded="true" signature="9812:9977" ph="..." />
+                <marker date="1515399505185" expanded="true" signature="9983:10079" ph="..." />
+                <marker date="1515399505185" expanded="true" signature="10512:10775" ph="..." />
+                <marker date="1515399505185" expanded="true" signature="10563:10616" ph="..." />
+                <marker date="1515399505185" expanded="true" signature="10622:10772" ph="..." />
+                <marker date="1515399505185" expanded="true" signature="10650:10707" ph="..." />
+                <marker date="1515399505185" expanded="true" signature="10713:10765" ph="..." />
+                <marker date="1515399505185" expanded="true" signature="10784:10921" ph=" 获取会员信息 ..." />
+                <marker date="1515399505185" expanded="true" signature="10979:11372" ph="..." />
+                <marker date="1515399505185" expanded="true" signature="10999:11082" ph="..." />
+                <marker date="1515399505185" expanded="true" signature="11241:11284" ph="..." />
+                <marker date="1515399505185" expanded="true" signature="11310:11332" ph="..." />
+                <marker date="1515399505185" expanded="true" signature="11340:11369" ph="..." />
+                <marker date="1515399505185" expanded="true" signature="11379:11430" ph=" 尝试登录,更新会员登录信息 ..." />
+                <marker date="1515399505185" expanded="true" signature="11516:11717" ph="..." />
+                <marker date="1515399505185" expanded="true" signature="11533:11691" ph="..." />
+                <marker date="1515399505185" expanded="true" signature="11724:11770" ph=" 更新会员登录信息 ..." />
+                <marker date="1515399505185" expanded="true" signature="11808:12171" ph="..." />
+                <marker date="1515399505185" expanded="true" signature="11825:12129" ph="..." />
+                <marker date="1515399505185" expanded="true" signature="12178:12317" ph=" 更新会员信息 ..." />
+                <marker date="1515399505185" expanded="true" signature="12378:12727" ph="..." />
+                <marker date="1515399505185" expanded="true" signature="12433:12480" ph="..." />
+                <marker date="1515399505185" expanded="true" signature="12539:12592" ph="..." />
+                <marker date="1515399505185" expanded="true" signature="12649:12708" ph="..." />
+                <marker date="1515399505185" expanded="true" signature="12734:12840" ph=" 验证会员密码 ..." />
+                <marker date="1515399505185" expanded="true" signature="12894:13111" ph="..." />
+                <marker date="1515399505185" expanded="true" signature="13073:13092" ph="..." />
+                <marker date="1515399505185" expanded="true" signature="13364:15353" ph="..." />
+                <marker date="1515399505185" expanded="true" signature="13567:15325" ph="..." />
+                <marker date="1515399505185" expanded="true" signature="14495:14566" ph="..." />
+                <marker date="1515399505185" expanded="true" signature="14710:14781" ph="..." />
+                <marker date="1515399505185" expanded="true" signature="14925:14996" ph="..." />
+                <marker date="1515399505185" expanded="true" signature="15140:15211" ph="..." />
+                <marker date="1515399505185" expanded="true" signature="15217:15263" ph="..." />
+                <marker date="1515399505185" expanded="true" signature="15430:15665" ph="..." />
+                <marker date="1515399505185" expanded="true" signature="15593:15637" ph="..." />
+                <marker date="1515399505185" expanded="true" signature="15743:15908" ph="..." />
+                <marker date="1515399505185" expanded="true" signature="15955:16371" ph="..." />
+                <marker date="1515399505185" expanded="true" signature="16041:16147" ph="..." />
+                <marker date="1515399505185" expanded="true" signature="16073:16143" ph="..." />
+                <marker date="1515399505185" expanded="true" signature="16167:16244" ph="..." />
+                <marker date="1515399505185" expanded="true" signature="16250:16349" ph="..." />
+                <marker date="1515399505185" expanded="true" signature="16380:16444" ph=" 注册一个新会员 ..." />
+                <marker date="1515399505185" expanded="true" signature="16480:16679" ph="..." />
+                <marker date="1515399505185" expanded="true" signature="16542:16588" ph="..." />
+                <marker date="1515399505185" expanded="true" signature="16596:16676" ph="..." />
+                <marker date="1515399505185" expanded="true" signature="16687:16762" ph=" 新增会员信息 ..." />
+                <marker date="1515399505185" expanded="true" signature="16799:17066" ph="..." />
+                <marker date="1515399505185" expanded="true" signature="16849:16871" ph="..." />
+                <marker date="1515399505185" expanded="true" signature="16926:16962" ph="..." />
+                <marker date="1515399505185" expanded="true" signature="16968:17045" ph="..." />
+                <marker date="1515399505185" expanded="true" signature="17075:17126" ph="..." />
+                <marker date="1515399505185" expanded="true" signature="17180:18677" ph="..." />
+                <marker date="1515399505185" expanded="true" signature="17227:17794" ph="..." />
+                <marker date="1515399505185" expanded="true" signature="17262:17790" ph="..." />
+                <marker date="1515399505185" expanded="true" signature="17286:17738" ph="..." />
+                <marker date="1515399505185" expanded="true" signature="17823:18307" ph="..." />
+                <marker date="1515399505185" expanded="true" signature="17847:18260" ph="..." />
+                <marker date="1515399505185" expanded="true" signature="18366:18671" ph="..." />
+                <marker date="1515399505185" expanded="true" signature="18685:18763" ph=" 更新会员信息 ..." />
+                <marker date="1515399505185" expanded="true" signature="18805:19117" ph="..." />
+                <marker date="1515399505185" expanded="true" signature="18866:18888" ph="..." />
+                <marker date="1515399505185" expanded="true" signature="18940:18976" ph="..." />
+                <marker date="1515399505185" expanded="true" signature="18982:19096" ph="..." />
+                <marker date="1515399505185" expanded="true" signature="19156:19280" ph="..." />
+                <marker date="1515399505185" expanded="true" signature="19176:19198" ph="..." />
+                <marker date="1515399505185" expanded="true" signature="19285:19344" ph="..." />
+                <marker date="1515399505185" expanded="true" signature="19415:19763" ph="..." />
+                <marker date="1515399505185" expanded="true" signature="19433:19579" ph="..." />
+                <marker date="1515399505185" expanded="true" signature="19585:19731" ph="..." />
+                <marker date="1515399505185" expanded="true" signature="19839:20447" ph="..." />
+                <marker date="1515399505185" expanded="true" signature="19888:20409" ph="..." />
+                <marker date="1515399505185" expanded="true" signature="19916:20042" ph="..." />
+                <marker date="1515399505185" expanded="true" signature="20101:20402" ph="..." />
+                <marker date="1515399505185" expanded="true" signature="20457:20535" ph=" 更新会员密码 ..." />
+                <marker date="1515399505185" expanded="true" signature="20568:20965" ph="..." />
+                <marker date="1515399505185" expanded="true" signature="20618:20640" ph="..." />
+                <marker date="1515399505185" expanded="true" signature="20695:20731" ph="..." />
+                <marker date="1515399505185" expanded="true" signature="20737:20944" ph="..." />
+                <marker date="1515399505185" expanded="true" signature="21013:21226" ph="..." />
+                <marker date="1515399505185" expanded="true" signature="21153:21180" ph="..." />
+                <marker date="1515399505185" expanded="true" signature="21284:21550" ph="..." />
+                <marker date="1515399505185" expanded="true" signature="21447:21474" ph="..." />
+                <marker date="1515399505185" expanded="true" signature="21621:22013" ph="..." />
+                <marker date="1515399505185" expanded="true" signature="22117:22875" ph="..." />
+                <marker date="1515399505185" expanded="true" signature="22170:22537" ph="..." />
+                <marker date="1515399505185" expanded="true" signature="22186:22353" ph="..." />
+                <marker date="1515399505185" expanded="true" signature="22359:22497" ph="..." />
+                <marker date="1515399505185" expanded="true" signature="22556:22872" ph="..." />
+                <marker date="1515399505185" expanded="true" signature="22572:22712" ph="..." />
+                <marker date="1515399505185" expanded="true" signature="22718:22829" ph="..." />
+                <marker date="1515399505185" expanded="true" signature="22940:24284" ph="..." />
+                <marker date="1515399505185" expanded="true" signature="22955:22995" ph="..." />
+                <marker date="1515399505185" expanded="true" signature="23001:23091" ph="..." />
+                <marker date="1515399505185" expanded="true" signature="23222:23271" ph="..." />
+                <marker date="1515399505185" expanded="true" signature="23277:23297" ph="..." />
+                <marker date="1515399505185" expanded="true" signature="23960:24114" ph="..." />
+                <marker date="1515399505185" expanded="true" signature="23978:24100" ph="DELETE FROM " />
+                <marker date="1515399505185" expanded="true" signature="24120:24166" ph="..." />
+                <marker date="1515399505185" expanded="true" signature="24221:24269" ph="..." />
+                <marker date="1515399505185" expanded="true" signature="24350:24548" ph="..." />
+                <marker date="1515399505185" expanded="true" signature="24399:24543" ph="..." />
+                <marker date="1515399505185" expanded="true" signature="24612:25308" ph="..." />
+                <marker date="1515399505185" expanded="true" signature="25577:26002" ph="..." />
+                <marker date="1515399505185" expanded="true" signature="25791:25974" ph="..." />
+                <marker date="1515399505185" expanded="true" signature="26056:26245" ph="..." />
+                <marker date="1515399505185" expanded="true" signature="26098:26140" ph="..." />
+                <marker date="1515399505185" expanded="true" signature="26146:26188" ph="..." />
+                <marker date="1515399505185" expanded="true" signature="26542:26925" ph="..." />
+                <marker date="1515399505185" expanded="true" signature="26768:26897" ph="..." />
+                <marker date="1515399505185" expanded="true" signature="26987:27094" ph="..." />
+                <marker date="1515399505185" expanded="true" signature="27592:27885" ph="..." />
+                <marker date="1515399505185" expanded="true" signature="27803:27857" ph="..." />
+                <marker date="1515399505185" expanded="true" signature="27998:28631" ph="..." />
+                <marker date="1515399505185" expanded="true" signature="28044:28268" ph="..." />
+                <marker date="1515399505185" expanded="true" signature="28673:29413" ph="..." />
+                <marker date="1515399505185" expanded="true" signature="28845:28889" ph="..." />
+                <marker date="1515399505185" expanded="true" signature="28895:29410" ph="..." />
+                <marker date="1515399505185" expanded="true" signature="28937:29133" ph="..." />
+                <marker date="1515399505185" expanded="true" signature="29448:29774" ph="..." />
+                <marker date="1515399505185" expanded="true" signature="29468:29501" ph="..." />
+                <marker date="1515399505185" expanded="true" signature="29507:29637" ph="..." />
+                <marker date="1515399505185" expanded="true" signature="29555:29589" ph="..." />
+                <marker date="1515399505185" expanded="true" signature="29595:29630" ph="..." />
+                <marker date="1515399505185" expanded="true" signature="29871:30119" ph="..." />
+                <marker date="1515399505185" expanded="true" signature="30181:30446" ph="..." />
+                <marker date="1515399505185" expanded="true" signature="30204:30318" ph="..." />
+                <marker date="1515399505185" expanded="true" signature="30324:30385" ph="..." />
+                <marker date="1515399505185" expanded="true" signature="30700:31014" ph="..." />
+                <marker date="1515399505185" expanded="true" signature="30751:30821" ph="..." />
+                <marker date="1515399505185" expanded="true" signature="30827:31011" ph="..." />
+                <marker date="1515399505185" expanded="true" signature="30855:30929" ph="..." />
+                <marker date="1515399505185" expanded="true" signature="30935:31004" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PublicController.class.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/LQapps/Api/Controller/PublicController.class.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="250">
+              <caret line="20" column="58" lean-forward="false" selection-start-line="20" selection-start-column="58" selection-end-line="20" selection-end-column="58" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="function.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/LQapps/Api/Common/function.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="105" column="0" lean-forward="false" selection-start-line="105" selection-start-column="0" selection-end-line="105" selection-end-column="0" />
+              <folding>
+                <marker date="1515399396191" expanded="true" signature="10738:11431" ph="..." />
+                <marker date="1515399396191" expanded="true" signature="11437:11767" ph="..." />
+                <marker date="1515399396191" expanded="true" signature="11507:11753" ph="..." />
+                <marker date="1515399396191" expanded="true" signature="11812:12234" ph="..." />
+                <marker date="1515399396191" expanded="true" signature="12095:12171" ph="{...}" />
+                <marker date="1515399396191" expanded="true" signature="12175:12219" ph="{...}" />
+                <marker date="1515399396191" expanded="true" signature="12724:13420" ph="..." />
+                <marker date="1515399396191" expanded="true" signature="13426:13761" ph="..." />
+                <marker date="1515399396191" expanded="true" signature="13497:13746" ph="..." />
+                <marker date="1515399396191" expanded="true" signature="13807:14040" ph="..." />
+                <marker date="1515399396191" expanded="true" signature="14092:14785" ph="..." />
+                <marker date="1515399396191" expanded="true" signature="14791:15121" ph="..." />
+                <marker date="1515399396191" expanded="true" signature="14861:15107" ph="..." />
+                <marker date="1515399396191" expanded="true" signature="15166:15545" ph="..." />
+                <marker date="1515399396191" expanded="true" signature="15401:15477" ph="{...}" />
+                <marker date="1515399396191" expanded="true" signature="15481:15525" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SmsController.class.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/LQapps/Api/Controller/SmsController.class.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="418">
+              <caret line="62" column="43" lean-forward="false" selection-start-line="62" selection-start-column="43" selection-end-line="62" selection-end-column="43" />
+              <folding>
+                <marker date="1515399505074" expanded="true" signature="1116:1276" ph="..." />
+                <marker date="1515399505074" expanded="true" signature="1621:1740" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="config.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/LQapps/Admin/Conf/config.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-171">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="function.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/LQapps/Admin/Common/function.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="102" column="37" lean-forward="false" selection-start-line="102" selection-start-column="37" selection-end-line="102" selection-end-column="37" />
+              <folding>
+                <marker date="1514887981657" expanded="true" signature="921:953" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MemberController.class.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/LQapps/Api/Controller/MemberController.class.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1700">
+              <caret line="80" column="45" lean-forward="false" selection-start-line="80" selection-start-column="45" selection-end-line="80" selection-end-column="45" />
+              <folding>
+                <marker date="1515399505198" expanded="true" signature="760:813" ph="{...}" />
+                <marker date="1515399505198" expanded="true" signature="12927:13331" ph="..." />
+                <marker date="1515399505198" expanded="true" signature="12927:13499" ph="{...}" />
+                <marker date="1515399505198" expanded="true" signature="13339:13492" ph="..." />
+                <marker date="1515399505198" expanded="true" signature="13549:14675" ph="{...}" />
+                <marker date="1515399505198" expanded="true" signature="13924:14075" ph="..." />
+                <marker date="1515399505198" expanded="true" signature="14292:14520" ph="..." />
+                <marker date="1515399505198" expanded="true" signature="14528:14668" ph="..." />
+                <marker date="1515399505198" expanded="true" signature="14720:15602" ph="{...}" />
+                <marker date="1515399505198" expanded="true" signature="14861:15012" ph="..." />
+                <marker date="1515399505198" expanded="true" signature="15219:15447" ph="..." />
+                <marker date="1515399505198" expanded="true" signature="15455:15595" ph="..." />
+                <marker date="1515399505198" expanded="true" signature="15650:17655" ph="{...}" />
+                <marker date="1515399505198" expanded="true" signature="16084:16276" ph="..." />
+                <marker date="1515399505198" expanded="true" signature="16298:16470" ph="..." />
+                <marker date="1515399505198" expanded="true" signature="16496:16688" ph="..." />
+                <marker date="1515399505198" expanded="true" signature="16779:16932" ph="..." />
+                <marker date="1515399505198" expanded="true" signature="17268:17498" ph="..." />
+                <marker date="1515399505198" expanded="true" signature="17506:17648" ph="..." />
+                <marker date="1515399505198" expanded="true" signature="17704:18828" ph="{...}" />
+                <marker date="1515399505198" expanded="true" signature="18078:18229" ph="..." />
+                <marker date="1515399505198" expanded="true" signature="18445:18673" ph="..." />
+                <marker date="1515399505198" expanded="true" signature="18681:18821" ph="..." />
+                <marker date="1515399505198" expanded="true" signature="19214:19559" ph="..." />
+                <marker date="1515399505198" expanded="true" signature="19256:19418" ph="..." />
+                <marker date="1515399505198" expanded="true" signature="19567:19706" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>apiGetField</find>
+      <find>lqGetField</find>
+      <find>lqUpdateToken</find>
+      <find>lqGetToken</find>
+      <find>JSONP</find>
+      <find>apiGetToken</find>
+      <find>tion lo</find>
+      <find>apiRegister</find>
+      <find>register</find>
+      <find>sa</find>
+      <find>修改</find>
+      <find>function create()</find>
+      <find>lqSaveMember</find>
+      <find>Err</find>
+      <find>create</find>
+      <find>$where</find>
+      <find>$nowPage</find>
+      <find>nowPage</find>
+      <find>regis</find>
+      <find>M('designer')</find>
+      <find>M('Designer')</find>
+      <find>Designer</find>
+      <find>reg</find>
+      <find>chang</find>
+      <find>nickname</find>
+      <find>$D_SMS</find>
+      <find>isEffective</find>
+      <find>room</find>
+      <find>Room_set</find>
+      <find>Room</find>
+    </findStrings>
+  </component>
+  <component name="FrameworkCommandLineHistory">
+    <commandsHistory>
+      <command text="git add -A" />
+      <command text="git commit -m '20180108'" />
+      <command text="git push origin ji" />
+      <command text="git fetch --all" />
+      <command text="git reset --hard origin/master" />
+      <command text="git pull origin master" />
+      <command text="git reset head HEAD^" />
+      <command text="git reflog" />
+      <command text="git reset head 6fd068d" />
+      <command text="git reflog" />
+      <command text="git reset head 60b0eff" />
+      <command text="git r" />
+      <command text="git reflog" />
+      <command text="git reset head 567e99d" />
+      <command text="git reflog" />
+      <command text="git reset head b02a4f1" />
+      <command text="git add -A" />
+      <command text="git commit -m '01081612'" />
+      <command text="git reset head b02a4f1" />
+      <command text="git status" />
+      <command text="git pull origin ji" />
+      <command text="git status" />
+      <command text="git add -A" />
+      <command text="git commit -m '20180108'" />
+      <command text="git pull origin master" />
+    </commandsHistory>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="mock:///Dummy.txt" root0="SKIP_INSPECTION" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/test.html" />
+        <option value="$PROJECT_DIR$/uploadfiles/test.html" />
+        <option value="$PROJECT_DIR$/LQapps/Common/Conf/dbconn.php" />
+        <option value="$PROJECT_DIR$/LQapps/Api/Controller/ActivityController.class.php" />
+        <option value="$PROJECT_DIR$/LQapps/Api/Controller/test.class.php" />
+        <option value="$PROJECT_DIR$/LQapps/Api/Controller/PublicController.class.php" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/LQapps/Api/Controller/DesignerController.class.php" />
+        <option value="$PROJECT_DIR$/LQapps/Member/Api/MemberApi.class.php" />
+        <option value="$PROJECT_DIR$/Public/ThinkPHP/Library/Think/Controller.class.php" />
+        <option value="$PROJECT_DIR$/LQapps/Api/Controller/RoomController.class.php" />
+        <option value="$PROJECT_DIR$/LQapps/Api/Model/DesignerModel.class.php" />
+        <option value="$PROJECT_DIR$/LQapps/Api/Controller/TestController.class.php" />
+        <option value="$PROJECT_DIR$/LQapps/Common/LQLibs/Util/Page.class.php" />
+        <option value="$PROJECT_DIR$/LQapps/Api/Model/RoomModel.class.php" />
+        <option value="$PROJECT_DIR$/Public/txt.txt" />
+        <option value="$PROJECT_DIR$/LQapps/Api/Controller/SmsController.class.php" />
+        <option value="$PROJECT_DIR$/LQapps/Member/Model/MemberModel.class.php" />
+        <option value="$PROJECT_DIR$/LQapps/Common/Common/function.php" />
+        <option value="$PROJECT_DIR$/LQapps/Api/Controller/MemberController.class.php" />
+        <option value="$PROJECT_DIR$/LQapps/Api/Common/function.php" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="182" />
+    <option name="y" value="8" />
+    <option name="width" value="1534" />
+    <option name="height" value="1000" />
+  </component>
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="niuniuGame" type="b2602c69:ProjectViewProjectNode" />
+              <item name="niuniuGame" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="niuniuGame" type="b2602c69:ProjectViewProjectNode" />
+              <item name="niuniuGame" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="LQapps" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="niuniuGame" type="b2602c69:ProjectViewProjectNode" />
+              <item name="niuniuGame" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="LQapps" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Api" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="niuniuGame" type="b2602c69:ProjectViewProjectNode" />
+              <item name="niuniuGame" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="LQapps" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Api" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Common" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="niuniuGame" type="b2602c69:ProjectViewProjectNode" />
+              <item name="niuniuGame" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Public" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="niuniuGame" type="b2602c69:ProjectViewProjectNode" />
+              <item name="niuniuGame" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Public" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="ThinkPHP" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="niuniuGame" type="b2602c69:ProjectViewProjectNode" />
+              <item name="niuniuGame" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Public" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="ThinkPHP" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Conf" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="niuniuGame" type="b2602c69:ProjectViewProjectNode" />
+              <item name="niuniuGame" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Runtime" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../hongyaPHP" />
+    <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Administrator\Desktop\niuniuGame\LQapps\Api\Controller" />
+      <recent name="C:\Users\Administrator\Desktop\niuniuGame\LQapps\Api\Model" />
+      <recent name="C:\Users\Administrator\Desktop\niuniuGame" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d4b7adf7-a934-40ce-ae09-f7688694ef81" name="Default" comment="" />
+      <created>1514863204412</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1514863204412</updated>
+      <workItem from="1514863205787" duration="6351000" />
+      <workItem from="1514875458854" duration="365000" />
+      <workItem from="1514876932786" duration="9692000" />
+      <workItem from="1514890895639" duration="248000" />
+      <workItem from="1514947142262" duration="21664000" />
+      <workItem from="1515031596663" duration="1943000" />
+      <workItem from="1515380327035" duration="14599000" />
+    </task>
+    <task id="LOCAL-00001" summary="test 20180102">
+      <created>1514865289155</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1514865289155</updated>
+    </task>
+    <task id="LOCAL-00002" summary="test 20180102">
+      <created>1514872297987</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1514872297987</updated>
+    </task>
+    <task id="LOCAL-00003" summary="test 20180102">
+      <created>1514872494071</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1514872494071</updated>
+    </task>
+    <task id="LOCAL-00004" summary="test 20180102">
+      <created>1514872954730</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1514872954730</updated>
+    </task>
+    <task id="LOCAL-00005" summary="test 20180102">
+      <created>1514878152990</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1514878152990</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Merge branch 'master' of github.com:JiYJCoder/NiuNiugame&#10;&#10;# Conflicts:&#10;#&#9;.gitignore">
+      <created>1514879453660</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1514879453660</updated>
+    </task>
+    <task id="LOCAL-00007" summary="这是一个测试文件">
+      <created>1514888898635</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1514888898635</updated>
+    </task>
+    <task id="LOCAL-00008" summary="新增登陆接口,开房间接口。">
+      <created>1514977399494</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1514977399495</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="54862000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.51910114" sideWeight="0.50208336" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Command Line Tools Console" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.5528541" sideWeight="0.49791667" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980973" sideWeight="0.49791667" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="test 20180102" />
+    <MESSAGE value="Merge branch 'master' of github.com:JiYJCoder/NiuNiugame&#10;&#10;# Conflicts:&#10;#&#9;.gitignore" />
+    <MESSAGE value="这是一个测试文件" />
+    <MESSAGE value="新增登陆接口,开房间接口。" />
+    <option name="LAST_COMMIT_MESSAGE" value="新增登陆接口,开房间接口。" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="3" />
+    </breakpoint-manager>
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/LQapps/Api/Controller/MemberController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="33" column="32" lean-forward="false" selection-start-line="33" selection-start-column="21" selection-end-line="33" selection-end-column="32" />
+          <folding>
+            <marker date="1515399505198" expanded="true" signature="760:813" ph="{...}" />
+            <marker date="1515399505198" expanded="true" signature="12927:13331" ph="..." />
+            <marker date="1515399505198" expanded="true" signature="12927:13499" ph="{...}" />
+            <marker date="1515399505198" expanded="true" signature="13339:13492" ph="..." />
+            <marker date="1515399505198" expanded="true" signature="13549:14675" ph="{...}" />
+            <marker date="1515399505198" expanded="true" signature="13924:14075" ph="..." />
+            <marker date="1515399505198" expanded="true" signature="14292:14520" ph="..." />
+            <marker date="1515399505198" expanded="true" signature="14528:14668" ph="..." />
+            <marker date="1515399505198" expanded="true" signature="14720:15602" ph="{...}" />
+            <marker date="1515399505198" expanded="true" signature="14861:15012" ph="..." />
+            <marker date="1515399505198" expanded="true" signature="15219:15447" ph="..." />
+            <marker date="1515399505198" expanded="true" signature="15455:15595" ph="..." />
+            <marker date="1515399505198" expanded="true" signature="15650:17655" ph="{...}" />
+            <marker date="1515399505198" expanded="true" signature="16084:16276" ph="..." />
+            <marker date="1515399505198" expanded="true" signature="16298:16470" ph="..." />
+            <marker date="1515399505198" expanded="true" signature="16496:16688" ph="..." />
+            <marker date="1515399505198" expanded="true" signature="16779:16932" ph="..." />
+            <marker date="1515399505198" expanded="true" signature="17268:17498" ph="..." />
+            <marker date="1515399505198" expanded="true" signature="17506:17648" ph="..." />
+            <marker date="1515399505198" expanded="true" signature="17704:18828" ph="{...}" />
+            <marker date="1515399505198" expanded="true" signature="18078:18229" ph="..." />
+            <marker date="1515399505198" expanded="true" signature="18445:18673" ph="..." />
+            <marker date="1515399505198" expanded="true" signature="18681:18821" ph="..." />
+            <marker date="1515399505198" expanded="true" signature="19214:19559" ph="..." />
+            <marker date="1515399505198" expanded="true" signature="19256:19418" ph="..." />
+            <marker date="1515399505198" expanded="true" signature="19567:19706" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LQapps/Api/Controller/SmsController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LQapps/Api/Controller/MemberController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="14425">
+          <caret line="589" column="0" lean-forward="false" selection-start-line="589" selection-start-column="0" selection-end-line="589" selection-end-column="0" />
+          <folding>
+            <marker date="1515399505198" expanded="true" signature="760:813" ph="{...}" />
+            <marker date="1515399505198" expanded="true" signature="12927:13331" ph="..." />
+            <marker date="1515399505198" expanded="true" signature="12927:13499" ph="{...}" />
+            <marker date="1515399505198" expanded="true" signature="13339:13492" ph="..." />
+            <marker date="1515399505198" expanded="true" signature="13549:14675" ph="{...}" />
+            <marker date="1515399505198" expanded="true" signature="13924:14075" ph="..." />
+            <marker date="1515399505198" expanded="true" signature="14292:14520" ph="..." />
+            <marker date="1515399505198" expanded="true" signature="14528:14668" ph="..." />
+            <marker date="1515399505198" expanded="true" signature="14720:15602" ph="{...}" />
+            <marker date="1515399505198" expanded="true" signature="14861:15012" ph="..." />
+            <marker date="1515399505198" expanded="true" signature="15219:15447" ph="..." />
+            <marker date="1515399505198" expanded="true" signature="15455:15595" ph="..." />
+            <marker date="1515399505198" expanded="true" signature="15650:17655" ph="{...}" />
+            <marker date="1515399505198" expanded="true" signature="16084:16276" ph="..." />
+            <marker date="1515399505198" expanded="true" signature="16298:16470" ph="..." />
+            <marker date="1515399505198" expanded="true" signature="16496:16688" ph="..." />
+            <marker date="1515399505198" expanded="true" signature="16779:16932" ph="..." />
+            <marker date="1515399505198" expanded="true" signature="17268:17498" ph="..." />
+            <marker date="1515399505198" expanded="true" signature="17506:17648" ph="..." />
+            <marker date="1515399505198" expanded="true" signature="17704:18828" ph="{...}" />
+            <marker date="1515399505198" expanded="true" signature="18078:18229" ph="..." />
+            <marker date="1515399505198" expanded="true" signature="18445:18673" ph="..." />
+            <marker date="1515399505198" expanded="true" signature="18681:18821" ph="..." />
+            <marker date="1515399505198" expanded="true" signature="19214:19559" ph="..." />
+            <marker date="1515399505198" expanded="true" signature="19256:19418" ph="..." />
+            <marker date="1515399505198" expanded="true" signature="19567:19706" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test.html" />
+    <entry file="file://$PROJECT_DIR$/Api.html" />
+    <entry file="file://$PROJECT_DIR$/tst." />
+    <entry file="file://$PROJECT_DIR$/tst2" />
+    <entry file="file://$PROJECT_DIR$/uploadfiles/test.html" />
+    <entry file="file://$PROJECT_DIR$/LQapps/Api/Controller/ActivityController.class.php" />
+    <entry file="file://$PROJECT_DIR$/LQapps/Api/Model/ArticleModel.class.php" />
+    <entry file="file://$PROJECT_DIR$/LQapps/Api/Controller/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/superglobals/_superglobals.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="305">
+          <caret line="118" column="0" lean-forward="false" selection-start-line="118" selection-start-column="0" selection-end-line="118" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LQapps/Api/Conf/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/404.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-600">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.htaccess">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LQapps/Api/Controller/HdController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1515399505072" expanded="true" signature="5828:5904" ph="SELECT DISTI... " />
+            <marker date="1515399505072" expanded="true" signature="5981:6067" ph="SELECT DISTI... " />
+            <marker date="1515399505072" expanded="true" signature="6541:6596" ph="SELECT DISTI... " />
+            <marker date="1515399505072" expanded="true" signature="6670:6734" ph="SELECT DISTI... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LQapps/Api/Controller/DesignerController.class.php" />
+    <entry file="file://$PROJECT_DIR$/Public/ThinkPHP/Library/Think/Dispatcher.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5775">
+          <caret line="239" column="24" lean-forward="true" selection-start-line="239" selection-start-column="24" selection-end-line="239" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/standard/standard_5.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="305">
+          <caret line="293" column="9" lean-forward="false" selection-start-line="293" selection-start-column="9" selection-end-line="293" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LQapps/Member/Api/Api.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="305">
+          <caret line="20" column="14" lean-forward="false" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/standard/standard_0.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="305">
+          <caret line="619" column="9" lean-forward="false" selection-start-line="619" selection-start-column="9" selection-end-line="619" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Public/ThinkPHP/Library/Think/Controller.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="705">
+          <caret line="231" column="54" lean-forward="true" selection-start-line="231" selection-start-column="54" selection-end-line="231" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LQapps/Api/Model/DesignerModel.class.php" />
+    <entry file="file://$PROJECT_DIR$/LQapps/Api/Controller/TestController.class.php" />
+    <entry file="file://$PROJECT_DIR$/LQapps/Api/Controller/RoomController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="675">
+          <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LQapps/Api/Model/PublicModel.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="13" column="20" lean-forward="false" selection-start-line="13" selection-start-column="20" selection-end-line="13" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Public/ThinkPHP/Library/Think/Model.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="305">
+          <caret line="1573" column="20" lean-forward="false" selection-start-line="1573" selection-start-column="20" selection-end-line="1573" selection-end-column="20" />
+          <folding>
+            <marker date="1514878686370" expanded="true" signature="6109:6271" ph="select COLUM... COLUMNS" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LQapps/Home/Conf/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LQapps/Common/Conf/dbconn.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="6" column="21" lean-forward="false" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Public/ThinkPHP/Conf/convention.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-825">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Public/txt.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LQapps/Member/Api/MemberApi.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1250">
+          <caret line="121" column="20" lean-forward="false" selection-start-line="121" selection-start-column="20" selection-end-line="121" selection-end-column="20" />
+          <folding>
+            <element signature="e#40#59#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LQapps/Api/Controller/DocumentController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LQapps/Common/Conf/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="291">
+          <caret line="435" column="12" lean-forward="true" selection-start-line="435" selection-start-column="12" selection-end-line="435" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LQapps/Api/Model/SmsLogModel.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-546">
+          <caret line="34" column="115" lean-forward="false" selection-start-line="34" selection-start-column="110" selection-end-line="34" selection-end-column="115" />
+          <folding>
+            <marker date="1514887984665" expanded="true" signature="2362:2461" ph="update `__PR... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Documents/WeChat Files/jiyaojun123/Files/DocumentController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="26" column="36" lean-forward="false" selection-start-line="26" selection-start-column="36" selection-end-line="26" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LQapps/Api/Model/RoomModel.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="568">
+          <caret line="72" column="25" lean-forward="false" selection-start-line="72" selection-start-column="25" selection-end-line="72" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LQapps/Api/Controller/MemberController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1700">
+          <caret line="80" column="45" lean-forward="false" selection-start-line="80" selection-start-column="45" selection-end-line="80" selection-end-column="45" />
+          <folding>
+            <marker date="1515399505198" expanded="true" signature="760:813" ph="{...}" />
+            <marker date="1515399505198" expanded="true" signature="12927:13331" ph="..." />
+            <marker date="1515399505198" expanded="true" signature="12927:13499" ph="{...}" />
+            <marker date="1515399505198" expanded="true" signature="13339:13492" ph="..." />
+            <marker date="1515399505198" expanded="true" signature="13549:14675" ph="{...}" />
+            <marker date="1515399505198" expanded="true" signature="13924:14075" ph="..." />
+            <marker date="1515399505198" expanded="true" signature="14292:14520" ph="..." />
+            <marker date="1515399505198" expanded="true" signature="14528:14668" ph="..." />
+            <marker date="1515399505198" expanded="true" signature="14720:15602" ph="{...}" />
+            <marker date="1515399505198" expanded="true" signature="14861:15012" ph="..." />
+            <marker date="1515399505198" expanded="true" signature="15219:15447" ph="..." />
+            <marker date="1515399505198" expanded="true" signature="15455:15595" ph="..." />
+            <marker date="1515399505198" expanded="true" signature="15650:17655" ph="{...}" />
+            <marker date="1515399505198" expanded="true" signature="16084:16276" ph="..." />
+            <marker date="1515399505198" expanded="true" signature="16298:16470" ph="..." />
+            <marker date="1515399505198" expanded="true" signature="16496:16688" ph="..." />
+            <marker date="1515399505198" expanded="true" signature="16779:16932" ph="..." />
+            <marker date="1515399505198" expanded="true" signature="17268:17498" ph="..." />
+            <marker date="1515399505198" expanded="true" signature="17506:17648" ph="..." />
+            <marker date="1515399505198" expanded="true" signature="17704:18828" ph="{...}" />
+            <marker date="1515399505198" expanded="true" signature="18078:18229" ph="..." />
+            <marker date="1515399505198" expanded="true" signature="18445:18673" ph="..." />
+            <marker date="1515399505198" expanded="true" signature="18681:18821" ph="..." />
+            <marker date="1515399505198" expanded="true" signature="19214:19559" ph="..." />
+            <marker date="1515399505198" expanded="true" signature="19256:19418" ph="..." />
+            <marker date="1515399505198" expanded="true" signature="19567:19706" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LQapps/Common/Common/function.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="654">
+          <caret line="1672" column="13" lean-forward="true" selection-start-line="1672" selection-start-column="13" selection-end-line="1672" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LQapps/Api/Controller/SmsController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="62" column="43" lean-forward="false" selection-start-line="62" selection-start-column="43" selection-end-line="62" selection-end-column="43" />
+          <folding>
+            <marker date="1515399505074" expanded="true" signature="1116:1276" ph="..." />
+            <marker date="1515399505074" expanded="true" signature="1621:1740" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LQapps/Admin/Conf/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-171">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sys-index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-757">
+          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LQapps/Admin/Common/function.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="102" column="37" lean-forward="false" selection-start-line="102" selection-start-column="37" selection-end-line="102" selection-end-column="37" />
+          <folding>
+            <marker date="1514887981657" expanded="true" signature="921:953" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LQapps/Member/Model/MemberModel.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="625">
+          <caret line="27" column="19" lean-forward="false" selection-start-line="27" selection-start-column="19" selection-end-line="27" selection-end-column="19" />
+          <folding>
+            <marker date="1515399505185" expanded="true" signature="106:31055" ph="..." />
+            <marker date="1515399505185" expanded="true" signature="357:380" ph="..." />
+            <marker date="1515399505185" expanded="true" signature="3474:3576" ph="..." />
+            <marker date="1515399505185" expanded="true" signature="3585:3718" ph=" 检测会员信息 ..." />
+            <marker date="1515399505185" expanded="true" signature="3768:4065" ph="..." />
+            <marker date="1515399505185" expanded="true" signature="3806:4007" ph="..." />
+            <marker date="1515399505185" expanded="true" signature="3817:3862" ph="..." />
+            <marker date="1515399505185" expanded="true" signature="3873:3916" ph="..." />
+            <marker date="1515399505185" expanded="true" signature="3927:3971" ph="..." />
+            <marker date="1515399505185" expanded="true" signature="3983:3997" ph="..." />
+            <marker date="1515399505185" expanded="true" signature="4076:4186" ph=" 检测微信的OPENID是不是合法 ..." />
+            <marker date="1515399505185" expanded="true" signature="4234:4352" ph="..." />
+            <marker date="1515399505185" expanded="true" signature="4397:4496" ph="..." />
+            <marker date="1515399505185" expanded="true" signature="4414:4465" ph="..." />
+            <marker date="1515399505185" expanded="true" signature="4471:4493" ph="..." />
+            <marker date="1515399505185" expanded="true" signature="4504:4609" ph=" 检测会员帐号是不是合法 ..." />
+            <marker date="1515399505185" expanded="true" signature="4700:4802" ph=" 检测密码是不是合法 ..." />
+            <marker date="1515399505185" expanded="true" signature="4941:5053" ph="..." />
+            <marker date="1515399505185" expanded="true" signature="4960:5035" ph="..." />
+            <marker date="1515399505185" expanded="true" signature="5061:5187" ph=" mid-auth 登录认证 ..." />
+            <marker date="1515399505185" expanded="true" signature="5228:5753" ph="..." />
+            <marker date="1515399505185" expanded="true" signature="5248:5268" ph="..." />
+            <marker date="1515399505185" expanded="true" signature="5399:5724" ph="..." />
+            <marker date="1515399505185" expanded="true" signature="5423:5619" ph="..." />
+            <marker date="1515399505185" expanded="true" signature="5671:5692" ph="..." />
+            <marker date="1515399505185" expanded="true" signature="5698:5720" ph="..." />
+            <marker date="1515399505185" expanded="true" signature="5730:5750" ph="..." />
+            <marker date="1515399505185" expanded="true" signature="5762:6004" ph=" 会员登录认证 ..." />
+            <marker date="1515399505185" expanded="true" signature="6087:7641" ph="..." />
+            <marker date="1515399505185" expanded="true" signature="6293:6597" ph="..." />
+            <marker date="1515399505185" expanded="true" signature="6304:6362" ph="..." />
+            <marker date="1515399505185" expanded="true" signature="6373:6429" ph="..." />
+            <marker date="1515399505185" expanded="true" signature="6440:6497" ph="..." />
+            <marker date="1515399505185" expanded="true" signature="6508:6561" ph="..." />
+            <marker date="1515399505185" expanded="true" signature="6573:6587" ph="..." />
+            <marker date="1515399505185" expanded="true" signature="6616:6637" ph="..." />
+            <marker date="1515399505185" expanded="true" signature="6874:7601" ph="..." />
+            <marker date="1515399505185" expanded="true" signature="7054:7151" ph="..." />
+            <marker date="1515399505185" expanded="true" signature="7398:7508" ph="..." />
+            <marker date="1515399505185" expanded="true" signature="7516:7597" ph="..." />
+            <marker date="1515399505185" expanded="true" signature="7609:7638" ph="..." />
+            <marker date="1515399505185" expanded="true" signature="7698:8211" ph="..." />
+            <marker date="1515399505185" expanded="true" signature="8046:8171" ph="..." />
+            <marker date="1515399505185" expanded="true" signature="8179:8208" ph="..." />
+            <marker date="1515399505185" expanded="true" signature="8266:8381" ph="..." />
+            <marker date="1515399505185" expanded="true" signature="8437:10332" ph="..." />
+            <marker date="1515399505185" expanded="true" signature="8891:9056" ph="..." />
+            <marker date="1515399505185" expanded="true" signature="9198:9363" ph="..." />
+            <marker date="1515399505185" expanded="true" signature="9505:9670" ph="..." />
+            <marker date="1515399505185" expanded="true" signature="9812:9977" ph="..." />
+            <marker date="1515399505185" expanded="true" signature="9983:10079" ph="..." />
+            <marker date="1515399505185" expanded="true" signature="10512:10775" ph="..." />
+            <marker date="1515399505185" expanded="true" signature="10563:10616" ph="..." />
+            <marker date="1515399505185" expanded="true" signature="10622:10772" ph="..." />
+            <marker date="1515399505185" expanded="true" signature="10650:10707" ph="..." />
+            <marker date="1515399505185" expanded="true" signature="10713:10765" ph="..." />
+            <marker date="1515399505185" expanded="true" signature="10784:10921" ph=" 获取会员信息 ..." />
+            <marker date="1515399505185" expanded="true" signature="10979:11372" ph="..." />
+            <marker date="1515399505185" expanded="true" signature="10999:11082" ph="..." />
+            <marker date="1515399505185" expanded="true" signature="11241:11284" ph="..." />
+            <marker date="1515399505185" expanded="true" signature="11310:11332" ph="..." />
+            <marker date="1515399505185" expanded="true" signature="11340:11369" ph="..." />
+            <marker date="1515399505185" expanded="true" signature="11379:11430" ph=" 尝试登录,更新会员登录信息 ..." />
+            <marker date="1515399505185" expanded="true" signature="11516:11717" ph="..." />
+            <marker date="1515399505185" expanded="true" signature="11533:11691" ph="..." />
+            <marker date="1515399505185" expanded="true" signature="11724:11770" ph=" 更新会员登录信息 ..." />
+            <marker date="1515399505185" expanded="true" signature="11808:12171" ph="..." />
+            <marker date="1515399505185" expanded="true" signature="11825:12129" ph="..." />
+            <marker date="1515399505185" expanded="true" signature="12178:12317" ph=" 更新会员信息 ..." />
+            <marker date="1515399505185" expanded="true" signature="12378:12727" ph="..." />
+            <marker date="1515399505185" expanded="true" signature="12433:12480" ph="..." />
+            <marker date="1515399505185" expanded="true" signature="12539:12592" ph="..." />
+            <marker date="1515399505185" expanded="true" signature="12649:12708" ph="..." />
+            <marker date="1515399505185" expanded="true" signature="12734:12840" ph=" 验证会员密码 ..." />
+            <marker date="1515399505185" expanded="true" signature="12894:13111" ph="..." />
+            <marker date="1515399505185" expanded="true" signature="13073:13092" ph="..." />
+            <marker date="1515399505185" expanded="true" signature="13364:15353" ph="..." />
+            <marker date="1515399505185" expanded="true" signature="13567:15325" ph="..." />
+            <marker date="1515399505185" expanded="true" signature="14495:14566" ph="..." />
+            <marker date="1515399505185" expanded="true" signature="14710:14781" ph="..." />
+            <marker date="1515399505185" expanded="true" signature="14925:14996" ph="..." />
+            <marker date="1515399505185" expanded="true" signature="15140:15211" ph="..." />
+            <marker date="1515399505185" expanded="true" signature="15217:15263" ph="..." />
+            <marker date="1515399505185" expanded="true" signature="15430:15665" ph="..." />
+            <marker date="1515399505185" expanded="true" signature="15593:15637" ph="..." />
+            <marker date="1515399505185" expanded="true" signature="15743:15908" ph="..." />
+            <marker date="1515399505185" expanded="true" signature="15955:16371" ph="..." />
+            <marker date="1515399505185" expanded="true" signature="16041:16147" ph="..." />
+            <marker date="1515399505185" expanded="true" signature="16073:16143" ph="..." />
+            <marker date="1515399505185" expanded="true" signature="16167:16244" ph="..." />
+            <marker date="1515399505185" expanded="true" signature="16250:16349" ph="..." />
+            <marker date="1515399505185" expanded="true" signature="16380:16444" ph=" 注册一个新会员 ..." />
+            <marker date="1515399505185" expanded="true" signature="16480:16679" ph="..." />
+            <marker date="1515399505185" expanded="true" signature="16542:16588" ph="..." />
+            <marker date="1515399505185" expanded="true" signature="16596:16676" ph="..." />
+            <marker date="1515399505185" expanded="true" signature="16687:16762" ph=" 新增会员信息 ..." />
+            <marker date="1515399505185" expanded="true" signature="16799:17066" ph="..." />
+            <marker date="1515399505185" expanded="true" signature="16849:16871" ph="..." />
+            <marker date="1515399505185" expanded="true" signature="16926:16962" ph="..." />
+            <marker date="1515399505185" expanded="true" signature="16968:17045" ph="..." />
+            <marker date="1515399505185" expanded="true" signature="17075:17126" ph="..." />
+            <marker date="1515399505185" expanded="true" signature="17180:18677" ph="..." />
+            <marker date="1515399505185" expanded="true" signature="17227:17794" ph="..." />
+            <marker date="1515399505185" expanded="true" signature="17262:17790" ph="..." />
+            <marker date="1515399505185" expanded="true" signature="17286:17738" ph="..." />
+            <marker date="1515399505185" expanded="true" signature="17823:18307" ph="..." />
+            <marker date="1515399505185" expanded="true" signature="17847:18260" ph="..." />
+            <marker date="1515399505185" expanded="true" signature="18366:18671" ph="..." />
+            <marker date="1515399505185" expanded="true" signature="18685:18763" ph=" 更新会员信息 ..." />
+            <marker date="1515399505185" expanded="true" signature="18805:19117" ph="..." />
+            <marker date="1515399505185" expanded="true" signature="18866:18888" ph="..." />
+            <marker date="1515399505185" expanded="true" signature="18940:18976" ph="..." />
+            <marker date="1515399505185" expanded="true" signature="18982:19096" ph="..." />
+            <marker date="1515399505185" expanded="true" signature="19156:19280" ph="..." />
+            <marker date="1515399505185" expanded="true" signature="19176:19198" ph="..." />
+            <marker date="1515399505185" expanded="true" signature="19285:19344" ph="..." />
+            <marker date="1515399505185" expanded="true" signature="19415:19763" ph="..." />
+            <marker date="1515399505185" expanded="true" signature="19433:19579" ph="..." />
+            <marker date="1515399505185" expanded="true" signature="19585:19731" ph="..." />
+            <marker date="1515399505185" expanded="true" signature="19839:20447" ph="..." />
+            <marker date="1515399505185" expanded="true" signature="19888:20409" ph="..." />
+            <marker date="1515399505185" expanded="true" signature="19916:20042" ph="..." />
+            <marker date="1515399505185" expanded="true" signature="20101:20402" ph="..." />
+            <marker date="1515399505185" expanded="true" signature="20457:20535" ph=" 更新会员密码 ..." />
+            <marker date="1515399505185" expanded="true" signature="20568:20965" ph="..." />
+            <marker date="1515399505185" expanded="true" signature="20618:20640" ph="..." />
+            <marker date="1515399505185" expanded="true" signature="20695:20731" ph="..." />
+            <marker date="1515399505185" expanded="true" signature="20737:20944" ph="..." />
+            <marker date="1515399505185" expanded="true" signature="21013:21226" ph="..." />
+            <marker date="1515399505185" expanded="true" signature="21153:21180" ph="..." />
+            <marker date="1515399505185" expanded="true" signature="21284:21550" ph="..." />
+            <marker date="1515399505185" expanded="true" signature="21447:21474" ph="..." />
+            <marker date="1515399505185" expanded="true" signature="21621:22013" ph="..." />
+            <marker date="1515399505185" expanded="true" signature="22117:22875" ph="..." />
+            <marker date="1515399505185" expanded="true" signature="22170:22537" ph="..." />
+            <marker date="1515399505185" expanded="true" signature="22186:22353" ph="..." />
+            <marker date="1515399505185" expanded="true" signature="22359:22497" ph="..." />
+            <marker date="1515399505185" expanded="true" signature="22556:22872" ph="..." />
+            <marker date="1515399505185" expanded="true" signature="22572:22712" ph="..." />
+            <marker date="1515399505185" expanded="true" signature="22718:22829" ph="..." />
+            <marker date="1515399505185" expanded="true" signature="22940:24284" ph="..." />
+            <marker date="1515399505185" expanded="true" signature="22955:22995" ph="..." />
+            <marker date="1515399505185" expanded="true" signature="23001:23091" ph="..." />
+            <marker date="1515399505185" expanded="true" signature="23222:23271" ph="..." />
+            <marker date="1515399505185" expanded="true" signature="23277:23297" ph="..." />
+            <marker date="1515399505185" expanded="true" signature="23960:24114" ph="..." />
+            <marker date="1515399505185" expanded="true" signature="23978:24100" ph="DELETE FROM " />
+            <marker date="1515399505185" expanded="true" signature="24120:24166" ph="..." />
+            <marker date="1515399505185" expanded="true" signature="24221:24269" ph="..." />
+            <marker date="1515399505185" expanded="true" signature="24350:24548" ph="..." />
+            <marker date="1515399505185" expanded="true" signature="24399:24543" ph="..." />
+            <marker date="1515399505185" expanded="true" signature="24612:25308" ph="..." />
+            <marker date="1515399505185" expanded="true" signature="25577:26002" ph="..." />
+            <marker date="1515399505185" expanded="true" signature="25791:25974" ph="..." />
+            <marker date="1515399505185" expanded="true" signature="26056:26245" ph="..." />
+            <marker date="1515399505185" expanded="true" signature="26098:26140" ph="..." />
+            <marker date="1515399505185" expanded="true" signature="26146:26188" ph="..." />
+            <marker date="1515399505185" expanded="true" signature="26542:26925" ph="..." />
+            <marker date="1515399505185" expanded="true" signature="26768:26897" ph="..." />
+            <marker date="1515399505185" expanded="true" signature="26987:27094" ph="..." />
+            <marker date="1515399505185" expanded="true" signature="27592:27885" ph="..." />
+            <marker date="1515399505185" expanded="true" signature="27803:27857" ph="..." />
+            <marker date="1515399505185" expanded="true" signature="27998:28631" ph="..." />
+            <marker date="1515399505185" expanded="true" signature="28044:28268" ph="..." />
+            <marker date="1515399505185" expanded="true" signature="28673:29413" ph="..." />
+            <marker date="1515399505185" expanded="true" signature="28845:28889" ph="..." />
+            <marker date="1515399505185" expanded="true" signature="28895:29410" ph="..." />
+            <marker date="1515399505185" expanded="true" signature="28937:29133" ph="..." />
+            <marker date="1515399505185" expanded="true" signature="29448:29774" ph="..." />
+            <marker date="1515399505185" expanded="true" signature="29468:29501" ph="..." />
+            <marker date="1515399505185" expanded="true" signature="29507:29637" ph="..." />
+            <marker date="1515399505185" expanded="true" signature="29555:29589" ph="..." />
+            <marker date="1515399505185" expanded="true" signature="29595:29630" ph="..." />
+            <marker date="1515399505185" expanded="true" signature="29871:30119" ph="..." />
+            <marker date="1515399505185" expanded="true" signature="30181:30446" ph="..." />
+            <marker date="1515399505185" expanded="true" signature="30204:30318" ph="..." />
+            <marker date="1515399505185" expanded="true" signature="30324:30385" ph="..." />
+            <marker date="1515399505185" expanded="true" signature="30700:31014" ph="..." />
+            <marker date="1515399505185" expanded="true" signature="30751:30821" ph="..." />
+            <marker date="1515399505185" expanded="true" signature="30827:31011" ph="..." />
+            <marker date="1515399505185" expanded="true" signature="30855:30929" ph="..." />
+            <marker date="1515399505185" expanded="true" signature="30935:31004" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LQapps/Common/LQLibs/Util/Page.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="54" column="82" lean-forward="false" selection-start-line="54" selection-start-column="82" selection-end-line="54" selection-end-column="82" />
+          <folding>
+            <marker date="1515382142868" expanded="true" signature="5545:5551" ph=" " />
+            <marker date="1515382142868" expanded="true" signature="14404:14416" ph="..." />
+            <marker date="1515382142868" expanded="true" signature="16297:16399" ph="..." />
+            <marker date="1515382142868" expanded="true" signature="16338:16381" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LQapps/Api/Controller/PublicController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="20" column="58" lean-forward="false" selection-start-line="20" selection-start-column="58" selection-end-line="20" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LQapps/Api/Common/function.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="105" column="0" lean-forward="false" selection-start-line="105" selection-start-column="0" selection-end-line="105" selection-end-column="0" />
+          <folding>
+            <marker date="1515399396191" expanded="true" signature="10738:11431" ph="..." />
+            <marker date="1515399396191" expanded="true" signature="11437:11767" ph="..." />
+            <marker date="1515399396191" expanded="true" signature="11507:11753" ph="..." />
+            <marker date="1515399396191" expanded="true" signature="11812:12234" ph="..." />
+            <marker date="1515399396191" expanded="true" signature="12095:12171" ph="{...}" />
+            <marker date="1515399396191" expanded="true" signature="12175:12219" ph="{...}" />
+            <marker date="1515399396191" expanded="true" signature="12724:13420" ph="..." />
+            <marker date="1515399396191" expanded="true" signature="13426:13761" ph="..." />
+            <marker date="1515399396191" expanded="true" signature="13497:13746" ph="..." />
+            <marker date="1515399396191" expanded="true" signature="13807:14040" ph="..." />
+            <marker date="1515399396191" expanded="true" signature="14092:14785" ph="..." />
+            <marker date="1515399396191" expanded="true" signature="14791:15121" ph="..." />
+            <marker date="1515399396191" expanded="true" signature="14861:15107" ph="..." />
+            <marker date="1515399396191" expanded="true" signature="15166:15545" ph="..." />
+            <marker date="1515399396191" expanded="true" signature="15401:15477" ph="{...}" />
+            <marker date="1515399396191" expanded="true" signature="15481:15525" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

@@ -14,17 +14,32 @@ class MemberModel extends Model{
 	/* 会员模型自动验证 */
 	protected $_validate = array(
 		/* 验证会员微信的openid */
+<<<<<<< HEAD
 		array('zc_openid', 'checkOpenidRule',"微信的OPENID不合法:仅允许英文字母及数字[28个字符]", self::EXISTS_VALIDATE, 'callback'), //会员名规则
 		array('zc_openid', '', 'openid被占用', self::EXISTS_VALIDATE, 'unique'), //openid被占用
+=======
+
+//		array('zc_openid', 'checkOpenidRule',"微信的OPENID不合法:仅允许英文字母及数字[28个字符]", self::EXISTS_VALIDATE, 'callback'), //会员名规则
+//		array('zc_openid', '', 'openid被占用', self::EXISTS_VALIDATE, 'unique'), //openid被占用
+//		array('zl_role', 'lqrequire',"请选择会员角色", self::EXISTS_VALIDATE), //会员名规则
+
+>>>>>>> b831f521f507c9d7ba259334ea824080107fd8c7
 
 		/* 验证会员名 */
 //		array('zc_account', '', '会员帐号被占用', self::EXISTS_VALIDATE, 'unique'), //会员名被占用
 		/* 验证密码 */
 		array('zc_password', 'checkPasswordRule',"会员密码不合法:仅允许英文字母，（@#$!*）及数字[6-30个字符]", self::EXISTS_VALIDATE, 'callback'), //密码规则
 		/* 验证邮箱 */
+<<<<<<< HEAD
 		/*array('zc_email', 'email', '邮箱格式不正确', self::EXISTS_VALIDATE), //邮箱格式不正确
 		array('zc_email', '1,32', '邮箱长度不合法', self::EXISTS_VALIDATE, 'length'), //邮箱长度不合法
 		array('zc_email', '', "邮箱被占用", self::EXISTS_VALIDATE, 'unique'), //邮箱被占用*/
+=======
+
+//		array('zc_email', 'email', '邮箱格式不正确', self::EXISTS_VALIDATE), //邮箱格式不正确
+//		array('zc_email', '1,32', '邮箱长度不合法', self::EXISTS_VALIDATE, 'length'), //邮箱长度不合法
+//		array('zc_email', '', "邮箱被占用", self::EXISTS_VALIDATE, 'unique'), //邮箱被占用
+>>>>>>> b831f521f507c9d7ba259334ea824080107fd8c7
 
 		/* 验证手机号码 */
 		array('zc_mobile', 'isMobile', '手机格式不正确', self::EXISTS_VALIDATE,'function'), //手机格式不正确 TODO:
@@ -51,10 +66,15 @@ class MemberModel extends Model{
 	
     public function __construct() {
 		parent::__construct();
-		//$this->follow=M("follow");//微信粉丝-模型
+
+//		$this->follow=M("follow");//微信粉丝-模型
 		$this->model_log=M("member_log");//会员日志-模型
+//		$this->model_designer=M("designer");//设计师-模型
+//		$this->model_bank=M("bank");//银行-模型
 		$this->model_integration_log=M("member_integration_log");//会员积分日志-模型
 		$this->model_member_token=M("member_token");//会员授权-模型
+//		$this->model_favorite=M("member_favorite");//我喜欢-模型
+
 		$this->model_pay_log=M("pay_log");//支付日志-模型
 		
 		$this->login_member_info=session('member_auth');

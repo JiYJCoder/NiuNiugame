@@ -9,22 +9,24 @@ class RoomController extends PublicController
     public $myTable;
     protected $myForm = array(
         //标题
-        'tab_title' => array(1 => '基本信息', 2 => '价格信息'),
+        'tab_title' => array(1 => '基本信息',2=>'玩法设置'),
         //通用信息
         '1' => array(
+            array('text', 'zc_title', "房名", 1, '{"required":"1","dataType":"","dataLength":"","readonly":0,"disabled":0,"maxl":120}'),
+            array('text', 'zc_number', "房号", 1, '{"required":"0","dataType":"","dataLength":"","readonly":1,"disabled":0,"maxl":120}'),
             array('radio', 'zn_room_type', "房间类型",1,'{"required":"0","dataType":"","dataLength":"","readonly":0,"disabled":0}'),
             array('radio', 'zn_confirm', "进房确认",1,'{"required":"0","dataType":"","dataLength":"","readonly":0,"disabled":0}'),
-            array('text', 'zc_title', "房卡名称", 1, '{"required":"1","dataType":"","dataLength":"","readonly":0,"disabled":0,"maxl":120}'),
-            array('image', 'zc_image', "图片", 1, '{"type":"images","allowOpen":1}'),
-            array('text', 'zn_sort', "排序", 1, '{"required":"1","dataType":"number","dataLength":"","readonly":0,"disabled":0}'),
-            array('text', 'zn_sell_num', "已购买张数", 1, '{"required":"0","dataType":"number","dataLength":"","readonly":1,"disabled":0}'),
+            array('radio', 'zn_play_type', "玩法",1,'{"required":"0","dataType":"","dataLength":"","readonly":0,"disabled":0}'),
+            array('radio', 'zn_pay_type', "付费模式",1,'{"required":"0","dataType":"","dataLength":"","readonly":0,"disabled":0}'),
         ),
-        //内容
         '2' => array(
-            array('text', 'zn_num', "数量", 1, '{"required":"0","dataType":"","dataLength":"","readonly":0,"disabled":0,"maxl":120}'),
-            array('text', 'zn_price', "固定价钱", 1, '{"required":"0","dataType":"","dataLength":"","readonly":0,"disabled":0,"maxl":120}'),
-            array('text', 'zn_discount', "折扣", 1, '{"required":"0","dataType":"","dataLength":"","readonly":0,"disabled":0,"maxl":120}'),
-        ),
+            array('textarea', 'zc_rate', "倍率设置",1,'{"required":"0","dataType":"","dataLength":"","readonly":0,"disabled":0}'),
+            array('radio', 'zn_bet_time', "可下注时间",1,'{"required":"0","dataType":"","dataLength":"","readonly":0,"disabled":0}'),
+            array('text', 'zn_min_score', "最低上庄分数", 1, '{"required":"1","dataType":"","dataLength":"","readonly":0,"disabled":0}'),
+            array('text', 'zn_bet_between_s', "下注范围开始", 1, '{"required":"1","dataType":"","dataLength":"","readonly":0,"disabled":0}'),
+            array('text', 'zn_bet_between_e', "下注范围结束", 1, '{"required":"1","dataType":"","dataLength":"","readonly":0,"disabled":0}'),
+            array('text', 'zn_extract', "抽庄赢分比例", 1, '{"required":"1","dataType":"","dataLength":"","readonly":0,"disabled":0}'),
+        )
     );
 
     /** 初始化*/
@@ -89,9 +91,8 @@ class RoomController extends PublicController
         //首页设置
         $page_title = array('checkbox' => 'checkbox', 'no' => L("LIST_NO"), 'zc_image' => '图片', 'zn_cat_id' => '文章类型', 'zc_title' => '文章标题', 'zn_sort' => L("LIST_SOTR"), 'zn_spe' => '推荐', 'status' => L("LIST_STAYUS"), 'os' => L("LIST_OS"));
         $page_config = array(
-            'field' => "`id`,`zn_cat_id`,`zc_image`,`zc_title`,`zn_num`,`zn_price`,`zn_discount`,`zn_sort`,`zl_visible`",
             'where' => $sqlwhere_parameter,
-            'order' => 'zn_sort,id DESC',
+            'order' => 'zn_mdate DESC,id DESC',
             'title' => $page_title,
             'thinkphpurl' => __CONTROLLER__ . "/",
         );
@@ -157,10 +158,12 @@ class RoomController extends PublicController
             //表单数据初始化s
             $form_array = lq_post_memory_data();//获得上次表单的记忆数据
             $form_array["id"] = '';
-            $form_array["zd_send_time"] = 0;
-            $form_array["zn_cat_id_data"] = C('ROOM_TYPE');
+            $form_array["zn_room_type_data"] = C('ROOM_SET')['room_type'];
+            $form_array["zn_confirm_data"] = C('ROOM_SET')['confirm'];
+            $form_array["zn_play_type_data"] = C('ROOM_SET')['play_type'];
+            $form_array["zn_pay_type_data"] = C('ROOM_SET')['pay_type'];
+            $form_array["zn_bet_time_data"] = C('ROOM_SET')['bet_time'];
             $form_array["zn_sort"] = C("COM_SORT_NUM");
-            $form_array["zn_page_view"] = $form_array["zn_share"] = $form_array["zn_agrees"] = 0;
             $Form = new Form($this->myForm, $form_array, $this->myTable->getCacheComment());
             $this->assign("LQFdata", $Form->createHtml());//表单数据
             //表单数据初始化s

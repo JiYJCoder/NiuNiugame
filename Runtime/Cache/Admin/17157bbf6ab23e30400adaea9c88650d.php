@@ -134,7 +134,154 @@ if(navigator.appName == 'Microsoft Internet Explorer'){
 	<div class="col-sm-6" style="float:right;text-align:right;padding:0;margin:0px;"><?php echo ($sys_current); ?></div>
   </div>
   
+  <form name="<?php echo ($lq_form_list); ?>" id="<?php echo ($lq_form_list); ?>" class="form-horizontal" onsubmit="return false">
+  <input type="hidden" id="thinkphpurl" name="thinkphpurl" value="<?php echo ($page_config["thinkphpurl"]); ?>" />
+  <input type="hidden" id="keymode" value="<?php echo ($search_content["keymode"]); ?>" />
+  <input type="hidden" id="pagesize" value="<?php echo ($search_content["pagesize"]); ?>" />
   <div class="clearfix welcome-container">
+  	<?php if($os_lock["search"] == '1'): ?>    
+    <div class="clearfix">
+      <div class="panel panel-info">
+        <div class="panel-heading"><i class="fa fa-paw"></i> 筛选</div>
+        <div class="panel-body">
+          <div class="input-group">
+            <input type="text" class="form-control" id="fkeyword" value="<?php echo ($search_content["fkeyword"]); ?>" placeholder="<?php echo ($keywordDefault); ?>" onclick="lqKeywordOnclick(this)" onblur="lqKeywordOnblur(this)"/>
+            <div class="input-group-btn">
+              <button class="btn btn-default" id="commonSearch"><i class="fa fa-search"></i> 搜索</button>
+              <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="true"><span class="caret"></span></button>
+              <ul class="dropdown-menu dropdown-menu-right" role="menu">
+                <li><a href="javascript:;" onclick="$('#fkeyword').attr('placeholder','模糊搜索：请输入关键字');$('#keymode').val(0);">模糊搜索</a></li>
+                <li><a href="javascript:;" onclick="$('#fkeyword').attr('placeholder','精准搜索：请输入关键字');$('#keymode').val(1);">精准搜索</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+	<script language="javascript">   
+    $(function(){
+        //通用搜索
+        $("#commonSearch").click(function(){	
+            require(['layer'], function(){
+                var fkeyword=$("#fkeyword").val();
+                if(fkeyword!='<?php echo ($keywordDefault); ?>'){
+                    var searchurl=$("#thinkphpurl").val()+'index/s/';
+                    var urlpara="fkeyword/"+encodeURIComponent(fkeyword)+"/";
+                    urlpara+="keymode/"+encodeURIComponent($("#keymode").val())+"/";
+					urlpara+="pagesize/"+encodeURIComponent($("#pagesize").val())+"/";
+                    location.href=searchurl+base64encode(urlpara);
+                }else{
+                    layer.msg("请输入关键字！",{icon:5,time:2000});
+                }
+            });			
+        });
+    });
+    </script>      
+    </div>
+
+    <?php else: ?>
+     
+
+            <div class="clearfix">
+              <div class="panel panel-info">
+                <div class="panel-body" style="position:relative;">
+                    <div class="lq-panel-body-title"><span class="btn"><i class="fa fa-paw"></i> 筛选</span></div>
+                    
+                    <div class="form-group">
+                          <label class="col-xs-12 col-sm-3 col-md-2 col-lg-1 control-label">发布日期范围</label>
+                          <div class="col-sm-6 col-lg-8 col-xs-6"> 
+                            <script type="text/javascript">
+                                require(["daterangepicker"], function($){
+                                    $(function(){
+                                        $(".daterange.daterange-date").each(function(){
+                                            var elm = this;
+                                            $(this).daterangepicker({
+                                                startDate: $(elm).prev().prev().val(),
+                                                endDate: $(elm).prev().val(),
+                                                format: "YYYY-MM-DD"
+                                            }, function(start, end){
+                                                $(elm).find(".date-title").html(start.toDateStr() + " 至 " + end.toDateStr());
+                                                $(elm).prev().prev().val(start.toDateStr());
+                                                $(elm).prev().val(end.toDateStr());
+                                            });
+                                        });
+                                    });
+                                });
+                            </script>
+                            <input id="open_time" type="hidden" value="<?php echo ($search_content["open_time"]); ?>">
+                            <input id="time_start" type="hidden" value="<?php echo ($search_content["time_start"]); ?>">
+                            <input id="time_end" type="hidden" value="<?php echo ($search_content["time_end"]); ?>">
+                            <button class="btn btn-default daterange daterange-date" type="button">
+                            <span class="date-title"><?php echo ($search_content["time_start"]); ?> 至 <?php echo ($search_content["time_end"]); ?></span> <i class="fa fa-calendar"></i>
+                            </button> 
+                            <?php if($search_content["open_time"] == '1'): ?><a href="#" id="a_open_time" class="btn btn-primary">启用</a> 
+                            <?php else: ?>
+                            <a href="#" id="a_open_time" class="btn btn-default">启用</a><?php endif; ?>                  
+                            </div>  
+                    </div>
+                    <div class="form-group">
+                      <label class="col-xs-12 col-sm-2 col-md-2 col-lg-1 control-label">搜索</label>
+                      <div class="col-sm-8 col-lg-10 col-xs-12">
+                        <div class="input-group">
+                          <input type="text" class="form-control" id="fkeyword" value="<?php echo ($search_content["fkeyword"]); ?>" placeholder="<?php echo ($keywordDefault); ?>" onclick="lqKeywordOnclick(this)" onblur="lqKeywordOnblur(this)"/>
+                          <div class="input-group-btn">
+                            <button class="btn btn-default" id="listSearch"><i class="fa fa-search"></i> 搜索</button>
+                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><span class="caret"></span></button>
+                            <ul class="dropdown-menu dropdown-menu-right" role="menu">
+                            <li><a href="javascript:;" onclick="$('#fkeyword').attr('placeholder','精准搜索：请输入关键字');$('#keymode').val(0);">精准搜索</a></li>
+                            <li><a href="javascript:;" onclick="$('#fkeyword').attr('placeholder','模糊搜索：请输入关键字');$('#keymode').val(1);">模糊搜索</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    
+ 					<div class="form-group">
+         		      <label class="col-xs-12 col-sm-2 col-md-2 col-lg-1 control-label">分类/推荐</label>
+                      <div class="col-sm-8 col-lg-10 col-xs-12">
+                      <div class="col-lg-6" style="padding:0px;"><select class="form-control" id="cat_id"><?php echo ($zn_cat_id_str); ?></select></div>
+                      <div class="col-lg-6"><select class="form-control" id="recommend"><?php echo ($recommend_str); ?></select></div>
+                      </div>
+                    </div>                   
+                    
+                </div>
+              </div>
+            </div>
+			<script language="javascript">   
+            $(function(){
+				 //时间开启
+				 $("#a_open_time").click(function(){	
+				 		if($("#open_time").val()=="1"){
+							$("#open_time").val("0");
+							$(this).removeClass("btn-primary").addClass("btn-default");
+						}else{
+							$("#open_time").val("1");
+							$(this).removeClass("btn-default").addClass("btn-primary");
+						}
+				 });
+                //通用搜索
+                $("#listSearch").click(function(){	
+                    require(['layer'], function(){
+						var fkeyword=$("#fkeyword").val();
+						var recommend=$("#recommend").val();
+						var open_time=$("#open_time").val();
+						if(fkeyword!='<?php echo ($keywordDefault); ?>'||cat_id||recommend||open_time==1){
+							var searchurl=$("#thinkphpurl").val()+'index/s/';
+							var urlpara="fkeyword/"+encodeURIComponent(fkeyword)+"/";
+							urlpara+="keymode/"+encodeURIComponent($("#keymode").val())+"/";
+							urlpara+="pagesize/"+encodeURIComponent($("#pagesize").val())+"/";
+							urlpara+="open_time/"+encodeURIComponent($("#open_time").val())+"/";						
+							urlpara+="time_start/"+encodeURIComponent($("#time_start").val())+"/";
+							urlpara+="time_end/"+encodeURIComponent($("#time_end").val())+"/";	
+							if(cat_id) urlpara+="cat_id/"+cat_id+"/";
+							if(recommend) urlpara+="recommend/"+recommend+"/";
+							location.href=searchurl+base64encode(urlpara);
+						}else{
+							layer.msg("请输入搜索条件！",{icon:5,time:2000});
+						}					
+                    });			
+                });
+            });
+            </script><?php endif; ?> 
     <div class="row">
       <div class="clearfix template">
         <div class="panel panel-default">
@@ -203,13 +350,53 @@ if(navigator.appName == 'Microsoft Internet Explorer'){
 
 	</div>
           
-            <?php echo ($LQFdata); ?>
-          
-          
+          <div class="table-responsive panel-body">
+            <table class="table table-hover">
+                 <thead>
+                      <tr>
+                        <th style="width:40px;"><input type="checkbox" class="checkbox" value="0" id="list_checkbox"></th>                      
+                        <th style="width:80px;text-align:left;">序号/ID</th>
+                        <th style="width:120px;" title="图片">图片</th>
+                        <th style="width:150px;">分类</th>
+                        <th>标题</th>
+                          <th>数量</th>
+                          <th>价钱</th>
+                          <th>折扣</th>
+                        <th style="width:80px;">排序	</th>
+
+                        <th style="width:100px;">状态</th>
+                        <th style="width:120px;text-align:center;"><a href="javascript:;" id="op_msg"><?php echo L("LABEL_OS");?>?</a></th>
+                      </tr>
+                </thead>             
+              
+              <tbody id="list-tbody">
+                  <?php if(is_array($list)): $key = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "$empty_msg" ;else: foreach($__LIST__ as $key=>$data): $mod = ($key % 2 );++$key;?><tr id="<?php echo ($data["id"]); ?>" visible="<?php echo ($data["zl_visible"]); ?>" opCheck='0'>
+                      <td><input type="checkbox" class="checkbox" value="<?php echo ($data["id"]); ?>" name="items" /></td>
+                      <td align="left"><?php echo ($data["no"]); ?>/<?php echo ($data["id"]); ?></td>
+                      <td class="imgtd"><img src="<?php echo ($data["image"]); ?>" alt="<?php echo ($data["zc_title"]); ?>" height="60"/></td>
+                      <td><?php echo ($data["zn_cat_id_label"]); ?></td>
+                      <td edit="0" op="label" title="<?php echo L('ALT_BUTTON_EDIT_LABEL');?>"><?php echo ($data["zc_title"]); ?></td>
+                      <td><?php echo ($data["zn_num"]); ?></td>
+                      <td><?php echo ($data["zn_price"]); ?></td>
+                      <td><?php echo ($data["zn_discount"]); ?></td>
+                      <td edit="0" op="sort" title="<?php echo L('ALT_BUTTON_EDIT_SORT');?>"><?php echo ($data["zn_sort"]); ?></td>
+
+                      <td><?php echo ($data["visible_label"]); ?></td>
+                      <td class="manage-menu list-os-a">
+                      <a href="/sys-index.php/Room/edit/tnid/<?php echo ($data["id"]); ?>" title="<?php echo L("LABEL_OS_EDITID");?>[<?php echo ($data["id"]); ?>]"><i class="fa fa-edit"></i></a>
+             		  <a href="javascript:void(0);" class="opStatus" val="<?php echo ($data["zl_visible"]); ?>" title="<?php echo L("LABEL_OS_STATUS");?>[<?php echo ($data["id"]); ?>]"><?php echo ($data["visible_button"]); ?></a>
+                      <a href="javascript:;" class="opDelete" title="<?php echo L("LABEL_OS_TITLE_DEL");?>[<?php echo ($data["zc_title"]); ?>]"><i class="fa fa-times-circle"></i></a>
+                      </td>
+                    </tr><?php endforeach; endif; else: echo "$empty_msg" ;endif; ?>
+              </tbody>
+            </table>
+          </div>
         </div>
+        <?php echo ($page); ?> 
       </div>
     </div>
   </div>
+  </form>
   
 </div>
 
@@ -248,7 +435,7 @@ $(document).ready(function(){
 var top_nav_id=util.cookie.get('top_nav_id');
 var left_nav_id=util.cookie.get('left_nav_id');
 if(top_nav_id) util.menuDisplay(top_nav_id,left_nav_id);
-<?php if(ACTION_NAME=='index') { echo "$('#list-tbody tr:odd').addClass('tr_odd');//单双行样式\n"; echo "$('.opStatus').click(function(){util.visible($(this),'/sys-index.php/WebConfig/opVisible');});//快捷启用禁用操作\n"; echo "$('.opDelete').click(function(){util.delete($(this),'/sys-index.php/WebConfig/opDelete');});//单记录删除操作\n"; echo "$('tbody>tr>td[op]').dblclick(function(){util.ajaxEdit($(this),'/sys-index.php/WebConfig');});//单项编辑\n"; echo "$('tbody>tr>td>a[op]').click(function(){util.ajaxPropertyA($(this),'/sys-index.php/WebConfig');});//单项属性切换\n"; } ?>	
+<?php if(ACTION_NAME=='index') { echo "$('#list-tbody tr:odd').addClass('tr_odd');//单双行样式\n"; echo "$('.opStatus').click(function(){util.visible($(this),'/sys-index.php/Room/opVisible');});//快捷启用禁用操作\n"; echo "$('.opDelete').click(function(){util.delete($(this),'/sys-index.php/Room/opDelete');});//单记录删除操作\n"; echo "$('tbody>tr>td[op]').dblclick(function(){util.ajaxEdit($(this),'/sys-index.php/Room');});//单项编辑\n"; echo "$('tbody>tr>td>a[op]').click(function(){util.ajaxPropertyA($(this),'/sys-index.php/Room');});//单项属性切换\n"; } ?>	
 	//ajax点击响应href
 	$(".getUrl").click(function(){util.getUrl($(this).attr("lqHref"));});
 	//顶部菜单展示
@@ -279,14 +466,3 @@ if(top_nav_id) util.menuDisplay(top_nav_id,left_nav_id);
 </script>
 </body>
 </html>
-<script type="text/javascript" src="/Public/Static/js/lib/admin.validator.js"></script>
-<script type="text/javascript">
-$(document).ready(function(){
-     //公共表单提交
-	 $("#LQFormSubmit,#aFormSubmit").click(function(){
-		var loForm=document.getElementById("LQForm");
-		if(adminValidator(loForm)){util.commonAjaxSubmit();}
-		return false;
-	 });
-});
-</script>

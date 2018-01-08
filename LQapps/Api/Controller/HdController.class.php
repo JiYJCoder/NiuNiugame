@@ -29,7 +29,7 @@ class HdController extends PublicController
     {
         parent::__construct();
 
-
+        $this->D_ART = D("Api/Article");//文章
 
         $this->D_SMS = D("Api/SmsLog");//接口短信实例化
         //免死金牌
