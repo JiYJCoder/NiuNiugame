@@ -173,7 +173,7 @@ function LQFileExist($tcFilePath, $tnwwwroot = 1)
     }
 }
 
-//用php从身份证中提取生日,包括15位和18位身份证 
+//用php从身份证中提取生日,包括15位和18位身份证
 function lqGetIDCardInfo($IDCard)
 {
     $result['error'] = 0;//0：未知错误，1：身份证格式错误，2：无错误
@@ -598,9 +598,9 @@ function hideStr($string, $bengin = 0, $len = 4, $type = 0, $glue = "@")
 
 
 //UTF-8、GB2312都支持的汉字截取函数
-//cut_str(字符串, 截取长度, 开始长度, 编码); 
-//编码默认为 utf-8 
-//开始长度默认为 0 
+//cut_str(字符串, 截取长度, 开始长度, 编码);
+//编码默认为 utf-8
+//开始长度默认为 0
 function lq_cutstr($string, $sublen, $start = 0, $code = 'UTF-8', $tcperstr = "...")
 {
     if ($code == 'UTF-8') {
@@ -1570,7 +1570,6 @@ function lq_thumb_deal($path_array = array(), $id = 0, $key = 'images')
 }
 
 /**
-<<<<<<< HEAD
  * 发送模板短信函数
  * @param mobile 手机号码集合,用英文逗号分开
  * @param datas 内容数据 格式为数组 例如：array('Marry','Alon')，如不需替换请填 null
@@ -1604,120 +1603,86 @@ function lqSendSms($mobile, $datas, $tempId)
     } else {
         return array('status' => 1, 'msg' => $result->dateCreated);
     }
-=======
-  * 发送模板短信函数
-  * @param mobile 手机号码集合,用英文逗号分开
-  * @param datas 内容数据 格式为数组 例如：array('Marry','Alon')，如不需替换请填 null
-  * @param $tempId 模板Id,测试应用和未上线应用使用测试模板请填写1，正式应用上线后填写已申请审核通过的模板ID
-  */
-function lqSendSms($mobile,$datas,$tempId){
-	//主帐号,对应开官网发者主账号下的 ACCOUNT SID
-	$accountSid= '8a216da856588e5a0156594c3a7200f7';
-	//主帐号令牌,对应官网开发者主账号下的 AUTH TOKEN
-	$accountToken= '328cb6c2884b40cfaf37d518b543e423';
-	//应用Id，在官网应用列表中点击应用，对应应用详情中的APP ID
-	$appId='8aaf070857dc0e780157e01277e3029f';
-	//请求地址
-	$serverIP='app.cloopen.com';
-	//请求端口，生产环境和沙盒环境一致
-	$serverPort='8883';
-	//REST版本号，在官网文档REST介绍中获得。
-	$softVersion='2013-12-26';
-     
-	 $rest = new \LQLibs\Util\CcpSms($serverIP,$serverPort,$softVersion);//容联云通讯接口类
-     $rest->setAccount($accountSid,$accountToken);
-     $rest->setAppId($appId);
-     // 发送模板短信
-     $result = $rest->sendTemplateSMS($mobile,$datas,$tempId);
-     if($result == NULL ) {
-         return array('status'=>0,'msg'=>'result error!');
-     }
-     if($result->statusCode!=0) {
-		 return array('status'=>0,'msg'=>$result->statusMsg);
-     }else{
-		 return array('status'=>1,'msg'=>$result->dateCreated);
-     }
->>>>>>> b02a4f1343254168e17a02caf460de0d2caa00fc
-}
 
-//当前url
-function lq_get_url()
-{
-    $sys_protocal = isset($_SERVER['SERVER_PORT']) && $_SERVER['SERVER_PORT'] == '443' ? 'https://' : 'http://';
-    $php_self = $_SERVER['PHP_SELF'] ? $_SERVER['PHP_SELF'] : $_SERVER['SCRIPT_NAME'];
-    $path_info = isset($_SERVER['PATH_INFO']) ? $_SERVER['PATH_INFO'] : '';
-    $relate_url = isset($_SERVER['REQUEST_URI']) ? $_SERVER['REQUEST_URI'] : $php_self . (isset($_SERVER['QUERY_STRING']) ? '?' . $_SERVER['QUERY_STRING'] : $path_info);
-    return strip_tags($sys_protocal . (isset($_SERVER['HTTP_HOST']) ? $_SERVER['HTTP_HOST'] : '') . $relate_url);
 }
+//当前url
+    function lq_get_url()
+    {
+        $sys_protocal = isset($_SERVER['SERVER_PORT']) && $_SERVER['SERVER_PORT'] == '443' ? 'https://' : 'http://';
+        $php_self = $_SERVER['PHP_SELF'] ? $_SERVER['PHP_SELF'] : $_SERVER['SCRIPT_NAME'];
+        $path_info = isset($_SERVER['PATH_INFO']) ? $_SERVER['PATH_INFO'] : '';
+        $relate_url = isset($_SERVER['REQUEST_URI']) ? $_SERVER['REQUEST_URI'] : $php_self . (isset($_SERVER['QUERY_STRING']) ? '?' . $_SERVER['QUERY_STRING'] : $path_info);
+        return strip_tags($sys_protocal . (isset($_SERVER['HTTP_HOST']) ? $_SERVER['HTTP_HOST'] : '') . $relate_url);
+    }
 
 //header 跳转
-function lq_header($url, $js = 0, $replace = true, $http_response_code = 200)
-{
-    if ($js == 1) {
-        echo '<script type="text/javascript">window.location.href="' . $url . '";</script>';
-        exit();
+    function lq_header($url, $js = 0, $replace = true, $http_response_code = 200)
+    {
+        if ($js == 1) {
+            echo '<script type="text/javascript">window.location.href="' . $url . '";</script>';
+            exit();
+        }
+        if ($replace == 1) {
+            @header($url, $replace, $http_response_code);
+        } else {
+            @header($url, $replace);
+        }
     }
-    if ($replace == 1) {
-        @header($url, $replace, $http_response_code);
-    } else {
-        @header($url, $replace);
-    }
-}
 
 //获得上次表单的记忆数据 1:清除记忆
-function lq_post_memory_data($kill = 0)
-{
-    if ($kill == 1) {
-        setcookie("last_post_cookie", NULL, time() - 3600);
-        return 0;
+    function lq_post_memory_data($kill = 0)
+    {
+        if ($kill == 1) {
+            setcookie("last_post_cookie", NULL, time() - 3600);
+            return 0;
+        }
+        if ($_COOKIE['last_post_cookie']) {
+            $form_array = lq_cookiestr_to_array($_COOKIE['last_post_cookie']);
+        } else {
+            $form_array = array();
+        }
+        return $form_array;
     }
-    if ($_COOKIE['last_post_cookie']) {
-        $form_array = lq_cookiestr_to_array($_COOKIE['last_post_cookie']);
-    } else {
-        $form_array = array();
+
+    /*产生房号*/
+    function create_room_code($member_id, $max_len = 6)
+    {
+        $room_count = M("Room")->where("zn_member_id=" . $member_id)->count();
+        $member_len = strlen($member_id . ($room_count + 1));
+
+        $arr = array('0', '1', '2', '3', '4', '5', '6', '7', '8', '9');
+        shuffle($arr);//打乱元素顺序
+
+        if ($max_len <= $member_len) $max_len = $member_len + 1;
+        $sub_len = $max_len - $member_len;
+        $rand = array_slice($arr, 0, $sub_len);//取前四个元素
+        $result = $member_id . ($room_count + 1) . implode('', $rand);//转成字符串
+        return $result;
     }
-    return $form_array;
-}
-
-/*产生房号*/
-function create_room_code($member_id, $max_len = 6)
-{
-    $room_count = M("Room")->where("zn_member_id=" . $member_id)->count();
-    $member_len = strlen($member_id . ($room_count + 1));
-
-    $arr = array('0', '1', '2', '3', '4', '5', '6', '7', '8', '9');
-    shuffle($arr);//打乱元素顺序
-
-    if ($max_len <= $member_len) $max_len = $member_len + 1;
-    $sub_len = $max_len - $member_len;
-    $rand = array_slice($arr, 0, $sub_len);//取前四个元素
-    $result = $member_id . ($room_count + 1) . implode('', $rand);//转成字符串
-    return $result;
-}
 
 
 //微信昵称处理
-function lq_set_nickname($str = '')
-{
-    if ($str) {
-        $tmpStr = json_encode($str);
-        $tmpStr2 = preg_replace("#(\\\ud[0-9a-f]{3})#ie", "", $tmpStr);
-        $return = json_decode($tmpStr2);
-        if (!$return) {
-            return jsonName($return);
+    function lq_set_nickname($str = '')
+    {
+        if ($str) {
+            $tmpStr = json_encode($str);
+            $tmpStr2 = preg_replace("#(\\\ud[0-9a-f]{3})#ie", "", $tmpStr);
+            $return = json_decode($tmpStr2);
+            if (!$return) {
+                return jsonName($return);
+            }
+        } else {
+            $return = '微信用户-' . time();
         }
-    } else {
-        $return = '微信用户-' . time();
+        return $return;
     }
-    return $return;
-}
 
 
-function pr($data)
-{
-    echo "<prev>";
-    print_r($data);
-    echo "</prev>";
-}
+    function pr($data)
+    {
+        echo "<prev>";
+        print_r($data);
+        echo "</prev>";
+    }
 
-?>
+    ?>

@@ -26,7 +26,6 @@ class MemberController extends PublicController
     /** 初始化*/
     public function __construct()
     {
-
         parent::__construct();
         $this->D_SMS = D("Api/SmsLog");//接口短信实例化
 
