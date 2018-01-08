@@ -150,8 +150,13 @@ if(navigator.appName == 'Microsoft Internet Explorer'){
               <button class="btn btn-default" id="commonSearch"><i class="fa fa-search"></i> 搜索</button>
               <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="true"><span class="caret"></span></button>
               <ul class="dropdown-menu dropdown-menu-right" role="menu">
+<<<<<<< HEAD
                 <li><a href="javascript:;" onclick="$('#fkeyword').attr('placeholder','模糊搜索：请输入关键字');$('#keymode').val(0);">模糊搜索</a></li>
                 <li><a href="javascript:;" onclick="$('#fkeyword').attr('placeholder','精准搜索：请输入关键字');$('#keymode').val(1);">精准搜索</a></li>
+=======
+                <li><a href="javascript:;" onclick="$('#fkeyword').attr('placeholder','精准搜索：请输入关键字');$('#keymode').val(1);">精准搜索</a></li>
+                <li><a href="javascript:;" onclick="$('#fkeyword').attr('placeholder','模糊搜索：请输入关键字');$('#keymode').val(0);">模糊搜索</a></li>
+>>>>>>> dev
               </ul>
             </div>
           </div>
@@ -184,6 +189,10 @@ if(navigator.appName == 'Microsoft Internet Explorer'){
       <div class="clearfix template">
         <div class="panel panel-default">
 		  
+<<<<<<< HEAD
+=======
+     
+>>>>>>> dev
 	<div class="panel-body">
           
             <span><i class="fa fa-list-ol"></i> <?php echo ($sys_heading); ?></span>

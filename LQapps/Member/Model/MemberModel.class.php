@@ -14,23 +14,28 @@ class MemberModel extends Model{
 	/* 会员模型自动验证 */
 	protected $_validate = array(
 		/* 验证会员微信的openid */
-		array('zc_openid', 'checkOpenidRule',"微信的OPENID不合法:仅允许英文字母及数字[28个字符]", self::EXISTS_VALIDATE, 'callback'), //会员名规则
-		array('zc_openid', '', 'openid被占用', self::EXISTS_VALIDATE, 'unique'), //openid被占用
+
+//		array('zc_openid', 'checkOpenidRule',"微信的OPENID不合法:仅允许英文字母及数字[28个字符]", self::EXISTS_VALIDATE, 'callback'), //会员名规则
+//		array('zc_openid', '', 'openid被占用', self::EXISTS_VALIDATE, 'unique'), //openid被占用
+//		array('zl_role', 'lqrequire',"请选择会员角色", self::EXISTS_VALIDATE), //会员名规则
+
+
 		/* 验证会员名 */
-		array('zc_account', 'checkAccountRule',"请输入会员帐号", self::EXISTS_VALIDATE, 'callback'), //会员名规则
-		array('zc_account', '', '会员帐号被占用', self::EXISTS_VALIDATE, 'unique'), //会员名被占用
+//		array('zc_account', '', '会员帐号被占用', self::EXISTS_VALIDATE, 'unique'), //会员名被占用
 		/* 验证密码 */
 		array('zc_password', 'checkPasswordRule',"会员密码不合法:仅允许英文字母，（@#$!*）及数字[6-30个字符]", self::EXISTS_VALIDATE, 'callback'), //密码规则
 		/* 验证邮箱 */
-		/*array('zc_email', 'email', '邮箱格式不正确', self::EXISTS_VALIDATE), //邮箱格式不正确
-		array('zc_email', '1,32', '邮箱长度不合法', self::EXISTS_VALIDATE, 'length'), //邮箱长度不合法
-		array('zc_email', '', "邮箱被占用", self::EXISTS_VALIDATE, 'unique'), //邮箱被占用*/
+
+//		array('zc_email', 'email', '邮箱格式不正确', self::EXISTS_VALIDATE), //邮箱格式不正确
+//		array('zc_email', '1,32', '邮箱长度不合法', self::EXISTS_VALIDATE, 'length'), //邮箱长度不合法
+//		array('zc_email', '', "邮箱被占用", self::EXISTS_VALIDATE, 'unique'), //邮箱被占用
+
 		/* 验证手机号码 */
 		array('zc_mobile', 'isMobile', '手机格式不正确', self::EXISTS_VALIDATE,'function'), //手机格式不正确 TODO:
 		array('zc_mobile', '', '手机号被占用', self::EXISTS_VALIDATE, 'unique'), //手机号被占用
 		//管理员标识
 		array('zc_nickname','1,100','昵称在1~100个字符间',self::EXISTS_VALIDATE,'length'),
-		array('zl_sex',array(0,1,2),'性别必填', self::EXISTS_VALIDATE,'in'),//性别
+//		array('zl_sex',array(0,1,2),'性别必填', self::EXISTS_VALIDATE,'in'),//性别
 	);
 
 	/* 会员模型自动完成 */
@@ -50,10 +55,15 @@ class MemberModel extends Model{
 	
     public function __construct() {
 		parent::__construct();
-		//$this->follow=M("follow");//微信粉丝-模型
+
+//		$this->follow=M("follow");//微信粉丝-模型
 		$this->model_log=M("member_log");//会员日志-模型
+//		$this->model_designer=M("designer");//设计师-模型
+//		$this->model_bank=M("bank");//银行-模型
 		$this->model_integration_log=M("member_integration_log");//会员积分日志-模型
 		$this->model_member_token=M("member_token");//会员授权-模型
+//		$this->model_favorite=M("member_favorite");//我喜欢-模型
+
 		$this->model_pay_log=M("pay_log");//支付日志-模型
 		
 		$this->login_member_info=session('member_auth');
@@ -265,7 +275,7 @@ class MemberModel extends Model{
 			return $member;
 	}
 	//获取会员表某个字段（如昵称/头像）
-	public function lqGetFieldByID($mid,$field){return $this->where("id=".$mid)->getField($field);}	
+	public function lqGetFieldByID($mid,$field){return $this->where("id=".$mid)->getField($field);}
 	public function lqGetField($sql='id=0',$field='zc_mobile'){
 		$field_arr=split(',',$field);
 		if($field=="*"){
@@ -837,11 +847,6 @@ class MemberModel extends Model{
 	}	
 	/*授权#######################e*/
 	
-	
-	/*我喜欢#######################s*/
-	public function lqTestLove($id=0,$key=1,$member=array()){
-		return $this->model_favorite->where("zn_type='".intval($key)."' and zn_member_id=" .(int)$member["id"]." and zn_object_id=".intval($id))->getField('id');
-	}		
 	public function lqInsertLove($id=0,$key=1,$member=array()){
 		$data=array();
 		$data["zn_type"]=$key;
@@ -861,25 +866,6 @@ class MemberModel extends Model{
 		return $this->model_favorite->where($where)->delete();	
 	}
 
-    //我喜欢-收藏数
-    public function laGetFavoriteIds($type,$member=array()){
-        $where = array(
-            "zn_type" => $type,
-            "zn_member_id" => $member["id"]
-        );
-        $field = array("zn_object_id");
-
-        $list = $this->model_favorite->where($where)->field($field)->select();
-        foreach($list as $lnKey => $laValue)
-        {
-            $ids[] = $laValue["zn_object_id"];
-        }
-
-        return $ids;
-    }
-	/*我喜欢#######################e*/
-	
-	
 	/*支付日志#######################s*/
 	public function lqInsertPay($data){return $this->model_pay_log->add($data);}
 	public function lqUpdatePay($data,$where){$this->model_pay_log->where($where)->save($data);}

@@ -40,64 +40,37 @@ class SmsController extends PublicController {
 		$this->ajaxReturn($this->returnData);
 	}
 	
-	//短信注册请求：验证码
-    public function login(){
-		$mobile=I("get.mobile",'');//手机号
-		$code=lq_random_string(6,1);//随机码
+	//发送yzm
+    public function sendYzm(){
+		$mobile=I("post.mobile",'');//手机号
+        $type = I('post.type');
+        switch ($type){
+            case 1:
+                $type= "login";
+                break;
+            case 2:
+                $type = "modif";
+                break;
+            case 3:
+                $type = "registered";
+                break;
+        }
+//		$code=lq_random_string(6,1);//随机码
+		$code=9999;//随机码
 		$tempId=125456;//模板ID
 		if(!isMobile($mobile)) $this->ajaxReturn(array('status'=>0,'msg'=>'手机号不正确！','data' =>array(),"url"=>"","note"=>""),$this->JSONP);
-		if(!$this->SMS->isAllowReceive($mobile,'login')){
+		if(!$this->SMS->isAllowReceive($mobile,$type)){
 			$this->ajaxReturn(array('status'=>0,'msg'=>'对不起，不能频繁请求操作！','data' =>array(),"url"=>"","note"=>""),$this->JSONP);
 		}
 				
 		$sms_data=lqSendSms($mobile,array($code),$tempId);
 		if($sms_data["status"]==1){
-			$this->SMS->addSms('login',$mobile,$code);
-			$this->returnData=array('status'=>1,'msg'=>'短信发送成功！','data' =>array(),"url"=>"","note"=>"");
+			$this->SMS->addSms($type,$mobile,$code);
+			$this->returnData=array('status'=>1,'msg'=>'短信发送成功！');
 		}else{
-			$this->returnData=array('status'=>0,'msg'=>'短信发送失败！','data' =>array(),"url"=>"","note"=>"");
+			$this->returnData=array('status'=>0,'msg'=>'短信发送失败！');
 		}
 		$this->ajaxReturn($this->returnData,$this->JSONP);
     }
-
-	
-	//申请设计请求：验证码
-    public function hd_application(){
-		$mobile=I("get.mobile",'');//手机号
-		$code=lq_random_string(6,1);//随机码
-		$tempId=125456;//模板ID
-		if(!isMobile($mobile)) $this->ajaxReturn(array('status'=>0,'msg'=>'手机号不正确！','data' =>array(),"url"=>"","note"=>""),$this->JSONP);
-		if(!$this->SMS->isAllowReceive($mobile,'hd_application')){
-			$this->ajaxReturn(array('status'=>0,'msg'=>'对不起，不能频繁请求操作！','data' =>array(),"url"=>"","note"=>""),$this->JSONP);
-		}
-		$sms_data=lqSendSms($mobile,array($code),$tempId);//发送短信
-		if($sms_data["status"]==1){//成功
-			$this->SMS->addSms('hd_application',$mobile,$code);
-			$this->returnData=array('status'=>1,'msg'=>'短信发送成功！','data' =>array(),"url"=>"","note"=>"");
-		}else{//失败
-			$this->returnData=array('status'=>0,'msg'=>'短信发送失败！','data' =>array(),"url"=>"","note"=>"");
-		}
-		$this->ajaxReturn($this->returnData,$this->JSONP);
-    }
-
-    //贷款请求：验证码
-    public function loan_apply(){
-        $mobile=I("get.mobile",'');//手机号
-        $code=lq_random_string(6,1);//随机码
-        $tempId=125456;//模板ID
-        if(!isMobile($mobile)) $this->ajaxReturn(array('status'=>0,'msg'=>'手机号不正确！','data' =>array(),"url"=>"","note"=>""),$this->JSONP);
-        if(!$this->SMS->isAllowReceive($mobile,'loan_apply')){
-            $this->ajaxReturn(array('status'=>0,'msg'=>'对不起，不能频繁请求操作！','data' =>array(),"url"=>"","note"=>""),$this->JSONP);
-        }
-        $sms_data=lqSendSms($mobile,array($code),$tempId);//发送短信
-        if($sms_data["status"]==1){//成功
-            $this->SMS->addSms('loan_apply',$mobile,$code);
-            $this->returnData=array('status'=>1,'msg'=>'短信发送成功！','data' =>array(),"url"=>"","note"=>"");
-        }else{//失败
-            $this->returnData=array('status'=>0,'msg'=>'短信发送失败！','data' =>array(),"url"=>"","note"=>"");
-        }
-        $this->ajaxReturn($this->returnData,$this->JSONP);
-    }
-
 
 }
