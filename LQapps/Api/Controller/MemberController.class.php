@@ -126,6 +126,7 @@ class MemberController extends PublicController
     }
     //修改密码
     public function changePassword(){
+        echo 1;
         $password = I('post.password');
         $mobile = I('post.mobile');
         $code = I('post.code');
