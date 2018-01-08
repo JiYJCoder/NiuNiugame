@@ -370,13 +370,6 @@ class MemberController extends PublicController
             3 => '电话邦定',
             4 => '邮箱邦定',
         );
-        $this->assign("bind_str", lqCreatOption($bind_array, $search_content_array["bind"], "请选择邦定"));
-        $city_array = array(
-            440100 => '广州',
-            440300 => '深圳',
-            310000 => '上海',
-            110000 => '北京',
-        );
 
         //sql合并
         $sqlwhere_parameter = " 1 ";//sql条件
@@ -385,13 +378,6 @@ class MemberController extends PublicController
                 $sqlwhere_parameter .= " and zc_account ='" . $search_content_array["fkeyword"] . "' ";
             } else {
                 $sqlwhere_parameter .= " and (zc_nickname like'" . $search_content_array["fkeyword"] . "%' or zc_mobile like'" . $search_content_array["fkeyword"] . "%') ";
-            }
-        }
-        if ($search_content_array["role"]) {
-            if ($search_content_array["role"] == 6) {
-                $sqlwhere_parameter .= " and zl_is_designer = 1";
-            } else {
-                $sqlwhere_parameter .= " and zl_role = " . $search_content_array["role"];
             }
         }
 
@@ -408,9 +394,7 @@ class MemberController extends PublicController
                 $sqlwhere_parameter .= "";
             }
         }
-        if ($search_content_array["city"]) {
-            $sqlwhere_parameter .= " and zn_city = " . $search_content_array["city"];
-        }
+
         if ($search_content_array["use"] != '') {
             $sqlwhere_parameter .= " and zl_visible = " . intval($search_content_array["use"]);
         }
@@ -421,7 +405,7 @@ class MemberController extends PublicController
             $sqlwhere_parameter .= " and zn_cdate >=" . $ts . " and zn_cdate<=" . $te;
         }
         $page_config = array(
-            'field' => "`id`,`zl_role`,`zl_is_designer`,`zc_account`,`zc_nickname`,`zn_pay_integration`,`zn_rank_integration`,`zc_mobile`,`zc_email`,`zl_visible`,`zn_cdate`,`zn_mdate`",
+            'field' => "`id`,`zl_role`,`zc_account`,`zc_nickname`,`zn_pay_integration`,`zn_rank_integration`,`zc_mobile`,`zc_email`,`zl_visible`,`zn_cdate`,`zn_mdate`",
             'where' => $sqlwhere_parameter,
             'order' => 'id DESC',
         );
