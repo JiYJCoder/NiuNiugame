@@ -28,11 +28,7 @@ class HdController extends PublicController
     public function __construct()
     {
         parent::__construct();
-        $this->D_DESIGNER = D("Api/Designer");//设计师
         $this->D_ART = D("Api/Article");//文章
-        $this->D_PRO = D("Api/Product");//产品
-        $this->D_HDDIARY = D("Api/Hddiary");//日记
-        $this->D_LOANAPPLY = D("Api/Loanapply");//贷款
         $this->D_SMS = D("Api/SmsLog");//接口短信实例化
         //免死金牌
         $action_no_login_array = array('article-view-count', 'product-view-count', 'designer-view-count', 'designer-agrees-count');

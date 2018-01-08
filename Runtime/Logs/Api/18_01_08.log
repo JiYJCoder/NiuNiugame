@@ -181,3 +181,60 @@ INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
 ERR: 无法加载控制器:Index
 
+[ 2018-01-08T15:31:53+08:00 ] 127.0.0.1 /Hd/article_list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] unserialize(): Error at offset 0 of 4383 bytes E:\Ooooh\WebSite\games\Public\ThinkPHP\Common\functions.php 第 1165 行.
+SQL: SHOW COLUMNS FROM `lq_member` [ RunTime:0.0030s ]
+SQL: select COLUMN_NAME,COLUMN_COMMENT,character_maximum_length FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME='lq_member' and TABLE_SCHEMA='games' [ RunTime:0.0030s ]
+NOTIC: [8] unserialize(): Error at offset 0 of 701 bytes E:\Ooooh\WebSite\games\Public\ThinkPHP\Common\functions.php 第 1165 行.
+SQL: SHOW COLUMNS FROM `lq_member_integration_log` [ RunTime:0.0030s ]
+SQL: select COLUMN_NAME,COLUMN_COMMENT,character_maximum_length FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME='lq_member_integration_log' and TABLE_SCHEMA='games' [ RunTime:0.0030s ]
+NOTIC: [8] unserialize(): Error at offset 0 of 837 bytes E:\Ooooh\WebSite\games\Public\ThinkPHP\Common\functions.php 第 1165 行.
+SQL: SHOW COLUMNS FROM `lq_member_token` [ RunTime:0.0030s ]
+SQL: select COLUMN_NAME,COLUMN_COMMENT,character_maximum_length FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME='lq_member_token' and TABLE_SCHEMA='games' [ RunTime:0.0030s ]
+NOTIC: [8] unserialize(): Error at offset 0 of 1426 bytes E:\Ooooh\WebSite\games\Public\ThinkPHP\Common\functions.php 第 1165 行.
+SQL: SHOW COLUMNS FROM `lq_pay_log` [ RunTime:0.0030s ]
+SQL: select COLUMN_NAME,COLUMN_COMMENT,character_maximum_length FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME='lq_pay_log' and TABLE_SCHEMA='games' [ RunTime:0.0030s ]
+NOTIC: [8] unserialize(): Error at offset 0 of 1515 bytes E:\Ooooh\WebSite\games\Public\ThinkPHP\Common\functions.php 第 1165 行.
+NOTIC: D方法实例化没找到模型类Api\Model\DesignerModel
+ERR: 1146:Table 'games.lq_designer' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `lq_designer`
+ERR: 1146:Table 'games.lq_designer' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `lq_designer`
+
+[ 2018-01-08T15:32:28+08:00 ] 127.0.0.1 /Hd/works_list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] unserialize(): Error at offset 0 of 1515 bytes E:\Ooooh\WebSite\games\Public\ThinkPHP\Common\functions.php 第 1165 行.
+NOTIC: D方法实例化没找到模型类Api\Model\DesignerModel
+ERR: 1146:Table 'games.lq_designer' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `lq_designer`
+ERR: 1146:Table 'games.lq_designer' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `lq_designer`
+
+[ 2018-01-08T15:32:47+08:00 ] 127.0.0.1 /Hd/works_list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] unserialize(): Error at offset 0 of 1515 bytes E:\Ooooh\WebSite\games\Public\ThinkPHP\Common\functions.php 第 1165 行.
+NOTIC: D方法实例化没找到模型类Api\Model\ArticleModel
+SQL: SHOW COLUMNS FROM `lq_article` [ RunTime:0.0030s ]
+SQL: select COLUMN_NAME,COLUMN_COMMENT,character_maximum_length FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME='lq_article' and TABLE_SCHEMA='games' [ RunTime:0.0040s ]
+NOTIC: [2] Illegal string offset 'INT_SYSTEM_CACHE_TIME' E:\Ooooh\WebSite\games\LQapps\Api\Model\PublicModel.class.php 第 17 行.
+NOTIC: [8] Uninitialized string offset: 0 E:\Ooooh\WebSite\games\LQapps\Api\Model\PublicModel.class.php 第 17 行.
+
