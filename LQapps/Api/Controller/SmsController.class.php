@@ -51,8 +51,12 @@ class SmsController extends PublicController {
             case 2:
                 $type = "modif";
                 break;
+            case 3:
+                $type = "registered";
+                break;
         }
-		$code=lq_random_string(6,1);//随机码
+//		$code=lq_random_string(6,1);//随机码
+		$code=9999;//随机码
 		$tempId=125456;//模板ID
 		if(!isMobile($mobile)) $this->ajaxReturn(array('status'=>0,'msg'=>'手机号不正确！','data' =>array(),"url"=>"","note"=>""),$this->JSONP);
 		if(!$this->SMS->isAllowReceive($mobile,$type)){

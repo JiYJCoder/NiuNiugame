@@ -51,13 +51,13 @@ class MemberModel extends Model{
 	
     public function __construct() {
 		parent::__construct();
-		$this->follow=M("follow");//微信粉丝-模型
+//		$this->follow=M("follow");//微信粉丝-模型
 		$this->model_log=M("member_log");//会员日志-模型
-		$this->model_designer=M("designer");//设计师-模型
-		$this->model_bank=M("bank");//银行-模型
+//		$this->model_designer=M("designer");//设计师-模型
+//		$this->model_bank=M("bank");//银行-模型
 		$this->model_integration_log=M("member_integration_log");//会员积分日志-模型
 		$this->model_member_token=M("member_token");//会员授权-模型
-		$this->model_favorite=M("member_favorite");//我喜欢-模型
+//		$this->model_favorite=M("member_favorite");//我喜欢-模型
 		$this->model_pay_log=M("pay_log");//支付日志-模型
 		
 		$this->login_member_info=session('member_auth');

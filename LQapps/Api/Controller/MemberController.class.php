@@ -26,9 +26,10 @@ class MemberController extends PublicController
     /** 初始化*/
     public function __construct()
     {
-
         parent::__construct();
+        $this->easemob_prefix = "hz";
         $this->D_SMS = D("Api/SmsLog");//接口短信实例化
+
         //免死金牌
         $action_no_login_array = array('get-openid', 'wx-return-openid', 'login', 'wx-login', 'openid-login');
         if (in_array(ACTION_NAME, $action_no_login_array)) {
@@ -119,6 +120,7 @@ class MemberController extends PublicController
         }
         $flag = $this->model_member->apiRegister($data);
         if($flag){
+            $this->hx_register($mobile);//注册环信
             $this->ajaxReturn(array('msg'=>'注册成功','status'=>1));
         }else{
             $this->ajaxReturn(array('msg'=>'注册失败','status'=>0));
@@ -126,7 +128,6 @@ class MemberController extends PublicController
     }
     //修改密码
     public function changePassword(){
-        echo 1;
         $password = I('post.password');
         $mobile = I('post.mobile');
         $code = I('post.code');
@@ -176,19 +177,19 @@ class MemberController extends PublicController
                 //返回会员信息
                 $info = array();
                 $info["nickname"] = $this->login_member_info["zc_nickname"];
-                $info["sex"] = $this->login_member_info["zl_sex"];
-                $info["zl_sex_label"] = C("_SEX")[$this->login_member_info["zl_sex"]];
-                $info["pay_integration"] = $this->login_member_info["zn_pay_integration"];
-                $info["rank_integration"] = $this->login_member_info["zn_rank_integration"];
+//                $info["sex"] = $this->login_member_info["zl_sex"];
+//                $info["zl_sex_label"] = C("_SEX")[$this->login_member_info["zl_sex"]];
+//                $info["pay_integration"] = $this->login_member_info["zn_pay_integration"];
+//                $info["rank_integration"] = $this->login_member_info["zn_rank_integration"];
                 $info["headimg"] = NO_HEADIMG;
-                $info["province"] = $this->model_region->where("id='" . $this->login_member_info["zn_province"] . "'")->getField("zc_name");
-                $info["city"] = $this->model_region->where("id='" . $this->login_member_info["zn_city"] . "'")->getField("zc_name");
-                $info["district"] = $this->model_region->where("id='" . $this->login_member_info["zn_district"] . "'")->getField("zc_name");
-                $info["province_id"] = $this->login_member_info["zn_province"];
-                $info["city_id"] = $this->login_member_info["zn_city"];
-                $info["district_id"] = $this->login_member_info["zn_district"];
-                $info["area"] = $this->login_member_info["zc_area"];
-                $info["address"] = $this->login_member_info["zc_address"];
+//                $info["province"] = $this->model_region->where("id='" . $this->login_member_info["zn_province"] . "'")->getField("zc_name");
+//                $info["city"] = $this->model_region->where("id='" . $this->login_member_info["zn_city"] . "'")->getField("zc_name");
+//                $info["district"] = $this->model_region->where("id='" . $this->login_member_info["zn_district"] . "'")->getField("zc_name");
+//                $info["province_id"] = $this->login_member_info["zn_province"];
+//                $info["city_id"] = $this->login_member_info["zn_city"];
+//                $info["district_id"] = $this->login_member_info["zn_district"];
+//                $info["area"] = $this->login_member_info["zc_area"];
+//                $info["address"] = $this->login_member_info["zc_address"];
                 $this->ajaxReturn(array('status' => 1, 'msg' => '会员登录成功', 'data' => array('uid' => $this->login_member_info["id"], 'token' => $token, 'member_info' => $info), "url" => "", "note" => '会员登录'));
             }else{
                 $this->ajaxReturn(array('status' => 0, 'msg' => '密码错误'));
@@ -247,17 +248,17 @@ class MemberController extends PublicController
         }
         $upfile_data = $this->opUpload('headimg', 'avatar');
         if ($upfile_data["status"] == 1) {
-			
-			$image_data=array();
-			$image_data[]=array("key"=>'avatar',"path"=>$upfile_data["url"]);				
-			$thumb_list=lq_thumb_deal($image_data,$this->login_member_info["id"],'avatar');
-			$headimg_thumb = $thumb_list[0];
-			if(!$headimg_thumb) $headimg_thumb = $upfile_data["url"];
-			
+
+            $image_data=array();
+            $image_data[]=array("key"=>'avatar',"path"=>$upfile_data["url"]);
+            $thumb_list=lq_thumb_deal($image_data,$this->login_member_info["id"],'avatar');
+            $headimg_thumb = $thumb_list[0];
+            if(!$headimg_thumb) $headimg_thumb = $upfile_data["url"];
+
             $data = array();
             $data["id"] = $this->login_member_info["id"];
             $data["zc_headimg"] = $upfile_data["url"];
-			$data["zc_headimg_thumb"] = $headimg_thumb;
+            $data["zc_headimg_thumb"] = $headimg_thumb;
             $data["zn_mdate"] = NOW_TIME;
             $this->model_member->apiSaveMember($data);
             $this->model_member->addMemberLog('edit_member', $this->login_member_info);//添加日志

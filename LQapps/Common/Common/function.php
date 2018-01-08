@@ -1534,7 +1534,7 @@ function lq_thumb_deal($path_array=array(),$id=0,$key='images'){
   * @param $tempId 模板Id,测试应用和未上线应用使用测试模板请填写1，正式应用上线后填写已申请审核通过的模板ID
   */
 function lqSendSms($mobile,$datas,$tempId){
-	//主帐号,对应开官网发者主账号下的 ACCOUNT SID
+	/*//主帐号,对应开官网发者主账号下的 ACCOUNT SID
 	$accountSid= '8a216da856588e5a0156594c3a7200f7';
 	//主帐号令牌,对应官网开发者主账号下的 AUTH TOKEN
 	$accountToken= '328cb6c2884b40cfaf37d518b543e423';
@@ -1559,7 +1559,8 @@ function lqSendSms($mobile,$datas,$tempId){
 		 return array('status'=>0,'msg'=>$result->statusMsg);
      }else{
 		 return array('status'=>1,'msg'=>$result->dateCreated);
-     }
+     }*/
+    return array('status'=>1,'msg'=>'999999');
 }
 
 //当前url
