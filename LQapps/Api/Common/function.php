@@ -104,13 +104,6 @@ function ch_num($num,$mode=true) {
     return $retval;
 }
 
-///打印数组
-function pr($data)
-{
-    echo "<pre>";
-    print_r($data);
-    echo "</pre>";
-}
 
 ////二维数组重新排序
 function multi_array_sort($multi_array,$sort_key,$sort=SORT_DESC){
