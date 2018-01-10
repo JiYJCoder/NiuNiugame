@@ -4,11 +4,13 @@ namespace LQLibs\Util;
 /**
  * 推送事件
  * 典型调用方式：
+ * params $to => array()
+ * params $data => array()
  * $push = new PushEvent();
- * $push->setUser($user_id)->setContent($string)->push();
+ * $push->setUser($to)->setContent($data)->push();
  *
  * Class PushEvent
- * @package app\lib\event
+ * @package LQLibs\Util
  */
 class PushEvent
 {
@@ -47,7 +49,7 @@ class PushEvent
      */
     public function setContent($content = '')
     {
-        $this->content = $content;
+        $this->content = json_encode($content);
         return $this;
     }
 
@@ -56,27 +58,6 @@ class PushEvent
      */
     public function push()
     {
-        /*$header = array('Expect:');
-
-        $data = array(
-            'type' => 'publish',
-            'content' => $this->content,
-            'to' => $this->to_user,
-        );
-        $ch = curl_init ();
-        curl_setopt($ch, CURLOPT_URL, $this->push_api_url);
-        curl_setopt($ch, CURLOPT_POST, 1);
-        curl_setopt($ch, CURLOPT_HEADER, 0);
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-        curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($data));
-        //curl_setopt($ch, CURLOPT_HTTPHEADER, array('Expect:'));
-        curl_setopt($ch, CURLOPT_HTTPHEADER,$header);
-        $res = curl_exec($ch);
-        curl_close($ch);
-        dump($res);*/
-
-
-
         $data = array(
             'type' => 'publish',
             'content' => $this->content,
@@ -105,16 +86,16 @@ class PushEvent
                 // 如果发生错误返回错误信息
                 curl_close($ch);
                 $ret=['status'=>false,'msg'=>$error];
-                var_dump( $ret );
+                return $ret;
             } else {
                 // 如果发生正确则返回response
                 curl_close($ch);
                 $ret=['status'=>true,'msg'=>$response];
-                var_dump( $ret );
+                return $ret;
             }
         }catch (\Exception $exception){
             $ret=['status'=>false,'msg'=>$exception->getMessage()];
-            var_dump( $ret );
+            return $ret;
         }
     }
 }

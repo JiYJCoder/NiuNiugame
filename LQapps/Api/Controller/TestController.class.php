@@ -32,9 +32,9 @@ class TestController extends PublicController
                 "content" => '健康游戏'
             ),
         );
-        $to = array(85,95);
+        $to = array(123);
         $push = new PushEvent();
-        $push->setUser()->setContent(json_encode($data))->push();
+        $push->setUser()->setContent($data)->push();
     }
 
     public function client()
