@@ -31,7 +31,7 @@ class MemberController extends PublicController
         $this->D_SMS = D("Api/SmsLog");//接口短信实例化
 
         //免死金牌
-        $action_no_login_array = array('get-openid', 'wx-return-openid', 'login', 'wx-login', 'openid-login');
+        $action_no_login_array = array('get-openid', 'wx-return-openid', 'login', 'wx-login', 'openid-login','registered','test');
         if (in_array(ACTION_NAME, $action_no_login_array)) {
 
         } else {
@@ -115,9 +115,9 @@ class MemberController extends PublicController
         $code = I('post.code');
         $data = array('zc_password'=>$password,"zc_nickname"=>$nikeName,'zc_mobile'=>$mobile);
         $yzm=$this->D_SMS->isEffective($mobile,'registered',$code);
-        if(!$yzm){
-            $this->ajaxReturn(array('msg'=>'验证码不正确','status'=>0));
-        }
+//        if(!$yzm){
+//            $this->ajaxReturn(array('msg'=>'验证码不正确','status'=>0));
+//        }
         $flag = $this->model_member->apiRegister($data);
         if($flag){
             $this->hx_register($mobile);//注册环信
@@ -146,7 +146,7 @@ class MemberController extends PublicController
     //app会员登录
     public function login()
     {
-        $mobile = I("post.mobile", '');//手机号码
+        $mobile = I("post.mobile");//手机号码
         $password = I('post.password');
         if (!isMobile($mobile)) $this->ajaxReturn(array('status' => 0, 'msg' => '会员登录失败,手机号码不符合规则！', 'data' => ''));
         //查库有没有会员

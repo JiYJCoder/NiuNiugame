@@ -139,10 +139,6 @@ if(navigator.appName == 'Microsoft Internet Explorer'){
       <div class="clearfix template">
         <div class="panel panel-default">
 		  
-<<<<<<< HEAD
-=======
-     
->>>>>>> dev
 	<div class="panel-body">
           
             <span><i class="fa fa-list-ol"></i> <?php echo ($sys_heading); ?></span>
@@ -251,11 +247,7 @@ $(document).ready(function(){
 var top_nav_id=util.cookie.get('top_nav_id');
 var left_nav_id=util.cookie.get('left_nav_id');
 if(top_nav_id) util.menuDisplay(top_nav_id,left_nav_id);
-<<<<<<< HEAD
-<?php if(ACTION_NAME=='index') { echo "$('#list-tbody tr:odd').addClass('tr_odd');//单双行样式\n"; echo "$('.opStatus').click(function(){util.visible($(this),'/sys-index.php/Room/opVisible');});//快捷启用禁用操作\n"; echo "$('.opDelete').click(function(){util.delete($(this),'/sys-index.php/Room/opDelete');});//单记录删除操作\n"; echo "$('tbody>tr>td[op]').dblclick(function(){util.ajaxEdit($(this),'/sys-index.php/Room');});//单项编辑\n"; echo "$('tbody>tr>td>a[op]').click(function(){util.ajaxPropertyA($(this),'/sys-index.php/Room');});//单项属性切换\n"; } ?>	
-=======
 <?php if(ACTION_NAME=='index') { echo "$('#list-tbody tr:odd').addClass('tr_odd');//单双行样式\n"; echo "$('.opStatus').click(function(){util.visible($(this),'/sys-index.php/ApiDocument/opVisible');});//快捷启用禁用操作\n"; echo "$('.opDelete').click(function(){util.delete($(this),'/sys-index.php/ApiDocument/opDelete');});//单记录删除操作\n"; echo "$('tbody>tr>td[op]').dblclick(function(){util.ajaxEdit($(this),'/sys-index.php/ApiDocument');});//单项编辑\n"; echo "$('tbody>tr>td>a[op]').click(function(){util.ajaxPropertyA($(this),'/sys-index.php/ApiDocument');});//单项属性切换\n"; } ?>	
->>>>>>> dev
 	//ajax点击响应href
 	$(".getUrl").click(function(){util.getUrl($(this).attr("lqHref"));});
 	//顶部菜单展示

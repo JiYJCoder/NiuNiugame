@@ -26,6 +26,7 @@ class RoomModel extends PublicModel {
     public function __construct() {
 //        parent::__construct();
     }
+    //创建房间
     public function createRoom($data)
     {
         $flag= $this->create($data);
@@ -34,9 +35,11 @@ class RoomModel extends PublicModel {
         if(!$flag){
             return $this->getError();
         }
+        //限制最低上分
 		if($data['zn_min_score']<0){
 			return $this->getError();
 		}
+		//限制抽庄比例
         if($data['zn_extract']<1|| $data['zn_extract']>15){
             return $this->getError();
         }
@@ -46,6 +49,7 @@ class RoomModel extends PublicModel {
 		$data['zc_rate'] = $rateJson;
 		return $this->add($data);
     }
+    //设置倍率
     public function setRate($rateArray){
     	$flag= true;
     	for ($i=1;$i<count($rateArray);$i++){
@@ -60,13 +64,16 @@ class RoomModel extends PublicModel {
 		$rateJson = json_encode($rateArray);
 		return $rateJson;
 	}
-	public function getData($p,$pagesize=15,$type=1,$id){
+	//房间列表
+	public function getData($pagesize=15,$type=1,$id){
     	$where = array();
+    	//1 所有房间列表
+        //2 自己开的房间
     	if($type ==2){
             $where['zn_member_id'] = $id;
             $count= $this->where($where)>count();
-        }else{
-            $count= $this->select();
+        } else{
+            $count= $this->count();
 		}
         $page=new Page($count,$pagesize);
         $firstRow = $page->firstRow;
