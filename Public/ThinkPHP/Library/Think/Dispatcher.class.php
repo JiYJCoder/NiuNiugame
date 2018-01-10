@@ -93,6 +93,7 @@ class Dispatcher {
                 }
             }
         }
+
         // 分析PATHINFO信息
         if(!isset($_SERVER['PATH_INFO'])) {
             $types   =  explode(',',C('URL_PATHINFO_FETCH'));
@@ -138,9 +139,10 @@ class Dispatcher {
 
         // 获取模块名称
         define('MODULE_NAME', defined('BIND_MODULE')? BIND_MODULE : self::getModule($varModule));
-        
+
         // 检测模块是否存在
         if( MODULE_NAME && (defined('BIND_MODULE') || !in_array_case(MODULE_NAME,C('MODULE_DENY_LIST')) ) && is_dir(APP_PATH.MODULE_NAME)){
+
             // 定义当前模块路径
             define('MODULE_PATH', APP_PATH.MODULE_NAME.'/');
             // 定义当前模块的模版缓存路径
@@ -170,8 +172,9 @@ class Dispatcher {
             // 加载模块函数文件
             if(is_file(MODULE_PATH.'Common/function.php'))
                 include MODULE_PATH.'Common/function.php';
-            
+
             $urlCase        =   C('URL_CASE_INSENSITIVE');
+
             // 加载模块的扩展配置文件
             load_ext_file(MODULE_PATH);
         }else{
@@ -193,6 +196,7 @@ class Dispatcher {
 	        // 当前应用地址
 	        define('__APP__',strip_tags(PHP_FILE));
 	    }
+
         // 模块URL地址
         $moduleName    =   defined('MODULE_ALIAS')? MODULE_ALIAS : MODULE_NAME;
         define('__MODULE__',(defined('BIND_MODULE') || !C('MULTI_MODULE'))? __APP__ : __APP__.'/'.($urlCase ? strtolower($moduleName) : $moduleName));

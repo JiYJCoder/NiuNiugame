@@ -20,6 +20,7 @@ class DocumentController extends PublicController{
 	}
 		
     public function index(){
+
 		$list = M("api_document")->field("*")->where("zl_visible=1")->order("zn_sort asc,id desc")->select();
 		foreach ($list as $lnKey => $laValue) {
 			$list[$lnKey]['no'] = $lnKey+2;

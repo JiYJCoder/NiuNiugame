@@ -27,13 +27,12 @@ class IndexController extends PublicController{
 	);	
 	
     public function __construct() {
+
 		parent::__construct();
 	}
 
 	//首页
     public function index() {
-
-		
         $this->display('index');
     }
 	
