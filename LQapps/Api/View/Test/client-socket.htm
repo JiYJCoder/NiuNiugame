@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="zh" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>websocket</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="/Public/Static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/Public/Static/css/common.css">
+    <script src="/Public/Static/js/lib/jquery-1.11.1.min.js"></script>
+</head>
+<body>
+
+
+<div class="row">
+
+  <ul class="breadcrumb">
+    <li class="active">当前在线人数 <span id="userNum">0</span> 人</li>
+  </ul>
+    <ul class="breadcrumb">
+        <li class="active"><input type="button" onclick="send_msg()" value="发送消息"> </li>
+    </ul>
+</div>
+
+<script type="text/javascript">
+    var userNum;
+    $(function() {
+        ws = new WebSocket('ws://127.0.0.1:8090');
+
+        ws.onopen = function(){
+            console.log("握手成功");
+            var uid = parseInt(Math.random() * 100);
+            var avar = parseInt(Math.random() * 100);
+
+            var msg = '{"type" : "1", "uid" : "' + uid + '", "avar" : "' + avar + '"}';
+            send_msg(msg);
+        };
+
+        ws.onmessage = function(e){
+            var data = $.parseJSON( e.data );
+            console.log(data);
+            if( data.type == 1 ){
+                console.log('系统公告');
+            }
+
+            if( data.type == 5 ){
+                tellOnline( );
+               $("#userNum").text(data.userNum);
+            }
+        };
+        ws.onerror = function(){
+        };
+    })
+
+    function send_msg(msg)
+    {
+        ws.send( msg );
+    }
+
+    //提示上线
+    function tellOnline(){
+        console.log('用户收到通知');
+    }
+
+</script>
+</body>
+</html>

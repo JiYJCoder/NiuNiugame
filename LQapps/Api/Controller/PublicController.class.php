@@ -22,6 +22,7 @@ class PublicController extends Controller
 
     public function __construct()
     {
+
         parent::__construct();
         //AJAX返回数据格式
         header("Access-Control-Allow-Origin:*");

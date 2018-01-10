@@ -45,7 +45,7 @@ class App {
 		}
 
         // URL调度结束标签
-        Hook::listen('url_dispatch');         
+        Hook::listen('url_dispatch');
 
         define('IS_AJAX',       ((isset($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest') || !empty($_POST[C('VAR_AJAX_SUBMIT')]) || !empty($_GET[C('VAR_AJAX_SUBMIT')])) ? true : false);
 
@@ -192,14 +192,17 @@ class App {
      */
     static public function run() {
         // 应用初始化标签
+
         Hook::listen('app_init');
         App::init();
         // 应用开始标签
         Hook::listen('app_begin');
+
         // Session初始化
         if(!IS_CLI){
             session(C('SESSION_OPTIONS'));
         }
+
         // 记录应用初始化时间
         G('initTime');
         App::exec();

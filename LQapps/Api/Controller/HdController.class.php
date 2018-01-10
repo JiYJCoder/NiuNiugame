@@ -37,7 +37,7 @@ class HdController extends PublicController
         if (in_array(ACTION_NAME, $action_no_login_array)) {
 
         } else {
-            self::apiCheckToken();//用户认证
+           // self::apiCheckToken();//用户认证
         }
 
     }
