@@ -27,6 +27,7 @@ class RoomJoinController extends PublicController
     {
 
         parent::__construct();
+        $this->roomJoin = D('RoomJoin');
         //免死金牌
         $action_no_login_array = array('get-openid', 'wx-return-openid', 'login', 'wx-login', 'openid-login');
         if (in_array(ACTION_NAME, $action_no_login_array)) {
@@ -34,6 +35,20 @@ class RoomJoinController extends PublicController
         } else {
             self::apiCheckToken();//用户认证
         }
+    }
+
+    public function chagePoint(){
+        $id = I('post.id');
+        $roomid = I('post.roomid');
+        $points = I('post.points');
+        $type = I('post.type');
+        $flag=$this->roomJoin->chagePoint($id,$roomid,$points,$type);
+        if(!$flag){
+            $redata = array('msg'=>'设置失败','status'=>0);
+            $this->ajaxReturn($redata);
+        }
+        $redata = array('msg'=>'设置成功','status'=>1);
+        $this->ajaxReturn($redata);
     }
 
 

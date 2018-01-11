@@ -25,12 +25,45 @@ class RoomJoinModel extends PublicModel {
         $where['zn_room_id'] = $roomid;
         return $this->where($where)->find();
     }
+
+    //加入房间
     public function addRoom($data){
-        $flag=$this->create($data);
-        if(!$flag){
-            return $this->getError();
+        $memberid = $data['zn_member_id'];
+        $roomid = $data['zn_room_id'];
+        $v = $this->getRoom($memberid,$roomid);
+        //查询是否已加入过
+        if(!$v){
+            $flag=$this->create($data);
+            if(!$flag){
+                return $this->getError();
+            }
+            return $this->add($data);
+        }else{
+            $where = array();
+            $where['zn_member_id'] = $memberid;
+            $where['zn_room_id'] = $roomid;
+            return $this->where($where)->setField('zl_visible',1);
         }
-        return $this->add($data);
+
+    }
+
+    //改变分数
+    public function chagePoint($id,$roomid,$points,$type){
+        $v = $this->getRoom($id,$roomid);
+        if(!$v){
+            $this->getError();
+        }
+        $dpoints = $this->getRoom($id,$roomid);
+        $dpoints = $dpoints['zn_points'];
+        if($type ==1){
+            $dpoints += $points;
+        }else{
+            $dpoints-= $points;
+        }
+        $where = array();
+        $where['zn_member_id']= $id;
+        $where['zn_room_id'] = $roomid;
+        $this->where($where)>setField('zn_points',$dpoints);
     }
 }
 

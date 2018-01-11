@@ -28,7 +28,7 @@ class RoomController extends PublicController
 
         parent::__construct();
         $this->room = D('Room');
-        $this->roomJoin = D('Room');
+        $this->roomJoin = D('RoomJoin');
 
         //免死金牌
         $action_no_login_array = array('get-openid', 'wx-return-openid', 'login', 'wx-login', 'openid-login');
@@ -76,22 +76,75 @@ class RoomController extends PublicController
         }
     }
 
+    //加入房间
     public function joinroom(){
-        $roomData=$this->room->getData($_POST['id']);
+        $roomData=$this->room->getData($_POST['roomid']);
         if($roomData){
-            if($roomData['zn_room_type']==1){
-                $_POST['zn_member_id'] = $this->login_member_info['id'];
-                $_POST['zc_nickname'] = $this->login_member_info['zc_nickname'];
-                $flag= $this->roomJoin->addRoom($_POST);
-                if(!$flag){
-                    $this->ajaxReturn(array('msg'=>'加入失败,参数错误','status'=>0));
+            if($roomData['zn_room_type']==1 ){
+                if($roomData['zn_confirm'] ==2){
+                    $_POST['zn_member_id'] = $this->login_member_info['id'];
+                    $_POST['zc_nickname'] = $this->login_member_info['zc_nickname'];
+                    $flag= $this->roomJoin->addRoom($_POST);
+                    if(!$flag){
+                        $this->ajaxReturn(array('msg'=>'加入失败,参数错误','status'=>0));
+                    }
+                    $this->ajaxReturn(array('msg'=>'加入成功','status'=>1,'data'=>$roomData));
+                    $joinPerAll = $this->notift->apiGetNumPer($_POST['roomid']); //获取要通知的人
+                    $toArray = array();//通知人数
+                    foreach ($joinPerAll as $key=>$val){
+                        $toArray = $val['zn_member_id'];
+                    }
+                    $notiftData = array();//通知数据
+                    $notiftData['total'] = count($joinPerAll);
+                    $notiftData['nikename'] = $this->login_member_info['zc_nickname'];
+                    $notiftData['zn_member_id'] = $this->login_member_info['id'];
+                    //socket推送
+                    $this->socket->setUser($toArray)->setContent($notiftData)->push();
+                }else{
+                    //通知房主
+                    $to =  $roomData['zn_member_id'];
+                    $notiftData =array('nikename'=>$this->login_member_info['zc_nickname'],'id'=>$this->login_member_info['id'],'roomid'=>$_POST['roomid']);
+                    $this->socket->setUser($to)->setContent($notiftData)->push();
                 }
-                $this->ajaxReturn(array('msg'=>'请求成功','status'=>1,'data'=>$roomData));
             }else{
                 $this->ajaxReturn(array('msg'=>'房间不公开','status'=>0));
             }
         }else{
             $this->ajaxReturn(array('msg'=>'找不到房间','status'=>0));
+        }
+    }
+    public function getFlag(){
+        $type = I('post.type');
+        $notiftPerid= I('post.id');
+        $nikename= I('post.nikename');
+        $roomid = I('post.roomid');
+        $data = array();
+        $data['zn_member_id'] =$notiftPerid;
+        $data['zn_room_id'] = $roomid;
+        if($type==1){
+            //允许加入
+            $flag= $this->roomJoin->addRoom($data);
+            if(!$flag){
+                $this->ajaxReturn(array('msg'=>'加入失败,参数错误','status'=>0));
+            }
+            $this->ajaxReturn(array('msg'=>'加入成功','status'=>1));
+            $joinPerAll = $this->notift->apiGetNumPer($roomid); //获取要通知的人
+            $toArray = array();//通知人数
+            foreach ($joinPerAll as $key=>$val){
+                $toArray = $val['zn_member_id'];
+            }
+            $notiftData = array();//通知数据
+            $notiftData['total'] = count($joinPerAll);
+            $notiftData['nikename'] = $nikename;
+            $notiftData['zn_member_id'] = $notiftPerid;
+            //socket推送
+            $this->socket->setUser($toArray)->setContent($notiftData)->push();
+        }else{
+            //通知他不能加入
+//            TODO
+            $to = $notiftPerid;
+            $notiftData =array('msg'=>'抱歉!房主拒绝你加入','status'=>0);
+            $this->socket->setUser($to)->setContent($notiftData)->push();
         }
     }
 }

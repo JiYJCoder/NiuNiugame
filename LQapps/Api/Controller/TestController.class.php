@@ -18,9 +18,7 @@ class TestController extends PublicController
     //首页数据包
     public function index()
     {
-        ob_implicit_flush();
-        $port = 8090;
-        $this->socket = new Socket( $port );
+
     }
 
     public function send_sys_info()
@@ -30,9 +28,9 @@ class TestController extends PublicController
             "info" => array(
                 "id" => 2,
                 "content" => '健康游戏'
-            ),
+            )
         );
-        $to = array(123);
+        $to = array(123,11);
         $push = new PushEvent();
         $push->setUser()->setContent($data)->push();
     }
@@ -41,6 +39,21 @@ class TestController extends PublicController
     {
         $this->uid = mt_rand(1,100);
         $this->display();
+    }
+
+    public function join_room()
+    {
+        $data = array(
+            "type" => 1,
+            "info" => array(
+                "id" => 2,
+                "content" => '健康1111游戏'
+            ),
+        );
+
+        $to = array(93);
+        $push = new PushEvent();
+        $push->setUser($to)->setContent($data)->push();
     }
 
 }

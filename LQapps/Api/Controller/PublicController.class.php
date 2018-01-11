@@ -12,7 +12,9 @@ namespace Api\Controller;
 
 use Think\Controller;
 use Member\Api\MemberApi as MemberApi;
+use Notify\Api\NotiftApi as NotiftApi;
 use Attachment\Api\AttachmentApi as AttachmentApi;
+use LQLibs\Util\PushEvent as PushEvent;
 
 defined('in_lqweb') or exit('Access Invalid!');
 
@@ -28,6 +30,8 @@ class PublicController extends Controller
         header("Access-Control-Allow-Origin:*");
         $this->JSON = 'json';
         $this->model_member = new MemberApi;//实例化会员
+        $this->notift = new NotiftApi;//实例化通知类
+        $this->socket = new PushEvent;//socket
         $this->lqgetid = isset($_GET["tnid"]) ? intval($_GET["tnid"]) : 0;
         $this->lqpostid = isset($_POST["fromid"]) ? intval($_POST["fromid"]) : 0;
         $this->set_config = F('set_config', '', COMMON_ARRAY);

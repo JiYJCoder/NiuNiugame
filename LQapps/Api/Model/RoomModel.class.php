@@ -78,7 +78,7 @@ class RoomModel extends PublicModel {
         $page=new Page($count,$pagesize);
         $firstRow = $page->firstRow;
         $listRows = $page->listRows;
-        $list = $this->where($where)->limit("$firstRow , $listRows")->select();
+        $list = $this->where($where)->limit("$firstRow , $listRows")->order('zn_room_type asc,zn_cdate desc')->select();
 		return $list;
 	}
 
