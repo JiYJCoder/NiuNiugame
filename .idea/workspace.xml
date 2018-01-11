@@ -2,93 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d4b7adf7-a934-40ce-ae09-f7688694ef81" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Runtime/Logs/Api/18_01_11.log" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/phpsocket.io/vendor/autoload.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/phpsocket.io/vendor/composer/ClassLoader.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/phpsocket.io/vendor/composer/LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/phpsocket.io/vendor/composer/autoload_classmap.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/phpsocket.io/vendor/composer/autoload_namespaces.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/phpsocket.io/vendor/composer/autoload_psr4.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/phpsocket.io/vendor/composer/autoload_real.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/phpsocket.io/vendor/composer/autoload_static.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/phpsocket.io/vendor/composer/installed.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/phpsocket.io/vendor/workerman/channel/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/phpsocket.io/vendor/workerman/channel/composer.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/phpsocket.io/vendor/workerman/channel/src/Client.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/phpsocket.io/vendor/workerman/channel/src/Server.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/phpsocket.io/vendor/workerman/channel/test/server.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/phpsocket.io/vendor/workerman/phpsocket.io/docs/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/phpsocket.io/vendor/workerman/phpsocket.io/docs/zh/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/phpsocket.io/vendor/workerman/phpsocket.io/examples/chat/public/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/phpsocket.io/vendor/workerman/phpsocket.io/examples/chat/public/jquery.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/phpsocket.io/vendor/workerman/phpsocket.io/examples/chat/public/main.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/phpsocket.io/vendor/workerman/phpsocket.io/examples/chat/public/socket.io-client/LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/phpsocket.io/vendor/workerman/phpsocket.io/examples/chat/public/socket.io-client/lib/index.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/phpsocket.io/vendor/workerman/phpsocket.io/examples/chat/public/socket.io-client/lib/manager.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/phpsocket.io/vendor/workerman/phpsocket.io/examples/chat/public/socket.io-client/lib/on.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/phpsocket.io/vendor/workerman/phpsocket.io/examples/chat/public/socket.io-client/lib/socket.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/phpsocket.io/vendor/workerman/phpsocket.io/examples/chat/public/socket.io-client/lib/url.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/phpsocket.io/vendor/workerman/phpsocket.io/examples/chat/public/socket.io-client/socket.io.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/phpsocket.io/vendor/workerman/phpsocket.io/examples/chat/public/style.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/phpsocket.io/vendor/workerman/phpsocket.io/examples/chat/start.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/phpsocket.io/vendor/workerman/phpsocket.io/examples/chat/start_for_win.bat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/phpsocket.io/vendor/workerman/phpsocket.io/examples/chat/start_io.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/phpsocket.io/vendor/workerman/phpsocket.io/examples/chat/start_web.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/phpsocket.io/vendor/workerman/phpsocket.io/src/ChannelAdapter.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/phpsocket.io/vendor/workerman/phpsocket.io/src/Client.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/phpsocket.io/vendor/workerman/phpsocket.io/src/Debug.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/phpsocket.io/vendor/workerman/phpsocket.io/src/DefaultAdapter.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/phpsocket.io/vendor/workerman/phpsocket.io/src/Engine/Engine.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/phpsocket.io/vendor/workerman/phpsocket.io/src/Engine/Parser.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/phpsocket.io/vendor/workerman/phpsocket.io/src/Engine/Protocols/Http/Request.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/phpsocket.io/vendor/workerman/phpsocket.io/src/Engine/Protocols/Http/Response.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/phpsocket.io/vendor/workerman/phpsocket.io/src/Engine/Protocols/SocketIO.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/phpsocket.io/vendor/workerman/phpsocket.io/src/Engine/Protocols/WebSocket.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/phpsocket.io/vendor/workerman/phpsocket.io/src/Engine/Protocols/WebSocket/RFC6455.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/phpsocket.io/vendor/workerman/phpsocket.io/src/Engine/Socket.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/phpsocket.io/vendor/workerman/phpsocket.io/src/Engine/Transport.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/phpsocket.io/vendor/workerman/phpsocket.io/src/Engine/Transports/Polling.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/phpsocket.io/vendor/workerman/phpsocket.io/src/Engine/Transports/PollingJsonp.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/phpsocket.io/vendor/workerman/phpsocket.io/src/Engine/Transports/PollingXHR.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/phpsocket.io/vendor/workerman/phpsocket.io/src/Engine/Transports/WebSocket.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/phpsocket.io/vendor/workerman/phpsocket.io/src/Event/Emitter.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/phpsocket.io/vendor/workerman/phpsocket.io/src/Nsp.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/phpsocket.io/vendor/workerman/phpsocket.io/src/Parser/Decoder.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/phpsocket.io/vendor/workerman/phpsocket.io/src/Parser/Encoder.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/phpsocket.io/vendor/workerman/phpsocket.io/src/Parser/Parser.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/phpsocket.io/vendor/workerman/phpsocket.io/src/Socket.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/phpsocket.io/vendor/workerman/phpsocket.io/src/SocketIO.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/phpsocket.io/vendor/workerman/phpsocket.io/src/autoload.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/phpsocket.io/vendor/workerman/phpsocket.io/tests/emitter.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/phpsocket.io/vendor/workerman/workerman.log" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/phpsocket.io/vendor/workerman/workerman/Autoloader.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/phpsocket.io/vendor/workerman/workerman/Connection/AsyncTcpConnection.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/phpsocket.io/vendor/workerman/workerman/Connection/ConnectionInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/phpsocket.io/vendor/workerman/workerman/Connection/TcpConnection.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/phpsocket.io/vendor/workerman/workerman/Connection/UdpConnection.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/phpsocket.io/vendor/workerman/workerman/Events/Ev.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/phpsocket.io/vendor/workerman/workerman/Events/Event.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/phpsocket.io/vendor/workerman/workerman/Events/EventInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/phpsocket.io/vendor/workerman/workerman/Events/Libevent.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/phpsocket.io/vendor/workerman/workerman/Events/React/ExtEventLoop.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/phpsocket.io/vendor/workerman/workerman/Events/React/LibEventLoop.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/phpsocket.io/vendor/workerman/workerman/Events/React/StreamSelectLoop.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/phpsocket.io/vendor/workerman/workerman/Events/Select.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/phpsocket.io/vendor/workerman/workerman/Lib/Constants.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/phpsocket.io/vendor/workerman/workerman/Lib/Timer.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/phpsocket.io/vendor/workerman/workerman/MIT-LICENSE.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/phpsocket.io/vendor/workerman/workerman/Protocols/Frame.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/phpsocket.io/vendor/workerman/workerman/Protocols/Http.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/phpsocket.io/vendor/workerman/workerman/Protocols/Http/mime.types" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/phpsocket.io/vendor/workerman/workerman/Protocols/ProtocolInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/phpsocket.io/vendor/workerman/workerman/Protocols/Text.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/phpsocket.io/vendor/workerman/workerman/Protocols/Websocket.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/phpsocket.io/vendor/workerman/workerman/Protocols/Ws.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/phpsocket.io/vendor/workerman/workerman/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/phpsocket.io/vendor/workerman/workerman/WebServer.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/phpsocket.io/vendor/workerman/workerman/Worker.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/phpsocket.io/vendor/workerman/workerman/composer.json" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -99,11 +13,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="RoomController.class.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="RoomController.class.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/LQapps/Api/Controller/RoomController.class.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="594">
               <caret line="69" column="19" lean-forward="true" selection-start-line="69" selection-start-column="19" selection-end-line="69" selection-end-column="19" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="50">
+              <caret line="2" column="6" lean-forward="true" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -154,12 +78,6 @@
   </component>
   <component name="FrameworkCommandLineHistory">
     <commandsHistory>
-      <command text="git reflog" />
-      <command text="git reset head 567e99d" />
-      <command text="git reflog" />
-      <command text="git reset head b02a4f1" />
-      <command text="git add -A" />
-      <command text="git commit -m '01081612'" />
       <command text="git reset head b02a4f1" />
       <command text="git status" />
       <command text="git pull origin ji" />
@@ -179,6 +97,12 @@
       <command text="git commit -m '20180110pm'" />
       <command text="git push origin ji" />
       <command text="git add -A" />
+      <command text="git git add -A" />
+      <command text="git add -A" />
+      <command text="git status" />
+      <command text="git commit -m '20180111'" />
+      <command text="git push origin ji" />
+      <command text="git rm -r --cached" />
     </commandsHistory>
   </component>
   <component name="Git.Settings">
@@ -200,7 +124,6 @@
         <option value="$PROJECT_DIR$/LQapps/Common/Conf/dbconn.php" />
         <option value="$PROJECT_DIR$/LQapps/Api/Controller/ActivityController.class.php" />
         <option value="$PROJECT_DIR$/LQapps/Api/Controller/test.class.php" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/LQapps/Api/Controller/DesignerController.class.php" />
         <option value="$PROJECT_DIR$/LQapps/Member/Api/MemberApi.class.php" />
@@ -230,6 +153,7 @@
         <option value="$PROJECT_DIR$/txt.txt" />
         <option value="$PROJECT_DIR$/phpsocket.io/vendor/workerman/phpsocket.io/examples/chat/start_io.php" />
         <option value="$PROJECT_DIR$/phpsocket.io/vendor/workerman/phpsocket.io/examples/chat/public/index.html" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -335,7 +259,7 @@
       <workItem from="1515380327035" duration="28885000" />
       <workItem from="1515550088006" duration="22579000" />
       <workItem from="1515640457148" duration="3635000" />
-      <workItem from="1515649042485" duration="66000" />
+      <workItem from="1515649042485" duration="354000" />
     </task>
     <task id="LOCAL-00001" summary="test 20180102">
       <created>1514865289155</created>
@@ -397,7 +321,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="95428000" />
+    <option name="totallyTimeSpent" value="95716000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -406,7 +330,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5190275" sideWeight="0.50208336" order="11" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Command Line Tools Console" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.5528541" sideWeight="0.49791667" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Command Line Tools Console" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39006343" sideWeight="0.49791667" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980973" sideWeight="0.49791667" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -479,13 +403,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/LQapps/Common/Conf/config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-225">
-          <caret line="339" column="6" lean-forward="false" selection-start-line="339" selection-start-column="6" selection-end-line="339" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/LQapps/Api/Model/RoomModel.class.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="643">
@@ -709,6 +626,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="594">
           <caret line="69" column="19" lean-forward="true" selection-start-line="69" selection-start-column="19" selection-end-line="69" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="50">
+          <caret line="2" column="6" lean-forward="true" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
           <folding />
         </state>
       </provider>
