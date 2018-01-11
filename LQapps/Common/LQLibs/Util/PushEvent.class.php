@@ -64,7 +64,7 @@ class PushEvent
             'to' => $this->to_user,
         );
         $header = array('Expect:');
-        try{
+        try {
             $ch = curl_init();
             if (substr($this->push_api_url, 0, 5) == 'https') {
                 // 跳过证书检查
@@ -85,16 +85,16 @@ class PushEvent
             if ($error = curl_error($ch)) {
                 // 如果发生错误返回错误信息
                 curl_close($ch);
-                $ret=['status'=>false,'msg'=>$error];
+                $ret = ['status' => false, 'msg' => $error];
                 return $ret;
             } else {
                 // 如果发生正确则返回response
                 curl_close($ch);
-                $ret=['status'=>true,'msg'=>$response];
+                $ret = ['status' => true, 'msg' => $response];
                 return $ret;
             }
-        }catch (\Exception $exception){
-            $ret=['status'=>false,'msg'=>$exception->getMessage()];
+        } catch (\Exception $exception) {
+            $ret = ['status' => false, 'msg' => $exception->getMessage()];
             return $ret;
         }
     }
