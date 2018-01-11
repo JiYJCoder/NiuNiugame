@@ -81,6 +81,13 @@ class RoomModel extends PublicModel {
         $list = $this->where($where)->limit("$firstRow , $listRows")->select();
 		return $list;
 	}
+
+	//加入房间
+    public function getRoom($roomid){
+        $where = array();
+        $where['id'] = $roomid;
+        $this->where($where) ->find();
+    }
 }
 
 ?>

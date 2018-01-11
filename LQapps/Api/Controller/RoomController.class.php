@@ -21,13 +21,15 @@ defined('in_lqweb') or exit('Access Invalid!');
 
 class RoomController extends PublicController
 {
-    protected $room;
+    protected $room ,$roomJoin;
     /** 初始化*/
     public function __construct()
     {
 
         parent::__construct();
         $this->room = D('Room');
+        $this->roomJoin = D('Room');
+
         //免死金牌
         $action_no_login_array = array('get-openid', 'wx-return-openid', 'login', 'wx-login', 'openid-login');
         if (in_array(ACTION_NAME, $action_no_login_array)) {
@@ -39,7 +41,7 @@ class RoomController extends PublicController
     public function createRoom()
     {
         //nikename作为房间名
-        $_POST['zc_title'] = $this->login_member_info['nikename'];
+        $_POST['zc_title'] = $this->login_member_info['zc_nickname'];
         //生成房间编号
         $_POST['zc_number'] = $_SESSION['zc_number'];
         $flag=  $this->room->createRoom($_POST);
@@ -54,7 +56,7 @@ class RoomController extends PublicController
     }
     //获取房间号
     public function getRoorNumber(){
-        $id = $this->login_member_info['member_id'];
+        $id = $this->login_member_info['id'];
         $zc_number = create_room_code($id);
         $_SESSION['zc_number'] = $zc_number;
         if($zc_number){
@@ -71,6 +73,25 @@ class RoomController extends PublicController
             $this->ajaxReturn(array('msg'=>'数据为空','status'=>0));
         }else{
             $this->ajaxReturn(array('msg'=>'请求成功','status'=>1,'data'=>$list));
+        }
+    }
+
+    public function joinroom(){
+        $roomData=$this->room->getData($_POST['id']);
+        if($roomData){
+            if($roomData['zn_room_type']==1){
+                $_POST['zn_member_id'] = $this->login_member_info['id'];
+                $_POST['zc_nickname'] = $this->login_member_info['zc_nickname'];
+                $flag= $this->roomJoin->addRoom($_POST);
+                if(!$flag){
+                    $this->ajaxReturn(array('msg'=>'加入失败,参数错误','status'=>0));
+                }
+                $this->ajaxReturn(array('msg'=>'请求成功','status'=>1,'data'=>$roomData));
+            }else{
+                $this->ajaxReturn(array('msg'=>'房间不公开','status'=>0));
+            }
+        }else{
+            $this->ajaxReturn(array('msg'=>'找不到房间','status'=>0));
         }
     }
 }
