@@ -310,3 +310,49 @@ NOTIC: [8] Undefined index: zl_role C:\Users\Administrator\Desktop\niuniuGame\LQ
 NOTIC: [8] Undefined index: zl_role C:\Users\Administrator\Desktop\niuniuGame\LQapps\Member\Model\MemberModel.class.php 第 520 行.
 NOTIC: [8] Undefined index: zc_headimg C:\Users\Administrator\Desktop\niuniuGame\LQapps\Member\Model\MemberModel.class.php 第 537 行.
 
+[ 2018-01-18T14:13:21+08:00 ] 127.0.0.1 /Member/registered
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: validate C:\Users\Administrator\Desktop\niuniuGame\Public\ThinkPHP\Library\Think\Model.class.php 第 1230 行.
+SQL: SELECT * FROM `lq_member` WHERE `zc_mobile` = '18319929076' LIMIT 1   [ RunTime:0.0090s ]
+
+[ 2018-01-18T14:14:59+08:00 ] 127.0.0.1 /Member/registered
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: validate C:\Users\Administrator\Desktop\niuniuGame\Public\ThinkPHP\Library\Think\Model.class.php 第 1230 行.
+SQL: SELECT * FROM `lq_member` WHERE `zc_mobile` = '18319929076' LIMIT 1   [ RunTime:0.0080s ]
+
+[ 2018-01-18T14:15:16+08:00 ] 127.0.0.1 /Member/registered
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: validate C:\Users\Administrator\Desktop\niuniuGame\Public\ThinkPHP\Library\Think\Model.class.php 第 1230 行.
+SQL: SELECT * FROM `lq_member` WHERE `zc_mobile` = '18319929076' LIMIT 1   [ RunTime:0.0060s ]
+
+[ 2018-01-18T14:15:37+08:00 ] 127.0.0.1 /Member/registered
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: validate C:\Users\Administrator\Desktop\niuniuGame\Public\ThinkPHP\Library\Think\Model.class.php 第 1230 行.
+SQL: SELECT * FROM `lq_member` WHERE `zc_mobile` = '18319929076' LIMIT 1   [ RunTime:0.0040s ]
+NOTIC: [8] Undefined index: access_token C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\HxCall.class.php 第 37 行.
+NOTIC: [8] Undefined index: access_token C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\HxCall.class.php 第 38 行.
+

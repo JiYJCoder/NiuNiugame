@@ -177,9 +177,9 @@ $config_array = array(
 
     //环信配置
     'EASEMOB' => array(
-        'app_key' => '1193161215115877#kefuchannelapp32922',//YOUR_CLIENT_ID
-        'client_id' => 'YXA6UgM7sMJzEeaJ_TsXq3fCCw',//YOUR_CLIENT_ID
-        'client_secret' => 'YXA6gwib0OIu_svsVCmga9o-S16xD_k',//YOUR_CLIENT_SECRET
+        'app_key' => '1102180111115080#wanjiba20180111',//YOUR_CLIENT_ID
+        'client_id' => 'YXA67SUSgPa2Eee11IfjLONLgw',//YOUR_CLIENT_ID
+        'client_secret' => 'YXA6ilr_F1lo8HvYaKD5I0Thxl9Wdms',//YOUR_CLIENT_SECRET
         'url' => "https://a1.easemob.com/1193161215115877/kefuchannelapp32922",
         'token_path' => STATIC_TEMP . "token",
     ),

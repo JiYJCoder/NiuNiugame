@@ -16,6 +16,7 @@
 namespace Api\Controller;
 
 use Think\Controller;
+use LQLibs\Util\HxCall as HxCall;
 
 defined('in_lqweb') or exit('Access Invalid!');
 
