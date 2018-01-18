@@ -18,7 +18,7 @@ class TestController extends PublicController
     //首页数据包
     public function index()
     {
-
+echo 2;
     }
 
     public function send_sys_info()

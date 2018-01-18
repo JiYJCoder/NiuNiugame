@@ -24,7 +24,7 @@ class RoomModel extends PublicModel {
         array('zn_mdate','time',2,'function'), // 对updatetime字段在更新的时候写入当前时间戳
     );
     public function __construct() {
-//        parent::__construct();
+        parent::__construct();
     }
     //创建房间
     public function createRoom($data)
@@ -65,8 +65,9 @@ class RoomModel extends PublicModel {
 		return $rateJson;
 	}
 	//房间列表
-	public function getData($pagesize=15,$type=1,$id){
+	public function getData($pagesize=15,$type=1,$id=''){
     	$where = array();
+    	$where['zl_visible'] =1;
     	//1 所有房间列表
         //2 自己开的房间
     	if($type ==2){
@@ -82,11 +83,22 @@ class RoomModel extends PublicModel {
 		return $list;
 	}
 
-	//加入房间
+
     public function getRoom($roomid){
         $where = array();
         $where['id'] = $roomid;
         $this->where($where) ->find();
+    }
+
+    public function setVal($roomid,$sql,$val){
+        $where = array();
+        $where['id'] = $roomid;
+        $this->where($where) ->setField($sql,$val);
+    }
+
+    //解散房间
+    public function dissolveRoom($roomid){
+        return $this->setVal($roomid,'zl_visible',0);
     }
 }
 

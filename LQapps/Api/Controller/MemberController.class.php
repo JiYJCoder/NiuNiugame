@@ -109,12 +109,13 @@ class MemberController extends PublicController
     //注册
     public  function registered()
     {
+        lq_test($_POST);
         $nikeName = I('post.nikename');
         $password = I('post.password');
         $mobile = I('post.mobile');
         $code = I('post.code');
         $data = array('zc_password'=>$password,"zc_nickname"=>$nikeName,'zc_mobile'=>$mobile);
-        $yzm=$this->D_SMS->isEffective($mobile,'registered',$code);
+//        $yzm=$this->D_SMS->isEffective($mobile,'registered',$code);
 //        if(!$yzm){
 //            $this->ajaxReturn(array('msg'=>'验证码不正确','status'=>0));
 //        }

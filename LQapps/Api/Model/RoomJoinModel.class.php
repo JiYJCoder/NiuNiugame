@@ -17,13 +17,37 @@ class RoomJoinModel extends PublicModel {
         array('zn_mdate','time',2,'function'), // 对updatetime字段在更新的时候写入当前时间戳
     );
     public function __construct() {
-//        parent::__construct();
+        parent::__construct();
     }
-    public function getRoom($id,$roomid){
+
+    //房间人
+    public function getRoomList($pagesize=15,$roomid){
+        $where = array();
+        $where['zl_visible'] = 1;
+        $where['zn_room_id'] = $roomid;
+        $count= $this->where($where)->count();
+        $page=new Page($count,$pagesize);
+        $firstRow = $page->firstRow;
+        $listRows = $page->listRows;
+        $list = $this->where($where)->limit("$firstRow , $listRows")->order('zn_cdate desc')->select();
+        return $list;
+    }
+
+    public function getRoom($id,$roomid,$sql=''){
         $where = array();
         $where['zn_member_id']= $id;
         $where['zn_room_id'] = $roomid;
+        if($sql){
+            return $this->where($where)->getField($sql);
+        }
         return $this->where($where)->find();
+    }
+    //设置值
+    public function setVal($id,$roomid,$sql,$val){
+        $where = array();
+        $where['zn_member_id'] = $id;
+        $where['zn_room_id'] = $roomid;
+        return $this->where($where)->setField($sql,$val);
     }
 
     //加入房间
@@ -65,6 +89,26 @@ class RoomJoinModel extends PublicModel {
         $where['zn_room_id'] = $roomid;
         $this->where($where)>setField('zn_points',$dpoints);
     }
+
+    //退出房间
+    public function closeRoom($id,$roomid){
+        $point = $this->getRoom($id,$roomid,"zn_points");
+        $this->setVal($id,$roomid,'zn_npoints',$point);//记录分数
+        $this->setVal($id,$roomid,'zn_points',0);//设置分数
+        return $this->setVal($id,$roomid,'zl_visible',0); //设置已推出
+    }
+
+    //查询庄家
+    public function getMakers($roomid){
+        $list =$this->where('roomid='.$roomid)->select();
+        foreach ($list as $key => $val){
+            if($val['zn_makers'] ==1){
+                return $val[$key];
+            }
+        }
+    }
+
+
 }
 
 ?>

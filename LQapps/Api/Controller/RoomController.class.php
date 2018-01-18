@@ -68,7 +68,9 @@ class RoomController extends PublicController
 
     //房间列表
     public  function getRoomList(){
-        $list=$this->room->getData($_POST);
+        $pageSize = I('post.pagesize') ||15;
+        $type = I('post.type');
+        $list=$this->room->getData($pageSize,$type);
         if(!$list){
             $this->ajaxReturn(array('msg'=>'数据为空','status'=>0));
         }else{
@@ -92,7 +94,7 @@ class RoomController extends PublicController
                     $joinPerAll = $this->notift->apiGetNumPer($_POST['roomid']); //获取要通知的人
                     $toArray = array();//通知人数
                     foreach ($joinPerAll as $key=>$val){
-                        $toArray = $val['zn_member_id'];
+                        $toArray[] = $val['zn_member_id'];
                     }
                     $notiftData = array();//通知数据
                     $notiftData['total'] = count($joinPerAll);
@@ -141,10 +143,35 @@ class RoomController extends PublicController
             $this->socket->setUser($toArray)->setContent($notiftData)->push();
         }else{
             //通知他不能加入
-//            TODO
             $to = $notiftPerid;
             $notiftData =array('msg'=>'抱歉!房主拒绝你加入','status'=>0);
             $this->socket->setUser($to)->setContent($notiftData)->push();
+        }
+    }
+
+    //解散房间
+    public function dissolveRoom(){
+        $roomid = I('post.roomid');
+        $roomdata = $this->room->getRoom($roomid);
+        $flag = $this->room->dissolveRoom($roomid);
+        if($this->login_member_info['id']==$roomdata['zn_member_id']){
+            if(!$flag){
+                return $this->ajaxReturn(array('msg'=>'解散失败','status'=>0));
+            }
+            $joinPerAll = $this->notift->apiGetNumPer($roomid); //获取要通知的人
+            $toArray = array();//通知人数
+            foreach ($joinPerAll as $key=>$val){
+                $toArray = $val['zn_member_id'];
+                $this->roomJoin->closeRoom($val['zn_member_id'],$roomid);//设置每个人的进入状态
+            }
+            $notiftData = array();//通知数据
+            $notiftData['msg'] = "房间已解散";
+
+            //socket推送
+            $this->socket->setUser($toArray)->setContent($notiftData)->push();
+            return $this->ajaxReturn(array('msg'=>'解散成功','status'=>1));
+        }else{
+            return $this->ajaxReturn(array('msg'=>'解散失败','status'=>0));
         }
     }
 }

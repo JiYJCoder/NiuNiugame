@@ -36,7 +36,7 @@ class RoomJoinController extends PublicController
             self::apiCheckToken();//用户认证
         }
     }
-
+    //设置分数
     public function chagePoint(){
         $id = I('post.id');
         $roomid = I('post.roomid');
@@ -49,8 +49,45 @@ class RoomJoinController extends PublicController
         }
         $redata = array('msg'=>'设置成功','status'=>1);
         $this->ajaxReturn($redata);
+        $joinPerAll = $this->notift->apiGetNumPer($roomid); //获取要通知的人
+        $toArray = array();//通知人数
+        $total = 0;
+        foreach ($joinPerAll as $key=>$val){
+            $toArray[] = $val['zn_member_id'];
+            $total +=$val['zn_points'];
+        }
+        $notiftData = array('msg'=>'房主修改分数',"total"=>$total);
+        $this->socket->setUser($toArray)->setContent($notiftData)->push();
+    }
+    //退出房间
+    public function closeRoom(){
+        $id = I('post.id');
+        $roomid = I('post.roomid');
+        $flag= $this->room->closeRoom($id,$roomid);
+        if(!$flag){
+            return $this->ajaxReturn(array('msg'=>'退出失败','status'=>0));
+        }
+        return $this->ajaxReturn(array('msg'=>'退出成功','status'=>1));
+        $joinPerAll = $this->notift->apiGetNumPer($roomid); //获取要通知的人
+        $toArray = array();//通知人数
+        foreach ($joinPerAll as $key=>$val){
+            $toArray[] = $val['zn_member_id'];
+            $total +=$val['zn_points'];
+        }
+        $notiftData = array('msg'=>'退出房间',"nikename"=>$this->login_member_info);
+        $this->socket->setUser($toArray)->setContent($notiftData)->push();
     }
 
+    //得到房间人列表
+    public function  getJoinRoomList(){
+        $roomid = I('post.roomid');
+        $pageSize = I('post.pageSize') || 15;
+        $list= $this->roomJoin->getRoomList($pageSize,$roomid);
+        if($list){
+            return $this->ajaxReturn(array('msg'=>'请求失败','status'=>0));
+        }
+        return $this->ajaxReturn(array('msg'=>'success','status'=>1,'data'=>$list));
+    }
 
 
 }

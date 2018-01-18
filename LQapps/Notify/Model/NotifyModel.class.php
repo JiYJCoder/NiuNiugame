@@ -8,6 +8,7 @@ use Think\Model;
  * 消息通知类
 */
 class NotifyModel extends Model{
+    protected $tableName = 'article';
 	protected $follow;
 
 

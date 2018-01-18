@@ -104,10 +104,6 @@ function ch_num($num,$mode=true) {
     return $retval;
 }
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 2805c9c0617a7ef6ef5b5461270fbc92fe1a6d9e
 
 ////二维数组重新排序
 function multi_array_sort($multi_array,$sort_key,$sort=SORT_DESC){
@@ -125,7 +121,6 @@ function multi_array_sort($multi_array,$sort_key,$sort=SORT_DESC){
     array_multisort($key_array,$sort,$multi_array);
     return $multi_array;
 }
-<<<<<<< HEAD
 
 ////去除数组中不使用的字段
 function clean_no_use($array,$no_use_array=array()){
@@ -308,8 +303,6 @@ function lq_get_jssdk($config,$data){
 			});';
 				
 }
-=======
->>>>>>> 2805c9c0617a7ef6ef5b5461270fbc92fe1a6d9e
 
 
 //寻址失败

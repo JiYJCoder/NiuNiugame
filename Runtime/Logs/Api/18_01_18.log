@@ -1,0 +1,312 @@
+[ 2018-01-18T10:16:39+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+ERR: 无法加载控制器:Index
+
+[ 2018-01-18T10:17:04+08:00 ] 127.0.0.1 /document/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `lq_api_document` [ RunTime:0.0600s ]
+SQL: select COLUMN_NAME,COLUMN_COMMENT,character_maximum_length FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME='lq_api_document' and TABLE_SCHEMA='games' [ RunTime:0.0080s ]
+SQL: SELECT * FROM `lq_api_document` WHERE ( zl_visible=1 ) ORDER BY zn_sort asc,id desc  [ RunTime:0.0520s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\ShowRuntimeBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-01-18T10:17:07+08:00 ] 127.0.0.1 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-01-18T10:18:32+08:00 ] 127.0.0.1 /document/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SELECT * FROM `lq_api_document` WHERE ( zl_visible=1 ) ORDER BY zn_sort asc,id desc  [ RunTime:0.0220s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\ShowRuntimeBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-01-18T10:20:43+08:00 ] 127.0.0.1 /document/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SELECT * FROM `lq_api_document` WHERE ( zl_visible=1 ) ORDER BY zn_sort asc,id desc  [ RunTime:0.0190s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\ShowRuntimeBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2018-01-18T10:20:51+08:00 ] 127.0.0.1 /document/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SELECT * FROM `lq_api_document` WHERE ( zl_visible=1 ) ORDER BY zn_sort asc,id desc  [ RunTime:0.0310s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\ShowRuntimeBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2018-01-18T13:44:36+08:00 ] 127.0.0.1 /Member/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] Function split() is deprecated C:\Users\Administrator\Desktop\niuniuGame\LQapps\Member\Model\MemberModel.class.php 第 283 行.
+SQL: SELECT * FROM `lq_member` WHERE ( zc_mobile='13450264067' ) LIMIT 1   [ RunTime:0.0600s ]
+
+[ 2018-01-18T13:44:46+08:00 ] 127.0.0.1 /Member/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8192] Function split() is deprecated C:\Users\Administrator\Desktop\niuniuGame\LQapps\Member\Model\MemberModel.class.php 第 283 行.
+SQL: SELECT * FROM `lq_member` WHERE ( zc_mobile='13450264067' ) LIMIT 1   [ RunTime:0.0040s ]
+
+[ 2018-01-18T13:46:33+08:00 ] 127.0.0.1 /Member/registered
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: validate C:\Users\Administrator\Desktop\niuniuGame\Public\ThinkPHP\Library\Think\Model.class.php 第 1230 行.
+SQL: SELECT * FROM `lq_member` WHERE `zc_mobile` = '13450264067' LIMIT 1   [ RunTime:0.0050s ]
+
+[ 2018-01-18T13:46:49+08:00 ] 127.0.0.1 /Member/registered
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SELECT `zn_exp_date` FROM `lq_sms_log` WHERE ( zl_use=0 and zc_mobile='13450264067' and zc_action='registered' and zc_check_code='000' ) LIMIT 1   [ RunTime:0.0630s ]
+NOTIC: [8] Undefined index: validate C:\Users\Administrator\Desktop\niuniuGame\Public\ThinkPHP\Library\Think\Model.class.php 第 1230 行.
+SQL: SELECT * FROM `lq_member` WHERE `zc_mobile` = '13450264067' LIMIT 1   [ RunTime:0.0050s ]
+
+[ 2018-01-18T13:47:20+08:00 ] 127.0.0.1 /Member/registered
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SELECT `zn_exp_date` FROM `lq_sms_log` WHERE ( zl_use=0 and zc_mobile='13450264067' and zc_action='registered' and zc_check_code='000' ) LIMIT 1   [ RunTime:0.0040s ]
+NOTIC: [8] Undefined index: validate C:\Users\Administrator\Desktop\niuniuGame\Public\ThinkPHP\Library\Think\Model.class.php 第 1230 行.
+SQL: SELECT * FROM `lq_member` WHERE `zc_mobile` = '13450264067' LIMIT 1   [ RunTime:0.0060s ]
+
+[ 2018-01-18T13:48:02+08:00 ] 127.0.0.1 /Member/registered
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Undefined index: validate C:\Users\Administrator\Desktop\niuniuGame\Public\ThinkPHP\Library\Think\Model.class.php 第 1230 行.
+SQL: SELECT * FROM `lq_member` WHERE `zc_mobile` = '13450264067' LIMIT 1   [ RunTime:0.0060s ]
+
+[ 2018-01-18T13:48:08+08:00 ] 127.0.0.1 /Member/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8192] Function split() is deprecated C:\Users\Administrator\Desktop\niuniuGame\LQapps\Member\Model\MemberModel.class.php 第 283 行.
+SQL: SELECT * FROM `lq_member` WHERE ( zc_mobile='13450264067' ) LIMIT 1   [ RunTime:0.0090s ]
+
+[ 2018-01-18T13:48:18+08:00 ] 127.0.0.1 /Member/registered
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SELECT `zn_exp_date` FROM `lq_sms_log` WHERE ( zl_use=0 and zc_mobile='13450264067' and zc_action='registered' and zc_check_code='0000' ) LIMIT 1   [ RunTime:0.0030s ]
+NOTIC: [8] Undefined index: validate C:\Users\Administrator\Desktop\niuniuGame\Public\ThinkPHP\Library\Think\Model.class.php 第 1230 行.
+SQL: SELECT * FROM `lq_member` WHERE `zc_mobile` = '13450264067' LIMIT 1   [ RunTime:0.0110s ]
+
+[ 2018-01-18T13:48:33+08:00 ] 127.0.0.1 /Member/registered
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Undefined index: validate C:\Users\Administrator\Desktop\niuniuGame\Public\ThinkPHP\Library\Think\Model.class.php 第 1230 行.
+SQL: SELECT * FROM `lq_member` WHERE `zc_mobile` = '13450264067' LIMIT 1   [ RunTime:0.0050s ]
+
+[ 2018-01-18T13:50:45+08:00 ] 127.0.0.1 /Member/registered
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: [8] Undefined index: validate C:\Users\Administrator\Desktop\niuniuGame\Public\ThinkPHP\Library\Think\Model.class.php 第 1230 行.
+
+[ 2018-01-18T13:50:52+08:00 ] 127.0.0.1 /Member/registered
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SELECT `zn_exp_date` FROM `lq_sms_log` WHERE ( zl_use=0 and zc_mobile='13450264067' and zc_action='registered' and zc_check_code='00' ) LIMIT 1   [ RunTime:0.0040s ]
+NOTIC: [8] Undefined index: validate C:\Users\Administrator\Desktop\niuniuGame\Public\ThinkPHP\Library\Think\Model.class.php 第 1230 行.
+
+[ 2018-01-18T13:50:52+08:00 ] 127.0.0.1 /Member/registered
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SELECT `zn_exp_date` FROM `lq_sms_log` WHERE ( zl_use=0 and zc_mobile='13450264067' and zc_action='registered' and zc_check_code='00' ) LIMIT 1   [ RunTime:0.0030s ]
+NOTIC: [8] Undefined index: validate C:\Users\Administrator\Desktop\niuniuGame\Public\ThinkPHP\Library\Think\Model.class.php 第 1230 行.
+
+[ 2018-01-18T13:50:53+08:00 ] 127.0.0.1 /Member/registered
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SELECT `zn_exp_date` FROM `lq_sms_log` WHERE ( zl_use=0 and zc_mobile='13450264067' and zc_action='registered' and zc_check_code='00' ) LIMIT 1   [ RunTime:0.0050s ]
+NOTIC: [8] Undefined index: validate C:\Users\Administrator\Desktop\niuniuGame\Public\ThinkPHP\Library\Think\Model.class.php 第 1230 行.
+
+[ 2018-01-18T13:54:27+08:00 ] 127.0.0.1 /Member/registered
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SELECT `zn_exp_date` FROM `lq_sms_log` WHERE ( zl_use=0 and zc_mobile='13450264067' and zc_action='registered' and zc_check_code='000' ) LIMIT 1   [ RunTime:0.0040s ]
+NOTIC: [8] Undefined index: validate C:\Users\Administrator\Desktop\niuniuGame\Public\ThinkPHP\Library\Think\Model.class.php 第 1230 行.
+SQL: SELECT * FROM `lq_member` WHERE `zc_mobile` = '13450264067' LIMIT 1   [ RunTime:0.0040s ]
+
+[ 2018-01-18T14:05:25+08:00 ] 127.0.0.1 /Member/registered
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: validate C:\Users\Administrator\Desktop\niuniuGame\Public\ThinkPHP\Library\Think\Model.class.php 第 1230 行.
+
+[ 2018-01-18T14:05:45+08:00 ] 127.0.0.1 /Member/registered
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Undefined index: validate C:\Users\Administrator\Desktop\niuniuGame\Public\ThinkPHP\Library\Think\Model.class.php 第 1230 行.
+
+[ 2018-01-18T14:06:49+08:00 ] 127.0.0.1 /Member/registered
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: validate C:\Users\Administrator\Desktop\niuniuGame\Public\ThinkPHP\Library\Think\Model.class.php 第 1230 行.
+SQL: SELECT * FROM `lq_member` WHERE `zc_mobile` = '18319929076' LIMIT 1   [ RunTime:0.0040s ]
+NOTIC: [8] Undefined index: auto C:\Users\Administrator\Desktop\niuniuGame\Public\ThinkPHP\Library\Think\Model.class.php 第 1173 行.
+NOTIC: [2] Missing argument 1 for lqNull() C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\Common\function.php 第 855 行.
+NOTIC: [8] Undefined variable: val C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\Common\function.php 第 857 行.
+NOTIC: [2] Missing argument 1 for lqNull() C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\Common\function.php 第 855 行.
+NOTIC: [8] Undefined variable: val C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\Common\function.php 第 857 行.
+NOTIC: [2] Missing argument 1 for Member\Model\MemberModel::create_openid() C:\Users\Administrator\Desktop\niuniuGame\LQapps\Member\Model\MemberModel.class.php 第 111 行.
+NOTIC: [8] Undefined variable: openid C:\Users\Administrator\Desktop\niuniuGame\LQapps\Member\Model\MemberModel.class.php 第 112 行.
+SQL: INSERT INTO `lq_member` (`zc_password`,`zc_nickname`,`zc_mobile`,`zc_easemob_account`,`zc_easemob_password`,`zc_openid`,`zc_salt`,`zn_cdate`,`zn_mdate`,`zn_reg_ip`,`zn_last_login_ip`) VALUES ('31fb598e0f1c343074704eb1e9cd81dd','dsadsa','18319929076','','','LQ15162556094GYO2ZR0EM8M5KAG','897634','1516255609','1516255609','2130706433','2130706433') [ RunTime:0.0190s ]
+NOTIC: [8] Undefined index: zl_role C:\Users\Administrator\Desktop\niuniuGame\LQapps\Member\Model\MemberModel.class.php 第 500 行.
+NOTIC: [8] Undefined index: zl_role C:\Users\Administrator\Desktop\niuniuGame\LQapps\Member\Model\MemberModel.class.php 第 520 行.
+NOTIC: [8] Undefined index: zc_headimg C:\Users\Administrator\Desktop\niuniuGame\LQapps\Member\Model\MemberModel.class.php 第 537 行.
+

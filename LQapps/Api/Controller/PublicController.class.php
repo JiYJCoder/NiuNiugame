@@ -12,7 +12,7 @@ namespace Api\Controller;
 
 use Think\Controller;
 use Member\Api\MemberApi as MemberApi;
-use Notify\Api\NotiftApi as NotiftApi;
+use Notify\Api\NotifyApi as NotiftApi;
 use Attachment\Api\AttachmentApi as AttachmentApi;
 use LQLibs\Util\PushEvent as PushEvent;
 
@@ -20,11 +20,11 @@ defined('in_lqweb') or exit('Access Invalid!');
 
 class PublicController extends Controller
 {
+
     public $lqgetid, $lqpostid, $set_config, $returnData, $model_member, $login_member_info, $JSONP;
 
     public function __construct()
     {
-
         parent::__construct();
         //AJAX返回数据格式
         header("Access-Control-Allow-Origin:*");

@@ -1679,9 +1679,9 @@ function lqSendSms($mobile,$datas,$tempId){
 
     function pr($data)
     {
-        echo "<prev>";
+        echo "<pre>";
         print_r($data);
-        echo "</prev>";
+        echo "</pre>";
     }
 
     ?>
