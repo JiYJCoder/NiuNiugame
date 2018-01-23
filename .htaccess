@@ -7,7 +7,7 @@
   RewriteCond %{REQUEST_FILENAME} !-d
   RewriteCond %{REQUEST_FILENAME} !-f
   #RewriteRule ^do$ index.php/$1 [QSA,PT,L]
-  RewriteRule ^(.*)$ index.php/$1 [QSA,PT,L]
+  RewriteRule ^(.*)$ index.php?/$1 [QSA,PT,L]
   RewriteRule ^admin$ ./sys-index.php [NC,L]
 
 </IfModule>

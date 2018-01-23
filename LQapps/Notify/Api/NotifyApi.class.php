@@ -21,8 +21,9 @@ class NotifyApi extends Api{
 
 	//获取在线人数
     public function apiGetNumPer($roomid){
-        $this->model->getJoinPer($roomid);
+        return $this->model->getJoinPer($roomid);
     }
+
 
 	
 

@@ -271,10 +271,11 @@ if(navigator.appName == 'Microsoft Internet Explorer'){
                       <td align="center"><?php echo ($data["no"]); ?></td>
                       <td align="center"><?php echo ($data["id"]); ?></td>
                       <td><?php echo ($data["zl_type_label"]); ?></td>
-                      <td edit="0" op="label" title="<?php echo L('ALT_BUTTON_EDIT_LABEL');?>"><?php echo ($data["zc_title"]); ?></td>
+                      <td edit="0" op="label" title="<?php echo L('ALT_BUTTON_EDIT_LABEL');?>"><?php echo ($data["zc_label"]); ?></td>
+                      <td><?php echo ($data["zc_keyword"]); ?></td>
                       <td><?php echo ($data["visible_label"]); ?></td>
                       <td class="manage-menu list-os-a">
-                      <a href="/sys-index.php/ApiDocument/edit/tnid/<?php echo ($data["id"]); ?>" title="<?php echo L("LABEL_OS_EDITID");?>[<?php echo ($data["id"]); ?>]"><i class="fa fa-edit"></i></a>
+                      <a href="/sys-index.php/WxRobot/edit/tnid/<?php echo ($data["id"]); ?>" title="<?php echo L("LABEL_OS_EDITID");?>[<?php echo ($data["id"]); ?>]"><i class="fa fa-edit"></i></a>
              		  <a href="javascript:void(0);" class="opStatus" val="<?php echo ($data["zl_visible"]); ?>" title="<?php echo L("LABEL_OS_STATUS");?>[<?php echo ($data["id"]); ?>]"><?php echo ($data["visible_button"]); ?></a>
                       <a href="javascript:;" class="opDelete" title="<?php echo L("LABEL_OS_TITLE_DEL");?>[<?php echo ($data["zc_caption"]); ?>]"><i class="fa fa-times-circle"></i></a>
                       </td>
@@ -326,7 +327,7 @@ $(document).ready(function(){
 var top_nav_id=util.cookie.get('top_nav_id');
 var left_nav_id=util.cookie.get('left_nav_id');
 if(top_nav_id) util.menuDisplay(top_nav_id,left_nav_id);
-<?php if(ACTION_NAME=='index') { echo "$('#list-tbody tr:odd').addClass('tr_odd');//单双行样式\n"; echo "$('.opStatus').click(function(){util.visible($(this),'/sys-index.php/ApiDocument/opVisible');});//快捷启用禁用操作\n"; echo "$('.opDelete').click(function(){util.delete($(this),'/sys-index.php/ApiDocument/opDelete');});//单记录删除操作\n"; echo "$('tbody>tr>td[op]').dblclick(function(){util.ajaxEdit($(this),'/sys-index.php/ApiDocument');});//单项编辑\n"; echo "$('tbody>tr>td>a[op]').click(function(){util.ajaxPropertyA($(this),'/sys-index.php/ApiDocument');});//单项属性切换\n"; } ?>	
+<?php if(ACTION_NAME=='index') { echo "$('#list-tbody tr:odd').addClass('tr_odd');//单双行样式\n"; echo "$('.opStatus').click(function(){util.visible($(this),'/sys-index.php/WxRobot/opVisible');});//快捷启用禁用操作\n"; echo "$('.opDelete').click(function(){util.delete($(this),'/sys-index.php/WxRobot/opDelete');});//单记录删除操作\n"; echo "$('tbody>tr>td[op]').dblclick(function(){util.ajaxEdit($(this),'/sys-index.php/WxRobot');});//单项编辑\n"; echo "$('tbody>tr>td>a[op]').click(function(){util.ajaxPropertyA($(this),'/sys-index.php/WxRobot');});//单项属性切换\n"; } ?>	
 	//ajax点击响应href
 	$(".getUrl").click(function(){util.getUrl($(this).attr("lqHref"));});
 	//顶部菜单展示

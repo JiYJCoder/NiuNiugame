@@ -28,11 +28,12 @@ class MemberController extends PublicController
     public function __construct()
     {
         parent::__construct();
-        $this->easemob_prefix = "hz";
+        $this->easemob_prefix = "hz_niuniu_";
         $this->D_SMS = D("Api/SmsLog");//接口短信实例化
 
         //免死金牌
-        $action_no_login_array = array('get-openid', 'wx-return-openid', 'login', 'wx-login', 'openid-login','registered','test');
+        $action_no_login_array = array('get-openid', 'wx-return-openid', 'login', 'wx-login', 'openid-login','registered','test','changepassword');
+
         if (in_array(ACTION_NAME, $action_no_login_array)) {
 
         } else {
@@ -110,22 +111,21 @@ class MemberController extends PublicController
     //注册
     public  function registered()
     {
-        lq_test($_POST);
         $nikeName = I('post.nikename');
         $password = I('post.password');
         $mobile = I('post.mobile');
         $code = I('post.code');
-        $data = array('zc_password'=>$password,"zc_nickname"=>$nikeName,'zc_mobile'=>$mobile);
+        $data = array('zc_password'=>$password,"zc_nickname"=>$nikeName,'zc_mobile'=>$mobile,'zc_account'=>$mobile);
 //        $yzm=$this->D_SMS->isEffective($mobile,'registered',$code);
 //        if(!$yzm){
 //            $this->ajaxReturn(array('msg'=>'验证码不正确','status'=>0));
 //        }
         $flag = $this->model_member->apiRegister($data);
-        if($flag){
-            $this->hx_register($mobile);//注册环信
+        if(intval($flag) > 0){
+            $this->hx_register($this->easemob_prefix.$flag);//注册环信
             $this->ajaxReturn(array('msg'=>'注册成功','status'=>1));
         }else{
-            $this->ajaxReturn(array('msg'=>'注册失败','status'=>0));
+            $this->ajaxReturn(array('msg'=>$flag,'status'=>0));
         }
     }
     //修改密码
@@ -134,10 +134,11 @@ class MemberController extends PublicController
         $mobile = I('post.mobile');
         $code = I('post.code');
         $yzm=$this->D_SMS->isEffective($mobile,'changePassword',$code);
-        if(!$yzm){
-            $this->ajaxReturn(array('msg'=>'验证码不正确','status'=>0));
-        }
-        $data = array('zc_password'=>md5($password));
+//        if(!$yzm){
+//            $this->ajaxReturn(array('msg'=>'验证码不正确','status'=>0));
+//        }
+        $data['id'] = M("Member")->where(array("zc_mobile"=>$mobile))->getField("id");
+        $data['zc_password'] = md5($password);
         $flag= $this->model_member->apiSaveMember($data);
         if($flag){
             $this->ajaxReturn(array('msg'=>'修改成功','status'=>1));
@@ -184,6 +185,7 @@ class MemberController extends PublicController
 //                $info["pay_integration"] = $this->login_member_info["zn_pay_integration"];
 //                $info["rank_integration"] = $this->login_member_info["zn_rank_integration"];
                 $info["headimg"] = NO_HEADIMG;
+                $info['card_num'] = $this->login_member_info['zn_card_num'];
 //                $info["province"] = $this->model_region->where("id='" . $this->login_member_info["zn_province"] . "'")->getField("zc_name");
 //                $info["city"] = $this->model_region->where("id='" . $this->login_member_info["zn_city"] . "'")->getField("zc_name");
 //                $info["district"] = $this->model_region->where("id='" . $this->login_member_info["zn_district"] . "'")->getField("zc_name");

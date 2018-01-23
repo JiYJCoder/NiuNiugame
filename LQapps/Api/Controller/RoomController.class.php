@@ -40,25 +40,21 @@ class RoomController extends PublicController
     }
     public function createRoom()
     {
-        //nikename作为房间名
-        $_POST['zc_title'] = $this->login_member_info['zc_nickname'];
-        //生成房间编号
-        $_POST['zc_number'] = $_SESSION['zc_number'];
+        $_POST['zl_visible'] = 1;
+        $_POST['zn_member_id'] = $this->login_member_info['id'];
         $flag=  $this->room->createRoom($_POST);
-        if($flag){
-            unset($_SESSION['zc_number']);
+        if(intval($flag)){
             $redata = array('msg'=>'创建成功','status'=>1,'data'=>$_POST);
             $this->ajaxReturn($redata);
         }else{
-            $redata = array('msg'=>'创建失败,缺少参数','status'=>0);
+            $redata = array('msg'=>$flag,'status'=>0);
             $this->ajaxReturn($redata);
         }
     }
     //获取房间号
-    public function getRoorNumber(){
+    public function getRoomNumber(){
         $id = $this->login_member_info['id'];
         $zc_number = create_room_code($id);
-        $_SESSION['zc_number'] = $zc_number;
         if($zc_number){
             $this->ajaxReturn(array('msg'=>'请求成功','status'=>1,'data'=>$zc_number));
         }else{
@@ -68,9 +64,12 @@ class RoomController extends PublicController
 
     //房间列表
     public  function getRoomList(){
-        $pageSize = I('post.pagesize') ||15;
+        $pageSize = I('post.pagesize') ? I('post.pagesize'):15;
         $type = I('post.type');
         $list=$this->room->getData($pageSize,$type);
+        foreach ($list as $key=>$val){
+            $list[$key]['pernumber']=$this->roomJoin->getRoomList(15,$val['id'])['count'];
+        }
         if(!$list){
             $this->ajaxReturn(array('msg'=>'数据为空','status'=>0));
         }else{
@@ -79,33 +78,34 @@ class RoomController extends PublicController
     }
 
     //加入房间
-    public function joinroom(){
-        $roomData=$this->room->getData($_POST['roomid']);
+    public function joinRoom(){
+        $roomData=$this->room->getRoom($_POST['zn_room_id']);
         if($roomData){
             if($roomData['zn_room_type']==1 ){
                 if($roomData['zn_confirm'] ==2){
                     $_POST['zn_member_id'] = $this->login_member_info['id'];
-                    $_POST['zc_nickname'] = $this->login_member_info['zc_nickname'];
+                    $_POST['zn_member_name'] = $this->login_member_info['zc_nickname'];
                     $flag= $this->roomJoin->addRoom($_POST);
                     if(!$flag){
                         $this->ajaxReturn(array('msg'=>'加入失败,参数错误','status'=>0));
                     }
-                    $this->ajaxReturn(array('msg'=>'加入成功','status'=>1,'data'=>$roomData));
-                    $joinPerAll = $this->notift->apiGetNumPer($_POST['roomid']); //获取要通知的人
+
+                    $joinPerAll = $this->notift->apiGetNumPer($_POST['zn_room_id']); //获取要通知的人
                     $toArray = array();//通知人数
                     foreach ($joinPerAll as $key=>$val){
                         $toArray[] = $val['zn_member_id'];
                     }
-                    $notiftData = array();//通知数据
+                    $notiftData = array('type'=>1);//通知数据
                     $notiftData['total'] = count($joinPerAll);
                     $notiftData['nikename'] = $this->login_member_info['zc_nickname'];
                     $notiftData['zn_member_id'] = $this->login_member_info['id'];
-                    //socket推送
+                    //socket推送房间内的人
                     $this->socket->setUser($toArray)->setContent($notiftData)->push();
+                    $this->ajaxReturn(array('type'=>1,'msg'=>'加入成功','status'=>1,'data'=>$roomData));
                 }else{
                     //通知房主
-                    $to =  $roomData['zn_member_id'];
-                    $notiftData =array('nikename'=>$this->login_member_info['zc_nickname'],'id'=>$this->login_member_info['id'],'roomid'=>$_POST['roomid']);
+                    $to =  array($roomData['zn_member_id']);
+                    $notiftData =array('type'=>2,'nikename'=>$this->login_member_info['zc_nickname'],'id'=>$this->login_member_info['id'],'roomid'=>$_POST['roomid']);
                     $this->socket->setUser($to)->setContent($notiftData)->push();
                 }
             }else{
@@ -115,7 +115,9 @@ class RoomController extends PublicController
             $this->ajaxReturn(array('msg'=>'找不到房间','status'=>0));
         }
     }
-    public function getFlag(){
+
+    //是否允许加入房间
+    public function isJoin(){
         $type = I('post.type');
         $notiftPerid= I('post.id');
         $nikename= I('post.nikename');
@@ -129,22 +131,23 @@ class RoomController extends PublicController
             if(!$flag){
                 $this->ajaxReturn(array('msg'=>'加入失败,参数错误','status'=>0));
             }
-            $this->ajaxReturn(array('msg'=>'加入成功','status'=>1));
             $joinPerAll = $this->notift->apiGetNumPer($roomid); //获取要通知的人
             $toArray = array();//通知人数
             foreach ($joinPerAll as $key=>$val){
                 $toArray = $val['zn_member_id'];
             }
             $notiftData = array();//通知数据
+            $notiftData['type'] = 1; //
             $notiftData['total'] = count($joinPerAll);
             $notiftData['nikename'] = $nikename;
             $notiftData['zn_member_id'] = $notiftPerid;
-            //socket推送
+            //socket推送房间内的人
             $this->socket->setUser($toArray)->setContent($notiftData)->push();
+            $this->ajaxReturn(array('msg'=>'加入成功','status'=>1));
         }else{
             //通知他不能加入
             $to = $notiftPerid;
-            $notiftData =array('msg'=>'抱歉!房主拒绝你加入','status'=>0);
+            $notiftData =array('type'=>3,'msg'=>'抱歉!房主拒绝你加入','status'=>0);
             $this->socket->setUser($to)->setContent($notiftData)->push();
         }
     }
@@ -166,12 +169,31 @@ class RoomController extends PublicController
             }
             $notiftData = array();//通知数据
             $notiftData['msg'] = "房间已解散";
-
+            $notiftData['type'] = 4;
             //socket推送
             $this->socket->setUser($toArray)->setContent($notiftData)->push();
             return $this->ajaxReturn(array('msg'=>'解散成功','status'=>1));
         }else{
-            return $this->ajaxReturn(array('msg'=>'解散失败','status'=>0));
+            return $this->ajaxReturn(array('msg'=>'解散失败1','status'=>0));
         }
+    }
+
+    //获取房间信息
+    public function getRoom(){
+        $roomid = $_POST['roomid'];
+        $data=$this->room->getRoom($roomid);
+        if($data){
+            return $this->ajaxReturn(array('msg'=>'获取成功','status'=>1,'data'=>$data));
+        }
+        return $this->ajaxReturn(array('msg'=>'获取失败','status'=>0));
+    }
+
+    public function getRooms(){
+        $roomid = $_POST['number'];
+        $data=$this->room->getRoomNumber($roomid);
+        if($data){
+            return $this->ajaxReturn(array('msg'=>'获取成功','status'=>1,'data'=>$data));
+        }
+        return $this->ajaxReturn(array('msg'=>'获取失败','status'=>0));
     }
 }

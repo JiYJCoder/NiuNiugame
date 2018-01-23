@@ -46,7 +46,7 @@ class MemberModel extends Model{
 		array('zc_easemob_account', 'lqNull', self::MODEL_INSERT,'function'),
 		array('zc_easemob_password', 'lqNull', self::MODEL_INSERT,'function'),
 		array('zc_openid', 'create_openid', self::MODEL_INSERT, 'callback'),
-		array('zc_password', 'lq_ucenter_md5', self::MODEL_INSERT, 'function',SALT),
+		array('zc_password', 'md5', self::MODEL_INSERT, 'function'),
 		array('zc_salt', SALT, self::MODEL_INSERT),
 		array('zn_cdate', NOW_TIME, self::MODEL_INSERT),
 		array('zn_mdate', NOW_TIME, self::MODEL_BOTH),
@@ -248,28 +248,7 @@ class MemberModel extends Model{
 	public function lqCacheInfo($mid){
 			$member=$this->lqGetInfoByID($mid);
 			if(!$member) return 0;
-			$member["zl_role_label"]=C("MEMBER_ROLE")[$member["zl_role"]];
-			$member["zl_is_designer_label"]=$member["zl_is_designer"]?"是设计师":"不是设计师";
-			$member["zl_sex_label"]=C("_SEX")[$member["zl_sex"]];
-			//会员等会
-			$member_rank_arr=C("MEMBER_RANK");
-			if($member["zn_rank_integration"]>=$member_rank_arr[1]["min_points"]&&$member["zn_rank_integration"]<=$member_rank_arr[1]["max_points"]){
-				$member["member_rank"]=$member_rank_arr[1];
-				$member["member_rank_per"]= round(($member["zn_rank_integration"]/$member_rank_arr[1]["max_points"]),2)*100;
-			}elseif($member["zn_rank_integration"]>=$member_rank_arr[2]["min_points"]&&$member["zn_rank_integration"]<=$member_rank_arr[2]["max_points"]){
-				$member["member_rank"]=$member_rank_arr[2];
-				$member["member_rank_per"]= round(($member["zn_rank_integration"]/$member_rank_arr[2]["max_points"]),2)*100;
-			}elseif($member["zn_rank_integration"]>=$member_rank_arr[3]["min_points"]&&$member["zn_rank_integration"]<=$member_rank_arr[3]["max_points"]){
-				$member["member_rank"]=$member_rank_arr[3];
-				$member["member_rank_per"]= round(($member["zn_rank_integration"]/$member_rank_arr[3]["max_points"]),2)*100;
-			}elseif($member["zn_rank_integration"]>=$member_rank_arr[4]["min_points"]&&$member["zn_rank_integration"]<=$member_rank_arr[4]["max_points"]){
-				$member["member_rank"]=$member_rank_arr[4];
-				$member["member_rank_per"]= round(($member["zn_rank_integration"]/$member_rank_arr[4]["max_points"]),2)*100;
-			}else{
-				$member["member_rank"]=array("rank_name"=>"非积分会员");
-				$member["member_rank_per"]=100;
-			}
-			
+
 			
 			unset($member["zc_password"]);//除去密码缓存
 			unset($member["zc_pay_password"]);//除去支付密码缓存
@@ -461,12 +440,14 @@ class MemberModel extends Model{
 	 * @return integer          注册成功-会员信息，注册失败-错误编号
 	 */
 	public function register($data){
-		/* 添加会员 */
+        /* 添加会员 */
 		$data=$this->create($data);//验证
 		if (!$data){
-			return $this->getError(); //错误详情见自动验证注释
+            return $this->getError(); //错误详情见自动验证注释
 		} else {
 			$mid = $this->add($data);
+
+
 			return $mid ? $mid : 0; //0-未知错误，大于0-注册成功			
 		}
 	}
@@ -568,6 +549,7 @@ class MemberModel extends Model{
 			return '参数错误！';
 		}
 		$this->save($data);
+
 		$this->lqCacheInfo($data["id"]);
 		return $data["id"];
 	}
@@ -836,18 +818,18 @@ class MemberModel extends Model{
 		}
 	}
 	public function lqGetToken($id){
-			if(is_weixin()){
-						$client_type='WECHAT';
-			}else{
-				if($_SERVER['HTTP_HOST']=='test.lxjjz.cn'){
-						$client_type='WECHAT';
-				}else{				
-						$client_type='APP';
-				}		
-			}			
+//			if(is_weixin()){
+//						$client_type='WECHAT';
+//			}else{
+//				if($_SERVER['HTTP_HOST']=='test.lxjjz.cn'){
+//						$client_type='WECHAT';
+//				}else{
+//						$client_type='APP';
+//				}
+//			}
 
-		return $this->model_member_token->field("*")->where("zc_client_type='".$client_type."' and zn_member_id=".intval($id))->find();
-	}	
+		return $this->model_member_token->field("*")->where("zn_member_id=".intval($id))->find();
+	}
 	/*授权#######################e*/
 	
 	public function lqInsertLove($id=0,$key=1,$member=array()){

@@ -25,7 +25,7 @@ class NotifyModel extends Model{
 
 		return $this->sysNotice->where("zn_sort,id DESC")->limit(5)->select();
 	}
-
+    //获取在线人数
 	public function getJoinPer($roomid){
 	    $where = array();
         $where['zn_room_id'] =$roomid;

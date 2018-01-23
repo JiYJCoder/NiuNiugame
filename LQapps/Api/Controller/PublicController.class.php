@@ -21,7 +21,7 @@ defined('in_lqweb') or exit('Access Invalid!');
 class PublicController extends Controller
 {
 
-    public $lqgetid, $lqpostid, $set_config, $returnData, $model_member, $login_member_info, $JSONP;
+    public $lqgetid, $lqpostid, $set_config, $returnData, $model_member, $login_member_info, $JSONP,$socket,$notift;
 
     public function __construct()
     {
@@ -31,27 +31,28 @@ class PublicController extends Controller
         $this->JSON = 'json';
         $this->model_member = new MemberApi;//实例化会员
         $this->notift = new NotiftApi;//实例化通知类
-        $this->socket = new PushEvent;//socket
+        $this->socket = new PushEvent();//socket
         $this->lqgetid = isset($_GET["tnid"]) ? intval($_GET["tnid"]) : 0;
         $this->lqpostid = isset($_POST["fromid"]) ? intval($_POST["fromid"]) : 0;
         $this->set_config = F('set_config', '', COMMON_ARRAY);
         $this->returnData = array('status' => 0, 'msg' => '当前系统繁忙，请稍后重试！', 'data' => array(), "url" => "", "note" => "");//初始回调数据
+
     }
 
     //api用户认证**************************************************
     protected function apiCheckToken($mustReturn = 1)
     {
-        $uid = I("get.uid", '');//用户ID
-        $token = I("get.token", '');//授权加密码
+        $uid = I("post.uid", '');//用户ID
+        $token = I("post.token", '');//授权加密码
         $token_data = $this->model_member->apiGetToken($uid);
         if (!$token_data) {
-            if ($mustReturn == 1) $this->ajaxReturn(array('status' => 2, 'msg' => '用户认证失败,请重新登录', 'data' => '', "url" => "", "note" => "请离开"), $this->JSONP);
+            if ($mustReturn == 1) $this->ajaxReturn(array('status' => 2, 'msg' => '用户认证失败,请重新登录', 'data' => '', "url" => "", "note" => "请离开1"), $this->JSONP);
         } else {
             if ($token === $token_data["zc_token"]) {
                 //会员信息
                 $this->login_member_info = $this->model_member->apiGetInfo($token_data["zn_member_id"]);
 
-                if ($this->login_member_info == -1) $this->ajaxReturn(array('status' => 2, 'msg' => '用户认证失败,请重新登录', 'data' => '', "url" => "", "note" => "请离开"), $this->JSONP);
+                if ($this->login_member_info == -1) $this->ajaxReturn(array('status' => 2, 'msg' => '用户认证失败,请重新登录', 'data' => '', "url" => "", "note" => "请离开2"), $this->JSONP);
                 if ($this->login_member_info["zc_headimg"]) {
                     if (substr($this->login_member_info["zc_headimg"], 0, 4) == 'http') {
                         $this->login_member_info["zc_headimg"] = $this->login_member_info["zc_headimg"];
@@ -61,8 +62,12 @@ class PublicController extends Controller
                 } else {
                     $this->login_member_info["zc_headimg"] = NO_HEADIMG;
                 }
+                if($_POST) {
+                    unset($_POST['uid']);
+                    unset($_POST['token']);
+                }
             } else {
-                if ($mustReturn == 1) $this->ajaxReturn(array('status' => 2, 'msg' => '用户认证失败,请重新登录', 'data' => '', "url" => "", "note" => "请离开"), $this->JSONP);
+                if ($mustReturn == 1) $this->ajaxReturn(array('status' => 2, 'msg' => '用户认证失败,请重新登录', 'data' => '', "url" => "", "note" => "请离开3"), $this->JSONP);
             }
         }
 

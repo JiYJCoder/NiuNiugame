@@ -19,40 +19,30 @@ use Think\Controller;
 
 defined('in_lqweb') or exit('Access Invalid!');
 
-class GameLogController extends PublicController
+class MemberFriendController extends PublicController
 {
-    protected $room ,$roomJoin ,$game;
+    protected $friend ;
     /** 初始化*/
     public function __construct()
     {
 
         parent::__construct();
-        $this->game = D('GameLog');
-        $this->roomJoin = D('RoomJoin');
+        $this->friend = D('MemberFriend');
+
         //免死金牌
-        $action_no_login_array = array('get-openid', 'wx-return-openid', 'login', 'wx-login', 'openid-login','test');
+        $action_no_login_array = array('get-openid', 'wx-return-openid', 'login', 'wx-login', 'openid-login');
         if (in_array(ACTION_NAME, $action_no_login_array)) {
 
         } else {
             self::apiCheckToken();//用户认证
         }
     }
-    //获取游戏结果
-   public function getData(){
-        $roomid = I("post.roomid");
-        $id = I('post.id');
-        $number = I('post.number');//局数
-   }
-
-   //存储游戏结果
-    public function createGameLog()
-    {
-        $flag=$this->game->createGameLog($_POST);
+   //添加好友
+    function addFriend(){
+        $flag= $this->friend->createFrient($_POST);
         if(intval($flag)){
-            $redata = array('msg'=>'创建成功','status'=>1);
-            $this->ajaxReturn($redata);
+            return $this->ajaxReturn(array('msg'=>"添加成功",'status'=>1));
         }
-        $redata = array('msg'=>$flag,'status'=>0);
-        $this->ajaxReturn($redata);
+        return $this->ajaxReturn(array('msg'=>"添加失败",'status'=>0));
     }
 }

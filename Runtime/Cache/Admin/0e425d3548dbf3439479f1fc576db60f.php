@@ -113,104 +113,99 @@ if(navigator.appName == 'Microsoft Internet Explorer'){
     </div>
 
 
-<div class="col-xs-12 col-sm-9 col-lg-10"> 
-      
-  <div class="row">
-	<div class="col-sm-6 common-search-btn">
-    	<?php if(ACTION_NAME == 'index'): ?><label class="btn label-primary" title="<?php echo L('PAGE_LIST');?>"><i class="fa fa-list"></i> <?php echo L('PAGE_LIST');?></label>
-            <?php if($os_lock["edit"] == '1'): ?><a class="btn btn-primary" href="<?php echo U('add');?>" title="<?php echo L('PAGE_ADD');?>"><i class="fa fa-plus"></i> <?php echo L('PAGE_ADD');?></a><?php endif; ?>
-        <?php elseif(ACTION_NAME == 'add'): ?>
-        	<a class="btn btn-primary" href="<?php echo U('index');?>" title="<?php echo L('PAGE_LIST');?>"><i class="fa fa-list"></i> <?php echo L('PAGE_LIST');?></a>
-            <label class="btn label-primary" title="<?php echo L('PAGE_ADD');?>"><i class="fa fa-plus"></i> <?php echo L('PAGE_ADD');?></label>
-        <?php elseif(ACTION_NAME == 'edit'): ?>
-			<a class="btn btn-primary" href="<?php echo ($edit_index_url); ?>" title="<?php echo L('PAGE_LIST');?>"><i class="fa fa-list"></i> <?php echo L('PAGE_LIST');?></a>
-            <label class="btn label-primary" title="<?php echo L('PAGE_EDIT');?>"><i class="fa fa-edit"></i> <?php echo L('PAGE_EDIT');?></label>   
-        <?php elseif(ACTION_NAME == 'sort'): ?>
-        	<a class="btn btn-primary" href="<?php echo U('index');?>" title="<?php echo L('PAGE_LIST');?>"><i class="fa fa-list"></i> <?php echo L('PAGE_LIST');?></a>
-            <label class="btn label-primary" title="<?php echo L('PAGE_SORT');?>"><i class="fa fa-sort-numeric-asc"></i> <?php echo L('PAGE_SORT');?></label>   
-        <?php else: ?>
-        	<a class="btn btn-primary" href="" title="刷新本页"> <i class="fa fa-refresh"></i> 刷新本页 </a><?php endif; ?> 
-	</div>
-	<div class="col-sm-6" style="float:right;text-align:right;padding:0;margin:0px;"><?php echo ($sys_current); ?></div>
-  </div>
-  
-  <div class="clearfix welcome-container">
+<div class="col-xs-12 col-sm-9 col-lg-10">
     <div class="row">
-      <div class="clearfix template">
-        <div class="panel panel-default">
-		  
-	<div class="panel-body">
-          
-            <span><i class="fa fa-list-ol"></i> <?php echo ($sys_heading); ?></span>
-            <div class="btn-group pull-right">
-              <span class="label label-danger blink" id="os_warning" style="font-size:1em;display:none;padding:6px 10px; "> 请操作 <i class="fa fa-hand-o-right"></i></span>
-              <button type="button" data-toggle="dropdown" id="os_button"> <i class="fa fa-chevron-down"></i> 操作 </button>
-              <ul class="dropdown-menu slidedown" id="os_button_list">
-              <?php if(ACTION_NAME == 'index'): if($os_lock["edit"] == '1'): ?><li> <a href="<?php echo U('add');?>" title="<?php echo L('ALT_BUTTON_ADD_RECORD');?>"> <i class="fa fa-plus-circle"></i> 新增 </a> </li>
-                <?php else: ?>
-                <li class="line-th"> <a href="javascript:;" title="<?php echo L('ALT_BUTTON_ADD_RECORD');?>"> <i class="fa fa-plus-circle"></i> 新增 </a> </li><?php endif; ?>              
-                <li class="divider"></li>
-              	<?php if($os_lock["cache"] == '1'): ?><li> <a href="<?php echo U('index?clearcache=1');?>" title="<?php echo L('ALT_BUTTON_REFRESH');?>"> <i class="fa fa-refresh"></i> 刷新 </a> </li>
-                <?php else: ?>
-                <li> <a href="<?php echo U('index');?>" title="<?php echo L('ALT_BUTTON_REFRESH');?>"> <i class="fa fa-refresh"></i> 刷新 </a> </li><?php endif; ?>  
-                <li class="divider"></li>
-              	<?php if($os_lock["sort"] == '1'): ?><li> <a href="<?php echo U('sort');?>" title="<?php echo L('ALT_BUTTON_SORT_RECORD');?>"> <i class="fa fa-sort-numeric-asc"></i> 排序 </a> </li>
-                <?php else: ?>
-                <li class="line-th"> <a href="javascript:;" title="<?php echo L('ALT_BUTTON_SORT_RECORD');?>"> <i class="fa fa-sort-numeric-asc"></i> 排序 </a> </li><?php endif; ?>                
-                <li class="divider"></li>
-                <?php if($os_lock["delete"] == '1'): ?><li> <a href="javascript:;" op="opDeleteCheckbox" title="<?php echo L('ALT_BUTTON_DELETE_RECORD');?>"> <i class="fa fa-times-circle"></i> 删除 </a> </li>
-                <?php else: ?>
-                <li class="line-th"> <a href="javascript:;" title="<?php echo L('ALT_BUTTON_DELETE_RECORD');?>"> <i class="fa fa-plus-circle"></i> 删除 </a> </li><?php endif; ?>  
-                <?php if($os_lock["visible"] == '1'): ?><li> <a href="javascript:;" op="opVisibleCheckbox" state=1 title="<?php echo L('ALT_BUTTON_VISIBLE_YES');?>"> <i class="fa fa-check-square"></i> 审核通过 </a> </li>
-                <li> <a href="javascript:;" op="opVisibleCheckbox" state=0 title="<?php echo L('ALT_BUTTON_VISIBLE_NO');?>"> <i class="fa fa-minus-square"></i> 审核否决 </a> </li>
-                <?php else: ?>
-   				<li class="line-th"> <a href="javascript:;" title="<?php echo L('ALT_BUTTON_VISIBLE_YES');?>"> <i class="fa fa-check-square"></i> 审核通过 </a> </li>
-                <li class="line-th"> <a href="javascript:;" title="<?php echo L('ALT_BUTTON_VISIBLE_NO');?>"> <i class="fa fa-minus-square"></i> 审核否决 </a> </li><?php endif; ?>                 
-                <li class="divider"></li>
-                <li> <a href="javascript:;" title="每页10条" op="pagesize" val="10"> <i class="fa fa-repeat"></i> 每页10条 </a> </li>
-   				<li> <a href="javascript:;" title="每页20条" op="pagesize" val="20"> <i class="fa fa-repeat"></i> 每页20条 </a> </li>
-   				<li> <a href="javascript:;" title="每页30条" op="pagesize" val="30"> <i class="fa fa-repeat"></i> 每页30条 </a> </li>
-              <?php elseif(ACTION_NAME == 'add'): ?>
-                <li> <a href="javascript:;" title="<?php echo L('ALT_BUTTON_SAVE_RECORD');?>" id="aFormSubmit"> <i class="fa fa-floppy-o"></i> 保存数据 </a> </li>
-                <li class="divider"></li>
-                <li> <a href="<?php echo U('index');?>" title="返回列表"> <i class="fa fa-list"></i> 返回列表 </a> </li>
-                <li class="divider"></li>
-                <li> <a href="" title="刷新本页"> <i class="fa fa-refresh"></i> 刷新本页 </a> </li>
-              <?php elseif(ACTION_NAME == 'edit'): ?>
-                <li> <a href="javascript:;" title="<?php echo L('ALT_BUTTON_SAVE_RECORD');?>" id="aFormSubmit"> <i class="fa fa-floppy-o"></i> 保存数据 </a> </li>
-                <li class="divider"></li>
-                <li> <a href="<?php echo U('index');?>" title="返回列表"> <i class="fa fa-list"></i> 返回列表 </a> </li>
-                <li class="divider"></li>
-                <li> <a href="" title="刷新本页"> <i class="fa fa-refresh"></i> 刷新本页 </a> </li>
-                <li class="divider"></li>
-                <?php echo ($data_up_down_page); ?>
-              <?php elseif(ACTION_NAME == 'sort'): ?>
-                <li> <a href="" title="刷新本页"> <i class="fa fa-refresh"></i> 刷新本页 </a> </li>
-                <li class="divider"></li>
-                <li> <a href="<?php echo U('index');?>" title="返回列表"> <i class="fa fa-list"></i> 返回列表 </a> </li>
-              <?php elseif(ACTION_NAME == 'config'): ?>
-                <li> <a href="javascript:;" title="<?php echo L('ALT_BUTTON_SAVE_RECORD');?>" id="aFormSubmit"> <i class="fa fa-floppy-o"></i> 保存数据 </a> </li>
-                <li class="divider"></li>
-                <li> <a href="" title="刷新本页"> <i class="fa fa-refresh"></i> 刷新本页 </a> </li>
-                <li class="divider"></li>
-                <li> <a href="<?php echo U('add');?>" title="新增数据项"> <i class="fa fa-plus-circle"></i> 新增数据项 </a> </li>
-                <li class="divider"></li>
-                <li> <a href="<?php echo U('index');?>" title="数据列表"> <i class="fa fa-list"></i> 数据列表 </a> </li>
-              <?php else: ?>
-                <li> <a href="" title="刷新本页"> <i class="fa fa-refresh"></i> 刷新本页 </a> </li><?php endif; ?> 
-              </ul>
+        <div class="col-sm-6 common-search-btn"><a class="btn btn-primary" href="" title="刷新本页"> <i
+                class="fa fa-refresh"></i> 刷新本页 </a></div>
+        <div class="col-sm-6" style="float:right;text-align:right;padding:0;margin:0px;"><?php echo ($sys_current); ?></div>
+    </div>
+
+    <form id="LQForm" class="form-horizontal" method="post" action="">
+        <div class="clearfix welcome-container">
+            <div class="panel panel-info">
+                <div class="panel-heading">短信发送器</div>
+                <div class="panel-body">
+
+                    <div class="form-group">
+                        <label class="col-xs-12 col-sm-4 col-md-3 col-lg-2 control-label">活动名称</label>
+
+                        <div class="col-sm-8 col-xs-12">
+                            <input type="text" name="activity" id="activity" class="form-control" value="" required  controlTitle="请输入活动名称" placeholder="请输入活动名称"/>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-xs-12 col-sm-4 col-md-3 col-lg-2 control-label">客户手机</label>
+
+                        <div class="col-sm-8 col-xs-12">
+                            <input type="text" name="phone" id="phone" class="form-control" value="" required dataType="mobile"  controlTitle="请输入客户手机" placeholder="请输入客户手机"/>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-xs-12 col-sm-4 col-md-3 col-lg-2 control-label">优惠金额</label>
+
+                        <div class="col-sm-8 col-xs-12">
+                            <input type="text" name="money" id="money" class="form-control" value="" required controlTitle="请输入优惠金额" placeholder="请输入优惠金额"/>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-xs-12 col-sm-4 col-md-3 col-lg-2 control-label">有效期</label>
+
+                        <div class="col-sm-8 col-xs-12">
+                            <div class="input-group input-append date"><input type="text" class="form-control"
+                                                                              placeholder="请输入有效期" controlTitle="请输入有效期" id="validity"
+                                                                              name="validity" value=""
+                                                                              required="required" controltitle="有效期">
+                            </div>
+
+                        </div>
+                    </div>
+                    <script type="text/javascript">
+                        require(["datetimepicker"], function () {
+                            var zd_send_time_option = {
+                                lang: "zh",
+                                step: 5,
+                                timepicker: true,
+                                closeOnDateSelect: true,
+                                format: "Y-m-d"
+                            };
+                            $("#validity").datetimepicker(zd_send_time_option);
+                        });
+                    </script>
+                    <div class="form-group">
+                        <label class="col-xs-12 col-sm-4 col-md-3 col-lg-2 control-label">优惠码</label>
+
+                        <div class="col-sm-8 col-xs-12">
+                            <input type="text" name="coupon" id="coupon" class="form-control" value="<?php echo rand(10000,60000); ?>" required controlTitle="请输入优惠码" placeholder="请输入优惠码"/>
+                        </div>
+                        <div class="pull-right col-xs-12 col-sm-2 col-md-2 col-lg-2">
+                            <button class="btn btn-default" id="aFormSubmit"><i class="fa fa-file-excel-o"></i> 发送
+                            </button>
+                        </div>
+                    </div>
+                </div>
             </div>
 
-	</div>
-          
-            <?php echo ($LQFdata); ?>
-          
+
         </div>
-      </div>
-    </div>
-  </div>
-  
+    </form>
+
 </div>
+<script type="text/javascript" src="/Public/Static/js/lib/admin.validator.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        //公共表单提交
+        $("#LQFormSubmit,#aFormSubmit").click(function () {
+            var loForm = document.getElementById("LQForm");
+            if (adminValidator(loForm)) {
+                util.commonAjaxSubmit();
+            }
+            return false;
+        });
+    });
+</script>
 
 
 
@@ -247,7 +242,7 @@ $(document).ready(function(){
 var top_nav_id=util.cookie.get('top_nav_id');
 var left_nav_id=util.cookie.get('left_nav_id');
 if(top_nav_id) util.menuDisplay(top_nav_id,left_nav_id);
-<?php if(ACTION_NAME=='index') { echo "$('#list-tbody tr:odd').addClass('tr_odd');//单双行样式\n"; echo "$('.opStatus').click(function(){util.visible($(this),'/sys-index.php/ApiDocument/opVisible');});//快捷启用禁用操作\n"; echo "$('.opDelete').click(function(){util.delete($(this),'/sys-index.php/ApiDocument/opDelete');});//单记录删除操作\n"; echo "$('tbody>tr>td[op]').dblclick(function(){util.ajaxEdit($(this),'/sys-index.php/ApiDocument');});//单项编辑\n"; echo "$('tbody>tr>td>a[op]').click(function(){util.ajaxPropertyA($(this),'/sys-index.php/ApiDocument');});//单项属性切换\n"; } ?>	
+<?php if(ACTION_NAME=='index') { echo "$('#list-tbody tr:odd').addClass('tr_odd');//单双行样式\n"; echo "$('.opStatus').click(function(){util.visible($(this),'/sys-index.php/Sms/opVisible');});//快捷启用禁用操作\n"; echo "$('.opDelete').click(function(){util.delete($(this),'/sys-index.php/Sms/opDelete');});//单记录删除操作\n"; echo "$('tbody>tr>td[op]').dblclick(function(){util.ajaxEdit($(this),'/sys-index.php/Sms');});//单项编辑\n"; echo "$('tbody>tr>td>a[op]').click(function(){util.ajaxPropertyA($(this),'/sys-index.php/Sms');});//单项属性切换\n"; } ?>	
 	//ajax点击响应href
 	$(".getUrl").click(function(){util.getUrl($(this).attr("lqHref"));});
 	//顶部菜单展示
@@ -278,16 +273,3 @@ if(top_nav_id) util.menuDisplay(top_nav_id,left_nav_id);
 </script>
 </body>
 </html>
-<script type="text/javascript" src="/Public/Static/js/lib/admin.validator.js"></script>
-<script type="text/javascript">
-require(['layer'], function(){layer.photos({photos: '#LQForm',anim: 1});});	
-function wordCount(obj){var chars=obj.value;$("#word_count_"+obj.id).html("输入了"+chars.length+"个字");} 
-$(document).ready(function(){
-     //公共表单提交
-	 $("#LQFormSubmit,#aFormSubmit").click(function(){
-		var loForm=document.getElementById("LQForm");
-		if(adminValidator(loForm)){util.commonAjaxSubmit();}
-		return false;
-	 });
-});
-</script>

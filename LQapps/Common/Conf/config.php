@@ -180,7 +180,7 @@ $config_array = array(
         'app_key' => '1102180111115080#wanjiba20180111',//YOUR_CLIENT_ID
         'client_id' => 'YXA67SUSgPa2Eee11IfjLONLgw',//YOUR_CLIENT_ID
         'client_secret' => 'YXA6ilr_F1lo8HvYaKD5I0Thxl9Wdms',//YOUR_CLIENT_SECRET
-        'url' => "https://a1.easemob.com/1193161215115877/kefuchannelapp32922",
+        'url' => "https://a1.easemob.com/1102180111115080/wanjiba20180111",
         'token_path' => STATIC_TEMP . "token",
     ),
 
