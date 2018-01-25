@@ -21,7 +21,7 @@ defined('in_lqweb') or exit('Access Invalid!');
 
 class RoomJoinController extends PublicController
 {
-    protected $room ,$roomJoin;
+    protected $room ,$roomJoin ,$gameSchedule;
     /** 初始化*/
     public function __construct()
     {
@@ -29,6 +29,7 @@ class RoomJoinController extends PublicController
         parent::__construct();
         $this->roomJoin = D('RoomJoin');
         $this->room = D('Room');
+        $this->gameSchedule = D('GameSchedule');
         //免死金牌
         $action_no_login_array = array('get-openid', 'wx-return-openid', 'login', 'wx-login', 'openid-login');
         if (in_array(ACTION_NAME, $action_no_login_array)) {
@@ -56,6 +57,11 @@ class RoomJoinController extends PublicController
             $toArray[] = $val['zn_member_id'];
             $total +=$val['zn_points'];
         }
+        if($type==1){
+            $this->model_member->addMemberLog('points_add', $this->login_member_info);//插入会员日志
+        }else{
+            $this->model_member->addMemberLog('points_dec', $this->login_member_info);//插入会员日志
+        }
         $notiftData = array('type'=>5,'msg'=>'房主修改分数',"total"=>$total);
         $this->socket->setUser($toArray)->setContent($notiftData)->push();
         $this->ajaxReturn($redata);
@@ -77,6 +83,7 @@ class RoomJoinController extends PublicController
         }
         $notiftData = array('msg'=>'退出房间','total'=>$total,'type'=>6);
         $this->socket->setUser($toArray)->setContent($notiftData)->push();
+        $this->model_member->addMemberLog('kick_member', $this->login_member_info);//插入会员日志
         return $this->ajaxReturn(array('msg'=>'退出成功','status'=>1));
 
     }
@@ -136,6 +143,10 @@ class RoomJoinController extends PublicController
         $id = I('post.id');
         $roomid = I('post.roomid');
         $flag = $this->roomJoin->chargePoints($id,$roomid,$score);
+        $status = $this->gameSchedule->getVal($roomid,'zn_status');
+        if($status ==3){
+            return $this->ajaxReturn(array('msg'=>"压分失败，系统已停止下注",'status'=>0));
+        }
         if(intval($flag)){
             $joinPerAll = $this->notift->apiGetNumPer($roomid); //获取要通知的人
             $toArray = array();//通知人数
@@ -160,6 +171,8 @@ class RoomJoinController extends PublicController
         }
         $notiftData = array('msg'=>'房主发布了一条公告','type'=>10,'nickname'=>$this->login_member_info,'content'=>$content);
         $this->socket->setUser($toArray)->setContent($notiftData)->push();
+        $this->model_member->addMemberLog('send_notice', $this->login_member_info);//插入会员日志
         return $this->ajaxReturn(array('msg'=>"发布成功",'status'=>1));
     }
+
 }

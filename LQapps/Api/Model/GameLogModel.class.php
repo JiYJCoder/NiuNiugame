@@ -11,6 +11,8 @@ class GameLogModel extends PublicModel {
         array('zn_number','require','缺少必要参数5！'), //局数
         array('zn_points_give','require','缺少必要参数7！'), //抽水分数
         array('zn_points_left','require','缺少必要参数8！'), //结余
+        array('zc_result','require','缺少必要参数9！'), //压牌结果
+        array('zn_few','require','缺少必要参数10！'), //第几副牌
     );
     protected $_auto = array (
         array('zn_cdate','time',1,'function'), // 对create_time字段在更新的时候写入当前时间戳
@@ -23,6 +25,7 @@ class GameLogModel extends PublicModel {
     public function getData($roomid,$id='',$number=''){
         $where = array();
         $where['zn_room_id'] = $roomid;
+        $where['zn_visible'] =1;
         //查询个人
         if($id){
             $where['zn_member_id'] =$id;
@@ -56,7 +59,11 @@ class GameLogModel extends PublicModel {
         $flag =$this->add($data);
         return $flag;
     }
-
+    //设置
+    public function setAll($roomid,$sql,$val){
+        $where['zn_room_id'] = $roomid;
+        $this->where($where)->setField($sql,$val);
+    }
 }
 
 ?>

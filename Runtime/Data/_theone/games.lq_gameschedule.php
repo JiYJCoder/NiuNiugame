@@ -1,0 +1,2 @@
+<?php
+ die();a:7:{i:0;s:2:"id";i:1;s:8:"zn_cdate";i:2;s:10:"zn_room_id";i:3;s:9:"zn_status";s:3:"_pk";s:2:"id";s:5:"_type";a:4:{s:2:"id";s:7:"int(11)";s:8:"zn_cdate";s:6:"int(8)";s:10:"zn_room_id";s:6:"int(8)";s:9:"zn_status";s:6:"int(8)";}s:8:"_comment";a:4:{s:2:"id";s:6:"主键";s:8:"zn_cdate";s:26:"记录创建时间|theone|";s:10:"zn_room_id";s:16:"房间id|theone|";s:9:"zn_status";s:20:"游戏状态|theone|";}}

@@ -21,6 +21,7 @@ class RoomModel extends PublicModel {
         array('zn_play_type','require','缺少必要参数10！'), //玩法 1:五副牌 2:七副牌
         array('zn_bet_time','require','缺少必要参数11！'), //下注时间
         array('zc_title','require','缺少必要参数12！'), //房间名
+        array('zn_chatid','require','缺少必要参数13！'), //群聊id
     );
     protected $_auto = array (
         array('zn_cdate','time',1,'function'), // 对create_time字段在更新的时候写入当前时间戳
@@ -28,6 +29,12 @@ class RoomModel extends PublicModel {
     );
     public function __construct() {
         parent::__construct();
+    }
+    //更新信息
+    public function updatedRoom($data){
+        $id = $data['roomid'];
+        unset($data['roomid']);
+        return $flag=$this->where('id='.$id)->save($data);
     }
     //创建房间
     public function createRoom($data)
@@ -118,6 +125,18 @@ class RoomModel extends PublicModel {
     //解散房间
     public function dissolveRoom($roomid){
         return $this->setVal($roomid,'zl_visible',0);
+    }
+
+    //加入过的房间
+    public function joinRoomList($roomidArray){
+
+        $list =array();
+        $where['zl_visible'] =1;
+        foreach ($roomidArray as $key=>$val){
+            $where['id'] = $val['zn_room_id'];
+            $list[]=$this->where($where)->find();
+        }
+        return $list;
     }
 }
 

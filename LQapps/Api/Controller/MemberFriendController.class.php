@@ -39,10 +39,49 @@ class MemberFriendController extends PublicController
     }
    //添加好友
     function addFriend(){
+        $_POST['username'] = $this->login_member_info['zc_nickname'];
+        $friendid['zc_to'] = $_POST['zn_friend_id'];
+        $isFriend=$this->friend->isfrend($friendid,$_POST['zn_mid']);
+        if($isFriend[0]==false){
+            return $this->ajaxReturn(array('msg'=>"添加失败，你们已经是好友了",'status'=>2));
+        }
         $flag= $this->friend->createFrient($_POST);
         if(intval($flag)){
+            $this->model_member->addMemberLog('make_friends', $this->login_member_info);//插入会员日志
             return $this->ajaxReturn(array('msg'=>"添加成功",'status'=>1));
         }
         return $this->ajaxReturn(array('msg'=>"添加失败",'status'=>0));
+    }
+    //删除好友
+    function delFriend(){
+        $id = I('post.id');
+        $friend = I('post.friend');
+        $flag=$this->friend->delFrient($id,$friend);
+        if($flag !==false){
+            $this->model_member->addMemberLog('delete_friends', $this->login_member_info);
+            return $this->ajaxReturn(array('msg'=>"删除成功",'status'=>1));
+        }
+        return $this->ajaxReturn(array('msg'=>"删除失败",'status'=>0));
+    }
+
+    //修改备注
+    function modifyMark(){
+        $id = I('post.id');
+        $friendid = I('post.friendid');
+        $name = I('post.name');
+        $flag=$this->friend->modifyMark($id,$friendid,$name);
+        if($flag!==false){
+            $this->model_member->addMemberLog('modify_friend_name', $this->login_member_info);//插入会员日志
+            return $this->ajaxReturn(array('msg'=>"修改成功",'status'=>1));
+        }
+        return $this->ajaxReturn(array('msg'=>"修改失败",'status'=>0));
+    }
+
+    //获取好友列表
+    function getFrientList(){
+        $id = I('post.id');
+        $pagesize = I('post.pagesize');
+        $list=$this->friend->getFrientList($id,$pagesize);
+        return $this->ajaxReturn(array('msg'=>"请求成功",'status'=>1,'data'=>$list));
     }
 }

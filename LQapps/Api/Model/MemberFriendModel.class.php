@@ -5,7 +5,7 @@ use LQLibs\Util\Page;
 
 class MemberFriendModel extends PublicModel {
     protected $_validate = array(
-        array('zn_way','require','缺少必要参数2！'), //添加方式
+        array('zn_way','require','缺少必要参数2！'), //添加方式1他加我，2我加他
         array('zn_mid','require','缺少必要参数3！'), //用户id
         array('zn_friend_id','require','缺少必要参数4！'), //zn_friend_id申请id
         array('zc_remark','require','缺少必要参数5！'), //备注
@@ -24,10 +24,21 @@ class MemberFriendModel extends PublicModel {
     }
 
     public function createFrient($data){
+        if($data['zn_way']==1){
+            $data1['zn_way'] =2;
+        }else{
+            $data1['zn_way']=1;
+        }
+        $data1['zn_mid'] = $data['zn_friend_id'];
+        $data1['zn_friend_id'] = $data['zn_mid'];
+        $data1['zc_remark'] = $data['username'];
+        unset($data['username']);
         $data=$this->create($data);
+        $data1=$this->create($data1);
         if(!$data){
           return   $this->getError();
         }
+        $this->add($data1);
         $id=$this->add($data);
         return $id?$id:0;
     }
@@ -36,7 +47,7 @@ class MemberFriendModel extends PublicModel {
         return $this->setVal($id,$friendid,'zl_visible',0);
     }
     //好友列表
-    public function getFrientList($id,$pagesize){
+    public function getFrientList($id,$pagesize=15){
         $where['zl_visible'] = 1;
         $where['zn_mid'] = $id;
         $count =$this->where($where)->count();
@@ -49,7 +60,6 @@ class MemberFriendModel extends PublicModel {
     public function modifyMark($id,$friendid,$val){
         return $this->setVal($id,$friendid,'zc_remark',$val);
     }
-
     //判断是否好友
     public function isfrend($toid,$id){
         $flagArray = array();

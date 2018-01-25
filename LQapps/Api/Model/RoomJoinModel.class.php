@@ -45,6 +45,13 @@ class RoomJoinModel extends PublicModel {
         return $this->where($where)->find();
     }
 
+    //设置所有
+    public function setAll($roomid,$sql,$val){
+        $where = array();
+        $where['zn_room_id'] = $roomid;
+        $data= $this->where($where)->setField($sql,$val);
+        return $data;
+    }
     //设置值
     public function setVal($id,$roomid,$sql,$val){
         $where = array();
@@ -54,7 +61,13 @@ class RoomJoinModel extends PublicModel {
          $data= $this->where($where)->setField($sql,$val);
          return $data;
     }
-
+    public function setValN($id,$roomid,$sql,$val){
+        $where = array();
+        $where['zn_member_id'] = $id;
+        $where['zn_room_id'] = $roomid;
+        $data= $this->where($where)->setField($sql,$val);
+        return $data;
+    }
     //加入房间
     public function addRoom($data){
         $memberid = $data['zn_member_id'];
@@ -152,7 +165,10 @@ class RoomJoinModel extends PublicModel {
         }
         return '上分失败，请联系管理员';
     }
-
+    //加入的房间
+    public function getRoomArray($id){
+        return $this->field('zn_room_id')->where('zn_member_id='.$id)->select();
+    }
 
 }
 
