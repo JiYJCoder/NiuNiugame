@@ -42,6 +42,7 @@ class RoomController extends PublicController
         //列表表单初始化****start
         $page_parameter["s"] = $this->getSafeData('s');
         $this->reSearchPara($page_parameter["s"]);//反回搜索数
+
         $search_content_array = array(
             'pagesize' => urldecode(I('get.pagesize', '0', 'int')),
             'fkeyword' => trim(urldecode(I('get.fkeyword', $this->keywordDefault))),
@@ -50,20 +51,22 @@ class RoomController extends PublicController
             'time_start' => I('get.time_start', lq_cdate(0, 0, (-2592000))),
             'time_end' => I('get.time_end', lq_cdate(0, 0)),
             'cat_id' => I('get.cat_id', '', 'int'),
+            'mid' => I('get.mid', '', 'int'),
             'recommend' => I('get.recommend', '', 'int'),
         );
         $this->assign("search_content", $search_content_array);//搜索表单赋值
-        $catList = F('article_cat', '', COMMON_ARRAY);
-        foreach ($catList as $k => $v) {
-            if ($v["zl_visible"] == 0) unset($catList[$k]);
-        }
-        $this->assign("zn_cat_id_str", lqCreatOption(lq_return_array_one($catList, 'id', 'fullname'), $search_content_array["cat_id"], "选择分类"));//文件类型
 
         $recommend_array = array(
-            1 => '推荐首页',
-            2 => '推荐精品',
+            1 => '钟点房',
+            2 => '日费房',
         );
         $this->assign("recommend_str", lqCreatOption($recommend_array, $search_content_array["recommend"], "请选择"));
+
+        $roomtype_array = array(
+            1 => '公开',
+            2 => '不公开',
+        );
+        $this->assign("roomtype_array", lqCreatOption($roomtype_array, $search_content_array["cat_id"], "请选择"));
 
         //sql合并
         $sqlwhere_parameter = " 1 ";//sql条件
@@ -71,17 +74,22 @@ class RoomController extends PublicController
             if ($search_content_array["keymode"] == 1) {
                 $sqlwhere_parameter .= " and zc_title ='" . $search_content_array["fkeyword"] . "' ";
             } else {
-                $sqlwhere_parameter .= " and (zc_title like'" . $search_content_array["fkeyword"] . "%') ";
+                $sqlwhere_parameter .= " and ((zc_title like'" . $search_content_array["fkeyword"] . "%') or (zc_number like'" . $search_content_array["fkeyword"] . "%')) ";
             }
         }
 
-        if ($search_content_array["recommend"]) {
-            if ($search_content_array["recommend"] == 1) {
-                $sqlwhere_parameter .= " and zl_is_index =1 ";
-            } else {
-                $sqlwhere_parameter .= "";
-            }
+        if ($search_content_array["mid"]) {
+                $sqlwhere_parameter .= " and zn_member_id = ".$search_content_array["mid"];
         }
+
+        if ($search_content_array["recommend"]) {
+            $sqlwhere_parameter .= " and zn_pay_type = ".$search_content_array["recommend"];
+        }
+
+        if ($search_content_array["cat_id"]) {
+            $sqlwhere_parameter .= " and zn_room_type = ".$search_content_array["cat_id"];
+        }
+
         if ($search_content_array["open_time"] == 1 && $search_content_array["time_start"] && $search_content_array["time_end"]) {
             $ts = strtotime($search_content_array["time_start"] . " 00:00:00");
             $te = strtotime($search_content_array["time_end"] . " 23:59:59");
@@ -196,9 +204,12 @@ class RoomController extends PublicController
             foreach ($data as $lnKey => $laValue) {
                 $form_array[$lnKey] = $laValue;
             }
-            $form_array["zn_cat_id_label"] = lq_return_array_one(F('article_cat', '', COMMON_ARRAY), 'id', 'zc_caption')[$data["zn_cat_id"]];
-            $form_array["zl_is_index_data"] = C('YESNO_STATUS');
-            $form_array["zl_is_good_data"] = C('YESNO_STATUS');
+            $form_array["zn_room_type_data"] = C('ROOM_SET')['room_type'];
+            $form_array["zn_confirm_data"] = C('ROOM_SET')['confirm'];
+            $form_array["zn_play_type_data"] = C('ROOM_SET')['play_type'];
+            $form_array["zn_pay_type_data"] = C('ROOM_SET')['pay_type'];
+            $form_array["zn_bet_time_data"] = C('ROOM_SET')['bet_time'];
+            $form_array["zn_sort"] = C("COM_SORT_NUM");
             $Form = new Form($this->myForm, $form_array, $this->myTable->getCacheComment());
             $this->assign("LQFdata", $Form->createHtml());//表单数据
             //表单数据初始化s

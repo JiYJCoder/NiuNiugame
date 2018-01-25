@@ -603,7 +603,8 @@ class MemberModel extends Model{
 		}else{
 			unset($data["__hash__"]);
 			$data["zc_salt"]=SALT;
-			$data["zc_password"]=lq_ucenter_md5($data["zc_password"],SALT);
+			//$data["zc_password"]=lq_ucenter_md5($data["zc_password"],SALT);
+			$data["zc_password"]=md5($data["zc_password"]);
 			$this->save($data);
 			$this->lqCacheInfo($data["id"]);
 			return $data["id"];

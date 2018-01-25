@@ -96,7 +96,7 @@
 						var role=$("#role").val();
 						var bind=$("#bind").val();
 						var use=$("#use").val();
-						if(fkeyword!='{$keywordDefault}'||role||bind||city||use||open_time==1){
+						if(fkeyword!='{$keywordDefault}'||role||bind||use||open_time==1){
 							var searchurl=$("#thinkphpurl").val()+'index/s/';
 							var urlpara="fkeyword/"+encodeURIComponent(fkeyword)+"/";
 							urlpara+="keymode/"+encodeURIComponent($("#keymode").val())+"/";
@@ -244,8 +244,8 @@
                       </td>
                       <td>{$data.visible_label}</td>
                       <td class="manage-menu list-os-a">
-                      <a href="javascript:;" title="查看会员帐单明细"><i class="fa fa-list-alt"></i></a>
-                      <a href="__APP__/Room/index/tnid/{$data.id}" title="查看房间列表"><i class="fa fa-desktop"></i></a>
+                      <a href="javascript:myConsume({$data.id})" title="查看消费明细"><i class="fa fa-list-alt"></i></a>
+                      <a href="javascript:myRoom({$data.id})" title="查看房间列表"><i class="fa fa-desktop"></i></a>
                       <a href="__CONTROLLER__/edit/tnid/{$data.id}" title="{:L("LABEL_OS_EDITID")}[{$data.id}]"><i class="fa fa-edit"></i></a>
 					  <a href="__CONTROLLER__/editPass/tnid/{$data.id}" title="{:L("LABEL_OS_MODPASS")}[{$data.zc_account}]"><i class="fa fa-lock"></i></a>
                       <a href="javascript:void(0);" class="myopStatus" val="{$data.zl_visible}" title="{:L("LABEL_OS_STATUS")}[{$data.id}]">{$data.visible_button}</a>
@@ -277,6 +277,20 @@ $('tbody>tr>td a[op]').click(function(){util.ajaxPropertyA($(this),'/sys-index.p
 		});		
 	});
 });
+
+function myConsume(mid)
+{
+    var urlpara;
+    urlpara ="mid/"+mid+"/";
+    location.href="/sys-index.php/Consume/index/s/"+base64encode(urlpara);
+}
+
+function myRoom(mid)
+{
+    var urlpara;
+    urlpara ="mid/"+mid+"/";
+    location.href="/sys-index.php/Room/index/s/"+base64encode(urlpara);
+}
 </script>
 
 <include file="Public:footer" />

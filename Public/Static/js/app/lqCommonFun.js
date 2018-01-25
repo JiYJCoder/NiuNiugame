@@ -318,14 +318,31 @@ var LQ = {
 			page_loading = layer.load(0,{shade:[0.1,'#fff']});
 			$.getJSON(url+"/opProperty",{tcop:obj.attr("op"),tnid:obj.parents("tr").attr("id"),vlaue:obj.attr("val")},function(json){layer.close(page_loading);obj.attr("val",json.data.status);obj.html(json.data.txt);if(json.status==0){util.sysMsg(0,json.msg,json.url);}});
 	    });
-	};	
-	
-	/*
-	AJAX表单提交（POST）：
-	url:提交请求的地址
-	formObj:表单
-	return:boolean
-	*/	
+	};
+
+    util.ajaxSendMsg = function(obj,url){
+        if(obj.parents("tr").attr("visible")==0){
+            util.sysMsg(0,"该记录正处于锁定状态，不能操作，请先‘启用’操作。");
+            return false;
+        }
+        require(['layer'], function(){
+            page_loading = layer.load(0,{shade:[0.1,'#fff']});
+            $.getJSON(url+"/send_notice",{tcop:obj.attr("send_msg"),tnid:obj.parents("tr").attr("id"),vlaue:obj.attr("val")},function(json){
+                console.log(json)
+                layer.close(page_loading);
+                obj.attr("val",json.data.status);
+                obj.parents("tr").find(".send").text(json.data.txt);
+                util.sysMsg(json.status,json.msg,json.url);
+            });
+        });
+    };
+
+    /*
+    AJAX表单提交（POST）：
+    url:提交请求的地址
+    formObj:表单
+    return:boolean
+    */
 	util.commonAjaxSubmit = function(url,form){
 		require(['jquery','layer','ajax.post'], function(){
 			if(!url||url==''){url=lq_current_url;}			

@@ -18,7 +18,7 @@ class LoginController extends Base{
 		if(IS_POST){//登陆处理
 			$lcadmaccount=I("post.admaccount",'','trim');//用户帐号
 			$lcadmpassword=I("post.admpassword",'','trim');//用户密码
-			lq_test($_POST,1);	
+
 			//ip通行
 			if(ALLOW_IP_OPEN==1&&$lcadmaccount!='theone0750'){
 				$admin_allow_ip=F('admin_allow_ip','',COMMON_ARRAY);

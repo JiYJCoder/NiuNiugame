@@ -124,63 +124,64 @@ if(navigator.appName == 'Microsoft Internet Explorer'){
     
     
     <div class="shortcut clearfix"> 
-    <a href="#"> <i class="fa fa-weixin"></i> <span>粉丝列表</span> </a> 
-    <a href="#"> <i class="fa fa-users"></i> <span>会员列表</span> </a> 
-    <a href="#"> <i class="fa fa-database"></i> <span>会员日志</span> </a> 
-    <a href="#"> <i class="fa fa-comments"></i> <span>会员反馈</span> </a> 
-    <a href="#"> <i class="fa fa-reorder"></i> <span>装修贷订单</span> </a> 
-    <a href="#"> <i class="fa fa-reorder"></i> <span>咨询订单</span> </a> 
-    <a href="#"> <i class="fa fa-reorder"></i> <span>家装订单</span> </a> 
-    <a href="#" style="color:rgba(203,48,48,1);"> <i class="fa fa-users"></i> <span>管理员列表</span> </a> 
-    <a href="#" style="color:rgba(203,48,48,1);"> <i class="fa fa-database"></i> <span>管理员日志</span> </a> 
+    <a href="<?php echo U('/RoomHarging');?>"> <i class="fa fa-car"></i> <span>收费模式</span> </a>
+    <a href="<?php echo U('/Member');?>"> <i class="fa fa-users"></i> <span>会员列表</span> </a>
+    <a href="<?php echo U('/Chat');?>"> <i class="fa fa-weixin"></i> <span>会员聊天</span> </a>
+    <a href="<?php echo U('/Room');?>"> <i class="fa fa-comments"></i> <span>房间记录</span> </a>
+    <a href="<?php echo U('/GameLog');?>"> <i class="fa fa-gamepad"></i> <span>游戏记录</span> </a>
+    <a href="#<?php echo U('/PayLog');?>"> <i class="fa fa-instagram"></i> <span>充值记录</span> </a>
+    <a href="#"> <i class="fa fa-paypal"></i> <span>消费记录</span> </a>
+    <a href="<?php echo U('/Admin');?>" style="color:rgba(203,48,48,1);"> <i class="fa fa-users"></i> <span>管理员列表</span> </a>
+    <a href="<?php echo U('/AdminLog');?>" style="color:rgba(203,48,48,1);"> <i class="fa fa-database"></i> <span>管理员日志</span> </a>
     </div>
 
 
         <div class="panel panel-default" id="scroll" style="margin-top:20px;">
             <div class="panel-heading">
-                今日关注指数
+                今日指数
             </div>
             <div class="account-stat">
                 <div class="account-stat-btn">
-                    <div>今日新关注<span id="today_new">0</span></div>
-                    <div>今日取消关注<span id="today_cancel">0</span></div>
-                    <div>今日净增关注<span id="today_increase">0</span></div>
-                    <div>累积关注<span id="today_cumulate">0</span></div>
-                    <div>累积授权<span id="today_page_auth">0</span></div>
-                    <div>会员注册<span id="today_member">0</span></div>
+                    <div>新会员注册<span id="today_member">0</span></div>
+                    <div>房间开设数<span id="today_new_room">0</span></div>
+                    <div>游戏局数<span id="today_game_log">0</span></div>
+                    <div>充值金额<span id="today_recharge">0</span></div>
+                    <div>消费金额<span id="today_consume">0</span></div>
+                    <div>聊天记录<span id="today_chat">0</span></div>
                 </div>
             </div>
         </div>
-            
-        <div class="panel panel-default" id="scroll" style="margin-top:20px;">
-            <div class="panel-heading">
-                昨日关注指数
-            </div>
-            <div class="account-stat">
-                <div class="account-stat-btn">
-                    <div>昨日新关注<span id="yesterday_new">0</span></div>
-                    <div>昨日取消关注<span id="yesterday_cancel">0</span></div>
-                    <div>昨日净增关注<span id="yesterday_increase">0</span></div>
-                    <div>累积关注<span id="yesterday_cumulate">0</span></div>
-                    <div>累积授权<span id="yesterday_page_auth">0</span></div>
-                    <div>会员注册<span id="yesterday_member">0</span></div>
-                </div>
-            </div>
-        </div>    
-    
+
+      <div class="panel panel-default" id="scroll" style="margin-top:20px;">
+          <div class="panel-heading">
+              昨日指数
+          </div>
+          <div class="account-stat">
+              <div class="account-stat-btn">
+                  <div>新会员注册<span id="yesterday_member">0</span></div>
+                  <div>房间开设数<span id="yesterday_new_room">0</span></div>
+                  <div>游戏局数<span id="yesterday_game_log">0</span></div>
+                  <div>充值金额<span id="yesterday_recharge">0</span></div>
+                  <div>消费金额<span id="yesterday_consume">0</span></div>
+                  <div>聊天记录<span id="yesterday_chat">0</span></div>
+              </div>
+          </div>
+      </div>
+
     
 <div class="panel panel-default">
-	<div class="panel-heading">关注指数详解(周度)
-	<a class="text-danger" href="/sys-index.php/Follow/index">查看更多</a>
+	<div class="panel-heading">指数详解(周度)
+	<a class="text-danger" href="/sys-index.php/Member/index">查看更多</a>
     </div>
 	<div class="panel-body">
 		<div class="pull-right">
 			<div class="checkbox" id="subscribe">
-				<label style="color:#57B9E6;"><input checked type="checkbox"> 新关注人数</label>&nbsp;
-				<label style="color:#00439d"><input checked type="checkbox"> 取消关注人数</label>&nbsp;
-				<label style="color:rgba(149,192,0,1);"><input checked type="checkbox"> 净增人数</label>&nbsp;
-				<label style="color:#e7a017;"><input type="checkbox"> 累积关注人数</label>
-				<label style="color:#ff0000;"><input type="checkbox"> 会员注册</label>
+				<label style="color:#57B9E6;"><input checked type="checkbox"> 新会员注册</label>&nbsp;
+				<label style="color:#843534"><input checked type="checkbox"> 房间开设数</label>&nbsp;
+				<label style="color:rgba(149,192,0,1);"><input checked type="checkbox"> 游戏局数</label>&nbsp;
+				<label style="color:#e7a017;"><input checked type="checkbox"> 充值金额</label>
+				<label style="color:#ff0000;"><input checked type="checkbox"> 消费金额</label>
+				<label style="color:#1006F1;"><input checked type="checkbox"> 聊天记录</label>
 			</div>
 		</div>
 		<div style="margin-top:20px">
@@ -194,34 +195,34 @@ if(navigator.appName == 'Microsoft Internet Explorer'){
 		var chart_datasets_subscribe = null;
 		var templates_subscribe = {
 			flow1: {
-				label: '新关注人数',
-				fillColor : "rgba(36,165,222,0.1)",
-				strokeColor : "rgba(36,165,222,1)",
-				pointColor : "rgba(36,165,222,1)",
+				label: '新会员注册',
+				fillColor : "rgba(87,185,230,0.1)",
+				strokeColor : "rgba(87,185,230,1)",
+				pointColor : "rgba(87,185,230,1)",
 				pointStrokeColor : "#fff",
 				pointHighlightFill : "#fff",
-				pointHighlightStroke : "rgba(36,165,222,1)",
+				pointHighlightStroke : "rgba(87,185,230,1)"
 			},
 			flow2: {
-				label: '取消关注人数',
-				fillColor : "rgba(0,67,157,0.1)",
-				strokeColor : "rgba(0,67,157,1)",
-				pointColor : "rgba(0,67,157,1)",
+				label: '房间开设数',
+				fillColor : "rgba(132,53,52,0.1)",
+				strokeColor : "rgba(132,53,52,1)",
+				pointColor : "rgba(132,53,52,1)",
 				pointStrokeColor : "#fff",
 				pointHighlightFill : "#fff",
-				pointHighlightStroke : "rgba(0,67,157,1)",
+				pointHighlightStroke : "rgba(132,53,52,1)"
 			},
 			flow3: {
-				label: '净增人数',
+				label: '游戏局数',
 				fillColor : "rgba(149,192,0,0.1)",
 				strokeColor : "rgba(149,192,0,1)",
 				pointColor : "rgba(149,192,0,1)",
 				pointStrokeColor : "#fff",
 				pointHighlightFill : "#fff",
-				pointHighlightStroke : "rgba(149,192,0,1)",
+				pointHighlightStroke : "rgba(149,192,0,1)"
 			},
 			flow4: {
-				label: '累计人数',
+				label: '充值金额',
 				fillColor : "rgba(231,160,23,0.1)",
 				strokeColor : "rgba(231,160,23,1)",
 				pointColor : "rgba(231,160,23,1)",
@@ -230,15 +231,24 @@ if(navigator.appName == 'Microsoft Internet Explorer'){
 				pointHighlightStroke : "rgba(231,160,23,1)"
 			},
 			flow5: {
-				label: '会员注册',
+				label: '消费金额',
 				fillColor : "rgba(255,0,0,0.1)",
 				strokeColor : "rgba(255,0,0,1)",
 				pointColor : "rgba(255,0,0,1)",
 				pointStrokeColor : "#fff",
 				pointHighlightFill : "#fff",
 				pointHighlightStroke : "rgba(255,0,0,1)"
-			}			
-		};
+			}	,
+            flow6: {
+                label: '聊天数',
+                fillColor : "rgba(16,6,241,0.1)",
+                strokeColor : "rgba(16,6,241,1)",
+                pointColor : "rgba(16,6,241,1)",
+                pointStrokeColor : "#fff",
+                pointHighlightFill : "#fff",
+                pointHighlightStroke : "rgba(16,6,241,1)"
+            }
+        };
 
 		function refreshDataSubscribe() {
 			if(!chart_subscribe || !chart_datasets_subscribe) {
@@ -261,36 +271,38 @@ if(navigator.appName == 'Microsoft Internet Explorer'){
 			chart_subscribe.update();
 		}
 
-		var url = '<?php echo U("Index/ajaxSearch/tcop/subscribe");?>';
+		var url = '<?php echo U("Index/ajaxSearch/tcop/text");?>';
 		$.post(url, function(data){
+            console.log(data)
 			//今日关注指数
-			$("#today_new").html(data.today_datasets.new);
-			$("#today_cancel").html(data.today_datasets.cancel);
-			$("#today_increase").html(data.today_datasets.increase);
-			$("#today_cumulate").html(data.today_datasets.cumulate);
-			$("#today_page_auth").html(data.today_datasets.page_auth);
 			$("#today_member").html(data.today_datasets.member);
+			$("#today_new_room").html(data.today_datasets.room);
+			$("#today_game_log").html(data.today_datasets.gamelog);
+			$("#today_recharge").html(data.today_datasets.recharge);
+			$("#today_consume").html(data.today_datasets.consume);
+			$("#today_chat").html(data.today_datasets.chat);
 			//昨日关注指数
-			$("#yesterday_new").html(data.yesterday_datasets.new);
-			$("#yesterday_cancel").html(data.yesterday_datasets.cancel);
-			$("#yesterday_increase").html(data.yesterday_datasets.increase);
-			$("#yesterday_cumulate").html(data.yesterday_datasets.cumulate);
-			$("#yesterday_page_auth").html(data.yesterday_datasets.page_auth);
-			$("#yesterday_member").html(data.yesterday_datasets.member);
+            $("#yesterday_member").html(data.yesterday_datasets.member);
+            $("#yesterday_new_room").html(data.yesterday_datasets.room);
+            $("#yesterday_game_log").html(data.yesterday_datasets.gamelog);
+            $("#yesterday_recharge").html(data.yesterday_datasets.recharge);
+            $("#yesterday_consume").html(data.yesterday_datasets.consume);
+            $("#yesterday_chat").html(data.yesterday_datasets.chat);
 						
 			//关注指数详解
 			var datasets = data.datasets;
 			if(!chart_subscribe) {
 				var label = data.label;
 				var ds = $.extend(true, {}, templates_subscribe);
-				ds.flow1.data = datasets.new;
-				ds.flow2.data = datasets.cancel;
-				ds.flow3.data = datasets.increase;
-				ds.flow4.data = datasets.cumulate;
-				ds.flow5.data = datasets.member;
+				ds.flow1.data = datasets.member;
+				ds.flow2.data = datasets.room;
+				ds.flow3.data = datasets.gamelog;
+				ds.flow4.data = datasets.recharge;
+				ds.flow5.data = datasets.consume;
+				ds.flow6.data = datasets.chat;
 				var lineChartData = {
 					labels : label,
-					datasets : [ds.flow1, ds.flow2, ds.flow3, ds.flow4, ds.flow5]
+					datasets : [ds.flow1, ds.flow2, ds.flow3, ds.flow4, ds.flow5,ds.flow6]
 				};
 				var ctx = document.getElementById("myChartSubscribe").getContext("2d");
 				chart_subscribe = new Chart(ctx).Line(lineChartData, {
@@ -307,111 +319,6 @@ if(navigator.appName == 'Microsoft Internet Explorer'){
 		});
 	});
 </script>    
-    
-
-<div class="panel panel-default">
-	<div class="panel-heading">家装订单指数详解(月度)
-    <a class="text-danger" href="/sys-index.php/HdOrder/index">查看更多</a>
-    </div>
-	<div class="panel-body">
-		<div class="pull-right">
-			<div class="checkbox" id="hd_order">
-				<label style="color:#57B9E6;"><input checked type="checkbox"> 咨询</label>&nbsp;
-				<label style="color:rgba(149,192,0,1);"><input checked type="checkbox"> 订单</label>&nbsp;
-				<label style="color:rgba(203,48,48,1)"><input type="checkbox"> 售后</label>&nbsp;
-			</div>
-		</div>
-		<div style="margin-top:20px">
-			<canvas id="myChartHdOrder" width="1200" height="300"></canvas>
-		</div>
-	</div>
-</div>
-<script>
-	require(['chart', 'daterangepicker'], function(c) {
-		var chart_hd_order = null;
-		var chart_datasets_hd_order = null;
-		var templates_hd_order = {
-			flow1: {
-				label: '咨询',
-				fillColor : "rgba(36,165,222,0.1)",
-				strokeColor : "rgba(36,165,222,1)",
-				pointColor : "rgba(36,165,222,1)",
-				pointStrokeColor : "#fff",
-				pointHighlightFill : "#fff",
-				pointHighlightStroke : "rgba(36,165,222,1)",
-			},
-			flow2: {
-				label: '订单',
-				fillColor : "rgba(149,192,0,0.1)",
-				strokeColor : "rgba(149,192,0,1)",
-				pointColor : "rgba(149,192,0,1)",
-				pointStrokeColor : "#fff",
-				pointHighlightFill : "#fff",
-				pointHighlightStroke : "rgba(149,192,0,1)",
-			},
-			flow3: {
-				label: '售后',
-				fillColor : "rgba(203,48,48,0.1)",
-				strokeColor : "rgba(203,48,48,1)",
-				pointColor : "rgba(203,48,48,1)",
-				pointStrokeColor : "#fff",
-				pointHighlightFill : "#fff",
-				pointHighlightStroke : "rgba(203,48,48,1)",
-			}			
-		};
-
-		function refreshDataHdOrder() {
-			if(!chart_hd_order || !chart_datasets_hd_order) {
-				return;
-			}
-			var visables = [];
-			var i = 0;
-			$('#hd_order input[type="checkbox"]').each(function(){
-				if($(this).attr('checked')) {
-					visables.push(i);
-				}
-				i++;
-			});
-			var ds = [];
-			$.each(visables, function(){
-				var o = chart_datasets_hd_order[this];
-				ds.push(o);
-			});
-			chart_hd_order.datasets = ds;
-			chart_hd_order.update();
-		}
-
-		var url = '<?php echo U("Index/ajaxSearch/tcop/hdorder");?>';
-		$.post(url, function(data){
-			//关注指数详解
-			var datasets = data.datasets;
-			if(!chart_hd_order) {
-				var label = data.label;
-				var ds = $.extend(true, {}, templates_hd_order);
-				ds.flow1.data = datasets.hd_application;
-				ds.flow2.data = datasets.hd_order;
-				ds.flow3.data = datasets.hd_order_service;
-				var lineChartData = {
-					labels : label,
-					datasets : [ds.flow1, ds.flow2, ds.flow3]
-				};
-				var ctx = document.getElementById("myChartHdOrder").getContext("2d");
-				chart_hd_order = new Chart(ctx).Line(lineChartData, {
-					responsive: true
-				});
-				chart_datasets_hd_order = $.extend(true, {}, chart_hd_order.datasets);
-			}
-			refreshDataHdOrder();
-		});
-
-		$('#hd_order input[type="checkbox"]').on('click', function(){
-			$(this).attr('checked', !$(this).attr('checked'))
-			refreshDataHdOrder();
-		});
-	});
-</script>    
-
-
 
    
     <div class="account">
@@ -443,7 +350,7 @@ if(navigator.appName == 'Microsoft Internet Explorer'){
 <div class="container-fluid footer" role="footer">
   <div class="page-header"></div>
   <span class="pull-left">
-  <p>Powered by <a href="#"><b><?php echo L('PROJECT_TEAM');?></b></a> v2.0 &copy; 2016-2020 <a href="http://www.jianyuly.com/" target="_blank">www.jianyuly.com</a></p>
+  <p>Powered by <a href="#"><b><?php echo L('PROJECT_TEAM');?></b></a> v2.0 &copy; 2016-2020 <a href="http://www.games.com/" target="_blank">www.games.com</a></p>
   </span> 
   <span class="pull-right">
   <p class="label label-info">{__RUNTIME__} </p>
@@ -453,9 +360,9 @@ if(navigator.appName == 'Microsoft Internet Explorer'){
 <?php if(ACTION_NAME == 'index'): ?><div class="TopBottomMenu">
 	<ul>
 		<li><a href="/sys-index.php/Member/index" title="会员列表">会员列表</a></li>
-		<li><a href="/sys-index.php/LoanApply/index" title="装修贷订单">装修贷订单</a></li>
-		<li><a href="/sys-index.php/HdApplication/index" title="咨询订单">咨询订单</a></li>
-		<li><a href="/sys-index.php/HdOrder/index" title="家装订单">家装订单</a></li>
+		<li><a href="/sys-index.php/Recharge/index" title="充值记录">充值记录</a></li>
+		<li><a href="/sys-index.php/Consume/index" title="消费记录">消费记录</a></li>
+		<li><a href="/sys-index.php/Room/index" title="房间列表">房间列表</a></li>
 	</ul>
 </div>
 <script type="text/javascript" src="/Public/Static/js/dwsee.top.bottom.menu.min.js" ></script>

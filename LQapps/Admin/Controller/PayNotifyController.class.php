@@ -36,7 +36,8 @@ class PayNotifyController extends Base
         //使用通用通知接口
         $notify = new \Notify_pub();
         //存储微信的回调
-        $xml = $GLOBALS['HTTP_RAW_POST_DATA'];
+       //$xml = $GLOBALS['HTTP_RAW_POST_DATA'];
+        $xml = file_get_contents('php://input');
 
         $notify->saveData($xml);
         //验证签名，并回应微信。
