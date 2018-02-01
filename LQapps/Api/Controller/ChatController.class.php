@@ -64,7 +64,7 @@ class ChatController extends PublicController
         $list=$this->chat->getChatList($toid,$formid,$pagesize);
         if($list){
             if(!$toid){
-                $isfrend=$this->friend->isfrend($list);
+                $isfrend=$this->friend->isfrend($list,$formid);
                 foreach ($isfrend  as $key=>$val){
                     $list['isfrend']  = $val;
                 }

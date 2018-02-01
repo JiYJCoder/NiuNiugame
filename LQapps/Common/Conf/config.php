@@ -341,7 +341,7 @@ $config_array = array(
 
     ///房间设置选项
     'ROOM_SET' => array(
-        'room_type' => array(1 => '公开', 2 => '隐藏'),
+        'room_type' => array(1 => '公开', 2 => '不公开'),
         'confirm' => array(1 => '需要确认', 2 => '不确认'),
         'play_type' => array(1 => '5副牌', 2 => '7副牌'),
         'pay_type' => array(1 => '钟点房', 2 => '日费房'),

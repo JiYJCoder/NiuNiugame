@@ -40,23 +40,31 @@ class MemberFriendController extends PublicController
    //添加好友
     function addFriend(){
         $_POST['username'] = $this->login_member_info['zc_nickname'];
-        $friendid['zc_to'] = $_POST['zn_friend_id'];
-        $isFriend=$this->friend->isfrend($friendid,$_POST['zn_mid']);
-        if($isFriend[0]==false){
+        $isFriend=$this->friend->isfrendSingle($_POST['zn_friend_id'],$_POST['zn_mid']);
+        if($isFriend['zl_visible']==1){
             return $this->ajaxReturn(array('msg'=>"添加失败，你们已经是好友了",'status'=>2));
-        }
-        $flag= $this->friend->createFrient($_POST);
-        if(intval($flag)){
+        }elseif($isFriend['zl_visible']==="0"){
+            $this->friend->setVal($_POST['zn_mid'],$_POST['zn_friend_id'],'zl_visible',1);
+            $this->friend->setVal($_POST['zn_friend_id'],$_POST['zn_mid'],'zl_visible',1);
             $this->model_member->addMemberLog('make_friends', $this->login_member_info);//插入会员日志
             return $this->ajaxReturn(array('msg'=>"添加成功",'status'=>1));
         }
-        return $this->ajaxReturn(array('msg'=>"添加失败",'status'=>0));
+        if(!$isFriend){
+            $flag= $this->friend->createFrient($_POST);
+            if(intval($flag)){
+                $this->model_member->addMemberLog('make_friends', $this->login_member_info);//插入会员日志
+                return $this->ajaxReturn(array('msg'=>"添加成功",'status'=>1));
+            }
+            return $this->ajaxReturn(array('msg'=>"添加失败",'status'=>0));
+        }
+
     }
     //删除好友
     function delFriend(){
         $id = I('post.id');
-        $friend = I('post.friend');
+        $friend = I('post.friendid');
         $flag=$this->friend->delFrient($id,$friend);
+        $flag1=$this->friend->delFrient($friend,$id);//互删
         if($flag !==false){
             $this->model_member->addMemberLog('delete_friends', $this->login_member_info);
             return $this->ajaxReturn(array('msg'=>"删除成功",'status'=>1));
@@ -69,6 +77,10 @@ class MemberFriendController extends PublicController
         $id = I('post.id');
         $friendid = I('post.friendid');
         $name = I('post.name');
+        $isFriend=$this->friend->isfrendSingle($id,$friendid);
+        if(!$isFriend||$isFriend['zl_visible']==='0'){
+            return $this->ajaxReturn(array('msg'=>"修改失败,你们不是好友",'status'=>2));
+        }
         $flag=$this->friend->modifyMark($id,$friendid,$name);
         if($flag!==false){
             $this->model_member->addMemberLog('modify_friend_name', $this->login_member_info);//插入会员日志
@@ -83,5 +95,15 @@ class MemberFriendController extends PublicController
         $pagesize = I('post.pagesize');
         $list=$this->friend->getFrientList($id,$pagesize);
         return $this->ajaxReturn(array('msg'=>"请求成功",'status'=>1,'data'=>$list));
+    }
+
+    //搜索好友
+    function getFriend(){
+        $id = I('post.id');
+        $data= M('Member')->where('id='.$id)->find();
+        if(!$data){
+            return $this->ajaxReturn(array('msg'=>"没有找到该用户",'status'=>3));
+        }
+        return $this->ajaxReturn(array('msg'=>"请求成功",'status'=>1,'data'=>$data));
     }
 }

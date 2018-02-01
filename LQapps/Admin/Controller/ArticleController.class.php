@@ -183,7 +183,6 @@ class ArticleController extends PublicController{
     public function edit() {
         if (IS_POST) {
 			$returnData=$this->C_D->lqSubmit();
-			D('Api/Article')->getArticleById(intval($_POST["LQF"]["id"]),1);
             $this->ajaxReturn($returnData);
         } else {
 			$lcdisplay='Public/common-edit';
@@ -261,6 +260,15 @@ class ArticleController extends PublicController{
 	//更改字段值 
     public function opProperty() {
         $this->ajaxReturn($this->C_D->setProperty());
+    }
+
+
+    /*
+     * 发送系统公告
+     */
+    public function send_notice()
+    {
+        $this->ajaxReturn($this->C_D->send_notice());
     }
 
 }

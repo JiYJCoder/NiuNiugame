@@ -42,6 +42,9 @@ class GameLogController extends PublicController
         $roomid = I("post.roomid");
         $id = I('post.id');
         $number = I('post.number');//局数
+        $data=$this->game->getData($roomid,$id,$number);
+        $redata = array('msg'=>'查询成功','status'=>1,'data'=>$data);
+        $this->ajaxReturn($redata);
    }
 
    //存储游戏结果

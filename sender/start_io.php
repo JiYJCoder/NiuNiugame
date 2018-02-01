@@ -49,6 +49,10 @@ $sender_io->on('connection', function ($socket) {
             unset($uidConnectionMap[$socket->uid]);
         }
     });
+    $socket->on('test_io', function () use ($socket) {
+        $socket->emit('answer');
+    });
+
 });
 
 // 当$sender_io启动后监听一个http端口，通过这个端口可以给任意uid或者所有uid推送数据
@@ -89,12 +93,15 @@ $sender_io->on('workerStart', function () {
     };
     // 执行监听
     $inner_http_worker->listen();
-
     // 一个定时器，定时向所有uid推送当前uid在线数及在线页面数
-    Timer::add(1, function () {
+    Timer::add(5, function () {
         global $uidConnectionMap, $sender_io, $last_online_count, $last_online_page_count;
         $online_count_now = count($uidConnectionMap);
         $online_page_count_now = array_sum($uidConnectionMap);
+
+       // $sender_io->on('test_io', function () use ($sender_io) {
+            $sender_io->emit('answer','here');
+        //});
         // 只有在客户端在线数变化了才广播，减少不必要的客户端通讯
         if ($last_online_count != $online_count_now || $last_online_page_count != $online_page_count_now) {
             $sender_io->emit('update_online_count', "当前<b>{$online_count_now}</b>人在线，共打开<b>{$online_page_count_now}</b>个页面");

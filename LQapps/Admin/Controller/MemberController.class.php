@@ -258,10 +258,6 @@ class MemberController extends PublicController
         $dataReturn = $this->MemberModel->apiVisible();
         if ($dataReturn["status"] == 1) {
             $this->addAdminLog($dataReturn["id"]);//写入日志
-            $mid = I("get.tnid", '0', 'int');
-            $status = I("get.status", '0', 'int') == 0 ? 1 : 0;
-            M()->execute("update __PREFIX__designer set zl_visible='$status' where zn_member_id=" . $mid);
-
         }
         $this->ajaxReturn($dataReturn);
     }

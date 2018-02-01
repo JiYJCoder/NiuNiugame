@@ -50,7 +50,7 @@ class ArticleModel extends PublicModel {
 			$list[$lnKey]['visible_label'] = $laValue['zl_visible'] == 1 ? C("USE_STATUS")[1] : C("USE_STATUS")[0];
 			$list[$lnKey]['visible_button'] = $laValue['zl_visible'] == 1 ?  C("ICONS_ARRAY")['unapprove']: C("ICONS_ARRAY")['approve'];
 			$list[$lnKey]['zl_is_index_label'] = $laValue['zl_is_index'] == 1 ? '是首页' : '非首页';
-			$list[$lnKey]['zl_is_good_label'] = $laValue['zl_is_good'] == 1 ? '是精品' : '非精品';
+			$list[$lnKey]['zl_is_good_label'] = $laValue['zl_is_good'] == 1 ? '已发送' : '未发送';
 			$list[$lnKey]['url'] = "/do?g=home&m=news&a=show&tnid=".$laValue["id"];
 			$list[$lnKey]['no'] = $firstRow+$lnKey+1;
         }
@@ -89,7 +89,33 @@ class ArticleModel extends PublicModel {
         } else {
             return array('status' => 0, 'msg' => C("ALERT_ARRAY")["fail"]);
         }
-    }	
+    }
+
+    //更改-是非首页
+    public function send_notice() {
+        $lcop=I("get.tcop",'is_index');
+        $data=array();
+        $data["id"] = I("get.tnid",'0','int');
+        if($lcop=='all'){
+            $data['zl_is_good'] = I("get.vlaue",'0','int') == 1 ? 0 : 1;
+            $member = M("Member")->where(array("zl_visible"=>1))->order("id desc")->select();
+
+            $db_notice = M("MemberNotice");
+            foreach($member as $val)
+            {
+                $sendData = array("zn_way"=>1,"zn_notifyid"=>$data['id'],"zn_mid"=>$val['id'],"zl_visible"=>1,"zn_cdate"=> NOW_TIME);
+                $db_notice->add($sendData);
+            }
+            $op_data= array("status" => $data['zl_is_good'], "txt" => $data['zl_is_good'] == 1 ? "发送成功" : "未发送" ) ;
+        }
+        $data['zn_mdate'] =NOW_TIME ;
+        if ($this->save($data)) {
+            $this->lqAdminLog($data["id"]);//写入日志
+            return array('status' => 1, 'msg' => C("ALERT_ARRAY")["success"], 'data' =>$op_data );
+        } else {
+            return array('status' => 0, 'msg' => C("ALERT_ARRAY")["fail"]);
+        }
+    }
 
 }
 

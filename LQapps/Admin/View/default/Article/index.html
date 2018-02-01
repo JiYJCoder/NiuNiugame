@@ -129,11 +129,11 @@
                       <tr>
                         <th style="width:40px;"><input type="checkbox" class="checkbox" value="0" id="list_checkbox"></th>                      
                         <th style="width:80px;text-align:left;">序号/ID</th>
-                        <th style="width:120px;" title="图片">图片</th>
+                        <!--<th style="width:120px;" title="图片">图片</th>-->
                         <th style="width:150px;">分类</th>
                         <th>标题</th>
                         <th style="width:80px;">排序	</th>
-                        <th style="width:150px;">属性	</th>
+                        <th style="width:150px;">发送状态	</th>
                         <th style="width:100px;">状态</th>
                         <th style="width:120px;text-align:center;"><a href="javascript:;" id="op_msg">{:L("LABEL_OS")}?</a></th>
                       </tr>
@@ -144,18 +144,18 @@
                     <tr id="{$data.id}" visible="{$data.zl_visible}" opCheck='0'>
                       <td><input type="checkbox" class="checkbox" value="{$data.id}" name="items" /></td>
                       <td align="left">{$data.no}/{$data.id}</td>
-                      <td class="imgtd"><img src="{$data.image}" alt="{$data.zc_title}" height="60"/></td>
+                      <!--<td class="imgtd"><img src="{$data.image}" alt="{$data.zc_title}" height="60"/></td>-->
                       <td>{$data.zn_cat_id_label}</td>
                       <td edit="0" op="label" title="{:L('ALT_BUTTON_EDIT_LABEL')}">{$data.zc_title}</td>
                       <td edit="0" op="sort" title="{:L('ALT_BUTTON_EDIT_SORT')}">{$data.zn_sort}</td>
                       <td>
-                      <a href="javascript:void(0);" op="is_index" val="{$data.zl_is_index}">{$data.zl_is_index_label}</a>
-                      <a href="javascript:void(0);" op="is_good" val="{$data.zl_is_good}">{$data.zl_is_good_label}</a>
-                      </td>                     
+                      <!--<a href="javascript:void(0);" op="is_index" val="{$data.zl_is_index}">{$data.zl_is_index_label}</a>-->
+                      <a href="javascript:void(0);" class="send"  val="{$data.zl_is_good}">{$data.zl_is_good_label}</a>
+                      </td>
                       <td>{$data.visible_label}</td>
                       <td class="manage-menu list-os-a">
                       <a href="__CONTROLLER__/edit/tnid/{$data.id}" title="{:L("LABEL_OS_EDITID")}[{$data.id}]"><i class="fa fa-edit"></i></a>
-             		  <a href="__CONTROLLER__/relation/tnid/{$data.id}" title="{:L("LABEL_SET_RELATION")}[{$data.id}]"><i class="fa fa-puzzle-piece"></i></a>
+             		  <a send_msg="all" title="发送公告：[{$data.id}]" val="{$data.zl_is_good}"><i class="fa fa-send"></i></a>
              		  <a href="javascript:void(0);" class="opStatus" val="{$data.zl_visible}" title="{:L("LABEL_OS_STATUS")}[{$data.id}]">{$data.visible_button}</a>
                       <a href="javascript:;" class="opDelete" title="{:L("LABEL_OS_TITLE_DEL")}[{$data.zc_title}]"><i class="fa fa-times-circle"></i></a>
                       </td>
@@ -172,5 +172,7 @@
   </form>
   
 </div>
-
+<script>
+    $('tbody>tr>td>a[send_msg]').click(function(){util.ajaxSendMsg($(this),'__CONTROLLER__');});
+</script>
 <include file="Public:footer" />

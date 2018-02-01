@@ -220,7 +220,7 @@ if(navigator.appName == 'Microsoft Internet Explorer'){
 <div class="container-fluid footer" role="footer">
   <div class="page-header"></div>
   <span class="pull-left">
-  <p>Powered by <a href="#"><b><?php echo L('PROJECT_TEAM');?></b></a> v2.0 &copy; 2016-2020 <a href="http://www.jianyuly.com/" target="_blank">www.jianyuly.com</a></p>
+  <p>Powered by <a href="#"><b><?php echo L('PROJECT_TEAM');?></b></a> v2.0 &copy; 2016-2020 <a href="http://www.games.com/" target="_blank">www.games.com</a></p>
   </span> 
   <span class="pull-right">
   <p class="label label-info">{__RUNTIME__} </p>
@@ -230,9 +230,9 @@ if(navigator.appName == 'Microsoft Internet Explorer'){
 <?php if(ACTION_NAME == 'index'): ?><div class="TopBottomMenu">
 	<ul>
 		<li><a href="/sys-index.php/Member/index" title="会员列表">会员列表</a></li>
-		<li><a href="/sys-index.php/LoanApply/index" title="装修贷订单">装修贷订单</a></li>
-		<li><a href="/sys-index.php/HdApplication/index" title="咨询订单">咨询订单</a></li>
-		<li><a href="/sys-index.php/HdOrder/index" title="家装订单">家装订单</a></li>
+		<li><a href="/sys-index.php/Recharge/index" title="充值记录">充值记录</a></li>
+		<li><a href="/sys-index.php/Consume/index" title="消费记录">消费记录</a></li>
+		<li><a href="/sys-index.php/Room/index" title="房间列表">房间列表</a></li>
 	</ul>
 </div>
 <script type="text/javascript" src="/Public/Static/js/dwsee.top.bottom.menu.min.js" ></script>

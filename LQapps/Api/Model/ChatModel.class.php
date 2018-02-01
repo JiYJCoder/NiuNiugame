@@ -46,7 +46,6 @@ class ChatModel extends PublicModel {
         if($toid==''){
             unset($where['zc_to']);
             $list = $this->field('zc_to,zn_toname')->where($where)->group('zc_to')->order('zn_timestamp')->limit(10)->select();
-            lq_test($list);
             return $list;
         }
         $list = $this->where($where)->limit("$firstRow , $listRows")->order('zn_timestamp')->select();

@@ -50,6 +50,7 @@ class PushEvent
     public function setContent($content = '')
     {
         $this->content = json_encode($content);
+//        $this->content = $content;
         return $this;
     }
 

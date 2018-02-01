@@ -51,12 +51,26 @@ class MemberNoticeController extends PublicController
         $data=$this->membernotce->getList($id);
         $this->ajaxReturn(array('msg'=>'请求成功','status'=>1,'data'=>$data));
     }
+    public function getAnnouncement(){
+        $id = I('post.id');
+        $data=$this->membernotce->getAnnouncement($id);
+        $this->ajaxReturn(array('msg'=>'请求成功','status'=>1,'data'=>$data));
+    }
     //删除消息
     public function delNotify(){
         $id = $_POST['id'];
         $flag=$this->membernotce->delNotif($id,'zl_visible',0);
         if($flag !==false){
             $this->ajaxReturn(array('msg'=>'删除成功','status'=>1));
+        }
+        $this->ajaxReturn(array('msg'=>'删除失败','status'=>0));
+    }
+    //设置已读
+    public function setRead(){
+        $id = $_POST['id'];
+        $flag=$this->membernotce->delNotif($id,'zn_read',2);
+        if($flag !==false){
+            $this->ajaxReturn(array('msg'=>'设置成功','status'=>1));
         }
         $this->ajaxReturn(array('msg'=>'删除失败','status'=>0));
     }

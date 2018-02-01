@@ -19,6 +19,22 @@ class RoomJoinModel extends PublicModel {
     public function __construct() {
         parent::__construct();
     }
+    //查询是否在房间
+    public function getRoomVisible($id){
+        $where['zn_member_id'] = $id;
+        $list=$this->field('zl_visible')->where($where)->select();
+        if(!$list){
+            return true;
+        }
+        $flag = false;
+        foreach ($list as $key=>$val){
+            if(intval($val['zl_visible'])==1){
+                return $flag;
+            }
+        }
+        $flag =true;
+        return $flag;
+    }
 
     //房间人
     public function getRoomList($pagesize=15,$roomid){
@@ -33,7 +49,12 @@ class RoomJoinModel extends PublicModel {
         $list['count'] = $count;
         return $list;
     }
-
+    //申请庄家列表
+    public function getMakerList($roomid){
+        $where['zn_maker_status'] = 1;
+        $where['zn_room_id'] = $roomid;
+        return $list = $this->where($where)->order('zn_mdate')->select();
+    }
     public function getRoom($id,$roomid,$sql=''){
         $where = array();
         $where['zn_member_id']= $id;
@@ -51,6 +72,11 @@ class RoomJoinModel extends PublicModel {
         $where['zn_room_id'] = $roomid;
         $data= $this->where($where)->setField($sql,$val);
         return $data;
+    }
+    //设置用户所有房间状态为隐藏
+    public function setRoomStatus($id){
+        $where['zn_member_id'] = $id;
+        return $this->where($where)->setField('zl_visible',0);
     }
     //设置值
     public function setVal($id,$roomid,$sql,$val){
@@ -134,32 +160,33 @@ class RoomJoinModel extends PublicModel {
             $oldmakers = $this->getMakers($roomid);
             $this->setVal($oldmakers['zn_member_id'],$roomid,'zn_makers',0);
             $this->setVal($id,$roomid,'zn_maker_points',$oldmakers['zn_points']);//设置庄家分数
-            $flag= $this->setVal($id,$roomid,'zn_makers',1);
+            $this->setVal($id,$roomid,'zn_maker_status',0); //取消申请上庄
+            $flag= $this->setVal($id,$roomid,'zn_makers',1); //成为庄家
         }else{
             $this->setVal($id,$roomid,'zn_maker_points',0);//设置庄家分数
+            $this->setVal($id,$roomid,'zn_maker_status',0); //取消申请上庄
             $flag= $this->setVal($id,$roomid,'zn_makers',0);
         }
 
         return $flag;
     }
-
+    //TODO
     //压分
-    public function chargePoints($id,$roomid,$points){
+    public function chargePoints($id,$roomid,$points,$few,$maxmag){
         $oldmakers = $this->getMakers($roomid);
         $perpoints = $this->getRoom($id,$roomid,'zn_points');
-        if($oldmakers['zn_maker_points']<$points){
-            return '庄家分数不够';
-        }
-        lq_test($id);
-        lq_test($roomid);
-        lq_test($perpoints);
         if($points>$perpoints){
             return '玩家分数不够';
         }
-        $spoints = $perpoints - $points; //减少玩家分数
+//        $spoints = $perpoints - $points; //减少玩家分数
         $dpoints = $oldmakers['zn_maker_points']- $points;//减少庄家分
+        if($maxmag){
+            $points=$points*$maxmag;
+        }
         $flag =$this->setVal($oldmakers['zn_member_id'],$roomid,'zn_maker_points',$dpoints);
-        $this->setVal($id,$roomid,'zn_points',$spoints);
+        $this->setVal($id,$roomid,'zn_betting',$points);//设置玩家下注分
+//        $this->setVal($id,$roomid,'zn_points',$spoints);
+        $this->setVal($id,$roomid,'zn_few',$few);
         if($flag){
             return $dpoints;
         }
@@ -168,6 +195,13 @@ class RoomJoinModel extends PublicModel {
     //加入的房间
     public function getRoomArray($id){
         return $this->field('zn_room_id')->where('zn_member_id='.$id)->select();
+    }
+
+    //查询所有
+    public function getJoinPer($roomid,$sql){
+        $where['zn_room_id'] = $roomid;
+        $list =$this->where($where)->field($sql)->select();
+        return $list;
     }
 
 }

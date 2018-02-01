@@ -60,8 +60,8 @@
                             <button class="btn btn-default" id="listSearch"><i class="fa fa-search"></i> 搜索</button>
                             <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><span class="caret"></span></button>
                             <ul class="dropdown-menu dropdown-menu-right" role="menu">
-                            <li><a href="javascript:;" onclick="$('#fkeyword').attr('placeholder','精准搜索：请输入关键字');$('#keymode').val(0);">精准搜索</a></li>
-                            <li><a href="javascript:;" onclick="$('#fkeyword').attr('placeholder','模糊搜索：请输入关键字');$('#keymode').val(1);">模糊搜索</a></li>
+                            <li><a href="javascript:;" onclick="$('#fkeyword').attr('placeholder','精准搜索：请输入关键字');$('#keymode').val(0);">模糊搜索</a></li>
+                            <li><a href="javascript:;" onclick="$('#fkeyword').attr('placeholder','模糊搜索：请输入关键字');$('#keymode').val(1);">精准搜索</a></li>
                             </ul>
                           </div>
                         </div>
@@ -69,9 +69,9 @@
                     </div>
                     
  					<div class="form-group">
-         		      <label class="col-xs-12 col-sm-2 col-md-2 col-lg-1 control-label">分类/推荐</label>
+         		      <label class="col-xs-12 col-sm-2 col-md-2 col-lg-1 control-label">房间类型</label>
                       <div class="col-sm-8 col-lg-10 col-xs-12">
-                      <div class="col-lg-6" style="padding:0px;"><select class="form-control" id="cat_id">{$zn_cat_id_str}</select></div>
+                      <div class="col-lg-6" style="padding:0px;"><select class="form-control" id="cat_id">{$roomtype_array}</select></div>
                       <div class="col-lg-6"><select class="form-control" id="recommend">{$recommend_str}</select></div>
                       </div>
                     </div>                   
@@ -97,6 +97,7 @@
 						var fkeyword=$("#fkeyword").val();
 						var recommend=$("#recommend").val();
 						var open_time=$("#open_time").val();
+						var cat_id=$("#cat_id").val();
 						if(fkeyword!='{$keywordDefault}'||cat_id||recommend||open_time==1){
 							var searchurl=$("#thinkphpurl").val()+'index/s/';
 							var urlpara="fkeyword/"+encodeURIComponent(fkeyword)+"/";
@@ -128,14 +129,13 @@
                       <tr>
                         <th style="width:40px;"><input type="checkbox" class="checkbox" value="0" id="list_checkbox"></th>                      
                         <th style="width:80px;text-align:left;">序号/ID</th>
-                        <th style="width:120px;" title="图片">图片</th>
-                        <th style="width:150px;">分类</th>
-                        <th>标题</th>
-                          <th>数量</th>
-                          <th>价钱</th>
-                          <th>折扣</th>
-                        <th style="width:80px;">排序	</th>
-
+                        <th>房主昵称/id</th>
+                        <th style="width:120px;" title="房号">房号</th>
+                        <th style="width:150px;">房间类型</th>
+                        <th>进房确认</th>
+                          <th>玩法</th>
+                          <th>付费模式</th>
+                          <th>抽庄比例</th>
                         <th style="width:100px;">状态</th>
                         <th style="width:120px;text-align:center;"><a href="javascript:;" id="op_msg">{:L("LABEL_OS")}?</a></th>
                       </tr>
@@ -146,19 +146,18 @@
                     <tr id="{$data.id}" visible="{$data.zl_visible}" opCheck='0'>
                       <td><input type="checkbox" class="checkbox" value="{$data.id}" name="items" /></td>
                       <td align="left">{$data.no}/{$data.id}</td>
-                      <td class="imgtd"><img src="{$data.image}" alt="{$data.zc_title}" height="60"/></td>
-                      <td>{$data.zn_cat_id_label}</td>
-                      <td edit="0" op="label" title="{:L('ALT_BUTTON_EDIT_LABEL')}">{$data.zc_title}</td>
-                      <td>{$data.zn_num}</td>
-                      <td>{$data.zn_price}</td>
-                      <td>{$data.zn_discount}</td>
-                      <td edit="0" op="sort" title="{:L('ALT_BUTTON_EDIT_SORT')}">{$data.zn_sort}</td>
-
+                      <td >{$data.zc_member_label}</td>
+                      <td >{$data.zc_number}</td>
+                      <td>{$data.zn_room_type_label}</td>
+                      <td>{$data.zn_confirm_label}</td>
+                      <td>{$data.zn_play_type_label}</td>
+                      <td>{$data.zn_pay_type_label}</td>
+                      <td>{$data.zn_extract_label}</td>
                       <td>{$data.visible_label}</td>
                       <td class="manage-menu list-os-a">
                       <a href="__CONTROLLER__/edit/tnid/{$data.id}" title="{:L("LABEL_OS_EDITID")}[{$data.id}]"><i class="fa fa-edit"></i></a>
              		  <a href="javascript:void(0);" class="opStatus" val="{$data.zl_visible}" title="{:L("LABEL_OS_STATUS")}[{$data.id}]">{$data.visible_button}</a>
-                      <a href="javascript:;" class="opDelete" title="{:L("LABEL_OS_TITLE_DEL")}[{$data.zc_title}]"><i class="fa fa-times-circle"></i></a>
+                      <!--<a href="javascript:;" class="opDelete" title="{:L("LABEL_OS_TITLE_DEL")}[{$data.zc_title}]"><i class="fa fa-times-circle"></i></a>-->
                       </td>
                     </tr>
                   </volist>

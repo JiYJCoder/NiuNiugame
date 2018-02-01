@@ -57,12 +57,16 @@ class RoomJoinController extends PublicController
             $toArray[] = $val['zn_member_id'];
             $total +=$val['zn_points'];
         }
+        if(!$toArray[0]){
+            return $this->ajaxReturn(array('msg'=>"房间没人",'status'=>3));
+        }
+//        $toArray[] = $this->login_member_info['id'];//房主
         if($type==1){
             $this->model_member->addMemberLog('points_add', $this->login_member_info);//插入会员日志
         }else{
             $this->model_member->addMemberLog('points_dec', $this->login_member_info);//插入会员日志
         }
-        $notiftData = array('type'=>5,'msg'=>'房主修改分数',"total"=>$total);
+        $notiftData = array('type'=>5,'msg'=>'房主修改分数',"totalPoints"=>$total);
         $this->socket->setUser($toArray)->setContent($notiftData)->push();
         $this->ajaxReturn($redata);
     }
@@ -80,6 +84,9 @@ class RoomJoinController extends PublicController
         foreach ($joinPerAll as $key=>$val){
             $toArray[] = $val['zn_member_id'];
             $total +=$val['zn_points'];
+        }
+        if(!$toArray[0]){
+            return $this->ajaxReturn(array('msg'=>"房间没人",'status'=>3));
         }
         $notiftData = array('msg'=>'退出房间','total'=>$total,'type'=>6);
         $this->socket->setUser($toArray)->setContent($notiftData)->push();
@@ -103,11 +110,15 @@ class RoomJoinController extends PublicController
     public function setMakers(){
         $roomid = I('post.roomid');
         $id = I('post.id');
-        $flag= $this->roomJoin->setMakers($id,$roomid);
+        $type = I('post.type');
+        $flag= $this->roomJoin->setMakers($id,$roomid,$type);
         $joinPerAll = $this->notift->apiGetNumPer($roomid); //获取要通知的人
         $toArray = array();//通知人数
         foreach ($joinPerAll as $key=>$val){
             $toArray[] = $val['zn_member_id'];
+        }
+        if(!$toArray[0]){
+            return $this->ajaxReturn(array('msg'=>"房间没人",'status'=>3));
         }
         $notiftData = array('msg'=>'成为庄家','type'=>7,'id'=>$id);
         $this->socket->setUser($toArray)->setContent($notiftData)->push();
@@ -126,23 +137,47 @@ class RoomJoinController extends PublicController
         if($score<$roomData['zn_min_score']){
             return $this->ajaxReturn(array('msg'=>'申请失败，玩家分数小于最低上庄分数','status'=>0));
         }
-        if($id == $this->login_member_info['id']){
-
-            //通知房主
-            $to =  array($roomData['zn_member_id']);
-            $notiftData =array('type'=>8,'nikename'=>$this->login_member_info['zc_nickname'],'id'=>$this->login_member_info['id'],'roomid'=>$roomid);
-            $this->socket->setUser($to)->setContent($notiftData)->push();
-            return $this->ajaxReturn(array('msg'=>'申请成功，请等待房主确认','status'=>1));
+        $flag= $this->roomJoin->setVal($id,$roomid,'zn_maker_status',1);
+        $time = time();
+        $flag1= $this->roomJoin->setVal($id,$roomid,'zn_mdate',$time);
+        if(!$flag){
+            return $this->ajaxReturn(array('msg'=>'申请失败','status'=>0));
         }
-        return $this->ajaxReturn(array('msg'=>'申请失败','status'=>0));
+        //通知房主
+        $joinPerAll = $this->notift->apiGetNumPer($roomid); //获取要通知的人
+        $toArray = array();//通知人数
+        foreach ($joinPerAll as $key=>$val){
+            $toArray[] = $val['zn_member_id'];
+        }
+        if(!$toArray[0]){
+            return $this->ajaxReturn(array('msg'=>"房间没人",'status'=>3));
+        }
+        $notiftData =array('type'=>8,'nikename'=>$this->login_member_info['zc_nickname'],'id'=>$this->login_member_info['id'],'roomid'=>$roomid);
+        $this->socket->setUser($toArray)->setContent($notiftData)->push();
+        return $this->ajaxReturn(array('msg'=>'申请成功','status'=>1));
     }
 
     //压分
     public function chargePoints(){
-        $score = I('post.score');
         $id = I('post.id');
         $roomid = I('post.roomid');
-        $flag = $this->roomJoin->chargePoints($id,$roomid,$score);
+        $maxmag = I('post.maxmag');//倍数
+        $score = I('post.score');
+        if($maxmag){
+            $maxscore=intval($score) * intval($maxmag);//玩家最大分值
+        }
+        $maxscoreAll = 0;//下注总分
+        $minscore  = $this->room->getRoom($roomid)['zn_min_score'];//最低上庄分数
+        $joinper = $this->roomJoin->getJoinPer($roomid,'zn_betting');
+        foreach ($joinper as $key =>$val){
+            $maxscoreAll += $val['zn_betting'];
+        }
+        $maxscoreAll += $maxscore;
+        if($maxscoreAll>$minscore){
+            return $this->ajaxReturn(array('msg'=>"压分失败，庄家分数不够",'status'=>0));
+        }
+        $few  = I('post.few');
+        $flag = $this->roomJoin->chargePoints($id,$roomid,$score,$maxmag);
         $status = $this->gameSchedule->getVal($roomid,'zn_status');
         if($status ==3){
             return $this->ajaxReturn(array('msg'=>"压分失败，系统已停止下注",'status'=>0));
@@ -153,9 +188,12 @@ class RoomJoinController extends PublicController
             foreach ($joinPerAll as $key=>$val){
                 $toArray[] = $val['zn_member_id'];
             }
-            $notiftData = array('msg'=>'','type'=>9,'id'=>$id,'nickname'=>$this->login_member_info,'zn_maker_points'=>$flag);
+            if(!$toArray[0]){
+                return $this->ajaxReturn(array('msg'=>"房间没人",'status'=>3));
+            }
+            $notiftData = array('msg'=>'','type'=>9,'id'=>$id,'nickname'=>$this->login_member_info,'zn_maker_points'=>$flag,'few'=>$few,'score'=>$score,'maxmag'=>$maxmag);
             $this->socket->setUser($toArray)->setContent($notiftData)->push();
-            return $this->ajaxReturn(array('msg'=>"上分成功",'status'=>1,'data'=>array('score'=>$score)));
+            return $this->ajaxReturn(array('msg'=>"上分成功",'status'=>1,'data'=>array('score'=>$score,'maxmag'=>$maxmag)));
         }
         return $this->ajaxReturn(array('msg'=>$flag,'status'=>0));
     }
@@ -169,10 +207,20 @@ class RoomJoinController extends PublicController
         foreach ($joinPerAll as $key=>$val){
             $toArray[] = $val['zn_member_id'];
         }
-        $notiftData = array('msg'=>'房主发布了一条公告','type'=>10,'nickname'=>$this->login_member_info,'content'=>$content);
+        if(!$toArray[0]){
+            return $this->ajaxReturn(array('msg'=>"房间没人",'status'=>3));
+        }
+        $notiftData = array('msg'=>'房主发布了一条公告','type'=>10,'nickname'=>$this->login_member_info['zc_nickname'],'content'=>$content);
         $this->socket->setUser($toArray)->setContent($notiftData)->push();
         $this->model_member->addMemberLog('send_notice', $this->login_member_info);//插入会员日志
         return $this->ajaxReturn(array('msg'=>"发布成功",'status'=>1));
     }
 
+    //申请上庄列表
+
+    public function getMakerList(){
+        $roomid = I('post.roomid');
+        $list=$this->roomJoin->getMakerList($roomid);
+        $this->ajaxReturn(array('msg'=>"申请成功",'status'=>1,'data'=>$list));
+    }
 }

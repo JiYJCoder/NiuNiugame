@@ -7,6 +7,7 @@ class GameScheduleModel extends PublicModel {
     protected $_validate = array(
         array('zn_room_id','require','缺少必要参数1！'),
         array('zn_status','require','缺少必要参数2！'),
+        array('zn_text','require','缺少必要参数3！'),
     );
     protected $_auto = array (
         array('zn_cdate','time',1,'function'), // 对create_time字段在更新的时候写入当前时间戳
@@ -32,6 +33,10 @@ class GameScheduleModel extends PublicModel {
         $where['zn_room_id'] = $roomid;
         $status=$this->where($where)->setField($sql,$val);
         return $status;
+    }
+    public function getlist($roomid){
+        $where['zn_room_id'] =$roomid;
+        return $this->where($where)->find();
     }
 }
 

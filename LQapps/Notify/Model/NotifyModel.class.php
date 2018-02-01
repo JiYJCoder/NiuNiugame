@@ -30,7 +30,12 @@ class NotifyModel extends Model{
 	    $where = array();
         $where['zn_room_id'] =$roomid;
         $where['zl_visible'] = 1;
-	    return M('RoomJoin')->where($where)->select();
+        $perList = M('RoomJoin')->where($where)->select();
+        if($perList){
+            $uid=M('Room')->where('id='.$roomid)->find();
+        }
+        $perList[]  = $uid;
+	    return $perList;
     }
 	
 

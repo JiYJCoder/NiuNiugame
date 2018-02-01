@@ -41,6 +41,17 @@ class MemberNoticeModel extends PublicModel {
         }
         return $list;
     }
+    public function getAnnouncement($id){
+        $where['zl_visible'] = 1;
+        $where['zn_mid'] = $id;
+        $where['zn_way'] = 1;
+        $list=$this->where($where)->limit(5)->order('zn_way,zn_cdate')->order('zn_cdate')->select();
+        foreach ($list as $key=>$val){
+            $content=M('Article')->where('id='.$val['zn_notifyid'])->getField('zc_title');
+            $list[$key]['zc_content'] = $content;
+        }
+        return $list;
+    }
 }
 
 ?>

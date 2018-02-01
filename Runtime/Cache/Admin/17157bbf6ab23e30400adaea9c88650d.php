@@ -63,7 +63,7 @@ if(navigator.appName == 'Microsoft Internet Explorer'){
           <li class="divider"></li>
           <?php if($login_admin_info["id"] == '1' ): ?><li><a href="<?php echo U('SystemMenu/index');?>"><i class="fa fa-sitemap fa-fw"></i> 系统菜单</a></li><?php endif; ?>
           <?php if($login_admin_info["zn_role_id"] == '1' ): ?><li><a href="<?php echo U('Index/clearCache');?>"><i class="fa fa-refresh fa-fw"></i> 更新缓存</a></li><?php endif; ?>
-          <li><a href="/do?g=api&m=document&a=index" target="_blank"><i class="fa fa-gears"></i> 接口文档</a></li>
+          <li><a href="/document" target="_blank"><i class="fa fa-gears"></i> 接口文档</a></li>
           <li class="divider"></li>
           <li><a href="javascript:;" class="getUrl" lqhref="<?php echo U('Login/opLoginOut');?>" title="退出当前登陆"><i class="fa fa-sign-out fa-fw"></i> 退出系统</a></li>
         </ul>
@@ -227,8 +227,8 @@ if(navigator.appName == 'Microsoft Internet Explorer'){
                             <button class="btn btn-default" id="listSearch"><i class="fa fa-search"></i> 搜索</button>
                             <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><span class="caret"></span></button>
                             <ul class="dropdown-menu dropdown-menu-right" role="menu">
-                            <li><a href="javascript:;" onclick="$('#fkeyword').attr('placeholder','精准搜索：请输入关键字');$('#keymode').val(0);">精准搜索</a></li>
-                            <li><a href="javascript:;" onclick="$('#fkeyword').attr('placeholder','模糊搜索：请输入关键字');$('#keymode').val(1);">模糊搜索</a></li>
+                            <li><a href="javascript:;" onclick="$('#fkeyword').attr('placeholder','精准搜索：请输入关键字');$('#keymode').val(0);">模糊搜索</a></li>
+                            <li><a href="javascript:;" onclick="$('#fkeyword').attr('placeholder','模糊搜索：请输入关键字');$('#keymode').val(1);">精准搜索</a></li>
                             </ul>
                           </div>
                         </div>
@@ -236,9 +236,9 @@ if(navigator.appName == 'Microsoft Internet Explorer'){
                     </div>
                     
  					<div class="form-group">
-         		      <label class="col-xs-12 col-sm-2 col-md-2 col-lg-1 control-label">分类/推荐</label>
+         		      <label class="col-xs-12 col-sm-2 col-md-2 col-lg-1 control-label">房间类型</label>
                       <div class="col-sm-8 col-lg-10 col-xs-12">
-                      <div class="col-lg-6" style="padding:0px;"><select class="form-control" id="cat_id"><?php echo ($zn_cat_id_str); ?></select></div>
+                      <div class="col-lg-6" style="padding:0px;"><select class="form-control" id="cat_id"><?php echo ($roomtype_array); ?></select></div>
                       <div class="col-lg-6"><select class="form-control" id="recommend"><?php echo ($recommend_str); ?></select></div>
                       </div>
                     </div>                   
@@ -264,6 +264,7 @@ if(navigator.appName == 'Microsoft Internet Explorer'){
 						var fkeyword=$("#fkeyword").val();
 						var recommend=$("#recommend").val();
 						var open_time=$("#open_time").val();
+						var cat_id=$("#cat_id").val();
 						if(fkeyword!='<?php echo ($keywordDefault); ?>'||cat_id||recommend||open_time==1){
 							var searchurl=$("#thinkphpurl").val()+'index/s/';
 							var urlpara="fkeyword/"+encodeURIComponent(fkeyword)+"/";
@@ -356,14 +357,13 @@ if(navigator.appName == 'Microsoft Internet Explorer'){
                       <tr>
                         <th style="width:40px;"><input type="checkbox" class="checkbox" value="0" id="list_checkbox"></th>                      
                         <th style="width:80px;text-align:left;">序号/ID</th>
-                        <th style="width:120px;" title="图片">图片</th>
-                        <th style="width:150px;">分类</th>
-                        <th>标题</th>
-                          <th>数量</th>
-                          <th>价钱</th>
-                          <th>折扣</th>
-                        <th style="width:80px;">排序	</th>
-
+                        <th>房主昵称/id</th>
+                        <th style="width:120px;" title="房号">房号</th>
+                        <th style="width:150px;">房间类型</th>
+                        <th>进房确认</th>
+                          <th>玩法</th>
+                          <th>付费模式</th>
+                          <th>抽庄比例</th>
                         <th style="width:100px;">状态</th>
                         <th style="width:120px;text-align:center;"><a href="javascript:;" id="op_msg"><?php echo L("LABEL_OS");?>?</a></th>
                       </tr>
@@ -373,19 +373,18 @@ if(navigator.appName == 'Microsoft Internet Explorer'){
                   <?php if(is_array($list)): $key = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "$empty_msg" ;else: foreach($__LIST__ as $key=>$data): $mod = ($key % 2 );++$key;?><tr id="<?php echo ($data["id"]); ?>" visible="<?php echo ($data["zl_visible"]); ?>" opCheck='0'>
                       <td><input type="checkbox" class="checkbox" value="<?php echo ($data["id"]); ?>" name="items" /></td>
                       <td align="left"><?php echo ($data["no"]); ?>/<?php echo ($data["id"]); ?></td>
-                      <td class="imgtd"><img src="<?php echo ($data["image"]); ?>" alt="<?php echo ($data["zc_title"]); ?>" height="60"/></td>
-                      <td><?php echo ($data["zn_cat_id_label"]); ?></td>
-                      <td edit="0" op="label" title="<?php echo L('ALT_BUTTON_EDIT_LABEL');?>"><?php echo ($data["zc_title"]); ?></td>
-                      <td><?php echo ($data["zn_num"]); ?></td>
-                      <td><?php echo ($data["zn_price"]); ?></td>
-                      <td><?php echo ($data["zn_discount"]); ?></td>
-                      <td edit="0" op="sort" title="<?php echo L('ALT_BUTTON_EDIT_SORT');?>"><?php echo ($data["zn_sort"]); ?></td>
-
+                      <td ><?php echo ($data["zc_member_label"]); ?></td>
+                      <td ><?php echo ($data["zc_number"]); ?></td>
+                      <td><?php echo ($data["zn_room_type_label"]); ?></td>
+                      <td><?php echo ($data["zn_confirm_label"]); ?></td>
+                      <td><?php echo ($data["zn_play_type_label"]); ?></td>
+                      <td><?php echo ($data["zn_pay_type_label"]); ?></td>
+                      <td><?php echo ($data["zn_extract_label"]); ?></td>
                       <td><?php echo ($data["visible_label"]); ?></td>
                       <td class="manage-menu list-os-a">
                       <a href="/sys-index.php/Room/edit/tnid/<?php echo ($data["id"]); ?>" title="<?php echo L("LABEL_OS_EDITID");?>[<?php echo ($data["id"]); ?>]"><i class="fa fa-edit"></i></a>
              		  <a href="javascript:void(0);" class="opStatus" val="<?php echo ($data["zl_visible"]); ?>" title="<?php echo L("LABEL_OS_STATUS");?>[<?php echo ($data["id"]); ?>]"><?php echo ($data["visible_button"]); ?></a>
-                      <a href="javascript:;" class="opDelete" title="<?php echo L("LABEL_OS_TITLE_DEL");?>[<?php echo ($data["zc_title"]); ?>]"><i class="fa fa-times-circle"></i></a>
+                      <!--<a href="javascript:;" class="opDelete" title="<?php echo L("LABEL_OS_TITLE_DEL");?>[<?php echo ($data["zc_title"]); ?>]"><i class="fa fa-times-circle"></i></a>-->
                       </td>
                     </tr><?php endforeach; endif; else: echo "$empty_msg" ;endif; ?>
               </tbody>
@@ -408,7 +407,7 @@ if(navigator.appName == 'Microsoft Internet Explorer'){
 <div class="container-fluid footer" role="footer">
   <div class="page-header"></div>
   <span class="pull-left">
-  <p>Powered by <a href="#"><b><?php echo L('PROJECT_TEAM');?></b></a> v2.0 &copy; 2016-2020 <a href="http://www.jianyuly.com/" target="_blank">www.jianyuly.com</a></p>
+  <p>Powered by <a href="#"><b><?php echo L('PROJECT_TEAM');?></b></a> v2.0 &copy; 2016-2020 <a href="http://www.games.com/" target="_blank">www.games.com</a></p>
   </span> 
   <span class="pull-right">
   <p class="label label-info">{__RUNTIME__} </p>
@@ -418,9 +417,9 @@ if(navigator.appName == 'Microsoft Internet Explorer'){
 <?php if(ACTION_NAME == 'index'): ?><div class="TopBottomMenu">
 	<ul>
 		<li><a href="/sys-index.php/Member/index" title="会员列表">会员列表</a></li>
-		<li><a href="/sys-index.php/LoanApply/index" title="装修贷订单">装修贷订单</a></li>
-		<li><a href="/sys-index.php/HdApplication/index" title="咨询订单">咨询订单</a></li>
-		<li><a href="/sys-index.php/HdOrder/index" title="家装订单">家装订单</a></li>
+		<li><a href="/sys-index.php/Recharge/index" title="充值记录">充值记录</a></li>
+		<li><a href="/sys-index.php/Consume/index" title="消费记录">消费记录</a></li>
+		<li><a href="/sys-index.php/Room/index" title="房间列表">房间列表</a></li>
 	</ul>
 </div>
 <script type="text/javascript" src="/Public/Static/js/dwsee.top.bottom.menu.min.js" ></script>

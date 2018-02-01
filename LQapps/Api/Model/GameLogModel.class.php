@@ -13,6 +13,7 @@ class GameLogModel extends PublicModel {
         array('zn_points_left','require','缺少必要参数8！'), //结余
         array('zc_result','require','缺少必要参数9！'), //压牌结果
         array('zn_few','require','缺少必要参数10！'), //第几副牌
+        array('zc_name','require','缺少必要参数11！'), //用户昵称
     );
     protected $_auto = array (
         array('zn_cdate','time',1,'function'), // 对create_time字段在更新的时候写入当前时间戳
@@ -29,7 +30,7 @@ class GameLogModel extends PublicModel {
         //查询个人
         if($id){
             $where['zn_member_id'] =$id;
-            return $this->where($where)->order('zn_cdate asc')->select();
+            return $this->where($where)->order('zn_number')->select();
         }
         //查询局数
         if($number){
@@ -41,8 +42,9 @@ class GameLogModel extends PublicModel {
             $where['zn_number'] =$number;
             return $this->where($where)->find();
         }
+//        lq_test($where);
         //分组
-        $list =$this->field('zn_number')->where($where)->order('zn_number asc')->group('zn_number')->select();
+        $list =$this->field('zn_number')->where($where)->order('zn_number')->group('zn_number')->select();
         foreach ($list as $key=>$val){
             $where['zn_number'] =$val['zn_number'];
             $DRs = $this->where($where)->select();

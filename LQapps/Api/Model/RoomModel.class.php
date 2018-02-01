@@ -89,7 +89,7 @@ class RoomModel extends PublicModel {
         //1 所有房间列表
         //2 自己开的房间
         if($type ==2){
-            $where['id'] = $id;
+            $where['zn_member_id'] = $id;
             $count= $this->where($where)->count();
         } else{
             $count= $this->count();
@@ -137,6 +137,12 @@ class RoomModel extends PublicModel {
             $list[]=$this->where($where)->find();
         }
         return $list;
+    }
+    //查询是否存在
+    public function isRoom($roomid){
+
+        $id =$this->where('id='.$roomid)->getField('zn_member_id');
+        return $id;
     }
 }
 

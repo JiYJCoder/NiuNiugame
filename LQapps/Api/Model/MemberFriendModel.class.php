@@ -14,7 +14,7 @@ class MemberFriendModel extends PublicModel {
         array('zn_cdate','time',1,'function'), // 对create_time字段在更新的时候写入当前时间戳
     );
     public function __construct() {
-           parent::__construct();
+        parent::__construct();
     }
 
     public function setVal($id,$friendid,$sql,$val){
@@ -36,7 +36,7 @@ class MemberFriendModel extends PublicModel {
         $data=$this->create($data);
         $data1=$this->create($data1);
         if(!$data){
-          return   $this->getError();
+            return   $this->getError();
         }
         $this->add($data1);
         $id=$this->add($data);
@@ -54,24 +54,30 @@ class MemberFriendModel extends PublicModel {
         $page=new Page($count,$pagesize);
         $firstRow = $page->firstRow;
         $listRows = $page->listRows;
-         return $list = $this->where($where)->limit("$firstRow , $listRows")->order('zn_cdate')->select();
+        return $list = $this->where($where)->limit("$firstRow , $listRows")->order('zn_cdate')->select();
     }
     //修改备注
     public function modifyMark($id,$friendid,$val){
         return $this->setVal($id,$friendid,'zc_remark',$val);
     }
     //判断是否好友
-    public function isfrend($toid,$id){
+    public function isfrend($toidArray,$id){
         $flagArray = array();
-        foreach ($toid as $key=>$val){
+        foreach ($toidArray as $key=>$val){
             $where['zn_friend_id']=$val['zc_to'];
             $where['zn_mid']=$id;
             $flag = $this->where($where)->find();
-            $flag ? 1:0;
+            $flag=$flag ? 1:0;
             $flagArray[$key]= $flag;
         }
         return $flagArray;
-
+    }
+    //单个查询
+    public function isfrendSingle($toid,$id){
+        $where['zn_friend_id']=$toid;
+        $where['zn_mid']=$id;
+        $flag = $this->where($where)->find();
+        return $flag;
     }
 
 
