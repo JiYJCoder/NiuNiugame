@@ -24759,3 +24759,108 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
 INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
 
+[ 2018-02-01T14:24:26+08:00 ] 127.0.0.1 /Sms/sendYzm
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] unserialize(): Error at offset 0 of 4383 bytes E:\Ooooh\WebSite\games\Public\ThinkPHP\Common\functions.php 第 1165 行.
+SQL: SHOW COLUMNS FROM `lq_member` [ RunTime:0.0030s ]
+SQL: select COLUMN_NAME,COLUMN_COMMENT,character_maximum_length FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME='lq_member' and TABLE_SCHEMA='games' [ RunTime:0.0020s ]
+NOTIC: [8] unserialize(): Error at offset 0 of 1108 bytes E:\Ooooh\WebSite\games\Public\ThinkPHP\Common\functions.php 第 1165 行.
+SQL: SHOW COLUMNS FROM `lq_member_log` [ RunTime:0.0030s ]
+SQL: select COLUMN_NAME,COLUMN_COMMENT,character_maximum_length FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME='lq_member_log' and TABLE_SCHEMA='games' [ RunTime:0.0020s ]
+NOTIC: [8] unserialize(): Error at offset 0 of 701 bytes E:\Ooooh\WebSite\games\Public\ThinkPHP\Common\functions.php 第 1165 行.
+SQL: SHOW COLUMNS FROM `lq_member_integration_log` [ RunTime:0.0020s ]
+SQL: select COLUMN_NAME,COLUMN_COMMENT,character_maximum_length FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME='lq_member_integration_log' and TABLE_SCHEMA='games' [ RunTime:0.0020s ]
+NOTIC: [8] unserialize(): Error at offset 0 of 837 bytes E:\Ooooh\WebSite\games\Public\ThinkPHP\Common\functions.php 第 1165 行.
+SQL: SHOW COLUMNS FROM `lq_member_token` [ RunTime:0.0020s ]
+SQL: select COLUMN_NAME,COLUMN_COMMENT,character_maximum_length FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME='lq_member_token' and TABLE_SCHEMA='games' [ RunTime:0.0020s ]
+NOTIC: [8] unserialize(): Error at offset 0 of 1426 bytes E:\Ooooh\WebSite\games\Public\ThinkPHP\Common\functions.php 第 1165 行.
+SQL: SHOW COLUMNS FROM `lq_pay_log` [ RunTime:0.0020s ]
+SQL: select COLUMN_NAME,COLUMN_COMMENT,character_maximum_length FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME='lq_pay_log' and TABLE_SCHEMA='games' [ RunTime:0.0030s ]
+NOTIC: [8] unserialize(): Error at offset 0 of 2908 bytes E:\Ooooh\WebSite\games\Public\ThinkPHP\Common\functions.php 第 1165 行.
+SQL: SHOW COLUMNS FROM `lq_article` [ RunTime:0.0030s ]
+SQL: select COLUMN_NAME,COLUMN_COMMENT,character_maximum_length FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME='lq_article' and TABLE_SCHEMA='games' [ RunTime:0.0020s ]
+NOTIC: [8] unserialize(): Error at offset 0 of 2908 bytes E:\Ooooh\WebSite\games\Public\ThinkPHP\Common\functions.php 第 1165 行.
+SQL: SHOW COLUMNS FROM `lq_article` [ RunTime:0.0020s ]
+SQL: select COLUMN_NAME,COLUMN_COMMENT,character_maximum_length FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME='lq_article' and TABLE_SCHEMA='games' [ RunTime:0.0030s ]
+
+[ 2018-02-01T14:25:51+08:00 ] 127.0.0.1 /Sms/sendYzm
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-02-01T14:26:56+08:00 ] 127.0.0.1 /Sms/sendYzm
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-02-01T14:27:52+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载控制器:Index
+
+[ 2018-02-01T14:28:49+08:00 ] 127.0.0.1 /Sms/sendYzm
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_sms_log` WHERE ( zc_mobile='13631479553' and zc_action='login' and zn_exp_date > 1517464729  ) LIMIT 1   [ RunTime:0.0280s ]
+NOTIC: [8] Array to string conversion E:\Ooooh\WebSite\games\LQapps\Common\Common\function.php 第 1584 行.
+SQL: update `lq_sms_log` set zl_use = 1 where zc_mobile='13631479553' and zc_action='login' [ RunTime:0.0120s ]
+SQL: INSERT INTO `lq_sms_log` (`zc_session_id`,`zc_mobile`,`zc_check_code`,`zc_action`,`zc_sms_content`,`zl_use`,`zn_exp_date`,`zn_cdate`) VALUES ('23k88a2ota2omoa4iqscdapjv0','13631479553','133335','login','【狸想家】本次注册验证码：133335（10分钟内有效），如非本人操作，请忽略本短信','0','1517467129','1517466529') [ RunTime:0.0010s ]
+
+[ 2018-02-01T14:29:40+08:00 ] 127.0.0.1 /Sms/sendYzm
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_sms_log` WHERE ( zc_mobile='13631479553' and zc_action='login' and zn_exp_date > 1517464780  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: update `lq_sms_log` set zl_use = 1 where zc_mobile='13631479553' and zc_action='login' [ RunTime:0.0100s ]
+SQL: INSERT INTO `lq_sms_log` (`zc_session_id`,`zc_mobile`,`zc_check_code`,`zc_action`,`zc_sms_content`,`zl_use`,`zn_exp_date`,`zn_cdate`) VALUES ('23k88a2ota2omoa4iqscdapjv0','13631479553','463202','login','【狸想家】本次注册验证码：463202（10分钟内有效），如非本人操作，请忽略本短信','0','1517467180','1517466580') [ RunTime:0.0000s ]
+
+[ 2018-02-01T14:32:30+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载控制器:Index
+
+[ 2018-02-01T14:33:01+08:00 ] 127.0.0.1 /Sms/sendYzm
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_sms_log` WHERE ( zc_mobile='13631479553' and zc_action='login' and zn_exp_date > 1517464980  ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: update `lq_sms_log` set zl_use = 1 where zc_mobile='13631479553' and zc_action='login' [ RunTime:0.0040s ]
+SQL: INSERT INTO `lq_sms_log` (`zc_session_id`,`zc_mobile`,`zc_check_code`,`zc_action`,`zc_sms_content`,`zl_use`,`zn_exp_date`,`zn_cdate`) VALUES ('f9s6v9r0bdf42ips5mb75hh7s4','13631479553','575261','login','【玩机吧】本次登录验证码：575261（10分钟内有效），如非本人操作，请忽略本短信','0','1517467380','1517466780') [ RunTime:0.0010s ]
+

@@ -43,7 +43,9 @@ class SmsController extends PublicController {
 	//发送yzm
     public function sendYzm(){
 		$mobile=I("post.mobile",'');//手机号
+		//$mobile='13631479553';//手机号
         $type = I('post.type');
+
         switch ($type){
             case 1:
                 $type= "login";
@@ -54,16 +56,19 @@ class SmsController extends PublicController {
             case 3:
                 $type = "registered";
                 break;
+            default:
+                $type = 'login';
+                break;
         }
-//		$code=lq_random_string(6,1);//随机码
-		$code=9999;//随机码
+		$code=lq_random_string(6,1);//随机码
+		//$code=9999;//随机码
 		$tempId=125456;//模板ID
 		if(!isMobile($mobile)) $this->ajaxReturn(array('status'=>0,'msg'=>'手机号不正确！','data' =>array(),"url"=>"","note"=>""),$this->JSONP);
 		if(!$this->SMS->isAllowReceive($mobile,$type)){
 			$this->ajaxReturn(array('status'=>0,'msg'=>'对不起，不能频繁请求操作！','data' =>array(),"url"=>"","note"=>""),$this->JSONP);
 		}
 				
-		$sms_data=lqSendSms($mobile,array($code),$tempId);
+		$sms_data=lqSendSms($mobile,$code);
 		if($sms_data["status"]==1){
 			$this->SMS->addSms($type,$mobile,$code);
 			$this->returnData=array('status'=>1,'msg'=>'短信发送成功！');

@@ -50,20 +50,18 @@ class SmsLogModel extends PublicModel {
     public function addSms($action='',$mobile='',$code='999999') {
 		switch ($action){
 		case 'login':
-			$sms_content="【狸想家】本次注册验证码：".$code."（10分钟内有效），如非本人操作，请忽略本短信";
+			$sms_content="【玩机吧】本次登录验证码：".$code."（10分钟内有效），如非本人操作，请忽略本短信";
 			break;				
 		case 'register':
-			$sms_content="【狸想家】本次注册验证码：".$code."（10分钟内有效），如非本人操作，请忽略本短信";
+			$sms_content="【玩机吧】本次注册验证码：".$code."（10分钟内有效），如非本人操作，请忽略本短信";
 			break;
-		case 'hd_application':
-			$sms_content="【狸想家】本次注册验证码：".$code."（10分钟内有效），如非本人操作，请忽略本短信";
+		case 'modif':
+			$sms_content="【玩机吧】本次修改验证码：".$code."（10分钟内有效），如非本人操作，请忽略本短信";
 			break;
-        case 'loan_apply':
-            $sms_content="【狸想家】本次验证码：".$code."（10分钟内有效），如非本人操作，请忽略本短信";
-            break;
 		default:
-			return false;
-		}
+            $sms_content="【玩机吧】本次注册验证码：".$code."（10分钟内有效），如非本人操作，请忽略本短信";
+            break;
+        }
 		$data=array();
 		$data['zc_session_id'] = session_id();//系统session_id
 		$data['zc_mobile'] = $mobile;//手机号码  
