@@ -116,10 +116,10 @@ class MemberController extends PublicController
         $mobile = I('post.mobile');
         $code = I('post.code');
         $data = array('zc_password'=>$password,"zc_nickname"=>$nikeName,'zc_mobile'=>$mobile,'zc_account'=>$mobile);
-//        $yzm=$this->D_SMS->isEffective($mobile,'registered',$code);
-//        if(!$yzm){
-//            $this->ajaxReturn(array('msg'=>'验证码不正确','status'=>0));
-//        }
+        $yzm=$this->D_SMS->isEffective($mobile,'registered',$code);
+        if(!$yzm){
+            $this->ajaxReturn(array('msg'=>'验证码不正确','status'=>0));
+        }
         $flag = $this->model_member->apiRegister($data);
         if(intval($flag) > 0){
             $this->hx_register($this->easemob_prefix.$flag);//注册环信
@@ -134,9 +134,9 @@ class MemberController extends PublicController
         $mobile = I('post.mobile');
         $code = I('post.code');
         $yzm=$this->D_SMS->isEffective($mobile,'changePassword',$code);
-//        if(!$yzm){
-//            $this->ajaxReturn(array('msg'=>'验证码不正确','status'=>0));
-//        }
+        if(!$yzm){
+            $this->ajaxReturn(array('msg'=>'验证码不正确','status'=>0));
+        }
         $data['id'] = M("Member")->where(array("zc_mobile"=>$mobile))->getField("id");
         $data['zc_password'] = md5($password);
         $flag= $this->model_member->apiSaveMember($data);
