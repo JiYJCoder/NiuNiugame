@@ -1574,34 +1574,22 @@ function lq_thumb_deal($path_array = array(), $id = 0, $key = 'images')
   * @param datas 内容数据 格式为数组 例如：array('Marry','Alon')，如不需替换请填 null
   * @param $tempId 模板Id,测试应用和未上线应用使用测试模板请填写1，正式应用上线后填写已申请审核通过的模板ID
   */
-function lqSendSms($mobile,$datas,$tempId){
-	/*//主帐号,对应开官网发者主账号下的 ACCOUNT SID
-	$accountSid= '8a216da856588e5a0156594c3a7200f7';
+function lqSendSms($mobile,$datas){
+
+    //主帐号,对应开官网发者主账号下的 ACCOUNT SID
+	$accountSid= 'HY_Wanjiba';
 	//主帐号令牌,对应官网开发者主账号下的 AUTH TOKEN
-	$accountToken= '328cb6c2884b40cfaf37d518b543e423';
+	$password= 'Wanjiba_098';
 	//应用Id，在官网应用列表中点击应用，对应应用详情中的APP ID
-	$appId='8aaf070857dc0e780157e01277e3029f';
-	//请求地址
-	$serverIP='app.cloopen.com';
-	//请求端口，生产环境和沙盒环境一致
-	$serverPort='8883';
-	//REST版本号，在官网文档REST介绍中获得。
-	$softVersion='2013-12-26';
-     
-	 $rest = new \LQLibs\Util\CcpSms($serverIP,$serverPort,$softVersion);//容联云通讯接口类
-     $rest->setAccount($accountSid,$accountToken);
-     $rest->setAppId($appId);
-     // 发送模板短信
-     $result = $rest->sendTemplateSMS($mobile,$datas,$tempId);
-     if($result == NULL ) {
-         return array('status'=>0,'msg'=>'result error!');
-     }
-     if($result->statusCode!=0) {
-		 return array('status'=>0,'msg'=>$result->statusMsg);
-     }else{
-		 return array('status'=>1,'msg'=>$result->dateCreated);
-     }*/
-    return array('status'=>1,'msg'=>'999999');
+    $datas_msg = '您本次的操作码为:'.$datas;
+    $url = 'http://api.jxt10690.com:7788/msg/HttpSendSM?account='.$accountSid.'&pswd='.$password.'&msg='.$datas_msg.'&mobile='.$mobile;
+    $ch = curl_init ($url) ;
+    curl_setopt ($ch, CURLOPT_RETURNTRANSFER, 1) ;
+    $res = curl_exec ($ch);
+    curl_close ($ch);
+
+    return array('status'=>1,'msg'=>$datas);
+
 }
 
 //当前url

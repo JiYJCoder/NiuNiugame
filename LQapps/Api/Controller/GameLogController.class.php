@@ -52,6 +52,9 @@ class GameLogController extends PublicController
     {
         $flag=$this->game->createGameLog($_POST);
         if(intval($flag)){
+            $poins=$_POST['zn_points_left'];
+            $this->roomJoin->setVal($_POST['zn_member_id'],$_POST['zn_room_id'],'zn_points',$poins);//设置分数
+            $this->roomJoin->setVal($_POST['zn_member_id'],$_POST['zn_room_id'],'zn_maker_points',$poins);//设置庄家分数
             $redata = array('msg'=>'创建成功','status'=>1);
             $this->ajaxReturn($redata);
         }

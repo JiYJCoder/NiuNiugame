@@ -35,8 +35,9 @@ class MemberNoticeModel extends PublicModel {
         $list=$this->where($where)->limit(5)->order('zn_way,zn_cdate')->select();
         foreach ($list as $key=>$val){
             if($val['zn_way']==1){
-                $content=M('Article')->where('id='.$val['zn_notifyid'])->getField('zc_title');
-                $list[$key]['zc_content'] = $content;
+                $content=M('Article')->field('zc_title,zc_content')->where('id='.$val['zn_notifyid'])->find();
+                $list[$key]['zc_content'] = $content['zc_content'];
+                $list[$key]['zc_title'] = $content['zc_title'];
             }
         }
         return $list;

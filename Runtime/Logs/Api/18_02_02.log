@@ -1,0 +1,783 @@
+[ 2018-02-02T14:38:09+08:00 ] 127.0.0.1 /Room/setRoomStatus
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SELECT * FROM `lq_member_token` WHERE ( zn_member_id=964 ) LIMIT 1   [ RunTime:0.0050s ]
+SQL: SELECT `zn_status` FROM `lq_game_schedule` WHERE `zn_room_id` = '57' LIMIT 1   [ RunTime:0.0060s ]
+SQL: UPDATE `lq_game_schedule` SET `zn_status`='9' WHERE `zn_room_id` = '57' [ RunTime:0.0070s ]
+NOTIC: [8] Undefined variable: json C:\Users\Administrator\Desktop\niuniuGame\LQapps\Api\Controller\RoomController.class.php 第 376 行.
+
+[ 2018-02-02T14:38:10+08:00 ] 127.0.0.1 /GameLog/createGameLog
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SELECT * FROM `lq_member_token` WHERE ( zn_member_id=966 ) LIMIT 1   [ RunTime:0.0040s ]
+NOTIC: [8] Undefined index: validate C:\Users\Administrator\Desktop\niuniuGame\Public\ThinkPHP\Library\Think\Model.class.php 第 1230 行.
+NOTIC: [8] Undefined index: auto C:\Users\Administrator\Desktop\niuniuGame\Public\ThinkPHP\Library\Think\Model.class.php 第 1173 行.
+SQL: INSERT INTO `lq_game_log` (`zn_member_id`,`zn_points_total`,`zn_room_id`,`zc_is_boss`,`zn_points_left`,`zn_few`,`zc_name`,`zn_cdate`) VALUES ('966','0','57','1','5467','0','第三个小号','1517553490') [ RunTime:0.0070s ]
+SQL: UPDATE `lq_room_join` SET `zn_points`='5467' WHERE `zn_member_id` = '966' AND `zn_room_id` = '57' AND `zl_visible` = 1 [ RunTime:0.0040s ]
+SQL: UPDATE `lq_room_join` SET `zn_maker_points`='5467' WHERE `zn_member_id` = '966' AND `zn_room_id` = '57' AND `zl_visible` = 1 [ RunTime:0.0050s ]
+
+[ 2018-02-02T14:38:10+08:00 ] 127.0.0.1 /GameLog/createGameLog
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SELECT * FROM `lq_member_token` WHERE ( zn_member_id=966 ) LIMIT 1   [ RunTime:0.0030s ]
+NOTIC: [8] Undefined index: validate C:\Users\Administrator\Desktop\niuniuGame\Public\ThinkPHP\Library\Think\Model.class.php 第 1230 行.
+NOTIC: [8] Undefined index: auto C:\Users\Administrator\Desktop\niuniuGame\Public\ThinkPHP\Library\Think\Model.class.php 第 1173 行.
+SQL: INSERT INTO `lq_game_log` (`zn_member_id`,`zn_points_total`,`zn_room_id`,`zc_is_boss`,`zn_points_left`,`zn_few`,`zc_name`,`zn_cdate`) VALUES ('966','0','57','1','5467','0','第三个小号','1517553490') [ RunTime:0.0110s ]
+SQL: UPDATE `lq_room_join` SET `zn_points`='5467' WHERE `zn_member_id` = '966' AND `zn_room_id` = '57' AND `zl_visible` = 1 [ RunTime:0.0050s ]
+SQL: UPDATE `lq_room_join` SET `zn_maker_points`='5467' WHERE `zn_member_id` = '966' AND `zn_room_id` = '57' AND `zl_visible` = 1 [ RunTime:0.0060s ]
+
+[ 2018-02-02T14:38:10+08:00 ] 127.0.0.1 /GameLog/createGameLog
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SELECT * FROM `lq_member_token` WHERE ( zn_member_id=966 ) LIMIT 1   [ RunTime:0.0070s ]
+NOTIC: [8] Undefined index: validate C:\Users\Administrator\Desktop\niuniuGame\Public\ThinkPHP\Library\Think\Model.class.php 第 1230 行.
+NOTIC: [8] Undefined index: auto C:\Users\Administrator\Desktop\niuniuGame\Public\ThinkPHP\Library\Think\Model.class.php 第 1173 行.
+SQL: INSERT INTO `lq_game_log` (`zn_member_id`,`zn_points_total`,`zn_room_id`,`zc_is_boss`,`zn_points_left`,`zn_few`,`zc_name`,`zn_cdate`) VALUES ('966','0','57','1','5467','7','第三个小号','1517553490') [ RunTime:0.0060s ]
+SQL: UPDATE `lq_room_join` SET `zn_points`='5467' WHERE `zn_member_id` = '966' AND `zn_room_id` = '57' AND `zl_visible` = 1 [ RunTime:0.0320s ]
+SQL: UPDATE `lq_room_join` SET `zn_maker_points`='5467' WHERE `zn_member_id` = '966' AND `zn_room_id` = '57' AND `zl_visible` = 1 [ RunTime:0.0050s ]
+
+[ 2018-02-02T14:38:10+08:00 ] 127.0.0.1 /GameLog/createGameLog
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SELECT * FROM `lq_member_token` WHERE ( zn_member_id=966 ) LIMIT 1   [ RunTime:0.0040s ]
+NOTIC: [8] Undefined index: validate C:\Users\Administrator\Desktop\niuniuGame\Public\ThinkPHP\Library\Think\Model.class.php 第 1230 行.
+NOTIC: [8] Undefined index: auto C:\Users\Administrator\Desktop\niuniuGame\Public\ThinkPHP\Library\Think\Model.class.php 第 1173 行.
+SQL: INSERT INTO `lq_game_log` (`zn_member_id`,`zn_points_total`,`zn_room_id`,`zc_is_boss`,`zn_points_left`,`zn_few`,`zc_name`,`zn_cdate`) VALUES ('966','0','57','1','5467','7','第三个小号','1517553490') [ RunTime:0.0060s ]
+SQL: UPDATE `lq_room_join` SET `zn_points`='5467' WHERE `zn_member_id` = '966' AND `zn_room_id` = '57' AND `zl_visible` = 1 [ RunTime:0.0320s ]
+SQL: UPDATE `lq_room_join` SET `zn_maker_points`='5467' WHERE `zn_member_id` = '966' AND `zn_room_id` = '57' AND `zl_visible` = 1 [ RunTime:0.0070s ]
+
+[ 2018-02-02T14:38:17+08:00 ] 127.0.0.1 /MemberFriend/getFrientList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SELECT * FROM `lq_member_token` WHERE ( zn_member_id=958 ) LIMIT 1   [ RunTime:0.0050s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_member_friend` WHERE `zl_visible` = 1 AND `zn_mid` = '958' LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT * FROM `lq_member_friend` WHERE `zl_visible` = 1 AND `zn_mid` = '958' ORDER BY zn_cdate LIMIT 0,15   [ RunTime:0.0070s ]
+
+[ 2018-02-02T14:38:17+08:00 ] 127.0.0.1 /MemberNotice/getNotify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SELECT * FROM `lq_member_token` WHERE ( zn_member_id=958 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT * FROM `lq_member_notice` WHERE `zl_visible` = 1 AND `zn_mid` = '958' ORDER BY zn_way,zn_cdate LIMIT 5   [ RunTime:0.0030s ]
+SQL: SELECT `zc_title`,`zc_content` FROM `lq_article` WHERE ( id=156 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT `zc_title`,`zc_content` FROM `lq_article` WHERE ( id=156 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT `zc_title`,`zc_content` FROM `lq_article` WHERE ( id=157 ) LIMIT 1   [ RunTime:0.0080s ]
+
+[ 2018-02-02T14:38:20+08:00 ] 127.0.0.1 /Room/setRoomStatus
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SELECT * FROM `lq_member_token` WHERE ( zn_member_id=964 ) LIMIT 1   [ RunTime:0.0050s ]
+SQL: SELECT `zn_status` FROM `lq_game_schedule` WHERE `zn_room_id` = '57' LIMIT 1   [ RunTime:0.0060s ]
+SQL: UPDATE `lq_game_schedule` SET `zn_status`='10' WHERE `zn_room_id` = '57' [ RunTime:0.0030s ]
+NOTIC: [8] Undefined variable: json C:\Users\Administrator\Desktop\niuniuGame\LQapps\Api\Controller\RoomController.class.php 第 376 行.
+
+[ 2018-02-02T14:38:26+08:00 ] 127.0.0.1 /RoomJoin/getJoinRoomList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SELECT * FROM `lq_member_token` WHERE ( zn_member_id=966 ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_room_join` WHERE `zl_visible` = 1 AND `zn_room_id` = '57' LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT * FROM `lq_room_join` WHERE `zl_visible` = 1 AND `zn_room_id` = '57' ORDER BY zn_cdate desc LIMIT 0,100   [ RunTime:0.0040s ]
+
+[ 2018-02-02T14:38:26+08:00 ] 127.0.0.1 /RoomJoin/getJoinRoomList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SELECT * FROM `lq_member_token` WHERE ( zn_member_id=966 ) LIMIT 1   [ RunTime:0.0050s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_room_join` WHERE `zl_visible` = 1 AND `zn_room_id` = '57' LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT * FROM `lq_room_join` WHERE `zl_visible` = 1 AND `zn_room_id` = '57' ORDER BY zn_cdate desc LIMIT 0,100   [ RunTime:0.0080s ]
+
+[ 2018-02-02T14:38:26+08:00 ] 127.0.0.1 /RoomJoin/getJoinRoomList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SELECT * FROM `lq_member_token` WHERE ( zn_member_id=963 ) LIMIT 1   [ RunTime:0.0050s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_room_join` WHERE `zl_visible` = 1 AND `zn_room_id` = '57' LIMIT 1   [ RunTime:0.0050s ]
+SQL: SELECT * FROM `lq_room_join` WHERE `zl_visible` = 1 AND `zn_room_id` = '57' ORDER BY zn_cdate desc LIMIT 0,100   [ RunTime:0.0080s ]
+
+[ 2018-02-02T14:38:26+08:00 ] 127.0.0.1 /RoomJoin/getJoinRoomList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SELECT * FROM `lq_member_token` WHERE ( zn_member_id=966 ) LIMIT 1   [ RunTime:0.0050s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_room_join` WHERE `zl_visible` = 1 AND `zn_room_id` = '57' LIMIT 1   [ RunTime:0.0060s ]
+SQL: SELECT * FROM `lq_room_join` WHERE `zl_visible` = 1 AND `zn_room_id` = '57' ORDER BY zn_cdate desc LIMIT 0,100   [ RunTime:0.0040s ]
+
+[ 2018-02-02T14:38:26+08:00 ] 127.0.0.1 /RoomJoin/getJoinRoomList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SELECT * FROM `lq_member_token` WHERE ( zn_member_id=966 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_room_join` WHERE `zl_visible` = 1 AND `zn_room_id` = '57' LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT * FROM `lq_room_join` WHERE `zl_visible` = 1 AND `zn_room_id` = '57' ORDER BY zn_cdate desc LIMIT 0,100   [ RunTime:0.0050s ]
+
+[ 2018-02-02T14:38:26+08:00 ] 127.0.0.1 /RoomJoin/getJoinRoomList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SELECT * FROM `lq_member_token` WHERE ( zn_member_id=966 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_room_join` WHERE `zl_visible` = 1 AND `zn_room_id` = '57' LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT * FROM `lq_room_join` WHERE `zl_visible` = 1 AND `zn_room_id` = '57' ORDER BY zn_cdate desc LIMIT 0,100   [ RunTime:0.0050s ]
+
+[ 2018-02-02T14:38:27+08:00 ] 127.0.0.1 /RoomJoin/getJoinRoomList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SELECT * FROM `lq_member_token` WHERE ( zn_member_id=966 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_room_join` WHERE `zl_visible` = 1 AND `zn_room_id` = '57' LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT * FROM `lq_room_join` WHERE `zl_visible` = 1 AND `zn_room_id` = '57' ORDER BY zn_cdate desc LIMIT 0,100   [ RunTime:0.0030s ]
+
+[ 2018-02-02T14:38:27+08:00 ] 127.0.0.1 /RoomJoin/getJoinRoomList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SELECT * FROM `lq_member_token` WHERE ( zn_member_id=964 ) LIMIT 1   [ RunTime:0.0050s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_room_join` WHERE `zl_visible` = 1 AND `zn_room_id` = '57' LIMIT 1   [ RunTime:0.0050s ]
+SQL: SELECT * FROM `lq_room_join` WHERE `zl_visible` = 1 AND `zn_room_id` = '57' ORDER BY zn_cdate desc LIMIT 0,100   [ RunTime:0.0150s ]
+
+[ 2018-02-02T14:38:27+08:00 ] 127.0.0.1 /Room/setRoomStatus
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SELECT * FROM `lq_member_token` WHERE ( zn_member_id=964 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT `zn_status` FROM `lq_game_schedule` WHERE `zn_room_id` = '57' LIMIT 1   [ RunTime:0.0040s ]
+SQL: UPDATE `lq_game_schedule` SET `zn_status`='1' WHERE `zn_room_id` = '57' [ RunTime:0.0140s ]
+SQL: SELECT * FROM `lq_room_join` WHERE `zn_room_id` = 57 AND `zl_visible` = 1  [ RunTime:0.0070s ]
+SQL: SELECT * FROM `lq_room` WHERE ( id=57 ) LIMIT 1   [ RunTime:0.0050s ]
+NOTIC: [8] Undefined variable: json C:\Users\Administrator\Desktop\niuniuGame\LQapps\Api\Controller\RoomController.class.php 第 376 行.
+
+[ 2018-02-02T14:38:33+08:00 ] 127.0.0.1 /Room/getRooms
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SELECT * FROM `lq_member_token` WHERE ( zn_member_id=963 ) LIMIT 1   [ RunTime:0.0050s ]
+SQL: SELECT * FROM `lq_room` WHERE `zc_number` = '964610' LIMIT 1   [ RunTime:0.0040s ]
+
+[ 2018-02-02T14:38:33+08:00 ] 127.0.0.1 /RoomJoin/getJoinRoomList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SELECT * FROM `lq_member_token` WHERE ( zn_member_id=963 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_room_join` WHERE `zl_visible` = 1 AND `zn_room_id` = '57' LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT * FROM `lq_room_join` WHERE `zl_visible` = 1 AND `zn_room_id` = '57' ORDER BY zn_cdate desc LIMIT 0,100   [ RunTime:0.0040s ]
+
+[ 2018-02-02T14:38:33+08:00 ] 127.0.0.1 /Room/getRoomStatus
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SELECT * FROM `lq_member_token` WHERE ( zn_member_id=963 ) LIMIT 1   [ RunTime:0.0190s ]
+SQL: SELECT * FROM `lq_game_schedule` WHERE `zn_room_id` = '57' LIMIT 1   [ RunTime:0.0080s ]
+
+[ 2018-02-02T14:38:33+08:00 ] 127.0.0.1 /RoomJoin/getMakerList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SELECT * FROM `lq_member_token` WHERE ( zn_member_id=963 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT * FROM `lq_room_join` WHERE `zn_maker_status` = 1 AND `zn_room_id` = '57' ORDER BY zn_mdate  [ RunTime:0.0050s ]
+
+[ 2018-02-02T14:38:34+08:00 ] 127.0.0.1 /GameLog/getData
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SELECT * FROM `lq_member_token` WHERE ( zn_member_id=963 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT `zn_number` FROM `lq_game_log` WHERE `zn_room_id` = '57' AND `zn_visible` = 1 GROUP BY zn_number ORDER BY zn_number  [ RunTime:0.0040s ]
+SQL: SELECT * FROM `lq_game_log` WHERE `zn_room_id` = '57' AND `zn_visible` = 1 AND `zn_number` = '0'  [ RunTime:0.0080s ]
+SQL: SELECT * FROM `lq_game_log` WHERE `zn_room_id` = '57' AND `zn_visible` = 1 AND `zn_number` = '1'  [ RunTime:0.0090s ]
+SQL: SELECT * FROM `lq_game_log` WHERE `zn_room_id` = '57' AND `zn_visible` = 1 AND `zn_number` = '2'  [ RunTime:0.0060s ]
+SQL: SELECT * FROM `lq_game_log` WHERE `zn_room_id` = '57' AND `zn_visible` = 1 AND `zn_number` = '3'  [ RunTime:0.0050s ]
+SQL: SELECT * FROM `lq_game_log` WHERE `zn_room_id` = '57' AND `zn_visible` = 1 AND `zn_number` = '4'  [ RunTime:0.0050s ]
+
+[ 2018-02-02T14:38:43+08:00 ] 127.0.0.1 /Room/getRooms
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SELECT * FROM `lq_member_token` WHERE ( zn_member_id=966 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT * FROM `lq_room` WHERE `zc_number` = '964610' LIMIT 1   [ RunTime:0.0040s ]
+
+[ 2018-02-02T14:38:43+08:00 ] 127.0.0.1 /RoomJoin/getJoinRoomList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SELECT * FROM `lq_member_token` WHERE ( zn_member_id=966 ) LIMIT 1   [ RunTime:0.0480s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_room_join` WHERE `zl_visible` = 1 AND `zn_room_id` = '57' LIMIT 1   [ RunTime:0.0050s ]
+SQL: SELECT * FROM `lq_room_join` WHERE `zl_visible` = 1 AND `zn_room_id` = '57' ORDER BY zn_cdate desc LIMIT 0,100   [ RunTime:0.0040s ]
+
+[ 2018-02-02T14:38:43+08:00 ] 127.0.0.1 /RoomJoin/getMakerList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SELECT * FROM `lq_member_token` WHERE ( zn_member_id=966 ) LIMIT 1   [ RunTime:0.0050s ]
+SQL: SELECT * FROM `lq_room_join` WHERE `zn_maker_status` = 1 AND `zn_room_id` = '57' ORDER BY zn_mdate  [ RunTime:0.0060s ]
+
+[ 2018-02-02T14:38:43+08:00 ] 127.0.0.1 /Room/getRoomStatus
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SELECT * FROM `lq_member_token` WHERE ( zn_member_id=966 ) LIMIT 1   [ RunTime:0.0050s ]
+SQL: SELECT * FROM `lq_game_schedule` WHERE `zn_room_id` = '57' LIMIT 1   [ RunTime:0.0040s ]
+
+[ 2018-02-02T14:38:43+08:00 ] 127.0.0.1 /GameLog/getData
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SELECT * FROM `lq_member_token` WHERE ( zn_member_id=966 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT `zn_number` FROM `lq_game_log` WHERE `zn_room_id` = '57' AND `zn_visible` = 1 GROUP BY zn_number ORDER BY zn_number  [ RunTime:0.0060s ]
+SQL: SELECT * FROM `lq_game_log` WHERE `zn_room_id` = '57' AND `zn_visible` = 1 AND `zn_number` = '0'  [ RunTime:0.0050s ]
+SQL: SELECT * FROM `lq_game_log` WHERE `zn_room_id` = '57' AND `zn_visible` = 1 AND `zn_number` = '1'  [ RunTime:0.0220s ]
+SQL: SELECT * FROM `lq_game_log` WHERE `zn_room_id` = '57' AND `zn_visible` = 1 AND `zn_number` = '2'  [ RunTime:0.0080s ]
+SQL: SELECT * FROM `lq_game_log` WHERE `zn_room_id` = '57' AND `zn_visible` = 1 AND `zn_number` = '3'  [ RunTime:0.0080s ]
+SQL: SELECT * FROM `lq_game_log` WHERE `zn_room_id` = '57' AND `zn_visible` = 1 AND `zn_number` = '4'  [ RunTime:0.0060s ]
+
+[ 2018-02-02T14:38:44+08:00 ] 127.0.0.1 /MemberFriend/getFrientList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SELECT * FROM `lq_member_token` WHERE ( zn_member_id=958 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_member_friend` WHERE `zl_visible` = 1 AND `zn_mid` = '958' LIMIT 1   [ RunTime:0.0050s ]
+SQL: SELECT * FROM `lq_member_friend` WHERE `zl_visible` = 1 AND `zn_mid` = '958' ORDER BY zn_cdate LIMIT 0,15   [ RunTime:0.0050s ]
+
+[ 2018-02-02T14:38:44+08:00 ] 127.0.0.1 /MemberNotice/getNotify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SELECT * FROM `lq_member_token` WHERE ( zn_member_id=958 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT * FROM `lq_member_notice` WHERE `zl_visible` = 1 AND `zn_mid` = '958' ORDER BY zn_way,zn_cdate LIMIT 5   [ RunTime:0.0050s ]
+SQL: SELECT `zc_title`,`zc_content` FROM `lq_article` WHERE ( id=156 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT `zc_title`,`zc_content` FROM `lq_article` WHERE ( id=156 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT `zc_title`,`zc_content` FROM `lq_article` WHERE ( id=157 ) LIMIT 1   [ RunTime:0.0080s ]
+
+[ 2018-02-02T14:38:51+08:00 ] 127.0.0.1 /MemberFriend/getFrientList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SELECT * FROM `lq_member_token` WHERE ( zn_member_id=958 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_member_friend` WHERE `zl_visible` = 1 AND `zn_mid` = '958' LIMIT 1   [ RunTime:0.0050s ]
+SQL: SELECT * FROM `lq_member_friend` WHERE `zl_visible` = 1 AND `zn_mid` = '958' ORDER BY zn_cdate LIMIT 0,15   [ RunTime:0.0060s ]
+
+[ 2018-02-02T14:38:51+08:00 ] 127.0.0.1 /MemberNotice/getNotify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SELECT * FROM `lq_member_token` WHERE ( zn_member_id=958 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT * FROM `lq_member_notice` WHERE `zl_visible` = 1 AND `zn_mid` = '958' ORDER BY zn_way,zn_cdate LIMIT 5   [ RunTime:0.0050s ]
+SQL: SELECT `zc_title`,`zc_content` FROM `lq_article` WHERE ( id=156 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT `zc_title`,`zc_content` FROM `lq_article` WHERE ( id=156 ) LIMIT 1   [ RunTime:0.0060s ]
+SQL: SELECT `zc_title`,`zc_content` FROM `lq_article` WHERE ( id=157 ) LIMIT 1   [ RunTime:0.0040s ]
+
+[ 2018-02-02T14:38:55+08:00 ] 127.0.0.1 /MemberFriend/getFrientList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SELECT * FROM `lq_member_token` WHERE ( zn_member_id=958 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_member_friend` WHERE `zl_visible` = 1 AND `zn_mid` = '958' LIMIT 1   [ RunTime:0.0060s ]
+SQL: SELECT * FROM `lq_member_friend` WHERE `zl_visible` = 1 AND `zn_mid` = '958' ORDER BY zn_cdate LIMIT 0,15   [ RunTime:0.0110s ]
+
+[ 2018-02-02T14:38:55+08:00 ] 127.0.0.1 /MemberNotice/getNotify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SELECT * FROM `lq_member_token` WHERE ( zn_member_id=958 ) LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT * FROM `lq_member_notice` WHERE `zl_visible` = 1 AND `zn_mid` = '958' ORDER BY zn_way,zn_cdate LIMIT 5   [ RunTime:0.0110s ]
+SQL: SELECT `zc_title`,`zc_content` FROM `lq_article` WHERE ( id=156 ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT `zc_title`,`zc_content` FROM `lq_article` WHERE ( id=156 ) LIMIT 1   [ RunTime:0.0060s ]
+SQL: SELECT `zc_title`,`zc_content` FROM `lq_article` WHERE ( id=157 ) LIMIT 1   [ RunTime:0.0040s ]
+
+[ 2018-02-02T14:39:00+08:00 ] 127.0.0.1 /MemberFriend/getFrientList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SELECT * FROM `lq_member_token` WHERE ( zn_member_id=958 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_member_friend` WHERE `zl_visible` = 1 AND `zn_mid` = '958' LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT * FROM `lq_member_friend` WHERE `zl_visible` = 1 AND `zn_mid` = '958' ORDER BY zn_cdate LIMIT 0,15   [ RunTime:0.0050s ]
+
+[ 2018-02-02T14:39:00+08:00 ] 127.0.0.1 /MemberNotice/getNotify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SELECT * FROM `lq_member_token` WHERE ( zn_member_id=958 ) LIMIT 1   [ RunTime:0.0050s ]
+SQL: SELECT * FROM `lq_member_notice` WHERE `zl_visible` = 1 AND `zn_mid` = '958' ORDER BY zn_way,zn_cdate LIMIT 5   [ RunTime:0.0050s ]
+SQL: SELECT `zc_title`,`zc_content` FROM `lq_article` WHERE ( id=156 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT `zc_title`,`zc_content` FROM `lq_article` WHERE ( id=156 ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT `zc_title`,`zc_content` FROM `lq_article` WHERE ( id=157 ) LIMIT 1   [ RunTime:0.0040s ]
+
+[ 2018-02-02T14:39:12+08:00 ] 127.0.0.1 /MemberNotice/getNotify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SELECT * FROM `lq_member_token` WHERE ( zn_member_id=958 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT * FROM `lq_member_notice` WHERE `zl_visible` = 1 AND `zn_mid` = '958' ORDER BY zn_way,zn_cdate LIMIT 5   [ RunTime:0.0030s ]
+SQL: SELECT `zc_title`,`zc_content` FROM `lq_article` WHERE ( id=156 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT `zc_title`,`zc_content` FROM `lq_article` WHERE ( id=156 ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT `zc_title`,`zc_content` FROM `lq_article` WHERE ( id=157 ) LIMIT 1   [ RunTime:0.0030s ]
+
+[ 2018-02-02T14:39:12+08:00 ] 127.0.0.1 /MemberFriend/getFrientList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SELECT * FROM `lq_member_token` WHERE ( zn_member_id=958 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_member_friend` WHERE `zl_visible` = 1 AND `zn_mid` = '958' LIMIT 1   [ RunTime:0.0050s ]
+SQL: SELECT * FROM `lq_member_friend` WHERE `zl_visible` = 1 AND `zn_mid` = '958' ORDER BY zn_cdate LIMIT 0,15   [ RunTime:0.0050s ]
+
+[ 2018-02-02T14:39:20+08:00 ] 127.0.0.1 /MemberNotice/getNotify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SELECT * FROM `lq_member_token` WHERE ( zn_member_id=958 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT * FROM `lq_member_notice` WHERE `zl_visible` = 1 AND `zn_mid` = '958' ORDER BY zn_way,zn_cdate LIMIT 5   [ RunTime:0.0040s ]
+SQL: SELECT `zc_title`,`zc_content` FROM `lq_article` WHERE ( id=156 ) LIMIT 1   [ RunTime:0.0050s ]
+SQL: SELECT `zc_title`,`zc_content` FROM `lq_article` WHERE ( id=156 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT `zc_title`,`zc_content` FROM `lq_article` WHERE ( id=157 ) LIMIT 1   [ RunTime:0.0040s ]
+
+[ 2018-02-02T14:39:21+08:00 ] 127.0.0.1 /MemberFriend/getFrientList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SELECT * FROM `lq_member_token` WHERE ( zn_member_id=958 ) LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_member_friend` WHERE `zl_visible` = 1 AND `zn_mid` = '958' LIMIT 1   [ RunTime:0.0100s ]
+SQL: SELECT * FROM `lq_member_friend` WHERE `zl_visible` = 1 AND `zn_mid` = '958' ORDER BY zn_cdate LIMIT 0,15   [ RunTime:0.0120s ]
+
+[ 2018-02-02T14:39:23+08:00 ] 127.0.0.1 /GameLog/getData
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SELECT * FROM `lq_member_token` WHERE ( zn_member_id=27 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT `zn_number` FROM `lq_game_log` WHERE `zn_room_id` = '29' AND `zn_visible` = 1 GROUP BY zn_number ORDER BY zn_number  [ RunTime:0.0040s ]
+SQL: SELECT * FROM `lq_game_log` WHERE `zn_room_id` = '29' AND `zn_visible` = 1 AND `zn_number` = '1'  [ RunTime:0.0050s ]
+SQL: SELECT * FROM `lq_game_log` WHERE `zn_room_id` = '29' AND `zn_visible` = 1 AND `zn_number` = '2'  [ RunTime:0.0050s ]
+SQL: SELECT * FROM `lq_game_log` WHERE `zn_room_id` = '29' AND `zn_visible` = 1 AND `zn_number` = '3'  [ RunTime:0.0040s ]
+SQL: SELECT * FROM `lq_game_log` WHERE `zn_room_id` = '29' AND `zn_visible` = 1 AND `zn_number` = '4'  [ RunTime:0.0040s ]
+SQL: SELECT * FROM `lq_game_log` WHERE `zn_room_id` = '29' AND `zn_visible` = 1 AND `zn_number` = '5'  [ RunTime:0.0060s ]
+SQL: SELECT * FROM `lq_game_log` WHERE `zn_room_id` = '29' AND `zn_visible` = 1 AND `zn_number` = '6'  [ RunTime:0.0040s ]
+SQL: SELECT * FROM `lq_game_log` WHERE `zn_room_id` = '29' AND `zn_visible` = 1 AND `zn_number` = '7'  [ RunTime:0.0050s ]
+SQL: SELECT * FROM `lq_game_log` WHERE `zn_room_id` = '29' AND `zn_visible` = 1 AND `zn_number` = '8'  [ RunTime:0.0040s ]
+SQL: SELECT * FROM `lq_game_log` WHERE `zn_room_id` = '29' AND `zn_visible` = 1 AND `zn_number` = '9'  [ RunTime:0.0040s ]
+SQL: SELECT * FROM `lq_game_log` WHERE `zn_room_id` = '29' AND `zn_visible` = 1 AND `zn_number` = '10'  [ RunTime:0.0040s ]
+
+[ 2018-02-02T14:39:25+08:00 ] 127.0.0.1 /MemberNotice/getNotify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SELECT * FROM `lq_member_token` WHERE ( zn_member_id=958 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT * FROM `lq_member_notice` WHERE `zl_visible` = 1 AND `zn_mid` = '958' ORDER BY zn_way,zn_cdate LIMIT 5   [ RunTime:0.0040s ]
+SQL: SELECT `zc_title`,`zc_content` FROM `lq_article` WHERE ( id=156 ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT `zc_title`,`zc_content` FROM `lq_article` WHERE ( id=156 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT `zc_title`,`zc_content` FROM `lq_article` WHERE ( id=157 ) LIMIT 1   [ RunTime:0.0030s ]
+
+[ 2018-02-02T14:39:26+08:00 ] 127.0.0.1 /MemberFriend/getFrientList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SELECT * FROM `lq_member_token` WHERE ( zn_member_id=958 ) LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_member_friend` WHERE `zl_visible` = 1 AND `zn_mid` = '958' LIMIT 1   [ RunTime:0.0060s ]
+SQL: SELECT * FROM `lq_member_friend` WHERE `zl_visible` = 1 AND `zn_mid` = '958' ORDER BY zn_cdate LIMIT 0,15   [ RunTime:0.0040s ]
+
+[ 2018-02-02T14:40:14+08:00 ] 127.0.0.1 /GameLog/getData
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SELECT * FROM `lq_member_token` WHERE ( zn_member_id=27 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT `zn_number` FROM `lq_game_log` WHERE `zn_room_id` = '29' AND `zn_visible` = 1 GROUP BY zn_number ORDER BY zn_number  [ RunTime:0.0070s ]
+SQL: SELECT * FROM `lq_game_log` WHERE `zn_room_id` = '29' AND `zn_visible` = 1 AND `zn_number` = '1'  [ RunTime:0.0050s ]
+SQL: SELECT * FROM `lq_game_log` WHERE `zn_room_id` = '29' AND `zn_visible` = 1 AND `zn_number` = '2'  [ RunTime:0.0090s ]
+SQL: SELECT * FROM `lq_game_log` WHERE `zn_room_id` = '29' AND `zn_visible` = 1 AND `zn_number` = '3'  [ RunTime:0.0050s ]
+SQL: SELECT * FROM `lq_game_log` WHERE `zn_room_id` = '29' AND `zn_visible` = 1 AND `zn_number` = '4'  [ RunTime:0.0050s ]
+SQL: SELECT * FROM `lq_game_log` WHERE `zn_room_id` = '29' AND `zn_visible` = 1 AND `zn_number` = '5'  [ RunTime:0.0050s ]
+SQL: SELECT * FROM `lq_game_log` WHERE `zn_room_id` = '29' AND `zn_visible` = 1 AND `zn_number` = '6'  [ RunTime:0.0050s ]
+SQL: SELECT * FROM `lq_game_log` WHERE `zn_room_id` = '29' AND `zn_visible` = 1 AND `zn_number` = '7'  [ RunTime:0.0040s ]
+SQL: SELECT * FROM `lq_game_log` WHERE `zn_room_id` = '29' AND `zn_visible` = 1 AND `zn_number` = '8'  [ RunTime:0.0060s ]
+SQL: SELECT * FROM `lq_game_log` WHERE `zn_room_id` = '29' AND `zn_visible` = 1 AND `zn_number` = '9'  [ RunTime:0.0040s ]
+SQL: SELECT * FROM `lq_game_log` WHERE `zn_room_id` = '29' AND `zn_visible` = 1 AND `zn_number` = '10'  [ RunTime:0.0070s ]
+
+[ 2018-02-02T14:40:30+08:00 ] 127.0.0.1 /GameLog/getData
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SELECT * FROM `lq_member_token` WHERE ( zn_member_id=27 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT `zn_number` FROM `lq_game_log` WHERE `zn_room_id` = '29' AND `zn_visible` = 1 GROUP BY zn_number ORDER BY zn_number  [ RunTime:0.0040s ]
+SQL: SELECT * FROM `lq_game_log` WHERE `zn_room_id` = '29' AND `zn_visible` = 1 AND `zn_number` = '1'  [ RunTime:0.0030s ]
+SQL: SELECT * FROM `lq_game_log` WHERE `zn_room_id` = '29' AND `zn_visible` = 1 AND `zn_number` = '2'  [ RunTime:0.0040s ]
+SQL: SELECT * FROM `lq_game_log` WHERE `zn_room_id` = '29' AND `zn_visible` = 1 AND `zn_number` = '3'  [ RunTime:0.0030s ]
+SQL: SELECT * FROM `lq_game_log` WHERE `zn_room_id` = '29' AND `zn_visible` = 1 AND `zn_number` = '4'  [ RunTime:0.0050s ]
+SQL: SELECT * FROM `lq_game_log` WHERE `zn_room_id` = '29' AND `zn_visible` = 1 AND `zn_number` = '5'  [ RunTime:0.0040s ]
+SQL: SELECT * FROM `lq_game_log` WHERE `zn_room_id` = '29' AND `zn_visible` = 1 AND `zn_number` = '6'  [ RunTime:0.0050s ]
+SQL: SELECT * FROM `lq_game_log` WHERE `zn_room_id` = '29' AND `zn_visible` = 1 AND `zn_number` = '7'  [ RunTime:0.0030s ]
+SQL: SELECT * FROM `lq_game_log` WHERE `zn_room_id` = '29' AND `zn_visible` = 1 AND `zn_number` = '8'  [ RunTime:0.0040s ]
+SQL: SELECT * FROM `lq_game_log` WHERE `zn_room_id` = '29' AND `zn_visible` = 1 AND `zn_number` = '9'  [ RunTime:0.0040s ]
+SQL: SELECT * FROM `lq_game_log` WHERE `zn_room_id` = '29' AND `zn_visible` = 1 AND `zn_number` = '10'  [ RunTime:0.0040s ]
+
+[ 2018-02-02T14:41:44+08:00 ] 127.0.0.1 /Room/getRooms
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SELECT * FROM `lq_member_token` WHERE ( zn_member_id=966 ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT * FROM `lq_room` WHERE `zc_number` = '964610' LIMIT 1   [ RunTime:0.0050s ]
+
+[ 2018-02-02T14:41:44+08:00 ] 127.0.0.1 /Room/getRooms
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SELECT * FROM `lq_member_token` WHERE ( zn_member_id=963 ) LIMIT 1   [ RunTime:0.0050s ]
+SQL: SELECT * FROM `lq_room` WHERE `zc_number` = '964610' LIMIT 1   [ RunTime:0.0060s ]
+
+[ 2018-02-02T14:41:44+08:00 ] 127.0.0.1 /RoomJoin/getJoinRoomList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SELECT * FROM `lq_member_token` WHERE ( zn_member_id=966 ) LIMIT 1   [ RunTime:0.0060s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_room_join` WHERE `zl_visible` = 1 AND `zn_room_id` = '57' LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT * FROM `lq_room_join` WHERE `zl_visible` = 1 AND `zn_room_id` = '57' ORDER BY zn_cdate desc LIMIT 0,100   [ RunTime:0.0070s ]
+
+[ 2018-02-02T14:41:44+08:00 ] 127.0.0.1 /RoomJoin/getJoinRoomList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SELECT * FROM `lq_member_token` WHERE ( zn_member_id=963 ) LIMIT 1   [ RunTime:0.0430s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_room_join` WHERE `zl_visible` = 1 AND `zn_room_id` = '57' LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT * FROM `lq_room_join` WHERE `zl_visible` = 1 AND `zn_room_id` = '57' ORDER BY zn_cdate desc LIMIT 0,100   [ RunTime:0.0060s ]
+
+[ 2018-02-02T14:41:45+08:00 ] 127.0.0.1 /Room/getRooms
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SELECT * FROM `lq_member_token` WHERE ( zn_member_id=964 ) LIMIT 1   [ RunTime:0.0160s ]
+SQL: SELECT * FROM `lq_room` WHERE `zc_number` = '964610' LIMIT 1   [ RunTime:0.0140s ]
+
+[ 2018-02-02T14:41:46+08:00 ] 127.0.0.1 /Room/getRoomStatus
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SELECT * FROM `lq_member_token` WHERE ( zn_member_id=966 ) LIMIT 1   [ RunTime:0.0160s ]
+SQL: SELECT * FROM `lq_game_schedule` WHERE `zn_room_id` = '57' LIMIT 1   [ RunTime:0.3070s ]
+
+[ 2018-02-02T14:41:46+08:00 ] 127.0.0.1 /RoomJoin/getMakerList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SELECT * FROM `lq_member_token` WHERE ( zn_member_id=966 ) LIMIT 1   [ RunTime:0.0150s ]
+SQL: SELECT * FROM `lq_room_join` WHERE `zn_maker_status` = 1 AND `zn_room_id` = '57' ORDER BY zn_mdate  [ RunTime:0.3060s ]
+
+[ 2018-02-02T14:41:46+08:00 ] 127.0.0.1 /Room/getRoomStatus
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SELECT * FROM `lq_member_token` WHERE ( zn_member_id=963 ) LIMIT 1   [ RunTime:0.0150s ]
+SQL: SELECT * FROM `lq_game_schedule` WHERE `zn_room_id` = '57' LIMIT 1   [ RunTime:0.3080s ]
+
+[ 2018-02-02T14:41:47+08:00 ] 127.0.0.1 /RoomJoin/getMakerList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SELECT * FROM `lq_member_token` WHERE ( zn_member_id=964 ) LIMIT 1   [ RunTime:0.0050s ]
+SQL: SELECT * FROM `lq_room_join` WHERE `zn_maker_status` = 1 AND `zn_room_id` = '57' ORDER BY zn_mdate  [ RunTime:0.0080s ]
+
+[ 2018-02-02T14:41:47+08:00 ] 127.0.0.1 /RoomJoin/getJoinRoomList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SELECT * FROM `lq_member_token` WHERE ( zn_member_id=964 ) LIMIT 1   [ RunTime:0.0060s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_room_join` WHERE `zl_visible` = 1 AND `zn_room_id` = '57' LIMIT 1   [ RunTime:0.0060s ]
+SQL: SELECT * FROM `lq_room_join` WHERE `zl_visible` = 1 AND `zn_room_id` = '57' ORDER BY zn_cdate desc LIMIT 0,100   [ RunTime:0.0420s ]
+
+[ 2018-02-02T14:41:47+08:00 ] 127.0.0.1 /GameLog/getData
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SELECT * FROM `lq_member_token` WHERE ( zn_member_id=963 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT `zn_number` FROM `lq_game_log` WHERE `zn_room_id` = '57' AND `zn_visible` = 1 GROUP BY zn_number ORDER BY zn_number  [ RunTime:0.0100s ]
+SQL: SELECT * FROM `lq_game_log` WHERE `zn_room_id` = '57' AND `zn_visible` = 1 AND `zn_number` = '0'  [ RunTime:0.0410s ]
+SQL: SELECT * FROM `lq_game_log` WHERE `zn_room_id` = '57' AND `zn_visible` = 1 AND `zn_number` = '1'  [ RunTime:0.0060s ]
+SQL: SELECT * FROM `lq_game_log` WHERE `zn_room_id` = '57' AND `zn_visible` = 1 AND `zn_number` = '2'  [ RunTime:0.0110s ]
+SQL: SELECT * FROM `lq_game_log` WHERE `zn_room_id` = '57' AND `zn_visible` = 1 AND `zn_number` = '3'  [ RunTime:0.0160s ]
+SQL: SELECT * FROM `lq_game_log` WHERE `zn_room_id` = '57' AND `zn_visible` = 1 AND `zn_number` = '4'  [ RunTime:0.0060s ]
+
+[ 2018-02-02T14:41:47+08:00 ] 127.0.0.1 /GameLog/getData
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SELECT * FROM `lq_member_token` WHERE ( zn_member_id=964 ) LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT `zn_number` FROM `lq_game_log` WHERE `zn_room_id` = '57' AND `zn_visible` = 1 GROUP BY zn_number ORDER BY zn_number  [ RunTime:0.0420s ]
+SQL: SELECT * FROM `lq_game_log` WHERE `zn_room_id` = '57' AND `zn_visible` = 1 AND `zn_number` = '0'  [ RunTime:0.0050s ]
+SQL: SELECT * FROM `lq_game_log` WHERE `zn_room_id` = '57' AND `zn_visible` = 1 AND `zn_number` = '1'  [ RunTime:0.0080s ]
+SQL: SELECT * FROM `lq_game_log` WHERE `zn_room_id` = '57' AND `zn_visible` = 1 AND `zn_number` = '2'  [ RunTime:0.0100s ]
+SQL: SELECT * FROM `lq_game_log` WHERE `zn_room_id` = '57' AND `zn_visible` = 1 AND `zn_number` = '3'  [ RunTime:0.0100s ]
+SQL: SELECT * FROM `lq_game_log` WHERE `zn_room_id` = '57' AND `zn_visible` = 1 AND `zn_number` = '4'  [ RunTime:0.0050s ]
+
+[ 2018-02-02T14:41:47+08:00 ] 127.0.0.1 /GameLog/getData
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SELECT * FROM `lq_member_token` WHERE ( zn_member_id=966 ) LIMIT 1   [ RunTime:0.0160s ]
+SQL: SELECT `zn_number` FROM `lq_game_log` WHERE `zn_room_id` = '57' AND `zn_visible` = 1 GROUP BY zn_number ORDER BY zn_number  [ RunTime:0.3080s ]
+SQL: SELECT * FROM `lq_game_log` WHERE `zn_room_id` = '57' AND `zn_visible` = 1 AND `zn_number` = '0'  [ RunTime:1.3200s ]
+SQL: SELECT * FROM `lq_game_log` WHERE `zn_room_id` = '57' AND `zn_visible` = 1 AND `zn_number` = '1'  [ RunTime:0.0080s ]
+SQL: SELECT * FROM `lq_game_log` WHERE `zn_room_id` = '57' AND `zn_visible` = 1 AND `zn_number` = '2'  [ RunTime:0.0100s ]
+SQL: SELECT * FROM `lq_game_log` WHERE `zn_room_id` = '57' AND `zn_visible` = 1 AND `zn_number` = '3'  [ RunTime:0.0090s ]
+SQL: SELECT * FROM `lq_game_log` WHERE `zn_room_id` = '57' AND `zn_visible` = 1 AND `zn_number` = '4'  [ RunTime:0.0060s ]
+
+[ 2018-02-02T14:41:47+08:00 ] 127.0.0.1 /RoomJoin/getMakerList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SELECT * FROM `lq_member_token` WHERE ( zn_member_id=963 ) LIMIT 1   [ RunTime:0.0160s ]
+SQL: SELECT * FROM `lq_room_join` WHERE `zn_maker_status` = 1 AND `zn_room_id` = '57' ORDER BY zn_mdate  [ RunTime:0.0040s ]
+
+[ 2018-02-02T14:42:47+08:00 ] 127.0.0.1 /GameLog/getData
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SELECT * FROM `lq_member_token` WHERE ( zn_member_id=27 ) LIMIT 1   [ RunTime:0.0380s ]
+SQL: SELECT `zn_number` FROM `lq_game_log` WHERE `zn_room_id` = '29' AND `zn_visible` = 1 GROUP BY zn_number ORDER BY zn_number  [ RunTime:0.0260s ]
+SQL: SELECT * FROM `lq_game_log` WHERE `zn_room_id` = '29' AND `zn_visible` = 1 AND `zn_number` = '1'  [ RunTime:0.0080s ]
+SQL: SELECT * FROM `lq_game_log` WHERE `zn_room_id` = '29' AND `zn_visible` = 1 AND `zn_number` = '2'  [ RunTime:0.1930s ]
+SQL: SELECT * FROM `lq_game_log` WHERE `zn_room_id` = '29' AND `zn_visible` = 1 AND `zn_number` = '3'  [ RunTime:0.6040s ]
+SQL: SELECT * FROM `lq_game_log` WHERE `zn_room_id` = '29' AND `zn_visible` = 1 AND `zn_number` = '4'  [ RunTime:0.0610s ]
+SQL: SELECT * FROM `lq_game_log` WHERE `zn_room_id` = '29' AND `zn_visible` = 1 AND `zn_number` = '5'  [ RunTime:0.4210s ]
+SQL: SELECT * FROM `lq_game_log` WHERE `zn_room_id` = '29' AND `zn_visible` = 1 AND `zn_number` = '6'  [ RunTime:0.2570s ]
+SQL: SELECT * FROM `lq_game_log` WHERE `zn_room_id` = '29' AND `zn_visible` = 1 AND `zn_number` = '7'  [ RunTime:0.0760s ]
+SQL: SELECT * FROM `lq_game_log` WHERE `zn_room_id` = '29' AND `zn_visible` = 1 AND `zn_number` = '8'  [ RunTime:0.0500s ]
+SQL: SELECT * FROM `lq_game_log` WHERE `zn_room_id` = '29' AND `zn_visible` = 1 AND `zn_number` = '9'  [ RunTime:0.0280s ]
+SQL: SELECT * FROM `lq_game_log` WHERE `zn_room_id` = '29' AND `zn_visible` = 1 AND `zn_number` = '10'  [ RunTime:0.1000s ]
+
