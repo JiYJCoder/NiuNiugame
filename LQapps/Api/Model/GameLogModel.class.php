@@ -6,7 +6,7 @@ class GameLogModel extends PublicModel {
     protected $_validate = array(
         array('zn_member_id','require','缺少必要参数1!'), //用户id
         array('zn_room_id','require','缺少必要参数2！'), //房间id
-        array('zc_is_boss','require','缺少必要参数3！'), //是否庄家
+        array('zc_is_boss','require','缺少必要参数3！'), //是否庄家 0不是，1是
 //        array('zn_points_total','require','缺少必要参数4！'), //玩家总分数
         array('zn_number','require','缺少必要参数5！'), //局数
         array('zn_points_give','require','缺少必要参数7！'), //抽水分数
@@ -14,6 +14,7 @@ class GameLogModel extends PublicModel {
         array('zc_result','require','缺少必要参数9！'), //压牌结果
         array('zn_few','require','缺少必要参数10！'), //第几副牌
         array('zc_name','require','缺少必要参数11！'), //用户昵称
+        array('zc_name','require','缺少必要参数12！'), //流水分数
     );
     protected $_auto = array (
         array('zn_cdate','time',1,'function'), // 对create_time字段在更新的时候写入当前时间戳

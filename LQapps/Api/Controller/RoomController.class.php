@@ -178,6 +178,7 @@ class RoomController extends PublicController
                     $to =  array($roomData['zn_member_id']);
                     $notiftData =array('type'=>2,'nikename'=>$this->login_member_info['zc_nickname'],'id'=>$this->login_member_info['id'],'roomid'=>$_POST['roomid']);
                     $this->socket->setUser($to)->setContent($notiftData)->push();
+                    $this->ajaxReturn(array('msg'=>'请等待房主确认','status'=>3));
                 }
             }else{
                 $this->ajaxReturn(array('msg'=>'房间不公开','status'=>0));
@@ -409,9 +410,9 @@ class RoomController extends PublicController
     //重新开局
     public function  reGame(){
         $roomid = I('post.roomid');
-        $flg=$this->roomJoin->setAll($roomid,'zn_points',0);
+//        $flg=$this->roomJoin->setAll($roomid,'zn_points',0);
         $flg1= $this->gameLog->setAll($roomid,'zn_visible',0);
-        if($flg!==false&&$flg1!==false){
+        if($flg1!==false){
             $joinPerAll = $this->notift->apiGetNumPer($roomid); //获取要通知的人
             $toArray = array();//通知人数
             foreach ($joinPerAll as $key=>$val){

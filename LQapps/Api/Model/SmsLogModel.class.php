@@ -33,6 +33,7 @@ class SmsLogModel extends PublicModel {
     public function isEffective($mobile='',$action='login',$code=''){
 		if(!$code) return false;
 		$exp_date = $this->where("zl_use=0 and zc_mobile='$mobile' and zc_action='$action' and zc_check_code='$code'")->getField('zn_exp_date');
+		lq_test($this->getLastSql());
 		if(!$exp_date) return false;
 		if( NOW_TIME<$exp_date ){//超出10分钟
 			return true;

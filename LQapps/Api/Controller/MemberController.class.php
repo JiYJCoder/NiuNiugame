@@ -132,11 +132,11 @@ class MemberController extends PublicController
     public function changePassword(){
         $password = I('post.password');
         $mobile = I('post.mobile');
-        $code = I('post.code');
-        $yzm=$this->D_SMS->isEffective($mobile,'changePassword',$code);
-        if(!$yzm){
-            $this->ajaxReturn(array('msg'=>'验证码不正确','status'=>0));
-        }
+        $code = intval(I('post.code'));
+        $yzm=$this->D_SMS->isEffective($mobile,'modif',$code);
+//        if(!$yzm){
+//            $this->ajaxReturn(array('msg'=>'验证码不正确','status'=>0));
+//        }
         $data['id'] = M("Member")->where(array("zc_mobile"=>$mobile))->getField("id");
         $data['zc_password'] = md5($password);
         $flag= $this->model_member->apiSaveMember($data);

@@ -1,0 +1,203 @@
+[ 2018-02-06T11:33:11+08:00 ] 127.0.0.1 /sys-index.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-02-06T11:33:11+08:00 ] 127.0.0.1 /sys-index.php/Login/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\ShowRuntimeBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-02-06T11:33:11+08:00 ] 127.0.0.1 /sys-index.php/Login/checkCode
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-02-06T11:33:16+08:00 ] 127.0.0.1 /sys-index.php/Login/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SELECT `id`,`zc_account`,`zc_email`,`zc_mobile`,`zc_password`,`zc_salt`,`zn_trylogin_times`,`zn_trylogin_lasttime`,`zl_visible` FROM `lq_admin` WHERE `zc_account` = 'littleHe' LIMIT 1   [ RunTime:0.0350s ]
+SQL: UPDATE `lq_admin` SET `zn_login_times`=zn_login_times+1,`zn_last_login_time`='1517887996',`zn_mdate`='1517887996',`zn_trylogin_times`='0',`zn_trylogin_lasttime`='1517887996' WHERE `id` = 1 [ RunTime:0.0040s ]
+SQL: SELECT * FROM `lq_admin` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0060s ]
+SQL: SELECT `id`,`zn_fid`,`zc_caption` FROM `lq_system_menu` WHERE ( zn_fid=1 and zl_is_menu=1 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0240s ]
+NOTIC: [8] Undefined variable: index C:\Users\Administrator\Desktop\niuniuGame\LQapps\User\Model\AdminModel.class.php 第 465 行.
+NOTIC: [8] Undefined index: zc_run C:\Users\Administrator\Desktop\niuniuGame\LQapps\User\Model\AdminModel.class.php 第 472 行.
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=2 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0050s ]
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=48 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0040s ]
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=49 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0040s ]
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=50 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0040s ]
+NOTIC: [8] Undefined index: zc_run C:\Users\Administrator\Desktop\niuniuGame\LQapps\User\Model\AdminModel.class.php 第 472 行.
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=41 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0040s ]
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=70 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0040s ]
+NOTIC: [8] Undefined index: zc_run C:\Users\Administrator\Desktop\niuniuGame\LQapps\User\Model\AdminModel.class.php 第 472 行.
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=44 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0040s ]
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=90 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0040s ]
+NOTIC: [8] Undefined index: zc_run C:\Users\Administrator\Desktop\niuniuGame\LQapps\User\Model\AdminModel.class.php 第 472 行.
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=45 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0040s ]
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=67 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0050s ]
+NOTIC: [8] Undefined index: zc_run C:\Users\Administrator\Desktop\niuniuGame\LQapps\User\Model\AdminModel.class.php 第 472 行.
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=47 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0190s ]
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=100 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0040s ]
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=112 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0060s ]
+NOTIC: [8] Undefined index: zc_run C:\Users\Administrator\Desktop\niuniuGame\LQapps\User\Model\AdminModel.class.php 第 472 行.
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=110 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0040s ]
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=69 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0040s ]
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=73 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0040s ]
+NOTIC: [8] Undefined index: zc_run C:\Users\Administrator\Desktop\niuniuGame\LQapps\User\Model\AdminModel.class.php 第 472 行.
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=111 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0040s ]
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=103 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0040s ]
+NOTIC: [8] Undefined index: zc_run C:\Users\Administrator\Desktop\niuniuGame\LQapps\User\Model\AdminModel.class.php 第 472 行.
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=46 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0060s ]
+NOTIC: [8] Undefined index: zc_run C:\Users\Administrator\Desktop\niuniuGame\LQapps\User\Model\AdminModel.class.php 第 472 行.
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=64 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0050s ]
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=51 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0040s ]
+SQL: SELECT `zc_popedom` FROM `lq_admin` WHERE ( id=0 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT * FROM `lq_admin` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0050s ]
+SQL: SELECT `id`,`zn_fid`,`zc_caption` FROM `lq_system_menu` WHERE ( zn_fid=1 and zl_is_menu=1 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0050s ]
+NOTIC: [8] Undefined variable: index C:\Users\Administrator\Desktop\niuniuGame\LQapps\User\Model\AdminModel.class.php 第 465 行.
+NOTIC: [8] Undefined index: zc_run C:\Users\Administrator\Desktop\niuniuGame\LQapps\User\Model\AdminModel.class.php 第 472 行.
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=2 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0110s ]
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=48 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0040s ]
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=49 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0050s ]
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=50 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0210s ]
+NOTIC: [8] Undefined index: zc_run C:\Users\Administrator\Desktop\niuniuGame\LQapps\User\Model\AdminModel.class.php 第 472 行.
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=41 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0040s ]
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=70 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0040s ]
+NOTIC: [8] Undefined index: zc_run C:\Users\Administrator\Desktop\niuniuGame\LQapps\User\Model\AdminModel.class.php 第 472 行.
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=44 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0040s ]
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=90 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0050s ]
+NOTIC: [8] Undefined index: zc_run C:\Users\Administrator\Desktop\niuniuGame\LQapps\User\Model\AdminModel.class.php 第 472 行.
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=45 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0040s ]
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=67 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0040s ]
+NOTIC: [8] Undefined index: zc_run C:\Users\Administrator\Desktop\niuniuGame\LQapps\User\Model\AdminModel.class.php 第 472 行.
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=47 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0050s ]
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=100 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0040s ]
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=112 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0040s ]
+NOTIC: [8] Undefined index: zc_run C:\Users\Administrator\Desktop\niuniuGame\LQapps\User\Model\AdminModel.class.php 第 472 行.
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=110 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0050s ]
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=69 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0040s ]
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=73 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0090s ]
+NOTIC: [8] Undefined index: zc_run C:\Users\Administrator\Desktop\niuniuGame\LQapps\User\Model\AdminModel.class.php 第 472 行.
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=111 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0040s ]
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=103 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0040s ]
+NOTIC: [8] Undefined index: zc_run C:\Users\Administrator\Desktop\niuniuGame\LQapps\User\Model\AdminModel.class.php 第 472 行.
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=46 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0030s ]
+NOTIC: [8] Undefined index: zc_run C:\Users\Administrator\Desktop\niuniuGame\LQapps\User\Model\AdminModel.class.php 第 472 行.
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=64 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0050s ]
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=51 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0070s ]
+SQL: SELECT `zc_popedom` FROM `lq_admin` WHERE ( id=0 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT * FROM `lq_admin` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0040s ]
+NOTIC: [8] Undefined index: login C:\Users\Administrator\Desktop\niuniuGame\LQapps\User\Api\AdminApi.class.php 第 326 行.
+NOTIC: [8] Undefined index: description C:\Users\Administrator\Desktop\niuniuGame\LQapps\User\Api\AdminApi.class.php 第 339 行.
+SQL: INSERT INTO `lq_admin_log` (`zn_type`,`zc_action`,`zc_table`,`zc_table_id`,`zc_description`,`zn_ip`,`zn_cdate`,`zn_operator`,`zc_account`) VALUES ('1','login','admin','1','littleHe对数据表admin进行操作。url请求:niuniugame.dev:80/sys-index.php/Login/login','2130706433','1517887996','1','littleHe') [ RunTime:0.0640s ]
+
+[ 2018-02-06T11:33:16+08:00 ] 127.0.0.1 /sys-index.php/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\ShowRuntimeBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-02-06T11:33:17+08:00 ] 127.0.0.1 /sys-index.php/Index/ajaxSearch/tcop/text
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] session_start(): Cannot send session cache limiter - headers already sent C:\Users\Administrator\Desktop\niuniuGame\Public\ThinkPHP\Common\functions.php 第 1280 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_member` WHERE ( zn_cdate >=1517328000 and zn_cdate<=1517414399 ) LIMIT 1   [ RunTime:0.0050s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_room` WHERE ( zn_cdate >=1517328000 and zn_cdate<=1517414399 ) LIMIT 1   [ RunTime:0.0050s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_game_log` WHERE ( zn_cdate >=1517328000 and zn_cdate<=1517414399 ) LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_recharge` WHERE ( zn_cdate >=1517328000 and zn_cdate<=1517414399 ) LIMIT 1   [ RunTime:0.0200s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_card_log` WHERE ( zn_cdate >=1517328000 and zn_cdate<=1517414399 ) LIMIT 1   [ RunTime:0.0350s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_chat` WHERE ( zn_cdate >=1517328000 and zn_cdate<=1517414399 ) LIMIT 1   [ RunTime:0.0380s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_member` WHERE ( zn_cdate >=1517414400 and zn_cdate<=1517500799 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_room` WHERE ( zn_cdate >=1517414400 and zn_cdate<=1517500799 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_game_log` WHERE ( zn_cdate >=1517414400 and zn_cdate<=1517500799 ) LIMIT 1   [ RunTime:0.0060s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_recharge` WHERE ( zn_cdate >=1517414400 and zn_cdate<=1517500799 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_card_log` WHERE ( zn_cdate >=1517414400 and zn_cdate<=1517500799 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_chat` WHERE ( zn_cdate >=1517414400 and zn_cdate<=1517500799 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_member` WHERE ( zn_cdate >=1517500800 and zn_cdate<=1517587199 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_room` WHERE ( zn_cdate >=1517500800 and zn_cdate<=1517587199 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_game_log` WHERE ( zn_cdate >=1517500800 and zn_cdate<=1517587199 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_recharge` WHERE ( zn_cdate >=1517500800 and zn_cdate<=1517587199 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_card_log` WHERE ( zn_cdate >=1517500800 and zn_cdate<=1517587199 ) LIMIT 1   [ RunTime:0.0050s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_chat` WHERE ( zn_cdate >=1517500800 and zn_cdate<=1517587199 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_member` WHERE ( zn_cdate >=1517587200 and zn_cdate<=1517673599 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_room` WHERE ( zn_cdate >=1517587200 and zn_cdate<=1517673599 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_game_log` WHERE ( zn_cdate >=1517587200 and zn_cdate<=1517673599 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_recharge` WHERE ( zn_cdate >=1517587200 and zn_cdate<=1517673599 ) LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_card_log` WHERE ( zn_cdate >=1517587200 and zn_cdate<=1517673599 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_chat` WHERE ( zn_cdate >=1517587200 and zn_cdate<=1517673599 ) LIMIT 1   [ RunTime:0.0050s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_member` WHERE ( zn_cdate >=1517673600 and zn_cdate<=1517759999 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_room` WHERE ( zn_cdate >=1517673600 and zn_cdate<=1517759999 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_game_log` WHERE ( zn_cdate >=1517673600 and zn_cdate<=1517759999 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_recharge` WHERE ( zn_cdate >=1517673600 and zn_cdate<=1517759999 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_card_log` WHERE ( zn_cdate >=1517673600 and zn_cdate<=1517759999 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_chat` WHERE ( zn_cdate >=1517673600 and zn_cdate<=1517759999 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_member` WHERE ( zn_cdate >=1517760000 and zn_cdate<=1517846399 ) LIMIT 1   [ RunTime:0.0060s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_room` WHERE ( zn_cdate >=1517760000 and zn_cdate<=1517846399 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_game_log` WHERE ( zn_cdate >=1517760000 and zn_cdate<=1517846399 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_recharge` WHERE ( zn_cdate >=1517760000 and zn_cdate<=1517846399 ) LIMIT 1   [ RunTime:0.0130s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_card_log` WHERE ( zn_cdate >=1517760000 and zn_cdate<=1517846399 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_chat` WHERE ( zn_cdate >=1517760000 and zn_cdate<=1517846399 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_member` WHERE ( zn_cdate >=1517846400 and zn_cdate<=1517932799 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_room` WHERE ( zn_cdate >=1517846400 and zn_cdate<=1517932799 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_game_log` WHERE ( zn_cdate >=1517846400 and zn_cdate<=1517932799 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_recharge` WHERE ( zn_cdate >=1517846400 and zn_cdate<=1517932799 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_card_log` WHERE ( zn_cdate >=1517846400 and zn_cdate<=1517932799 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_chat` WHERE ( zn_cdate >=1517846400 and zn_cdate<=1517932799 ) LIMIT 1   [ RunTime:0.0040s ]
+NOTIC: [2] Cannot modify header information - headers already sent C:\Users\Administrator\Desktop\niuniuGame\Public\ThinkPHP\Library\Think\Controller.class.php 第 220 行.
+

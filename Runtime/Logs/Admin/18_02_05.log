@@ -1,0 +1,1079 @@
+[ 2018-02-05T15:59:30+08:00 ] 127.0.0.1 /sys-index.php/Index/clearCache
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] Missing argument 1 for LQLibs\Util\Dir::__construct(), called in C:\Users\Administrator\Desktop\niuniuGame\LQapps\Admin\Controller\IndexController.class.php on line 192 and defined C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\Dir.class.php 第 40 行.
+NOTIC: [8] Undefined variable: path C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\Dir.class.php 第 41 行.
+NOTIC: [8] Undefined variable: path C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\Dir.class.php 第 42 行.
+NOTIC: [2] unlink(C:\Users\Administrator\Desktop\niuniuGame/Runtime/runCache.php): No such file or directory C:\Users\Administrator\Desktop\niuniuGame\LQapps\Admin\Controller\IndexController.class.php 第 195 行.
+NOTIC: [8192] Non-static method LQLibs\Util\Dir::delDir() should not be called statically, assuming $this from incompatible context C:\Users\Administrator\Desktop\niuniuGame\LQapps\Admin\Controller\IndexController.class.php 第 198 行.
+NOTIC: [8192] Non-static method LQLibs\Util\Dir::delDir() should not be called statically, assuming $this from incompatible context C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\Dir.class.php 第 458 行.
+NOTIC: [8192] Non-static method LQLibs\Util\Dir::delDir() should not be called statically, assuming $this from incompatible context C:\Users\Administrator\Desktop\niuniuGame\LQapps\Admin\Controller\IndexController.class.php 第 198 行.
+NOTIC: [8192] Non-static method LQLibs\Util\Dir::delDir() should not be called statically, assuming $this from incompatible context C:\Users\Administrator\Desktop\niuniuGame\LQapps\Admin\Controller\IndexController.class.php 第 198 行.
+NOTIC: [8192] Non-static method LQLibs\Util\Dir::delDir() should not be called statically, assuming $this from incompatible context C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\Dir.class.php 第 458 行.
+NOTIC: [8192] Non-static method LQLibs\Util\Dir::delDir() should not be called statically, assuming $this from incompatible context C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\Dir.class.php 第 458 行.
+NOTIC: [8192] Non-static method LQLibs\Util\Dir::delDir() should not be called statically, assuming $this from incompatible context C:\Users\Administrator\Desktop\niuniuGame\LQapps\Admin\Controller\IndexController.class.php 第 198 行.
+NOTIC: [8192] Non-static method LQLibs\Util\Dir::delDir() should not be called statically, assuming $this from incompatible context C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\Dir.class.php 第 458 行.
+NOTIC: [8192] Non-static method LQLibs\Util\Dir::delDir() should not be called statically, assuming $this from incompatible context C:\Users\Administrator\Desktop\niuniuGame\LQapps\Admin\Controller\IndexController.class.php 第 198 行.
+NOTIC: [8192] Non-static method LQLibs\Util\Dir::delDir() should not be called statically, assuming $this from incompatible context C:\Users\Administrator\Desktop\niuniuGame\LQapps\Admin\Controller\IndexController.class.php 第 198 行.
+NOTIC: [8192] Non-static method LQLibs\Util\Dir::delDir() should not be called statically, assuming $this from incompatible context C:\Users\Administrator\Desktop\niuniuGame\LQapps\Admin\Controller\IndexController.class.php 第 198 行.
+SQL: SHOW TABLE STATUS [ RunTime:0.0130s ]
+NOTIC: [2048] Declaration of Admin\Model\AdminActionModel::setProperty() should be compatible with Think\Model::setProperty($name, $value) C:\Users\Administrator\Desktop\niuniuGame\LQapps\Admin\Model\AdminActionModel.class.php 第 5 行.
+SQL: SELECT `zc_action_key`,`zc_caption` FROM `lq_admin_action` WHERE ( zl_check_action=1 and zl_visible=1 ) ORDER BY zn_sort,id desc  [ RunTime:0.0070s ]
+NOTIC: [8] Undefined offset: 3 C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\Category.class.php 第 41 行.
+SQL: SELECT * FROM `lq_system_menu` ORDER BY  zn_fid,zn_sort ASC,id ASC  [ RunTime:0.0090s ]
+NOTIC: [8] Use of undefined constant SYSTEM_MENU_CURRENT - assumed 'SYSTEM_MENU_CURRENT' C:\Users\Administrator\Desktop\niuniuGame\LQapps\Admin\Model\SystemMenuModel.class.php 第 48 行.
+SQL: SELECT * FROM `lq_system_menu` WHERE ( id=53 ) LIMIT 1   [ RunTime:0.0050s ]
+SQL: SELECT * FROM `lq_system_menu` WHERE ( id=48 ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT * FROM `lq_system_menu` WHERE ( id=2 ) LIMIT 1   [ RunTime:0.0120s ]
+SQL: SELECT * FROM `lq_system_menu` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT * FROM `lq_system_menu` WHERE ( id=0 ) LIMIT 1   [ RunTime:0.0050s ]
+NOTIC: [8] Use of undefined constant SYSTEM_MENU_CURRENT - assumed 'SYSTEM_MENU_CURRENT' C:\Users\Administrator\Desktop\niuniuGame\LQapps\Admin\Model\SystemMenuModel.class.php 第 50 行.
+NOTIC: [8] Use of undefined constant SYSTEM_MENU_CURRENT - assumed 'SYSTEM_MENU_CURRENT' C:\Users\Administrator\Desktop\niuniuGame\LQapps\Admin\Model\SystemMenuModel.class.php 第 48 行.
+SQL: SELECT * FROM `lq_system_menu` WHERE ( id=54 ) LIMIT 1   [ RunTime:0.0100s ]
+SQL: SELECT * FROM `lq_system_menu` WHERE ( id=48 ) LIMIT 1   [ RunTime:0.0050s ]
+SQL: SELECT * FROM `lq_system_menu` WHERE ( id=2 ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT * FROM `lq_system_menu` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0050s ]
+SQL: SELECT * FROM `lq_system_menu` WHERE ( id=0 ) LIMIT 1   [ RunTime:0.0050s ]
+NOTIC: [8] Use of undefined constant SYSTEM_MENU_CURRENT - assumed 'SYSTEM_MENU_CURRENT' C:\Users\Administrator\Desktop\niuniuGame\LQapps\Admin\Model\SystemMenuModel.class.php 第 50 行.
+NOTIC: [8] Use of undefined constant SYSTEM_MENU_CURRENT - assumed 'SYSTEM_MENU_CURRENT' C:\Users\Administrator\Desktop\niuniuGame\LQapps\Admin\Model\SystemMenuModel.class.php 第 48 行.
+SQL: SELECT * FROM `lq_system_menu` WHERE ( id=55 ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT * FROM `lq_system_menu` WHERE ( id=48 ) LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT * FROM `lq_system_menu` WHERE ( id=2 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT * FROM `lq_system_menu` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT * FROM `lq_system_menu` WHERE ( id=0 ) LIMIT 1   [ RunTime:0.0090s ]
+NOTIC: [8] Use of undefined constant SYSTEM_MENU_CURRENT - assumed 'SYSTEM_MENU_CURRENT' C:\Users\Administrator\Desktop\niuniuGame\LQapps\Admin\Model\SystemMenuModel.class.php 第 50 行.
+NOTIC: [8] Use of undefined constant SYSTEM_MENU_CURRENT - assumed 'SYSTEM_MENU_CURRENT' C:\Users\Administrator\Desktop\niuniuGame\LQapps\Admin\Model\SystemMenuModel.class.php 第 48 行.
+SQL: SELECT * FROM `lq_system_menu` WHERE ( id=56 ) LIMIT 1   [ RunTime:0.0060s ]
+SQL: SELECT * FROM `lq_system_menu` WHERE ( id=49 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT * FROM `lq_system_menu` WHERE ( id=2 ) LIMIT 1   [ RunTime:0.0050s ]
+SQL: SELECT * FROM `lq_system_menu` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT * FROM `lq_system_menu` WHERE ( id=0 ) LIMIT 1   [ RunTime:0.0040s ]
+NOTIC: [8] Use of undefined constant SYSTEM_MENU_CURRENT - assumed 'SYSTEM_MENU_CURRENT' C:\Users\Administrator\Desktop\niuniuGame\LQapps\Admin\Model\SystemMenuModel.class.php 第 50 行.
+NOTIC: [8] Use of undefined constant SYSTEM_MENU_CURRENT - assumed 'SYSTEM_MENU_CURRENT' C:\Users\Administrator\Desktop\niuniuGame\LQapps\Admin\Model\SystemMenuModel.class.php 第 48 行.
+SQL: SELECT * FROM `lq_system_menu` WHERE ( id=57 ) LIMIT 1   [ RunTime:0.0060s ]
+SQL: SELECT * FROM `lq_system_menu` WHERE ( id=49 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT * FROM `lq_system_menu` WHERE ( id=2 ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT * FROM `lq_system_menu` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT * FROM `lq_system_menu` WHERE ( id=0 ) LIMIT 1   [ RunTime:0.0100s ]
+NOTIC: [8] Use of undefined constant SYSTEM_MENU_CURRENT - assumed 'SYSTEM_MENU_CURRENT' C:\Users\Administrator\Desktop\niuniuGame\LQapps\Admin\Model\SystemMenuModel.class.php 第 50 行.
+NOTIC: [8] Use of undefined constant SYSTEM_MENU_CURRENT - assumed 'SYSTEM_MENU_CURRENT' C:\Users\Administrator\Desktop\niuniuGame\LQapps\Admin\Model\SystemMenuModel.class.php 第 48 行.
+SQL: SELECT * FROM `lq_system_menu` WHERE ( id=58 ) LIMIT 1   [ RunTime:0.0050s ]
+SQL: SELECT * FROM `lq_system_menu` WHERE ( id=49 ) LIMIT 1   [ RunTime:0.0420s ]
+SQL: SELECT * FROM `lq_system_menu` WHERE ( id=2 ) LIMIT 1   [ RunTime:0.0060s ]
+SQL: SELECT * FROM `lq_system_menu` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT * FROM `lq_system_menu` WHERE ( id=0 ) LIMIT 1   [ RunTime:0.0040s ]
+NOTIC: [8] Use of undefined constant SYSTEM_MENU_CURRENT - assumed 'SYSTEM_MENU_CURRENT' C:\Users\Administrator\Desktop\niuniuGame\LQapps\Admin\Model\SystemMenuModel.class.php 第 50 行.
+NOTIC: [8] Use of undefined constant SYSTEM_MENU_CURRENT - assumed 'SYSTEM_MENU_CURRENT' C:\Users\Administrator\Desktop\niuniuGame\LQapps\Admin\Model\SystemMenuModel.class.php 第 48 行.
+SQL: SELECT * FROM `lq_system_menu` WHERE ( id=59 ) LIMIT 1   [ RunTime:0.0120s ]
+SQL: SELECT * FROM `lq_system_menu` WHERE ( id=49 ) LIMIT 1   [ RunTime:0.0110s ]
+SQL: SELECT * FROM `lq_system_menu` WHERE ( id=2 ) LIMIT 1   [ RunTime:0.0050s ]
+SQL: SELECT * FROM `lq_system_menu` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0050s ]
+SQL: SELECT * FROM `lq_system_menu` WHERE ( id=0 ) LIMIT 1   [ RunTime:0.0120s ]
+NOTIC: [8] Use of undefined constant SYSTEM_MENU_CURRENT - assumed 'SYSTEM_MENU_CURRENT' C:\Users\Administrator\Desktop\niuniuGame\LQapps\Admin\Model\SystemMenuModel.class.php 第 50 行.
+NOTIC: [8] Use of undefined constant SYSTEM_MENU_CURRENT - assumed 'SYSTEM_MENU_CURRENT' C:\Users\Administrator\Desktop\niuniuGame\LQapps\Admin\Model\SystemMenuModel.class.php 第 48 行.
+SQL: SELECT * FROM `lq_system_menu` WHERE ( id=60 ) LIMIT 1   [ RunTime:0.0200s ]
+SQL: SELECT * FROM `lq_system_menu` WHERE ( id=49 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT * FROM `lq_system_menu` WHERE ( id=2 ) LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT * FROM `lq_system_menu` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT * FROM `lq_system_menu` WHERE ( id=0 ) LIMIT 1   [ RunTime:0.0040s ]
+NOTIC: [8] Use of undefined constant SYSTEM_MENU_CURRENT - assumed 'SYSTEM_MENU_CURRENT' C:\Users\Administrator\Desktop\niuniuGame\LQapps\Admin\Model\SystemMenuModel.class.php 第 50 行.
+NOTIC: [8] Use of undefined constant SYSTEM_MENU_CURRENT - assumed 'SYSTEM_MENU_CURRENT' C:\Users\Administrator\Desktop\niuniuGame\LQapps\Admin\Model\SystemMenuModel.class.php 第 48 行.
+SQL: SELECT * FROM `lq_system_menu` WHERE ( id=61 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT * FROM `lq_system_menu` WHERE ( id=50 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT * FROM `lq_system_menu` WHERE ( id=2 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT * FROM `lq_system_menu` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT * FROM `lq_system_menu` WHERE ( id=0 ) LIMIT 1   [ RunTime:0.0060s ]
+NOTIC: [8] Use of undefined constant SYSTEM_MENU_CURRENT - assumed 'SYSTEM_MENU_CURRENT' C:\Users\Administrator\Desktop\niuniuGame\LQapps\Admin\Model\SystemMenuModel.class.php 第 50 行.
+NOTIC: [8] Use of undefined constant SYSTEM_MENU_CURRENT - assumed 'SYSTEM_MENU_CURRENT' C:\Users\Administrator\Desktop\niuniuGame\LQapps\Admin\Model\SystemMenuModel.class.php 第 48 行.
+SQL: SELECT * FROM `lq_system_menu` WHERE ( id=71 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT * FROM `lq_system_menu` WHERE ( id=70 ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT * FROM `lq_system_menu` WHERE ( id=41 ) LIMIT 1   [ RunTime:0.0130s ]
+SQL: SELECT * FROM `lq_system_menu` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT * FROM `lq_system_menu` WHERE ( id=0 ) LIMIT 1   [ RunTime:0.0030s ]
+NOTIC: [8] Use of undefined constant SYSTEM_MENU_CURRENT - assumed 'SYSTEM_MENU_CURRENT' C:\Users\Administrator\Desktop\niuniuGame\LQapps\Admin\Model\SystemMenuModel.class.php 第 50 行.
+NOTIC: [8] Use of undefined constant SYSTEM_MENU_CURRENT - assumed 'SYSTEM_MENU_CURRENT' C:\Users\Administrator\Desktop\niuniuGame\LQapps\Admin\Model\SystemMenuModel.class.php 第 48 行.
+SQL: SELECT * FROM `lq_system_menu` WHERE ( id=72 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT * FROM `lq_system_menu` WHERE ( id=70 ) LIMIT 1   [ RunTime:0.0050s ]
+SQL: SELECT * FROM `lq_system_menu` WHERE ( id=41 ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT * FROM `lq_system_menu` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT * FROM `lq_system_menu` WHERE ( id=0 ) LIMIT 1   [ RunTime:0.0030s ]
+NOTIC: [8] Use of undefined constant SYSTEM_MENU_CURRENT - assumed 'SYSTEM_MENU_CURRENT' C:\Users\Administrator\Desktop\niuniuGame\LQapps\Admin\Model\SystemMenuModel.class.php 第 50 行.
+NOTIC: [8] Use of undefined constant SYSTEM_MENU_CURRENT - assumed 'SYSTEM_MENU_CURRENT' C:\Users\Administrator\Desktop\niuniuGame\LQapps\Admin\Model\SystemMenuModel.class.php 第 48 行.
+SQL: SELECT * FROM `lq_system_menu` WHERE ( id=97 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT * FROM `lq_system_menu` WHERE ( id=90 ) LIMIT 1   [ RunTime:0.0050s ]
+SQL: SELECT * FROM `lq_system_menu` WHERE ( id=44 ) LIMIT 1   [ RunTime:0.0050s ]
+SQL: SELECT * FROM `lq_system_menu` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT * FROM `lq_system_menu` WHERE ( id=0 ) LIMIT 1   [ RunTime:0.0030s ]
+NOTIC: [8] Use of undefined constant SYSTEM_MENU_CURRENT - assumed 'SYSTEM_MENU_CURRENT' C:\Users\Administrator\Desktop\niuniuGame\LQapps\Admin\Model\SystemMenuModel.class.php 第 50 行.
+NOTIC: [8] Use of undefined constant SYSTEM_MENU_CURRENT - assumed 'SYSTEM_MENU_CURRENT' C:\Users\Administrator\Desktop\niuniuGame\LQapps\Admin\Model\SystemMenuModel.class.php 第 48 行.
+SQL: SELECT * FROM `lq_system_menu` WHERE ( id=68 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT * FROM `lq_system_menu` WHERE ( id=67 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT * FROM `lq_system_menu` WHERE ( id=45 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT * FROM `lq_system_menu` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT * FROM `lq_system_menu` WHERE ( id=0 ) LIMIT 1   [ RunTime:0.0040s ]
+NOTIC: [8] Use of undefined constant SYSTEM_MENU_CURRENT - assumed 'SYSTEM_MENU_CURRENT' C:\Users\Administrator\Desktop\niuniuGame\LQapps\Admin\Model\SystemMenuModel.class.php 第 50 行.
+NOTIC: [8] Use of undefined constant SYSTEM_MENU_CURRENT - assumed 'SYSTEM_MENU_CURRENT' C:\Users\Administrator\Desktop\niuniuGame\LQapps\Admin\Model\SystemMenuModel.class.php 第 48 行.
+SQL: SELECT * FROM `lq_system_menu` WHERE ( id=93 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT * FROM `lq_system_menu` WHERE ( id=67 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT * FROM `lq_system_menu` WHERE ( id=45 ) LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT * FROM `lq_system_menu` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT * FROM `lq_system_menu` WHERE ( id=0 ) LIMIT 1   [ RunTime:0.0050s ]
+NOTIC: [8] Use of undefined constant SYSTEM_MENU_CURRENT - assumed 'SYSTEM_MENU_CURRENT' C:\Users\Administrator\Desktop\niuniuGame\LQapps\Admin\Model\SystemMenuModel.class.php 第 50 行.
+NOTIC: [8] Use of undefined constant SYSTEM_MENU_CURRENT - assumed 'SYSTEM_MENU_CURRENT' C:\Users\Administrator\Desktop\niuniuGame\LQapps\Admin\Model\SystemMenuModel.class.php 第 48 行.
+SQL: SELECT * FROM `lq_system_menu` WHERE ( id=91 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT * FROM `lq_system_menu` WHERE ( id=67 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT * FROM `lq_system_menu` WHERE ( id=45 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT * FROM `lq_system_menu` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT * FROM `lq_system_menu` WHERE ( id=0 ) LIMIT 1   [ RunTime:0.0030s ]
+NOTIC: [8] Use of undefined constant SYSTEM_MENU_CURRENT - assumed 'SYSTEM_MENU_CURRENT' C:\Users\Administrator\Desktop\niuniuGame\LQapps\Admin\Model\SystemMenuModel.class.php 第 50 行.
+NOTIC: [8] Use of undefined constant SYSTEM_MENU_CURRENT - assumed 'SYSTEM_MENU_CURRENT' C:\Users\Administrator\Desktop\niuniuGame\LQapps\Admin\Model\SystemMenuModel.class.php 第 48 行.
+SQL: SELECT * FROM `lq_system_menu` WHERE ( id=92 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT * FROM `lq_system_menu` WHERE ( id=67 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT * FROM `lq_system_menu` WHERE ( id=45 ) LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT * FROM `lq_system_menu` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT * FROM `lq_system_menu` WHERE ( id=0 ) LIMIT 1   [ RunTime:0.0060s ]
+NOTIC: [8] Use of undefined constant SYSTEM_MENU_CURRENT - assumed 'SYSTEM_MENU_CURRENT' C:\Users\Administrator\Desktop\niuniuGame\LQapps\Admin\Model\SystemMenuModel.class.php 第 50 行.
+NOTIC: [8] Use of undefined constant SYSTEM_MENU_CURRENT - assumed 'SYSTEM_MENU_CURRENT' C:\Users\Administrator\Desktop\niuniuGame\LQapps\Admin\Model\SystemMenuModel.class.php 第 48 行.
+SQL: SELECT * FROM `lq_system_menu` WHERE ( id=101 ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT * FROM `lq_system_menu` WHERE ( id=100 ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT * FROM `lq_system_menu` WHERE ( id=47 ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT * FROM `lq_system_menu` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT * FROM `lq_system_menu` WHERE ( id=0 ) LIMIT 1   [ RunTime:0.0040s ]
+NOTIC: [8] Use of undefined constant SYSTEM_MENU_CURRENT - assumed 'SYSTEM_MENU_CURRENT' C:\Users\Administrator\Desktop\niuniuGame\LQapps\Admin\Model\SystemMenuModel.class.php 第 50 行.
+NOTIC: [8] Use of undefined constant SYSTEM_MENU_CURRENT - assumed 'SYSTEM_MENU_CURRENT' C:\Users\Administrator\Desktop\niuniuGame\LQapps\Admin\Model\SystemMenuModel.class.php 第 48 行.
+SQL: SELECT * FROM `lq_system_menu` WHERE ( id=113 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT * FROM `lq_system_menu` WHERE ( id=100 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT * FROM `lq_system_menu` WHERE ( id=47 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT * FROM `lq_system_menu` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0050s ]
+SQL: SELECT * FROM `lq_system_menu` WHERE ( id=0 ) LIMIT 1   [ RunTime:0.0040s ]
+NOTIC: [8] Use of undefined constant SYSTEM_MENU_CURRENT - assumed 'SYSTEM_MENU_CURRENT' C:\Users\Administrator\Desktop\niuniuGame\LQapps\Admin\Model\SystemMenuModel.class.php 第 50 行.
+NOTIC: [8] Use of undefined constant SYSTEM_MENU_CURRENT - assumed 'SYSTEM_MENU_CURRENT' C:\Users\Administrator\Desktop\niuniuGame\LQapps\Admin\Model\SystemMenuModel.class.php 第 48 行.
+SQL: SELECT * FROM `lq_system_menu` WHERE ( id=106 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT * FROM `lq_system_menu` WHERE ( id=112 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT * FROM `lq_system_menu` WHERE ( id=47 ) LIMIT 1   [ RunTime:0.0050s ]
+SQL: SELECT * FROM `lq_system_menu` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0050s ]
+SQL: SELECT * FROM `lq_system_menu` WHERE ( id=0 ) LIMIT 1   [ RunTime:0.0040s ]
+NOTIC: [8] Use of undefined constant SYSTEM_MENU_CURRENT - assumed 'SYSTEM_MENU_CURRENT' C:\Users\Administrator\Desktop\niuniuGame\LQapps\Admin\Model\SystemMenuModel.class.php 第 50 行.
+NOTIC: [8] Use of undefined constant SYSTEM_MENU_CURRENT - assumed 'SYSTEM_MENU_CURRENT' C:\Users\Administrator\Desktop\niuniuGame\LQapps\Admin\Model\SystemMenuModel.class.php 第 48 行.
+SQL: SELECT * FROM `lq_system_menu` WHERE ( id=82 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT * FROM `lq_system_menu` WHERE ( id=69 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT * FROM `lq_system_menu` WHERE ( id=110 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT * FROM `lq_system_menu` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT * FROM `lq_system_menu` WHERE ( id=0 ) LIMIT 1   [ RunTime:0.0040s ]
+NOTIC: [8] Use of undefined constant SYSTEM_MENU_CURRENT - assumed 'SYSTEM_MENU_CURRENT' C:\Users\Administrator\Desktop\niuniuGame\LQapps\Admin\Model\SystemMenuModel.class.php 第 50 行.
+NOTIC: [8] Use of undefined constant SYSTEM_MENU_CURRENT - assumed 'SYSTEM_MENU_CURRENT' C:\Users\Administrator\Desktop\niuniuGame\LQapps\Admin\Model\SystemMenuModel.class.php 第 48 行.
+SQL: SELECT * FROM `lq_system_menu` WHERE ( id=74 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT * FROM `lq_system_menu` WHERE ( id=69 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT * FROM `lq_system_menu` WHERE ( id=110 ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT * FROM `lq_system_menu` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT * FROM `lq_system_menu` WHERE ( id=0 ) LIMIT 1   [ RunTime:0.0040s ]
+NOTIC: [8] Use of undefined constant SYSTEM_MENU_CURRENT - assumed 'SYSTEM_MENU_CURRENT' C:\Users\Administrator\Desktop\niuniuGame\LQapps\Admin\Model\SystemMenuModel.class.php 第 50 行.
+NOTIC: [8] Use of undefined constant SYSTEM_MENU_CURRENT - assumed 'SYSTEM_MENU_CURRENT' C:\Users\Administrator\Desktop\niuniuGame\LQapps\Admin\Model\SystemMenuModel.class.php 第 48 行.
+SQL: SELECT * FROM `lq_system_menu` WHERE ( id=75 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT * FROM `lq_system_menu` WHERE ( id=69 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT * FROM `lq_system_menu` WHERE ( id=110 ) LIMIT 1   [ RunTime:0.0050s ]
+SQL: SELECT * FROM `lq_system_menu` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT * FROM `lq_system_menu` WHERE ( id=0 ) LIMIT 1   [ RunTime:0.0060s ]
+NOTIC: [8] Use of undefined constant SYSTEM_MENU_CURRENT - assumed 'SYSTEM_MENU_CURRENT' C:\Users\Administrator\Desktop\niuniuGame\LQapps\Admin\Model\SystemMenuModel.class.php 第 50 行.
+NOTIC: [8] Use of undefined constant SYSTEM_MENU_CURRENT - assumed 'SYSTEM_MENU_CURRENT' C:\Users\Administrator\Desktop\niuniuGame\LQapps\Admin\Model\SystemMenuModel.class.php 第 48 行.
+SQL: SELECT * FROM `lq_system_menu` WHERE ( id=76 ) LIMIT 1   [ RunTime:0.0050s ]
+SQL: SELECT * FROM `lq_system_menu` WHERE ( id=73 ) LIMIT 1   [ RunTime:0.0260s ]
+SQL: SELECT * FROM `lq_system_menu` WHERE ( id=110 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT * FROM `lq_system_menu` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT * FROM `lq_system_menu` WHERE ( id=0 ) LIMIT 1   [ RunTime:0.0290s ]
+NOTIC: [8] Use of undefined constant SYSTEM_MENU_CURRENT - assumed 'SYSTEM_MENU_CURRENT' C:\Users\Administrator\Desktop\niuniuGame\LQapps\Admin\Model\SystemMenuModel.class.php 第 50 行.
+NOTIC: [8] Use of undefined constant SYSTEM_MENU_CURRENT - assumed 'SYSTEM_MENU_CURRENT' C:\Users\Administrator\Desktop\niuniuGame\LQapps\Admin\Model\SystemMenuModel.class.php 第 48 行.
+SQL: SELECT * FROM `lq_system_menu` WHERE ( id=77 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT * FROM `lq_system_menu` WHERE ( id=73 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT * FROM `lq_system_menu` WHERE ( id=110 ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT * FROM `lq_system_menu` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0190s ]
+SQL: SELECT * FROM `lq_system_menu` WHERE ( id=0 ) LIMIT 1   [ RunTime:0.0030s ]
+NOTIC: [8] Use of undefined constant SYSTEM_MENU_CURRENT - assumed 'SYSTEM_MENU_CURRENT' C:\Users\Administrator\Desktop\niuniuGame\LQapps\Admin\Model\SystemMenuModel.class.php 第 50 行.
+NOTIC: [8] Use of undefined constant SYSTEM_MENU_CURRENT - assumed 'SYSTEM_MENU_CURRENT' C:\Users\Administrator\Desktop\niuniuGame\LQapps\Admin\Model\SystemMenuModel.class.php 第 48 行.
+SQL: SELECT * FROM `lq_system_menu` WHERE ( id=104 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT * FROM `lq_system_menu` WHERE ( id=103 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT * FROM `lq_system_menu` WHERE ( id=111 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT * FROM `lq_system_menu` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT * FROM `lq_system_menu` WHERE ( id=0 ) LIMIT 1   [ RunTime:0.0040s ]
+NOTIC: [8] Use of undefined constant SYSTEM_MENU_CURRENT - assumed 'SYSTEM_MENU_CURRENT' C:\Users\Administrator\Desktop\niuniuGame\LQapps\Admin\Model\SystemMenuModel.class.php 第 50 行.
+NOTIC: [8] Use of undefined constant SYSTEM_MENU_CURRENT - assumed 'SYSTEM_MENU_CURRENT' C:\Users\Administrator\Desktop\niuniuGame\LQapps\Admin\Model\SystemMenuModel.class.php 第 48 行.
+SQL: SELECT * FROM `lq_system_menu` WHERE ( id=108 ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT * FROM `lq_system_menu` WHERE ( id=107 ) LIMIT 1   [ RunTime:0.0050s ]
+SQL: SELECT * FROM `lq_system_menu` WHERE ( id=46 ) LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT * FROM `lq_system_menu` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT * FROM `lq_system_menu` WHERE ( id=0 ) LIMIT 1   [ RunTime:0.0050s ]
+NOTIC: [8] Use of undefined constant SYSTEM_MENU_CURRENT - assumed 'SYSTEM_MENU_CURRENT' C:\Users\Administrator\Desktop\niuniuGame\LQapps\Admin\Model\SystemMenuModel.class.php 第 50 行.
+NOTIC: [8] Use of undefined constant SYSTEM_MENU_CURRENT - assumed 'SYSTEM_MENU_CURRENT' C:\Users\Administrator\Desktop\niuniuGame\LQapps\Admin\Model\SystemMenuModel.class.php 第 48 行.
+SQL: SELECT * FROM `lq_system_menu` WHERE ( id=109 ) LIMIT 1   [ RunTime:0.0060s ]
+SQL: SELECT * FROM `lq_system_menu` WHERE ( id=107 ) LIMIT 1   [ RunTime:0.0050s ]
+SQL: SELECT * FROM `lq_system_menu` WHERE ( id=46 ) LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT * FROM `lq_system_menu` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0050s ]
+SQL: SELECT * FROM `lq_system_menu` WHERE ( id=0 ) LIMIT 1   [ RunTime:0.0100s ]
+NOTIC: [8] Use of undefined constant SYSTEM_MENU_CURRENT - assumed 'SYSTEM_MENU_CURRENT' C:\Users\Administrator\Desktop\niuniuGame\LQapps\Admin\Model\SystemMenuModel.class.php 第 50 行.
+NOTIC: [8] Use of undefined constant SYSTEM_MENU_CURRENT - assumed 'SYSTEM_MENU_CURRENT' C:\Users\Administrator\Desktop\niuniuGame\LQapps\Admin\Model\SystemMenuModel.class.php 第 48 行.
+SQL: SELECT * FROM `lq_system_menu` WHERE ( id=84 ) LIMIT 1   [ RunTime:0.0050s ]
+SQL: SELECT * FROM `lq_system_menu` WHERE ( id=83 ) LIMIT 1   [ RunTime:0.0050s ]
+SQL: SELECT * FROM `lq_system_menu` WHERE ( id=64 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT * FROM `lq_system_menu` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT * FROM `lq_system_menu` WHERE ( id=0 ) LIMIT 1   [ RunTime:0.0030s ]
+NOTIC: [8] Use of undefined constant SYSTEM_MENU_CURRENT - assumed 'SYSTEM_MENU_CURRENT' C:\Users\Administrator\Desktop\niuniuGame\LQapps\Admin\Model\SystemMenuModel.class.php 第 50 行.
+NOTIC: [8] Use of undefined constant SYSTEM_MENU_CURRENT - assumed 'SYSTEM_MENU_CURRENT' C:\Users\Administrator\Desktop\niuniuGame\LQapps\Admin\Model\SystemMenuModel.class.php 第 48 行.
+SQL: SELECT * FROM `lq_system_menu` WHERE ( id=85 ) LIMIT 1   [ RunTime:0.0060s ]
+SQL: SELECT * FROM `lq_system_menu` WHERE ( id=83 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT * FROM `lq_system_menu` WHERE ( id=64 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT * FROM `lq_system_menu` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT * FROM `lq_system_menu` WHERE ( id=0 ) LIMIT 1   [ RunTime:0.0060s ]
+NOTIC: [8] Use of undefined constant SYSTEM_MENU_CURRENT - assumed 'SYSTEM_MENU_CURRENT' C:\Users\Administrator\Desktop\niuniuGame\LQapps\Admin\Model\SystemMenuModel.class.php 第 50 行.
+NOTIC: [8] Use of undefined constant SYSTEM_MENU_CURRENT - assumed 'SYSTEM_MENU_CURRENT' C:\Users\Administrator\Desktop\niuniuGame\LQapps\Admin\Model\SystemMenuModel.class.php 第 48 行.
+SQL: SELECT * FROM `lq_system_menu` WHERE ( id=86 ) LIMIT 1   [ RunTime:0.0280s ]
+SQL: SELECT * FROM `lq_system_menu` WHERE ( id=83 ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT * FROM `lq_system_menu` WHERE ( id=64 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT * FROM `lq_system_menu` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT * FROM `lq_system_menu` WHERE ( id=0 ) LIMIT 1   [ RunTime:0.0060s ]
+NOTIC: [8] Use of undefined constant SYSTEM_MENU_CURRENT - assumed 'SYSTEM_MENU_CURRENT' C:\Users\Administrator\Desktop\niuniuGame\LQapps\Admin\Model\SystemMenuModel.class.php 第 50 行.
+NOTIC: [8] Use of undefined constant SYSTEM_MENU_CURRENT - assumed 'SYSTEM_MENU_CURRENT' C:\Users\Administrator\Desktop\niuniuGame\LQapps\Admin\Model\SystemMenuModel.class.php 第 48 行.
+SQL: SELECT * FROM `lq_system_menu` WHERE ( id=95 ) LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT * FROM `lq_system_menu` WHERE ( id=51 ) LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT * FROM `lq_system_menu` WHERE ( id=64 ) LIMIT 1   [ RunTime:0.0110s ]
+SQL: SELECT * FROM `lq_system_menu` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT * FROM `lq_system_menu` WHERE ( id=0 ) LIMIT 1   [ RunTime:0.0030s ]
+NOTIC: [8] Use of undefined constant SYSTEM_MENU_CURRENT - assumed 'SYSTEM_MENU_CURRENT' C:\Users\Administrator\Desktop\niuniuGame\LQapps\Admin\Model\SystemMenuModel.class.php 第 50 行.
+NOTIC: [8] Use of undefined constant SYSTEM_MENU_CURRENT - assumed 'SYSTEM_MENU_CURRENT' C:\Users\Administrator\Desktop\niuniuGame\LQapps\Admin\Model\SystemMenuModel.class.php 第 48 行.
+SQL: SELECT * FROM `lq_system_menu` WHERE ( id=94 ) LIMIT 1   [ RunTime:0.0060s ]
+SQL: SELECT * FROM `lq_system_menu` WHERE ( id=51 ) LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT * FROM `lq_system_menu` WHERE ( id=64 ) LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT * FROM `lq_system_menu` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT * FROM `lq_system_menu` WHERE ( id=0 ) LIMIT 1   [ RunTime:0.0060s ]
+NOTIC: [8] Use of undefined constant SYSTEM_MENU_CURRENT - assumed 'SYSTEM_MENU_CURRENT' C:\Users\Administrator\Desktop\niuniuGame\LQapps\Admin\Model\SystemMenuModel.class.php 第 50 行.
+NOTIC: [8] Use of undefined constant SYSTEM_MENU_CURRENT - assumed 'SYSTEM_MENU_CURRENT' C:\Users\Administrator\Desktop\niuniuGame\LQapps\Admin\Model\SystemMenuModel.class.php 第 48 行.
+SQL: SELECT * FROM `lq_system_menu` WHERE ( id=105 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT * FROM `lq_system_menu` WHERE ( id=51 ) LIMIT 1   [ RunTime:0.0100s ]
+SQL: SELECT * FROM `lq_system_menu` WHERE ( id=64 ) LIMIT 1   [ RunTime:0.0050s ]
+SQL: SELECT * FROM `lq_system_menu` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0050s ]
+SQL: SELECT * FROM `lq_system_menu` WHERE ( id=0 ) LIMIT 1   [ RunTime:0.0040s ]
+NOTIC: [8] Use of undefined constant SYSTEM_MENU_CURRENT - assumed 'SYSTEM_MENU_CURRENT' C:\Users\Administrator\Desktop\niuniuGame\LQapps\Admin\Model\SystemMenuModel.class.php 第 50 行.
+SQL: SELECT `id`,`zc_caption`,`zc_action_list` FROM `lq_admin_role` WHERE ( zl_visible=1 ) ORDER BY id asc  [ RunTime:0.0060s ]
+SQL: SELECT `id`,`zn_fid`,`zc_type`,`zc_label` FROM `lq_web_config` WHERE ( zl_visible=1  and zn_fid=0  ) ORDER BY `zn_sort` ASC,`id` ASC  [ RunTime:0.0060s ]
+SQL: SELECT * FROM `lq_web_config` WHERE ( zl_visible=1  and zn_fid=1 ) ORDER BY `zn_sort` ASC,`id` ASC  [ RunTime:0.0100s ]
+SQL: SELECT * FROM `lq_web_config` WHERE ( zl_visible=1  and zn_fid=2 ) ORDER BY `zn_sort` ASC,`id` ASC  [ RunTime:0.0080s ]
+SQL: SELECT * FROM `lq_web_config` WHERE ( zl_visible=1  and zn_fid=3 ) ORDER BY `zn_sort` ASC,`id` ASC  [ RunTime:0.0040s ]
+SQL: SELECT * FROM `lq_web_config` WHERE ( zl_visible=1  and zn_fid=4 ) ORDER BY `zn_sort` ASC,`id` ASC  [ RunTime:0.0040s ]
+SQL: SELECT * FROM `lq_web_config` WHERE ( zl_visible=1  and zn_fid=5 ) ORDER BY `zn_sort` ASC,`id` ASC  [ RunTime:0.0050s ]
+SQL: SELECT * FROM `lq_web_config` WHERE ( zl_visible=1  and zn_fid=6 ) ORDER BY `zn_sort` ASC,`id` ASC  [ RunTime:0.0070s ]
+SQL: SELECT `id`,`zc_caption` FROM `lq_ad_position` WHERE (  zl_visible=1  ) ORDER BY `id` DESC  [ RunTime:0.0100s ]
+NOTIC: [8] Undefined offset: 3 C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\Category.class.php 第 41 行.
+SQL: SELECT * FROM `lq_article_cat` ORDER BY  zn_fid,zn_sort,id   [ RunTime:0.0040s ]
+SQL: SELECT * FROM `lq_article_cat` WHERE ( id=2 ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT `id`,`zn_fid` FROM `lq_article_cat` WHERE ( zl_visible=1 and zn_fid=2 ) ORDER BY id asc  [ RunTime:0.0030s ]
+SQL: SELECT `id`,`zc_caption`,`zn_fid` FROM `lq_article_cat` WHERE ( zl_visible=1 and id=2 ) LIMIT 1   [ RunTime:0.0050s ]
+SQL: SELECT `id`,`zc_caption`,`zn_fid` FROM `lq_article_cat` WHERE ( zl_visible=1 and id=0 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT * FROM `lq_article_cat` WHERE ( id=3 ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT `id`,`zn_fid` FROM `lq_article_cat` WHERE ( zl_visible=1 and zn_fid=3 ) ORDER BY id asc  [ RunTime:0.0040s ]
+SQL: SELECT `id`,`zc_caption`,`zn_fid` FROM `lq_article_cat` WHERE ( zl_visible=1 and id=3 ) LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT `id`,`zc_caption`,`zn_fid` FROM `lq_article_cat` WHERE ( zl_visible=1 and id=0 ) LIMIT 1   [ RunTime:0.0380s ]
+SQL: SELECT * FROM `lq_article_cat` WHERE ( id=4 ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT `id`,`zn_fid` FROM `lq_article_cat` WHERE ( zl_visible=1 and zn_fid=4 ) ORDER BY id asc  [ RunTime:0.0030s ]
+SQL: SELECT `id`,`zc_caption`,`zn_fid` FROM `lq_article_cat` WHERE ( zl_visible=1 and id=4 ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT `id`,`zc_caption`,`zn_fid` FROM `lq_article_cat` WHERE ( zl_visible=1 and id=0 ) LIMIT 1   [ RunTime:0.0040s ]
+NOTIC: [8] Undefined offset: 3 C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\Category.class.php 第 41 行.
+SQL: SELECT * FROM `lq_region` WHERE (  zn_class in (1)   ) ORDER BY  zn_fid,zn_sort,id desc   [ RunTime:0.0130s ]
+SQL: SHOW COLUMNS FROM `lq_system_menu` [ RunTime:0.0060s ]
+SQL: select COLUMN_NAME,COLUMN_COMMENT,character_maximum_length FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME='lq_system_menu' and TABLE_SCHEMA='games' [ RunTime:0.0090s ]
+SQL: SELECT `id`,`zn_fid`,`zc_caption` FROM `lq_system_menu` WHERE ( zn_fid=1 and zl_is_menu=1 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0030s ]
+NOTIC: [8] Undefined variable: index C:\Users\Administrator\Desktop\niuniuGame\LQapps\User\Model\AdminModel.class.php 第 465 行.
+NOTIC: [8] Undefined index: zc_run C:\Users\Administrator\Desktop\niuniuGame\LQapps\User\Model\AdminModel.class.php 第 472 行.
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=2 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0030s ]
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=48 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0040s ]
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=49 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0060s ]
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=50 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0050s ]
+NOTIC: [8] Undefined index: zc_run C:\Users\Administrator\Desktop\niuniuGame\LQapps\User\Model\AdminModel.class.php 第 472 行.
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=41 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0040s ]
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=70 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0040s ]
+NOTIC: [8] Undefined index: zc_run C:\Users\Administrator\Desktop\niuniuGame\LQapps\User\Model\AdminModel.class.php 第 472 行.
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=44 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0040s ]
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=90 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0030s ]
+NOTIC: [8] Undefined index: zc_run C:\Users\Administrator\Desktop\niuniuGame\LQapps\User\Model\AdminModel.class.php 第 472 行.
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=45 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0040s ]
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=67 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0090s ]
+NOTIC: [8] Undefined index: zc_run C:\Users\Administrator\Desktop\niuniuGame\LQapps\User\Model\AdminModel.class.php 第 472 行.
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=47 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0050s ]
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=100 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0040s ]
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=112 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0040s ]
+NOTIC: [8] Undefined index: zc_run C:\Users\Administrator\Desktop\niuniuGame\LQapps\User\Model\AdminModel.class.php 第 472 行.
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=110 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0040s ]
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=69 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0040s ]
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=73 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0130s ]
+NOTIC: [8] Undefined index: zc_run C:\Users\Administrator\Desktop\niuniuGame\LQapps\User\Model\AdminModel.class.php 第 472 行.
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=111 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0030s ]
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=103 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0040s ]
+NOTIC: [8] Undefined index: zc_run C:\Users\Administrator\Desktop\niuniuGame\LQapps\User\Model\AdminModel.class.php 第 472 行.
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=46 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0040s ]
+NOTIC: [8] Undefined index: zc_run C:\Users\Administrator\Desktop\niuniuGame\LQapps\User\Model\AdminModel.class.php 第 472 行.
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=64 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0060s ]
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=51 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0030s ]
+NOTIC: [8] Undefined index: description C:\Users\Administrator\Desktop\niuniuGame\LQapps\User\Api\AdminApi.class.php 第 339 行.
+SQL: INSERT INTO `lq_admin_log` (`zn_type`,`zc_action`,`zc_table`,`zc_table_id`,`zc_description`,`zn_ip`,`zn_cdate`,`zn_operator`,`zc_account`) VALUES ('0','clearCache','index','0','littleHe对Index模型,进行清除缓存页面操作。url请求:niuniugame.dev:80/sys-index.php/Index/clearCache','2130706433','1517817569','1','littleHe') [ RunTime:0.0110s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\ShowRuntimeBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+
+[ 2018-02-05T15:59:34+08:00 ] 127.0.0.1 /sys-index.php/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `lq_admin` [ RunTime:0.0070s ]
+SQL: select COLUMN_NAME,COLUMN_COMMENT,character_maximum_length FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME='lq_admin' and TABLE_SCHEMA='games' [ RunTime:0.0190s ]
+SQL: SHOW COLUMNS FROM `lq_admin_log` [ RunTime:0.0080s ]
+SQL: select COLUMN_NAME,COLUMN_COMMENT,character_maximum_length FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME='lq_admin_log' and TABLE_SCHEMA='games' [ RunTime:0.0060s ]
+SQL: SELECT * FROM `lq_admin` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT `id`,`zn_fid`,`zc_caption` FROM `lq_system_menu` WHERE ( zn_fid=1 and zl_is_menu=1 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.2000s ]
+NOTIC: [8] Undefined variable: index C:\Users\Administrator\Desktop\niuniuGame\LQapps\User\Model\AdminModel.class.php 第 465 行.
+NOTIC: [8] Undefined index: zc_run C:\Users\Administrator\Desktop\niuniuGame\LQapps\User\Model\AdminModel.class.php 第 472 行.
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=2 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0040s ]
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=48 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0380s ]
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=49 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0060s ]
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=50 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0080s ]
+NOTIC: [8] Undefined index: zc_run C:\Users\Administrator\Desktop\niuniuGame\LQapps\User\Model\AdminModel.class.php 第 472 行.
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=41 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0100s ]
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=70 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0140s ]
+NOTIC: [8] Undefined index: zc_run C:\Users\Administrator\Desktop\niuniuGame\LQapps\User\Model\AdminModel.class.php 第 472 行.
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=44 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0100s ]
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=90 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0060s ]
+NOTIC: [8] Undefined index: zc_run C:\Users\Administrator\Desktop\niuniuGame\LQapps\User\Model\AdminModel.class.php 第 472 行.
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=45 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0050s ]
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=67 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0050s ]
+NOTIC: [8] Undefined index: zc_run C:\Users\Administrator\Desktop\niuniuGame\LQapps\User\Model\AdminModel.class.php 第 472 行.
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=47 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.1760s ]
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=100 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0050s ]
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=112 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0270s ]
+NOTIC: [8] Undefined index: zc_run C:\Users\Administrator\Desktop\niuniuGame\LQapps\User\Model\AdminModel.class.php 第 472 行.
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=110 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0040s ]
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=69 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0070s ]
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=73 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0190s ]
+NOTIC: [8] Undefined index: zc_run C:\Users\Administrator\Desktop\niuniuGame\LQapps\User\Model\AdminModel.class.php 第 472 行.
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=111 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0160s ]
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=103 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0090s ]
+NOTIC: [8] Undefined index: zc_run C:\Users\Administrator\Desktop\niuniuGame\LQapps\User\Model\AdminModel.class.php 第 472 行.
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=46 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0060s ]
+NOTIC: [8] Undefined index: zc_run C:\Users\Administrator\Desktop\niuniuGame\LQapps\User\Model\AdminModel.class.php 第 472 行.
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=64 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0090s ]
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=51 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0140s ]
+SQL: SELECT `id`,`zn_fid`,`zc_caption` FROM `lq_system_menu` WHERE ( zn_fid=1 and zl_is_menu=1 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0070s ]
+NOTIC: [8] Undefined variable: index C:\Users\Administrator\Desktop\niuniuGame\LQapps\User\Model\AdminModel.class.php 第 465 行.
+NOTIC: [8] Undefined index: zc_run C:\Users\Administrator\Desktop\niuniuGame\LQapps\User\Model\AdminModel.class.php 第 472 行.
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=2 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0040s ]
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=48 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0080s ]
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=49 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0030s ]
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=50 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0050s ]
+NOTIC: [8] Undefined index: zc_run C:\Users\Administrator\Desktop\niuniuGame\LQapps\User\Model\AdminModel.class.php 第 472 行.
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=41 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0100s ]
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=70 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0260s ]
+NOTIC: [8] Undefined index: zc_run C:\Users\Administrator\Desktop\niuniuGame\LQapps\User\Model\AdminModel.class.php 第 472 行.
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=44 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0090s ]
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=90 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0150s ]
+NOTIC: [8] Undefined index: zc_run C:\Users\Administrator\Desktop\niuniuGame\LQapps\User\Model\AdminModel.class.php 第 472 行.
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=45 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0050s ]
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=67 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0150s ]
+NOTIC: [8] Undefined index: zc_run C:\Users\Administrator\Desktop\niuniuGame\LQapps\User\Model\AdminModel.class.php 第 472 行.
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=47 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0040s ]
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=100 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0090s ]
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=112 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0070s ]
+NOTIC: [8] Undefined index: zc_run C:\Users\Administrator\Desktop\niuniuGame\LQapps\User\Model\AdminModel.class.php 第 472 行.
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=110 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0150s ]
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=69 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0040s ]
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=73 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0050s ]
+NOTIC: [8] Undefined index: zc_run C:\Users\Administrator\Desktop\niuniuGame\LQapps\User\Model\AdminModel.class.php 第 472 行.
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=111 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0070s ]
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=103 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0150s ]
+NOTIC: [8] Undefined index: zc_run C:\Users\Administrator\Desktop\niuniuGame\LQapps\User\Model\AdminModel.class.php 第 472 行.
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=46 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0070s ]
+NOTIC: [8] Undefined index: zc_run C:\Users\Administrator\Desktop\niuniuGame\LQapps\User\Model\AdminModel.class.php 第 472 行.
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=64 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0240s ]
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=51 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0100s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\ShowRuntimeBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-02-05T15:59:36+08:00 ] 127.0.0.1 /sys-index.php/Index/ajaxSearch/tcop/text
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] session_start(): Cannot send session cache limiter - headers already sent C:\Users\Administrator\Desktop\niuniuGame\Public\ThinkPHP\Common\functions.php 第 1280 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_member` WHERE ( zn_cdate >=1517241600 and zn_cdate<=1517327999 ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `lq_room` [ RunTime:0.0190s ]
+SQL: select COLUMN_NAME,COLUMN_COMMENT,character_maximum_length FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME='lq_room' and TABLE_SCHEMA='games' [ RunTime:0.0110s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_room` WHERE ( zn_cdate >=1517241600 and zn_cdate<=1517327999 ) LIMIT 1   [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `lq_game_log` [ RunTime:0.0070s ]
+SQL: select COLUMN_NAME,COLUMN_COMMENT,character_maximum_length FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME='lq_game_log' and TABLE_SCHEMA='games' [ RunTime:0.0070s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_game_log` WHERE ( zn_cdate >=1517241600 and zn_cdate<=1517327999 ) LIMIT 1   [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `lq_recharge` [ RunTime:0.0080s ]
+SQL: select COLUMN_NAME,COLUMN_COMMENT,character_maximum_length FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME='lq_recharge' and TABLE_SCHEMA='games' [ RunTime:0.0100s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_recharge` WHERE ( zn_cdate >=1517241600 and zn_cdate<=1517327999 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `lq_card_log` [ RunTime:0.0080s ]
+SQL: select COLUMN_NAME,COLUMN_COMMENT,character_maximum_length FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME='lq_card_log' and TABLE_SCHEMA='games' [ RunTime:0.0080s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_card_log` WHERE ( zn_cdate >=1517241600 and zn_cdate<=1517327999 ) LIMIT 1   [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `lq_chat` [ RunTime:0.0100s ]
+SQL: select COLUMN_NAME,COLUMN_COMMENT,character_maximum_length FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME='lq_chat' and TABLE_SCHEMA='games' [ RunTime:0.0070s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_chat` WHERE ( zn_cdate >=1517241600 and zn_cdate<=1517327999 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_member` WHERE ( zn_cdate >=1517328000 and zn_cdate<=1517414399 ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_room` WHERE ( zn_cdate >=1517328000 and zn_cdate<=1517414399 ) LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_game_log` WHERE ( zn_cdate >=1517328000 and zn_cdate<=1517414399 ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_recharge` WHERE ( zn_cdate >=1517328000 and zn_cdate<=1517414399 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_card_log` WHERE ( zn_cdate >=1517328000 and zn_cdate<=1517414399 ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_chat` WHERE ( zn_cdate >=1517328000 and zn_cdate<=1517414399 ) LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_member` WHERE ( zn_cdate >=1517414400 and zn_cdate<=1517500799 ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_room` WHERE ( zn_cdate >=1517414400 and zn_cdate<=1517500799 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_game_log` WHERE ( zn_cdate >=1517414400 and zn_cdate<=1517500799 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_recharge` WHERE ( zn_cdate >=1517414400 and zn_cdate<=1517500799 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_card_log` WHERE ( zn_cdate >=1517414400 and zn_cdate<=1517500799 ) LIMIT 1   [ RunTime:0.0060s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_chat` WHERE ( zn_cdate >=1517414400 and zn_cdate<=1517500799 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_member` WHERE ( zn_cdate >=1517500800 and zn_cdate<=1517587199 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_room` WHERE ( zn_cdate >=1517500800 and zn_cdate<=1517587199 ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_game_log` WHERE ( zn_cdate >=1517500800 and zn_cdate<=1517587199 ) LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_recharge` WHERE ( zn_cdate >=1517500800 and zn_cdate<=1517587199 ) LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_card_log` WHERE ( zn_cdate >=1517500800 and zn_cdate<=1517587199 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_chat` WHERE ( zn_cdate >=1517500800 and zn_cdate<=1517587199 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_member` WHERE ( zn_cdate >=1517587200 and zn_cdate<=1517673599 ) LIMIT 1   [ RunTime:0.0060s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_room` WHERE ( zn_cdate >=1517587200 and zn_cdate<=1517673599 ) LIMIT 1   [ RunTime:0.0060s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_game_log` WHERE ( zn_cdate >=1517587200 and zn_cdate<=1517673599 ) LIMIT 1   [ RunTime:0.0050s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_recharge` WHERE ( zn_cdate >=1517587200 and zn_cdate<=1517673599 ) LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_card_log` WHERE ( zn_cdate >=1517587200 and zn_cdate<=1517673599 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_chat` WHERE ( zn_cdate >=1517587200 and zn_cdate<=1517673599 ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_member` WHERE ( zn_cdate >=1517673600 and zn_cdate<=1517759999 ) LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_room` WHERE ( zn_cdate >=1517673600 and zn_cdate<=1517759999 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_game_log` WHERE ( zn_cdate >=1517673600 and zn_cdate<=1517759999 ) LIMIT 1   [ RunTime:0.0050s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_recharge` WHERE ( zn_cdate >=1517673600 and zn_cdate<=1517759999 ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_card_log` WHERE ( zn_cdate >=1517673600 and zn_cdate<=1517759999 ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_chat` WHERE ( zn_cdate >=1517673600 and zn_cdate<=1517759999 ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_member` WHERE ( zn_cdate >=1517760000 and zn_cdate<=1517846399 ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_room` WHERE ( zn_cdate >=1517760000 and zn_cdate<=1517846399 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_game_log` WHERE ( zn_cdate >=1517760000 and zn_cdate<=1517846399 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_recharge` WHERE ( zn_cdate >=1517760000 and zn_cdate<=1517846399 ) LIMIT 1   [ RunTime:0.0060s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_card_log` WHERE ( zn_cdate >=1517760000 and zn_cdate<=1517846399 ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_chat` WHERE ( zn_cdate >=1517760000 and zn_cdate<=1517846399 ) LIMIT 1   [ RunTime:0.0050s ]
+NOTIC: [2] Cannot modify header information - headers already sent C:\Users\Administrator\Desktop\niuniuGame\Public\ThinkPHP\Library\Think\Controller.class.php 第 220 行.
+
+[ 2018-02-05T16:04:52+08:00 ] 127.0.0.1 /sys-index.php/Member
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Admin\Controller\MemberController::opVisible() should be compatible with Admin\Controller\PublicController::opVisible($is_tree = 0) C:\Users\Administrator\Desktop\niuniuGame\LQapps\Admin\Controller\MemberController.class.php 第 10 行.
+NOTIC: [2048] Declaration of Admin\Controller\MemberController::opDelete() should be compatible with Admin\Controller\PublicController::opDelete($is_tree = 0) C:\Users\Administrator\Desktop\niuniuGame\LQapps\Admin\Controller\MemberController.class.php 第 10 行.
+NOTIC: [8] Use of undefined constant SYSTEM_MENU_CURRENT - assumed 'SYSTEM_MENU_CURRENT' C:\Users\Administrator\Desktop\niuniuGame\LQapps\Admin\Controller\PublicController.class.php 第 477 行.
+NOTIC: [8] Use of undefined constant SYSTEM_MENU_CURRENT - assumed 'SYSTEM_MENU_CURRENT' C:\Users\Administrator\Desktop\niuniuGame\LQapps\Admin\Controller\PublicController.class.php 第 481 行.
+NOTIC: [8] Undefined variable: s C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\Common\function.php 第 921 行.
+NOTIC: [8] Undefined variable: s C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\Common\function.php 第 921 行.
+NOTIC: [8] Undefined variable: s C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\Common\function.php 第 921 行.
+NOTIC: [8] Undefined variable: s C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\Common\function.php 第 921 行.
+NOTIC: [8] Undefined variable: s C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\Common\function.php 第 921 行.
+NOTIC: [8] Undefined variable: s C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\Common\function.php 第 921 行.
+NOTIC: [8] Undefined variable: s C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\Common\function.php 第 921 行.
+NOTIC: [8] Undefined variable: s C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\Common\function.php 第 921 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_member` WHERE (  1  ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT `id`,`zl_role`,`zc_nickname`,`zn_pay_integration`,`zn_rank_integration`,`zc_mobile`,`zl_account_bind`,`zl_openid_bind`,`zl_mobile_bind`,`zl_email_bind`,`zl_visible`,`zn_cdate`,`zn_mdate` FROM `lq_member` WHERE (  1  ) ORDER BY id DESC LIMIT 0,10   [ RunTime:0.0040s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: zc_account C:\Users\Administrator\Desktop\niuniuGame\Runtime\Cache\Admin\eec537cfacb6bf5a60c187018b70de93.php 第 346 行.
+NOTIC: [8] Undefined index: zc_account C:\Users\Administrator\Desktop\niuniuGame\Runtime\Cache\Admin\eec537cfacb6bf5a60c187018b70de93.php 第 367 行.
+NOTIC: [8] Undefined index: zc_account C:\Users\Administrator\Desktop\niuniuGame\Runtime\Cache\Admin\eec537cfacb6bf5a60c187018b70de93.php 第 346 行.
+NOTIC: [8] Undefined index: zc_account C:\Users\Administrator\Desktop\niuniuGame\Runtime\Cache\Admin\eec537cfacb6bf5a60c187018b70de93.php 第 367 行.
+NOTIC: [8] Undefined index: zc_account C:\Users\Administrator\Desktop\niuniuGame\Runtime\Cache\Admin\eec537cfacb6bf5a60c187018b70de93.php 第 346 行.
+NOTIC: [8] Undefined index: zc_account C:\Users\Administrator\Desktop\niuniuGame\Runtime\Cache\Admin\eec537cfacb6bf5a60c187018b70de93.php 第 367 行.
+NOTIC: [8] Undefined index: zc_account C:\Users\Administrator\Desktop\niuniuGame\Runtime\Cache\Admin\eec537cfacb6bf5a60c187018b70de93.php 第 346 行.
+NOTIC: [8] Undefined index: zc_account C:\Users\Administrator\Desktop\niuniuGame\Runtime\Cache\Admin\eec537cfacb6bf5a60c187018b70de93.php 第 367 行.
+NOTIC: [8] Undefined index: zc_account C:\Users\Administrator\Desktop\niuniuGame\Runtime\Cache\Admin\eec537cfacb6bf5a60c187018b70de93.php 第 346 行.
+NOTIC: [8] Undefined index: zc_account C:\Users\Administrator\Desktop\niuniuGame\Runtime\Cache\Admin\eec537cfacb6bf5a60c187018b70de93.php 第 367 行.
+NOTIC: [8] Undefined index: zc_account C:\Users\Administrator\Desktop\niuniuGame\Runtime\Cache\Admin\eec537cfacb6bf5a60c187018b70de93.php 第 346 行.
+NOTIC: [8] Undefined index: zc_account C:\Users\Administrator\Desktop\niuniuGame\Runtime\Cache\Admin\eec537cfacb6bf5a60c187018b70de93.php 第 367 行.
+NOTIC: [8] Undefined index: zc_account C:\Users\Administrator\Desktop\niuniuGame\Runtime\Cache\Admin\eec537cfacb6bf5a60c187018b70de93.php 第 346 行.
+NOTIC: [8] Undefined index: zc_account C:\Users\Administrator\Desktop\niuniuGame\Runtime\Cache\Admin\eec537cfacb6bf5a60c187018b70de93.php 第 367 行.
+NOTIC: [8] Undefined index: zc_account C:\Users\Administrator\Desktop\niuniuGame\Runtime\Cache\Admin\eec537cfacb6bf5a60c187018b70de93.php 第 346 行.
+NOTIC: [8] Undefined index: zc_account C:\Users\Administrator\Desktop\niuniuGame\Runtime\Cache\Admin\eec537cfacb6bf5a60c187018b70de93.php 第 367 行.
+NOTIC: [8] Undefined index: zc_account C:\Users\Administrator\Desktop\niuniuGame\Runtime\Cache\Admin\eec537cfacb6bf5a60c187018b70de93.php 第 346 行.
+NOTIC: [8] Undefined index: zc_account C:\Users\Administrator\Desktop\niuniuGame\Runtime\Cache\Admin\eec537cfacb6bf5a60c187018b70de93.php 第 367 行.
+NOTIC: [8] Undefined index: zc_account C:\Users\Administrator\Desktop\niuniuGame\Runtime\Cache\Admin\eec537cfacb6bf5a60c187018b70de93.php 第 346 行.
+NOTIC: [8] Undefined index: zc_account C:\Users\Administrator\Desktop\niuniuGame\Runtime\Cache\Admin\eec537cfacb6bf5a60c187018b70de93.php 第 367 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\ShowRuntimeBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-02-05T16:04:55+08:00 ] 127.0.0.1 /sys-index.php/Member/index/p/3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of Admin\Controller\MemberController::opVisible() should be compatible with Admin\Controller\PublicController::opVisible($is_tree = 0) C:\Users\Administrator\Desktop\niuniuGame\LQapps\Admin\Controller\MemberController.class.php 第 10 行.
+NOTIC: [2048] Declaration of Admin\Controller\MemberController::opDelete() should be compatible with Admin\Controller\PublicController::opDelete($is_tree = 0) C:\Users\Administrator\Desktop\niuniuGame\LQapps\Admin\Controller\MemberController.class.php 第 10 行.
+NOTIC: [8] Use of undefined constant SYSTEM_MENU_CURRENT - assumed 'SYSTEM_MENU_CURRENT' C:\Users\Administrator\Desktop\niuniuGame\LQapps\Admin\Controller\PublicController.class.php 第 477 行.
+NOTIC: [8] Use of undefined constant SYSTEM_MENU_CURRENT - assumed 'SYSTEM_MENU_CURRENT' C:\Users\Administrator\Desktop\niuniuGame\LQapps\Admin\Controller\PublicController.class.php 第 481 行.
+NOTIC: [8] Undefined variable: s C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\Common\function.php 第 921 行.
+NOTIC: [8] Undefined variable: s C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\Common\function.php 第 921 行.
+NOTIC: [8] Undefined variable: s C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\Common\function.php 第 921 行.
+NOTIC: [8] Undefined variable: s C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\Common\function.php 第 921 行.
+NOTIC: [8] Undefined variable: s C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\Common\function.php 第 921 行.
+NOTIC: [8] Undefined variable: s C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\Common\function.php 第 921 行.
+NOTIC: [8] Undefined variable: s C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\Common\function.php 第 921 行.
+NOTIC: [8] Undefined variable: s C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\Common\function.php 第 921 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_member` WHERE (  1  ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT `id`,`zl_role`,`zc_nickname`,`zn_pay_integration`,`zn_rank_integration`,`zc_mobile`,`zl_account_bind`,`zl_openid_bind`,`zl_mobile_bind`,`zl_email_bind`,`zl_visible`,`zn_cdate`,`zn_mdate` FROM `lq_member` WHERE (  1  ) ORDER BY id DESC LIMIT 20,10   [ RunTime:0.0040s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: zc_account C:\Users\Administrator\Desktop\niuniuGame\Runtime\Cache\Admin\eec537cfacb6bf5a60c187018b70de93.php 第 346 行.
+NOTIC: [8] Undefined index: zc_account C:\Users\Administrator\Desktop\niuniuGame\Runtime\Cache\Admin\eec537cfacb6bf5a60c187018b70de93.php 第 367 行.
+NOTIC: [8] Undefined index: zc_account C:\Users\Administrator\Desktop\niuniuGame\Runtime\Cache\Admin\eec537cfacb6bf5a60c187018b70de93.php 第 346 行.
+NOTIC: [8] Undefined index: zc_account C:\Users\Administrator\Desktop\niuniuGame\Runtime\Cache\Admin\eec537cfacb6bf5a60c187018b70de93.php 第 367 行.
+NOTIC: [8] Undefined index: zc_account C:\Users\Administrator\Desktop\niuniuGame\Runtime\Cache\Admin\eec537cfacb6bf5a60c187018b70de93.php 第 346 行.
+NOTIC: [8] Undefined index: zc_account C:\Users\Administrator\Desktop\niuniuGame\Runtime\Cache\Admin\eec537cfacb6bf5a60c187018b70de93.php 第 367 行.
+NOTIC: [8] Undefined index: zc_account C:\Users\Administrator\Desktop\niuniuGame\Runtime\Cache\Admin\eec537cfacb6bf5a60c187018b70de93.php 第 346 行.
+NOTIC: [8] Undefined index: zc_account C:\Users\Administrator\Desktop\niuniuGame\Runtime\Cache\Admin\eec537cfacb6bf5a60c187018b70de93.php 第 367 行.
+NOTIC: [8] Undefined index: zc_account C:\Users\Administrator\Desktop\niuniuGame\Runtime\Cache\Admin\eec537cfacb6bf5a60c187018b70de93.php 第 346 行.
+NOTIC: [8] Undefined index: zc_account C:\Users\Administrator\Desktop\niuniuGame\Runtime\Cache\Admin\eec537cfacb6bf5a60c187018b70de93.php 第 367 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\ShowRuntimeBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-02-05T16:04:58+08:00 ] 127.0.0.1 /sys-index.php/Member/index/p/2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Admin\Controller\MemberController::opVisible() should be compatible with Admin\Controller\PublicController::opVisible($is_tree = 0) C:\Users\Administrator\Desktop\niuniuGame\LQapps\Admin\Controller\MemberController.class.php 第 10 行.
+NOTIC: [2048] Declaration of Admin\Controller\MemberController::opDelete() should be compatible with Admin\Controller\PublicController::opDelete($is_tree = 0) C:\Users\Administrator\Desktop\niuniuGame\LQapps\Admin\Controller\MemberController.class.php 第 10 行.
+NOTIC: [8] Use of undefined constant SYSTEM_MENU_CURRENT - assumed 'SYSTEM_MENU_CURRENT' C:\Users\Administrator\Desktop\niuniuGame\LQapps\Admin\Controller\PublicController.class.php 第 477 行.
+NOTIC: [8] Use of undefined constant SYSTEM_MENU_CURRENT - assumed 'SYSTEM_MENU_CURRENT' C:\Users\Administrator\Desktop\niuniuGame\LQapps\Admin\Controller\PublicController.class.php 第 481 行.
+NOTIC: [8] Undefined variable: s C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\Common\function.php 第 921 行.
+NOTIC: [8] Undefined variable: s C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\Common\function.php 第 921 行.
+NOTIC: [8] Undefined variable: s C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\Common\function.php 第 921 行.
+NOTIC: [8] Undefined variable: s C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\Common\function.php 第 921 行.
+NOTIC: [8] Undefined variable: s C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\Common\function.php 第 921 行.
+NOTIC: [8] Undefined variable: s C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\Common\function.php 第 921 行.
+NOTIC: [8] Undefined variable: s C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\Common\function.php 第 921 行.
+NOTIC: [8] Undefined variable: s C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\Common\function.php 第 921 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_member` WHERE (  1  ) LIMIT 1   [ RunTime:0.0050s ]
+SQL: SELECT `id`,`zl_role`,`zc_nickname`,`zn_pay_integration`,`zn_rank_integration`,`zc_mobile`,`zl_account_bind`,`zl_openid_bind`,`zl_mobile_bind`,`zl_email_bind`,`zl_visible`,`zn_cdate`,`zn_mdate` FROM `lq_member` WHERE (  1  ) ORDER BY id DESC LIMIT 10,10   [ RunTime:0.0040s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: zc_account C:\Users\Administrator\Desktop\niuniuGame\Runtime\Cache\Admin\eec537cfacb6bf5a60c187018b70de93.php 第 346 行.
+NOTIC: [8] Undefined index: zc_account C:\Users\Administrator\Desktop\niuniuGame\Runtime\Cache\Admin\eec537cfacb6bf5a60c187018b70de93.php 第 367 行.
+NOTIC: [8] Undefined index: zc_account C:\Users\Administrator\Desktop\niuniuGame\Runtime\Cache\Admin\eec537cfacb6bf5a60c187018b70de93.php 第 346 行.
+NOTIC: [8] Undefined index: zc_account C:\Users\Administrator\Desktop\niuniuGame\Runtime\Cache\Admin\eec537cfacb6bf5a60c187018b70de93.php 第 367 行.
+NOTIC: [8] Undefined index: zc_account C:\Users\Administrator\Desktop\niuniuGame\Runtime\Cache\Admin\eec537cfacb6bf5a60c187018b70de93.php 第 346 行.
+NOTIC: [8] Undefined index: zc_account C:\Users\Administrator\Desktop\niuniuGame\Runtime\Cache\Admin\eec537cfacb6bf5a60c187018b70de93.php 第 367 行.
+NOTIC: [8] Undefined index: zc_account C:\Users\Administrator\Desktop\niuniuGame\Runtime\Cache\Admin\eec537cfacb6bf5a60c187018b70de93.php 第 346 行.
+NOTIC: [8] Undefined index: zc_account C:\Users\Administrator\Desktop\niuniuGame\Runtime\Cache\Admin\eec537cfacb6bf5a60c187018b70de93.php 第 367 行.
+NOTIC: [8] Undefined index: zc_account C:\Users\Administrator\Desktop\niuniuGame\Runtime\Cache\Admin\eec537cfacb6bf5a60c187018b70de93.php 第 346 行.
+NOTIC: [8] Undefined index: zc_account C:\Users\Administrator\Desktop\niuniuGame\Runtime\Cache\Admin\eec537cfacb6bf5a60c187018b70de93.php 第 367 行.
+NOTIC: [8] Undefined index: zc_account C:\Users\Administrator\Desktop\niuniuGame\Runtime\Cache\Admin\eec537cfacb6bf5a60c187018b70de93.php 第 346 行.
+NOTIC: [8] Undefined index: zc_account C:\Users\Administrator\Desktop\niuniuGame\Runtime\Cache\Admin\eec537cfacb6bf5a60c187018b70de93.php 第 367 行.
+NOTIC: [8] Undefined index: zc_account C:\Users\Administrator\Desktop\niuniuGame\Runtime\Cache\Admin\eec537cfacb6bf5a60c187018b70de93.php 第 346 行.
+NOTIC: [8] Undefined index: zc_account C:\Users\Administrator\Desktop\niuniuGame\Runtime\Cache\Admin\eec537cfacb6bf5a60c187018b70de93.php 第 367 行.
+NOTIC: [8] Undefined index: zc_account C:\Users\Administrator\Desktop\niuniuGame\Runtime\Cache\Admin\eec537cfacb6bf5a60c187018b70de93.php 第 346 行.
+NOTIC: [8] Undefined index: zc_account C:\Users\Administrator\Desktop\niuniuGame\Runtime\Cache\Admin\eec537cfacb6bf5a60c187018b70de93.php 第 367 行.
+NOTIC: [8] Undefined index: zc_account C:\Users\Administrator\Desktop\niuniuGame\Runtime\Cache\Admin\eec537cfacb6bf5a60c187018b70de93.php 第 346 行.
+NOTIC: [8] Undefined index: zc_account C:\Users\Administrator\Desktop\niuniuGame\Runtime\Cache\Admin\eec537cfacb6bf5a60c187018b70de93.php 第 367 行.
+NOTIC: [8] Undefined index: zc_account C:\Users\Administrator\Desktop\niuniuGame\Runtime\Cache\Admin\eec537cfacb6bf5a60c187018b70de93.php 第 346 行.
+NOTIC: [8] Undefined index: zc_account C:\Users\Administrator\Desktop\niuniuGame\Runtime\Cache\Admin\eec537cfacb6bf5a60c187018b70de93.php 第 367 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\ShowRuntimeBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-02-05T16:05:15+08:00 ] 127.0.0.1 /sys-index.php/Consume/index/s/bWlkLzk1My8=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载控制器:Consume
+
+[ 2018-02-05T16:05:21+08:00 ] 127.0.0.1 /sys-index.php/Member/edit/tnid/953
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Admin\Controller\MemberController::opVisible() should be compatible with Admin\Controller\PublicController::opVisible($is_tree = 0) C:\Users\Administrator\Desktop\niuniuGame\LQapps\Admin\Controller\MemberController.class.php 第 10 行.
+NOTIC: [2048] Declaration of Admin\Controller\MemberController::opDelete() should be compatible with Admin\Controller\PublicController::opDelete($is_tree = 0) C:\Users\Administrator\Desktop\niuniuGame\LQapps\Admin\Controller\MemberController.class.php 第 10 行.
+NOTIC: [8] Use of undefined constant SYSTEM_MENU_CURRENT - assumed 'SYSTEM_MENU_CURRENT' C:\Users\Administrator\Desktop\niuniuGame\LQapps\Admin\Controller\PublicController.class.php 第 477 行.
+NOTIC: [8] Use of undefined constant SYSTEM_MENU_CURRENT - assumed 'SYSTEM_MENU_CURRENT' C:\Users\Administrator\Desktop\niuniuGame\LQapps\Admin\Controller\PublicController.class.php 第 481 行.
+SQL: SELECT * FROM `lq_member` WHERE (  id = 953 ) LIMIT 1   [ RunTime:0.0050s ]
+NOTIC: [8] Undefined index: display C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 60 行.
+NOTIC: [8] Undefined index: fast-fill C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 161 行.
+NOTIC: [8] Undefined index: controlTitle C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 90 行.
+NOTIC: [8] Undefined index: confirm C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 94 行.
+NOTIC: [8] Undefined index: dataBetween C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 96 行.
+NOTIC: [8] Undefined index: rows C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 99 行.
+NOTIC: [8] Undefined index: maxl C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 100 行.
+NOTIC: [8] Undefined index: width C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 101 行.
+NOTIC: [8] Undefined index: height C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 102 行.
+NOTIC: [8] Undefined index: style C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 103 行.
+NOTIC: [8] Undefined index: display C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 60 行.
+NOTIC: [8] Undefined index: required C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 798 行.
+NOTIC: [8] Undefined index: controlTitle C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 90 行.
+NOTIC: [8] Undefined index: required C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 91 行.
+NOTIC: [8] Undefined index: dataType C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 93 行.
+NOTIC: [8] Undefined index: confirm C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 94 行.
+NOTIC: [8] Undefined index: dataLength C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 95 行.
+NOTIC: [8] Undefined index: dataBetween C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 96 行.
+NOTIC: [8] Undefined index: readonly C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 97 行.
+NOTIC: [8] Undefined index: disabled C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 98 行.
+NOTIC: [8] Undefined index: rows C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 99 行.
+NOTIC: [8] Undefined index: maxl C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 100 行.
+NOTIC: [8] Undefined index: width C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 101 行.
+NOTIC: [8] Undefined index: height C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 102 行.
+NOTIC: [8] Undefined index: style C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 103 行.
+NOTIC: [8] Undefined index: display C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 60 行.
+NOTIC: [8] Undefined index: required C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 798 行.
+NOTIC: [8] Undefined index: controlTitle C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 90 行.
+NOTIC: [8] Undefined index: required C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 91 行.
+NOTIC: [8] Undefined index: dataType C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 93 行.
+NOTIC: [8] Undefined index: confirm C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 94 行.
+NOTIC: [8] Undefined index: dataLength C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 95 行.
+NOTIC: [8] Undefined index: dataBetween C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 96 行.
+NOTIC: [8] Undefined index: readonly C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 97 行.
+NOTIC: [8] Undefined index: disabled C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 98 行.
+NOTIC: [8] Undefined index: rows C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 99 行.
+NOTIC: [8] Undefined index: maxl C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 100 行.
+NOTIC: [8] Undefined index: width C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 101 行.
+NOTIC: [8] Undefined index: height C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 102 行.
+NOTIC: [8] Undefined index: style C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 103 行.
+NOTIC: [8] Undefined index: display C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 60 行.
+NOTIC: [8] Undefined index: controlTitle C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 90 行.
+NOTIC: [8] Undefined index: confirm C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 94 行.
+NOTIC: [8] Undefined index: dataBetween C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 96 行.
+NOTIC: [8] Undefined index: rows C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 99 行.
+NOTIC: [8] Undefined index: maxl C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 100 行.
+NOTIC: [8] Undefined index: width C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 101 行.
+NOTIC: [8] Undefined index: height C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 102 行.
+NOTIC: [8] Undefined index: style C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 103 行.
+NOTIC: [8] Undefined index: display C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 60 行.
+NOTIC: [8] Undefined index: zn_province_data C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 681 行.
+NOTIC: [8] Undefined index: zn_city_data C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 681 行.
+NOTIC: [8] Undefined index: zn_district_data C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 681 行.
+NOTIC: [8] Undefined offset: 3 C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 683 行.
+NOTIC: [8] Undefined index: display C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 60 行.
+NOTIC: [8] Undefined index: fast-fill C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 161 行.
+NOTIC: [8] Undefined index: controlTitle C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 90 行.
+NOTIC: [8] Undefined index: confirm C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 94 行.
+NOTIC: [8] Undefined index: dataBetween C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 96 行.
+NOTIC: [8] Undefined index: rows C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 99 行.
+NOTIC: [8] Undefined index: maxl C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 100 行.
+NOTIC: [8] Undefined index: width C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 101 行.
+NOTIC: [8] Undefined index: height C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 102 行.
+NOTIC: [8] Undefined index: style C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 103 行.
+NOTIC: [8] Undefined index: display C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 60 行.
+NOTIC: [8] Undefined index: fast-fill C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 161 行.
+NOTIC: [8] Undefined index: controlTitle C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 90 行.
+NOTIC: [8] Undefined index: confirm C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 94 行.
+NOTIC: [8] Undefined index: dataBetween C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 96 行.
+NOTIC: [8] Undefined index: rows C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 99 行.
+NOTIC: [8] Undefined index: maxl C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 100 行.
+NOTIC: [8] Undefined index: width C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 101 行.
+NOTIC: [8] Undefined index: height C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 102 行.
+NOTIC: [8] Undefined index: style C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 103 行.
+NOTIC: [8] Undefined index: zc_headimg_label C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 495 行.
+NOTIC: [8] Undefined index: display C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 60 行.
+NOTIC: [8] Undefined index: uploadsize C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 511 行.
+NOTIC: [8] Undefined index: required C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 530 行.
+NOTIC: [8] Undefined index: display C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 60 行.
+NOTIC: [8] Undefined index: required C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 798 行.
+NOTIC: [8] Undefined index: controlTitle C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 90 行.
+NOTIC: [8] Undefined index: required C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 91 行.
+NOTIC: [8] Undefined index: dataType C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 93 行.
+NOTIC: [8] Undefined index: confirm C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 94 行.
+NOTIC: [8] Undefined index: dataLength C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 95 行.
+NOTIC: [8] Undefined index: dataBetween C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 96 行.
+NOTIC: [8] Undefined index: readonly C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 97 行.
+NOTIC: [8] Undefined index: disabled C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 98 行.
+NOTIC: [8] Undefined index: rows C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 99 行.
+NOTIC: [8] Undefined index: maxl C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 100 行.
+NOTIC: [8] Undefined index: width C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 101 行.
+NOTIC: [8] Undefined index: height C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 102 行.
+NOTIC: [8] Undefined index: style C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 103 行.
+NOTIC: [8] Undefined index: display C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 60 行.
+NOTIC: [8] Undefined index: required C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 798 行.
+NOTIC: [8] Undefined index: controlTitle C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 90 行.
+NOTIC: [8] Undefined index: required C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 91 行.
+NOTIC: [8] Undefined index: dataType C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 93 行.
+NOTIC: [8] Undefined index: confirm C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 94 行.
+NOTIC: [8] Undefined index: dataLength C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 95 行.
+NOTIC: [8] Undefined index: dataBetween C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 96 行.
+NOTIC: [8] Undefined index: readonly C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 97 行.
+NOTIC: [8] Undefined index: disabled C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 98 行.
+NOTIC: [8] Undefined index: rows C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 99 行.
+NOTIC: [8] Undefined index: maxl C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 100 行.
+NOTIC: [8] Undefined index: width C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 101 行.
+NOTIC: [8] Undefined index: height C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 102 行.
+NOTIC: [8] Undefined index: style C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 103 行.
+NOTIC: [8] Undefined index: display C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 60 行.
+NOTIC: [8] Undefined index: required C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 798 行.
+NOTIC: [8] Undefined index: controlTitle C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 90 行.
+NOTIC: [8] Undefined index: required C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 91 行.
+NOTIC: [8] Undefined index: dataType C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 93 行.
+NOTIC: [8] Undefined index: confirm C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 94 行.
+NOTIC: [8] Undefined index: dataLength C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 95 行.
+NOTIC: [8] Undefined index: dataBetween C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 96 行.
+NOTIC: [8] Undefined index: readonly C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 97 行.
+NOTIC: [8] Undefined index: disabled C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 98 行.
+NOTIC: [8] Undefined index: rows C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 99 行.
+NOTIC: [8] Undefined index: maxl C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 100 行.
+NOTIC: [8] Undefined index: width C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 101 行.
+NOTIC: [8] Undefined index: height C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 102 行.
+NOTIC: [8] Undefined index: style C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 103 行.
+NOTIC: [8] Undefined index: display C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 60 行.
+NOTIC: [8] Undefined index: required C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 798 行.
+NOTIC: [8] Undefined index: controlTitle C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 90 行.
+NOTIC: [8] Undefined index: required C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 91 行.
+NOTIC: [8] Undefined index: dataType C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 93 行.
+NOTIC: [8] Undefined index: confirm C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 94 行.
+NOTIC: [8] Undefined index: dataLength C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 95 行.
+NOTIC: [8] Undefined index: dataBetween C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 96 行.
+NOTIC: [8] Undefined index: readonly C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 97 行.
+NOTIC: [8] Undefined index: disabled C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 98 行.
+NOTIC: [8] Undefined index: rows C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 99 行.
+NOTIC: [8] Undefined index: maxl C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 100 行.
+NOTIC: [8] Undefined index: width C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 101 行.
+NOTIC: [8] Undefined index: height C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 102 行.
+NOTIC: [8] Undefined index: style C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 103 行.
+NOTIC: [8] Undefined index: display C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 60 行.
+NOTIC: [8] Undefined index: required C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 798 行.
+NOTIC: [8] Undefined index: controlTitle C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 90 行.
+NOTIC: [8] Undefined index: required C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 91 行.
+NOTIC: [8] Undefined index: dataType C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 93 行.
+NOTIC: [8] Undefined index: confirm C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 94 行.
+NOTIC: [8] Undefined index: dataLength C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 95 行.
+NOTIC: [8] Undefined index: dataBetween C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 96 行.
+NOTIC: [8] Undefined index: readonly C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 97 行.
+NOTIC: [8] Undefined index: disabled C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 98 行.
+NOTIC: [8] Undefined index: rows C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 99 行.
+NOTIC: [8] Undefined index: maxl C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 100 行.
+NOTIC: [8] Undefined index: width C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 101 行.
+NOTIC: [8] Undefined index: height C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 102 行.
+NOTIC: [8] Undefined index: style C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 103 行.
+NOTIC: [8] Undefined index: display C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 60 行.
+NOTIC: [8] Undefined index: required C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 798 行.
+NOTIC: [8] Undefined index: controlTitle C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 90 行.
+NOTIC: [8] Undefined index: required C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 91 行.
+NOTIC: [8] Undefined index: dataType C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 93 行.
+NOTIC: [8] Undefined index: confirm C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 94 行.
+NOTIC: [8] Undefined index: dataLength C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 95 行.
+NOTIC: [8] Undefined index: dataBetween C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 96 行.
+NOTIC: [8] Undefined index: readonly C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 97 行.
+NOTIC: [8] Undefined index: disabled C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 98 行.
+NOTIC: [8] Undefined index: rows C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 99 行.
+NOTIC: [8] Undefined index: maxl C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 100 行.
+NOTIC: [8] Undefined index: width C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 101 行.
+NOTIC: [8] Undefined index: height C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 102 行.
+NOTIC: [8] Undefined index: style C:\Users\Administrator\Desktop\niuniuGame\LQapps\Common\LQLibs\Util\BootstrapForm.class.php 第 103 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: data_up_down_page C:\Users\Administrator\Desktop\niuniuGame\Runtime\Cache\Admin\62e5f79f098ef923ba9f3db64b26209a.php 第 186 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\ShowRuntimeBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-02-05T17:02:41+08:00 ] 127.0.0.1 /sys-index.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-02-05T17:02:41+08:00 ] 127.0.0.1 /sys-index.php/Login/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\ShowRuntimeBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-02-05T17:02:41+08:00 ] 127.0.0.1 /sys-index.php/Login/checkCode
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-02-05T17:02:47+08:00 ] 127.0.0.1 /sys-index.php/Login/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+
+[ 2018-02-05T17:02:50+08:00 ] 127.0.0.1 /sys-index.php/Login/checkCode/v/0.1332572766203155
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-02-05T17:02:55+08:00 ] 127.0.0.1 /sys-index.php/Login/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SELECT `id`,`zc_account`,`zc_email`,`zc_mobile`,`zc_password`,`zc_salt`,`zn_trylogin_times`,`zn_trylogin_lasttime`,`zl_visible` FROM `lq_admin` WHERE `zc_account` = 'littleHe' LIMIT 1   [ RunTime:0.0050s ]
+SQL: UPDATE `lq_admin` SET `zn_login_times`=zn_login_times+1,`zn_last_login_time`='1517821374',`zn_mdate`='1517821374',`zn_trylogin_times`='0',`zn_trylogin_lasttime`='1517821374' WHERE `id` = 1 [ RunTime:0.0080s ]
+SQL: SELECT * FROM `lq_admin` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT `id`,`zn_fid`,`zc_caption` FROM `lq_system_menu` WHERE ( zn_fid=1 and zl_is_menu=1 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0040s ]
+NOTIC: [8] Undefined variable: index C:\Users\Administrator\Desktop\niuniuGame\LQapps\User\Model\AdminModel.class.php 第 465 行.
+NOTIC: [8] Undefined index: zc_run C:\Users\Administrator\Desktop\niuniuGame\LQapps\User\Model\AdminModel.class.php 第 472 行.
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=2 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0040s ]
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=48 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0040s ]
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=49 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0050s ]
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=50 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0040s ]
+NOTIC: [8] Undefined index: zc_run C:\Users\Administrator\Desktop\niuniuGame\LQapps\User\Model\AdminModel.class.php 第 472 行.
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=41 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0090s ]
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=70 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0050s ]
+NOTIC: [8] Undefined index: zc_run C:\Users\Administrator\Desktop\niuniuGame\LQapps\User\Model\AdminModel.class.php 第 472 行.
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=44 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0040s ]
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=90 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0050s ]
+NOTIC: [8] Undefined index: zc_run C:\Users\Administrator\Desktop\niuniuGame\LQapps\User\Model\AdminModel.class.php 第 472 行.
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=45 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0040s ]
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=67 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0040s ]
+NOTIC: [8] Undefined index: zc_run C:\Users\Administrator\Desktop\niuniuGame\LQapps\User\Model\AdminModel.class.php 第 472 行.
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=47 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0050s ]
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=100 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0090s ]
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=112 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0030s ]
+NOTIC: [8] Undefined index: zc_run C:\Users\Administrator\Desktop\niuniuGame\LQapps\User\Model\AdminModel.class.php 第 472 行.
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=110 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0060s ]
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=69 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0070s ]
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=73 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0040s ]
+NOTIC: [8] Undefined index: zc_run C:\Users\Administrator\Desktop\niuniuGame\LQapps\User\Model\AdminModel.class.php 第 472 行.
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=111 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0190s ]
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=103 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0120s ]
+NOTIC: [8] Undefined index: zc_run C:\Users\Administrator\Desktop\niuniuGame\LQapps\User\Model\AdminModel.class.php 第 472 行.
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=46 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0050s ]
+NOTIC: [8] Undefined index: zc_run C:\Users\Administrator\Desktop\niuniuGame\LQapps\User\Model\AdminModel.class.php 第 472 行.
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=64 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0060s ]
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=51 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0050s ]
+SQL: SELECT `zc_popedom` FROM `lq_admin` WHERE ( id=0 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT * FROM `lq_admin` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT `id`,`zn_fid`,`zc_caption` FROM `lq_system_menu` WHERE ( zn_fid=1 and zl_is_menu=1 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0030s ]
+NOTIC: [8] Undefined variable: index C:\Users\Administrator\Desktop\niuniuGame\LQapps\User\Model\AdminModel.class.php 第 465 行.
+NOTIC: [8] Undefined index: zc_run C:\Users\Administrator\Desktop\niuniuGame\LQapps\User\Model\AdminModel.class.php 第 472 行.
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=2 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0040s ]
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=48 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0090s ]
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=49 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0050s ]
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=50 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0070s ]
+NOTIC: [8] Undefined index: zc_run C:\Users\Administrator\Desktop\niuniuGame\LQapps\User\Model\AdminModel.class.php 第 472 行.
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=41 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0070s ]
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=70 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0040s ]
+NOTIC: [8] Undefined index: zc_run C:\Users\Administrator\Desktop\niuniuGame\LQapps\User\Model\AdminModel.class.php 第 472 行.
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=44 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0040s ]
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=90 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0030s ]
+NOTIC: [8] Undefined index: zc_run C:\Users\Administrator\Desktop\niuniuGame\LQapps\User\Model\AdminModel.class.php 第 472 行.
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=45 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0030s ]
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=67 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0050s ]
+NOTIC: [8] Undefined index: zc_run C:\Users\Administrator\Desktop\niuniuGame\LQapps\User\Model\AdminModel.class.php 第 472 行.
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=47 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0040s ]
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=100 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0050s ]
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=112 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0040s ]
+NOTIC: [8] Undefined index: zc_run C:\Users\Administrator\Desktop\niuniuGame\LQapps\User\Model\AdminModel.class.php 第 472 行.
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=110 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0030s ]
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=69 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0030s ]
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=73 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0030s ]
+NOTIC: [8] Undefined index: zc_run C:\Users\Administrator\Desktop\niuniuGame\LQapps\User\Model\AdminModel.class.php 第 472 行.
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=111 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0040s ]
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=103 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0040s ]
+NOTIC: [8] Undefined index: zc_run C:\Users\Administrator\Desktop\niuniuGame\LQapps\User\Model\AdminModel.class.php 第 472 行.
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=46 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0040s ]
+NOTIC: [8] Undefined index: zc_run C:\Users\Administrator\Desktop\niuniuGame\LQapps\User\Model\AdminModel.class.php 第 472 行.
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=64 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0040s ]
+SQL: SELECT `id`,`zn_fid`,`zc_caption`,`zc_run_table`,`zc_run`,`zn_type`,`zc_target` FROM `lq_system_menu` WHERE (  zl_visible=1 and zl_is_menu=1 and zn_fid=51 ) ORDER BY zn_sort ASC,id ASC  [ RunTime:0.0050s ]
+SQL: SELECT `zc_popedom` FROM `lq_admin` WHERE ( id=0 ) LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT * FROM `lq_admin` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0040s ]
+NOTIC: [8] Undefined index: login C:\Users\Administrator\Desktop\niuniuGame\LQapps\User\Api\AdminApi.class.php 第 326 行.
+NOTIC: [8] Undefined index: description C:\Users\Administrator\Desktop\niuniuGame\LQapps\User\Api\AdminApi.class.php 第 339 行.
+SQL: INSERT INTO `lq_admin_log` (`zn_type`,`zc_action`,`zc_table`,`zc_table_id`,`zc_description`,`zn_ip`,`zn_cdate`,`zn_operator`,`zc_account`) VALUES ('1','login','admin','1','littleHe对数据表admin进行操作。url请求:niuniugame.dev:80/sys-index.php/Login/login','2130706433','1517821374','1','littleHe') [ RunTime:0.0050s ]
+
+[ 2018-02-05T17:02:55+08:00 ] 127.0.0.1 /sys-index.php/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\ShowRuntimeBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-02-05T17:02:55+08:00 ] 127.0.0.1 /sys-index.php/Index/ajaxSearch/tcop/text
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] session_start(): Cannot send session cache limiter - headers already sent C:\Users\Administrator\Desktop\niuniuGame\Public\ThinkPHP\Common\functions.php 第 1280 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_member` WHERE ( zn_cdate >=1517241600 and zn_cdate<=1517327999 ) LIMIT 1   [ RunTime:0.0250s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_room` WHERE ( zn_cdate >=1517241600 and zn_cdate<=1517327999 ) LIMIT 1   [ RunTime:0.0140s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_game_log` WHERE ( zn_cdate >=1517241600 and zn_cdate<=1517327999 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_recharge` WHERE ( zn_cdate >=1517241600 and zn_cdate<=1517327999 ) LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_card_log` WHERE ( zn_cdate >=1517241600 and zn_cdate<=1517327999 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_chat` WHERE ( zn_cdate >=1517241600 and zn_cdate<=1517327999 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_member` WHERE ( zn_cdate >=1517328000 and zn_cdate<=1517414399 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_room` WHERE ( zn_cdate >=1517328000 and zn_cdate<=1517414399 ) LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_game_log` WHERE ( zn_cdate >=1517328000 and zn_cdate<=1517414399 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_recharge` WHERE ( zn_cdate >=1517328000 and zn_cdate<=1517414399 ) LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_card_log` WHERE ( zn_cdate >=1517328000 and zn_cdate<=1517414399 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_chat` WHERE ( zn_cdate >=1517328000 and zn_cdate<=1517414399 ) LIMIT 1   [ RunTime:0.0060s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_member` WHERE ( zn_cdate >=1517414400 and zn_cdate<=1517500799 ) LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_room` WHERE ( zn_cdate >=1517414400 and zn_cdate<=1517500799 ) LIMIT 1   [ RunTime:0.0140s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_game_log` WHERE ( zn_cdate >=1517414400 and zn_cdate<=1517500799 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_recharge` WHERE ( zn_cdate >=1517414400 and zn_cdate<=1517500799 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_card_log` WHERE ( zn_cdate >=1517414400 and zn_cdate<=1517500799 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_chat` WHERE ( zn_cdate >=1517414400 and zn_cdate<=1517500799 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_member` WHERE ( zn_cdate >=1517500800 and zn_cdate<=1517587199 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_room` WHERE ( zn_cdate >=1517500800 and zn_cdate<=1517587199 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_game_log` WHERE ( zn_cdate >=1517500800 and zn_cdate<=1517587199 ) LIMIT 1   [ RunTime:0.0050s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_recharge` WHERE ( zn_cdate >=1517500800 and zn_cdate<=1517587199 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_card_log` WHERE ( zn_cdate >=1517500800 and zn_cdate<=1517587199 ) LIMIT 1   [ RunTime:0.0050s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_chat` WHERE ( zn_cdate >=1517500800 and zn_cdate<=1517587199 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_member` WHERE ( zn_cdate >=1517587200 and zn_cdate<=1517673599 ) LIMIT 1   [ RunTime:0.0110s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_room` WHERE ( zn_cdate >=1517587200 and zn_cdate<=1517673599 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_game_log` WHERE ( zn_cdate >=1517587200 and zn_cdate<=1517673599 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_recharge` WHERE ( zn_cdate >=1517587200 and zn_cdate<=1517673599 ) LIMIT 1   [ RunTime:0.0060s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_card_log` WHERE ( zn_cdate >=1517587200 and zn_cdate<=1517673599 ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_chat` WHERE ( zn_cdate >=1517587200 and zn_cdate<=1517673599 ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_member` WHERE ( zn_cdate >=1517673600 and zn_cdate<=1517759999 ) LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_room` WHERE ( zn_cdate >=1517673600 and zn_cdate<=1517759999 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_game_log` WHERE ( zn_cdate >=1517673600 and zn_cdate<=1517759999 ) LIMIT 1   [ RunTime:0.0050s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_recharge` WHERE ( zn_cdate >=1517673600 and zn_cdate<=1517759999 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_card_log` WHERE ( zn_cdate >=1517673600 and zn_cdate<=1517759999 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_chat` WHERE ( zn_cdate >=1517673600 and zn_cdate<=1517759999 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_member` WHERE ( zn_cdate >=1517760000 and zn_cdate<=1517846399 ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_room` WHERE ( zn_cdate >=1517760000 and zn_cdate<=1517846399 ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_game_log` WHERE ( zn_cdate >=1517760000 and zn_cdate<=1517846399 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_recharge` WHERE ( zn_cdate >=1517760000 and zn_cdate<=1517846399 ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_card_log` WHERE ( zn_cdate >=1517760000 and zn_cdate<=1517846399 ) LIMIT 1   [ RunTime:0.0060s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lq_chat` WHERE ( zn_cdate >=1517760000 and zn_cdate<=1517846399 ) LIMIT 1   [ RunTime:0.0030s ]
+NOTIC: [2] Cannot modify header information - headers already sent C:\Users\Administrator\Desktop\niuniuGame\Public\ThinkPHP\Library\Think\Controller.class.php 第 220 行.
+
