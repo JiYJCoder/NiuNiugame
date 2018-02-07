@@ -1,0 +1,88 @@
+------------------2018-02-07 11:31:27 start------------------
+array (
+  '/Test' => '',
+  'PHPSESSID' => '2vr10ntctuc9spg0jd7kheknm7',
+  'think_language' => 'zh-cn',
+)
+
+------------------2018-02-07 11:31:27 end------------------
+
+
+
+------------------2018-02-07 11:31:27 start------------------
+code:
+
+------------------2018-02-07 11:31:27 end------------------
+
+
+
+------------------2018-02-07 11:31:27 start------------------
+false
+
+------------------2018-02-07 11:31:27 end------------------
+
+
+
+------------------2018-02-07 11:31:29 start------------------
+false
+
+------------------2018-02-07 11:31:29 end------------------
+
+
+
+------------------2018-02-07 11:31:30 start------------------
+array (
+  '/Test' => '',
+  'code' => '0113u0HY1cIOPZ00C5EY1xQMGY13u0H-',
+  'state' => '',
+  'PHPSESSID' => '2vr10ntctuc9spg0jd7kheknm7',
+  'think_language' => 'zh-cn',
+)
+
+------------------2018-02-07 11:31:30 end------------------
+
+
+
+------------------2018-02-07 11:31:30 start------------------
+code:0113u0HY1cIOPZ00C5EY1xQMGY13u0H-
+
+------------------2018-02-07 11:31:30 end------------------
+
+
+
+------------------2018-02-07 11:31:31 start------------------
+array (
+  'access_token' => '6_aH6Gqz0LU8Brf2Ycv12vYT0IYcgr6Hfv-pORQzioGHKsBQziACt4zTjMMga3_GhxKCVIzewGIjE5mn2TLQOiDQ0qgEFuGwaLbn13-aLU9sY',
+  'expires_in' => 7200,
+  'refresh_token' => '6_Sbvd0LkRivZhdFPQ3yFjlykIr1DfV4e-WzwLKPxZz3hG9NCWkNzQlzfzns8f5MzqYt7441GRk4QZT7x5UOANokTLyNhooKxAkDO9wDi4Sd8',
+  'openid' => 'oKVEV0vP41yzgX_ODr5onWcBiHiI',
+  'scope' => 'snsapi_userinfo',
+)
+
+------------------2018-02-07 11:31:31 end------------------
+
+
+
+------------------2018-02-07 11:31:32 start------------------
+array (
+  'subscribe' => 1,
+  'openid' => 'oKVEV0vP41yzgX_ODr5onWcBiHiI',
+  'nickname' => '阿锋',
+  'sex' => 1,
+  'language' => 'zh_CN',
+  'city' => '清远',
+  'province' => '广东',
+  'country' => '中国',
+  'headimgurl' => 'http://wx.qlogo.cn/mmopen/m557ntibFCiaynI2icvib36H2Uu4hSb6TzZq68XabwUiaDOgqIm8LDwZKOyD3HiaSH5C4iaS7slSzlXWUc5qLbzTHaAODEicibLGgZaty/132',
+  'subscribe_time' => 1517912804,
+  'remark' => '',
+  'groupid' => 0,
+  'tagid_list' => 
+  array (
+  ),
+)
+
+------------------2018-02-07 11:31:32 end------------------
+
+
+

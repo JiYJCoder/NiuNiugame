@@ -273,6 +273,13 @@ class RoomController extends PublicController
         $this->ajaxReturn($this->C_D->setProperty());
     }
 
+    /////游戏记录
+    public function game_log()
+    {
+        $room_id = $_GET['roomid'];
+
+    }
+
 }
 
 ?>

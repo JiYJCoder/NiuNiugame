@@ -138,39 +138,32 @@ function clean_no_use($array,$no_use_array=array()){
 //获取 微信openid
 function lq_return_openid($url=''){
 	//接入微信类
-	import('Vendor.Wechat.TPWechat');   
+	import('Vendor.Wechat.TPWechat');
+
 	$WxObj = new \Wechat(C("WECHAT"));
 	if(!$url) $url=$_SERVER["REQUEST_URI"];
 	$url="http://".$_SERVER['HTTP_HOST'].$url;
+
 	if(!isset($_GET['code'])){
 		$url=$WxObj->getOauthRedirect($url);
 		lq_header("Location:".$url);
 	}
+
 	$user_oauth = $WxObj->getOauthAccessToken();
+    lq_test($user_oauth);
+
+    $UserInfo=$WxObj->getUserInfo($user_oauth["openid"]);
+
+    if($UserInfo['subscribe']!=1){
+        $UserInfo=$WxObj->getOauthUserinfo($user_oauth["access_token"],$user_oauth["openid"]);
+    }
+lq_test($UserInfo);
+    die();
 	if($user_oauth){
 		$model_member = new \Member\Api\MemberApi;//实例化会员
 		$UserInfo=$WxObj->getUserInfo($user_oauth["openid"]);
 		if($UserInfo['subscribe']!=1){
 			$UserInfo=$WxObj->getOauthUserinfo($user_oauth["access_token"],$user_oauth["openid"]);
-			//入粉丝库
-			$dataFollow=array();
-			$dataFollow["zl_type"]=2;//页面授权
-			$dataFollow["zc_openid"]=$UserInfo["openid"];
-			$dataFollow["zc_nickname"]=lq_set_nickname($UserInfo["nickname"]); 
-			$dataFollow["zn_sex"]=$UserInfo["sex"];
-			$dataFollow["zc_country"]=$UserInfo["country"];
-			$dataFollow["zc_province"]=$UserInfo["province"];
-			$dataFollow["zc_city"]=$UserInfo["city"];
-			$dataFollow["zc_language"]=$UserInfo["language"];
-			$dataFollow["zc_headimg_url"]=$UserInfo["headimgurl"];
-			$dataFollow["zc_remark"]=lqNull($UserInfo["remark"]);
-			$dataFollow["zn_groupid"]=intval($UserInfo["groupid"]);
-			$dataFollow["zn_subscribe_time"]=$dataFollow["zn_unsubscribe_time"]=0;
-			$dataFollow["zl_visible"]=0;
-			$dataFollow["zn_cdate"]=NOW_TIME;
-			if(!$model_member->apiFollowCount("zc_openid='".$user_oauth["openid"]."'")){
-				$model_member->apiInsertFollow($dataFollow);
-			}			
 		}
 		
 		session('openid', $UserInfo["openid"]);
@@ -195,7 +188,7 @@ function lq_return_openid($url=''){
 							$.cookie("uid","'.$token["zn_member_id"].'"); 
 							$.cookie("token","'.$token["zc_token"].'");
 							if(typeof referer_url=="undefined"|referer_url==""|referer_url==null){
-							location.href="http://wx.lxjjz.cn/wx/views/my/index.html";
+							location.href="http://game.hengpukj.com/";
 							}else{
 							location.href=referer_url;
 							}

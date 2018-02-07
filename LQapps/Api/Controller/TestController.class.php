@@ -18,7 +18,27 @@ class TestController extends PublicController
     //首页数据包
     public function index()
     {
-echo 2;
+        //接入微信类
+        import('Vendor.Wechat.TPWechat');
+
+        $WxObj = new \Wechat(C("WECHAT"));
+        $url=$_SERVER["REQUEST_URI"];
+        $url="http://".$_SERVER['HTTP_HOST'].$url;
+
+        if(!isset($_GET['code'])){
+            $url=$WxObj->getOauthRedirect($url);
+            header("Location: ".$url);
+        }
+
+        $user_oauth = $WxObj->getOauthAccessToken();
+
+        $UserInfo=$WxObj->getUserInfo($user_oauth["openid"]);
+
+        if($UserInfo['subscribe']!=1){
+            $UserInfo=$WxObj->getOauthUserinfo($user_oauth["access_token"],$user_oauth["openid"]);
+        }
+
+        pr($UserInfo);
     }
 
     public function send_sys_info()

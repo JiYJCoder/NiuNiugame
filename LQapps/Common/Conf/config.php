@@ -186,14 +186,14 @@ $config_array = array(
 
     //微信配置
     'WECHAT' => array(
-        'appid' => 'wx29dedd3e19a1aa33',//AppID(应用ID)
-        'appsecret' => 'c130c60afacbf09ee2c7103bb6427cb9',//AppSecret(应用密钥)
+        'appid' => 'wx13ef3e7bd53c265b',//AppID(应用ID)
+        'appsecret' => '5afa2d713921983e75daf94a76c30d0f',//AppSecret(应用密钥)
         'token' => 'wechat007',//Token
         'encodingAesKey' => 'u9JZJewtTLtoBaZFi9UiVmO2kQLa8sT9iA4jQTU142z',    //EncodingAESKey
         'MCHID' => '1413591402',//商户ID
         'KEY' => 'JykjLxj20160928hzqjnddnrxzxA2010',//商户支付密钥Key
         'logcallback' => 'lq_test',
-        'debug' => false,
+        'debug' => true,
     ),
 
 

@@ -1,0 +1,65 @@
+<include file="Public:header" />
+
+<div class="col-xs-12 col-sm-9 col-lg-10"> 
+  <include file="Public:common-current" />
+  <form name="{$lq_form_list}" id="{$lq_form_list}" class="form-horizontal" onsubmit="return false">
+  <input type="hidden" id="thinkphpurl" name="thinkphpurl" value="{$page_config.thinkphpurl}" />
+  <input type="hidden" id="keymode" value="{$search_content.keymode}" />
+  <input type="hidden" id="pagesize" value="{$search_content.pagesize}" />
+  <div class="clearfix welcome-container">
+    <div class="row">
+      <div class="clearfix template">
+        <div class="panel panel-default">
+		  <include file="Public:index-list-button" />
+          
+          <div class="table-responsive panel-body">
+            <table class="table table-hover">
+                 <thead>
+                      <tr>
+                        <th style="width:40px;"><input type="checkbox" class="checkbox" value="0" id="list_checkbox"></th>                      
+                        <th style="width:80px;text-align:left;">序号/ID</th>
+                        <th>房主昵称/id</th>
+                        <th style="width:120px;" title="房号">局数</th>
+                        <th style="width:150px;">房间类型</th>
+                        <th>进房确认</th>
+                          <th>玩法</th>
+                          <th>付费模式</th>
+                          <th>抽庄比例</th>
+                        <th style="width:100px;">状态</th>
+                        <th style="width:120px;text-align:center;"><a href="javascript:;" id="op_msg">{:L("LABEL_OS")}?</a></th>
+                      </tr>
+                </thead>             
+              
+              <tbody id="list-tbody">
+                  <volist name="list" id="data" key="key" empty="$empty_msg">
+                    <tr id="{$data.id}" visible="{$data.zl_visible}" opCheck='0'>
+                      <td><input type="checkbox" class="checkbox" value="{$data.id}" name="items" /></td>
+                      <td align="left">{$data.no}/{$data.id}</td>
+                      <td >{$data.zc_member_label}</td>
+                      <td >{$data.zc_number}</td>
+                      <td>{$data.zn_room_type_label}</td>
+                      <td>{$data.zn_confirm_label}</td>
+                      <td>{$data.zn_play_type_label}</td>
+                      <td>{$data.zn_pay_type_label}</td>
+                      <td>{$data.zn_extract_label}</td>
+                      <td>{$data.visible_label}</td>
+                      <td class="manage-menu list-os-a">
+                      <a href="__CONTROLLER__/edit/tnid/{$data.id}" title="{:L("LABEL_OS_EDITID")}[{$data.id}]"><i class="fa fa-edit"></i></a>
+             		  <a href="javascript:void(0);" class="opStatus" val="{$data.zl_visible}" title="{:L("LABEL_OS_STATUS")}[{$data.id}]">{$data.visible_button}</a>
+                      <!--<a href="javascript:;" class="opDelete" title="{:L("LABEL_OS_TITLE_DEL")}[{$data.zc_title}]"><i class="fa fa-times-circle"></i></a>-->
+                      </td>
+                    </tr>
+                  </volist>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        {$page} 
+      </div>
+    </div>
+  </div>
+  </form>
+  
+</div>
+
+<include file="Public:footer" />
